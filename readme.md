@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE tml>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,6 +37,7 @@
         <h1>Welcome!</h1>
         <p>This is a simple landing page for Malcolm Bastien's GitHub Pages site.</p>
         <p>Stay tuned for more updates!</p>
+        <p>You can also try my <a href="game.html">Minimal Flappy Bird Game</a>!</p>
     </div>
 </body>
 </html>
