@@ -144,6 +144,10 @@ function drawGameOverScreen() {
 }
 
 function update(deltaTime) {
+  if (gameOver) {
+    return;
+  }
+
   // Apply gravity to bird
   bird.velocityY += GRAVITY * deltaTime;
   bird.y += bird.velocityY * deltaTime;
@@ -187,6 +191,7 @@ function update(deltaTime) {
   if (bird.y + BIRD_RADIUS > GAME_HEIGHT - GROUND_HEIGHT) {
     bird.y = GAME_HEIGHT - GROUND_HEIGHT - BIRD_RADIUS;
     gameOver = true;
+    gameState = "gameOver";
   }
 
   // Collision detection with pipes and scoring
@@ -200,6 +205,7 @@ function update(deltaTime) {
       bird.y - BIRD_RADIUS < p.topHeight
     ) {
       gameOver = true;
+      gameState = "gameOver";
     }
 
     // Collision with bottom pipe
@@ -209,6 +215,7 @@ function update(deltaTime) {
       bird.y + BIRD_RADIUS > p.topHeight + PIPE_GAP_HEIGHT
     ) {
       gameOver = true;
+      gameState = "gameOver";
     }
 
     // Check for scoring (bird passed pipe)
@@ -217,7 +224,7 @@ function update(deltaTime) {
       p.passed = true;
     }
 
-    if (gameOver) {\n      break; // No need to check other pipes if collision already occurred\n    }\n  }\n}\n
+    if (gameOver) break; // No need to check other pipes if collision already occurred
   }
 }
 
