@@ -217,7 +217,7 @@ function update(deltaTime) {
       p.passed = true;
     }
 
-    if (gameOver) break; // No need to check other pipes if collision already occurred
+    if (gameOver) {\n      break; // No need to check other pipes if collision already occurred\n    }\n  }\n}\n
   }
 }
 
