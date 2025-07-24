@@ -11,7 +11,7 @@ I'm currently experimenting with various tools, including the [Zed editor](https
 *   Gemini CLI: A command-line interface for interacting with Google Gemini. [https://gemini.google.com/](https://gemini.google.com/)
 *   Google Code Assist: An AI-powered code completion and generation tool from Google. [https://cloud.google.com/code-assist](https://cloud.google.com/code-assist)
 *   Kilo Code: An open-source AI agent VS Code extension that combines features of Cline, Roo, and its own additions, offering orchestrator, architect, code, and debug modes. [https://kilocode.ai/](https://kilocode.ai/)
-*   Roo Code: A collaborative code editor with real-time sharing. [https://roocode.com/](https://roocode.com/)
+*   Roo Code: An AI-powered dev team in VS Code that helps write, refactor, and debug code across multiple files with specialized modes and deep project context. [https://roocode.com/](https://roocode.com/)
 
 Stay tuned for more updates!
 
