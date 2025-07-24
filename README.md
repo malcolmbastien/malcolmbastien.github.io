@@ -4,14 +4,14 @@ I'm currently experimenting with various tools, including the [Zed editor](https
 
 ## Tools I'm Trying:
 
-*   Zed: A high-performance, multiplayer code editor. [zed.dev](https://zed.dev/)
-*   VS Codium: A free and open-source build of the VS Code editor without Microsoft's telemetry. [vscodium.com](https://vscodium.com/)
-*   Open Code: An AI-powered coding assistant. [opencode.ai](https://opencode.ai/)
-*   Task-Master-AI: A tool for managing and automating development tasks based on product requirements. [task-master.dev](https://www.task-master.dev/)
-*   Gemini CLI: A command-line interface for interacting with Google Gemini. [https://gemini.google.com/](https://gemini.google.com/)
-*   Google Code Assist: An AI-powered code completion and generation tool from Google. [https://cloud.google.com/code-assist](https://cloud.google.com/code-assist)
-*   Kilo Code: An open-source AI agent VS Code extension that combines features of Cline, Roo, and its own additions, offering orchestrator, architect, code, and debug modes. [https://kilocode.ai/](https://kilocode.ai/)
-*   Roo Code: An AI-powered dev team in VS Code that helps write, refactor, and debug code across multiple files with specialized modes and deep project context. [https://roocode.com/](https://roocode.com/)
+*   [Zed](https://zed.dev/): A high-performance, multiplayer code editor.
+*   [VS Codium](https://vscodium.com/): A free and open-source build of the VS Code editor without Microsoft\'s telemetry.
+*   [Open Code](https://opencode.ai/): An AI-powered coding assistant.
+*   [Task-Master-AI](https://www.task-master.dev/): A tool for managing and automating development tasks based on product requirements.
+*   [Gemini CLI](https://gemini.google.com/): A command-line interface for interacting with Google Gemini.
+*   [Google Code Assist](https://cloud.google.com/code-assist): An AI-powered code completion and generation tool from Google.
+*   [Kilo Code](https://kilocode.ai/): An open-source AI agent VS Code extension that combines features of Cline, Roo, and its own additions, offering orchestrator, architect, code, and debug modes.
+*   [Roo Code](https://roocode.com/): An AI-powered dev team in VS Code that helps write, refactor, and debug code across multiple files with specialized modes and deep project context.
 
 Stay tuned for more updates!
 
