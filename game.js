@@ -144,6 +144,7 @@ function drawGameOverScreen() {
 }
 
 function update(deltaTime) {
+  // If the game is over, do not update anything further
   if (gameOver) {
     return;
   }
@@ -189,37 +190,37 @@ function update(deltaTime) {
 
   // Check for ground collision
   if (bird.y + BIRD_RADIUS > GAME_HEIGHT - GROUND_HEIGHT) {
-    bird.y = GAME_HEIGHT - GROUND_HEIGHT - BIRD_RADIUS;
+    bird.y = GAME_HEIGHT - GROUND_HEIGHT - BIRD_RADIUS; // Snap bird to ground
     gameOver = true;
-    gameState = "gameOver";
+    gameState = "gameOver"; // Transition to game over state
   }
 
   // Collision detection with pipes and scoring
   for (let i = 0; i < pipes.length; i++) {
     const p = pipes[i];
 
+    // Check for horizontal overlap with pipe
+    const horizontalOverlap =
+      bird.x + BIRD_RADIUS > p.x && bird.x - BIRD_RADIUS < p.x + PIPE_WIDTH;
+
     // Collision with top pipe
-    if (
-      bird.x + BIRD_RADIUS > p.x &&
-      bird.x - BIRD_RADIUS < p.x + PIPE_WIDTH &&
-      bird.y - BIRD_RADIUS < p.topHeight
-    ) {
+    if (horizontalOverlap && bird.y - BIRD_RADIUS < p.topHeight) {
       gameOver = true;
-      gameState = "gameOver";
+      gameState = "gameOver"; // Transition to game over state
     }
 
     // Collision with bottom pipe
     if (
-      bird.x + BIRD_RADIUS > p.x &&
-      bird.x - BIRD_RADIUS < p.x + PIPE_WIDTH &&
+      horizontalOverlap &&
       bird.y + BIRD_RADIUS > p.topHeight + PIPE_GAP_HEIGHT
     ) {
       gameOver = true;
-      gameState = "gameOver";
+      gameState = "gameOver"; // Transition to game over state
     }
 
     // Check for scoring (bird passed pipe)
-    if (!p.passed && bird.x > p.x + PIPE_WIDTH) {
+    // Only score if the game is not over and the bird has passed the pipe
+    if (!gameOver && !p.passed && bird.x > p.x + PIPE_WIDTH) {
       score++;
       p.passed = true;
     }
