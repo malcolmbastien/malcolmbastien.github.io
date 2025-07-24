@@ -6,7 +6,8 @@ I'm currently experimenting with various tools, including the [Zed editor](https
 
 *   Zed: A high-performance, multiplayer code editor. [zed.dev](https://zed.dev/)
 *   VS Codium: A free and open-source build of the VS Code editor without Microsoft's telemetry. [vscodium.com](https://vscodium.com/)
-*   Opde Code: An AI-powered coding assistant. [opencode.ai](https://opencode.ai/)
+*   Open Code: An AI-powered coding assistant. [opencode.ai](https://opencode.ai/)
+*   Task-Master-AI: A tool for managing and automating development tasks based on product requirements. [task-master.dev](https://www.task-master.dev/)
 
 Stay tuned for more updates!
 
