@@ -24,6 +24,12 @@
 <body>
     <canvas id="gameCanvas" width="288" height="512"></canvas>
 
+    <div id="topScoresDialog" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border: 2px solid #000; z-index: 100;">
+        <h2>Top Scores</h2>
+        <ol id="highScoresList"></ol>
+        <button id="closeScoresDialog">Close</button>
+    </div>
+
     <script src="game.js"></script>
 </body>
 </html>

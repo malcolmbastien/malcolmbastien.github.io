@@ -31,6 +31,22 @@ const PIPE_INTERVAL = 1.5; // seconds between new pipe generation
 const GROUND_HEIGHT = 112; // Standard Flappy Bird ground height
 const GROUND_COLOR = "#ded895"; // Brownish color
 
+const PIPE_INTERVAL = 1.5; // seconds between new pipe generation
+
+const HIGH_SCORES_KEY = "flappyBirdHighScores";
+
+function getHighScores() {
+  const scores = JSON.parse(localStorage.getItem(HIGH_SCORES_KEY) || "[]");
+  return scores.sort((a, b) => b - a).slice(0, 5); // Get top 5 scores
+}
+
+function saveScore(score) {
+  const scores = getHighScores();
+  scores.push(score);
+  scores.sort((a, b) => b - a);
+  localStorage.setItem(HIGH_SCORES_KEY, JSON.stringify(scores.slice(0, 5))); // Store only top 5
+}
+
 let pipes = []; // Array to hold all active pipes
 let timeSinceLastPipe = PIPE_INTERVAL; // Timer for pipe generation
 let score = 0; // Initialize score
@@ -62,11 +78,15 @@ function gameLoop(currentTime) {
     draw(); // Draw final state of bird and pipes
     drawGameOverScreen();
     drawScore(); // Show final score
+    showHighScoresDialog();
   }
 
   // Request next frame
-  requestAnimationFrame(gameLoop);
-}
+requestAnimationFrame(gameLoop);
+
+document.getElementById("closeScoresDialog").addEventListener("click", () => {
+  document.getElementById("topScoresDialog").style.display = "none";
+});}
 
 function handleInput() {
   if (gameState === "start") {
@@ -101,6 +121,7 @@ function resetGame() {
   score = 0;
   timeSinceLastPipe = PIPE_INTERVAL; // Ensure first pipe generates correctly
   gameOver = false;
+  document.getElementById("topScoresDialog").style.display = "none";
 }
 
 function drawStartScreen() {
@@ -117,6 +138,20 @@ function drawStartScreen() {
     GAME_WIDTH / 2 - ctx.measureText("Press Space to Start").width / 2,
     GAME_HEIGHT / 2,
   );
+}
+
+function showHighScoresDialog() {
+  const highScores = getHighScores();
+  const highScoresList = document.getElementById("highScoresList");
+  highScoresList.innerHTML = ""; // Clear previous scores
+
+  highScores.forEach((s, index) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = `#${index + 1}: ${s}`;
+    highScoresList.appendChild(listItem);
+  });
+
+  document.getElementById("topScoresDialog").style.display = "block";
 }
 
 function drawGameOverScreen() {
@@ -193,6 +228,7 @@ function update(deltaTime) {
     bird.y = GAME_HEIGHT - GROUND_HEIGHT - BIRD_RADIUS; // Snap bird to ground
     gameOver = true;
     gameState = "gameOver"; // Transition to game over state
+    saveScore(score);
   }
 
   // Collision detection with pipes and scoring
@@ -207,6 +243,7 @@ function update(deltaTime) {
     if (horizontalOverlap && bird.y - BIRD_RADIUS < p.topHeight) {
       gameOver = true;
       gameState = "gameOver"; // Transition to game over state
+      saveScore(score);
     }
 
     // Collision with bottom pipe
@@ -216,6 +253,7 @@ function update(deltaTime) {
     ) {
       gameOver = true;
       gameState = "gameOver"; // Transition to game over state
+      saveScore(score);
     }
 
     // Check for scoring (bird passed pipe)
