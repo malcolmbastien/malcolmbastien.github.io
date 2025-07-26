@@ -1,0 +1,153 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Initialize Project Structure and Game Canvas",
+        "description": "Set up the basic HTML, CSS, and JavaScript files. Create the main HTML canvas element with specified dimensions and initialize the fundamental game loop using requestAnimationFrame.",
+        "details": "Create `index.html`, `style.css`, and `script.js`. Embed canvas with fixed width (288px) and height (512px). Implement a basic game loop function that clears and redraws the canvas on each frame.",
+        "testStrategy": "Verify that an HTML page loads with a visible canvas element of the correct size and that the game loop is active (e.g., by logging frame updates to console).",
+        "priority": "high",
+        "dependencies": [],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "Implement Bird Rendering and Gravity",
+        "description": "Draw a simple representation of the bird (e.g., a square or circle) on the canvas. Implement the core gravity mechanic, causing the bird to continuously fall downwards.",
+        "details": "Create a bird object/class with properties for position (x, y) and velocity (dy). Implement a `draw()` method to render the bird and an `update()` method to apply a constant downward acceleration (gravity) to its vertical velocity.",
+        "testStrategy": "Observe the canvas to ensure a bird shape appears and consistently falls downwards from its initial position.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Implement Bird Flapping and Vertical Constraints",
+        "description": "Add user input handling (spacebar press or mouse click) to make the bird flap upwards. Ensure the bird is constrained to the top boundary of the canvas and triggers a game over if it falls below the bottom boundary.",
+        "details": "Attach event listeners for keyboard (spacebar) and mouse clicks. On input, apply an instantaneous upward velocity to the bird. Implement logic to prevent the bird from going above the canvas top and to detect if it goes below the canvas bottom.",
+        "testStrategy": "Press spacebar/click to verify the bird moves upwards. Confirm the bird stops at the top edge. Allow the bird to fall off-screen to confirm game over condition is met.",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Implement Pipe Generation and Horizontal Movement",
+        "description": "Create a system to generate pairs of pipes (upper and lower with a gap) off-screen to the right at regular intervals. Implement constant horizontal movement for these pipes from right to left across the canvas.",
+        "details": "Develop a pipe object/class with properties for position, width, height, and gap position. Implement logic to randomly vary the vertical position of the gap while keeping its size constant. Manage an array of active pipes, adding new ones periodically and removing pipes that move completely off-screen to the left.",
+        "testStrategy": "Observe the canvas to ensure pipes appear from the right, move left at a constant speed, and disappear from the left. Verify that new pipes are generated at consistent intervals with varying gap heights.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Implement Bird-Pipe and Bird-Ground Collision Detection",
+        "description": "Develop the logic to detect collisions between the bird's bounding box and any part of the pipes (upper or lower), as well as collision with the bottom boundary of the canvas (ground). Trigger the game over state upon any collision.",
+        "details": "Implement a collision detection function that checks for overlap between the bird's bounding box and the bounding boxes of each pipe segment. Also, check for overlap with the canvas's bottom edge. Integrate this into the game loop to halt gameplay on collision.",
+        "testStrategy": "Manually guide the bird into pipes and let it hit the ground to confirm that the game immediately stops and transitions to a game over state.",
+        "priority": "high",
+        "dependencies": [
+          3,
+          4
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Implement Scoring Logic and Display",
+        "description": "Track the player's score, incrementing it by one each time the bird successfully passes through a pair of pipes. Display the current score prominently on the canvas during gameplay.",
+        "details": "Maintain a score variable. Implement logic to detect when the bird's horizontal position has successfully passed a pipe's x-coordinate without collision. Render the current score as text on the canvas.",
+        "testStrategy": "Play the game and verify that the score increments correctly each time the bird passes a pipe. Ensure the score display is visible and updates in real-time.",
+        "priority": "medium",
+        "dependencies": [
+          4
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Implement Game State Management (Start, Playing, Game Over)",
+        "description": "Create distinct game states (Start Screen, Playing, Game Over) and manage the transitions between them. Display appropriate messages and options for each state, including a restart option on the Game Over screen.",
+        "details": "Define an enumeration or variable for game states. Implement logic to switch states based on user input (e.g., 'Press Space to Start') and game events (e.g., collision for Game Over). Render specific UI elements (text, buttons) for each state.",
+        "testStrategy": "Verify the 'Start Screen' appears initially. Confirm game starts on input. Confirm 'Game Over Screen' appears on collision with final score and a restart option. Test restarting the game.",
+        "priority": "high",
+        "dependencies": [
+          1,
+          5,
+          6
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Apply Basic Visual Refinements and Styling",
+        "description": "Enhance the visual appearance of the bird, pipes, and background using basic CSS for the page and simple canvas drawing techniques. Ensure the game has a clean and presentable look.",
+        "details": "Apply basic CSS to center the canvas and set background colors. Use canvas drawing methods (e.g., `fillRect`, `arc`, `fillStyle`) to give the bird and pipes distinct, simple colors. Style the score and game state messages.",
+        "testStrategy": "Visually inspect the game to ensure all elements (bird, pipes, score, messages) are clearly distinguishable and aesthetically basic but functional.",
+        "priority": "medium",
+        "dependencies": [
+          1,
+          2,
+          4,
+          6,
+          7
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Optimize Performance and Test Browser Compatibility",
+        "description": "Review the game loop and rendering logic for smooth performance, ensuring no significant lag. Test the game across major evergreen browsers (Chrome, Firefox, Edge, Safari) to confirm broad compatibility.",
+        "details": "Profile the game's performance in developer tools to identify any bottlenecks. Ensure `requestAnimationFrame` is used correctly. Test on different browsers to catch any rendering or JavaScript API inconsistencies.",
+        "testStrategy": "Play the game extensively on target browsers to check for consistent frame rates and responsiveness. Monitor CPU/memory usage in developer tools.",
+        "priority": "low",
+        "dependencies": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "status": "done"
+      },
+      {
+        "id": 10,
+        "title": "Prepare for GitHub Pages Deployment",
+        "description": "Ensure the project structure and file paths are correctly configured for seamless hosting on GitHub Pages. Verify all assets are properly linked and the game is accessible via a public URL.",
+        "details": "Confirm `index.html` is in the root directory. Ensure all CSS and JavaScript file paths are relative and correct. Test the deployment process by pushing to a GitHub repository and enabling GitHub Pages.",
+        "testStrategy": "Deploy the game to GitHub Pages and access it via the generated URL. Verify that the game loads and functions correctly in a live environment.",
+        "priority": "low",
+        "dependencies": [
+          1,
+          8
+        ],
+        "status": "done",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-07-26T00:09:14.374Z",
+      "updated": "2025-07-26T00:54:01.729Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<context>
+# Overview
+This document outlines the product requirements for a minimal JavaScript clone of the popular game Flappy Bird. The goal is to create a playable web-based version that captures the core mechanics of the original game using only HTML, CSS, and JavaScript, suitable for hosting on GitHub Pages. This project is intended for developers looking for a simple JavaScript game example and users who want to play a quick, nostalgic game.
+
+# Core Features
+- **Game Canvas:** The game will be rendered within an HTML canvas element with a fixed width of 288px and a height of 512px.
+- **Bird Mechanics:** A simple square or circle will represent the bird. It will be affected by gravity, continuously falling downwards. User input (spacebar or mouse click) will make the bird "flap" upwards. The bird will be constrained to the top of the canvas, and the game will end if it falls below the bottom.
+- **Pipe Mechanics:** Rectangular pipes will be generated off-screen to the right at regular intervals. They will move from right to left at a constant speed. The vertical gap between the pipes will vary randomly, but the gap size will remain constant.
+- **Collision Detection:** The game will end if the bird collides with a pipe or the ground.
+- **Scoring:** The player's score will increment for each pair of pipes successfully passed. The score will be displayed on the screen.
+- **Game State Management:** The game will have three states: a "Start Screen," a "Playing" state, and a "Game Over Screen" with a restart option.
+
+# User Experience
+The user experience will be simple and intuitive. The user will be presented with a start screen and can begin playing with a single input. The game is controlled with a single action (flap), and the objective is clear: navigate the bird through the pipes to get the highest score.
+</context>
+<PRD>
+# Technical Architecture
+- **Frontend:** The game will be built using HTML, CSS, and vanilla JavaScript. No external libraries will be used.
+- **Game Logic:** All game logic, including rendering, physics, input handling, and collision detection, will be implemented in JavaScript.
+- **Deployment:** The game will be hosted on GitHub Pages.
+
+# Development Roadmap
+1.  **Initialize Project:** Set up the basic HTML, CSS, and JavaScript files. Create the game canvas and the main game loop.
+2.  **Bird Implementation:** Implement the bird's rendering, gravity, and flapping mechanics.
+3.  **Pipe Implementation:** Implement the generation and movement of the pipes.
+4.  **Collision and Scoring:** Implement collision detection and the scoring system.
+5.  **Game States:** Implement the start, playing, and game over states.
+6.  **Refinement:** Apply basic styling and visual refinements.
+7.  **Deployment:** Prepare the project for deployment on GitHub Pages.
+
+# Logical Dependency Chain
+The development will follow a logical progression, starting with the foundational elements and building up to the full game. The core game mechanics (bird and pipes) will be implemented first, followed by the game rules (collision and scoring), and finally the overall game structure (game states).
+
+# Risks and Mitigations
+- **Performance:** The game's performance could be a concern, especially with many objects on the screen. This will be mitigated by removing off-screen pipes and using efficient rendering techniques.
+- **Browser Compatibility:** There may be minor inconsistencies between browsers. The use of standard web technologies should minimize this risk.
+
+# Appendix
+This PRD is based on the initial project tasks and the `flappy-bird-prd.md` document.
+</PRD>

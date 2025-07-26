@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background: #333;
+}
+
+canvas {
+    border: 1px solid black;
+    background: url('https://github.com/malcolmbastien/flappy-bird/blob/main/background.png?raw=true');
+}
