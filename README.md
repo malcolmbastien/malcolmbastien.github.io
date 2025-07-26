@@ -15,6 +15,6 @@ I'm currently experimenting with various tools, including the [Zed editor](https
 
 Stay tuned for more updates!
 
-You can also try my [Minimal Flappy Bird Game](game.html)!
+You can also try my [Minimal Flappy Bird Game](index.html)!
 
 Visit my personal blog: [malcolmbastien.com](https://malcolmbastien.com/)
