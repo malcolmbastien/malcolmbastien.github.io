@@ -5,12 +5,16 @@ Here's a Mermaid.js flow diagram illustrating how `task-master`, Open Code (the 
 ```mermaid
 graph TD
     A[User] --> B{Zed Editor};
-    B --> C(Project Files/Codebase);
+    B --> C;
     C --> D[Open Code / Agent Environment];
     A --> D;
 
+    subgraph C[Project Files/Codebase]
+        F{tasks.json & *.md files}
+    end
+
     D -- "Executes commands" --> E[Task Master CLI];
-    E -- "Manages tasks, plans" --> F{tasks.json & *.md files};
+    E -- "Manages tasks, plans" --> F;
     E -- "Leverages for AI capabilities" --> G(Gemini LLM);
     D -- "Leverages for AI capabilities" --> G;
 
