@@ -13,7 +13,7 @@ graph TD
         F{tasks.json & *.md files}
     end
 
-    D -- "Executes commands" --> E[Task Master CLI];
+    D -- "Executes commands via MCP" --> E[Task Master CLI];
     E -- "Manages tasks, plans" --> F;
     E -- "Leverages for AI capabilities" --> G(Gemini LLM);
     D -- "Leverages for AI capabilities" --> G;
@@ -42,7 +42,7 @@ This diagram illustrates the integrated development workflow for the Flappy Bird
 
 The **Project Files/Codebase** (C) is the central repository for all game code and assets. Changes from Zed Editor or automated edits from Open Code are reflected here.
 
-Within the Open Code environment, the **Task Master CLI** (E) is a critical tool. I use `task-master` commands to manage the entire development process: parsing requirements from `prd.txt`, generating and expanding tasks, tracking their status in `tasks.json` and individual `.md` files (F), and analyzing complexity.
+Within the Open Code environment, the **Task Master CLI** (E) is a critical tool. This connection is enabled through **MCP**, allowing Open Code to execute `task-master` commands to manage the entire development process: parsing requirements from `prd.txt`, generating and expanding tasks, tracking their status in `tasks.json` and individual `.md` files (F), and analyzing complexity.
 
 The intelligence behind both `task-master`'s advanced features (like task expansion and PRD parsing) and my own reasoning and code generation capabilities comes from the **Gemini LLM** (G). Gemini processes prompts and data to provide task-related insights and generate code or instructions.
 
