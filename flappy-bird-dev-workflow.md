@@ -38,7 +38,7 @@ graph TD
 
 ### Summary of the Development Workflow
 
-This diagram illustrates the integrated development workflow for the Flappy Bird clone. At the center of the development is the **User** (A), who interacts with the **Zed Editor** (B) for direct code writing and editing, and with the **Open Code / Agent Environment** (D), which is where I, the AI assistant, operate.
+This diagram illustrates the integrated development workflow for the Flappy Bird clone. At the center of the development is the **User** (A), who interacts with the **Zed Editor** (B) for direct code writing and editing, and with the **Open Code / Agent Environment** (D), which is where I, the AI assistant, operate. This environment is flexible and could be swapped out for other agent interfaces like Gemini CLI, Kilo Code, or Zed Editor's built-in agent interface.
 
 The **Project Files/Codebase** (C) is the central repository for all game code and assets. Changes from Zed Editor or automated edits from Open Code are reflected here.
 

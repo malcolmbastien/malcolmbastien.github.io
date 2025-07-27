@@ -1,6 +1,6 @@
 # Welcome!
 
-I'm currently experimenting with various tools, including the [Zed editor](https://zed.dev/).
+This site serves as a public log of my experiments and explorations with various tools, particularly focusing on emerging technologies such as AI agents, AI CLIs, large language models (LLMs), and AI code assistants.
 
 ## Tools I'm Trying:
 
@@ -12,9 +12,14 @@ I'm currently experimenting with various tools, including the [Zed editor](https
 *   [Gemini Code Assist](https://codeassist.google/): An AI-powered code completion and generation tool from Google.
 *   [Kilo Code](https://kilocode.ai/): An open-source AI agent VS Code extension that combines features of Cline, Roo, and its own additions, offering orchestrator, architect, code, and debug modes.
 *   [Roo Code](https://roocode.com/): An AI-powered dev team in VS Code that helps write, refactor, and debug code across multiple files with specialized modes and deep project context.
+*   [Ollama](https://ollama.com/): A tool for running large language models locally.
+*   [Open Router](https://openrouter.ai/): A unified API for AI models.
 
 Stay tuned for more updates!
 
-You can also try my [Minimal Flappy Bird Game](game.html)!
+## Links
+
+*   [Minimal Flappy Bird Game](game.html)
+*   [Flappy Bird Development Workflow](flappy-bird-dev-workflow.md)
 
 Visit my personal blog: [malcolmbastien.com](https://malcolmbastien.com/)
