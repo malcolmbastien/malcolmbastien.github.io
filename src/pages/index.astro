@@ -192,17 +192,27 @@ const progressColors = getProgressColors();
                         },
                     ).length;
 
-                    const showAsRecent = (!post.data.draft) && (
-                        (isRecentlyCreated && newPostsCount < 3) ||
-                        (isRecentlyUpdated && updatedBadgesUpToHere < 3)
-                    );
+                    // Priority: assign up to 3 NEW, then up to 3 UPDATED
+                    let assignedBadge: 'new' | 'updated' | null = null;
+
+                    if (!post.data.draft) {
+                        if (isRecentlyCreated && newPostsCount < 3) {
+                            assignedBadge = 'new';
+                        } else if (isRecentlyUpdated && updatedBadgesUpToHere < 3) {
+                            assignedBadge = 'updated';
+                        }
+                    }
+
+                    const showAsRecent = assignedBadge !== null;
 
                     return (
                         <a
                             href={`/posts/${post.slug}`}
                             class={`group flex flex-col p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl post-card ${statusGlow[post.data.status as keyof typeof statusGlow]} ${isLarge ? "md:col-span-2 lg:col-span-2" : ""} ${
                                 showAsRecent
-                                    ? "border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-950/20"
+                                    ? assignedBadge === 'new'
+                                        ? "border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-950/20"
+                                        : "border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20"
                                     : "border-slate-200 dark:border-slate-800 bg-white dark:bg-[#121812]"
                             }`}
                             data-status={post.data.status}
@@ -234,10 +244,18 @@ const progressColors = getProgressColors();
                                     </span>
                                     {showAsRecent && (
                                         <span
-                                            class="px-1.5 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700 border border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400 dark:border-emerald-800"
-                                            title="Recently created or updated"
+                                            class={`px-1.5 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider ${
+                                                assignedBadge === 'new'
+                                                    ? "bg-emerald-100 text-emerald-700 border border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400 dark:border-emerald-800"
+                                                    : "bg-amber-100 text-amber-700 border border-amber-200 dark:bg-amber-900/30 dark:text-amber-400 dark:border-amber-800"
+                                            }`}
+                                            title={
+                                                assignedBadge === 'new'
+                                                    ? "Created within the last 7 days"
+                                                    : "Updated within the last 7 days"
+                                            }
                                         >
-                                            NEW
+                                            {assignedBadge === 'new' ? 'NEW' : 'UPDATED'}
                                         </span>
                                     )}
                                 </div>
