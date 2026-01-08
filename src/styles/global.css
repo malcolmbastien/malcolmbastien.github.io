@@ -145,8 +145,8 @@
   margin-right: 0.5rem;
 }
 
-/* DRAFT, WIP, IN-PROGRESS */
-.markdown-alert-draft, .markdown-alert-wip, .markdown-alert-todo {
+/* DRAFT, WIP, IN-PROGRESS Callouts (Blockquote style) */
+.markdown-alert-draft, .markdown-alert-wip {
   border-left-color: #94a3b8;
   background-color: #f1f5f9;
   border-left-style: dashed;
@@ -160,4 +160,32 @@
 .markdown-alert-draft .markdown-alert-title::after {
   content: " (In Progress)";
   @apply text-[10px] lowercase font-normal opacity-60 ml-2;
+}
+
+/* DRAFT CONTAINER (Directive style :::draft) */
+.draft-container {
+  @apply my-8 p-6 rounded-xl border-2 border-slate-200 border-dashed bg-slate-50/50 relative overflow-hidden;
+  opacity: 0.8;
+}
+
+.draft-container::before {
+  content: "DRAFT CONTENT / IN PROGRESS";
+  @apply absolute top-0 right-0 bg-slate-200 text-slate-500 text-[8px] font-bold px-2 py-0.5 rounded-bl uppercase tracking-widest;
+}
+
+.draft-container > :first-child {
+  @apply mt-0;
+}
+
+.draft-container > :last-child {
+  @apply mb-0;
+}
+
+/* Post-level Draft Styling */
+.post-is-draft {
+  @apply border-emerald-100 bg-emerald-50/10;
+}
+
+.post-draft-banner {
+  @apply mb-8 p-4 rounded-lg bg-amber-50 border border-amber-100 text-amber-800 text-sm flex items-center gap-3;
 }

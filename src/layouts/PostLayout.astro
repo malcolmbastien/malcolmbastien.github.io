@@ -9,6 +9,7 @@ interface Props {
 		status: 'seed' | 'sprout' | 'tree';
 		summary: string;
 		tags: string[];
+		draft?: boolean;
 	};
 	filePath: string;
 	gitCreated?: Date | null;
@@ -24,10 +25,12 @@ const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
 	sprout: 'bg-green-100 text-green-700 border-green-200',
 	tree: 'bg-emerald-100 text-emerald-800 border-emerald-200',
 };
+
+const isPostDraft = frontmatter.draft === true;
 ---
 
 <Layout title={frontmatter.title}>
-	<article class="max-w-3xl mx-auto px-4 py-12">
+	<article class={`max-w-3xl mx-auto px-4 py-12 ${isPostDraft ? 'post-is-draft' : ''}`}>
 		<nav class="mb-8">
 			<a href="/" class="inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-emerald-600 transition-colors">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -36,6 +39,17 @@ const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
 				Back to Garden
 			</a>
 		</nav>
+
+		{isPostDraft && (
+			<div class="post-draft-banner">
+				<span class="text-xl">🏗️</span>
+				<div>
+					<p class="font-bold uppercase tracking-wider text-[10px]">Draft Content</p>
+					<p>This entire post is currently a work in progress and may contain incomplete thoughts.</p>
+				</div>
+			</div>
+		)}
+
 		<header class="mb-8 border-b border-slate-200 pb-8">
 			<div class="flex items-center gap-3 mb-4">
 				<span class={`px-2 py-0.5 rounded-full text-xs font-medium border ${statusColors[frontmatter.status]}`}>

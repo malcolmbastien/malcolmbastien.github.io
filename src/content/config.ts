@@ -7,6 +7,7 @@ const postsCollection = defineCollection({
 		publishedDate: z.date().optional(),
 		updatedDate: z.date().optional(),
 		status: z.enum(['seed', 'sprout', 'tree']),
+		draft: z.boolean().optional(),
 		tags: z.array(z.string()),
 		summary: z.string(),
 	}),
