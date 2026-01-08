@@ -18,7 +18,8 @@ interface Props {
 
 const { frontmatter, filePath, gitCreated, gitUpdated } = Astro.props;
 
-const displayDate = frontmatter.publishedDate || gitCreated || new Date();
+const createdDate = frontmatter.publishedDate || gitCreated || new Date();
+const hasBeenUpdated = gitUpdated && gitUpdated.getTime() > createdDate.getTime() + 1000 * 60 * 60; // More than 1 hour difference
 
 const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
 	seed: 'bg-slate-100 text-slate-600 border-slate-200',
@@ -27,6 +28,14 @@ const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
 };
 
 const isPostDraft = frontmatter.draft === true;
+
+const formatDate = (date: Date) => {
+	return date.toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+	});
+};
 ---
 
 <Layout title={frontmatter.title}>
@@ -51,21 +60,29 @@ const isPostDraft = frontmatter.draft === true;
 		)}
 
 		<header class="mb-8 border-b border-slate-200 pb-8">
-			<div class="flex items-center gap-3 mb-4">
+			<div class="flex flex-wrap items-center gap-4 mb-6">
 				<span class={`px-2 py-0.5 rounded-full text-xs font-medium border flex items-center gap-1 ${statusColors[frontmatter.status]}`}>
 					{frontmatter.status === 'seed' && <span>🌱</span>}
 					{frontmatter.status === 'sprout' && <span>🌿</span>}
 					{frontmatter.status === 'tree' && <span>🌳</span>}
 					{frontmatter.status.charAt(0).toUpperCase() + frontmatter.status.slice(1)}
 				</span>
-				<time class="text-sm text-slate-500">
-					{displayDate.toLocaleDateString('en-US', {
-						year: 'numeric',
-						month: 'long',
-						day: 'numeric',
-					})}
-				</time>
+				
+				<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
+					<div class="flex items-center gap-1.5">
+						<span class="font-semibold uppercase tracking-wider text-[10px] text-slate-300">Created</span>
+						<time datetime={createdDate.toISOString()}>{formatDate(createdDate)}</time>
+					</div>
+					
+					{hasBeenUpdated && (
+						<div class="flex items-center gap-1.5 pl-4 border-l border-slate-200">
+							<span class="font-semibold uppercase tracking-wider text-[10px] text-slate-300">Last Edited</span>
+							<time datetime={gitUpdated!.toISOString()}>{formatDate(gitUpdated!)}</time>
+						</div>
+					)}
+				</div>
 			</div>
+
 			<h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
 				{frontmatter.title}
 			</h1>
