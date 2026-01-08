@@ -187,6 +187,8 @@ const progressColors = getProgressColors();
                             data-title={post.data.title.toLowerCase()}
                             data-summary={post.data.summary.toLowerCase()}
                             data-tags={post.data.tags.join(" ").toLowerCase()}
+                            data-created={post.displayDate.toISOString().split('T')[0]}
+                            data-updated={post.updatedDate.toISOString().split('T')[0]}
                         >
                             <div class="flex items-center justify-between mb-4">
                                 <div class="flex items-center gap-2">
@@ -324,6 +326,7 @@ const progressColors = getProgressColors();
     let currentFilter = "all";
     let currentTag = "";
     let searchQuery = "";
+    let currentDateFilter: string | null = null;
 
     function updateDisplay() {
         let visibleCount = 0;
@@ -334,6 +337,8 @@ const progressColors = getProgressColors();
             const title = htmlCard.dataset.title || "";
             const summary = htmlCard.dataset.summary || "";
             const tags = htmlCard.dataset.tags || "";
+            const createdDate = htmlCard.dataset.created || "";
+            const updatedDate = htmlCard.dataset.updated || "";
 
             const matchesFilter =
                 currentFilter === "all" || status === currentFilter;
@@ -342,8 +347,11 @@ const progressColors = getProgressColors();
                 title.includes(searchQuery) ||
                 summary.includes(searchQuery) ||
                 tags.includes(searchQuery);
+            const matchesDate = currentDateFilter === null ||
+                createdDate.startsWith(currentDateFilter) ||
+                updatedDate.startsWith(currentDateFilter);
 
-            if (matchesFilter && matchesTag && matchesSearch) {
+            if (matchesFilter && matchesTag && matchesSearch && matchesDate) {
                 htmlCard.classList.remove("hidden-filter");
                 visibleCount++;
             } else {
@@ -391,6 +399,12 @@ const progressColors = getProgressColors();
 
     searchInput?.addEventListener("input", (e) => {
         searchQuery = (e.target as HTMLInputElement).value.toLowerCase();
+        updateDisplay();
+    });
+
+    // Listen for date filter changes from activity heatmap
+    window.addEventListener("dateFilterChange", (e: any) => {
+        currentDateFilter = e.detail.date;
         updateDisplay();
     });
 </script>
