@@ -1,40 +1,186 @@
-<context>
-# Overview
-This document outlines the product requirements for a minimal JavaScript clone of the popular game Flappy Bird. The goal is to create a playable web-based version that captures the core mechanics of the original game using only HTML, CSS, and JavaScript, suitable for hosting on GitHub Pages. This project is intended for developers looking for a simple JavaScript game example and users who want to play a quick, nostalgic game.
+<overview>
+## Problem Statement
+Traditional microblogging (like X/Twitter) is ephemeral and rewards "hot takes" that are quickly forgotten. Traditional blogging (long-form) feels heavy and often static—once a post is published, it's rarely updated. There is no middle ground for "evolving thoughts" or "growing ideas" that start small and mature over time, like a software repository.
 
-# Core Features
-- **Game Canvas:** The game will be rendered within an HTML canvas element with a fixed width of 288px and a height of 512px.
-- **Bird Mechanics:** A simple square or circle will represent the bird. It will be affected by gravity, continuously falling downwards. User input (spacebar or mouse click) will make the bird "flap" upwards. The bird will be constrained to the top of the canvas, and the game will end if it falls below the bottom.
-- **Pipe Mechanics:** Rectangular pipes will be generated off-screen to the right at regular intervals. They will move from right to left at a constant speed. The vertical gap between the pipes will vary randomly, but the gap size will remain constant.
-- **Collision Detection:** The game will end if the bird collides with a pipe or the ground.
-- **Scoring:** The player's score will increment for each pair of pipes successfully passed. The score will be displayed on the screen.
-- **Game State Management:** The game will have three states: a "Start Screen," a "Playing" state, and a "Game Over Screen" with a restart option.
+## Target Users
+Solo developers, researchers, and thinkers who want to document their learning journey in public, treating every thought as a "living document" rather than a one-time broadcast.
 
-# User Experience
-The user experience will be simple and intuitive. The user will be presented with a start screen and can begin playing with a single input. The game is controlled with a single action (flap), and the objective is clear: navigate the bird through the pipes to get the highest score.
-</context>
-<PRD>
-# Technical Architecture
-- **Frontend:** The game will be built using HTML, CSS, and vanilla JavaScript. No external libraries will be used.
-- **Game Logic:** All game logic, including rendering, physics, input handling, and collision detection, will be implemented in JavaScript.
-- **Deployment:** The game will be hosted on GitHub Pages.
+## Success Metrics
+- 100% static site generation compatible with GitHub Pages.
+- Automatic extraction of "version history" from Git commits.
+- Visual distinction between "seed" ideas and "mature" posts.
+</overview>
 
-# Development Roadmap
-1.  **Initialize Project:** Set up the basic HTML, CSS, and JavaScript files. Create the game canvas and the main game loop.
-2.  **Bird Implementation:** Implement the bird's rendering, gravity, and flapping mechanics.
-3.  **Pipe Implementation:** Implement the generation and movement of the pipes.
-4.  **Collision and Scoring:** Implement collision detection and the scoring system.
-5.  **Game States:** Implement the start, playing, and game over states.
-6.  **Refinement:** Apply basic styling and visual refinements.
-7.  **Deployment:** Prepare the project for deployment on GitHub Pages.
+---
 
-# Logical Dependency Chain
-The development will follow a logical progression, starting with the foundational elements and building up to the full game. The core game mechanics (bird and pipes) will be implemented first, followed by the game rules (collision and scoring), and finally the overall game structure (game states).
+<functional-decomposition>
+## Capability Tree
 
-# Risks and Mitigations
-- **Performance:** The game's performance could be a concern, especially with many objects on the screen. This will be mitigated by removing off-screen pipes and using efficient rendering techniques.
-- **Browser Compatibility:** There may be minor inconsistencies between browsers. The use of standard web technologies should minimize this risk.
+### Capability: Content Management
+Management of the living blog posts stored as Git-tracked Markdown files.
 
-# Appendix
-This PRD is based on the initial project tasks and the `flappy-bird-prd.md` document.
-</PRD>
+#### Feature: Markdown Processing
+- **Description**: Transform Markdown files with YAML frontmatter into structured web pages.
+- **Inputs**: `.md` or `.mdx` files in `src/content/posts/`.
+- **Outputs**: Rendered HTML pages.
+- **Behavior**: Parse title, date, status, and tags from frontmatter; render body content.
+
+#### Feature: Post Status Tracking
+- **Description**: Categorize posts by their maturity level (e.g., "Seed", "Sprout", "Tree").
+- **Inputs**: `status` field in frontmatter.
+- **Outputs**: Visual badges/indicators on the UI.
+- **Behavior**: Allow users to filter or sort by maturity.
+
+### Capability: Concept Tracking
+Identifying and highlighting core structural elements within a post.
+
+#### Feature: Semantic Block Rendering
+- **Description**: Special styling for "Core Ideas", "Open Questions", and "Supporting Evidence".
+- **Inputs**: Custom Markdown syntax or specific CSS classes in content.
+- **Outputs**: High-contrast, formatted blocks in the post view.
+- **Behavior**: Match specific patterns (e.g., `> [!QUESTION]`) and apply unique styling.
+
+### Capability: Evolution Tracking
+Visualizing the growth and change of a post over time.
+
+### Capability: Presentation Layer
+The GitHub-profile-inspired interface for discovery.
+
+#### Feature: Activity Heatmap
+- **Description**: A visual grid showing post updates/creation activity over the year.
+- **Inputs**: File modification dates.
+- **Outputs**: SVG heatmap grid.
+- **Behavior**: Map update frequency to color intensity.
+</functional-decomposition>
+
+---
+
+<structural-decomposition>
+## Repository Structure
+
+```
+repo-blog/
+├── src/
+│   ├── content/
+│   │   ├── posts/          # Markdown files (The "Database")
+│   │   └── config.ts       # Astro Content Collections schema
+│   ├── components/
+│   │   ├── ConceptBlock/   # Semantic block components
+│   │   ├── History/        # Git history components
+│   │   └── Profile/        # Header and heatmap
+│   ├── layouts/
+│   └── pages/
+├── public/
+└── astro.config.mjs
+```
+
+## Module Definitions
+
+### Module: Content Engine
+- **Maps to capability**: Content Management
+- **Responsibility**: Define the schema for posts and handle data fetching.
+- **Exports**:
+  - `getPosts()`: Fetches and sorts all posts.
+  - `getPostBySlug(slug)`: Fetches a single post.
+
+### Module: Evolution Tracker
+- **Maps to capability**: Evolution Tracking
+- **Responsibility**: Interface with local Git to retrieve file history during build.
+- **Exports**:
+  - `getFileHistory(path)`: Returns array of `{ date, message, hash }`.
+
+### Module: Theme/UI
+- **Maps to capability**: Presentation Layer
+- **Responsibility**: Provide the "GitHub-lite" aesthetic.
+</structural-decomposition>
+
+---
+
+<dependency-graph>
+### Foundation Layer (Phase 0)
+- **Astro Setup**: Base framework configuration.
+- **Content Schema**: Defining the Zod schema for Markdown frontmatter.
+
+### Data Layer (Phase 1)
+- **Markdown Parser**: Depends on [Content Schema].
+- **Git History Fetcher**: Depends on [Astro Setup].
+
+### UI Layer (Phase 2)
+- **Post Layout**: Depends on [Markdown Parser].
+- **Profile Dashboard**: Depends on [Git History Fetcher].
+- **Concept Blocks**: Depends on [Post Layout].
+</dependency-graph>
+
+---
+
+<implementation-roadmap>
+### Phase 0: Foundation
+**Goal**: Establish the static site scaffold and content pipeline.
+
+**Tasks**:
+- [ ] Initialize Astro project with Tailwind CSS.
+- [ ] Define `posts` content collection schema (title, date, status, tags).
+- [ ] Create a "Hello World" post.
+
+**Exit Criteria**: Running dev server showing one post list and one post detail page.
+
+### Phase 1: Evolution & Core Logic
+**Goal**: Implement the unique "Git-style" features.
+
+**Tasks**:
+- [ ] Implement Git history helper using `simple-git` or native `git` commands.
+- [ ] Create `ConceptBlock` styles for Markdown alerts (Ideas, Questions, Evidence).
+- [ ] Implement "Maturity" filtering on the homepage.
+
+**Exit Criteria**: Posts show their own "commit history" at the bottom of the page.
+
+### Phase 2: Polishing & Deployment
+**Goal**: Finalize UI and push to production.
+
+**Tasks**:
+- [ ] Build GitHub-style Profile Header and Activity Heatmap.
+- [ ] Configure GitHub Actions for deployment to `gh-pages`.
+
+**Exit Criteria**: Site is live on `<user>.github.io/<repo>/`.
+</implementation-roadmap>
+
+---
+
+<test-strategy>
+## Critical Test Scenarios
+### Content Processing
+- **Happy path**: Valid Markdown with correct frontmatter renders perfectly.
+- **Error case**: Missing required frontmatter (e.g., status) should fail build with clear error.
+
+### Git Integration
+- **Edge case**: New post with no commit history yet (should show "Unpublished/Draft").
+</test-strategy>
+
+---
+
+<architecture>
+## Technology Stack
+- **Framework**: Astro (Static Site Generation)
+- **Styling**: Tailwind CSS
+- **Content**: Markdown/MDX
+- **Deployment**: GitHub Pages via GitHub Actions
+
+## Data Models
+**Post Schema**:
+```typescript
+{
+  title: string;
+  publishedDate: Date;
+  updatedDate?: Date;
+  status: 'seed' | 'sprout' | 'tree';
+  tags: string[];
+  summary: string;
+}
+```
+</architecture>
+
+<appendix>
+## Open Questions
+- Should we use the `lastmod` Git date as the "Last Updated" date automatically?
+- Do we want to support "private" seeds that don't get built to the static site?
+</appendix>

@@ -1,25 +1,43 @@
-# Welcome!
+# Astro Starter Kit: Minimal
 
-This site serves as a public log of my experiments and explorations with various tools, particularly focusing on emerging technologies such as AI agents, AI CLIs, large language models (LLMs), and AI code assistants.
+```sh
+npm create astro@latest -- --template minimal
+```
 
-## Tools I'm Trying:
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-*   [Zed](https://zed.dev/): A high-performance, multiplayer code editor.
-*   [VS Codium](https://vscodium.com/): A free and open-source build of the VS Code editor without Microsoft\'s telemetry.
-*   [Open Code](https://opencode.ai/): An AI-powered coding assistant.
-*   [Task-Master-AI](https://www.task-master.dev/): A tool for managing and automating development tasks based on product requirements.
-*   [Gemini CLI](https://github.com/google-gemini/gemini-cli): A command-line interface for interacting with Google Gemini.
-*   [Gemini Code Assist](https://codeassist.google/): An AI-powered code completion and generation tool from Google.
-*   [Kilo Code](https://kilocode.ai/): An open-source AI agent VS Code extension that combines features of Cline, Roo, and its own additions, offering orchestrator, architect, code, and debug modes.
-*   [Roo Code](https://roocode.com/): An AI-powered dev team in VS Code that helps write, refactor, and debug code across multiple files with specialized modes and deep project context.
-*   [Ollama](https://ollama.com/): A tool for running large language models locally.
-*   [Open Router](https://openrouter.ai/): A unified API for AI models.
+## 🚀 Project Structure
 
-Stay tuned for more updates!
+Inside of your Astro project, you'll see the following folders and files:
 
-## Links
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-*   [Minimal Flappy Bird Game](game.html)
-*   [Flappy Bird Development Workflow](flappy-bird-dev-workflow.md)
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-Visit my personal blog: [malcolmbastien.com](https://malcolmbastien.com/)
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

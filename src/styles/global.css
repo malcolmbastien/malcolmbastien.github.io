@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* GitHub-style Alerts */
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  color: inherit;
+  border-left: 0.25rem solid;
+  border-radius: 0.375rem;
+}
+
+.markdown-alert p:first-child {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.markdown-alert-note {
+  border-left-color: #0969da;
+  background-color: #f6f8fa;
+}
+
+.markdown-alert-tip {
+  border-left-color: #1a7f37;
+  background-color: #f0fdf4;
+}
+
+.markdown-alert-important {
+  border-left-color: #8250df;
+  background-color: #f8f2ff;
+}
+
+.markdown-alert-warning {
+  border-left-color: #9a6700;
+  background-color: #fff8c5;
+}
+
+.markdown-alert-caution {
+  border-left-color: #d1242f;
+  background-color: #fff1f0;
+}
+
+.markdown-alert-idea {
+  border-left-color: #0ea5e9;
+  background-color: #f0f9ff;
+}
+
+.markdown-alert-question {
+  border-left-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.markdown-alert-evidence {
+  border-left-color: #10b981;
+  background-color: #f0fdf4;
+}

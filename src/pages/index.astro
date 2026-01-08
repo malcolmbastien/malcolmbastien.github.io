@@ -1,0 +1,80 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import ActivityHeatmap from '../components/Profile/ActivityHeatmap.astro';
+import ProfileHeader from '../components/Profile/ProfileHeader.astro';
+
+const allPosts = await getCollection('posts');
+const sortedPosts = allPosts.sort((a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf());
+
+const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
+	seed: 'bg-slate-100 text-slate-600 border-slate-200',
+	sprout: 'bg-green-100 text-green-700 border-green-200',
+	tree: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+};
+---
+
+<Layout title="Taskmaster">
+	<main class="max-w-4xl mx-auto p-8">
+		<ProfileHeader />
+
+		<ActivityHeatmap />
+
+		<div class="mb-8 flex gap-4" id="filter-buttons">
+			<button class="px-4 py-2 rounded-md bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 transition-colors active-filter" data-status="all">All</button>
+			<button class="px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors" data-status="seed">Seeds</button>
+			<button class="px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors" data-status="sprout">Sprouts</button>
+			<button class="px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors" data-status="tree">Trees</button>
+		</div>
+
+		<div class="grid gap-6" id="posts-grid">
+			{sortedPosts.map((post: CollectionEntry<'posts'>) => (
+				<a href={`/posts/${post.slug}`} class="block p-6 rounded-xl border border-slate-200 bg-white hover:border-emerald-300 hover:shadow-sm transition-all post-card" data-status={post.data.status}>
+					<div class="flex items-center gap-3 mb-3">
+						<span class={`px-2 py-0.5 rounded-full text-[10px] font-semibold border uppercase tracking-wider ${statusColors[post.data.status as keyof typeof statusColors]}`}>
+							{post.data.status}
+						</span>
+						<time class="text-xs text-slate-400">
+							{post.data.publishedDate.toLocaleDateString('en-US', {
+								year: 'numeric',
+								month: 'short',
+								day: 'numeric',
+							})}
+						</time>
+					</div>
+					<h2 class="text-xl font-bold text-slate-900 mb-2">{post.data.title}</h2>
+					<p class="text-slate-600 text-sm line-clamp-2">{post.data.summary}</p>
+				</a>
+			))}
+		</div>
+	</main>
+</Layout>
+
+<script>
+	const buttons = document.querySelectorAll('#filter-buttons button');
+	const cards = document.querySelectorAll('.post-card');
+
+	buttons.forEach(button => {
+		button.addEventListener('click', () => {
+			const status = (button as HTMLElement).dataset.status;
+			
+			// Update button styles
+			buttons.forEach(btn => {
+				btn.classList.remove('bg-slate-900', 'text-white');
+				btn.classList.add('bg-white', 'border', 'border-slate-200', 'text-slate-600');
+			});
+			button.classList.remove('bg-white', 'border', 'border-slate-200', 'text-slate-600');
+			button.classList.add('bg-slate-900', 'text-white');
+
+			// Filter cards
+			cards.forEach(card => {
+				const cardStatus = (card as HTMLElement).dataset.status;
+				if (status === 'all' || cardStatus === status) {
+					(card as HTMLElement).style.display = 'block';
+				} else {
+					(card as HTMLElement).style.display = 'none';
+				}
+			});
+		});
+	});
+</script>
