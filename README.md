@@ -1,6 +1,6 @@
-# 🌿 Taskmaster: An Evolving Digital Garden
+# 🌿 [Name]: An Evolving Digital Garden
 
-Taskmaster is a modern, Git-powered digital garden built with **Astro** and **Tailwind CSS**. It treats thoughts as living documents, tracking their evolution over time through Git history.
+[Name] is a modern, Git-powered digital garden built with **Astro** and **Tailwind CSS**. It treats thoughts as living documents, tracking their evolution over time through Git history.
 
 Live at: [https://malcolmbastien.github.io/](https://malcolmbastien.github.io/)
 
