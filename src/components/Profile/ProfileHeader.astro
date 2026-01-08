@@ -1,7 +1,5 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
-import { createHash } from "node:crypto";
-import { execSync } from "node:child_process";
 import { theme } from "../../lib/theme";
 
 const posts = await getCollection("posts");
