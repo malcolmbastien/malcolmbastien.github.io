@@ -23,9 +23,9 @@ const createdDate = frontmatter.publishedDate || gitCreated || new Date();
 const hasBeenUpdated = gitUpdated && gitUpdated.getTime() > createdDate.getTime() + 1000 * 60 * 60; // More than 1 hour difference
 
 const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
-	seed: 'bg-slate-100 text-slate-600 border-slate-200',
-	sprout: 'bg-green-100 text-green-700 border-green-200',
-	tree: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+	seed: 'bg-slate-100 text-slate-600 border-slate-200 dark:border-slate-600',
+	sprout: 'bg-green-100 text-green-700 border-green-200 dark:border-green-600',
+	tree: 'bg-emerald-100 text-emerald-800 border-emerald-200 dark:border-emerald-600',
 };
 
 const isPostDraft = frontmatter.draft === true;
@@ -42,70 +42,72 @@ const formatDate = (date: Date) => {
 <Layout title={frontmatter.title}>
 	<article class={`max-w-3xl mx-auto px-4 py-12 ${isPostDraft ? 'post-is-draft' : ''}`}>
 		<ContentMap />
-		<nav class="mb-8">
-			<a href="/" class="inline-flex items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-					<path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-				</svg>
-				Back to Garden
-			</a>
-		</nav>
+		<div class="bg-white dark:bg-transparent p-6 rounded-lg shadow-sm">
+			<nav class="mb-8">
+				<a href="/" class="inline-flex items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+						<path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+					</svg>
+					Back to Garden
+				</a>
+			</nav>
 
-		{isPostDraft && (
-			<div class="post-draft-banner">
-				<span class="text-xl">🏗️</span>
-				<div>
-					<p class="font-bold uppercase tracking-wider text-[10px]">Draft Content</p>
-					<p>This entire post is currently a work in progress and may contain incomplete thoughts.</p>
-				</div>
-			</div>
-		)}
-
-		<header class="mb-8 border-b border-slate-200 dark:border-slate-800 pb-8">
-			<div class="flex flex-wrap items-center gap-4 mb-6">
-				<span class={`px-2 py-0.5 rounded-full text-xs font-medium border flex items-center gap-1 ${statusColors[frontmatter.status]}`}>
-					{frontmatter.status === 'seed' && <span>🌱</span>}
-					{frontmatter.status === 'sprout' && <span>🌿</span>}
-					{frontmatter.status === 'tree' && <span>🌳</span>}
-					{frontmatter.status.charAt(0).toUpperCase() + frontmatter.status.slice(1)}
-				</span>
-				
-				<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400 dark:text-slate-500">
-					<div class="flex items-center gap-1.5">
-						<span class="font-semibold uppercase tracking-wider text-[10px] text-slate-300 dark:text-slate-600">Created</span>
-						<time datetime={createdDate.toISOString()}>{formatDate(createdDate)}</time>
+			{isPostDraft && (
+				<div class="post-draft-banner">
+					<span class="text-xl">🏗️</span>
+					<div>
+						<p class="font-bold uppercase tracking-wider text-[10px]">Draft Content</p>
+						<p>This entire post is currently a work in progress and may contain incomplete thoughts.</p>
 					</div>
-					
-					{hasBeenUpdated && (
-						<div class="flex items-center gap-1.5 pl-4 border-l border-slate-200 dark:border-slate-800">
-							<span class="font-semibold uppercase tracking-wider text-[10px] text-slate-300 dark:text-slate-600">Last Edited</span>
-							<time datetime={gitUpdated!.toISOString()}>{formatDate(gitUpdated!)}</time>
-						</div>
-					)}
 				</div>
-			</div>
+			)}
 
-			<h1 class="text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
-				{frontmatter.title}
-			</h1>
-			<p class="text-xl text-slate-600 dark:text-slate-300 italic mb-6">
-				{frontmatter.summary}
-			</p>
-			<div class="flex flex-wrap gap-2">
-				{frontmatter.tags.map((tag: string) => (
-					<span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-3 py-1 rounded-md text-sm">
-						#{tag}
+			<header class="mb-8 border-b border-slate-200 dark:border-slate-600 pb-8">
+				<div class="flex flex-wrap items-center gap-4 mb-6">
+					<span class={`px-2 py-0.5 rounded-full text-xs font-medium border flex items-center gap-1 ${statusColors[frontmatter.status]}`}>
+						{frontmatter.status === 'seed' && <span>🌱</span>}
+						{frontmatter.status === 'sprout' && <span>🌿</span>}
+						{frontmatter.status === 'tree' && <span>🌳</span>}
+						{frontmatter.status.charAt(0).toUpperCase() + frontmatter.status.slice(1)}
 					</span>
-				))}
+
+					<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400 dark:text-slate-500">
+						<div class="flex items-center gap-1.5">
+							<span class="font-semibold uppercase tracking-wider text-[10px] text-slate-300 dark:text-slate-600">Created</span>
+							<time datetime={createdDate.toISOString()}>{formatDate(createdDate)}</time>
+						</div>
+
+						{hasBeenUpdated && (
+							<div class="flex items-center gap-1.5 pl-4 border-l border-slate-200 dark:border-slate-600">
+								<span class="font-semibold uppercase tracking-wider text-[10px] text-slate-300 dark:text-slate-600">Last Edited</span>
+								<time datetime={gitUpdated!.toISOString()}>{formatDate(gitUpdated!)}</time>
+							</div>
+						)}
+					</div>
+				</div>
+
+				<h1 class="text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+					{frontmatter.title}
+				</h1>
+				<p class="text-xl text-slate-600 dark:text-slate-300 italic mb-6">
+					{frontmatter.summary}
+				</p>
+				<div class="flex flex-wrap gap-2">
+					{frontmatter.tags.map((tag: string) => (
+						<span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-3 py-1 rounded-md text-sm border border-slate-100 dark:border-slate-700">
+							#{tag}
+						</span>
+					))}
+				</div>
+			</header>
+
+			<div class="prose prose-slate dark:prose-invert prose-lg max-w-none">
+				<slot />
 			</div>
-		</header>
 
-		<div class="prose prose-slate dark:prose-invert prose-lg max-w-none">
-			<slot />
+			<footer class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-600">
+				<PostHistory filePath={filePath} />
+			</footer>
 		</div>
-
-		<footer class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
-			<PostHistory filePath={filePath} />
-		</footer>
 	</article>
 </Layout>
