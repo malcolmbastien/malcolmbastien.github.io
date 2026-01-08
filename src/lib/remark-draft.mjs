@@ -15,6 +15,7 @@ export function remarkDraftContainer() {
 
         data.hName = tagName;
         data.hProperties = {
+          ...(data.hProperties || {}),
           className: ['draft-container', `draft-${node.type}`]
         };
       }

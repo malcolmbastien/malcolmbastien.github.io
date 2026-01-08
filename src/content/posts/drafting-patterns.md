@@ -19,6 +19,12 @@ For sections that are incomplete, we can use the `:::draft` directive:
 I haven't quite finished this part of the thought yet. It spans multiple paragraphs.
 
 Here is the second paragraph of the draft section.
+
+A list:
+
+- One
+- Two
+- Three
 :::
 
 ## Callout-based Drafts (Small blocks)
