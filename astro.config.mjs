@@ -1,14 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import remarkGithubAlerts from 'remark-github-alerts';
+import { remarkCallouts } from './src/lib/remark-callouts.mjs';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://malcolmbastien.github.io',
 	base: '/',
 	markdown: {
-		remarkPlugins: [remarkGithubAlerts],
+		remarkPlugins: [remarkCallouts],
 	},
 	vite: {
 		plugins: [tailwindcss()]
