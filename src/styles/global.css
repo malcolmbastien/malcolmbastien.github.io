@@ -32,10 +32,16 @@
   border-left-color: #0969da;
   background-color: #f6f8fa;
 }
-.markdown-alert-note .markdown-alert-title::before,
-.markdown-alert-info .markdown-alert-title::before,
-.markdown-alert-todo .markdown-alert-title::before {
+.markdown-alert-note .markdown-alert-title::before {
+  content: "🖋️";
+  margin-right: 0.5rem;
+}
+.markdown-alert-info .markdown-alert-title::before {
   content: "ℹ️";
+  margin-right: 0.5rem;
+}
+.markdown-alert-todo .markdown-alert-title::before {
+  content: "☑️";
   margin-right: 0.5rem;
 }
 
@@ -44,9 +50,14 @@
   border-left-color: #1a7f37;
   background-color: #f0fdf4;
 }
-.markdown-alert-tip .markdown-alert-title::before,
-.markdown-alert-success .markdown-alert-title::before {
-  content: "💡";
+.markdown-alert-tip .markdown-alert-title::before {
+  content: "🔥";
+  margin-right: 0.5rem;
+}
+.markdown-alert-success .markdown-alert-title::before,
+.markdown-alert-done .markdown-alert-title::before,
+.markdown-alert-check .markdown-alert-title::before {
+  content: "✅";
   margin-right: 0.5rem;
 }
 
@@ -57,6 +68,12 @@
 }
 .markdown-alert-important .markdown-alert-title::before {
   content: "✨";
+  margin-right: 0.5rem;
+}
+.markdown-alert-abstract .markdown-alert-title::before,
+.markdown-alert-summary .markdown-alert-title::before,
+.markdown-alert-tldr .markdown-alert-title::before {
+  content: "📋";
   margin-right: 0.5rem;
 }
 
@@ -76,8 +93,16 @@
   border-left-color: #d1242f;
   background-color: #fff1f0;
 }
-.markdown-alert-danger .markdown-alert-title::before {
-  content: "🚫";
+.markdown-alert-failure .markdown-alert-title::before,
+.markdown-alert-fail .markdown-alert-title::before,
+.markdown-alert-missing .markdown-alert-title::before {
+  content: "❌";
+  margin-right: 0.5rem;
+}
+.markdown-alert-danger .markdown-alert-title::before,
+.markdown-alert-error .markdown-alert-title::before,
+.markdown-alert-bug .markdown-alert-title::before {
+  content: "⚡";
   margin-right: 0.5rem;
 }
 
@@ -107,7 +132,7 @@
   background-color: #fdf4ff;
 }
 .markdown-alert-example .markdown-alert-title::before {
-  content: "📋";
+  content: "📜";
   margin-right: 0.5rem;
 }
 
