@@ -67,9 +67,9 @@ const progressColors = getProgressColors();
                     class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-4"
                 >
                     <h3
-                        class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3"
+                        class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4"
                     >
-                        Garden Stats
+                        Stats
                     </h3>
                     <div class="space-y-4">
                         <div class="flex justify-between items-end">
@@ -193,13 +193,16 @@ const progressColors = getProgressColors();
                     ).length;
 
                     // Priority: assign up to 3 NEW, then up to 3 UPDATED
-                    let assignedBadge: 'new' | 'updated' | null = null;
+                    let assignedBadge: "new" | "updated" | null = null;
 
                     if (!post.data.draft) {
                         if (isRecentlyCreated && newPostsCount < 3) {
-                            assignedBadge = 'new';
-                        } else if (isRecentlyUpdated && updatedBadgesUpToHere < 3) {
-                            assignedBadge = 'updated';
+                            assignedBadge = "new";
+                        } else if (
+                            isRecentlyUpdated &&
+                            updatedBadgesUpToHere < 3
+                        ) {
+                            assignedBadge = "updated";
                         }
                     }
 
@@ -208,13 +211,13 @@ const progressColors = getProgressColors();
                     return (
                         <a
                             href={`/posts/${post.slug}`}
-                            class={`group flex flex-col p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl post-card ${statusGlow[post.data.status as keyof typeof statusGlow]} ${isLarge ? "md:col-span-2 lg:col-span-2" : ""} ${
+                            class={`group flex flex-col p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl post-card ${
                                 showAsRecent
-                                    ? assignedBadge === 'new'
-                                        ? "border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-950/20"
-                                        : "border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20"
-                                    : "border-slate-200 dark:border-slate-800 bg-white dark:bg-[#121812]"
-                            }`}
+                                    ? assignedBadge === "new"
+                                        ? "hover:shadow-emerald-200/50 dark:hover:shadow-emerald-900/50 border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-950/20"
+                                        : "hover:shadow-amber-200/50 dark:hover:shadow-amber-900/50 border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20"
+                                    : "hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50 border-slate-200 dark:border-slate-800 bg-white dark:bg-[#121812]"
+                            } ${isLarge ? "md:col-span-2 lg:col-span-2" : ""}`}
                             data-status={post.data.status}
                             data-title={post.data.title.toLowerCase()}
                             data-summary={post.data.summary.toLowerCase()}
@@ -245,17 +248,19 @@ const progressColors = getProgressColors();
                                     {showAsRecent && (
                                         <span
                                             class={`px-1.5 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider ${
-                                                assignedBadge === 'new'
+                                                assignedBadge === "new"
                                                     ? "bg-emerald-100 text-emerald-700 border border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400 dark:border-emerald-800"
                                                     : "bg-amber-100 text-amber-700 border border-amber-200 dark:bg-amber-900/30 dark:text-amber-400 dark:border-amber-800"
                                             }`}
                                             title={
-                                                assignedBadge === 'new'
+                                                assignedBadge === "new"
                                                     ? "Created within the last 7 days"
                                                     : "Updated within the last 7 days"
                                             }
                                         >
-                                            {assignedBadge === 'new' ? 'NEW' : 'UPDATED'}
+                                            {assignedBadge === "new"
+                                                ? "NEW"
+                                                : "UPDATED"}
                                         </span>
                                     )}
                                 </div>
@@ -444,15 +449,19 @@ const progressColors = getProgressColors();
     });
 
     // Prevent any interference with blog card clicks
-    document.querySelectorAll('.post-card').forEach(card => {
-        card.addEventListener('click', (e) => {
-            // Ensure no event bubbling that could trigger filtering
-            e.stopPropagation();
-        }, true); // Capture phase
+    document.querySelectorAll(".post-card").forEach((card) => {
+        card.addEventListener(
+            "click",
+            (e) => {
+                // Ensure no event bubbling that could trigger filtering
+                e.stopPropagation();
+            },
+            true,
+        ); // Capture phase
 
         // Prevent focus/blur events that might trigger updates
-        card.addEventListener('focus', (e) => e.stopPropagation(), true);
-        card.addEventListener('blur', (e) => e.stopPropagation(), true);
+        card.addEventListener("focus", (e) => e.stopPropagation(), true);
+        card.addEventListener("blur", (e) => e.stopPropagation(), true);
     });
 </script>
 
