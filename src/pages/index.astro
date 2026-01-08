@@ -72,7 +72,6 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 							<div class="h-full bg-emerald-600 dark:bg-emerald-500" style={`width: ${(sortedPosts.filter(p => p.data.status === 'tree').length / (allPosts.length || 1)) * 100}%`}></div>
 						</div>
 						<div class="flex flex-wrap gap-2" id="filter-buttons">
-							<button class="tag-btn active px-3 py-1.5 rounded-full text-xs font-medium" data-status="all">All ({counts.all})</button>
 							<button class="tag-btn px-3 py-1.5 rounded-full text-xs font-medium" data-status="seed">🌱 Seeds ({counts.seed})</button>
 							<button class="tag-btn px-3 py-1.5 rounded-full text-xs font-medium" data-status="sprout">🌿 Sprouts ({counts.sprout})</button>
 							<button class="tag-btn px-3 py-1.5 rounded-full text-xs font-medium" data-status="tree">🌳 Trees ({counts.tree})</button>
@@ -231,9 +230,16 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 
 	buttons.forEach(button => {
 		button.addEventListener('click', () => {
-			buttons.forEach(btn => btn.classList.remove('active'));
-			button.classList.add('active');
-			currentFilter = (button as HTMLElement).dataset.status || 'all';
+			const status = (button as HTMLElement).dataset.status || 'all';
+			if (currentFilter === status) {
+				// Clicking active button deactivates it
+				button.classList.remove('active');
+				currentFilter = 'all';
+			} else {
+				buttons.forEach(btn => btn.classList.remove('active'));
+				button.classList.add('active');
+				currentFilter = status;
+			}
 			updateDisplay();
 		});
 	});
