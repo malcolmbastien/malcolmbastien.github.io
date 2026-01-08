@@ -5,6 +5,7 @@ import ActivityHeatmap from "../components/Profile/ActivityHeatmap.astro";
 import ProfileHeader from "../components/Profile/ProfileHeader.astro";
 import TopicFocus from "../components/Profile/TopicFocus.astro";
 import { getFileDates } from "../lib/git-history";
+import { getStatusColors, getStatusGlows, getProgressColors } from "../lib/theme";
 
 const allPosts = await getCollection("posts");
 
@@ -38,17 +39,9 @@ const recentGrowth = [...postsWithDates]
     .sort((a, b) => b.updatedDate.valueOf() - a.updatedDate.valueOf())
     .slice(0, 3);
 
-const statusColors: Record<"seed" | "sprout" | "tree", string> = {
-    seed: "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700",
-    sprout: "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800",
-    tree: "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800",
-};
-
-const statusGlow: Record<"seed" | "sprout" | "tree", string> = {
-    seed: "hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50",
-    sprout: "hover:shadow-green-200/50 dark:hover:shadow-green-900/50",
-    tree: "hover:shadow-emerald-200/50 dark:hover:shadow-emerald-900/50",
-};
+const statusColors = getStatusColors();
+const statusGlow = getStatusGlows();
+const progressColors = getProgressColors();
 ---
 
 <Layout
@@ -88,17 +81,17 @@ const statusGlow: Record<"seed" | "sprout" | "tree", string> = {
                             class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden flex"
                         >
                             <div
-                                class="h-full bg-slate-300 dark:bg-slate-600"
+                                class={`h-full ${progressColors.seed}`}
                                 style={`width: ${(sortedPosts.filter((p) => p.data.status === "seed").length / (allPosts.length || 1)) * 100}%`}
                             >
                             </div>
                             <div
-                                class="h-full bg-green-400 dark:bg-green-600"
+                                class={`h-full ${progressColors.sprout}`}
                                 style={`width: ${(sortedPosts.filter((p) => p.data.status === "sprout").length / (allPosts.length || 1)) * 100}%`}
                             >
                             </div>
                             <div
-                                class="h-full bg-emerald-600 dark:bg-emerald-500"
+                                class={`h-full ${progressColors.tree}`}
                                 style={`width: ${(sortedPosts.filter((p) => p.data.status === "tree").length / (allPosts.length || 1)) * 100}%`}
                             >
                             </div>

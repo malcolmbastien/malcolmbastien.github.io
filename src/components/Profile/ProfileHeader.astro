@@ -2,6 +2,7 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { createHash } from "node:crypto";
 import { execSync } from "node:child_process";
+import { theme } from "../../lib/theme";
 
 const posts = await getCollection("posts");
 const counts = {
@@ -46,7 +47,7 @@ const gravatarUrl =
         >
             <div class="flex items-center gap-1.5">
                 <span
-                    class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-800/40 border border-emerald-300 dark:border-emerald-900 flex items-center justify-center text-[10px]"
+                    class={`w-5 h-5 rounded-full ${theme.header.seed} flex items-center justify-center text-[10px]`}
                     >🌱</span
                 >
                 <span class="font-semibold text-slate-900 dark:text-slate-200"
@@ -58,7 +59,7 @@ const gravatarUrl =
             </div>
             <div class="flex items-center gap-1.5">
                 <span
-                    class="w-5 h-5 rounded-full bg-emerald-200 dark:bg-emerald-700/40 border border-emerald-400 dark:border-emerald-700 flex items-center justify-center text-[10px]"
+                    class={`w-5 h-5 rounded-full ${theme.header.sprout} flex items-center justify-center text-[10px]`}
                     >🌿</span
                 >
                 <span class="font-semibold text-slate-900 dark:text-slate-200"
@@ -70,7 +71,7 @@ const gravatarUrl =
             </div>
             <div class="flex items-center gap-1.5">
                 <span
-                    class="w-5 h-5 rounded-full bg-emerald-300 dark:bg-emerald-600/40 border border-emerald-500 dark:border-emerald-800 flex items-center justify-center text-[10px]"
+                    class={`w-5 h-5 rounded-full ${theme.header.tree} flex items-center justify-center text-[10px]`}
                     >🌳</span
                 >
                 <span class="font-semibold text-slate-900 dark:text-slate-200"
