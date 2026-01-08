@@ -9,6 +9,7 @@ summary: "Verifying all custom callout types and styles."
 
 Testing every supported callout type:
 
+## Informational
 > [!NOTE]
 > Standard note for small pieces of information.
 
@@ -18,6 +19,7 @@ Testing every supported callout type:
 > [!INFO]
 > General information callout.
 
+## Action Oriented
 > [!TODO]
 > Tasks or things to be done.
 
@@ -30,6 +32,7 @@ Testing every supported callout type:
 > [!QUESTION]
 > For questions, help, or FAQs.
 
+## Issues
 > [!WARNING]
 > Critical warnings or cautions.
 
@@ -45,6 +48,7 @@ Testing every supported callout type:
 > [!EXAMPLE]
 > Illustrative examples.
 
+## Thoughts
 > [!QUOTE]
 > For quotes or citations.
 
