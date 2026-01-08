@@ -262,7 +262,7 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 
 <style>
 	.tag-btn {
-		background-color: rgb(255 255 255);
+		background-color: rgb(241 245 249);
 		border: 1px solid rgb(226 232 240);
 		color: rgb(15 23 42);
 		transition: all 0.2s;
@@ -272,16 +272,16 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 	}
 	.tag-btn.active {
 		background-color: oklch(40.5% 0.101 131.063);
-		color: white !important;
+		color: white;
 		border-color: rgb(15 23 42) !important;
 	}
 	.dark .tag-btn {
-		background-color: rgb(30 41 59);
-		border-color: rgb(51 65 85);
-		color: rgb(241 245 249);
+		background-color: transparent !important;
+		border-color: rgb(71 85 105) !important;
+		color: rgb(203 213 225) !important;
 	}
 	.dark .tag-btn:hover {
-		background-color: rgb(51 65 85);
+		background-color: rgb(51 65 85) !important;
 	}
 	.dark .tag-btn.active {
 		background-color: rgb(241 245 249) !important;
