@@ -1,7 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@variant dark (&:where(.dark, .dark *));
+/* Enable class-based dark mode for Tailwind 4 */
+@custom-variant dark (&:is(.dark, .dark *));
 
 /* --- GitHub-style & Custom Callouts --- */
 
@@ -202,7 +203,7 @@
 /* DRAFT CONTAINER (Directive style :::draft) */
 .draft-container {
   @apply my-8 p-6 rounded-xl border-2 border-slate-200 border-dashed bg-slate-50/50 relative overflow-hidden;
-  @apply prose prose-slate max-w-none dark:prose-invert;
+  @apply prose prose-slate max-w-none;
   opacity: 0.8;
 }
 .dark .draft-container {
@@ -238,9 +239,4 @@
 
 .filter-btn.active {
   @apply bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 border-slate-900 dark:border-slate-100 hover:bg-slate-800 dark:hover:bg-white shadow-sm;
-}
-
-/* --- General Adjustments --- */
-.prose {
-  @apply dark:prose-invert;
 }

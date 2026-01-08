@@ -38,11 +38,15 @@
   }
 
   // Set up the event listener
-  document.getElementById("theme-toggle")?.addEventListener("click", handleToggleClick);
+  const toggleBtn = document.getElementById("theme-toggle");
+  if (toggleBtn) {
+    // Remove old listeners if any (though scripts run once in Astro usually)
+    toggleBtn.addEventListener("click", handleToggleClick);
+  }
 
   // Initial update
   updateTheme();
 
-  // Handle page transitions if needed
+  // Handle page transitions for Astro
   document.addEventListener('astro:after-swap', updateTheme);
 </script>
