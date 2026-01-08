@@ -442,6 +442,18 @@ const progressColors = getProgressColors();
         currentDateFilter = e.detail.date;
         updateDisplay();
     });
+
+    // Prevent any interference with blog card clicks
+    document.querySelectorAll('.post-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Ensure no event bubbling that could trigger filtering
+            e.stopPropagation();
+        }, true); // Capture phase
+
+        // Prevent focus/blur events that might trigger updates
+        card.addEventListener('focus', (e) => e.stopPropagation(), true);
+        card.addEventListener('blur', (e) => e.stopPropagation(), true);
+    });
 </script>
 
 <style>
@@ -472,5 +484,22 @@ const progressColors = getProgressColors();
         background-color: rgb(241 245 249) !important;
         color: rgb(15 23 42) !important;
         border-color: rgb(241 245 249) !important;
+    }
+
+    /* Completely disable all visual effects on blog cards */
+    .post-card {
+        -webkit-tap-highlight-color: transparent;
+        transition: none !important;
+        transform: none !important;
+    }
+
+    .post-card:hover {
+        transform: none !important;
+    }
+
+    .post-card:active,
+    .post-card:focus {
+        transform: none !important;
+        transition: none !important;
     }
 </style>
