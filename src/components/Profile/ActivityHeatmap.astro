@@ -65,8 +65,8 @@ function getColor(count: number) {
 
 <div class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-2">
 	<h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4">Activity</h3>
-	<div class="overflow-x-auto">
-		<svg width="742" height="100" class="mx-auto">
+	<div class="overflow-x-hidden">
+		<svg width="742" height="100" class="mx-auto sm:left-0 left-[-25rem] relative">
 			{monthLabels.map((label) => (
 				<text
 					x={label.weekIndex * 14 + 7}

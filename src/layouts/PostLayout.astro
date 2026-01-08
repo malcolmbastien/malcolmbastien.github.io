@@ -2,6 +2,7 @@
 import Layout from './Layout.astro';
 import PostHistory from '../components/History/PostHistory.astro';
 import ContentMap from '../components/Navigation/ContentMap.astro';
+import ProfileHeader from '../components/Profile/ProfileHeader.astro';
 
 interface Props {
 	frontmatter: {
@@ -40,9 +41,11 @@ const formatDate = (date: Date) => {
 ---
 
 <Layout title={frontmatter.title}>
-	<article class={`max-w-3xl mx-auto px-4 py-12 ${isPostDraft ? 'post-is-draft' : ''}`}>
+	<main class="max-w-6xl mx-auto p-4 md:p-8">
+		<ProfileHeader />
+		<article class={`max-w-3xl mx-auto px-4  ${isPostDraft ? 'post-is-draft' : ''}`}>
 		<ContentMap />
-		<div class="bg-white dark:bg-transparent p-6 rounded-lg shadow-sm">
+		<div class="bg-white dark:bg-[#121812] p-6 rounded-lg shadow-sm">
 			<nav class="mb-8">
 				<a href="/" class="inline-flex items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -51,6 +54,8 @@ const formatDate = (date: Date) => {
 					Back to Garden
 				</a>
 			</nav>
+
+
 
 			{isPostDraft && (
 				<div class="post-draft-banner">
@@ -110,4 +115,5 @@ const formatDate = (date: Date) => {
 			</footer>
 		</div>
 	</article>
+	</main>
 </Layout>

@@ -117,7 +117,7 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 				return (
 					<a
 						href={`/posts/${post.slug}`}
-						class={`group flex flex-col p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#121812] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl post-card ${statusGlow[post.data.status as keyof typeof statusGlow]} ${isLarge ? 'md:col-span-2 lg:col-span-2 bg-gradient-to-br from-white to-emerald-50/30 dark:from-[#121812] dark:to-emerald-950/20 border-emerald-100 dark:border-emerald-900/50' : ''}`}
+						class={`group flex flex-col p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#121812] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl post-card ${statusGlow[post.data.status as keyof typeof statusGlow]} ${isLarge ? 'md:col-span-2 lg:col-span-2' : ''}`}
 						data-status={post.data.status}
 						data-title={post.data.title.toLowerCase()}
 						data-summary={post.data.summary.toLowerCase()}
@@ -272,6 +272,7 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 		border: 1px solid rgb(226 232 240);
 		color: rgb(15 23 42);
 		transition: all 0.2s;
+		cursor: pointer;
 	}
 	.tag-btn:hover {
 		background-color: rgb(248 250 252);
