@@ -1,7 +1,7 @@
 ---
-import { getAllCommits } from '../../lib/git-history';
+import { getPostsCommits } from '../../lib/git-history';
 
-const commits = await getAllCommits();
+const commits = await getPostsCommits();
 const commitDates = commits.map(c => new Date(c.date).toISOString().split('T')[0]);
 
 // Count commits per day
@@ -15,10 +15,16 @@ interface DayData {
 	count: number;
 }
 
-// Generate last 365 days
+interface MonthLabel {
+	name: string;
+	weekIndex: number;
+}
+
+// Generate last ~53 weeks (371 days) to ensure current week is fully included
+const numDays = 371;
 const today = new Date();
 const days: DayData[] = [];
-for (let i = 364; i >= 0; i--) {
+for (let i = numDays - 1; i >= 0; i--) {
 	const d = new Date(today);
 	d.setDate(d.getDate() - i);
 	const dateStr = d.toISOString().split('T')[0];
@@ -26,6 +32,26 @@ for (let i = 364; i >= 0; i--) {
 		date: dateStr,
 		count: activityMap[dateStr] || 0
 	});
+}
+// days[0] is ~53 weeks ago, days[370] is today
+
+// Generate month labels
+const monthLabels: MonthLabel[] = [];
+let lastMonth = '';
+for (let i = days.length - 1; i >= 0; i--) { // Start from newest day
+	const d = new Date(days[i].date);
+	const monthKey = d.toLocaleDateString('en-US', { month: 'short' });
+	if (monthKey !== lastMonth) {
+		const weekIndex = Math.floor(i / 7);
+		// Skip if too close to the end to avoid overlap
+		if (weekIndex < 50) {
+			monthLabels.push({
+				name: monthKey,
+				weekIndex: weekIndex
+			});
+		}
+		lastMonth = monthKey;
+	}
 }
 
 function getColor(count: number) {
@@ -37,19 +63,30 @@ function getColor(count: number) {
 }
 ---
 
-<div class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-6 mb-12">
-	<h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4">Activity Evolution</h3>
+<div class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-2">
+	<h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4">Activity</h3>
 	<div class="overflow-x-auto">
-		<svg width="720" height="110" class="mx-auto">
-			{Array.from({ length: 52 }).map((_, weekIndex) => (
-				<g transform={`translate(${weekIndex * 14}, 0)`}>
+		<svg width="742" height="100" class="mx-auto">
+			{monthLabels.map((label) => (
+				<text
+					x={label.weekIndex * 14 + 7}
+					y="8"
+					text-anchor="middle"
+					class="fill-slate-500 dark:fill-slate-400 text-[10px] font-medium"
+				>
+					{label.name}
+				</text>
+			))}
+			{Array.from({ length: 53 }).map((_, weekIndex) => (
+				<g transform={`translate(${weekIndex * 14}, 15)`}>
 					{Array.from({ length: 7 }).map((_, dayIndex) => {
 						const dayData = days[weekIndex * 7 + dayIndex];
 						if (!dayData) return null;
+						const dayOfWeek = new Date(dayData.date).getDay(); // 0=Sunday, 6=Saturday
 						return (
 							<rect
 								x="0"
-								y={dayIndex * 14}
+								y={dayOfWeek * 12}
 								width="11"
 								height="11"
 								rx="2"

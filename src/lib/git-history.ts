@@ -76,3 +76,19 @@ export async function getAllCommits(): Promise<CommitInfo[]> {
 		return [];
 	}
 }
+
+export async function getPostsCommits(): Promise<CommitInfo[]> {
+	try {
+		const log = await git.log(['--', 'src/content/posts/']);
+		return log.all.map(commit => ({
+			date: commit.date,
+			message: commit.message,
+			hash: commit.hash,
+			insertions: 0,
+			deletions: 0
+		}));
+	} catch (error) {
+		console.error('Error fetching posts git commits:', error);
+		return [];
+	}
+}

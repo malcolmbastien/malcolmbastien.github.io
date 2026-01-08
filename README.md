@@ -1,6 +1,6 @@
-# 🌿 Verdant: An Evolving Digital Garden
+# 🌿 Sprout: An Evolving Digital Garden
 
-Verdant is a modern, Git-powered digital garden built with **Astro** and **Tailwind CSS**.
+Sprout is a modern, Git-powered digital garden built with **Astro** and **Tailwind CSS**.
  It treats thoughts as living documents, tracking their evolution over time through Git history.
 
 Live at: [https://malcolmbastien.github.io/](https://malcolmbastien.github.io/)
