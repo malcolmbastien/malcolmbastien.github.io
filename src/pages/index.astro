@@ -5,7 +5,11 @@ import ActivityHeatmap from "../components/Profile/ActivityHeatmap.astro";
 import ProfileHeader from "../components/Profile/ProfileHeader.astro";
 import TopicFocus from "../components/Profile/TopicFocus.astro";
 import { getFileDates } from "../lib/git-history";
-import { getStatusColors, getStatusGlows, getProgressColors } from "../lib/theme";
+import {
+    getStatusColors,
+    getStatusGlows,
+    getProgressColors,
+} from "../lib/theme";
 
 const allPosts = await getCollection("posts");
 
@@ -26,12 +30,13 @@ const sortedPosts = postsWithDates.sort(
     (a, b) => b.displayDate.valueOf() - a.displayDate.valueOf(),
 );
 
-// Compute post counts by status
+// Compute post counts by status (excluding drafts for stats)
+const publishedPosts = allPosts.filter((post) => !post.data.draft);
 const counts = {
-    all: allPosts.length,
-    seed: allPosts.filter((p) => p.data.status === "seed").length,
-    sprout: allPosts.filter((p) => p.data.status === "sprout").length,
-    tree: allPosts.filter((p) => p.data.status === "tree").length,
+    all: publishedPosts.length,
+    seed: publishedPosts.filter((p) => p.data.status === "seed").length,
+    sprout: publishedPosts.filter((p) => p.data.status === "sprout").length,
+    tree: publishedPosts.filter((p) => p.data.status === "tree").length,
 };
 
 // Identify recent growth (top 3 most recently updated posts)
@@ -74,7 +79,7 @@ const progressColors = getProgressColors();
                             >
                             <span
                                 class="text-2xl font-bold text-slate-900 dark:text-slate-100"
-                                >{allPosts.length}</span
+                                >{counts.all}</span
                             >
                         </div>
                         <div
@@ -163,23 +168,40 @@ const progressColors = getProgressColors();
                         post.updatedDate.getTime() >
                             post.displayDate.getTime() + 1000 * 60 * 60; // More than 1 hour difference
 
-                    // Only apply recent styling to the first 3 posts that qualify
-                    const qualifiesAsRecent = isRecentlyCreated || isRecentlyUpdated;
-                    const recentPostsCount = sortedPosts
-                        .slice(0, index)
-                        .filter((p, i) => {
-                            const pRecentlyCreated = p.displayDate >= sevenDaysAgo;
-                            const pRecentlyUpdated = p.updatedDate >= sevenDaysAgo &&
-                                p.updatedDate.getTime() > p.displayDate.getTime() + 1000 * 60 * 60;
-                            return pRecentlyCreated || pRecentlyUpdated;
-                        }).length;
+                    // Apply separate limits for NEW (3) and UPDATED (3) posts
+                    // Only count published posts (not drafts) for badge limits
+                    const publishedPostsUpToHere = sortedPosts
+                        .slice(0, index + 1)
+                        .filter((p) => !p.data.draft);
 
-                    const isRecent = qualifiesAsRecent && recentPostsCount < 3;
+                    const newPostsCount = publishedPostsUpToHere.filter(
+                        (p) => p.displayDate >= sevenDaysAgo,
+                    ).length;
+
+                    // Count how many UPDATED badges would be shown up to and including this post
+                    const updatedBadgesUpToHere = publishedPostsUpToHere.filter(
+                        (p) => {
+                            const pRecentlyUpdated =
+                                p.updatedDate >= sevenDaysAgo &&
+                                p.updatedDate.getTime() >
+                                    p.displayDate.getTime() + 1000 * 60 * 60;
+                            return (
+                                pRecentlyUpdated &&
+                                !(p.displayDate >= sevenDaysAgo)
+                            );
+                        },
+                    ).length;
+
+                    const showAsRecent = (!post.data.draft) && (
+                        (isRecentlyCreated && newPostsCount < 3) ||
+                        (isRecentlyUpdated && updatedBadgesUpToHere < 3)
+                    );
+
                     return (
                         <a
                             href={`/posts/${post.slug}`}
                             class={`group flex flex-col p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl post-card ${statusGlow[post.data.status as keyof typeof statusGlow]} ${isLarge ? "md:col-span-2 lg:col-span-2" : ""} ${
-                                isRecent
+                                showAsRecent
                                     ? "border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-950/20"
                                     : "border-slate-200 dark:border-slate-800 bg-white dark:bg-[#121812]"
                             }`}
@@ -187,8 +209,12 @@ const progressColors = getProgressColors();
                             data-title={post.data.title.toLowerCase()}
                             data-summary={post.data.summary.toLowerCase()}
                             data-tags={post.data.tags.join(" ").toLowerCase()}
-                            data-created={post.displayDate.toISOString().split('T')[0]}
-                            data-updated={post.updatedDate.toISOString().split('T')[0]}
+                            data-created={
+                                post.displayDate.toISOString().split("T")[0]
+                            }
+                            data-updated={
+                                post.updatedDate.toISOString().split("T")[0]
+                            }
                         >
                             <div class="flex items-center justify-between mb-4">
                                 <div class="flex items-center gap-2">
@@ -206,22 +232,12 @@ const progressColors = getProgressColors();
                                         )}
                                         {post.data.status}
                                     </span>
-                                    {isRecent && (
+                                    {showAsRecent && (
                                         <span
-                                            class={`px-1.5 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider ${
-                                                isRecentlyCreated
-                                                    ? "bg-emerald-100 text-emerald-700 border border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400 dark:border-emerald-800"
-                                                    : "bg-amber-100 text-amber-700 border border-amber-200 dark:bg-amber-900/30 dark:text-amber-400 dark:border-amber-800"
-                                            }`}
-                                            title={
-                                                isRecentlyCreated
-                                                    ? "Created within the last 7 days"
-                                                    : "Updated within the last 7 days"
-                                            }
+                                            class="px-1.5 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700 border border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400 dark:border-emerald-800"
+                                            title="Recently created or updated"
                                         >
-                                            {isRecentlyCreated
-                                                ? "NEW"
-                                                : "UPDATED"}
+                                            NEW
                                         </span>
                                     )}
                                 </div>
@@ -347,7 +363,8 @@ const progressColors = getProgressColors();
                 title.includes(searchQuery) ||
                 summary.includes(searchQuery) ||
                 tags.includes(searchQuery);
-            const matchesDate = currentDateFilter === null ||
+            const matchesDate =
+                currentDateFilter === null ||
                 createdDate.startsWith(currentDateFilter) ||
                 updatedDate.startsWith(currentDateFilter);
 

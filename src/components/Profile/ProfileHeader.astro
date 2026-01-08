@@ -3,14 +3,16 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { theme } from "../../lib/theme";
 
 const posts = await getCollection("posts");
+const publishedPosts = posts.filter(post => !post.data.draft);
 const counts = {
-    seed: posts.filter(
+    all: publishedPosts.length,
+    seed: publishedPosts.filter(
         (p: CollectionEntry<"posts">) => p.data.status === "seed",
     ).length,
-    sprout: posts.filter(
+    sprout: publishedPosts.filter(
         (p: CollectionEntry<"posts">) => p.data.status === "sprout",
     ).length,
-    tree: posts.filter(
+    tree: publishedPosts.filter(
         (p: CollectionEntry<"posts">) => p.data.status === "tree",
     ).length,
 };
