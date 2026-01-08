@@ -48,8 +48,8 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 			<div class="lg:col-span-3">
 				<ActivityHeatmap />
 			</div>
-			<div class="lg:col-span-1 bg-[#f8fdf8] dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col justify-between">
-				<div>
+			<div class="lg:col-span-1 space-y-4">
+				<div class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-6">
 					<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Garden Stats</h3>
 					<div class="space-y-4">
 						<div class="flex justify-between items-end">
@@ -64,8 +64,8 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 					</div>
 				</div>
 				
-				<div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
-					<h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Recent Growth</h3>
+				<div class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+					<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Recent Growth</h3>
 					<div class="space-y-3">
 						{recentGrowth.map(post => (
 							<a href={`/posts/${post.slug}`} class="block group">

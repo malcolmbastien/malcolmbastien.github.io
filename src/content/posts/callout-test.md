@@ -1,6 +1,6 @@
 ---
 title: "Callout Test Kitchen"
-status: "sprout"
+status: "tree"
 tags: ["testing", "styling"]
 summary: "Verifying all custom callout types and styles."
 ---
