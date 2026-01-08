@@ -5,8 +5,8 @@ import remarkGithubAlerts from 'remark-github-alerts';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://malcolm.github.io',
-	base: '/microblog',
+	site: 'https://malcolmbastien.github.io',
+	base: '/',
 	markdown: {
 		remarkPlugins: [remarkGithubAlerts],
 	},
