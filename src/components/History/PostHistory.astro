@@ -1,5 +1,5 @@
 ---
-import { getFileHistory } from '../../lib/git-history';
+import { getFileHistory, type CommitInfo } from '../../lib/git-history';
 
 interface Props {
 	filePath: string;
@@ -7,6 +7,25 @@ interface Props {
 
 const { filePath } = Astro.props;
 const history = await getFileHistory(filePath);
+
+function getEvolutionLabel(commit: CommitInfo, index: number, total: number) {
+	const isFirst = index === total - 1;
+	if (isFirst) return "Seed Planted";
+	
+	if (commit.insertions > 20) return "Significant Growth";
+	if (commit.insertions > 0) return "Thought Refined";
+	if (commit.deletions > 0) return "Pruned Content";
+	return "Garden Tended";
+}
+
+function getEvolutionIcon(commit: CommitInfo, index: number, total: number) {
+	const isFirst = index === total - 1;
+	if (isFirst) return "🌱";
+	if (commit.insertions > 20) return "🌳";
+	if (commit.insertions > 0) return "✨";
+	if (commit.deletions > 0) return "✂️";
+	return "💧";
+}
 ---
 
 <div class="mt-12 pt-8 border-t border-slate-200">
@@ -18,21 +37,41 @@ const history = await getFileHistory(filePath);
 	</h3>
 	
 	{history.length > 0 ? (
-		<ul class="relative border-l border-slate-200 ml-3 space-y-6">
-			{history.map((commit) => (
-				<li class="relative pl-6">
-					<div class="absolute -left-[6.5px] top-1.5 h-3 w-3 rounded-full bg-slate-200 border-2 border-white"></div>
-					<div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-						<span class="text-sm font-medium text-slate-900">{commit.message}</span>
-						<time class="text-xs text-slate-500 whitespace-nowrap">
-							{new Date(commit.date).toLocaleDateString('en-US', {
-								year: 'numeric',
-								month: 'short',
-								day: 'numeric',
-							})}
-						</time>
+		<ul class="relative border-l border-slate-200 ml-3 space-y-8">
+			{history.map((commit: CommitInfo, index: number) => (
+				<li class="relative pl-8">
+					<div class="absolute -left-[1.1rem] top-1 h-8 w-8 rounded-full bg-white border border-slate-100 shadow-sm flex items-center justify-center text-sm">
+						{getEvolutionIcon(commit, index, history.length)}
 					</div>
-					<code class="text-[10px] text-slate-400 mt-1 uppercase tracking-wider">{commit.hash.substring(0, 7)}</code>
+					<div class="flex flex-col gap-1">
+						<div class="flex items-center justify-between gap-4">
+							<span class="text-sm font-bold text-slate-800">
+								{getEvolutionLabel(commit, index, history.length)}
+							</span>
+							<time class="text-xs text-slate-400 font-medium whitespace-nowrap">
+								{new Date(commit.date).toLocaleDateString('en-US', {
+									year: 'numeric',
+									month: 'short',
+									day: 'numeric',
+								})}
+							</time>
+						</div>
+						
+						<div class="flex items-center gap-3">
+							<div class="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider">
+								{commit.insertions > 0 && (
+									<span class="text-emerald-500">+{commit.insertions}</span>
+								)}
+								{commit.deletions > 0 && (
+									<span class="text-rose-400">-{commit.deletions}</span>
+								)}
+								{(commit.insertions === 0 && commit.deletions === 0 && index !== history.length - 1) && (
+									<span class="text-slate-300">Meta Change</span>
+								)}
+							</div>
+							<code class="text-[9px] text-slate-300 uppercase tracking-widest">{commit.hash.substring(0, 7)}</code>
+						</div>
+					</div>
 				</li>
 			))}
 		</ul>

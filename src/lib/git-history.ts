@@ -6,16 +6,64 @@ export interface CommitInfo {
 	date: string;
 	message: string;
 	hash: string;
+	insertions: number;
+	deletions: number;
 }
 
 export async function getFileHistory(filePath: string): Promise<CommitInfo[]> {
 	try {
-		const log = await git.log({ file: filePath });
-		return log.all.map(commit => ({
-			date: commit.date,
-			message: commit.message,
-			hash: commit.hash,
+		// Use raw command to get both log and stats for the specific file
+		const rawLog = await git.raw([
+			'log',
+			'--follow',
+			'--format=%H|%aI|%s',
+			'--stat',
+			'--',
+			filePath
+		]);
+
+		const commits: CommitInfo[] = [];
+		const parts = rawLog.split('\n\n');
+		
+		// The format with --stat is roughly:
+		// <hash>|<date>|<message>
+		// <stat line>
+		// <summary line like "1 file changed, 16 insertions(+)">
+
+		const entries = rawLog.split(/^commit [a-f0-9]{40}$/gm); // This might not work with custom format
+		
+		// Let's use a simpler way: git log with custom format and then separate stat calls if needed
+		// Actually, simple-git log can get the basic info easily.
+		const basicLog = await git.log({ file: filePath });
+		
+		const historyWithStats = await Promise.all(basicLog.all.map(async (commit) => {
+			const show = await git.show(['--stat', '--format=', commit.hash, '--', filePath]);
+			// Example output: " src/content/posts/hello-world.md | 16 ++++++++++++++++"
+			//                " 1 file changed, 16 insertions(+)"
+			
+			const lines = show.trim().split('\n');
+			const summaryLine = lines[lines.length - 1];
+			
+			let insertions = 0;
+			let deletions = 0;
+
+			if (summaryLine && summaryLine.includes('changed')) {
+				const insMatch = summaryLine.match(/(\d+) insertion/);
+				const delMatch = summaryLine.match(/(\d+) deletion/);
+				if (insMatch) insertions = parseInt(insMatch[1]);
+				if (delMatch) deletions = parseInt(delMatch[1]);
+			}
+
+			return {
+				date: commit.date,
+				message: commit.message,
+				hash: commit.hash,
+				insertions,
+				deletions
+			};
 		}));
+
+		return historyWithStats;
 	} catch (error) {
 		console.error(`Error fetching git history for ${filePath}:`, error);
 		return [];
@@ -45,6 +93,8 @@ export async function getAllCommits(): Promise<CommitInfo[]> {
 			date: commit.date,
 			message: commit.message,
 			hash: commit.hash,
+			insertions: 0, // Not needed for heatmap
+			deletions: 0
 		}));
 	} catch (error) {
 		console.error('Error fetching all git commits:', error);
