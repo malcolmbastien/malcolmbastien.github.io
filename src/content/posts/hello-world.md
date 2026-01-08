@@ -1,6 +1,6 @@
 ---
 title: "Hello World"
-status: "seed"
+status: "tree"
 tags: ["intro", "astro"]
 summary: "Welcome to my evolving microblog. This is the first seed."
 ---

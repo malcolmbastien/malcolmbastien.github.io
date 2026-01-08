@@ -22,16 +22,21 @@ const postsWithDates = await Promise.all(
 
 const sortedPosts = postsWithDates.sort((a, b) => b.displayDate.valueOf() - a.displayDate.valueOf());
 
+// Identify recent growth (top 3 most recently updated posts)
+const recentGrowth = [...postsWithDates]
+	.sort((a, b) => b.updatedDate.valueOf() - a.updatedDate.valueOf())
+	.slice(0, 3);
+
 const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
-	seed: 'bg-slate-100 text-slate-600 border-slate-200',
-	sprout: 'bg-green-100 text-green-700 border-green-200',
-	tree: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+	seed: 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700',
+	sprout: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800',
+	tree: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800',
 };
 
 const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
-	seed: 'hover:shadow-slate-200/50',
-	sprout: 'hover:shadow-green-200/50',
-	tree: 'hover:shadow-emerald-200/50',
+	seed: 'hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50',
+	sprout: 'hover:shadow-green-200/50 dark:hover:shadow-green-900/50',
+	tree: 'hover:shadow-emerald-200/50 dark:hover:shadow-emerald-900/50',
 };
 ---
 
@@ -43,25 +48,42 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 			<div class="lg:col-span-3">
 				<ActivityHeatmap />
 			</div>
-			<div class="lg:col-span-1 bg-white border border-slate-200 rounded-xl p-6 flex flex-col justify-center">
-				<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Garden Stats</h3>
-				<div class="space-y-4">
-					<div class="flex justify-between items-end">
-						<span class="text-sm text-slate-600">Total Thoughts</span>
-						<span class="text-2xl font-bold text-slate-900">{allPosts.length}</span>
+			<div class="lg:col-span-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col justify-between">
+				<div>
+					<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Garden Stats</h3>
+					<div class="space-y-4">
+						<div class="flex justify-between items-end">
+							<span class="text-sm text-slate-600 dark:text-slate-400">Total Thoughts</span>
+							<span class="text-2xl font-bold text-slate-900 dark:text-slate-100">{allPosts.length}</span>
+						</div>
+						<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden flex">
+							<div class="h-full bg-slate-300 dark:bg-slate-600" style={`width: ${(sortedPosts.filter(p => p.data.status === 'seed').length / (allPosts.length || 1)) * 100}%`}></div>
+							<div class="h-full bg-green-400 dark:bg-green-600" style={`width: ${(sortedPosts.filter(p => p.data.status === 'sprout').length / (allPosts.length || 1)) * 100}%`}></div>
+							<div class="h-full bg-emerald-600 dark:bg-emerald-500" style={`width: ${(sortedPosts.filter(p => p.data.status === 'tree').length / (allPosts.length || 1)) * 100}%`}></div>
+						</div>
 					</div>
-					<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden flex">
-						<div class="h-full bg-slate-300" style={`width: ${(sortedPosts.filter(p => p.data.status === 'seed').length / allPosts.length) * 100}%`}></div>
-						<div class="h-full bg-green-400" style={`width: ${(sortedPosts.filter(p => p.data.status === 'sprout').length / allPosts.length) * 100}%`}></div>
-						<div class="h-full bg-emerald-600" style={`width: ${(sortedPosts.filter(p => p.data.status === 'tree').length / allPosts.length) * 100}%`}></div>
+				</div>
+				
+				<div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
+					<h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Recent Growth</h3>
+					<div class="space-y-3">
+						{recentGrowth.map(post => (
+							<a href={`/posts/${post.slug}`} class="block group">
+								<div class="text-[11px] font-medium text-slate-900 dark:text-slate-200 truncate group-hover:text-emerald-500 transition-colors">
+									{post.data.title}
+								</div>
+								<div class="text-[9px] text-slate-400">
+									Updated {post.updatedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+								</div>
+							</a>
+						))}
 					</div>
-					<p class="text-[10px] text-slate-400 italic">Tracking the entropy of ideas...</p>
 				</div>
 			</div>
 		</div>
 
 		<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
-			<div class="flex gap-2 p-1 bg-slate-100 rounded-lg inline-flex" id="filter-buttons">
+			<div class="flex gap-2 p-1 bg-slate-100 dark:bg-slate-900 rounded-lg inline-flex" id="filter-buttons">
 				<button class="filter-btn active px-3 py-1.5 rounded-md text-xs font-bold" data-status="all">All</button>
 				<button class="filter-btn px-3 py-1.5 rounded-md text-xs font-bold" data-status="seed">🌱 Seeds</button>
 				<button class="filter-btn px-3 py-1.5 rounded-md text-xs font-bold" data-status="sprout">🌿 Sprouts</button>
@@ -69,11 +91,11 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 			</div>
 
 			<div class="relative group max-w-xs w-full">
-				<input
-					type="text"
+				<input 
+					type="text" 
 					id="search-input"
-					placeholder="Search garden..."
-					class="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+					placeholder="Search garden..." 
+					class="w-full pl-10 pr-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all dark:text-slate-200"
 				/>
 				<svg class="absolute left-3 top-2.5 h-4 w-4 text-slate-400 group-focus-within:text-emerald-500 transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -85,9 +107,9 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 			{sortedPosts.map((post, index) => {
 				const isLarge = post.data.status === 'tree' && index < 3;
 				return (
-					<a
-						href={`/posts/${post.slug}`}
-						class={`group flex flex-col p-6 rounded-2xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl post-card ${statusGlow[post.data.status as keyof typeof statusGlow]} ${isLarge ? 'md:col-span-2 lg:col-span-2 bg-gradient-to-br from-white to-emerald-50/30 border-emerald-100' : ''}`}
+					<a 
+						href={`/posts/${post.slug}`} 
+						class={`group flex flex-col p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl post-card ${statusGlow[post.data.status as keyof typeof statusGlow]} ${isLarge ? 'md:col-span-2 lg:col-span-2 bg-gradient-to-br from-white to-emerald-50/30 dark:from-slate-900 dark:to-emerald-950/20 border-emerald-100 dark:border-emerald-900/50' : ''}`} 
 						data-status={post.data.status}
 						data-title={post.data.title.toLowerCase()}
 						data-summary={post.data.summary.toLowerCase()}
@@ -110,25 +132,25 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 								</time>
 							</div>
 						</div>
-
-						<h2 class={`font-bold text-slate-900 group-hover:text-emerald-600 transition-colors ${isLarge ? 'text-2xl mb-3' : 'text-xl mb-2'}`}>
+						
+						<h2 class={`font-bold text-slate-900 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors ${isLarge ? 'text-2xl mb-3' : 'text-xl mb-2'}`}>
 							{post.data.title}
 						</h2>
-
-						<p class={`text-slate-600 leading-relaxed line-clamp-3 ${isLarge ? 'text-base mb-6' : 'text-sm mb-4'}`}>
+						
+						<p class={`text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 ${isLarge ? 'text-base mb-6' : 'text-sm mb-4'}`}>
 							{post.data.summary}
 						</p>
-
-						<div class="flex flex-wrap items-center justify-between mt-auto pt-4 border-t border-slate-50 gap-4">
+						
+						<div class="flex flex-wrap items-center justify-between mt-auto pt-4 border-t border-slate-50 dark:border-slate-800 gap-4">
 							<div class="flex flex-wrap gap-1.5">
 								{post.data.tags.slice(0, 3).map((tag: string) => (
-									<span class="bg-slate-50 text-slate-500 px-2 py-0.5 rounded text-[10px] border border-slate-100">
+									<span class="bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 px-2 py-0.5 rounded text-[10px] border border-slate-100 dark:border-slate-700">
 										#{tag}
 									</span>
 								))}
-								{post.data.tags.length > 3 && <span class="text-[10px] text-slate-300">+{post.data.tags.length - 3}</span>}
+								{post.data.tags.length > 3 && <span class="text-[10px] text-slate-300 dark:text-slate-600">+{post.data.tags.length - 3}</span>}
 							</div>
-							<div class="flex items-center gap-1 text-[10px] text-emerald-600 font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+							<div class="flex items-center gap-1 text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
 								Read
 								<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
 							</div>
@@ -137,10 +159,10 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 				);
 			})}
 		</div>
-
+		
 		<div id="no-results" class="hidden text-center py-20">
-			<div class="text-4xl mb-4">🍂</div>
-			<h3 class="text-xl font-bold text-slate-900 mb-2">No thoughts found</h3>
+			<div class="text-4xl mb-4 text-slate-300">🍂</div>
+			<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">No thoughts found</h3>
 			<p class="text-slate-500">Try searching for something else or changing the filter.</p>
 		</div>
 	</main>
@@ -151,7 +173,7 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 	.post-card {
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 	}
-
+	
 	.post-card.hidden-filter {
 		display: none !important;
 	}
@@ -177,8 +199,8 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 			const tags = htmlCard.dataset.tags || '';
 
 			const matchesFilter = currentFilter === 'all' || status === currentFilter;
-			const matchesSearch = title.includes(searchQuery) ||
-								  summary.includes(searchQuery) ||
+			const matchesSearch = title.includes(searchQuery) || 
+								  summary.includes(searchQuery) || 
 								  tags.includes(searchQuery);
 
 			if (matchesFilter && matchesSearch) {
