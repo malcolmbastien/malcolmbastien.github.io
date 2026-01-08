@@ -72,10 +72,10 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 							<div class="h-full bg-emerald-600 dark:bg-emerald-500" style={`width: ${(sortedPosts.filter(p => p.data.status === 'tree').length / (allPosts.length || 1)) * 100}%`}></div>
 						</div>
 						<div class="flex flex-wrap gap-2" id="filter-buttons">
-							<button class="filter-btn active px-3 py-1.5 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" data-status="all">All ({counts.all})</button>
-							<button class="filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" data-status="seed">🌱 Seeds ({counts.seed})</button>
-							<button class="filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" data-status="sprout">🌿 Sprouts ({counts.sprout})</button>
-							<button class="filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" data-status="tree">🌳 Trees ({counts.tree})</button>
+							<button class="tag-btn active px-3 py-1.5 rounded-full text-xs font-medium" data-status="all">All ({counts.all})</button>
+							<button class="tag-btn px-3 py-1.5 rounded-full text-xs font-medium" data-status="seed">🌱 Seeds ({counts.seed})</button>
+							<button class="tag-btn px-3 py-1.5 rounded-full text-xs font-medium" data-status="sprout">🌿 Sprouts ({counts.sprout})</button>
+							<button class="tag-btn px-3 py-1.5 rounded-full text-xs font-medium" data-status="tree">🌳 Trees ({counts.tree})</button>
 						</div>
 					</div>
 				</div>
@@ -189,12 +189,14 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 </style>
 
 <script>
-	const buttons = document.querySelectorAll('#filter-buttons .filter-btn');
+	const buttons = document.querySelectorAll('[data-status]');
+	const tagButtons = document.querySelectorAll('[data-tag]');
 	const searchInput = document.getElementById('search-input') as HTMLInputElement;
 	const cards = document.querySelectorAll('.post-card');
 	const noResults = document.getElementById('no-results');
 
 	let currentFilter = 'all';
+	let currentTag = '';
 	let searchQuery = '';
 
 	function updateDisplay() {
@@ -208,11 +210,12 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 			const tags = htmlCard.dataset.tags || '';
 
 			const matchesFilter = currentFilter === 'all' || status === currentFilter;
+			const matchesTag = currentTag === '' || tags.includes(currentTag);
 			const matchesSearch = title.includes(searchQuery) ||
 								  summary.includes(searchQuery) ||
 								  tags.includes(searchQuery);
 
-			if (matchesFilter && matchesSearch) {
+			if (matchesFilter && matchesTag && matchesSearch) {
 				htmlCard.classList.remove('hidden-filter');
 				visibleCount++;
 			} else {
@@ -235,6 +238,22 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 		});
 	});
 
+	tagButtons.forEach(button => {
+		button.addEventListener('click', () => {
+			const tag = (button as HTMLElement).dataset.tag || '';
+			if (currentTag === tag) {
+				// Clicking active tag deactivates it
+				button.classList.remove('active');
+				currentTag = '';
+			} else {
+				tagButtons.forEach(btn => btn.classList.remove('active'));
+				button.classList.add('active');
+				currentTag = tag;
+			}
+			updateDisplay();
+		});
+	});
+
 	searchInput?.addEventListener('input', (e) => {
 		searchQuery = (e.target as HTMLInputElement).value.toLowerCase();
 		updateDisplay();
@@ -242,14 +261,31 @@ const statusGlow: Record<'seed' | 'sprout' | 'tree', string> = {
 </script>
 
 <style>
-	.filter-btn.active {
-		background-color: rgb(15 23 42);
-		color: white;
+	.tag-btn {
+		background-color: rgb(255 255 255);
+		border: 1px solid rgb(226 232 240);
+		color: rgb(15 23 42);
+		transition: all 0.2s;
 	}
-	@media (prefers-color-scheme: dark) {
-		.filter-btn.active {
-			background-color: rgb(241 245 249);
-			color: rgb(15 23 42);
-		}
+	.tag-btn:hover {
+		background-color: rgb(248 250 252);
+	}
+	.tag-btn.active {
+		background-color: oklch(40.5% 0.101 131.063);
+		color: white !important;
+		border-color: rgb(15 23 42) !important;
+	}
+	.dark .tag-btn {
+		background-color: rgb(30 41 59);
+		border-color: rgb(51 65 85);
+		color: rgb(241 245 249);
+	}
+	.dark .tag-btn:hover {
+		background-color: rgb(51 65 85);
+	}
+	.dark .tag-btn.active {
+		background-color: rgb(241 245 249) !important;
+		color: rgb(15 23 42) !important;
+		border-color: rgb(241 245 249) !important;
 	}
 </style>

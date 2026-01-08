@@ -21,10 +21,40 @@ const topTags = Object.entries(tagCounts)
 	<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Topic Focus</h3>
 	<div class="grid grid-cols-5 gap-1.5">
 		{topTags.map(([tag, count]) => (
-			<div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800 rounded-lg px-2.5 py-1.5">
-				<span class="text-xs font-medium text-slate-700 dark:text-slate-300 capitalize">#{tag}</span>
-				<span class="text-xs font-bold text-slate-500 dark:text-slate-500">{count}</span>
-			</div>
+			<button class="tag-btn flex items-center justify-between rounded-lg px-2.5 py-1.5 transition-colors w-full text-left" data-tag={tag}>
+				<span class="text-xs font-medium capitalize">#{tag}</span>
+				<span class="text-xs font-bold">{count}</span>
+			</button>
 		))}
 	</div>
 </div>
+
+<style is:global>
+	.tag-btn {
+		background-color: rgb(255 255 255);
+		border: 1px solid rgb(226 232 240);
+		color: rgb(15 23 42);
+		transition: all 0.2s;
+	}
+	.tag-btn:hover {
+		background-color: rgb(248 250 252);
+	}
+	.tag-btn.active {
+		background-color: oklch(40.5% 0.101 131.063);
+		color: white !important;
+		border-color: rgb(15 23 42) !important;
+	}
+	.dark .tag-btn {
+		background-color: rgb(30 41 59);
+		border-color: rgb(51 65 85);
+		color: rgb(241 245 249);
+	}
+	.dark .tag-btn:hover {
+		background-color: rgb(51 65 85);
+	}
+	.dark .tag-btn.active {
+		background-color: rgb(241 245 249) !important;
+		color: rgb(15 23 42) !important;
+		border-color: rgb(241 245 249) !important;
+	}
+</style>
