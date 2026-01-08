@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "task-master-ai": {
+      "type": "local",
+      "command": ["npx", "-y", "task-master-ai"],
+      "enabled": true,
+    },
+  },
+  "permission": {
+    "edit": "allow",
+    "bash": "ask",
+    "webfetch": "deny",
+    "doom_loop": "ask",
+    "external_directory": "ask",
+  },
+}

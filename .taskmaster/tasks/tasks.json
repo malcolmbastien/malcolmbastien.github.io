@@ -9,7 +9,7 @@
         "testStrategy": "Verify the dev server starts without errors and Tailwind utility classes are applied correctly in a test component.",
         "priority": "high",
         "dependencies": [],
-        "status": "pending",
+        "status": "done",
         "subtasks": []
       },
       {
@@ -19,10 +19,8 @@
         "details": "Create src/content/config.ts. Define a 'posts' collection using the 'defineCollection' and 'z' from 'astro:content'. Schema must include: title (string), publishedDate (date), updatedDate (date, optional), status ('seed' | 'sprout' | 'tree'), tags (array of strings), and summary (string).",
         "testStrategy": "Create a Markdown file in src/content/posts with missing required fields and verify that the Astro build fails with a Zod validation error.",
         "priority": "high",
-        "dependencies": [
-          1
-        ],
-        "status": "pending",
+        "dependencies": [1],
+        "status": "done",
         "subtasks": []
       },
       {
@@ -32,10 +30,8 @@
         "details": "Create src/layouts/PostLayout.astro for the general post structure. Create src/pages/posts/[...slug].astro. Use 'getCollection' to fetch posts and 'render()' to convert Markdown to HTML. Ensure the layout displays the title, date, and status badge.",
         "testStrategy": "Add a 'hello-world.md' file to src/content/posts and navigate to /posts/hello-world to ensure content renders correctly.",
         "priority": "high",
-        "dependencies": [
-          2
-        ],
-        "status": "pending",
+        "dependencies": [2],
+        "status": "done",
         "subtasks": []
       },
       {
@@ -45,10 +41,8 @@
         "details": "Implement CSS classes or a remark plugin to identify patterns like '[!QUESTION]' or '[!IDEA]'. Create a ConceptBlock component in src/components/ConceptBlock/ that applies high-contrast borders and background colors based on the block type (e.g., blue for ideas, amber for questions).",
         "testStrategy": "Insert custom block syntax into a test post and verify that the rendered HTML applies the correct CSS classes and visual styles.",
         "priority": "medium",
-        "dependencies": [
-          3
-        ],
-        "status": "pending",
+        "dependencies": [3],
+        "status": "done",
         "subtasks": []
       },
       {
@@ -58,10 +52,8 @@
         "details": "Create a module in src/lib/git-history.ts. Use 'simple-git' to run 'git log --follow' on a specific file path. Return an array of objects containing { date, message, hash }. Handle the edge case where a file is not yet committed by returning an empty array or a 'Draft' status.",
         "testStrategy": "Log the output of getFileHistory() for an existing file in the console during build and verify it matches the actual git log output.",
         "priority": "high",
-        "dependencies": [
-          1
-        ],
-        "status": "pending",
+        "dependencies": [1],
+        "status": "done",
         "subtasks": []
       },
       {
@@ -71,11 +63,8 @@
         "details": "Create src/components/History/PostHistory.astro. This component should take a file path as a prop, call the Git Evolution Tracker, and render a vertical timeline of commits (date and message). Style it to look like a GitHub commit list.",
         "testStrategy": "Verify that the bottom of a post page displays a list of previous commits associated with that specific Markdown file.",
         "priority": "medium",
-        "dependencies": [
-          3,
-          5
-        ],
-        "status": "pending",
+        "dependencies": [3, 5],
+        "status": "done",
         "subtasks": []
       },
       {
@@ -85,11 +74,8 @@
         "details": "In src/pages/index.astro, fetch all posts using 'getCollection'. Implement a UI toggle or filter bar. Use Tailwind to color-code badges: Seed (gray), Sprout (green), Tree (dark green/emerald).",
         "testStrategy": "Click on a 'Seed' filter on the homepage and verify that only posts with 'status: seed' are visible.",
         "priority": "medium",
-        "dependencies": [
-          2,
-          3
-        ],
-        "status": "pending",
+        "dependencies": [2, 3],
+        "status": "done",
         "subtasks": []
       },
       {
@@ -99,10 +85,8 @@
         "details": "Create src/components/Profile/ActivityHeatmap.astro. Aggregate all commit dates from the repository. Map these dates to a 52-week SVG grid. Use color intensity (Tailwind greens) to represent the number of updates per day, similar to the GitHub profile heatmap.",
         "testStrategy": "Manually verify that days with multiple commits show a darker green color than days with single or no commits.",
         "priority": "medium",
-        "dependencies": [
-          5
-        ],
-        "status": "pending",
+        "dependencies": [5],
+        "status": "done",
         "subtasks": []
       },
       {
@@ -112,10 +96,8 @@
         "details": "Create .github/workflows/deploy.yml. Use the 'withastro/action' to build the project. Ensure the workflow has permissions to write to 'gh-pages' branch. Configure 'astro.config.mjs' with the correct 'site' and 'base' URL for GitHub Pages.",
         "testStrategy": "Push a commit to the main branch and verify that the GitHub Action completes successfully and the site is accessible at the username.github.io/repo URL.",
         "priority": "high",
-        "dependencies": [
-          1
-        ],
-        "status": "pending",
+        "dependencies": [1],
+        "status": "done",
         "subtasks": []
       },
       {
@@ -125,17 +107,14 @@
         "details": "Create src/components/Profile/ProfileHeader.astro containing user bio, avatar placeholder, and global stats (total seeds, sprouts, trees). Apply a consistent 'GitHub-lite' theme across the site using a specific Tailwind color palette (e.g., slate and emerald).",
         "testStrategy": "Perform a visual audit of the site to ensure it matches the 'GitHub-profile-inspired' requirement and all links are functional.",
         "priority": "low",
-        "dependencies": [
-          7,
-          8
-        ],
-        "status": "pending",
+        "dependencies": [7, 8],
+        "status": "done",
         "subtasks": []
       }
     ],
     "metadata": {
       "created": "2026-01-08T00:31:00.234Z",
-      "updated": "2026-01-08T00:31:00.234Z",
+      "updated": "2026-01-08T00:40:00.000Z",
       "description": "Tasks for master context"
     }
   }
