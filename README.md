@@ -1,43 +1,75 @@
-# Astro Starter Kit: Minimal
+# 🌿 Taskmaster: An Evolving Digital Garden
 
-```sh
-npm create astro@latest -- --template minimal
+Taskmaster is a modern, Git-powered digital garden built with **Astro** and **Tailwind CSS**. It treats thoughts as living documents, tracking their evolution over time through Git history.
+
+Live at: [https://malcolmbastien.github.io/](https://malcolmbastien.github.io/)
+
+## ✨ Key Features
+
+- **🌱 Growth States:** Categorize your thoughts as **Seed**, **Sprout**, or **Tree** to reflect their maturity.
+- **📜 Git Evolution Tracking:** Automatically extracts file history from Git to show a poetic timeline of how each post has grown.
+- **🗺️ Content Map:** A virtual scrollbar on every post page that visualizes the structure (headers, callouts, paragraphs) and allows for quick navigation.
+- **🍱 Bento Grid Homepage:** A dynamic, responsive layout that highlights more mature "Tree" posts.
+- **🔍 Live Search & Filtering:** Instant client-side search and maturity-based filtering (Seeds/Sprouts/Trees).
+- **📝 Semantic Callouts:** Rich support for GitHub-style alerts and custom garden callouts like `[!IDEA]`, `[!QUESTION]`, and `[!DRAFT]`.
+- **🏗️ Drafting System:** Support for marking entire posts or specific blocks as in-progress with unique "under construction" styling.
+- **🌓 Adaptive Themes:** Green-tinted light and dark modes with a persistent toggle.
+- **📊 Activity Heatmap:** A GitHub-style contributions grid showing when you've been tending to your garden.
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v20 or higher)
+- Git
+
+### Local Development
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+2. **Start the development server:**
+   ```sh
+   npm run dev
+   ```
+
+3. **Open the garden:**
+   Navigate to `http://localhost:4321` in your browser.
+
+## ✍️ Creating New Posts
+
+Posts are located in `src/content/posts/`. To create a new one, add a `.md` file:
+
+```markdown
+---
+title: "My New Discovery"
+status: "seed" # seed | sprout | tree
+tags: ["learning", "webdev"]
+summary: "A brief sentence describing this thought."
+# publishedDate: 2026-01-08 (Optional - will fallback to Git creation date)
+# draft: true (Optional - adds a WIP banner)
+---
+
+# My New Discovery
+
+Your content here...
+
+> [!IDEA]
+> What if everything was a garden?
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🛠️ Project Structure
 
-## 🚀 Project Structure
+- `src/content/`: Your blog posts and collection configuration.
+- `src/components/`: Reusable UI elements (Heatmap, Content Map, Toggle, etc.).
+- `src/layouts/`: Page wrappers (Main Layout and Post Layout).
+- `src/lib/`: Backend utilities (Git history extraction and Remark plugins).
+- `src/styles/`: Global Tailwind CSS and custom theme configurations.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚢 Deployment
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+This project is configured for **GitHub Pages** via GitHub Actions. Any push to the `main` branch will automatically build and deploy the site.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+*Happy gardening!* 🌿
