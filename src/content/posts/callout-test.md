@@ -50,3 +50,6 @@ Testing every supported callout type:
 
 > [!IDEA]
 > Lightning bolt idea callout!
+
+> [!DRAFT]
+> This is a draft block. It represents incomplete writing that is still in progress. Note the dashed border and specific styling to distinguish it from mature content.

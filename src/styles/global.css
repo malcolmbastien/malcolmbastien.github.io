@@ -27,8 +27,8 @@
 
 /* Base colors and themes */
 
-/* NOTE, INFO, TODO */
-.markdown-alert-note, .markdown-alert-info, .markdown-alert-todo {
+/* NOTE, INFO */
+.markdown-alert-note, .markdown-alert-info {
   border-left-color: #0969da;
   background-color: #f6f8fa;
 }
@@ -38,10 +38,6 @@
 }
 .markdown-alert-info .markdown-alert-title::before {
   content: "ℹ️";
-  margin-right: 0.5rem;
-}
-.markdown-alert-todo .markdown-alert-title::before {
-  content: "☑️";
   margin-right: 0.5rem;
 }
 
@@ -147,4 +143,21 @@
 .markdown-alert-quote .markdown-alert-title::before {
   content: "💬";
   margin-right: 0.5rem;
+}
+
+/* DRAFT, WIP, IN-PROGRESS */
+.markdown-alert-draft, .markdown-alert-wip, .markdown-alert-todo {
+  border-left-color: #94a3b8;
+  background-color: #f1f5f9;
+  border-left-style: dashed;
+  opacity: 0.8;
+}
+.markdown-alert-draft .markdown-alert-title::before,
+.markdown-alert-wip .markdown-alert-title::before {
+  content: "🏗️";
+  margin-right: 0.5rem;
+}
+.markdown-alert-draft .markdown-alert-title::after {
+  content: " (In Progress)";
+  @apply text-[10px] lowercase font-normal opacity-60 ml-2;
 }
