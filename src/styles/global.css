@@ -100,9 +100,12 @@
   margin-right: 0.5rem;
 }
 .markdown-alert-danger .markdown-alert-title::before,
-.markdown-alert-error .markdown-alert-title::before,
-.markdown-alert-bug .markdown-alert-title::before {
+.markdown-alert-error .markdown-alert-title::before {
   content: "⚡";
+  margin-right: 0.5rem;
+}
+.markdown-alert-bug .markdown-alert-title::before {
+  content: "🐛";
   margin-right: 0.5rem;
 }
 
@@ -122,7 +125,7 @@
   background-color: #f0f9ff;
 }
 .markdown-alert-idea .markdown-alert-title::before {
-  content: "⚡";
+  content: "💡";
   margin-right: 0.5rem;
 }
 
