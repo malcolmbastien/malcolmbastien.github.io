@@ -36,16 +36,19 @@ const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
 
 		<div class="mb-8 flex gap-4" id="filter-buttons">
 			<button class="px-4 py-2 rounded-md bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 transition-colors active-filter" data-status="all">All</button>
-			<button class="px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors" data-status="seed">Seeds</button>
-			<button class="px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors" data-status="sprout">Sprouts</button>
-			<button class="px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors" data-status="tree">Trees</button>
+			<button class="px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors" data-status="seed">🌱 Seeds</button>
+			<button class="px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors" data-status="sprout">🌿 Sprouts</button>
+			<button class="px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors" data-status="tree">🌳 Trees</button>
 		</div>
 
 		<div class="grid gap-6" id="posts-grid">
 			{sortedPosts.map((post) => (
 				<a href={`/posts/${post.slug}`} class="block p-6 rounded-xl border border-slate-200 bg-white hover:border-emerald-300 hover:shadow-sm transition-all post-card" data-status={post.data.status}>
 					<div class="flex items-center gap-3 mb-3">
-						<span class={`px-2 py-0.5 rounded-full text-[10px] font-semibold border uppercase tracking-wider ${statusColors[post.data.status as keyof typeof statusColors]}`}>
+						<span class={`px-2 py-0.5 rounded-full text-[10px] font-semibold border uppercase tracking-wider flex items-center gap-1 ${statusColors[post.data.status as keyof typeof statusColors]}`}>
+							{post.data.status === 'seed' && <span>🌱</span>}
+							{post.data.status === 'sprout' && <span>🌿</span>}
+							{post.data.status === 'tree' && <span>🌳</span>}
 							{post.data.status}
 						</span>
 						<time class="text-xs text-slate-400">
