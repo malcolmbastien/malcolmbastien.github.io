@@ -34,7 +34,7 @@
 /* NOTE, INFO */
 .markdown-alert-note, .markdown-alert-info {
   border-left-color: #0969da;
-  background-color: #f8faf8;
+  background-color: #f4faff;
 }
 .dark .markdown-alert-note, .dark .markdown-alert-info {
   border-left-color: #388bfd;
@@ -181,7 +181,7 @@
 /* DRAFT, WIP, IN-PROGRESS Callouts (Blockquote style) */
 .markdown-alert-draft, .markdown-alert-wip {
   border-left-color: #94a3b8;
-  background-color: #f8faf8;
+  background-color: #f1f7f1;
   border-left-style: dashed;
   opacity: 0.8;
 }
@@ -202,7 +202,7 @@
 
 /* DRAFT CONTAINER (Directive style :::draft) */
 .draft-container {
-  @apply my-8 p-6 rounded-xl border-2 border-slate-200 border-dashed bg-slate-50/50 relative overflow-hidden;
+  @apply my-8 p-6 rounded-xl border-2 border-slate-200 border-dashed bg-[#f4faf4] relative overflow-hidden;
   @apply prose prose-slate max-w-none;
   opacity: 0.8;
 }
