@@ -12,35 +12,10 @@ export interface CommitInfo {
 
 export async function getFileHistory(filePath: string): Promise<CommitInfo[]> {
 	try {
-		// Use raw command to get both log and stats for the specific file
-		const rawLog = await git.raw([
-			'log',
-			'--follow',
-			'--format=%H|%aI|%s',
-			'--stat',
-			'--',
-			filePath
-		]);
-
-		const commits: CommitInfo[] = [];
-		const parts = rawLog.split('\n\n');
-		
-		// The format with --stat is roughly:
-		// <hash>|<date>|<message>
-		// <stat line>
-		// <summary line like "1 file changed, 16 insertions(+)">
-
-		const entries = rawLog.split(/^commit [a-f0-9]{40}$/gm); // This might not work with custom format
-		
-		// Let's use a simpler way: git log with custom format and then separate stat calls if needed
-		// Actually, simple-git log can get the basic info easily.
 		const basicLog = await git.log({ file: filePath });
 		
 		const historyWithStats = await Promise.all(basicLog.all.map(async (commit) => {
 			const show = await git.show(['--stat', '--format=', commit.hash, '--', filePath]);
-			// Example output: " src/content/posts/hello-world.md | 16 ++++++++++++++++"
-			//                " 1 file changed, 16 insertions(+)"
-			
 			const lines = show.trim().split('\n');
 			const summaryLine = lines[lines.length - 1];
 			
@@ -93,7 +68,7 @@ export async function getAllCommits(): Promise<CommitInfo[]> {
 			date: commit.date,
 			message: commit.message,
 			hash: commit.hash,
-			insertions: 0, // Not needed for heatmap
+			insertions: 0,
 			deletions: 0
 		}));
 	} catch (error) {
