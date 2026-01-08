@@ -5,15 +5,19 @@ import PostHistory from '../components/History/PostHistory.astro';
 interface Props {
 	frontmatter: {
 		title: string;
-		publishedDate: Date;
+		publishedDate?: Date;
 		status: 'seed' | 'sprout' | 'tree';
 		summary: string;
 		tags: string[];
 	};
 	filePath: string;
+	gitCreated?: Date | null;
+	gitUpdated?: Date | null;
 }
 
-const { frontmatter, filePath } = Astro.props;
+const { frontmatter, filePath, gitCreated, gitUpdated } = Astro.props;
+
+const displayDate = frontmatter.publishedDate || gitCreated || new Date();
 
 const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
 	seed: 'bg-slate-100 text-slate-600 border-slate-200',
@@ -30,7 +34,7 @@ const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
 					{frontmatter.status.charAt(0).toUpperCase() + frontmatter.status.slice(1)}
 				</span>
 				<time class="text-sm text-slate-500">
-					{frontmatter.publishedDate.toLocaleDateString('en-US', {
+					{displayDate.toLocaleDateString('en-US', {
 						year: 'numeric',
 						month: 'long',
 						day: 'numeric',

@@ -22,6 +22,22 @@ export async function getFileHistory(filePath: string): Promise<CommitInfo[]> {
 	}
 }
 
+export async function getFileDates(filePath: string): Promise<{ created: Date | null, updated: Date | null }> {
+	try {
+		const history = await getFileHistory(filePath);
+		if (history.length === 0) {
+			return { created: null, updated: null };
+		}
+		return {
+			created: new Date(history[history.length - 1].date),
+			updated: new Date(history[0].date),
+		};
+	} catch (error) {
+		console.error(`Error fetching git dates for ${filePath}:`, error);
+		return { created: null, updated: null };
+	}
+}
+
 export async function getAllCommits(): Promise<CommitInfo[]> {
 	try {
 		const log = await git.log();

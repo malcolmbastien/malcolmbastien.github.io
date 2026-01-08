@@ -1,6 +1,5 @@
 ---
 title: "Hello World"
-publishedDate: 2026-01-07
 status: "seed"
 tags: ["intro", "astro"]
 summary: "Welcome to my evolving microblog. This is the first seed."

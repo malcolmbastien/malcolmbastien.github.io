@@ -3,9 +3,23 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import ActivityHeatmap from '../components/Profile/ActivityHeatmap.astro';
 import ProfileHeader from '../components/Profile/ProfileHeader.astro';
+import { getFileDates } from '../lib/git-history';
 
 const allPosts = await getCollection('posts');
-const sortedPosts = allPosts.sort((a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf());
+
+// Fetch git dates for all posts to allow sorting by creation date
+const postsWithDates = await Promise.all(
+	allPosts.map(async (post) => {
+		const filePath = `src/content/posts/${post.id}`;
+		const { created } = await getFileDates(filePath);
+		return {
+			...post,
+			displayDate: post.data.publishedDate || created || new Date(),
+		};
+	})
+);
+
+const sortedPosts = postsWithDates.sort((a, b) => b.displayDate.valueOf() - a.displayDate.valueOf());
 
 const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
 	seed: 'bg-slate-100 text-slate-600 border-slate-200',
@@ -28,14 +42,14 @@ const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
 		</div>
 
 		<div class="grid gap-6" id="posts-grid">
-			{sortedPosts.map((post: CollectionEntry<'posts'>) => (
+			{sortedPosts.map((post) => (
 				<a href={`/posts/${post.slug}`} class="block p-6 rounded-xl border border-slate-200 bg-white hover:border-emerald-300 hover:shadow-sm transition-all post-card" data-status={post.data.status}>
 					<div class="flex items-center gap-3 mb-3">
 						<span class={`px-2 py-0.5 rounded-full text-[10px] font-semibold border uppercase tracking-wider ${statusColors[post.data.status as keyof typeof statusColors]}`}>
 							{post.data.status}
 						</span>
 						<time class="text-xs text-slate-400">
-							{post.data.publishedDate.toLocaleDateString('en-US', {
+							{post.displayDate.toLocaleDateString('en-US', {
 								year: 'numeric',
 								month: 'short',
 								day: 'numeric',
