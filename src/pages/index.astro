@@ -35,10 +35,10 @@ const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
 		<ActivityHeatmap />
 
 		<div class="mb-8 flex gap-4" id="filter-buttons">
-			<button class="px-4 py-2 rounded-md bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 transition-colors active-filter" data-status="all">All</button>
-			<button class="px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors" data-status="seed">🌱 Seeds</button>
-			<button class="px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors" data-status="sprout">🌿 Sprouts</button>
-			<button class="px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors" data-status="tree">🌳 Trees</button>
+			<button class="filter-btn active" data-status="all">All</button>
+			<button class="filter-btn" data-status="seed">🌱 Seeds</button>
+			<button class="filter-btn" data-status="sprout">🌿 Sprouts</button>
+			<button class="filter-btn" data-status="tree">🌳 Trees</button>
 		</div>
 
 		<div class="grid gap-6" id="posts-grid">
@@ -75,7 +75,7 @@ const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
 </Layout>
 
 <script>
-	const buttons = document.querySelectorAll('#filter-buttons button');
+	const buttons = document.querySelectorAll('#filter-buttons .filter-btn');
 	const cards = document.querySelectorAll('.post-card');
 
 	buttons.forEach(button => {
@@ -83,12 +83,8 @@ const statusColors: Record<'seed' | 'sprout' | 'tree', string> = {
 			const status = (button as HTMLElement).dataset.status;
 			
 			// Update button styles
-			buttons.forEach(btn => {
-				btn.classList.remove('bg-slate-900', 'text-white');
-				btn.classList.add('bg-white', 'border', 'border-slate-200', 'text-slate-600');
-			});
-			button.classList.remove('bg-white', 'border', 'border-slate-200', 'text-slate-600');
-			button.classList.add('bg-slate-900', 'text-white');
+			buttons.forEach(btn => btn.classList.remove('active'));
+			button.classList.add('active');
 
 			// Filter cards
 			cards.forEach(card => {

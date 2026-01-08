@@ -191,3 +191,12 @@
 .post-draft-banner {
   @apply mb-8 p-4 rounded-lg bg-amber-50 border border-amber-100 text-amber-800 text-sm flex items-center gap-3;
 }
+
+/* --- Filter Buttons --- */
+.filter-btn {
+  @apply px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 text-sm font-medium transition-all duration-200 hover:bg-slate-50 hover:border-slate-300 cursor-pointer flex items-center gap-2;
+}
+
+.filter-btn.active {
+  @apply bg-slate-900 text-white border-slate-900 hover:bg-slate-800 shadow-sm;
+}
