@@ -11,7 +11,7 @@ import SocialLinks from "../components/Profile/SocialLinks.astro";
     description="Learn about Malcolm Bastien, an Agile Coach from Toronto specializing in Agile transformation, Lean practices, and complex systems thinking."
     type="website"
 >
-    <main class="max-w-4xl mx-auto p-4 md:p-8">
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
         <nav class="mb-6">
             <!-- Back to Home Link -->
             <a
@@ -34,7 +34,9 @@ import SocialLinks from "../components/Profile/SocialLinks.astro";
             </a>
         </nav>
 
-        <div class="bg-white dark:bg-[#121812] p-6 rounded-lg shadow-sm">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <article class="flex-1 max-w-4xl">
+                <div class="bg-white dark:bg-[#121812] p-6 rounded-lg shadow-sm">
             <div class="mb-8">
                 <div
                     class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8"
@@ -81,6 +83,7 @@ import SocialLinks from "../components/Profile/SocialLinks.astro";
                 class="prose prose-slate dark:prose-invert prose-lg max-w-none"
             >
                 <h2
+                    id="career-timeline"
                     class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-8 border-b border-slate-200 dark:border-slate-700 pb-2 mt-4!"
                 >
                     Career Timeline
@@ -416,6 +419,7 @@ import SocialLinks from "../components/Profile/SocialLinks.astro";
                 </div>
 
                 <h2
+                    id="education"
                     class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6 border-b border-slate-200 dark:border-slate-700 pb-2"
                 >
                     Education
@@ -437,6 +441,7 @@ import SocialLinks from "../components/Profile/SocialLinks.astro";
                 </div>
 
                 <h2
+                    id="areas-of-interest"
                     class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-8 border-b border-slate-200 dark:border-slate-700 pb-2"
                 >
                     Areas of Interest
@@ -782,6 +787,7 @@ import SocialLinks from "../components/Profile/SocialLinks.astro";
             </div>
 
             <h2
+                id="testimonials"
                 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-8 mt-12 border-b border-slate-200 dark:border-slate-700 pb-2"
             >
                 Testimonials
@@ -943,6 +949,38 @@ import SocialLinks from "../components/Profile/SocialLinks.astro";
                 Back to Garden
             </a>
         </div>
+        </article>
+
+        <aside class="hidden lg:block w-64 shrink-0">
+            <div class="bg-white dark:bg-[#121812] p-6 rounded-lg shadow-sm sticky top-4">
+                <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">Table of Contents</h3>
+                <nav>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#career-timeline" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors">
+                                Career Timeline
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#education" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors">
+                                Education
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#areas-of-interest" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors">
+                                Areas of Interest
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#testimonials" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors">
+                                Testimonials
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+    </div>
     </main>
 
     <!-- Footer Widgets Section -->

@@ -335,7 +335,7 @@ html {
 
 /* Post-level Draft Styling */
 .post-is-draft {
-    @apply border-emerald-100 bg-emerald-50/10;
+    @apply border-emerald-200/30 dark:border-emerald-800/30 bg-emerald-50/5 dark:bg-emerald-950/5;
 }
 
 .post-draft-banner {
