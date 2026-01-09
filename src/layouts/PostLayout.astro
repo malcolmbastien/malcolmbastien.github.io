@@ -286,7 +286,7 @@ const formatDate = (date: Date) => {
                     </footer>
                 </div>
             </article>
-            <TableOfContents content={currentPost?.body || ""} />
+            <TableOfContents content={currentPost?.body || ""} title={frontmatter.title} />
         </div>
     </main>
 </Layout>
