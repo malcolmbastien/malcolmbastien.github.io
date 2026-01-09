@@ -57,3 +57,5 @@ Option 5: Message Category Badges
 - Show colored badges instead of full text
 - Pros: Clean, visual, scannable
 - Cons: Depends on conventional commits
+
+- Team Building & Leadership (Pink) - Psychological safety, conflict resolution, culture, etc.
