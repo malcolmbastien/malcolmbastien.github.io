@@ -15,3 +15,5 @@ This is the beginning of my journey into treating thoughts as living documents.
 Stay tuned for more updates as this thought sprouts and grows into a tree.
 
 I updated this post on Jan 8 @ 5:00 PM
+
+For detailed formatting options, see [[formatting-example]].

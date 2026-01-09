@@ -155,3 +155,5 @@ function helloGarden() {
 4. Deploy to GitHub Pages or your preferred hosting
 
 Happy gardening! 🌿
+
+For more information about getting started, check out [[hello-world]].
