@@ -1,22 +1,25 @@
 import { getCollection } from 'astro:content';
-import { unified } from 'unified';
-import remarkParse from 'remark-parse';
-import { visit } from 'unist-util-visit';
 
-// Function to extract wiki-style links from a post's markdown content
+// Function to extract wiki-style links from raw markdown content
 function extractWikiLinks(content: string): string[] {
   const links: string[] = [];
 
-  // Parse markdown to AST
-  const tree = unified().use(remarkParse).parse(content);
+  // Match wiki-style links: [[link-text]] or [[link-text|display-text]]
+  const wikiLinkRegex = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
+  const matches = [...content.matchAll(wikiLinkRegex)];
 
-  // Visit all link nodes and collect wiki-style links
-  visit(tree, 'link', (node) => {
-    // Check if this is a wiki-style link (starts with /posts/)
-    if (node.url && node.url.startsWith('/posts/')) {
-      const slug = node.url.replace('/posts/', '');
-      links.push(slug);
-    }
+  matches.forEach((match) => {
+    const linkText = match[1].trim();
+
+    // Generate slug from link text (same logic as in remark-wiki-links.mjs)
+    const slug = linkText
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '') // Remove special characters
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/-+/g, '-') // Replace multiple hyphens with single
+      .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+
+    links.push(slug);
   });
 
   return links;
@@ -34,7 +37,8 @@ export async function buildBacklinksMap(): Promise<Record<string, string[]>> {
 
   // Extract links from each post and build the backlinks map
   posts.forEach(post => {
-    const content = post.body;
+    // post.body contains the raw markdown content
+    const content = post.body || '';
     const linkedSlugs = extractWikiLinks(content);
 
     // Add this post as a backlink for each post it links to
@@ -45,7 +49,6 @@ export async function buildBacklinksMap(): Promise<Record<string, string[]>> {
       }
     });
   });
-
   return backlinksMap;
 }
 
