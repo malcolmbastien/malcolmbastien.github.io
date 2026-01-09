@@ -7,55 +7,39 @@ summary: "Welcome to my evolving microblog. This is the first seed."
 
 # Hello World
 
-This is the beginning of my journey into treating thoughts as living documents.
+Delivering software is hard. I often see companies undertake large, complex projects that span multiple years and involve hundreds of people. Then, when things deviate from the original plan, managers start finger-pointing at their teams and say the reason for the problems is how teams are “not collaborating,” or they “lack ownership,” or “aren’t aligned.”
 
-> [!IDEA]
-> What if blogs were more like code repositories?
+Blaming teams is the easy answer. It’s also almost always the wrong one.
 
-Stay tuned for more updates as this thought sprouts and grows into a tree.
+The Lure of the ‘Easy Fix’
+When projects start showing signs of trouble, when friction appears, or dependencies slow things down, a manager might conclude that a team is underperforming or creating issues for others.
 
-I updated this post on Jan 8 @ 5:00 PM
+Pointing the finger at a team offers a clear, simple path forward. If teams lack ownership or aren’t aligned, we can create new processes to get them back on track. Whenever problems appear, people can be coached, trained, or educated back to a desired level of performance.
 
-For detailed formatting options, see [[formatting-example]].
+This approach seems decisive, but it’s a trap that proposes a solution without even trying to uncover the actual problem. It ignores the environment—the system—in which teams operate.
 
-[[my-new-thought]]
+Blaming teams is “one-why” thinking.
 
-# New content for testing
+Blaming teams is possible only if you ignore how everything is connected. Better understanding and better solutions require staying with problems a bit longer, exploring them and considering multiple perspectives.
 
-Analysis: Adding Commit Messages to Post History
-I've analyzed your current PostHistory implementation and identified several approaches for adding commit message context. Here's what we currently have and what we could do:
-📊 Current State
-- ✅ Commit hash (7 chars)
-- ✅ Commit dates with formatting
-- ✅ Insertions/deletions per commit  
-- ✅ Poetic evolution labels
-- ✅ Visual timeline with icons
-- ❌ Commit messages available but not displayed
-🎨 Design Approaches
-Option 1: Direct Display
-- Show commit message below evolution label
-- Full message text (no truncation)
-- Pros: Complete information, simple
-- Cons: Can clutter UI with long messages
-Option 2: Truncated with Expand
-- Show ~50 characters with "..." 
-- Click to expand full message
-- Pros: Clean default view, complete info available
-- Cons: More complex interaction
-Option 3: Hover Tooltip
-- Clean timeline by default
-- Show full message on hover over hash/date
-- Pros: Minimal UI, complete context on demand
-- Cons: Hidden info, requires discovery
-Option 4: Contextual Summary
-- Combine message with line changes for context
-- Example: "Added 5 lines - 'Fix typo in heading'"
-- Pros: Most readable, action-oriented
-- Cons: Requires parsing logic
-Option 5: Message Category Badges
-- Auto-detect commit type (feat, fix, docs, refactor)
-- Show colored badges instead of full text
-- Pros: Clean, visual, scannable
-- Cons: Depends on conventional commits
+The need to get back on track leads to rushing to a solution.
 
-- Team Building & Leadership (Pink) - Psychological safety, conflict resolution, culture, etc.
+Setting Teams up for Failure
+Teams operate within a socio-technical system—a complex web of interconnected people, tools, processes, and code. Blaming the teams ignores how everything else is connected.
+
+Teams are not always the cause of problems. Often, they’re the symptom.
+
+The outcomes you see are the result of dozens of organizational and project choices:
+
+If you design massive, multi-year projects that span dozens of teams, of course alignment and dependencies will be a constant reality.
+If you structure teams around technical components instead of customer value, of course you will hear teams say, “We got our part done.” Their part is all they can see and own.
+If you create unclear boundaries of ownership between teams, of course problems will appear in the spaces between them.
+If you focus only on team-level agile practices, of course the interactions between those teams will become opportunities for problems.
+These are not team failures; they are the likely, probable outcomes of the system’s design. Big project plans appear clear on paper, but the real world is more complex, interconnected, and unpredictable.
+
+Trying to fix these problems by giving people better information and instructions does nothing to address the environment the teams are in. Creating more meetings, more reports, and more tracking only adds to the waste.
+
+See the System
+Instead of trying to change people’s behaviours, change the conditions in which they work. Shift your focus from blaming teams to probing the system.
+
+Seeing the system starts by asking better questions:
