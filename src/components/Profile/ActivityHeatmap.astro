@@ -1,4 +1,10 @@
 ---
+interface Props {
+    year: number;
+}
+
+const { year } = Astro.props;
+
 import { getPostsCommits } from "../../lib/git-history";
 
 const commits = await getPostsCommits();
@@ -22,32 +28,29 @@ interface MonthLabel {
     weekIndex: number;
 }
 
-// Generate last ~53 weeks (371 days) to ensure current week is fully included
-const numDays = 371;
-const today = new Date();
+// Generate all days for the specified year (January 1 to December 31)
 const days: DayData[] = [];
-for (let i = numDays - 1; i >= 0; i--) {
-    const d = new Date(today);
-    d.setDate(d.getDate() - i);
+const startDate = new Date(year, 0, 1); // January 1st
+const endDate = new Date(year, 11, 31); // December 31st
+
+for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
     const dateStr = d.toISOString().split("T")[0];
     days.push({
         date: dateStr,
         count: activityMap[dateStr] || 0,
     });
 }
-// days[0] is ~53 weeks ago, days[370] is today
 
-// Generate month labels
+// Generate month labels for the year
 const monthLabels: MonthLabel[] = [];
 let lastMonth = "";
-for (let i = days.length - 1; i >= 0; i--) {
-    // Start from newest day
+for (let i = 0; i < days.length; i++) {
     const d = new Date(days[i].date);
     const monthKey = d.toLocaleDateString("en-US", { month: "short" });
     if (monthKey !== lastMonth) {
         const weekIndex = Math.floor(i / 7);
-        // Skip if too close to the end to avoid overlap
-        if (weekIndex < 50) {
+        // Only include months that are actually in this year and not too close to end
+        if (d.getFullYear() === year && weekIndex < 50) {
             monthLabels.push({
                 name: monthKey,
                 weekIndex: weekIndex,
@@ -72,17 +75,17 @@ function getColor(count: number) {
     <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4">
         Activity
     </h3>
-    <div class="overflow-x-hidden">
+    <div class="overflow-x-auto">
         <svg
-            width="742"
-            height="100"
-            class="mx-auto sm:left-0 left-100 relative"
+            width="720"
+            height="112"
+            class="mx-auto activity-heatmap-svg"
         >
             {
                 monthLabels.map((label) => (
                     <text
-                        x={label.weekIndex * 14 + 7}
-                        y="8"
+                        x={label.weekIndex * 12 + 6}
+                        y="10"
                         text-anchor="middle"
                         class="fill-slate-500 dark:fill-slate-400 text-[10px] font-medium"
                     >
@@ -91,18 +94,17 @@ function getColor(count: number) {
                 ))
             }
             {
-                Array.from({ length: 53 }).map((_, weekIndex) => (
-                    <g transform={`translate(${weekIndex * 14}, 15)`}>
+                Array.from({ length: Math.ceil(days.length / 7) }).map((_, weekIndex) => (
+                    <g transform={`translate(${weekIndex * 12}, 18)`}>
                         {Array.from({ length: 7 }).map((_, dayIndex) => {
                             const dayData = days[weekIndex * 7 + dayIndex];
                             if (!dayData) return null;
-                            const dayOfWeek = new Date(dayData.date).getDay(); // 0=Sunday, 6=Saturday
                             return (
                                 <rect
                                     x="0"
-                                    y={dayOfWeek * 12}
-                                    width="11"
-                                    height="11"
+                                    y={dayIndex * 12}
+                                    width="10"
+                                    height="10"
                                     rx="2"
                                     class={`${getColor(dayData.count)} transition-colors duration-300 hover:stroke-slate-400 dark:hover:stroke-slate-500 hover:stroke-1 ${dayData.count > 0 ? "cursor-pointer" : ""}`}
                                     data-date={dayData.date}
@@ -134,12 +136,111 @@ function getColor(count: number) {
         <span>More</span>
     </div>
 
-    <script>
-        // Store the currently selected date
-        let selectedDate: string | null = null;
+    <script define:vars={{ commits, year }}>
+        // Store the currently selected date and year
+        let selectedDate = null;
+        let currentYear = year;
+
+        // Function to update heatmap for a specific year
+        window.updateHeatmapYear = function (newYear) {
+            if (currentYear === newYear) return;
+            currentYear = newYear;
+
+            // Generate new data for the year
+            const activityMap = {};
+            commits.forEach((c) => {
+                const commitYear = new Date(c.date).getFullYear();
+                if (commitYear === newYear) {
+                    const dateStr = new Date(c.date).toISOString().split("T")[0];
+                    activityMap[dateStr] = (activityMap[dateStr] || 0) + 1;
+                }
+            });
+
+            // Generate all days for the year
+            const days = [];
+            const startDate = new Date(newYear, 0, 1);
+            const endDate = new Date(newYear, 11, 31);
+
+            for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
+                const dateStr = d.toISOString().split("T")[0];
+                days.push({
+                    date: dateStr,
+                    count: activityMap[dateStr] || 0,
+                });
+            }
+
+            // Update SVG
+            const svg = document.querySelector('.activity-heatmap-svg');
+            if (!svg) return;
+
+            // Clear existing content
+            svg.innerHTML = '';
+
+            // Add month labels
+            const monthLabels = [];
+            let lastMonth = "";
+            for (let i = 0; i < days.length; i++) {
+                const d = new Date(days[i].date);
+                const monthKey = d.toLocaleDateString("en-US", { month: "short" });
+                if (monthKey !== lastMonth) {
+                    const weekIndex = Math.floor(i / 7);
+                    // Only include months that are actually in this year and not too close to end
+                    if (d.getFullYear() === newYear && weekIndex < 50) {
+                        monthLabels.push({
+                            name: monthKey,
+                            weekIndex: weekIndex,
+                        });
+                    }
+                    lastMonth = monthKey;
+                }
+            }
+
+            // Add month labels to SVG
+            monthLabels.forEach((label) => {
+                const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                text.setAttribute('x', String(label.weekIndex * 12 + 6));
+                text.setAttribute('y', '10');
+                text.setAttribute('text-anchor', 'middle');
+                text.className = 'fill-slate-500 dark:fill-slate-400 text-[10px] font-medium';
+                text.textContent = label.name;
+                svg.appendChild(text);
+            });
+
+            // Add day rectangles
+            const numWeeks = Math.ceil(days.length / 7);
+            for (let weekIndex = 0; weekIndex < numWeeks; weekIndex++) {
+                const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                g.setAttribute('transform', `translate(${weekIndex * 12}, 18)`);
+
+                for (let dayIndex = 0; dayIndex < 7; dayIndex++) {
+                    const dayData = days[weekIndex * 7 + dayIndex];
+                    if (!dayData) continue;
+
+                    const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                    rect.setAttribute('x', '0');
+                    rect.setAttribute('y', String(dayIndex * 12));
+                    rect.setAttribute('width', '10');
+                    rect.setAttribute('height', '10');
+                    rect.setAttribute('rx', '2');
+                    rect.setAttribute('data-date', dayData.date);
+                    rect.setAttribute('data-count', String(dayData.count));
+
+                    const colorClass = getColor(dayData.count);
+                    rect.className = `${colorClass} transition-colors duration-300 hover:stroke-slate-400 dark:hover:stroke-slate-500 hover:stroke-1 ${dayData.count > 0 ? "cursor-pointer" : ""} activity-day`;
+
+                    if (dayData.count > 0) {
+                        rect.onclick = () => filterByDate(dayData.date);
+                    }
+
+                    g.appendChild(rect);
+                }
+
+                svg.appendChild(g);
+            }
+        };
 
         // Function to filter posts by date
-        (window as any).filterByDate = function (dateString: string) {
+        function filterByDate(dateString) {
             // If clicking the same date, clear the filter
             if (selectedDate === dateString) {
                 selectedDate = null;
@@ -179,7 +280,7 @@ function getColor(count: number) {
             if (clickedDay) {
                 clickedDay.classList.add("selected");
             }
-        };
+        }
 
         // Add selected class styling
         const style = document.createElement("style");
@@ -193,10 +294,5 @@ function getColor(count: number) {
 			}
 		`;
         document.head.appendChild(style);
-
-        // Add selected class to all activity days for styling
-        document.querySelectorAll("[data-date]").forEach((el) => {
-            el.classList.add("activity-day");
-        });
     </script>
 </div>

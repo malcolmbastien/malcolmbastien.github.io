@@ -1,0 +1,192 @@
+---
+import { getStatusColors } from "../lib/theme";
+
+interface Props {
+    sortedEvents: Array<{
+        type: string;
+        post: any;
+        date: Date;
+        title: string;
+        count?: number;
+    }>;
+}
+
+const { sortedEvents } = Astro.props;
+const statusColors = getStatusColors();
+---
+
+<div class="timeline max-w-4xl mx-auto" id="timeline">
+    {
+        (() => {
+            const now = new Date();
+            // Group events by month
+            const eventsByMonth = new Map();
+
+            sortedEvents.forEach((event) => {
+                const monthKey = event.date.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                });
+                if (!eventsByMonth.has(monthKey)) {
+                    eventsByMonth.set(monthKey, []);
+                }
+                eventsByMonth.get(monthKey).push(event);
+            });
+
+            // Render each month with its events
+            return Array.from(eventsByMonth.entries()).map(
+                ([monthKey, monthEvents]) => (
+                    <div class="month-section">
+                        {/* Month header */}
+                        <div class="month-divider py-2">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">
+                                {monthKey}
+                            </h3>
+                        </div>
+
+                        {/* Events for this month */}
+                        <div class="month-events space-y-2">
+                            {monthEvents.map((event) => {
+                                const diffMs =
+                                    now.getTime() - event.date.getTime();
+                                const diffDays = Math.floor(
+                                    diffMs / (1000 * 60 * 60 * 24),
+                                );
+                                const diffHours = Math.floor(
+                                    diffMs / (1000 * 60 * 60),
+                                );
+                                const diffMinutes = Math.floor(
+                                    diffMs / (1000 * 60),
+                                );
+
+                                const timeAgo =
+                                    diffDays > 7
+                                        ? event.date.toLocaleDateString(
+                                              "en-US",
+                                              {
+                                                  month: "short",
+                                                  day: "numeric",
+                                              },
+                                          )
+                                        : diffDays > 0
+                                          ? `${diffDays} day${
+                                                diffDays > 1 ? "s" : ""
+                                            } ago`
+                                          : diffHours > 0
+                                            ? `${diffHours} hour${
+                                                  diffHours > 1 ? "s" : ""
+                                              } ago`
+                                            : diffMinutes > 0
+                                              ? `${diffMinutes} minute${
+                                                    diffMinutes > 1 ? "s" : ""
+                                                } ago`
+                                              : "Just now";
+                                const icon =
+                                    event.type === "created" ? "🌱" : "✏️";
+
+                                return (
+                                    <div
+                                        class="timeline-event flex items-start gap-4 p-4 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors relative z-10"
+                                        data-status={event.post.data.status}
+                                        data-title={event.title.toLowerCase()}
+                                        data-summary={event.post.data.summary.toLowerCase()}
+                                        data-tags={event.post.data.tags
+                                            .join(" ")
+                                            .toLowerCase()}
+                                        data-created={
+                                            event.post.displayDate
+                                                .toISOString()
+                                                .split("T")[0]
+                                        }
+                                        data-updated={
+                                            event.post.updatedDate
+                                                .toISOString()
+                                                .split("T")[0]
+                                        }
+                                        data-event-type={event.type}
+                                    >
+                                        <div class="shrink-0 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl">
+                                            {icon}
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <div class="flex items-center gap-2 mb-2">
+                                                <span
+                                                    class={`px-2 py-0.5 rounded text-xs font-medium ${
+                                                        event.type === "created"
+                                                            ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
+                                                            : "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400"
+                                                    }`}
+                                                >
+                                                    {event.type === "created"
+                                                        ? "Created"
+                                                        : "Updated"}
+                                                    {event.count
+                                                        ? ` (${event.count})`
+                                                        : ""}
+                                                </span>
+                                                <time
+                                                    class="text-sm text-slate-500 dark:text-slate-400"
+                                                    title={event.date.toLocaleString()}
+                                                >
+                                                    {timeAgo}
+                                                </time>
+                                            </div>
+                                            <h4 class="font-semibold text-slate-900 dark:text-slate-100 mb-1">
+                                                <a
+                                                    href={`/posts/${event.post.slug}`}
+                                                    class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                                                >
+                                                    {event.title}
+                                                </a>
+                                            </h4>
+                                            <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
+                                                {event.post.data.summary}
+                                            </p>
+                                            <div class="flex items-center gap-2 mt-2">
+                                                <span
+                                                    class={`px-1.5 py-0.5 rounded text-xs ${statusColors[event.post.data.status as keyof typeof statusColors]}`}
+                                                >
+                                                    {event.post.data.status}
+                                                </span>
+                                                {event.type === "updated" && (
+                                                    <div class="flex items-center gap-1"">
+                                                        <div class="w-16 h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                                            <div
+                                                                class="h-full bg-blue-500 rounded-full"
+                                                                style={`width: ${Math.min(
+                                                                    100,
+                                                                    (event.post
+                                                                        .data
+                                                                        .summary
+                                                                        .length /
+                                                                        200) *
+                                                                        100,
+                                                                )}%`}
+                                                            />
+                                                        </div>
+                                                        <span class="text-xs text-slate-500">
+                                                            update
+                                                        </span>
+                                                    </div>
+                                                )}
+                                                <div class="flex flex-wrap gap-1">
+                                                    {event.post.data.tags
+                                                        .slice(0, 2)
+                                                        .map((tag: string) => (
+                                                            <span class="text-xs text-slate-500 dark:text-slate-400">
+                                                                {"#" + tag}
+                                                            </span>
+                                                        ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                ),
+            );
+        })()
+    }
+</div>

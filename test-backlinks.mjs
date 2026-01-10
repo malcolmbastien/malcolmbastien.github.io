@@ -16,7 +16,7 @@ console.log('\nAST tree:');
 console.log(JSON.stringify(tree, null, 2));
 
 // Visit all link nodes and collect wiki-style links
-const links: string[] = [];
+const links = [];
 visit(tree, 'link', (node) => {
   console.log('\nFound link node:', node);
   // Check if this is a wiki-style link (starts with /posts/)
