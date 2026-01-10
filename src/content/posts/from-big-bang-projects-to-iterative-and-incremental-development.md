@@ -81,9 +81,9 @@ The consequence of these points is that companies still believe in projects and 
 
 Big Bang delivery projects have become accepted, even by some agilists, by assimilating MVP language and adopting team-level Scrum practices. Meanwhile, companies still suffer from the same costs and problems inherent in large IT projects.
 
-Project model invites Big Bang thinking
-
-Henrik Kniberg, [Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)
+> Project model invites Big Bang thinking
+>
+> Henrik Kniberg, [Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)
 
 ## **Iterative and Incremental**
 
@@ -127,9 +127,9 @@ Using the Current Knowledge Threshold model, it becomes easy to see that trying 
 
 ## **Conclusion**
 
-Big Projects usually fail. Regardless of process.
-
-Henrik Kniberg, [Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)
+> Big Projects usually fail. Regardless of process.
+> 
+> Henrik Kniberg, [Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)
 
 This leads us to a core truth I often find myself coming back to: there's no such thing as an "Agile project". Projects use deterministic plans with defined timelines and scope. Agile implies adjusting direction and making small bets based on new information and learning that comes from customer feedback.
 
@@ -141,12 +141,12 @@ Without understanding the whole of Henrik's presentation, it's too easy to talk 
 
 To conclude, here's part of Henrik's closing from his original presentation:
 
-Projects aren’t the only way to get things done
-
-The standard project model is a tool
-
-Like any tool, it is suitable for some situations but not all.
-
-It is often unsuitable for IT product development
-
-Henrik Kniberg, [Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)
+> Projects aren’t the only way to get things done
+> 
+> The standard project model is a tool
+> 
+> Like any tool, it is suitable for some situations but not all.
+> 
+> It is often unsuitable for IT product development
+> 
+> Henrik Kniberg, [Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)

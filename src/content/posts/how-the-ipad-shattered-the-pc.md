@@ -20,8 +20,8 @@ Where this trend breaks is with the iPad. When Apple revealed the iPad, they did
 
 This was a fundamentally different approach and it’s important for two reasons:
 
-	The focus was on the experiences the device enabled, not its specs or features.
-	Users could immediately recognize and relate to those activities, and they were able to understand how the iPad improved them.
+- The focus was on the experiences the device enabled, not its specs or features.
+- Users could immediately recognize and relate to those activities, and they were able to understand how the iPad improved them.
 
 Watching YouTube isn’t a feature of Windows or OS X, it’s an experience you have. The Apple made that experience part of the iPad *(and iPhone)*.
 
@@ -35,10 +35,10 @@ To use a computer you need to know how to use a computer. It as true now as it w
 That doesn’t apply with the iPad. You can do everything you want on an iPad without that computer knowledge.
 ## 3. The iPad Abandoned Old Conventions
 
-	Apple released a device without support for Flash even though it’s on 90%+ of PCs.
-	iOS only lets you use one application at a time.
-	Without any USB ports, an ethernet port, or optical drives the compatibility of the iPad to work with other devices was limited.
-	Apple didn’t use a stylus while everyone said it’s too difficult to write without one.
+- Apple released a device without support for Flash even though it’s on 90%+ of PCs.
+- iOS only lets you use one application at a time.
+- Without any USB ports, an ethernet port, or optical drives the compatibility of the iPad to work with other devices was limited.
+- Apple didn’t use a stylus while everyone said it’s too difficult to write without one.
 
 Again and again, Apple blew away the conventions and the popular opinion of what a computer should be.
 
@@ -50,22 +50,28 @@ For a tablet to deliver a natural experience, it depends on quality hardware and
 The hardware and software need to work together in order to deliver a believable experience. If your ebook software mimics the appearance of a real bookshelf and of holding a paper book but then starts to lag when you try to read anything, then that experience is ruined. You’re no longer reading a book at that point, your just using a laggy computer.
 
 Recently, the CEO of Lenovo said he wants his company to make products for all the tablet segments…
-“…Our aspiration is to gain market share and to continue to outgrow the market,” Mr. Yang said, noting that his company will focus on creating devices for all segments of the tablet market, including low-priced devices. “We will be one of the strongest players in this arena,” Mr. Yang said. “We want to become the leader in this industry and I believe that is definitely achievable, that is our aspiration.” – [Lenovo sets sights on Apple in tablet PC race](http://www.bgr.com/2011/08/22/lenovo-sets-sights-on-apple-in-tablet-pc-race/)
+
+> “…Our aspiration is to gain market share and to continue to outgrow the market,” Mr. Yang said, noting that his company will focus on creating devices for all segments of the tablet market, including low-priced devices. “We will be one of the strongest players in this arena,” Mr. Yang said. “We want to become the leader in this industry and I believe that is definitely achievable, that is our aspiration.”
+> 
+> – [Lenovo sets sights on Apple in tablet PC race](http://www.bgr.com/2011/08/22/lenovo-sets-sights-on-apple-in-tablet-pc-race/)
+
 There are no different segments for tablets. There’s one type of tablet people want. Ones that deliver exceptional and responsive media experiences. Cheaper tablets won’t work because they won’t be able to meet the requirements that are necessary to deliver that experience.
 
-	You need the right quality display
-	You need to use the right materials so the tablet doesn’t feel cheap in your hands and won’t break
-	You need to powerful enough hardware and well engineered software that ensures responsive interactions
-	You need a long lasting battery
-	You need a software platform that enables third party developers
+- You need the right quality display
+- You need to use the right materials so the tablet doesn’t feel cheap in your hands and won’t break
+- You need to powerful enough hardware and well engineered software that ensures responsive interactions
+- You need a long lasting battery
+- You need a software platform that enables third party developers
 
 There are no segments to the tablet market, there are just degrees to which you can deliver on all of the above. As long as other companies continue to make compromise with their tablets, the iPad will reign.
 ## A Quote From Steve
 
-Steve Jobs said this was going to happen.
-Jobs said the day is coming when only one out of every few people will need a traditional computer.
+Steve Jobs said this was going to happen. Jobs said the day is coming when only one out of every few people will need a traditional computer.
 
 “When we were an agrarian nation, all cars were trucks because that’s what you needed on the farms.” Cars became more popular as cities rose, and things like power steering and automatic transmission became popular.
 
-“PCs are going to be like trucks,” Jobs said. “They are still going to be around.” However, he said, only “one out of x people will need them.” – [Steve Jobs at D8: Post-PC era is nigh](http://news.cnet.com/8301-13860_3-20006526-56.html)
+> "PCs are going to be like trucks,” Jobs said. “They are still going to be around.” However, he said, only “one out of x people will need them.”
+> 
+> – [Steve Jobs at D8: Post-PC era is nigh](http://news.cnet.com/8301-13860_3-20006526-56.html)
+
 Other companies will argue this, they’ll try to negotiate and make compromises between the two. Hopefully the points above have explained the reasons for the change, and why computing can never go back to being based on compromises.
