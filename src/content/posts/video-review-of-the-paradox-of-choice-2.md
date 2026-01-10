@@ -7,9 +7,9 @@ slug: video-review-of-the-paradox-of-choice-2
 tags:
   - Barry Schwartz
   - General
+  - books
   - Paradox of Choice
   - Philosophy
-  - The Paradox of Choice: Why More Is Less
   - Video
 ---
 [![Cover of ](http://ecx.images-amazon.com/images/I/416TBTCCMWL._SL200_.jpg)](http://www.amazon.com/Paradox-Choice-Why-More-Less/dp/0060005696%3FSubscriptionId%3D0G81C5DAZ03ZR9WH9X82%26tag%3Dopemod-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0060005696)
