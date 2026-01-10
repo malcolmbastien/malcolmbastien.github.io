@@ -1,12 +1,11 @@
 ---
-status: "seed"
+status: seed
 title: A Better Facebook Won't Help You
 publishedDate: 2012-01-12
 updatedDate: 2013-05-26
 slug: a-better-facebook-wont-help-you
 tags:
   - Facebook
-  - michael arrington
   - Path
   - Social
 ---

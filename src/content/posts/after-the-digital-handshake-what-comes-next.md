@@ -20,10 +20,3 @@ If I invite you to my home as a guest, I can't just point you to the kitchen and
 **Is it too easy for companies to get away with gimmicky actions still? ** How much goodwill is there to be gained now compared to in 5 years when companies "buy a coffee" for their customers?
 
 To simply put it (maybe I should have started with this); social media has already radically changed the way businesses communicate with consumers, and there's a lot more change that's going to happen as well, but **what we are just beginning to scratch is how relationships between the businesses and consumers will change** over the coming years. These new ideas of relationships are going to be strategic in nature and depend a lot less on specific tools but more so on **attitude** and **culture**.
-###### Related articles by Zemanta
-
-	[ I Don't Care If You Are On Facebook and Twitter ](http://kylelacy.com/i-dont-care-if-you-are-on-facebook-and-twitter/) (kylelacy.com)
-	[ How To Connect Emotionally with Your Readers ](http://www.johnchow.com/how-to-connect-emotionally-with-your-readers/) (johnchow.com)
-	[ The Business Value of Social Gestures Online ](http://daveduarte.co.za/the-business-value-of-social-gestures-online/2009/04/07/) (daveduarte.co.za)
-
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxid15a48666dfcb49cba0d387448b48fa58_bzrvxhkcbqnnbcf-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxid15a48666dfcb49cba0d387448b48fa58_bzrvxhkcbqnnbcf-scaled500.gif?w=1)

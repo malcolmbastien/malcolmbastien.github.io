@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: A New Way of Combining Communities, and Commerce
 publishedDate: 2009-02-25
 updatedDate: 2009-02-25
@@ -9,10 +9,6 @@ tags:
   - Commerce
   - Creativity
   - General
-  - Human Interaction
-  - Online Communities
-  - Second Life
-  - Virtual world
 ---
 It's a place where people travel to go, and each time they arrive they see an architectural work of beauty. This creation brings people together from a common community as well which creates a very interesting destination that would be very hard to recreate in the real world.  What makes this virtual world project relevant though how it makes absolute sense, but can't be easily replicable anywhere else. [![Locus](http://openmode.ca/wp-content/uploads/2009/02/locus-01-300x196.jpg)](http://blog.secondlife.com/2009/02/06/stories-from-second-life-db-baileys-locus/)
 
