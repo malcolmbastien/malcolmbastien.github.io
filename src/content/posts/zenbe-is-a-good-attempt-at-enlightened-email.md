@@ -1,0 +1,21 @@
+---
+title: Zenbe Is A Good Attempt At Enlightened Email
+publishedDate: 2008-10-03
+updatedDate: 2024-01-08
+slug: zenbe-is-a-good-attempt-at-enlightened-email
+tags:
+  - General
+  - Zenbe
+status: tree
+---
+Zenbe, developed in New York, is an email service in open beta that does an impressive job of taking all the tools people usually get from different web services on the net, and integrating them all together in one nicely put together suite, and at the same time, Zenbe adds some unique and useful features of its own. I've been using Zenbe for two weeks so far, and while the service itself is still has a couple things it needs to fix, what it has managed to do is redefine what I expect a web email service to provide.
+
+The amount of different tools Zenbe manages to bring together is impressive. Through one of two tabbed interfaces, on the main Zenbe panel you'll find: Email, Calendar, Files, and "Zen Pages". Email and Calendar work as you would expect them to, but it's the Files tab that's the first thing you'll notice that Zenbe does differently.  Zenbe will pull from your emails any file attachments it discovers and presents the files to you in a separate file organizer.  You have the ability to tag files, and view them by their file types: Images, documents, spreadsheets, presentations, audio+video, and events. Zen Pages, are custom module based pages that can be created and shared with other users.  Maps, files, [RSS feeds](http://en.wikipedia.org/wiki/RSS), task lists, and other modules can be added to Zen Pages to allow you to organize information, or to collaborate with others.
+
+The two systems, Zen Pages and the Files page integrate well with email and calendar.  For example, a calendar shared with other users through a Zen Page will automatically be integrated and displayed in your private Calendar tab. This is an example of the nice little things which Zenbe is full of, and these little things actually make something like the separation of [Gmail](http://gmail.com) and [Google Calendar](http://google.com/calendar) an inconvenience when going back and trying to use them again afterwards.
+
+The side bar is another example of the melding of services that Zenbe brings together in a way that makes email more functional and simple.  In order, the sidebar includes: Agenda, Address Book, Lists, [Facebook](http://www.facebook.com/), [Twitter](http://www.twitter.com/), [Google Talk](http://www.google.com/talk/). Integrating Facebook, Twitter, and Google Talk is nice to have, but only useful if you use any of those services, and if you really want them as items integrated with your email, as there's no option to hide them from the menu.
+
+There are some issues with Zenbe that need to be solved before most people will be willing to move away from services like Gmail which they've gotten so used to using, one of which is performance.  With Zenbe bringing so much together in one place, it seems to suffer from many more "Loading" pop-ups than I think the average email user will be used to seeing.  Hopefully some optimization will help Zenbe trim down the time it takes to perform tasks like loading emails, or switching back and forth from Email, to Calendar, and to the Files tab.  It also feels like Zenbe's user interface elements still need to mature and fall together. There seems to be useful functionality in almost every corner of Zenbe, but at the same time there's a feeling that the colours, and shapes are sometimes too homogeneous and too blended together, while at other times feeling out of place.
+
+The ability to use calendar and email side by side, then with two clicks transition to viewing files and task lists gives Zenbe a "I'm never going back" feeling when compared to using old email systems.  Bringing together different services in one place and doing it in an organized way, and increasing the user experience around as something as fundamental as email is why Zenbe has the opportunity to be big.  Check it out.

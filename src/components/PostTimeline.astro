@@ -46,7 +46,7 @@ const statusColors = getStatusColors();
 
                         {/* Events for this month */}
                         <div class="month-events space-y-2">
-                            {monthEvents.map((event) => {
+                            {monthEvents.map((event: any) => {
                                 const diffMs =
                                     now.getTime() - event.date.getTime();
                                 const diffDays = Math.floor(
@@ -89,7 +89,7 @@ const statusColors = getStatusColors();
                                         class="timeline-event flex items-start gap-4 p-4 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors relative z-10"
                                         data-status={event.post.data.status}
                                         data-title={event.title.toLowerCase()}
-                                        data-summary={event.post.data.summary.toLowerCase()}
+                                        data-summary={event.post.data.summary?.toLowerCase() || ""}
                                         data-tags={event.post.data.tags
                                             .join(" ")
                                             .toLowerCase()}
@@ -140,7 +140,7 @@ const statusColors = getStatusColors();
                                                 </a>
                                             </h4>
                                             <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
-                                                {event.post.data.summary}
+                                                {event.post.data.summary || ""}
                                             </p>
                                             <div class="flex items-center gap-2 mt-2">
                                                 <span
@@ -149,16 +149,16 @@ const statusColors = getStatusColors();
                                                     {event.post.data.status}
                                                 </span>
                                                 {event.type === "updated" && (
-                                                    <div class="flex items-center gap-1"">
+                                                    <div class="flex items-center gap-1">
                                                         <div class="w-16 h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
                                                             <div
                                                                 class="h-full bg-blue-500 rounded-full"
                                                                 style={`width: ${Math.min(
                                                                     100,
-                                                                    (event.post
+                                                                    ((event.post
                                                                         .data
                                                                         .summary
-                                                                        .length /
+                                                                        ?.length || 0) /
                                                                         200) *
                                                                         100,
                                                                 )}%`}
