@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import ProfileHeader from "../../components/Profile/ProfileHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
 
 export async function getStaticPaths() {
     const allPosts = await getCollection("posts");
@@ -30,7 +32,8 @@ const sortedPosts = filteredPosts.sort(
     description={`All posts tagged with #${tag}`}
     type="website"
 >
-    <main class="max-w-4xl mx-auto p-4 md:p-8">
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
+        <ProfileHeader />
         <nav class="mb-6">
             <a
                 href="/"
@@ -53,7 +56,9 @@ const sortedPosts = filteredPosts.sort(
         </nav>
 
         <div class="mb-6">
-            <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2">
+            <h1
+                class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2"
+            >
                 #{tag}
             </h1>
             <p class="text-slate-600 dark:text-slate-400">
@@ -61,55 +66,58 @@ const sortedPosts = filteredPosts.sort(
             </p>
         </div>
 
-        {sortedPosts.length === 0 ? (
-            <div class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-8 text-center">
-                <p class="text-slate-600 dark:text-slate-400">
-                    No posts found with this tag.
-                </p>
-            </div>
-        ) : (
-            <div class="space-y-4">
-                {sortedPosts.map((post) => (
-                    <a
-                        href={`/posts/${post.slug}`}
-                        class="block bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-5 hover:border-emerald-500 dark:hover:border-emerald-500 transition-colors group"
-                    >
-                        <div class="flex items-center gap-2 mb-2">
-                            <span
-                                class={`px-2 py-0.5 rounded text-xs font-medium ${
-                                    post.data.status === "seed"
-                                        ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
-                                        : post.data.status === "sprout"
-                                          ? "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400"
-                                          : "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400"
-                                }`}
-                            >
-                                {post.data.status}
-                            </span>
-                            {post.data.publishedDate && (
-                                <time class="text-sm text-slate-500 dark:text-slate-400">
-                                    {post.data.publishedDate.toLocaleDateString(
-                                        "en-US",
-                                        {
-                                            year: "numeric",
-                                            month: "short",
-                                            day: "numeric",
-                                        },
-                                    )}
-                                </time>
+        {
+            sortedPosts.length === 0 ? (
+                <div class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-8 text-center">
+                    <p class="text-slate-600 dark:text-slate-400">
+                        No posts found with this tag.
+                    </p>
+                </div>
+            ) : (
+                <div class="space-y-4">
+                    {sortedPosts.map((post) => (
+                        <a
+                            href={`/posts/${post.slug}`}
+                            class="block bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-5 hover:border-emerald-500 dark:hover:border-emerald-500 transition-colors group"
+                        >
+                            <div class="flex items-center gap-2 mb-2">
+                                <span
+                                    class={`px-2 py-0.5 rounded text-xs font-medium ${
+                                        post.data.status === "seed"
+                                            ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
+                                            : post.data.status === "sprout"
+                                              ? "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400"
+                                              : "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400"
+                                    }`}
+                                >
+                                    {post.data.status}
+                                </span>
+                                {post.data.publishedDate && (
+                                    <time class="text-sm text-slate-500 dark:text-slate-400">
+                                        {post.data.publishedDate.toLocaleDateString(
+                                            "en-US",
+                                            {
+                                                year: "numeric",
+                                                month: "short",
+                                                day: "numeric",
+                                            },
+                                        )}
+                                    </time>
+                                )}
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                                {post.data.title}
+                            </h2>
+                            {post.data.summary && (
+                                <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
+                                    {post.data.summary}
+                                </p>
                             )}
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                            {post.data.title}
-                        </h2>
-                        {post.data.summary && (
-                            <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
-                                {post.data.summary}
-                            </p>
-                        )}
-                    </a>
-                ))}
-            </div>
-        )}
+                        </a>
+                    ))}
+                </div>
+            )
+        }
+        <SiteFooter />
     </main>
 </Layout>

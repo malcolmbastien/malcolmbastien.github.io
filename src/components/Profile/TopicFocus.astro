@@ -11,9 +11,9 @@ allPosts.forEach((post) => {
     });
 });
 
-// Get top 12 tags sorted alphabetically
+// Get top 12 tags by count
 const topTags = Object.entries(tagCounts)
-    .sort(([a], [b]) => a.localeCompare(b))
+    .sort(([, a], [, b]) => b - a)
     .slice(0, 12);
 ---
 
