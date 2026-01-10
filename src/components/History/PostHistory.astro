@@ -95,9 +95,15 @@ function getEvolutionIcon(commit: any, index: number, total: number) {
                                             </span>
                                         )}
                                 </div>
-                                <code class="text-[9px] text-slate-300 dark:text-slate-700 uppercase tracking-widest">
+                                <a
+                                    href={`https://github.com/malcolmbastien/malcolmbastien.github.io/commit/${commit.hash}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-[9px] text-slate-300 dark:text-slate-700 uppercase tracking-widest hover:text-slate-400 dark:hover:text-slate-500 transition-colors underline decoration-1 underline-offset-2"
+                                    title="View this commit on GitHub"
+                                >
                                     {commit.hash.substring(0, 7)}
-                                </code>
+                                </a>
                             </div>
                         </div>
                     </li>
