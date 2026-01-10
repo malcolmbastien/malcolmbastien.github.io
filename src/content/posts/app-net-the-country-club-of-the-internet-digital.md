@@ -1,6 +1,6 @@
 ---
 status: "seed"
-title: App.net: The Country Club of the Internet? // Digital Local
+title: "App.net: The Country Club of the Internet?"
 publishedDate: 2012-08-15
 updatedDate: 2013-05-26
 slug: app-net-the-country-club-of-the-internet-digital

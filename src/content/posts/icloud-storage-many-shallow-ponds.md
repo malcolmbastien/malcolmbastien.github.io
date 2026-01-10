@@ -1,6 +1,6 @@
 ---
 status: "seed"
-title: iCloud Storage: Many Shallow Ponds
+title: "iCloud Storage: Many Shallow Ponds"
 publishedDate: 2012-08-13
 updatedDate: 2013-05-26
 slug: icloud-storage-many-shallow-ponds

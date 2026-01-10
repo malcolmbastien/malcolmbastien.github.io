@@ -1,6 +1,6 @@
 ---
 status: "seed"
-title: Coffee Hop: March 20, 2011
+title: "Coffee Hop: March 20, 2011"
 publishedDate: 2011-03-20
 updatedDate: 2011-08-14
 slug: coffee-hop-march-20-2011-2

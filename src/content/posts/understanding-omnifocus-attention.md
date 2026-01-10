@@ -1,6 +1,6 @@
 ---
 status: "seed"
-title: Understanding OmniFocus: Attention
+title: "Understanding OmniFocus: Attention"
 publishedDate: 2012-07-12
 updatedDate: 2013-05-26
 slug: understanding-omnifocus-attention

@@ -1,6 +1,6 @@
 ---
 status: "seed"
-title: Miroverse Template: Squad Health Check
+title: "Miroverse Template: Squad Health Check"
 publishedDate: 2023-05-11
 updatedDate: 2024-01-12
 slug: miroverse-template-squad-health-check

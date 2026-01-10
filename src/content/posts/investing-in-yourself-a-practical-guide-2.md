@@ -1,6 +1,6 @@
 ---
 status: "seed"
-title: Investing In Yourself: A Practical Guide
+title: "Investing In Yourself: A Practical Guide"
 publishedDate: 2009-02-19
 updatedDate: 2024-01-08
 slug: investing-in-yourself-a-practical-guide-2

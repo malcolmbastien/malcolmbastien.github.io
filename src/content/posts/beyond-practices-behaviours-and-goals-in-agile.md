@@ -1,6 +1,6 @@
 ---
 status: "seed"
-title: Beyond Practices: Behaviours and Goals in Agile
+title: "Beyond Practices: Behaviours and Goals in Agile"
 publishedDate: 2024-09-30
 updatedDate: 2024-10-05
 slug: beyond-practices-behaviours-and-goals-in-agile

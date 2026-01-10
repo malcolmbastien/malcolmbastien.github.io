@@ -1,6 +1,6 @@
 ---
 status: "seed"
-title: Blogging: The Long Term Relationship
+title: "Blogging: The Long Term Relationship"
 publishedDate: 2009-02-12
 updatedDate: 2009-02-12
 slug: blogging-the-long-term-relationship-2
