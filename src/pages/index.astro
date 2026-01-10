@@ -82,12 +82,12 @@ const sortedEvents = aggregatedEvents.sort(
 );
 
 // Generate all months from earliest event to now
-const earliestDate = sortedEvents.length > 0
-    ? sortedEvents[sortedEvents.length - 1]?.date || new Date()
-    : new Date();
-const latestDate = sortedEvents.length > 0
-    ? sortedEvents[0]?.date || new Date()
-    : new Date();
+const earliestDate =
+    sortedEvents.length > 0
+        ? sortedEvents[sortedEvents.length - 1]?.date || new Date()
+        : new Date();
+const latestDate =
+    sortedEvents.length > 0 ? sortedEvents[0]?.date || new Date() : new Date();
 
 const allMonths: Array<{
     key: string;
@@ -169,8 +169,15 @@ const currentYear = new Date().getFullYear();
         <div class="flex gap-8">
             <!-- Left Column: Activity Heatmap and Timeline -->
             <div class="flex-1 space-y-6">
-                <ActivityHeatmap year={currentYear} events={sortedEvents as any} />
-                <PostTimeline sortedEvents={sortedEvents} allMonths={allMonths} eventsByMonthKey={eventsByMonthKey} />
+                <ActivityHeatmap
+                    year={currentYear}
+                    events={sortedEvents as any}
+                />
+                <PostTimeline
+                    sortedEvents={sortedEvents}
+                    allMonths={allMonths}
+                    eventsByMonthKey={eventsByMonthKey}
+                />
             </div>
 
             <!-- Right Column: Search, Filters, and Years Navigation -->
@@ -203,22 +210,6 @@ const currentYear = new Date().getFullYear();
                     </div>
                 </div>
 
-                <!-- Tag/Event Type Filters -->
-                <div
-                    class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-6"
-                >
-                    <div class="flex flex-wrap gap-2" id="event-type-filters">
-                        <button
-                            class="tag-btn px-3 py-1.5 rounded-full text-xs font-medium"
-                            data-event-type="created">🌱 Created</button
-                        >
-                        <button
-                            class="tag-btn px-3 py-1.5 rounded-full text-xs font-medium"
-                            data-event-type="updated">✏️ Updated</button
-                        >
-                    </div>
-                </div>
-
                 <!-- Years Navigation -->
                 <YearNavigation sortedYears={sortedYears as any} />
             </div>
@@ -228,11 +219,11 @@ const currentYear = new Date().getFullYear();
 </Layout>
 
 <script>
-declare global {
-    interface Window {
-        updateHeatmapYear?: (year: number) => void;
+    declare global {
+        interface Window {
+            updateHeatmapYear?: (year: number) => void;
+        }
     }
-}
 
     const buttons = document.querySelectorAll("[data-status]");
     const tagButtons = document.querySelectorAll("[data-tag]");
@@ -249,7 +240,7 @@ declare global {
     let currentYear = "all";
     let searchQuery = "";
     let currentDateFilter: string | null = null;
- 
+
     function updateDisplay() {
         let visibleCount = 0;
 
@@ -401,7 +392,6 @@ declare global {
         button.addEventListener("click", () => {
             const monthData = (button as HTMLElement).dataset.month || "";
             const [year, month] = monthData.split("-");
-
         });
     });
 
