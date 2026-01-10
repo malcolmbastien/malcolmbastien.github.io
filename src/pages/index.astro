@@ -24,7 +24,7 @@ const postsWithDates = await Promise.all(
 );
 
 // Create timeline events
-const events = [];
+const events: any[] = [];
 postsWithDates.forEach((post) => {
     // Add creation event
     events.push({
@@ -49,8 +49,8 @@ postsWithDates.forEach((post) => {
     }
 });
 
-// Aggregate events: group multiple updates to the same post within short time
-const aggregatedEvents = [];
+// Aggregate events: group multiple updates to same post within short time
+const aggregatedEvents: any[] = [];
 const eventGroups = new Map();
 
 events.forEach((event) => {
@@ -80,6 +80,57 @@ eventGroups.forEach((group) => {
 const sortedEvents = aggregatedEvents.sort(
     (a, b) => b.date.valueOf() - a.date.valueOf(),
 );
+
+// Generate all months from earliest event to now
+const earliestDate = sortedEvents.length > 0
+    ? sortedEvents[sortedEvents.length - 1]?.date || new Date()
+    : new Date();
+const latestDate = sortedEvents.length > 0
+    ? sortedEvents[0]?.date || new Date()
+    : new Date();
+
+const allMonths: Array<{
+    key: string;
+    date: Date;
+    hasActivity: boolean;
+}> = [];
+
+const currentDate = new Date();
+currentDate.setDate(1); // Start from first day of current month
+currentDate.setHours(0, 0, 0, 0);
+
+const endDate = new Date(earliestDate);
+endDate.setDate(1);
+endDate.setHours(0, 0, 0, 0);
+
+// Group events by month for quick lookup
+const eventsByMonthKey = new Map<string, any[]>();
+sortedEvents.forEach((event) => {
+    const monthKey = event.date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+    });
+    if (!eventsByMonthKey.has(monthKey)) {
+        eventsByMonthKey.set(monthKey, []);
+    }
+    eventsByMonthKey.get(monthKey)?.push(event);
+});
+
+// Generate all months from current to earliest
+while (currentDate >= endDate) {
+    const monthKey = currentDate.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+    });
+    allMonths.push({
+        key: monthKey,
+        date: new Date(currentDate),
+        hasActivity: eventsByMonthKey.has(monthKey),
+    });
+
+    // Move to previous month
+    currentDate.setMonth(currentDate.getMonth() - 1);
+}
 
 // Collect years data for sidebar
 const yearsData = new Map();
@@ -118,8 +169,8 @@ const currentYear = new Date().getFullYear();
         <div class="flex gap-8">
             <!-- Left Column: Activity Heatmap and Timeline -->
             <div class="flex-1 space-y-6">
-                <ActivityHeatmap year={currentYear} />
-                <PostTimeline sortedEvents={sortedEvents} />
+                <ActivityHeatmap year={currentYear} events={sortedEvents as any} />
+                <PostTimeline sortedEvents={sortedEvents} allMonths={allMonths} eventsByMonthKey={eventsByMonthKey} />
             </div>
 
             <!-- Right Column: Search, Filters, and Years Navigation -->
@@ -177,6 +228,12 @@ const currentYear = new Date().getFullYear();
 </Layout>
 
 <script>
+declare global {
+    interface Window {
+        updateHeatmapYear?: (year: number) => void;
+    }
+}
+
     const buttons = document.querySelectorAll("[data-status]");
     const tagButtons = document.querySelectorAll("[data-tag]");
     const eventTypeButtons = document.querySelectorAll("[data-event-type]");
@@ -192,11 +249,14 @@ const currentYear = new Date().getFullYear();
     let currentYear = "all";
     let searchQuery = "";
     let currentDateFilter: string | null = null;
-
+ 
     function updateDisplay() {
         let visibleCount = 0;
 
-        timelineEvents.forEach((event) => {
+        // Re-query to include dynamically added events
+        const allTimelineEvents = document.querySelectorAll(".timeline-event");
+
+        allTimelineEvents.forEach((event) => {
             const htmlEvent = event as HTMLElement;
             const status = htmlEvent.dataset.status;
             const title = htmlEvent.dataset.title || "";
@@ -328,15 +388,9 @@ const currentYear = new Date().getFullYear();
                     monthSubmenu.classList.remove("hidden");
                 }
 
-                // Scroll to first event of this year
-                const firstEventOfYear = document.querySelector(
-                    `[data-created^="${year}"]`,
-                );
-                if (firstEventOfYear) {
-                    firstEventOfYear.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
+                // Update activity heatmap to show selected year
+                if (window.updateHeatmapYear) {
+                    window.updateHeatmapYear(parseInt(year));
                 }
             }
             updateDisplay();
@@ -348,29 +402,6 @@ const currentYear = new Date().getFullYear();
             const monthData = (button as HTMLElement).dataset.month || "";
             const [year, month] = monthData.split("-");
 
-            // Scroll to first event of this month
-            const monthDividers =
-                document.querySelectorAll(".month-divider h3");
-            for (const divider of monthDividers) {
-                const dividerText = divider.textContent || "";
-                if (
-                    dividerText.includes(
-                        new Date(
-                            parseInt(year),
-                            parseInt(month),
-                        ).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                        }),
-                    )
-                ) {
-                    divider.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
-                    break;
-                }
-            }
         });
     });
 
@@ -382,6 +413,11 @@ const currentYear = new Date().getFullYear();
     // Listen for date filter changes from activity heatmap
     window.addEventListener("dateFilterChange", (e: any) => {
         currentDateFilter = e.detail.date;
+        updateDisplay();
+    });
+
+    // Listen for display updates when new months are revealed
+    window.addEventListener("updateDisplayNeeded", () => {
         updateDisplay();
     });
 
@@ -400,4 +436,23 @@ const currentYear = new Date().getFullYear();
         event.addEventListener("focus", (e) => e.stopPropagation(), true);
         event.addEventListener("blur", (e) => e.stopPropagation(), true);
     });
+
+    // Check URL params for initial tag filter
+    const urlParams = new URLSearchParams(window.location.search);
+    const tagParam = urlParams.get("tag");
+    if (tagParam) {
+        currentTag = tagParam;
+        // Find and activate tag button
+        const targetTagBtn = Array.from(tagButtons).find(
+            (btn) => (btn as HTMLElement).dataset.tag === tagParam,
+        );
+        if (targetTagBtn) {
+            targetTagBtn.classList.add("active");
+            tagButtons.forEach((btn) => {
+                if (btn !== targetTagBtn) btn.classList.remove("active");
+            });
+        }
+        // Update display to filter by tag
+        updateDisplay();
+    }
 </script>

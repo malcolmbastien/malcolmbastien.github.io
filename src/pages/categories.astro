@@ -1,0 +1,91 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+const allPosts = await getCollection("posts");
+
+const tagCounts: Record<string, number> = {};
+allPosts.forEach((post) => {
+    post.data.tags.forEach((tag) => {
+        tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+    });
+});
+
+const sortedTags = Object.entries(tagCounts).sort((a, b) => a[0].localeCompare(b[0]));
+---
+
+<Layout
+    title="All Categories - Sprout"
+    description="Browse all categories and tags in the digital garden"
+    type="website"
+>
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
+        <nav class="mb-6">
+            <a
+                href="/"
+                class="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 font-medium transition-colors"
+            >
+                <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back to Garden
+            </a>
+        </nav>
+
+        <div class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-6 md:p-8">
+            <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2">
+                All Categories
+            </h1>
+            <p class="text-slate-600 dark:text-slate-400 mb-6">
+                Explore {sortedTags.length} topics across the garden
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                {sortedTags.map(([tag, count]) => (
+                    <a
+                        href={`/tags/${tag}`}
+                        class="tag-btn flex items-center justify-between rounded-lg px-3 py-2 transition-all hover:scale-105"
+                    >
+                        <span class="text-sm font-medium capitalize">#{tag}</span>
+                        <span class="text-sm font-bold bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full">
+                            {count}
+                        </span>
+                    </a>
+                ))}
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style is:global>
+    .tag-btn {
+        background-color: rgb(241 245 249);
+        border: 1px solid rgb(226 232 240);
+        color: rgb(15 23 42);
+        text-decoration: none;
+    }
+    .tag-btn:hover {
+        background-color: rgb(248 250 252);
+        border-color: rgb(15 23 42);
+        color: rgb(15 23 42);
+    }
+    .dark .tag-btn {
+        background-color: transparent;
+        border-color: rgb(71 85 105);
+        color: rgb(203 213 225);
+    }
+    .dark .tag-btn:hover {
+        background-color: rgb(51 65 85);
+        border-color: rgb(203 213 225);
+        color: rgb(203 213 225);
+    }
+</style>

@@ -1,21 +1,22 @@
 ---
 interface Props {
     year: number;
+    events: Array<{
+        type: string;
+        post: any;
+        date: Date;
+        title: string;
+        count?: number;
+    }>;
 }
 
-const { year } = Astro.props;
+const { year, events } = Astro.props;
 
-import { getPostsCommits } from "../../lib/git-history";
-
-const commits = await getPostsCommits();
-const commitDates = commits.map(
-    (c) => new Date(c.date).toISOString().split("T")[0],
-);
-
-// Count commits per day
+// Count activity per day from events (using displayDate which is publishedDate or git date)
 const activityMap: Record<string, number> = {};
-commitDates.forEach((date) => {
-    activityMap[date] = (activityMap[date] || 0) + 1;
+events.forEach((event) => {
+    const dateStr = event.date.toISOString().split("T")[0];
+    activityMap[dateStr] = (activityMap[dateStr] || 0) + 1;
 });
 
 interface DayData {
@@ -67,14 +68,38 @@ function getColor(count: number) {
     if (count >= 3) return "fill-emerald-600 dark:fill-emerald-500";
     return "fill-slate-100 dark:fill-[#1a241a]";
 }
+
+function getFillColor(count: number, isDarkMode: boolean) {
+    // Light mode colors (based on getColor)
+    if (!isDarkMode) {
+        if (count === 0) return '#f1f5f9';  // slate-100
+        if (count === 1) return '#a7f3d0';  // emerald-200
+        if (count === 2) return '#34d399';  // emerald-400
+        if (count >= 3) return '#059669';  // emerald-600
+        return '#f1f5f9';
+    }
+    // Dark mode colors
+    if (count === 0) return '#1a241a';
+    if (count === 1) return '#064e3b66';  // emerald-900/40
+    if (count === 2) return '#15803d';  // emerald-700
+    if (count >= 3) return '#10b981';  // emerald-500
+    return '#1a241a';
+}
+
+// Keep the original getColor function for static rendering
 ---
 
 <div
     class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-2"
 >
-    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4">
-        Activity
-    </h3>
+    <div class="flex items-center justify-between mb-4">
+        <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100">
+            Activity
+        </h3>
+        <span id="heatmap-year-display" class="text-sm font-bold text-emerald-600 dark:text-emerald-400">
+            {year}
+        </span>
+    </div>
     <div class="overflow-x-auto">
         <svg
             width="720"
@@ -136,27 +161,60 @@ function getColor(count: number) {
         <span>More</span>
     </div>
 
-    <script define:vars={{ commits, year }}>
+    <script define:vars={{ events, year }}>
         // Store the currently selected date and year
         let selectedDate = null;
         let currentYear = year;
+
+        // Define getFillColor for use in updateHeatmapYear
+        function getFillColor(count, isDarkMode) {
+            if (!isDarkMode) {
+                if (count === 0) return '#f1f5f9';
+                if (count === 1) return '#a7f3d0';
+                if (count === 2) return '#34d399';
+                if (count >= 3) return '#059669';
+                return '#f1f5f9';
+            }
+            if (count === 0) return '#1a241a';
+            if (count === 1) return '#064e3b66';
+            if (count === 2) return '#15803d';
+            if (count >= 3) return '#10b981';
+            return '#1a241a';
+        }
 
         // Function to update heatmap for a specific year
         window.updateHeatmapYear = function (newYear) {
             if (currentYear === newYear) return;
             currentYear = newYear;
 
-            // Generate new data for the year
+            // Update year display
+            const yearDisplay = document.getElementById('heatmap-year-display');
+            if (yearDisplay) {
+                yearDisplay.textContent = String(newYear);
+            }
+
+            // Clear selected date when changing years
+            selectedDate = null;
+            const event = new CustomEvent("dateFilterChange", {
+                detail: { date: null },
+            });
+            window.dispatchEvent(event);
+
+            // Generate new data for year
             const activityMap = {};
-            commits.forEach((c) => {
-                const commitYear = new Date(c.date).getFullYear();
-                if (commitYear === newYear) {
-                    const dateStr = new Date(c.date).toISOString().split("T")[0];
+            events.forEach((event) => {
+                // event.date is serialized as string, convert back to Date
+                const eventDate = new Date(event.date);
+                const eventYear = eventDate.getFullYear();
+                if (eventYear === newYear) {
+                    const dateStr = eventDate.toISOString().split("T")[0];
                     activityMap[dateStr] = (activityMap[dateStr] || 0) + 1;
                 }
             });
 
-            // Generate all days for the year
+            console.log('Year:', newYear, 'events filtered:', Object.keys(activityMap).length, 'activityMap keys:', Object.keys(activityMap));
+
+            // Generate all days for year - match format from commits
             const days = [];
             const startDate = new Date(newYear, 0, 1);
             const endDate = new Date(newYear, 11, 31);
@@ -169,22 +227,25 @@ function getColor(count: number) {
                 });
             }
 
-            // Update SVG
+            // Update SVG - rebuild everything for new year
             const svg = document.querySelector('.activity-heatmap-svg');
             if (!svg) return;
 
-            // Clear existing content
-            svg.innerHTML = '';
+            // Clear SVG content completely
+            while (svg.firstChild) {
+                svg.removeChild(svg.firstChild);
+            }
 
-            // Add month labels
+            // Rebuild month labels
             const monthLabels = [];
             let lastMonth = "";
+            const isDarkMode = document.documentElement.classList.contains('dark');
+
             for (let i = 0; i < days.length; i++) {
                 const d = new Date(days[i].date);
                 const monthKey = d.toLocaleDateString("en-US", { month: "short" });
                 if (monthKey !== lastMonth) {
                     const weekIndex = Math.floor(i / 7);
-                    // Only include months that are actually in this year and not too close to end
                     if (d.getFullYear() === newYear && weekIndex < 50) {
                         monthLabels.push({
                             name: monthKey,
@@ -201,19 +262,25 @@ function getColor(count: number) {
                 text.setAttribute('x', String(label.weekIndex * 12 + 6));
                 text.setAttribute('y', '10');
                 text.setAttribute('text-anchor', 'middle');
-                text.className = 'fill-slate-500 dark:fill-slate-400 text-[10px] font-medium';
+                text.setAttribute('fill', isDarkMode ? '#94a3b8' : '#64748b');
+                text.setAttribute('font-size', '10px');
+                text.setAttribute('font-weight', '500');
                 text.textContent = label.name;
                 svg.appendChild(text);
             });
 
-            // Add day rectangles
+            // Rebuild day rectangles
             const numWeeks = Math.ceil(days.length / 7);
+
             for (let weekIndex = 0; weekIndex < numWeeks; weekIndex++) {
                 const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
                 g.setAttribute('transform', `translate(${weekIndex * 12}, 18)`);
 
                 for (let dayIndex = 0; dayIndex < 7; dayIndex++) {
-                    const dayData = days[weekIndex * 7 + dayIndex];
+                    const dataIndex = weekIndex * 7 + dayIndex;
+                    if (dataIndex >= days.length) break;
+
+                    const dayData = days[dataIndex];
                     if (!dayData) continue;
 
                     const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
@@ -225,11 +292,12 @@ function getColor(count: number) {
                     rect.setAttribute('data-date', dayData.date);
                     rect.setAttribute('data-count', String(dayData.count));
 
-                    const colorClass = getColor(dayData.count);
-                    rect.className = `${colorClass} transition-colors duration-300 hover:stroke-slate-400 dark:hover:stroke-slate-500 hover:stroke-1 ${dayData.count > 0 ? "cursor-pointer" : ""} activity-day`;
+                    const fillColor = getFillColor(dayData.count, isDarkMode);
+                    rect.setAttribute('fill', fillColor);
+                    rect.setAttribute('class', `activity-day ${dayData.count > 0 ? "cursor-pointer" : ""}`);
 
                     if (dayData.count > 0) {
-                        rect.onclick = () => filterByDate(dayData.date);
+                        rect.onclick = function() { filterByDate(dayData.date); };
                     }
 
                     g.appendChild(rect);
@@ -286,11 +354,8 @@ function getColor(count: number) {
         const style = document.createElement("style");
         style.textContent = `
 			.activity-day.selected {
-				stroke: #2563eb !important;
+				stroke: #10b981 !important;
 				stroke-width: 2px !important;
-			}
-			.dark .activity-day.selected {
-				stroke: #3b82f6 !important;
 			}
 		`;
         document.head.appendChild(style);
