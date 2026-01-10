@@ -5,7 +5,6 @@ publishedDate: 2012-01-02
 updatedDate: 2012-01-02
 slug: 2011-accomplishments
 tags:
-  - 2011
   - General
   - new years
 ---
