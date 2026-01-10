@@ -1,6 +1,6 @@
 ---
 status: "seed"
-title: 9 Golden Rules for Agile Teams: Principles to Improve Collaboration
+title: "9 Golden Rules for Agile Teams: Principles to Improve Collaboration"
 publishedDate: 2024-08-09
 updatedDate: 2024-09-06
 slug: 9-golden-rules-for-agile-teams-principles-to-improve-collaboration
