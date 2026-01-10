@@ -1,6 +1,6 @@
 ---
 status: "seed"
-title: #Drumbeat and Project Orange
+title: Drumbeat and Project Orange
 publishedDate: 2010-04-22
 updatedDate: 2010-04-22
 slug: drumbeat-and-project-orange

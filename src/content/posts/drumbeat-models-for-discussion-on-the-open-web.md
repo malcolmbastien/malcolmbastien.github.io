@@ -1,6 +1,6 @@
 ---
 status: "seed"
-title: #Drumbeat Models for Discussion on the Open Web
+title: Drumbeat Models for Discussion on the Open Web
 publishedDate: 2010-04-19
 updatedDate: 2010-04-19
 slug: drumbeat-models-for-discussion-on-the-open-web
