@@ -3,17 +3,29 @@
 <div id="search" class="w-full"></div>
 
 <script is:inline>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    // @ts-ignore
-    new PagefindUI({ 
-        element: "#search", 
-        showSubResults: true,
-        resetFilters: true,
-        translations: {
-            placeholder: "Search the garden..."
+  function initSearch() {
+    if (typeof PagefindUI !== 'undefined') {
+        new PagefindUI({ 
+            element: "#search", 
+            showSubResults: true,
+            resetFilters: true,
+            translations: {
+                placeholder: "Search the garden..."
+            }
+        });
+    } else {
+        const searchContainer = document.querySelector("#search");
+        if (searchContainer) {
+            searchContainer.innerHTML = `
+                <div class="text-xs text-slate-500 p-2 text-center border border-dashed border-slate-200 dark:border-slate-800 rounded-lg">
+                    Search available after build
+                </div>
+            `;
         }
-    });
-  });
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', initSearch);
 </script>
 
 <style is:global>

@@ -195,25 +195,6 @@ const hiddenMonths = allMonths.slice(startIndex);
                                                 >
                                                     {timeAgo}
                                                 </time>
-                                                {event.type === "updated" && (
-                                                    <div class="flex items-center gap-1">
-                                                        <div class="w-16 h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                                                            <div
-                                                                class="h-full bg-blue-500 rounded-full"
-                                                                style={`width: ${Math.min(
-                                                                    100,
-                                                                    ((event.post
-                                                                        .data
-                                                                        .summary
-                                                                        ?.length ||
-                                                                        0) /
-                                                                        200) *
-                                                                        100,
-                                                                )}%`}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                )}
                                             </div>
                                         </div>
                                     );
