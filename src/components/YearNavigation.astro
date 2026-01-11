@@ -50,7 +50,11 @@ const { sortedYears } = Astro.props;
                             {yearData.months.map((month) => (
                                 <button
                                     class="month-btn w-full text-left px-3 py-1 rounded text-xs text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
-                                    data-month={`${yearData.year}-${month}`}
+                                    data-month={new Date(yearData.year, month).toLocaleDateString("en-US", {
+                                        year: "numeric",
+                                        month: "long",
+                                    })}
+                                    data-year={yearData.year}
                                 >
                                     {new Date(
                                         yearData.year,

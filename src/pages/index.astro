@@ -158,7 +158,7 @@ const sortedYears = yearsArray.map(([year, data]) => ({
 }));
 
 // Default to current year for heatmap
-const currentYear = new Date().getFullYear();
+const currentYearValue = new Date().getFullYear();
 ---
 
 <Layout
@@ -173,7 +173,7 @@ const currentYear = new Date().getFullYear();
             <!-- Left Column: Activity Heatmap and Timeline -->
             <div class="flex-1 space-y-6">
                 <ActivityHeatmap
-                    year={currentYear}
+                    year={currentYearValue}
                     events={sortedEvents as any}
                 />
                 <PostTimeline
@@ -342,8 +342,9 @@ const currentYear = new Date().getFullYear();
         });
     });
 
-    // Year navigation
+    // Year and Month navigation
     const yearButtons = document.querySelectorAll(".year-btn");
+    const monthButtons = document.querySelectorAll(".month-btn");
 
     yearButtons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -372,8 +373,33 @@ const currentYear = new Date().getFullYear();
                 if (window.updateHeatmapYear) {
                     window.updateHeatmapYear(parseInt(year));
                 }
+
+                // Scroll to top of Activity Heatmap when a NEW year is selected
+                const heatmap = document.getElementById("activity-heatmap");
+                if (heatmap) {
+                    heatmap.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
             }
             updateDisplay();
+        });
+    });
+
+    monthButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const monthKey = (button as HTMLElement).dataset.month || "";
+            const year = (button as HTMLElement).dataset.year || "all";
+            
+            if (currentYear !== year) {
+                const yearBtn = document.querySelector(`.year-btn[data-year="${year}"]`);
+                if (yearBtn) (yearBtn as HTMLElement).click();
+            }
+            
+            const monthSection = document.querySelector(`.month-section[data-month="${monthKey}"]`);
+            if (monthSection) {
+                setTimeout(() => {
+                    monthSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 50);
+            }
         });
     });
 
