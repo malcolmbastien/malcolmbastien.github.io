@@ -169,6 +169,15 @@ const currentYearValue = new Date().getFullYear();
     <main class="max-w-7xl mx-auto p-4 md:p-8">
         <ProfileHeader />
 
+        <!-- Wide Search Bar - Centered above content for better usability -->
+        <div class="max-w-2xl mx-auto w-full mb-10">
+            <div
+                class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm p-1.5 px-4 focus-within:ring-2 focus-within:ring-emerald-500/20 focus-within:border-emerald-500 transition-all"
+            >
+                <Search />
+            </div>
+        </div>
+
         <div class="flex flex-col lg:flex-row gap-8">
             <!-- Left Column: Activity Heatmap and Timeline -->
             <div class="flex-1 min-w-0 space-y-6">
@@ -183,22 +192,38 @@ const currentYearValue = new Date().getFullYear();
                 />
             </div>
 
-            <!-- Right Column: Search, Filters, and Years Navigation -->
-            <div class="w-full lg:w-64 shrink-0 lg:sticky lg:top-8 h-fit z-30">
-                <!-- Search Garden -->
-                <div
-                    class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-6"
-                >
-                    <Search />
-                </div>
-
-                <!-- Years Navigation -->
+            <!-- Right Column: Years Navigation (Scrollable if long) -->
+            <div
+                class="w-full lg:w-64 shrink-0 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto custom-sidebar-scroll z-30 pb-10"
+            >
                 <YearNavigation sortedYears={sortedYears as any} />
             </div>
         </div>
         <SiteFooter />
     </main>
 </Layout>
+
+<style is:global>
+    @reference "../styles/global.css";
+
+    /* Styling for the scrollable sidebar */
+    .custom-sidebar-scroll {
+        scrollbar-width: thin;
+        scrollbar-color: #e2e8f0 transparent;
+    }
+    .dark .custom-sidebar-scroll {
+        scrollbar-color: #1e293b transparent;
+    }
+    .custom-sidebar-scroll::-webkit-scrollbar {
+        width: 4px;
+    }
+    .custom-sidebar-scroll::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .custom-sidebar-scroll::-webkit-scrollbar-thumb {
+        @apply bg-slate-200 dark:bg-slate-800 rounded-full;
+    }
+</style>
 
 <script>
     declare global {
@@ -246,12 +271,11 @@ const currentYearValue = new Date().getFullYear();
                 title.includes(searchQuery) ||
                 summary.includes(searchQuery) ||
                 tags.includes(searchQuery);
-            
+
             // If filtering by a specific date from the heatmap
-            const eventDate = htmlEvent.dataset.created || ""; 
+            const eventDate = htmlEvent.dataset.created || "";
             const matchesDate =
-                currentDateFilter === null ||
-                eventDate === currentDateFilter;
+                currentDateFilter === null || eventDate === currentDateFilter;
 
             if (
                 matchesFilter &&
@@ -271,9 +295,13 @@ const currentYearValue = new Date().getFullYear();
         // Show/hide month sections based on their visible events
         document.querySelectorAll(".month-section").forEach((section) => {
             const htmlSection = section as HTMLElement;
-            const eventsInSection = Array.from(htmlSection.querySelectorAll(".timeline-event"));
-            const hasVisibleEvent = eventsInSection.some(e => (e as HTMLElement).style.display !== "none");
-            
+            const eventsInSection = Array.from(
+                htmlSection.querySelectorAll(".timeline-event"),
+            );
+            const hasVisibleEvent = eventsInSection.some(
+                (e) => (e as HTMLElement).style.display !== "none",
+            );
+
             if (hasVisibleEvent) {
                 htmlSection.style.display = "block";
             } else {
@@ -284,9 +312,18 @@ const currentYearValue = new Date().getFullYear();
         // Ensure containers are not blocking visibility if they contain visible things
         const hiddenMonthsContainer = document.getElementById("hidden-months");
         if (hiddenMonthsContainer) {
-            if (currentFilter !== "all" || currentTag !== "" || currentEventType !== "all" || currentYear !== "all" || searchQuery !== "" || currentDateFilter !== null) {
+            if (
+                currentFilter !== "all" ||
+                currentTag !== "" ||
+                currentEventType !== "all" ||
+                currentYear !== "all" ||
+                searchQuery !== "" ||
+                currentDateFilter !== null
+            ) {
                 hiddenMonthsContainer.classList.remove("hidden");
-                const showMoreButton = document.getElementById("show-more-activity");
+                const showMoreButton = document.getElementById(
+                    "show-more-activity",
+                );
                 if (showMoreButton) showMoreButton.style.display = "none";
             }
         }
@@ -329,12 +366,15 @@ const currentYearValue = new Date().getFullYear();
 
     eventTypeButtons.forEach((button) => {
         button.addEventListener("click", () => {
-            const eventType = (button as HTMLElement).dataset.eventType || "all";
+            const eventType =
+                (button as HTMLElement).dataset.eventType || "all";
             if (currentEventType === eventType) {
                 button.classList.remove("active");
                 currentEventType = "all";
             } else {
-                eventTypeButtons.forEach((btn) => btn.classList.remove("active"));
+                eventTypeButtons.forEach((btn) =>
+                    btn.classList.remove("active"),
+                );
                 button.classList.add("active");
                 currentEventType = eventType;
             }
@@ -350,7 +390,9 @@ const currentYearValue = new Date().getFullYear();
         button.addEventListener("click", () => {
             const year = (button as HTMLElement).dataset.year || "all";
             const yearItem = button.closest(".year-item") as HTMLElement;
-            const monthSubmenu = yearItem?.querySelector(".month-submenu") as HTMLElement;
+            const monthSubmenu = yearItem?.querySelector(
+                ".month-submenu",
+            ) as HTMLElement;
 
             if (currentYear === year) {
                 if (monthSubmenu) {
@@ -377,7 +419,10 @@ const currentYearValue = new Date().getFullYear();
                 // Scroll to top of Activity Heatmap when a NEW year is selected
                 const heatmap = document.getElementById("activity-heatmap");
                 if (heatmap) {
-                    heatmap.scrollIntoView({ behavior: "smooth", block: "start" });
+                    heatmap.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                    });
                 }
             }
             updateDisplay();
@@ -388,16 +433,23 @@ const currentYearValue = new Date().getFullYear();
         button.addEventListener("click", () => {
             const monthKey = (button as HTMLElement).dataset.month || "";
             const year = (button as HTMLElement).dataset.year || "all";
-            
+
             if (currentYear !== year) {
-                const yearBtn = document.querySelector(`.year-btn[data-year="${year}"]`);
+                const yearBtn = document.querySelector(
+                    `.year-btn[data-year="${year}"]`,
+                );
                 if (yearBtn) (yearBtn as HTMLElement).click();
             }
-            
-            const monthSection = document.querySelector(`.month-section[data-month="${monthKey}"]`);
+
+            const monthSection = document.querySelector(
+                `.month-section[data-month="${monthKey}"]`,
+            );
             if (monthSection) {
                 setTimeout(() => {
-                    monthSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    monthSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                    });
                 }, 50);
             }
         });
@@ -416,7 +468,13 @@ const currentYearValue = new Date().getFullYear();
 
     // Prevent any interference with timeline event clicks
     document.querySelectorAll(".timeline-event").forEach((event) => {
-        event.addEventListener("click", (e) => { e.stopPropagation(); }, true);
+        event.addEventListener(
+            "click",
+            (e) => {
+                e.stopPropagation();
+            },
+            true,
+        );
         event.addEventListener("focus", (e) => e.stopPropagation(), true);
         event.addEventListener("blur", (e) => e.stopPropagation(), true);
     });
@@ -426,7 +484,9 @@ const currentYearValue = new Date().getFullYear();
     const tagParam = urlParams.get("tag");
     if (tagParam) {
         currentTag = tagParam;
-        const targetTagBtn = Array.from(tagButtons).find((btn) => (btn as HTMLElement).dataset.tag === tagParam);
+        const targetTagBtn = Array.from(tagButtons).find(
+            (btn) => (btn as HTMLElement).dataset.tag === tagParam,
+        );
         if (targetTagBtn) {
             targetTagBtn.classList.add("active");
             tagButtons.forEach((btn) => {
@@ -439,8 +499,10 @@ const currentYearValue = new Date().getFullYear();
     // Automatically select current year on initial load
     window.addEventListener("DOMContentLoaded", () => {
         const yearStr = new Date().getFullYear().toString();
-        const yearBtn = document.querySelector(`.year-btn[data-year="${yearStr}"]`);
-        
+        const yearBtn = document.querySelector(
+            `.year-btn[data-year="${yearStr}"]`,
+        );
+
         currentYear = "all";
 
         if (yearBtn) {
