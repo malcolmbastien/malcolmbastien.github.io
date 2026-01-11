@@ -112,7 +112,7 @@ const hiddenMonths = allMonths.slice(startIndex);
                                                 .join(" ")
                                                 .toLowerCase()}
                                             data-created={
-                                                event.post.displayDate
+                                                event.date
                                                     .toISOString()
                                                     .split("T")[0]
                                             }
@@ -121,6 +121,7 @@ const hiddenMonths = allMonths.slice(startIndex);
                                                     .toISOString()
                                                     .split("T")[0]
                                             }
+                                            data-event-year={event.date.getFullYear().toString()}
                                             data-event-type={event.type}
                                         >
                                             <div class="shrink-0 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl">
@@ -328,7 +329,7 @@ const hiddenMonths = allMonths.slice(startIndex);
                                                 .join(" ")
                                                 .toLowerCase()}
                                             data-created={
-                                                event.post.displayDate
+                                                event.date
                                                     .toISOString()
                                                     .split("T")[0]
                                             }
@@ -337,6 +338,7 @@ const hiddenMonths = allMonths.slice(startIndex);
                                                     .toISOString()
                                                     .split("T")[0]
                                             }
+                                            data-event-year={event.date.getFullYear().toString()}
                                             data-event-type={event.type}
                                         >
                                             <div class="shrink-0 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl">

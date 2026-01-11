@@ -217,6 +217,7 @@ const currentYear = new Date().getFullYear();
     let currentTag = "";
     let currentEventType = "all";
     let currentYear = new Date().getFullYear().toString();
+    let searchQuery = "";
     let currentDateFilter: string | null = null;
 
     function updateDisplay() {
@@ -231,8 +232,7 @@ const currentYear = new Date().getFullYear();
             const title = htmlEvent.dataset.title || "";
             const summary = htmlEvent.dataset.summary || "";
             const tags = htmlEvent.dataset.tags || "";
-            const createdDate = htmlEvent.dataset.created || "";
-            const updatedDate = htmlEvent.dataset.updated || "";
+            const eventYear = htmlEvent.dataset.eventYear || "";
             const eventType = htmlEvent.dataset.eventType;
 
             const matchesFilter =
@@ -240,19 +240,25 @@ const currentYear = new Date().getFullYear();
             const matchesTag = currentTag === "" || tags.includes(currentTag);
             const matchesEventType =
                 currentEventType === "all" || eventType === currentEventType;
-            const eventYear = new Date(createdDate).getFullYear().toString();
             const matchesYear =
                 currentYear === "all" || eventYear === currentYear;
+            const matchesSearch =
+                title.includes(searchQuery) ||
+                summary.includes(searchQuery) ||
+                tags.includes(searchQuery);
+            
+            // If filtering by a specific date from the heatmap
+            const eventDate = htmlEvent.dataset.created || ""; 
             const matchesDate =
                 currentDateFilter === null ||
-                createdDate.startsWith(currentDateFilter) ||
-                updatedDate.startsWith(currentDateFilter);
+                eventDate === currentDateFilter;
 
             if (
                 matchesFilter &&
                 matchesTag &&
                 matchesEventType &&
                 matchesYear &&
+                matchesSearch &&
                 matchesDate
             ) {
                 htmlEvent.style.display = "flex";
@@ -261,6 +267,29 @@ const currentYear = new Date().getFullYear();
                 htmlEvent.style.display = "none";
             }
         });
+
+        // Show/hide month sections based on their visible events
+        document.querySelectorAll(".month-section").forEach((section) => {
+            const htmlSection = section as HTMLElement;
+            const eventsInSection = Array.from(htmlSection.querySelectorAll(".timeline-event"));
+            const hasVisibleEvent = eventsInSection.some(e => (e as HTMLElement).style.display !== "none");
+            
+            if (hasVisibleEvent) {
+                htmlSection.style.display = "block";
+            } else {
+                htmlSection.style.display = "none";
+            }
+        });
+
+        // Ensure containers are not blocking visibility if they contain visible things
+        const hiddenMonthsContainer = document.getElementById("hidden-months");
+        if (hiddenMonthsContainer) {
+            if (currentFilter !== "all" || currentTag !== "" || currentEventType !== "all" || currentYear !== "all" || searchQuery !== "" || currentDateFilter !== null) {
+                hiddenMonthsContainer.classList.remove("hidden");
+                const showMoreButton = document.getElementById("show-more-activity");
+                if (showMoreButton) showMoreButton.style.display = "none";
+            }
+        }
 
         if (noResults) {
             if (visibleCount === 0) noResults.classList.remove("hidden");
@@ -272,7 +301,6 @@ const currentYear = new Date().getFullYear();
         button.addEventListener("click", () => {
             const status = (button as HTMLElement).dataset.status || "all";
             if (currentFilter === status) {
-                // Clicking active button deactivates it
                 button.classList.remove("active");
                 currentFilter = "all";
             } else {
@@ -288,7 +316,6 @@ const currentYear = new Date().getFullYear();
         button.addEventListener("click", () => {
             const tag = (button as HTMLElement).dataset.tag || "";
             if (currentTag === tag) {
-                // Clicking active tag deactivates it
                 button.classList.remove("active");
                 currentTag = "";
             } else {
@@ -302,16 +329,12 @@ const currentYear = new Date().getFullYear();
 
     eventTypeButtons.forEach((button) => {
         button.addEventListener("click", () => {
-            const eventType =
-                (button as HTMLElement).dataset.eventType || "all";
+            const eventType = (button as HTMLElement).dataset.eventType || "all";
             if (currentEventType === eventType) {
-                // Clicking active button deactivates it
                 button.classList.remove("active");
                 currentEventType = "all";
             } else {
-                eventTypeButtons.forEach((btn) =>
-                    btn.classList.remove("active"),
-                );
+                eventTypeButtons.forEach((btn) => btn.classList.remove("active"));
                 button.classList.add("active");
                 currentEventType = eventType;
             }
@@ -321,24 +344,18 @@ const currentYear = new Date().getFullYear();
 
     // Year navigation
     const yearButtons = document.querySelectorAll(".year-btn");
-    const monthButtons = document.querySelectorAll(".month-btn");
 
     yearButtons.forEach((button) => {
-
         button.addEventListener("click", () => {
             const year = (button as HTMLElement).dataset.year || "all";
             const yearItem = button.closest(".year-item") as HTMLElement;
-            const monthSubmenu = yearItem?.querySelector(
-                ".month-submenu",
-            ) as HTMLElement;
+            const monthSubmenu = yearItem?.querySelector(".month-submenu") as HTMLElement;
 
             if (currentYear === year) {
-                // Clicking active year toggles submenu
                 if (monthSubmenu) {
                     monthSubmenu.classList.toggle("hidden");
                 }
             } else {
-                // Select new year
                 yearButtons.forEach((btn) => {
                     btn.classList.remove("active");
                     const item = btn.closest(".year-item");
@@ -348,24 +365,15 @@ const currentYear = new Date().getFullYear();
                 button.classList.add("active");
                 currentYear = year;
 
-                // Show submenu for selected year
                 if (monthSubmenu) {
                     monthSubmenu.classList.remove("hidden");
                 }
 
-                // Update activity heatmap to show selected year
                 if (window.updateHeatmapYear) {
                     window.updateHeatmapYear(parseInt(year));
                 }
             }
             updateDisplay();
-        });
-    });
-
-    monthButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const monthData = (button as HTMLElement).dataset.month || "";
-            const [year, month] = monthData.split("-");
         });
     });
 
@@ -382,16 +390,7 @@ const currentYear = new Date().getFullYear();
 
     // Prevent any interference with timeline event clicks
     document.querySelectorAll(".timeline-event").forEach((event) => {
-        event.addEventListener(
-            "click",
-            (e) => {
-                // Ensure no event bubbling that could trigger filtering
-                e.stopPropagation();
-            },
-            true,
-        ); // Capture phase
-
-        // Prevent focus/blur events that might trigger updates
+        event.addEventListener("click", (e) => { e.stopPropagation(); }, true);
         event.addEventListener("focus", (e) => e.stopPropagation(), true);
         event.addEventListener("blur", (e) => e.stopPropagation(), true);
     });
@@ -401,17 +400,13 @@ const currentYear = new Date().getFullYear();
     const tagParam = urlParams.get("tag");
     if (tagParam) {
         currentTag = tagParam;
-        // Find and activate tag button
-        const targetTagBtn = Array.from(tagButtons).find(
-            (btn) => (btn as HTMLElement).dataset.tag === tagParam,
-        );
+        const targetTagBtn = Array.from(tagButtons).find((btn) => (btn as HTMLElement).dataset.tag === tagParam);
         if (targetTagBtn) {
             targetTagBtn.classList.add("active");
             tagButtons.forEach((btn) => {
                 if (btn !== targetTagBtn) btn.classList.remove("active");
             });
         }
-        // Update display to filter by tag
         updateDisplay();
     }
 
@@ -420,14 +415,11 @@ const currentYear = new Date().getFullYear();
         const yearStr = new Date().getFullYear().toString();
         const yearBtn = document.querySelector(`.year-btn[data-year="${yearStr}"]`);
         
-        // Reset currentYear to "all" before clicking to ensure the click handler 
-        // treats it as a NEW selection (which activates the button and shows submenu)
         currentYear = "all";
 
         if (yearBtn) {
             (yearBtn as HTMLElement).click();
         } else {
-            // Fallback to the most recent year if current year has no posts
             const allYearBtns = document.querySelectorAll(".year-btn");
             if (allYearBtns.length > 0) {
                 (allYearBtns[0] as HTMLElement).click();
