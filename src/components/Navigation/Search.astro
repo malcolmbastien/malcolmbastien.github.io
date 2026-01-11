@@ -1,12 +1,14 @@
 ---
 ---
-<div id="search" class="w-full"></div>
+<div id="search-container" class="w-full">
+    <div id="search-box"></div>
+</div>
 
 <script is:inline>
   function initSearch() {
     if (typeof PagefindUI !== 'undefined') {
         new PagefindUI({ 
-            element: "#search", 
+            element: "#search-box", 
             showSubResults: true,
             resetFilters: true,
             translations: {
@@ -14,9 +16,9 @@
             }
         });
     } else {
-        const searchContainer = document.querySelector("#search");
-        if (searchContainer) {
-            searchContainer.innerHTML = `
+        const container = document.querySelector("#search-box");
+        if (container) {
+            container.innerHTML = `
                 <div class="text-xs text-slate-500 p-2 text-center border border-dashed border-slate-200 dark:border-slate-800 rounded-lg">
                     Search available after build
                 </div>
@@ -47,15 +49,19 @@
     --pagefind-ui-tag: #1f2937;
   }
 
-  #search .pagefind-ui__search-input {
-    @apply rounded-full border-slate-200 dark:border-slate-800 bg-white dark:bg-[#121812] text-sm focus:ring-emerald-500/20 focus:border-emerald-500 transition-all;
+  #search-box .pagefind-ui__search-input {
+    @apply rounded-xl border-slate-200 dark:border-slate-800 bg-white dark:bg-[#121812] text-base focus:ring-emerald-500/20 focus:border-emerald-500 transition-all py-3 px-5;
   }
 
-  #search .pagefind-ui__result-link {
-    @apply text-slate-900 dark:text-white font-bold hover:text-emerald-500 transition-colors;
+  #search-box .pagefind-ui__result-link {
+    @apply text-slate-900 dark:text-white font-bold hover:text-emerald-500 transition-colors text-lg;
   }
 
-  #search .pagefind-ui__result-excerpt {
-    @apply text-slate-600 dark:text-slate-400 text-sm;
+  #search-box .pagefind-ui__result-excerpt {
+    @apply text-slate-600 dark:text-slate-400 text-sm mt-1;
+  }
+  
+  #search-box .pagefind-ui__result {
+    @apply border-b border-slate-100 dark:border-slate-800 pb-6 mb-6 last:border-0;
   }
 </style>

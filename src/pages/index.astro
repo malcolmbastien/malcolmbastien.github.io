@@ -6,7 +6,6 @@ import ProfileHeader from "../components/Profile/ProfileHeader.astro";
 import YearNavigation from "../components/YearNavigation.astro";
 import PostTimeline from "../components/PostTimeline.astro";
 import SiteFooter from "../components/SiteFooter.astro";
-import Search from "../components/Navigation/Search.astro";
 import { getBatchFileDates } from "../lib/git-history";
 
 const allPosts = await getCollection("posts");
@@ -169,15 +168,6 @@ const currentYearValue = new Date().getFullYear();
     <main class="max-w-7xl mx-auto p-4 md:p-8">
         <ProfileHeader />
 
-        <!-- Wide Search Bar - Centered above content for better usability -->
-        <div class="max-w-2xl mx-auto w-full mb-10">
-            <div
-                class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm p-1.5 px-4 focus-within:ring-2 focus-within:ring-emerald-500/20 focus-within:border-emerald-500 transition-all"
-            >
-                <Search />
-            </div>
-        </div>
-
         <div class="flex flex-col lg:flex-row gap-8">
             <!-- Left Column: Activity Heatmap and Timeline -->
             <div class="flex-1 min-w-0 space-y-6">
@@ -192,11 +182,36 @@ const currentYearValue = new Date().getFullYear();
                 />
             </div>
 
-            <!-- Right Column: Years Navigation (Scrollable if long) -->
-            <div
-                class="w-full lg:w-64 shrink-0 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto custom-sidebar-scroll z-30 pb-10"
-            >
-                <YearNavigation sortedYears={sortedYears as any} />
+            <!-- Right Column: Navigation & Search -->
+            <div class="w-full lg:w-64 shrink-0 lg:sticky lg:top-8 h-fit z-30 pb-10">
+                <!-- Search Button -->
+                <div class="mb-6">
+                    <a
+                        href="/search"
+                        class="flex items-center gap-3 w-full px-4 py-3 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl text-slate-500 dark:text-slate-400 hover:border-emerald-500/50 hover:text-emerald-600 transition-all shadow-sm group"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 text-slate-400 group-hover:text-emerald-500 transition-colors"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                            ></path>
+                        </svg>
+                        <span class="text-sm font-medium">Search garden...</span>
+                    </a>
+                </div>
+
+                <!-- Years Navigation (Scrollable if long) -->
+                <div class="lg:max-h-[calc(100vh-12rem)] lg:overflow-y-auto custom-sidebar-scroll">
+                    <YearNavigation sortedYears={sortedYears as any} />
+                </div>
             </div>
         </div>
         <SiteFooter />
@@ -242,7 +257,6 @@ const currentYearValue = new Date().getFullYear();
     let currentTag = "";
     let currentEventType = "all";
     let currentYear = new Date().getFullYear().toString();
-    let searchQuery = "";
     let currentDateFilter: string | null = null;
 
     function updateDisplay() {
@@ -254,24 +268,17 @@ const currentYearValue = new Date().getFullYear();
         allTimelineEvents.forEach((event) => {
             const htmlEvent = event as HTMLElement;
             const status = htmlEvent.dataset.status;
-            const title = htmlEvent.dataset.title || "";
-            const summary = htmlEvent.dataset.summary || "";
-            const tags = htmlEvent.dataset.tags || "";
             const eventYear = htmlEvent.dataset.eventYear || "";
             const eventType = htmlEvent.dataset.eventType;
 
             const matchesFilter =
                 currentFilter === "all" || status === currentFilter;
-            const matchesTag = currentTag === "" || tags.includes(currentTag);
+            const matchesTag = currentTag === "" || (htmlEvent.dataset.tags || "").includes(currentTag);
             const matchesEventType =
                 currentEventType === "all" || eventType === currentEventType;
             const matchesYear =
                 currentYear === "all" || eventYear === currentYear;
-            const matchesSearch =
-                title.includes(searchQuery) ||
-                summary.includes(searchQuery) ||
-                tags.includes(searchQuery);
-
+            
             // If filtering by a specific date from the heatmap
             const eventDate = htmlEvent.dataset.created || "";
             const matchesDate =
@@ -282,7 +289,6 @@ const currentYearValue = new Date().getFullYear();
                 matchesTag &&
                 matchesEventType &&
                 matchesYear &&
-                matchesSearch &&
                 matchesDate
             ) {
                 htmlEvent.style.display = "flex";
@@ -317,7 +323,6 @@ const currentYearValue = new Date().getFullYear();
                 currentTag !== "" ||
                 currentEventType !== "all" ||
                 currentYear !== "all" ||
-                searchQuery !== "" ||
                 currentDateFilter !== null
             ) {
                 hiddenMonthsContainer.classList.remove("hidden");
@@ -387,7 +392,7 @@ const currentYearValue = new Date().getFullYear();
     const monthButtons = document.querySelectorAll(".month-btn");
 
     yearButtons.forEach((button) => {
-        button.addEventListener("click", () => {
+        button.addEventListener("click", (event) => {
             const year = (button as HTMLElement).dataset.year || "all";
             const yearItem = button.closest(".year-item") as HTMLElement;
             const monthSubmenu = yearItem?.querySelector(
@@ -416,13 +421,16 @@ const currentYearValue = new Date().getFullYear();
                     window.updateHeatmapYear(parseInt(year));
                 }
 
-                // Scroll to top of Activity Heatmap when a NEW year is selected
-                const heatmap = document.getElementById("activity-heatmap");
-                if (heatmap) {
-                    heatmap.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
+                // ONLY scroll if the click was triggered by a real human (isTrusted)
+                // This prevents the page from jumping on initial load
+                if (event.isTrusted) {
+                    const heatmap = document.getElementById("activity-heatmap");
+                    if (heatmap) {
+                        heatmap.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
                 }
             }
             updateDisplay();
@@ -478,23 +486,6 @@ const currentYearValue = new Date().getFullYear();
         event.addEventListener("focus", (e) => e.stopPropagation(), true);
         event.addEventListener("blur", (e) => e.stopPropagation(), true);
     });
-
-    // Check URL params for initial tag filter
-    const urlParams = new URLSearchParams(window.location.search);
-    const tagParam = urlParams.get("tag");
-    if (tagParam) {
-        currentTag = tagParam;
-        const targetTagBtn = Array.from(tagButtons).find(
-            (btn) => (btn as HTMLElement).dataset.tag === tagParam,
-        );
-        if (targetTagBtn) {
-            targetTagBtn.classList.add("active");
-            tagButtons.forEach((btn) => {
-                if (btn !== targetTagBtn) btn.classList.remove("active");
-            });
-        }
-        updateDisplay();
-    }
 
     // Automatically select current year on initial load
     window.addEventListener("DOMContentLoaded", () => {
