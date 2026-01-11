@@ -18,7 +18,7 @@ const {
     title,
     description = "A digital garden of thoughts and ideas",
     image = "/og-default.png",
-    url = new URL(Astro.request.url).origin,
+    url = Astro.site?.origin || new URL(Astro.request.url).origin,
     type = "website",
     publishedTime,
     modifiedTime,
@@ -27,7 +27,7 @@ const {
 } = Astro.props;
 
 // Generate canonical URL
-const canonicalUrl = url + new URL(Astro.request.url).pathname;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site || url).href;
 
 // Generate Open Graph image URL
 const ogImage = image.startsWith("http") ? image : url + image;
@@ -123,6 +123,11 @@ const ogImage = image.startsWith("http") ? image : url + image;
                     tags.length > 0 && { keywords: tags.join(", ") }),
             })}
         />
+
+        <!-- Search indexing -->
+        <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+        <script src="/pagefind/pagefind-ui.js" is:inline></script>
+
         <script is:inline>
             const theme = (() => {
                 if (

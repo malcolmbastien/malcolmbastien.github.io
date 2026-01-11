@@ -6,22 +6,25 @@ import ProfileHeader from "../components/Profile/ProfileHeader.astro";
 import YearNavigation from "../components/YearNavigation.astro";
 import PostTimeline from "../components/PostTimeline.astro";
 import SiteFooter from "../components/SiteFooter.astro";
-import { getFileDates } from "../lib/git-history";
+import Search from "../components/Navigation/Search.astro";
+import { getBatchFileDates } from "../lib/git-history";
 
 const allPosts = await getCollection("posts");
+const batchDates = await getBatchFileDates();
 
 // Fetch git dates for all posts to create timeline events
-const postsWithDates = await Promise.all(
-    allPosts.map(async (post) => {
-        const filePath = `src/content/posts/${post.id}`;
-        const { created, updated } = await getFileDates(filePath);
-        return {
-            ...post,
-            displayDate: post.data.publishedDate || created || new Date(),
-            updatedDate: updated || created || new Date(),
-        };
-    }),
-);
+const postsWithDates = allPosts.map((post) => {
+    const filePath = `src/content/posts/${post.id}`;
+    const dates = batchDates.get(filePath);
+    const created = dates?.created;
+    const updated = dates?.updated;
+
+    return {
+        ...post,
+        displayDate: post.data.publishedDate || created || new Date(),
+        updatedDate: updated || created || new Date(),
+    };
+});
 
 // Create timeline events
 const events: any[] = [];
@@ -186,28 +189,7 @@ const currentYear = new Date().getFullYear();
                 <div
                     class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-6"
                 >
-                    <div class="relative group w-full">
-                        <input
-                            type="text"
-                            id="search-input"
-                            placeholder="Search garden..."
-                            class="w-full pl-10 pr-4 py-2 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all dark:text-slate-200"
-                        />
-                        <svg
-                            class="absolute left-3 top-2.5 h-4 w-4 text-slate-400 group-focus-within:text-emerald-500 transition-colors"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                            ></path>
-                        </svg>
-                    </div>
+                    <Search />
                 </div>
 
                 <!-- Years Navigation -->
@@ -228,17 +210,13 @@ const currentYear = new Date().getFullYear();
     const buttons = document.querySelectorAll("[data-status]");
     const tagButtons = document.querySelectorAll("[data-tag]");
     const eventTypeButtons = document.querySelectorAll("[data-event-type]");
-    const searchInput = document.getElementById(
-        "search-input",
-    ) as HTMLInputElement;
     const timelineEvents = document.querySelectorAll(".timeline-event");
     const noResults = document.getElementById("no-results");
 
     let currentFilter = "all";
     let currentTag = "";
     let currentEventType = "all";
-    let currentYear = "all";
-    let searchQuery = "";
+    let currentYear = new Date().getFullYear().toString();
     let currentDateFilter: string | null = null;
 
     function updateDisplay() {
@@ -265,10 +243,6 @@ const currentYear = new Date().getFullYear();
             const eventYear = new Date(createdDate).getFullYear().toString();
             const matchesYear =
                 currentYear === "all" || eventYear === currentYear;
-            const matchesSearch =
-                title.includes(searchQuery) ||
-                summary.includes(searchQuery) ||
-                tags.includes(searchQuery);
             const matchesDate =
                 currentDateFilter === null ||
                 createdDate.startsWith(currentDateFilter) ||
@@ -279,7 +253,6 @@ const currentYear = new Date().getFullYear();
                 matchesTag &&
                 matchesEventType &&
                 matchesYear &&
-                matchesSearch &&
                 matchesDate
             ) {
                 htmlEvent.style.display = "flex";
@@ -351,6 +324,7 @@ const currentYear = new Date().getFullYear();
     const monthButtons = document.querySelectorAll(".month-btn");
 
     yearButtons.forEach((button) => {
+
         button.addEventListener("click", () => {
             const year = (button as HTMLElement).dataset.year || "all";
             const yearItem = button.closest(".year-item") as HTMLElement;
@@ -393,11 +367,6 @@ const currentYear = new Date().getFullYear();
             const monthData = (button as HTMLElement).dataset.month || "";
             const [year, month] = monthData.split("-");
         });
-    });
-
-    searchInput?.addEventListener("input", (e) => {
-        searchQuery = (e.target as HTMLInputElement).value.toLowerCase();
-        updateDisplay();
     });
 
     // Listen for date filter changes from activity heatmap
@@ -445,4 +414,24 @@ const currentYear = new Date().getFullYear();
         // Update display to filter by tag
         updateDisplay();
     }
+
+    // Automatically select current year on initial load
+    window.addEventListener("DOMContentLoaded", () => {
+        const yearStr = new Date().getFullYear().toString();
+        const yearBtn = document.querySelector(`.year-btn[data-year="${yearStr}"]`);
+        
+        // Reset currentYear to "all" before clicking to ensure the click handler 
+        // treats it as a NEW selection (which activates the button and shows submenu)
+        currentYear = "all";
+
+        if (yearBtn) {
+            (yearBtn as HTMLElement).click();
+        } else {
+            // Fallback to the most recent year if current year has no posts
+            const allYearBtns = document.querySelectorAll(".year-btn");
+            if (allYearBtns.length > 0) {
+                (allYearBtns[0] as HTMLElement).click();
+            }
+        }
+    });
 </script>

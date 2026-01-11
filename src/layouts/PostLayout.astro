@@ -8,15 +8,19 @@ import Backlinks from "../components/Backlinks.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { getCollection } from "astro:content";
 import { getStatusColors } from "../lib/theme";
+import { getReadingTime } from "../lib/reading-time";
+import { Image } from "astro:assets";
 
 interface Props {
     frontmatter: {
         title: string;
         publishedDate?: Date;
         status: "seed" | "sprout" | "tree";
-        summary: string;
+        summary?: string;
         tags: string[];
         draft?: boolean;
+        featuredImage?: any;
+        featuredImageAlt?: string;
     };
     filePath: string;
     gitCreated?: Date | null;
@@ -27,14 +31,16 @@ interface Props {
 const { frontmatter, filePath, gitCreated, gitUpdated, backlinkedPostSlugs } =
     Astro.props;
 
-const createdDate = frontmatter.publishedDate || gitCreated || new Date();
-const hasBeenUpdated =
-    gitUpdated && gitUpdated.getTime() > createdDate.getTime() + 1000 * 60 * 60; // More than 1 hour difference
-
-// Get current post content for TOC
+// Get current post content for TOC and reading time
 const allPosts = await getCollection("posts");
 const currentSlug = filePath.split("/").pop()?.replace(".md", "") || "";
 const currentPost = allPosts.find((post) => post.slug === currentSlug);
+
+const readingTime = currentPost ? getReadingTime(currentPost.body) : "";
+
+const createdDate = frontmatter.publishedDate || gitCreated || new Date();
+const hasBeenUpdated =
+    gitUpdated && gitUpdated.getTime() > createdDate.getTime() + 1000 * 60 * 60; // More than 1 hour difference
 
 const statusColors = getStatusColors();
 
@@ -52,6 +58,7 @@ const formatDate = (date: Date) => {
 <Layout
     title={frontmatter.title}
     description={frontmatter.summary}
+    image={frontmatter.featuredImage?.src}
     type="article"
     publishedTime={createdDate.toISOString()}
     modifiedTime={hasBeenUpdated ? gitUpdated!.toISOString() : undefined}
@@ -142,8 +149,32 @@ const formatDate = (date: Date) => {
                                         </div>
                                     )
                                 }
+
+                                {
+                                    readingTime && (
+                                        <div class="flex items-center gap-1.5 pl-4 border-l border-slate-200 dark:border-slate-600">
+                                            <span class="font-semibold uppercase tracking-wider text-[10px] text-slate-300 dark:text-slate-600">
+                                                Reading Time
+                                            </span>
+                                            <span>{readingTime}</span>
+                                        </div>
+                                    )
+                                }
                             </div>
                         </div>
+
+                        {
+                            frontmatter.featuredImage && (
+                                <div class="mb-8 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800">
+                                    <Image
+                                        src={frontmatter.featuredImage}
+                                        alt={frontmatter.featuredImageAlt || frontmatter.title}
+                                        class="w-full h-auto object-cover max-h-100"
+                                        loading="eager"
+                                    />
+                                </div>
+                            )
+                        }
 
                         <h1
                             class="text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4"

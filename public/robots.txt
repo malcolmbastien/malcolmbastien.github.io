@@ -4,10 +4,13 @@ Allow: /
 # Sitemap
 Sitemap: https://malcolmbastien.github.io/sitemap-index.xml
 
-# Block access to sensitive files
+# Performance: prevent crawling of heavy assets and internal files
 Disallow: /_astro/
 Disallow: /api/
 Disallow: /*.json$
 
-# Allow crawling of all content
+# Explicitly allow posts
 Allow: /posts/
+
+# Optimization: Suggest crawl delay for some bots to reduce server load (if applicable)
+Crawl-delay: 10
