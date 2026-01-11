@@ -18,11 +18,11 @@ As much as a coincidence as it is there were two instances over the same weekend
 
 I'll admit I wasn't a fan of a few of the sessions I saw, and I did criticize a few things that happened at the conference, but it was probably a bad idea on my part. Especially since there were a lot of different ways I could have commented on them, without being negative. So afterwards I was doing some thinking on what I could have maybe have differently, specifically on what are the effective ways of giving candid and honest feedback, without making  yourself look like an ass, and really putting down the effort and work of other people.
 
-# Take a "What I learned" Approach
+## Take a "What I learned" Approach
 
 Look at what happened not as an opportunity to vent or to place blame, but instead to reflect on what you personally took away and learned from the incident. You might learn how you may better organize an event, or what kind of speaking style you prefer and would like to emulate.
 
-# Take a Deep Dive of The Problem
+## Take a Deep Dive of The Problem
 
 There are ways to point out problems while keeping a neutral tone, and still creating something positive out of it. Analyze what happened, the source of the problem and what should be planned before hand for next time.
 

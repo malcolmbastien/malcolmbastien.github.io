@@ -171,9 +171,12 @@ const formatDate = (date: Date) => {
                         <div class="flex flex-wrap gap-2">
                             {
                                 frontmatter.tags.map((tag: string) => (
-                                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-3 py-1 rounded-md text-sm border border-slate-100 dark:border-slate-700">
+                                    <a
+                                        href={`/tags/${tag}`}
+                                        class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-3 py-1 rounded-md text-sm border border-slate-100 dark:border-slate-700 hover:border-emerald-500/50 hover:text-emerald-600 transition-all"
+                                    >
                                         #{tag}
-                                    </span>
+                                    </a>
                                 ))
                             }
                         </div>

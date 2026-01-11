@@ -6,16 +6,16 @@ summary: "Exploring different ways to mark content as in-progress."
 draft: true
 ---
 
-# Drafting Patterns
+## Drafting Patterns
 
 Because this post has `draft: true` in its frontmatter, you should see a global draft banner at the top.
 
-## Container-based Drafts
+### Container-based Drafts
 
 For sections that are incomplete, we can use the `:::draft` directive:
 
 :::draft
-### A work in progress section
+#### A work in progress section
 I haven't quite finished this part of the thought yet. It spans multiple paragraphs.
 
 Here is the second paragraph of the draft section.

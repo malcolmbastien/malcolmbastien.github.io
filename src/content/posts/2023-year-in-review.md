@@ -25,15 +25,11 @@ As we start 2024, it's a good time to reflect on what I've achieved in 2023 and 
 
 Here are my blog's stats for 2023:
 
-24 posts
-
-26k words
-
-36 likes
-
-3 comments
-
-13 new subscribers
+- 24 posts
+- 26k words
+- 36 likes
+- 3 comments
+- 13 new subscribers
 
 Next year, I'd like to focus even more on the blog. While the blog didn't pull in big numbers this year, I'm still proud of everything I wrote. 
 
@@ -55,13 +51,10 @@ I'm a big fan of the retro animes of the 80s and 90s and the City Pop genre of J
 
 So far, I've managed to produce a total of 120 different designs. In total, broken down by product, my shop now has:
 
-8 prints
-
-94 t-shirts
-
-10 coffee mugs
-
-8 notebooks
+- 8 prints
+- 94 t-shirts
+- 10 coffee mugs
+- 8 notebooks
 
 The shop has only generated 7 sales, which is fine because the costs to operate the store are low, and the experience of creating the shop and making these designs has been rewarding and a great learning experience.
 
@@ -85,25 +78,16 @@ I spend a lot of time gaming. For the first time this year, I felt the urge to a
 
 The games I was able to "perfect" in 2023 include:
 
-[Risk of Rain 2](https://store.steampowered.com/app/632360/Risk_of_Rain_2/)
-
-[Hades](https://store.steampowered.com/app/1145360/Hades/)
-
-[Dysmantle](https://store.steampowered.com/app/846770/DYSMANTLE/)
-
-[Everspace](https://store.steampowered.com/app/396750/EVERSPACE/)
-
-[Into the Breach](https://store.steampowered.com/app/590380/Into_the_Breach/)
-
-[Ys: Memories of Celceta](https://store.steampowered.com/app/587110/Ys_Memories_of_Celceta/)
-
-[The Surge](https://store.steampowered.com/app/378540/The_Surge/)
-
-[Hardspace: Shipbreaker](https://store.steampowered.com/app/1161580/Hardspace_Shipbreaker/)
-
-[The Ascent](https://store.steampowered.com/app/979690/The_Ascent/)
-
-[Inertial Drift](https://store.steampowered.com/app/1184480/Inertial_Drift/)
+- [Risk of Rain 2](https://store.steampowered.com/app/632360/Risk_of_Rain_2/)
+- [Hades](https://store.steampowered.com/app/1145360/Hades/)
+- [Dysmantle](https://store.steampowered.com/app/846770/DYSMANTLE/)
+- [Everspace](https://store.steampowered.com/app/396750/EVERSPACE/)
+- [Into the Breach](https://store.steampowered.com/app/590380/Into_the_Breach/)
+- [Ys: Memories of Celceta](https://store.steampowered.com/app/587110/Ys_Memories_of_Celceta/)
+- [The Surge](https://store.steampowered.com/app/378540/The_Surge/)
+- [Hardspace: Shipbreaker](https://store.steampowered.com/app/1161580/Hardspace_Shipbreaker/)
+- [The Ascent](https://store.steampowered.com/app/979690/The_Ascent/)
+- [Inertial Drift](https://store.steampowered.com/app/1184480/Inertial_Drift/)
 
 If you want a complete look at my year in gaming, you can visit my [Steam Year in Review 2023](https://s.team/y23/ftqnvcg?l=english).
 

@@ -39,6 +39,11 @@ export function remarkWikiLinks() {
           type: 'link',
           url: `/posts/${slug}`,
           title: linkText,
+          data: {
+            hProperties: {
+              className: 'internal-link'
+            }
+          },
           children: [{
             type: 'text',
             value: displayText || linkText

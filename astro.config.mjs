@@ -6,6 +6,7 @@ import remarkDirective from 'remark-directive';
 import { remarkCallouts } from './src/lib/remark-callouts.mjs';
 import { remarkDraftContainer } from './src/lib/remark-draft.mjs';
 import { remarkWikiLinks } from './src/lib/remark-wiki-links.mjs';
+import { remarkLinkDistinction } from './src/lib/remark-link-distinction.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,7 +18,7 @@ export default defineConfig({
 		defaultStrategy: 'hover'
 	},
 	markdown: {
-		remarkPlugins: [remarkDirective, remarkDraftContainer, remarkCallouts, remarkWikiLinks],
+		remarkPlugins: [remarkDirective, remarkDraftContainer, remarkCallouts, remarkWikiLinks, remarkLinkDistinction],
 	},
 	vite: {
 		plugins: [tailwindcss()]

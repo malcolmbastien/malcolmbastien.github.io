@@ -9,7 +9,6 @@ tags:
 ---
 ![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpuploadwikimediaorgwikipediacommonsthumb88athefriendlygiantcastlesetcbcmuseumpng200pxthefriendlygiantcastlesetcbcmuseumpng_nvschmdmymfempu-scaled500.png?w=200](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpuploadwikimediaorgwikipediacommonsthumb88athefriendlygiantcastlesetcbcmuseumpng200pxthefriendlygiantcastlesetcbcmuseumpng_nvschmdmymfempu-scaled500.png?w=200)
  
-
 I don't know how to tell a story.
 
 In fact, I bet we're all pretty bad at it.
@@ -18,12 +17,12 @@ Going around and reading about how to be a better social media marketer, how to 
 
 Think about the last few presentations you've sat through. How many of them involved someone:
 
-	Telling people about what they do
-	Giving examples of how they were successful in social media
-	Telling you about their perspective on things
-	Giving an informative but unmemorable talk
-	Or even turn a talk into a horrible pitch for their business
-	etc...
+- Telling people about what they do
+- Giving examples of how they were successful in social media
+- Telling you about their perspective on things
+- Giving an informative but unmemorable talk
+- Or even turn a talk into a horrible pitch for their business
+- etc...
 
 I couldn't do much better, but if we turned into a community of story tellers these sorts of talks would disappear. We don't only need more story tellers to stamp out bad presentations, we need more tellers to be more successful in our professional lives. Like Harvard University psychologist Howard Gardner put it:
 "Every great leader is a great storyteller"

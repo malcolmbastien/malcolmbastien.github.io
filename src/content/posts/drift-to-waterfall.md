@@ -42,7 +42,7 @@ Understanding Agile principles and applying them to how teams interpret problems
 
 Here's how Agile principles could alternatively guide us to resolve the problems mentioned earlier:
 
-### **1. Changing Requirements**
+### 1. Changing Requirements
 
 Instead of locking down requirements, consider these principles:
 
@@ -56,7 +56,7 @@ Principles behind the Agile Manifesto
 
 These principles remind us that change is inevitable and that being able to respond to change is an advantage. Rather than trying to eliminate change, teams should find ways to embrace it.
 
-### **2. Role Expectations**
+### 2. Role Expectations
 
 Rather than creating explicit and rigid role definitions, remember:
 
@@ -70,7 +70,7 @@ The Principles of Product Development Flow
 
 These principles emphasize the power of team motivation and trusting people to do what's right. They encourage teams to think of people more as T-shaped individuals rather than as single functional experts with strict role assignments.
 
-### **3. Late Deliveries**
+### 3. Late Deliveries
 
 Instead of detailed upfront planning, consider:
 
@@ -84,7 +84,7 @@ Principles behind the Agile Manifesto
 
 These principles promote frequent delivery and short feedback cycles instead of long-term planning.
 
-### **4. Quality Issues**
+### 4. Quality Issues
 
 Rather than adding review gates, think about:
 

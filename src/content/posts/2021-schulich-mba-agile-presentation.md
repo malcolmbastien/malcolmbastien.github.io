@@ -16,25 +16,16 @@ My goal for the talk was to provide the audience with a different perspective on
 
 The key ideas I covered included the following:
 
-Comparing the conditions when Waterfall and Agile are appropriate
-
-The risks of applying the wrong method in the wrong context
-
-Comparing different interpretations of agile
-
-The importance of Agile principles
-
-Working incrementally and iteratively
-
-Learning from doing and the Agile cost of change curve
-
-Failure & learning cultures
-
-Effective teams and conditions
-
-Leadership and purpose
-
-Agile BS
+- Comparing the conditions when Waterfall and Agile are appropriate
+- The risks of applying the wrong method in the wrong context
+- Comparing different interpretations of agile
+- The importance of Agile principles
+- Working incrementally and iteratively
+- Learning from doing and the Agile cost of change curve
+- Failure & learning cultures
+- Effective teams and conditions
+- Leadership and purpose
+- Agile BS
 
 I hoped the talk surprised the students and exposed them to ideas they may not have seen before. Crafting this talk was a good learning experience for me to focus on helping communicate the context where agile excels and the conditions necessary to support the right culture.
 

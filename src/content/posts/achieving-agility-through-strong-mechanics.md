@@ -17,15 +17,11 @@ Strategies in the context of StarCraft are the elements of gameplay concerning h
 
 In Agile, the strategies would be the visible aspects of how teams intend to practice Agile:
 
-Agile frameworks and methodologies
-
-Meetings and ceremonies
-
-Defined Agile roles
-
-Artifacts
-
-Tools and techniques
+- Agile frameworks and methodologies
+- Meetings and ceremonies
+- Defined Agile roles
+- Artifacts
+- Tools and techniques
 
 Teams and organizations can learn these patterns and practices from guides, workshops, hiring consultants, or copying someone else. For example, the most famous example of an Agile strategy that teams and organizations around the world have copied is the Spotify Model.
 
@@ -41,17 +37,12 @@ Amateurs can recognize professional levels of play when they watch matches, but 
 
 Agile mechanics are not as easy to spot and are impossible to copy. These include things like:
 
-Decision-making
-
-Teamwork
-
-Speed
-
-Expertise
-
-Adaptability and flexibility
-
-Improvement rate
+- Decision-making
+- Teamwork
+- Speed
+- Expertise
+- Adaptability and flexibility
+- Improvement rate
 
 Developing these properties in a team or organization happens through leadership, experience, practice, and a deep understanding of principles.
 

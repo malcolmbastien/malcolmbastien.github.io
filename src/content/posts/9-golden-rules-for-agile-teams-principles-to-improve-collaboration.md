@@ -12,23 +12,15 @@ In my time working with different teams and organizations, I’ve found myself r
 
 I expect that I’ll come up with more in the future, but here are the nine I’ve collected so far.
 
-Don’t ask fake questions
-
-Don’t tell people what to do
-
-No surprises
-
-Don’t show and tell; do it together
-
-Don’t make it about you
-
-Treat people like adults
-
-Don’t just add stuff, fix the problem
-
-Don’t make things worse
-
-Don’t waste people’s time
+- Don’t ask fake questions
+- Don’t tell people what to do
+- No surprises
+- Don’t show and tell; do it together
+- Don’t make it about you
+- Treat people like adults
+- Don’t just add stuff, fix the problem
+- Don’t make things worse
+- Don’t waste people’s time
 
 ## Don’t Ask Fake Questions
 

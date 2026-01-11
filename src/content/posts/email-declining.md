@@ -28,10 +28,12 @@ So here’s what needs to change:
 
 There needs to be empathy through awareness of other people’s jobs, and a better valuing of their time and attention.
 Having “Communication Skills” needs to mean more than not making  typos. It needs to involve the less talked about skills like editing.
+
 ## Technology
 
 Mobile doesn’t just mean having email on your phone, it means emails with only two words is socially accepted. Behaviours need to match the technology.
 Integration is confusing. More data, more links, more smart options and suggestions hinders what in most cases would otherwise be a quick message. Technology should pursue qualities like seamless, invisible, and instant. If anything else, it creates the right mindset for communication to happen.
+
 ## Medium
 
 It can’t be just a coincidence that [Sparrow](http://sparrowmailapp.com/) has become one of the most popular Mac applications and that it tries to make email light, simple, fast, and fun. Those qualities sound a lot like what’s appealing about social media don’t they?

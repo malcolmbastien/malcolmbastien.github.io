@@ -24,8 +24,6 @@ From the creative concept to final production, the small team made their movie. 
 
 The beautiful thing about this whole process is the focus. When people talked about Project Orange, they were talking about Elephants Dream. The top people all invested time into the same project. For Tom, the creator of Blender, Project Orange became a day-to-day concern for him, and he gave direct input. At then end when the project was completed, the Blender team rested, then in a few months they started again on something else.
 
- 
-
 Drumbeat is taking the many model, and Project Orange was the one model.
 
 **Is there something in Project Orange that Drumbeat can learn from and adopt into it's own processes?**
