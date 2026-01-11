@@ -32,25 +32,16 @@ A stream-aligned team has all the skills and capabilities to deliver end-to-end 
 
 Generally speaking, each stream-aligned team will require a set of capabilities in order to progress work from its initial (requirements) exploration stages to production. These capabilities include (but are not restricted to):
 
-Application security
-
-Commercial and operational viability analysis
-
-Design and architecture
-
-Development and coding
-
-Infrastructure and operability
-
-Metrics and monitoring
-
-Product management and ownership
-
-Testing and quality assurance
-
-User experience (UX)
-
-Team Topologies
+- Application security
+- Commercial and operational viability analysis
+- Design and architecture
+- Development and coding
+- Infrastructure and operability
+- Metrics and monitoring
+- Product management and ownership
+- Testing and quality assurance
+- User experience (UX)
+- Team Topologies
 
 But how does that happen? How should one team satisfy all those capabilities? Based on what I see happening, most organizations do that by adding more people to a team.
 

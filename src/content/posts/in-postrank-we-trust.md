@@ -24,11 +24,3 @@ Here's something I think might give a small indication of what AideRSS will prov
 Something like that is what we can expect in the future, but for now, a hack is to do this: Head over to Alltop.com's Photography page, copy down the RSS feeds of each of the blogs listed there, and proceed to filter them all through AideRSS. And voila! The best articles from 70 different photography feeds, averaging out to be around 20% of the total number of posts.  (Though this did take me about an hour to do with the current tools available.)
 
 Download the best posts from [Alltop.com](http://alltop.com)'s [Photography](http://photography.alltop.com/) section as an OPML file: [best-of-alltop-photography](http://openmode.ca/wp-content/uploads/2008/09/best-of-alltop-photography.xml).
-###### Related articles by Zemanta
-
-	[Third Tuesday Toronto Season To Kick-Off With AideRSS](http://davefleet.com/2008/09/third-tuesday-toronto-season-to-kick-off-with-aiderss/)
-	[Rankings Suck, So Now What?](http://regulargeek.com/2008/07/17/rankings-suck-so-now-what/)
-	[A Filter For Your Feeds. AideRSS Turns PostRank Into An API and Google Reader Extension](http://www.techcrunch.com/2008/07/10/a-filter-for-your-feeds-aiderss-turns-postrank-into-an-api-and-google-reader-extension/)
-	[AideRSS Adds Twitter and OpenID To Their PostRank Ranking Service](http://www.centernetworks.com/aiderss-twitter-openid)
-
-![http://malcolmbastien.com/wp-content/uploads/2008/09/media_httpimgzemantacomreblogcpngxid2f60ea0b878d4b22b9258612680be653_ygggamexcyyougy-scaled500.png?w=70](http://malcolmbastien.com/wp-content/uploads/2008/09/media_httpimgzemantacomreblogcpngxid2f60ea0b878d4b22b9258612680be653_ygggamexcyyougy-scaled500.png?w=70)

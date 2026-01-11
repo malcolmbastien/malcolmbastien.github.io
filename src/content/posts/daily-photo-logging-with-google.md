@@ -19,6 +19,7 @@ I’ve been using this feature in the evening, after I’ve taken photos over th
 
 This little workflow let’s me:
 
-Share my photos on Google+
-Not have to manually organize and upload photos from my Mac, or through my iPhone (one at a time).
+1. Share my photos on Google+
+2. Not have to manually organize and upload photos from my Mac, or through my iPhone (one at a time).
+
 This has been one way I’m able to participate on Google+ with a very low overhead or time or energy. Here’s hoping to an expanded Google+ API in the near future.

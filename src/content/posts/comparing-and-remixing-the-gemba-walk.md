@@ -47,13 +47,10 @@ Service Delivery Reviews
 
 After some *light* research, I took an inventory of each practice and listed:
 
-The participants
-
-The purpose
-
-The required materials
-
-The procedures, steps or skills involved
+- The participants
+- The purpose
+- The required materials
+- The procedures, steps or skills involved
 
 ![](https://malcolmbastien.com/wp-content/uploads/2022/09/the-service-delivery-review_-evolving-the-gemba-walk-comparing-practices-1.jpg?w=4337)Breaking down each practice into its components.
 

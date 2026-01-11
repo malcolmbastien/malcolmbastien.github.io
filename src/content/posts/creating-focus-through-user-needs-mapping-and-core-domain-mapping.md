@@ -25,11 +25,9 @@ When I started working with this team, they were stuck in a loop of trying to ke
 
 I worked with this team and took them through an exercise involving User Needs Mapping and Core Domain Mapping. The goals of this multi-step exercise were to:
 
-Understand the team's demand
-
-Map what activities the team performed to satisfy that demand
-
-Understand what problems the team was spending time on that had low strategic value
+- Understand the team's demand
+- Map what activities the team performed to satisfy that demand
+- Understand what problems the team was spending time on that had low strategic value
 
 ### User Needs Mapping
 
@@ -37,13 +35,10 @@ We started the process by doing [User Needs Mapping](https://teamtopologies.com/
 
 These steps include:
 
-Identify the users being served
-
-Identify the needs to be met
-
-Identify the capabilities needed to meet those needs successfully
-
-Connect those users, needs and capabilities in a value chain with dependency relationships included.
+- Identify the users being served
+- Identify the needs to be met
+- Identify the capabilities needed to meet those needs successfully
+- Connect those users, needs and capabilities in a value chain with dependency relationships included.
 
 We started by identifying the different services this team provided to its users and the different activities or capabilities that enabled the team to deliver those services.
 
@@ -51,17 +46,14 @@ We started by identifying the different services this team provided to its users
 
 For example, if of the team's services is to provide data integration; on the User Needs Map, we would break down all the capabilities required to deliver that service, including:
 
-Integrate with upstream data providers
-
-Validate data format, integrity and completeness
-
-Transform data to a common schema
-
-Send data to a downstream processor
+- Integrate with upstream data providers
+- Validate data format, integrity and completeness
+- Transform data to a common schema
+- Send data to a downstream processor
 
 We repeated this activity for the different services the team provides. After mapping a handful of services, we had a tree-like structure that captured how a few customer-facing services lead to dozens of different internal team activities.
 
-### Core Domain Mapping
+## Core Domain Mapping
 
 After completing the user needs mapping activity, we made a copy of all the capabilities we were able to generate and mapped them onto a [Core Domain Chart](https://github.com/ddd-crew/core-domain-charts).
 
@@ -75,9 +67,9 @@ Based on these two dimensions, we classified the team's activities into one of t
 
 **Core Domain:**
 
-The CORE DOMAIN is where the most value should be added in your system.
-
-Eric Evans, Domain-Driven Design
+> The CORE DOMAIN is where the most value should be added in your system.
+>
+> Eric Evans, Domain-Driven Design
 
 These activities are the more complex but differentiating work with high business value and are worth investing time and energy in.
 
@@ -89,9 +81,9 @@ The goal of this exercise, as it relates to the core domain, was to maximize the
 
 **Supporting Domain:**
 
-Supporting Domains are business necessities, they contain business concepts related to the domain, but there is limited ROI.
-
-Nick Tune, [Core Domain Patterns](https://medium.com/nick-tune-tech-strategy-blog/core-domain-patterns-941f89446af5)
+> Supporting Domains are business necessities, they contain business concepts related to the domain, but there is limited ROI.
+>
+> Nick Tune, [Core Domain Patterns](https://medium.com/nick-tune-tech-strategy-blog/core-domain-patterns-941f89446af5)
 
 These are the activities that either have low business value or low complexity.
 
@@ -99,21 +91,17 @@ These activities are needed to support the team's core work.
 
 These activities have to be done and will require attention from the team, but what we want to do is get more efficient at these tasks through techniques such as:
 
-Training
-
-Documentation
-
-Standardization
-
-Better technology choices
-
-Communities of practice
+- Training
+- Documentation
+- Standardization
+- Better technology choices
+- Communities of practice
 
 **Generic Domain:**
 
-A universal subdomain that can appear in any kind of software and includes standardized solutions such as account management and support functionalities.
-
-Kamil Nicieja, Writing Great Specifications
+> A universal subdomain that can appear in any kind of software and includes standardized solutions such as account management and support functionalities.
+>
+> Kamil Nicieja, Writing Great Specifications
 
 These are the activities that have low business value regardless of complexity.
 

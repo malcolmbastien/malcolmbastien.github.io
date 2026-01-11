@@ -33,7 +33,7 @@ MySQL or mSQL, the database management system (or database server);
 
 Perl or others, i.e., PHP, Python, the programming languages.
 
-On Linux, turning your computer into a [LAMP server](http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29) is a really simple task.  Having an appreciation and some experience with these terms, how they fit together, and how they enable so many powerful websites to run smoothly is priceless.
+With Linux, turning your computer into a [LAMP server](http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29) is a really simple task.  Having an appreciation and some experience with these terms, how they fit together, and how they enable so many powerful websites to run smoothly is priceless.
 
 You can understand what it means when people say Twitter is down... But you won't be able to appreciate what it means, or understand where the Internet as a whole is moving until you know what's at its very core.
 
@@ -43,9 +43,9 @@ Info like that is good to know.  Linux gives you a very easy way to get your ha
 
 ## Command Line Power
 
-*Under Linux there are GUIs (graphical user interfaces), where you can point and click and drag, and hopefully get work done without first reading lots of documentation. The traditional Unix environment is a CLI (command line interface), where you type commands to tell the computer what to do. That is faster and more powerful, but requires finding out what the commands are."*
-
-man intro(1)
+> *Under Linux there are GUIs (graphical user interfaces), where you can point and click and drag, and hopefully get work done without first reading lots of documentation. The traditional Unix environment is a CLI (command line interface), where you type commands to tell the computer what to do. That is faster and more powerful, but requires finding out what the commands are."*
+>
+> man intro(1)
 
 30 years ago people could only ever use computers by looking at at terminal, or the command line.  As time progressed people developed graphical ways to present data to users, and eventually to let them run multiple applications at the same time.  More recently, people have put attention on Usability and design - while others have been trying to develop 3d graphical effects that melt your eyes...
 
@@ -69,21 +69,14 @@ On Linux you have the freedom to try out software for free, whenever you like. 
 
 I guess I should mention that included in this long list of available [free software](http://en.wikipedia.org/wiki/Free_software) are:
 
-office suite applications
-
-accounting applications
-
-graphing and database applications
-
-contact management applications
-
-email and personal information management applications
-
-project management applications
-
-task management and to-do list applications
-
-and a lot more....
+- office suite applications
+- accounting applications
+- graphing and database applications
+- contact management applications
+- email and personal information management applications
+- project management applications
+- task management and to-do list applications
+- and a lot more....
 
 Small or medium businesses can run on this software **without a doubt**.
 
@@ -101,31 +94,15 @@ People naturally like to connect with other people like them. I can't count how 
 
 The real social opportunities that come up from the fact that you've used Linux is when you can develop a meaningful relationship with somebody because of shared experience and perspectives on Linux.  Linux is so much more than just software in the grand scheme of things, that gives you a lot of opportunities to have opinions, ideas, and points of view.
 
-What you can get out of using Linux for only a short amount of time it points of view on:
-
-Getting more children access to computers through Linux in schools
-
-Getting government to save money and being more open by using free software (Canada has just started down this path)
-
-Linux as a way to help businesses be more competitive
-
-Favourite Linux applications
-
-Favourite Desktop environments
-
-Favourite Linux distributions
-
-Thoughts on comparing Linux to Windows or OS X based on usability, design, simplicity, speed.
-
 You don't have to know everything, but having at least some experience with Linux and being able to participate in conversations will help you extend your personal reach.
 
 ## Why it matters?  Because Linux Is Reaching Critical Mass
 
 The critical mass has been reached, and it's time everyone tried Ubuntu.
 
-If I had a small or mid-size company, I'd probably use only Linux and open-source software...
-
-[John C. Dvorak, PC Magazine](http://www.pcmag.com/article2/0,2817,2342703,00.asp?kc=PCRSS03079TX1K0000584)
+> If I had a small or mid-size company, I'd probably use only Linux and open-source software...
+> 
+> [John C. Dvorak, PC Magazine](http://www.pcmag.com/article2/0,2817,2342703,00.asp?kc=PCRSS03079TX1K0000584)
 
 These quotes aren't rare anymore.  More and more Linux is becoming a mainstream idea.  The more you have experience with Linux, the better positioned you will be whenever the topic of it comes up, whether in a business context like in an interview or a meeting, or social gatherings or meetups.
 

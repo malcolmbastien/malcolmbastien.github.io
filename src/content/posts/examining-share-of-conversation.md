@@ -27,9 +27,3 @@ If we relate share of discussion to [Groundswell](http://www.forrester.com/Groun
 For this sort of analysis having a word cloud, or similar type of tool tool provides a good starting point to the analysis you can do. This is crucial for being able to see “bigger picture” ideas contained in a single graph, that stem and revolve around your product. If your listening tool is good, you should also  have the ability to quickly examine and understand anomalies that appear in discussions, related to context and have the ability to segment your data.
 
 **Again I've laid out some rough ideas, I'd love to contribute your thoughts to develop this idea further in the comments.**
-###### Related articles by Zemanta
-
-	[ Pricing, WOM, PR Efforts Get Recession Boost ](http://www.marketingvox.com/pricing-wom-pr-efforts-get-recession-boost-044214/?utm_campaign=rssfeed&utm_source=mv&utm_medium=textlink) (marketingvox.com)
-	[ Using Linkedin to listen and conduct research ](http://www.socialmediatoday.com/SMC/95542) (socialmediatoday.com)
-
-![http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpimgzemantacompixygifxid184d237144ff4755ac4881d7364ca0f7_tmajkjbuywnkeeq-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpimgzemantacompixygifxid184d237144ff4755ac4881d7364ca0f7_tmajkjbuywnkeeq-scaled500.gif?w=1)

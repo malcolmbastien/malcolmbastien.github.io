@@ -24,10 +24,3 @@ Once a representative of the company comes out and communicates with the crowd a
 If Amazon had stepped in sooner, would the web community have trended so highly for #amazonfail? Would there have even been time or interest to develop the ideas as to the different causes of the problem?
 
 I'm sure someone with a [PR](http://en.wikipedia.org/wiki/Public_relations) background would already understand the importance of [crisis management](http://en.wikipedia.org/wiki/Crisis_management) and why a quick response could quell people's imaginations from hurting the company. **But it's interesting how social media channels creates these few large ideas that immensely large groups of users will eventually gather around when left to their own devices.** The question about influence on social networks also arise again in this topic when questioning if influence rs can really influence what people believe or how people might gravitate around their thoughts.
-###### Related articles by Zemanta
-
-	[ amazonfail = PRfail ](http://www.publishingtalk.eu/blog/bookselling/amazonfail-prfail/) (publishingtalk.eu)
-	[ Beware the firepower of the online arsenal ](http://seattletimes.nwsource.com/html/businesstechnology/2009086051_brier20.html?syndication=rss) (seattletimes.nwsource.com)
-
-*Image by *[*theother66*](http://www.flickr.com/photos/23898723@N00/3274195882)* via Flickr*
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxid15f09c4f55d7448caea32ed3353e3539_eizyqfxfpdheljb-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxid15f09c4f55d7448caea32ed3353e3539_eizyqfxfpdheljb-scaled500.gif?w=1)

@@ -28,10 +28,3 @@ When you think of Evernote, you can almost imagine the tool working through an a
 So again, these tools work with anything that exist in our world, and transform it into a digital media object, and then add to that object. Posterous adds to objects by transmitting things we see or hear to digital locations or by transplanting files from our hard drives into social blog posts, and Evernote captures things with less of a social transformation occurring, but one more aligned with knowledge and [memory management](http://en.wikipedia.org/wiki/Memory_management).
 
 One adds more social elements to media, another adds more memory elements. Whenever I think of it like that I always think that there is a lot more opportunity for real world capturing.
-###### Related articles by Zemanta
-
-	[Augmented Reality Wiki](http://thelastminuteblog.com/2009/09/14/augmented-reality-wiki/) (thelastminuteblog.com)
-	[Deaugmenting Reality: When Less Is More](http://www.socialmediatoday.com/SMC/123160) (socialmediatoday.com)
-	[Nokia's take on augmented reality](http://www.francescofederico.net/2009/09/11/nokias-take-on-augmented-reality/) (francescofederico.net)
-
-![http://malcolmbastien.com/wp-content/uploads/2009/09/media_httpimgzemantacompixygifxid948b7305df3643c9a3f3d04254e47acd_lexgcqxbgsrrbzv-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/09/media_httpimgzemantacompixygifxid948b7305df3643c9a3f3d04254e47acd_lexgcqxbgsrrbzv-scaled500.gif?w=1)

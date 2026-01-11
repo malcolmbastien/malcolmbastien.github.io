@@ -20,10 +20,3 @@ As different platforms mature and get older and more recognized, there will alre
 Taking this approach is a gamble, as is everything else, but the investment is the time it takes to listen for new services when they come out, and creating a presence on those services. It's a gamble between investing time early into a service that might flop and die, or investing time early into a service that will live long and that will pay dividends as consumers take up the service.
 
 Along with an investment in time, the payback from the "adopt quickly, adopt early" approach seems to be between a positive return, or neutral return.
-###### Related articles by Zemanta
-
-	[Control, Appreciation, Safety, Simplicity, Creation](http://www.mentalblock.gr/index.php/2009/02/25/control-appreciation-safety-simplicity-creation/) (mentalblock.gr)
-	[Seth's Blog: Nothing](http://www.tsurch.com/stories/view/seths-blog-nothing/) (tsurch.com)
-
-*Image by [janusz l](http://www.flickr.com/photos/44493439@N00/3015307148) via Flickr*
-![http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpimgzemantacompixygif_deijigaholljury-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpimgzemantacompixygif_deijigaholljury-scaled500.gif?w=1)

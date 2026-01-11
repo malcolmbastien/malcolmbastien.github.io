@@ -35,8 +35,3 @@ Because **people opportunities will always be brand risks**. And the companies t
 Customers are at your step, knocking at your door. You can hear the knock. You don't need to ask yourself if you have the tools or the ability. The only thing you have to ask yourself is **will you choose to answer?**
 
 *[This post is part of the #CluetrainPlus10 project, where 99 bloggers all write a post in honor of the 10th anniversary of the Cluetain Manifesto. ](http://kylelacy.com/90-of-your-business-will-be-digital-or-wom/)*[*View the entire list of entries*](http://cluetrainplus10.pbworks.com/Sign-up-here)*[.](http://kylelacy.com/90-of-your-business-will-be-digital-or-wom/)*
-###### Related articles by Zemanta
-
-	[The Seth Godin Interview: How to Become a Leader](http://www.copyblogger.com/become-a-leader/) (copyblogger.com)
-
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxid7b0be64653b54b8d8b33b66c0548edf6_cjeeyfeffgqtcjm-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxid7b0be64653b54b8d8b33b66c0548edf6_cjeeyfeffgqtcjm-scaled500.gif?w=1)

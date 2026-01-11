@@ -1,11 +1,15 @@
 ---
-status: "seed"
+status: seed
 title: Search Ad Search Ad - Recursion Problem?
 publishedDate: 2009-10-26
 updatedDate: 2009-10-26
 slug: search-ad-search-ad-recursion-problem
 tags:
   - General
+  - Google
+  - Search
+  - sentiment
+  - Twitter
 ---
 I though crossed my mind that makes me question if advertising is anything close to being an appropriate element of real-time search today. The thought came to me when realizing that there’s so much sentiment data that’s been pulled together from tweets, that any query you throw at a Google real-time search engine would be easily answerable through the sentiment of posts users have made on your concern.
 

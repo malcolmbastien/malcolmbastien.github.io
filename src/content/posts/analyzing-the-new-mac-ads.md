@@ -19,6 +19,7 @@ What does this do to the Apple brand to people like me? To the people the ad is 
 Did the Apple brand need to be brought back down to earth?
 How does iWork and iLife connect with the Mac and buying a Mac?
 Why are the users so aloof in the commercials?
+
 ## How This Ad Compares with Others
 
 It’s the similarities these ads with other Mac campaigns, and how they are different from other iPhone and iPad campaigns where we can learn something.
@@ -38,6 +39,7 @@ Only the Mac ads refer to competitive products
 They allude to the Mac’s qualities rather than show them
 They are giving the Mac a very accessible and friendly image
 Only the Mac ads refer to specific applications like the iWork or iLife apps
+
 ### Referring to PCs
 
 The Mac ads being on the only one that refer to other products make it clear to me that the ads are targeted towards users of those products. These are “switch” ads. As switch ads they introduce the viewer explicitly to the Mac’s applications, and benefits of a Mac.

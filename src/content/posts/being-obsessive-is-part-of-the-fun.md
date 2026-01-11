@@ -1,11 +1,15 @@
 ---
 status: "seed"
 title: Being Obsessive Is Part of The Fun
-publishedDate: 2009-10-15
-updatedDate: 2009-10-15
+publishedDate: 2009-10-16
+updatedDate: 2009-10-16
 slug: being-obsessive-is-part-of-the-fun
 tags:
+  - DISQUS
   - General
+  - Posterous
+  - Tumblr
+  - Twitter
 ---
 My last post was a whole big comparison that I spent more than a day on (for doing all the research) about the general pros and cons of Tumblr vs Posterous.
 

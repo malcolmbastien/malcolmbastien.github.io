@@ -27,8 +27,3 @@ What happens now to companies who enter social media and play it safe, by using 
 While your playing it safe, and actually growing your relationship with customers, you also position yourself perfectly as an entity that customers care enough about to give suggestions or complaints to. Be positioned to let your customers build the innovations around you. No guessing necessary.
 
 **Can being "safe" by copying user behaviour, actually be the better choice?**
-###### Related articles by Zemanta
-
-	[Does Bell Canada Have a Social Media Strategy?](http://www.markevanstech.com/2009/03/06/does-bell-canada-have-a-social-media-strategy/) (markevanstech.com)
-
-![http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpimgzemantacompixiepng_iidvjkwihnjctzr-scaled500.png?w=80](http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpimgzemantacompixiepng_iidvjkwihnjctzr-scaled500.png?w=80)

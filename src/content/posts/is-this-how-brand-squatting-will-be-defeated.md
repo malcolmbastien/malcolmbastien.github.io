@@ -28,9 +28,3 @@ When social media broadcasting becomes more of a common thing in companies, and 
 Even if you are John at WidgetsNThings, and you aren't authorized to twitter and formally represent the company, isn't it fundamentally unavoidable that you are still a person who works at WidgetsNThings and that in some form you are in some sense a representative of your company in whatever you do?
 
 **Brands might be names, but in social media what's stopping them from being spread and represented by so much more?**
-###### Related articles by Zemanta
-
-	[Is Social Media an Industry?](http://mashable.com/2009/03/21/social-media-industry/) (mashable.com)
-
-![http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpimgzemantacompixygif_ljadjecemcebwmb-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpimgzemantacompixygif_ljadjecemcebwmb-scaled500.gif?w=1)
-Image via [Wikipedia](http://en.wikipedia.org/wiki/Image:Punchj.jpg)

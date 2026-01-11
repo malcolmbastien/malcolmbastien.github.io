@@ -29,10 +29,3 @@ Do you have any experince with internal micro messaging platforms?
 Will they have any impact on how we see "work life balance" disappear or change?
 
 Image via [CrunchBase](http://www.crunchbase.com/)
-###### Related articles by Zemanta
-
-	[Microblogging Will Marginalize Corporate Email](http://bhc3.wordpress.com/2009/03/13/microblogging-will-marginalize-corporate-email/) (bhc3.wordpress.com)
-	[Two practical lessons about Twitter](http://www.nevillehobson.com/2009/03/16/two-practical-lessons-about-twitter/) (nevillehobson.com)
-	[Present.ly - Internal Microblogging Just Got Better](http://davefleet.com/2009/01/presently-internal-microblogging/) (davefleet.com)
-
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxidd706b65157e44d6399e876a5afdb944b_jdchwwyvbfakggk-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxidd706b65157e44d6399e876a5afdb944b_jdchwwyvbfakggk-scaled500.gif?w=1)

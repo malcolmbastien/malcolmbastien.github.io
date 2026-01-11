@@ -89,10 +89,3 @@ Why Engagement is Under-Emphasized
 	If there is a method and way to create engagement or sentiment, what are the qualities needed, or what is the process to come up with that?
 
 Again, this post reveals some of the raw thoughts I've been coming up with around this idea. But in this case the breadth of possible angles is so broad that the point form method seemed like the best way of communicating it all.
-###### Related articles by Zemanta
-
-	[ Delicious Spy Keeps a Real-Time Eye on New Bookmarks [Del.icio.us] ](http://lifehacker.com/5310599/delicious-spy-keeps-a-real+time-eye-on-new-bookmarks) (lifehacker.com)
-	[ Gnip Launches Push API To Create Real-Time Stream Of Business Data ](http://www.techcrunch.com/2009/07/09/gnip-launches-push-api-to-create-real-time-stream-of-business-data/) (techcrunch.com)
-	[ Five steps to fantastic social media monitoring ](http://talkitup.typepad.com/weblog/2009/07/five-steps-to-fantastic-social-media-monitoring.html) (talkitup.typepad.com)
-
-![http://malcolmbastien.com/wp-content/uploads/2009/07/media_httpimgzemantacompixygifxid934be4a1a5f445e694abfd29a57e5277_bcziklefvvwdqlt-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/07/media_httpimgzemantacompixygifxid934be4a1a5f445e694abfd29a57e5277_bcziklefvvwdqlt-scaled500.gif?w=1)

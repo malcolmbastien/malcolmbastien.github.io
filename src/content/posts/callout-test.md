@@ -7,11 +7,11 @@ tags:
 summary: "Verifying all custom callout types and styles."
 ---
 
-# Callout Test Kitchen
+## Callout Test Kitchen
 
 Testing every supported callout type:
 
-## Informational
+### Informational
 > [!NOTE]
 > Standard note for small pieces of information.
 
@@ -34,7 +34,7 @@ Testing every supported callout type:
 > [!QUESTION]
 > For questions, help, or FAQs.
 
-## Issues
+### Issues
 > [!WARNING]
 > Critical warnings or cautions.
 
@@ -50,7 +50,7 @@ Testing every supported callout type:
 > [!EXAMPLE]
 > Illustrative examples.
 
-## Thoughts
+### Thoughts
 > [!QUOTE]
 > For quotes or citations.
 

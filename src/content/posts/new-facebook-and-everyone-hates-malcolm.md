@@ -29,9 +29,3 @@ Another instance of Facebook's more thorough activity-stream is when people do a
 ![http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpopenmodecawpcontentuploads200903facebookshot267x300png_ilfrsqemdohpbcb-scaled500.png?w=67](http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpopenmodecawpcontentuploads200903facebookshot267x300png_ilfrsqemdohpbcb-scaled500.png?w=67)
 
 **The new Facebook layout has been up for maybe 5 days so far? This is going to be a lot of fun...**
-###### Related articles by Zemanta
-
-	[facebook, twitter and corners. - surya says too much.](http://www.tsurch.com/stories/view/facebook-twitter-and-corners.-surya-says-too-much./) (tsurch.com)
-	[FaceBook Clones Twitter HomePage](http://www.livecrunch.com/2009/03/11/facebook-clones-twitter-homepage/) (livecrunch.com)
-
-![http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpimgzemantacompixygif_pkdwpcytegeiedm-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpimgzemantacompixygif_pkdwpcytegeiedm-scaled500.gif?w=1)

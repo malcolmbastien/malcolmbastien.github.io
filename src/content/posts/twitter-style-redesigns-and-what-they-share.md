@@ -31,8 +31,3 @@ Even if WordPress is a themeable platform, if they were to create a new default 
 **[Digg](http://digg.com)**** & [Reddit](http://reddit.com/): New versions of Digg have always been spot on whenever they came out. Reddit has always been pretty bland. Never the less, these social news sites seem like good candidates for a Twitter style redesign. In the case of these two sites, a radical redesign would do a lot to put users more in the center of the news links that are shared, discussed, and voted on by the sites larger community, as well as the connections of the user.**
 
 **I'm sure I missed a large list of sites who are changing, or coming up with new sites based on the same sort of design ideas, and even though I'm not a designer, what I think is interesting about this trend is the diversity to which different sites are trying this new layout, and ultimately, new experience applied to the services they provide. It's also really fascinating to see the new types of services that can exist when they take some of that experience and imbue it with even more creativity and are able to create, hopefully, something really different.  Although the draw back seems to be that the way people interact might start to feel very stale, very quickly given the amount of repetition that's possible.**
-###### Related articles by Zemanta
-
-	[ The PostRank Newsroom: Twitter For High-Value Information ](http://www.readwriteweb.com/archives/the_postrank_newsroom_twitter_for_important_inform.php) (readwriteweb.com)
-
-*Image by *[*Thomas Hawk*](http://www.flickr.com/photos/51035555243@N01/430523365)* via Flickr*

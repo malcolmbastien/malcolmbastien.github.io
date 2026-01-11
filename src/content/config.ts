@@ -12,6 +12,7 @@ const postsCollection = defineCollection({
 		summary: z.string().optional(),
 		featuredImage: image().optional(),
 		featuredImageAlt: z.string().optional(),
+		pinned: z.boolean().optional(),
 	}),
 });
 

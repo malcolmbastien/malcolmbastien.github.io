@@ -22,7 +22,8 @@ Each workout pointed out what I have to work on in the next year:
 13.3 showed me that my wall balls had gotten better with an improvement of 67% since last year, but that I still couldn’t even finish the first part of the workout and only performed 140 of 150 wall balls in 12 minutes. More high rep wall ball work and including them in more high intensity workouts is in the books for next year.
 13.4 showed me that I could do 135lbs clean and jerks really efficiently after some practice, but that I need to get stronger in order to handle that workload for longer durations
 13.5 reminded me that I can’t neglect pull-ups for too long or else they get really bad.
-# The Open Routine
+
+## The Open Routine
 
 The group of people who participated in the Open from our gym increased from only two people last year to seven. That made everything about it a lot more fun, and relevant to our day to day experience at the gym. People were more interested in following the Open, in tracking the workout announcements, and in learning how to maximizing their movement efficiency.
 
@@ -32,7 +33,7 @@ It also helped that everyone participating was really open to getting feedback a
 
 Being able to judge more than just one other person this year was also rewarding because just like everything else in CrossFit, my confidence wasn’t really there at the beginning and I only became comfortable judging after practice.
 
-# Preparing for Next Year
+## Preparing for Next Year
 
 Coming off the open it feels like everyone is committed to tackling their weak points, and training hard in preparation for next year.
 
