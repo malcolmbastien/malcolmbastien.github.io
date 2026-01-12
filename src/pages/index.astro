@@ -325,8 +325,12 @@ const currentYearValue = new Date().getFullYear();
     let currentEventType = "all";
     let currentYear = new Date().getFullYear().toString();
     let currentDateFilter: string | null = null;
+    let itemsToShow = 20;
+
+    const showMoreButton = document.getElementById("show-more-activity");
 
     function updateDisplay() {
+        let totalMatchingCount = 0;
         let visibleCount = 0;
 
         // Re-query to include dynamically added events
@@ -358,8 +362,13 @@ const currentYearValue = new Date().getFullYear();
                 matchesYear &&
                 matchesDate
             ) {
-                htmlEvent.style.display = "flex";
-                visibleCount++;
+                totalMatchingCount++;
+                if (visibleCount < itemsToShow) {
+                    htmlEvent.style.display = "flex";
+                    visibleCount++;
+                } else {
+                    htmlEvent.style.display = "none";
+                }
             } else {
                 htmlEvent.style.display = "none";
             }
@@ -382,33 +391,33 @@ const currentYearValue = new Date().getFullYear();
             }
         });
 
-        // Ensure containers are not blocking visibility if they contain visible things
-        const hiddenMonthsContainer = document.getElementById("hidden-months");
-        if (hiddenMonthsContainer) {
-            if (
-                currentFilter !== "all" ||
-                currentTag !== "" ||
-                currentEventType !== "all" ||
-                currentYear !== "all" ||
-                currentDateFilter !== null
-            ) {
-                hiddenMonthsContainer.classList.remove("hidden");
-                const showMoreButton = document.getElementById(
-                    "show-more-activity",
-                );
-                if (showMoreButton) showMoreButton.style.display = "none";
+        // Update "Show more" button
+        if (showMoreButton) {
+            if (totalMatchingCount > itemsToShow) {
+                showMoreButton.classList.remove("hidden");
+                showMoreButton.textContent = `Show more activity (${totalMatchingCount - itemsToShow} remaining)`;
+            } else {
+                showMoreButton.classList.add("hidden");
             }
         }
 
         if (noResults) {
-            if (visibleCount === 0) noResults.classList.remove("hidden");
+            if (totalMatchingCount === 0) noResults.classList.remove("hidden");
             else noResults.classList.add("hidden");
         }
+    }
+
+    if (showMoreButton) {
+        showMoreButton.addEventListener("click", () => {
+            itemsToShow += 20;
+            updateDisplay();
+        });
     }
 
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
             const status = (button as HTMLElement).dataset.status || "all";
+            itemsToShow = 20;
             if (currentFilter === status) {
                 button.classList.remove("active");
                 currentFilter = "all";
@@ -424,6 +433,7 @@ const currentYearValue = new Date().getFullYear();
     tagButtons.forEach((button) => {
         button.addEventListener("click", () => {
             const tag = (button as HTMLElement).dataset.tag || "";
+            itemsToShow = 20;
             if (currentTag === tag) {
                 button.classList.remove("active");
                 currentTag = "";
@@ -440,6 +450,7 @@ const currentYearValue = new Date().getFullYear();
         button.addEventListener("click", () => {
             const eventType =
                 (button as HTMLElement).dataset.eventType || "all";
+            itemsToShow = 20;
             if (currentEventType === eventType) {
                 button.classList.remove("active");
                 currentEventType = "all";
@@ -465,6 +476,8 @@ const currentYearValue = new Date().getFullYear();
             const monthSubmenu = yearItem?.querySelector(
                 ".month-submenu",
             ) as HTMLElement;
+
+            itemsToShow = 20;
 
             if (currentYear === year) {
                 if (monthSubmenu) {
@@ -509,6 +522,8 @@ const currentYearValue = new Date().getFullYear();
             const monthKey = (button as HTMLElement).dataset.month || "";
             const year = (button as HTMLElement).dataset.year || "all";
 
+            itemsToShow = 500; // Increase limit to ensure month content is visible
+
             if (currentYear !== year) {
                 const yearBtn = document.querySelector(
                     `.year-btn[data-year="${year}"]`,
@@ -527,12 +542,14 @@ const currentYearValue = new Date().getFullYear();
                     });
                 }, 50);
             }
+            updateDisplay();
         });
     });
 
     // Listen for date filter changes from activity heatmap
     window.addEventListener("dateFilterChange", (e: any) => {
         currentDateFilter = e.detail.date;
+        itemsToShow = 20;
         updateDisplay();
     });
 

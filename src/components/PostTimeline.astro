@@ -40,365 +40,154 @@ const hiddenMonths = allMonths.slice(startIndex);
 
 <div class="timeline max-w-4xl mx-auto" id="timeline">
     {
-        (() => {
-            const renderMonthSection = (
-                monthKey: string,
-                monthEvents: any[] | null,
-            ) => {
-                return (
-                    <div class="month-section" data-month={monthKey}>
-                        {/* Month header */}
-                        <div class="month-divider py-2">
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">
-                                {monthKey}
-                            </h3>
-                        </div>
+        allMonths.map((month) => {
+            const monthKey = month.key;
+            const monthEvents = eventsByMonthKey.get(monthKey) ?? null;
 
-                        {monthEvents && monthEvents.length > 0 ? (
-                            /* Events for this month */
-                            <div class="month-events space-y-2">
-                                {monthEvents.map((event: any) => {
-                                    const icon =
-                                        event.type === "created" ? "➕" : "✏️";
+            return (
+                <div class="month-section" data-month={monthKey}>
+                    {/* Month header */}
+                    <div class="month-divider py-2">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">
+                            {monthKey}
+                        </h3>
+                    </div>
 
-                                    return (
-                                        <div
-                                            class="timeline-event flex items-start gap-4 p-4 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors relative z-10"
-                                            data-status={event.post.data.status}
-                                            data-title={event.title.toLowerCase()}
-                                            data-summary={
-                                                event.post.data.summary?.toLowerCase() ||
-                                                ""
-                                            }
-                                            data-tags={event.post.data.tags
-                                                .join(" ")
-                                                .toLowerCase()}
-                                            data-created={
-                                                event.date
-                                                    .toISOString()
-                                                    .split("T")[0]
-                                            }
-                                            data-updated={
-                                                event.post.updatedDate
-                                                    .toISOString()
-                                                    .split("T")[0]
-                                            }
-                                            data-event-year={event.date.getFullYear().toString()}
-                                            data-event-type={event.type}
-                                        >
-                                            <div class="shrink-0 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl">
-                                                {icon}
-                                            </div>
-                                            <div class="flex-1 min-w-0">
-                                                <h4 class="font-bold text-lg text-slate-900 dark:text-slate-100 mb-1">
-                                                    <a
-                                                        href={`/posts/${event.post.slug}`}
-                                                        class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-                                                    >
-                                                        {event.title}
-                                                    </a>
-                                                </h4>
-                                                <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
-                                                    {event.post.data.summary ||
-                                                        ""}
-                                                </p>
-                                                <div class="flex items-center gap-3 mt-3">
-                                                    <span
-                                                        class={`px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${statusColors[event.post.data.status as keyof typeof statusColors]}`}
-                                                    >
-                                                        {event.post.data
-                                                            .status === "seed"
-                                                            ? "🌱"
-                                                            : event.post.data
-                                                                    .status ===
-                                                                "sprout"
-                                                               ? "🌿"
-                                                               : "🌳"}{" "}
-                                                        {event.post.data.status}
-                                                    </span>
+                    {monthEvents && monthEvents.length > 0 ? (
+                        /* Events for this month */
+                        <div class="month-events space-y-2">
+                            {monthEvents.map((event: any) => {
+                                const icon =
+                                    event.type === "created" ? "➕" : "✏️";
 
-                                                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500">
-                                                        {event.type === "created" ? "Created" : "Updated"}
-                                                        {event.count ? ` (${event.count})` : ""}
-                                                    </span>
+                                return (
+                                    <div
+                                        class="timeline-event flex items-start gap-4 p-4 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors relative z-10"
+                                        data-status={event.post.data.status}
+                                        data-title={event.title.toLowerCase()}
+                                        data-summary={
+                                            event.post.data.summary?.toLowerCase() ||
+                                            ""
+                                        }
+                                        data-tags={event.post.data.tags
+                                            .join(" ")
+                                            .toLowerCase()}
+                                        data-created={
+                                            event.date
+                                                .toISOString()
+                                                .split("T")[0]
+                                        }
+                                        data-updated={
+                                            event.post.updatedDate
+                                                .toISOString()
+                                                .split("T")[0]
+                                        }
+                                        data-event-year={event.date.getFullYear().toString()}
+                                        data-event-type={event.type}
+                                    >
+                                        <div class="shrink-0 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl">
+                                            {icon}
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h4 class="font-bold text-lg text-slate-900 dark:text-slate-100 mb-1">
+                                                <a
+                                                    href={`/posts/${event.post.slug}`}
+                                                    class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                                                >
+                                                    {event.title}
+                                                </a>
+                                            </h4>
+                                            <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
+                                                {event.post.data.summary ||
+                                                    ""}
+                                            </p>
+                                            <div class="flex items-center gap-3 mt-3">
+                                                <span
+                                                    class={`px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${statusColors[event.post.data.status as keyof typeof statusColors]}`}
+                                                >
+                                                    {event.post.data
+                                                        .status === "seed"
+                                                        ? "🌱"
+                                                        : event.post.data
+                                                                .status ===
+                                                            "sprout"
+                                                           ? "🌿"
+                                                           : "🌳"}{" "}
+                                                    {event.post.data.status}
+                                                </span>
 
-                                                    <div class="flex flex-wrap gap-1">
-                                                        {event.post.data.tags
-                                                            .slice(0, 2)
-                                                            .map(
-                                                                (
-                                                                    tag: string,
-                                                                ) => (
-                                                                    <span class="text-xs text-slate-500 dark:text-slate-400">
-                                                                        {"#" +
-                                                                            tag}
-                                                                    </span>
-                                                                ),
-                                                            )}
-                                                    </div>
+                                                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500">
+                                                    {event.type === "created" ? "Created" : "Updated"}
+                                                    {event.count ? ` (${event.count})` : ""}
+                                                </span>
+
+                                                <div class="flex flex-wrap gap-1">
+                                                    {event.post.data.tags
+                                                        .slice(0, 2)
+                                                        .map(
+                                                            (
+                                                                tag: string,
+                                                            ) => (
+                                                                <span class="text-xs text-slate-500 dark:text-slate-400">
+                                                                    {"#" +
+                                                                        tag}
+                                                                </span>
+                                                            ),
+                                                        )}
                                                 </div>
                                             </div>
-                                            <div class="shrink-0 w-24 flex flex-col items-end gap-1">
-                                                <time
-                                                    class="text-sm text-slate-500 dark:text-slate-400 text-right time-ago"
-                                                    data-date={event.date.toISOString()}
-                                                    title={event.date.toLocaleString()}
-                                                >
-                                                    {event.date.toLocaleDateString(
-                                                        "en-US",
-                                                        {
-                                                            month: "short",
-                                                            day: "numeric",
-                                                        },
-                                                    )}
-                                                </time>
-                                            </div>
                                         </div>
-                                    );
-                                })}
-                            </div>
-                        ) : (
-                            /* No activity message */
-                            <div class="month-no-activity p-6 text-center bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-dashed border-slate-300 dark:border-slate-700">
-                                <p class="text-sm text-slate-600 dark:text-slate-400 italic">
-                                    There was no activity during this period.
-                                </p>
-                            </div>
-                        )}
-                    </div>
-                );
-            };
-
-            // Render only the most recent month with activity initially
-            if (initialVisibleMonth) {
-                const monthEvents =
-                    eventsByMonthKey.get(initialVisibleMonth.key) ?? null;
-                return renderMonthSection(initialVisibleMonth.key, monthEvents);
-            }
-
-            // If no months at all, show empty state
-            if (allMonths.length === 0) {
-                return (
-                    <div class="text-center py-12">
-                        <p class="text-slate-600 dark:text-slate-400">
-                            No posts in the garden yet.
-                        </p>
-                    </div>
-                );
-            }
-
-            return null;
-        })()
+                                        <div class="shrink-0 w-24 flex flex-col items-end gap-1">
+                                            <time
+                                                class="text-sm text-slate-500 dark:text-slate-400 text-right"
+                                                title={event.date.toLocaleString()}
+                                            >
+                                                {event.date.toLocaleDateString(
+                                                    "en-US",
+                                                    {
+                                                        month: "short",
+                                                        day: "numeric",
+                                                        year: event.date.getFullYear() !== new Date().getFullYear() ? "numeric" : undefined
+                                                    },
+                                                )}
+                                            </time>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    ) : (
+                        /* No activity message */
+                        <div class="month-no-activity p-6 text-center bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-dashed border-slate-300 dark:border-slate-700">
+                            <p class="text-sm text-slate-600 dark:text-slate-400 italic">
+                                There was no activity during this period.
+                            </p>
+                        </div>
+                    )}
+                </div>
+            );
+        })
     }
 
-    {/* Hidden month sections for "show more" functionality */}
-    <div id="hidden-months" class="hidden">
-        {
-            hiddenMonths.map((month) => {
-                const monthEvents = eventsByMonthKey.get(month.key) ?? null;
-                const monthKey = month.key;
-
-                return (
-                    <div
-                        class="month-section hidden-month"
-                        data-month={monthKey}
-                    >
-                        {/* Month header */}
-                        <div class="month-divider py-2">
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">
-                                {monthKey}
-                            </h3>
-                        </div>
-
-                        {monthEvents && monthEvents.length > 0 ? (
-                            /* Events for this month */
-                            <div class="month-events space-y-2">
-                                {monthEvents.map((event: any) => {
-                                    const icon =
-                                        event.type === "created" ? "➕" : "✏️";
-
-                                    return (
-                                        <div
-                                            class="timeline-event flex items-start gap-4 p-4 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors relative z-10"
-                                            data-status={event.post.data.status}
-                                            data-title={event.title.toLowerCase()}
-                                            data-summary={
-                                                event.post.data.summary?.toLowerCase() ||
-                                                ""
-                                            }
-                                            data-tags={event.post.data.tags
-                                                .join(" ")
-                                                .toLowerCase()}
-                                            data-created={
-                                                event.date
-                                                    .toISOString()
-                                                    .split("T")[0]
-                                            }
-                                            data-updated={
-                                                event.post.updatedDate
-                                                    .toISOString()
-                                                    .split("T")[0]
-                                            }
-                                            data-event-year={event.date.getFullYear().toString()}
-                                            data-event-type={event.type}
-                                        >
-                                            <div class="shrink-0 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl">
-                                                {icon}
-                                            </div>
-                                            <div class="flex-1 min-w-0">
-                                                <h4 class="font-bold text-lg text-slate-900 dark:text-slate-100 mb-1">
-                                                    <a
-                                                        href={`/posts/${event.post.slug}`}
-                                                        class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-                                                    >
-                                                        {event.title}
-                                                    </a>
-                                                </h4>
-                                                <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
-                                                    {event.post.data.summary ||
-                                                        ""}
-                                                </p>
-                                                <div class="flex items-center gap-3 mt-3">
-                                                    <span
-                                                        class={`px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${statusColors[event.post.data.status as keyof typeof statusColors]}`}
-                                                    >
-                                                        {event.post.data
-                                                            .status === "seed"
-                                                            ? "🌱"
-                                                            : event.post.data
-                                                                    .status ===
-                                                                "sprout"
-                                                               ? "🌿"
-                                                               : "🌳"}{" "}
-                                                        {event.post.data.status}
-                                                    </span>
-
-                                                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500">
-                                                        {event.type === "created" ? "Created" : "Updated"}
-                                                        {event.count ? ` (${event.count})` : ""}
-                                                    </span>
-
-                                                    <div class="flex flex-wrap gap-1">
-                                                        {event.post.data.tags
-                                                            .slice(0, 2)
-                                                            .map(
-                                                                (
-                                                                    tag: string,
-                                                                ) => (
-                                                                    <span class="text-xs text-slate-500 dark:text-slate-400">
-                                                                        {"#" +
-                                                                            tag}
-                                                                    </span>
-                                                                ),
-                                                            )}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="shrink-0 w-24 flex flex-col items-end gap-1">
-                                                <time
-                                                    class="text-sm text-slate-500 dark:text-slate-400 text-right"
-                                                    title={event.date.toLocaleString()}
-                                                >
-                                                    {event.date.toLocaleDateString(
-                                                        "en-US",
-                                                        {
-                                                            month: "short",
-                                                            day: "numeric",
-                                                            year: event.date.getFullYear() !== new Date().getFullYear() ? "numeric" : undefined
-                                                        },
-                                                    )}
-                                                </time>
-                                                {event.type === "updated" && (
-                                                    <div class="flex items-center gap-1">
-                                                        <div class="w-16 h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                                                            <div
-                                                                class="h-full bg-blue-500 rounded-full"
-                                                                style={`width: ${Math.min(
-                                                                    100,
-                                                                    ((event.post
-                                                                        .data
-                                                                        .summary
-                                                                        ?.length ||
-                                                                        0) /
-                                                                        200) *
-                                                                        100,
-                                                                )}%`}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        ) : (
-                            /* No activity message */
-                            <div class="month-no-activity p-6 text-center bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-dashed border-slate-300 dark:border-slate-700">
-                                <p class="text-sm text-slate-600 dark:text-slate-400 italic">
-                                    There was no activity during this period.
-                                </p>
-                            </div>
-                        )}
-                    </div>
-                );
-            })
-        }
+    {/* No results message */}
+    <div id="no-results" class="hidden text-center py-12">
+        <p class="text-slate-600 dark:text-slate-400">
+            No activity matches your filters.
+        </p>
     </div>
 
     {/* Show more activity button */}
     <div class="text-center mt-8">
         <button
             id="show-more-activity"
-            class="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-colors"
+            class="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-colors hidden"
         >
             Show more activity
         </button>
     </div>
 </div>
 
-<script>
-    const showMoreButton = document.getElementById("show-more-activity");
-    const hiddenMonthsContainer = document.getElementById("hidden-months");
-    const timeline = document.getElementById("timeline");
-
-    if (showMoreButton && hiddenMonthsContainer && timeline) {
-        let monthsShown = 0;
-        const hiddenMonths = Array.from(hiddenMonthsContainer.children);
-
-        // If no hidden months, hide button immediately
-        if (!hiddenMonths || hiddenMonths.length === 0) {
-            showMoreButton.style.display = "none";
-        }
-
-        showMoreButton.addEventListener("click", () => {
-            if (monthsShown < hiddenMonths.length) {
-                const nextMonth = hiddenMonths[monthsShown];
-
-                // Show the month by appending it to the main timeline
-                timeline.insertBefore(nextMonth, showMoreButton.parentElement);
-
-                monthsShown++;
-
-                // If no more hidden months, hide the button
-                if (monthsShown >= hiddenMonths.length) {
-                    showMoreButton.style.display = "none";
-                }
-
-                // Trigger updateDisplay to apply any active filters to newly revealed content
-                const updateDisplayEvent = new CustomEvent(
-                    "updateDisplayNeeded",
-                );
-                window.dispatchEvent(updateDisplayEvent);
-            }
-        });
-    }
-</script>
-
 <style>
-    .hidden-month {
-        display: none;
-    }
     .month-no-activity {
         border: 2px dashed rgb(203 213 225);
     }
