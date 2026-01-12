@@ -17,25 +17,30 @@ That got me thinking about all of the other ways we might be living that don’t
 What other Paleo behaviours could be repurposed in our modern world?
 
 For ideas I’ve taken some quotes from the Wikipedia article on [Paleo-Indians](http://en.wikipedia.org/wiki/Paleo-Indians):
-Paleo-Indians (Paleoindians) or Paleoamericans is a classification term given to the first peoples who entered, and subsequently inhabited, the American continents during the final glacial episodes of the late Pleistocene period.
+
+> Paleo-Indians (Paleoindians) or Paleoamericans is a classification term given to the first peoples who entered, and subsequently inhabited, the American continents during the final glacial episodes of the late Pleistocene period.
+
 ## Constant Travel
 
 Folsom peoples traveled in small family groups for most of the year, returning yearly to the same springs and other favored locations on higher ground.
 
 Late ice age climatic changes caused plant communities and animal populations to change. Groups moved from place to place as preferred resources were depleted and new supplies were sought. Small bands utilized hunting and gathering during the spring and summer months, then broke into smaller direct family groups for the fall and winter. Family groups moved every 3–6 days, possibly covering up to 360 km (220 mi) a year.
+
 Constant travel year-round was necessary for Paleo-Indians for finding sources of food throughout the year.
 
 This is very different than today where people typically only live in a single home and only travel for short periods either recreationally or for work.
 
 Paleo-Indians also seemed to collect into larger family units during the winter months.
+
 ## Small Tribes
 
 Paleo-Indian were not numerous and population densities were quite low.
 Paleo-Indians didn’t live in large groups, but they also didn’t live alone.
 
-This makes me think about the large offices and teams that might include hundreds of people. It may be evolutionarily unnatural for us to be a part of such large organizations.
+This makes me think about the large offices and teams that might include hundreds of people. It may be evolutionary unnatural for us to be a part of such large organizations.
 
 I remember hearing the story of companies like Apple designing their offices around [Dunbar’s number](http://en.wikipedia.org/wiki/Dunbar's_number) (commonly represented as 150). When their offices would grow larger than 150 employees, they would split people out into a new office.
+
 ## Tools Makers
 
 These peoples were spread over a wide geographical area; thus there were regional variations in lifestyles. However, all the individual groups shared a common style of stone tool production

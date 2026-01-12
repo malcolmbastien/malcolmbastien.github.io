@@ -10,19 +10,19 @@ tags:
 [http://www.youtube.com/watch?v=V7q1jx8mYi8&feature=player_embedded](http://www.youtube.com/watch?v=V7q1jx8mYi8&feature=player_embedded)
 After watching this video I know a few things.
 
-	It's going to be a while before anybody implements a smoother shopping experience
-	It's not going to look like this
-	PayPal won't be the ones to do it
+- It's going to be a while before anybody implements a smoother shopping experience
+- It's not going to look like this
+- PayPal won't be the ones to do it
 
 The vision presented by PayPal of what payment solutions will look like creates more problems than it solves.
 
 In their "PayPal Across the Purchase Process" graphic they show the key value proposition of each stage is a buzz word or gimmick.
 
-	Geo-targeted mobile advertising 
-	Barcode scanning 
-	Real-time inventory availability 
-	Mobile and point-of-sale payments 
-	Virtual Wallet
+- Geo-targeted mobile advertising 
+- Barcode scanning 
+- Real-time inventory availability 
+- Mobile and point-of-sale payments 
+- Virtual Wallet
 
 It's absurd to think that the future of payments will involve consumers adopting five different new technologies and behaviours, none of which have even yet been proven in the market.
 

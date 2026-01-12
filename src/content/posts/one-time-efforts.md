@@ -19,11 +19,9 @@ It's understandable why one-time efforts are so appealing. They promise to resol
 
 Examples include:
 
-Running a workshop to install a new mindset into a group of people
-
-Implementing a new practice or framework to improve a particular outcome
-
-Applying an intervention to correct an undesirable behaviour in a person or team
+- Running a workshop to install a new mindset into a group of people
+- Implementing a new practice or framework to improve a particular outcome
+- Applying an intervention to correct an undesirable behaviour in a person or team
 
 However, these approaches often focus on whatever symptom is causing the most visible fire or creating the most pain rather than on the real root causes. Once the one-time efforts are over and the workshop ends, there's usually nothing preventing things from reverting back to the status quo. One-time efforts often work ahead of what an organization's systems can support.
 
@@ -37,11 +35,9 @@ Rather than relying on workshops or training to address a team's issue, the focu
 
 To move away from the one-time fix mentality, resist the urge to address problems through workshops or interventions. First, take a moment and reflect on what's happening, and ask yourself:
 
-How could we address this issue as part of our regular work?
-
-Where is this problem coming from?
-
-What other approaches could we take if we couldn't run a workshop?
+- How could we address this issue as part of our regular work?
+- Where is this problem coming from?
+- What other approaches could we take if we couldn't run a workshop?
 
 Instead of relying on one-time efforts, focus on establishing a consistent improvement practice. This approach not only better equips teams to handle the problems they encounter but also emphasizes team learning and growth.
 
@@ -55,11 +51,9 @@ Improvement requires constant effort. Just as you can't become physically fit fr
 
 Admittedly, developing a continuous improvement habit is more challenging than planning and running a one-time effort like a workshop. It requires:
 
-Consistency and persistence
-
-Acceptance that results may not be immediate
-
-Recognition that there's rarely a simple, one-size-fits-all solution to complex problems
+- Consistency and persistence
+- Acceptance that results may not be immediate
+- Recognition that there's rarely a simple, one-size-fits-all solution to complex problems
 
 Learning is an integral part of knowledge work. To improve, a team needs to continuously improve its understanding of its domain, its ability to learn, and its ability to deal with challenges.
 
@@ -69,13 +63,10 @@ While the benefits of continuous improvement may take time to materialize, they 
 
 While one-time efforts might seem straightforward and intuitive, they fail to create lasting change for several reasons:
 
-They often address surface-level symptoms rather than root causes.
-
-Without ongoing support, things revert to the status quo.
-
-Big one-time efforts can create a false sense of accomplishment as busyness and activity are celebrated rather than results.
-
-When they fail to produce the desired effect, one-time efforts waste people's time, making it harder to address the real issues later.
+- They often address surface-level symptoms rather than root causes.
+- Without ongoing support, things revert to the status quo.
+- Big one-time efforts can create a false sense of accomplishment as busyness and activity are celebrated rather than results.
+- When they fail to produce the desired effect, one-time efforts waste people's time, making it harder to address the real issues later.
 
 If your team doesn't already have a continuous improvement habit, start now. The most crucial part of getting started is consistency. Start with volume.
 

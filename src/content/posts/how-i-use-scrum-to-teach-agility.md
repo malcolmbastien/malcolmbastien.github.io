@@ -36,11 +36,9 @@ For the interactive exercise, I'll either use this Mural template Teaching the 
 
 After they finish with the drag-and-drop exercise, we review the answer sheet together. I then ask them some more abstract questions:
 
-What do we want to happen by doing this practice?
-
-If we didn't have this event regularly, what would happen?
-
-What problem is this role trying to solve?
+- What do we want to happen by doing this practice?
+- If we didn't have this event regularly, what would happen?
+- What problem is this role trying to solve?
 
 As people give their answers to those questions, I'll add sticky notes to the board. Not after long, the visual of the Scrum framework becomes the backdrop to a discussion on agility and ways of working.
 
@@ -50,11 +48,9 @@ One of my goals in my sessions is to have people reflect and share their persona
 
 There are several reasons I like this approach of using Scrum as a way to teach Agile:
 
-Starting with an interactive and collaborative exercise gets people engaged.
-
-By purposely not focusing on the "what" and "how" of the elements of Scrum, we have to think more critically about "why."
-
-Sharing stories of people's experiences gives participants more perspective on the goals and challenges of Agile teams.
+- Starting with an interactive and collaborative exercise gets people engaged.a
+- By purposely not focusing on the "what" and "how" of the elements of Scrum, we have to think more critically about "why."
+- Sharing stories of people's experiences gives participants more perspective on the goals and challenges of Agile teams.
 
 The workshop becomes more participant-driven rather than facilitator-led.
 
@@ -64,19 +60,13 @@ The workshop becomes more participant-driven rather than facilitator-led.
 
 If you want to run this exercise yourself, here are the steps I follow:
 
-I start by providing a high-level overview of Scrum and some context about its popularity.
-
-I then introduce the goal of the exercise, pointing out the empty canvas and the different shapes the group has to move.
-
-I then put the group into breakout rooms of three to four people and set a timer for 10 minutes for them to complete the exercise.
-
-As they work, I watch them work and look out for any areas where they struggle and make a note of any parts I should review with the whole group.
-
-Once the timer ends and all breakout rooms close, I'll uncover and provide the group with a high-level walkthrough of the answer sheet.
-
-I then ask them questions about the purpose and goals of the different Scrum practices. I annotate the answer sheet as they share their responses.
-
-Once we finish, I'll create a copy of all the sticky notes and move them into another area of the board, further emphasizing them.
+1. I start by providing a high-level overview of Scrum and some context about its popularity.
+2. I then introduce the goal of the exercise, pointing out the empty canvas and the different shapes the group has to move.
+3. I then put the group into breakout rooms of three to four people and set a timer for 10 minutes for them to complete the exercise.
+4. As they work, I watch them work and look out for any areas where they struggle and make a note of any parts I should review with the whole group.
+5. Once the timer ends and all breakout rooms close, I'll uncover and provide the group with a high-level walkthrough of the answer sheet.
+6. I then ask them questions about the purpose and goals of the different Scrum practices. I annotate the answer sheet as they share their responses.
+7. Once we finish, I'll create a copy of all the sticky notes and move them into another area of the board, further emphasizing them.
 
 ![](https://malcolmbastien.com/wp-content/uploads/2023/05/image-25.png?w=1356)Key takeaways from a past workshop 
 
