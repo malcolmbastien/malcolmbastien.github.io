@@ -5,49 +5,49 @@ tags: ["tutorial", "getting-started", "garden", "formatting", "callouts", "markd
 summary: "Learn the basics of maintaining a digital garden and how to use this template."
 ---
 
-# 🎨 Callouts and Special Formatting
+## 🎨 Callouts and Special Formatting
 
 Sprout includes a rich callout system inspired by GitHub alerts and Obsidian callouts. These help highlight important information and add visual interest to your posts.
 
-## GitHub-Style Alerts
+### GitHub-Style Alerts
 
-### Notes
+#### Notes
 > [!NOTE]
 > This is a note callout. Use it for general information that readers should be aware of.
 
-### Tips
+#### Tips
 > [!TIP]
 > This is a tip callout. Perfect for sharing helpful advice or best practices.
 
-### Important Information
+#### Important Information
 > [!IMPORTANT]
 > This is an important callout. Use it when you need to emphasize critical information.
 
-### Warnings
+#### Warnings
 > [!WARNING]
 > This is a warning callout. Use it to alert readers about potential issues or dangers.
 
-### Caution
+#### Caution
 > [!CAUTION]
 > This is a caution callout. Similar to warnings but for less critical situations.
 
-## Garden-Specific Callouts
+### Garden-Specific Callouts
 
-### Ideas
+#### Ideas
 > [!IDEA]
 > This is an idea callout. Perfect for brainstorming and sharing creative thoughts.
 
-### Questions
+#### Questions
 > [!QUESTION]
 > This is a question callout. Use it to pose questions that encourage reader engagement.
 
-### Draft Content
+#### Draft Content
 > [!DRAFT]
 > This is a draft callout. Use it to mark sections that are still being developed.
 
-## Advanced Callouts
+### Advanced Callouts
 
-### Multi-line Callouts
+#### Multi-line Callouts
 
 > [!TIP]
 > Callouts can span multiple lines
@@ -70,14 +70,14 @@ Sprout includes a rich callout system inspired by GitHub alerts and Obsidian cal
 > And even other elements like quotes:
 > > This is a nested quote inside a callout
 
-## Callout Best Practices
+### Callout Best Practices
 
 - **Use sparingly** - Too many callouts can overwhelm readers
 - **Choose appropriate types** - Different callouts serve different purposes
 - **Keep them concise** - Long callouts lose their impact
 - **Test readability** - Make sure callouts enhance, not distract from, your content
 
-## Tables
+### Tables
 
 | Callout Type | Use Case | Visual Style |
 |-------------|----------|--------------|
@@ -92,11 +92,11 @@ Sprout includes a rich callout system inspired by GitHub alerts and Obsidian cal
 
 Experiment with these callouts to find the style that works best for your garden! 🌱
 
-# 🌱 Getting Started with Your Digital Garden
+## 🌱 Getting Started with Your Digital Garden
 
 Welcome to your new digital garden! This post demonstrates the basic features and formatting options available in Sprout.
 
-## What is a Digital Garden?
+### What is a Digital Garden?
 
 A digital garden is a space for cultivating your thoughts and ideas over time. Unlike traditional blogs, gardens:
 
@@ -104,42 +104,41 @@ A digital garden is a space for cultivating your thoughts and ideas over time. U
 - **Track evolution** - See how your thoughts develop over time
 - **Encourage exploration** - Discover connections between ideas
 
-## Basic Formatting
+### Basic Formatting
 
-### Headers
+#### Headers
 Use different header levels to organize your content:
 
-# H1 - Main Title
 ## H2 - Section Headers
 ### H3 - Subsection Headers
 #### H4 - Smaller Sections
 
-### Text Formatting
+#### Text Formatting
 
 - **Bold text** using double asterisks
 - *Italic text* using single asterisks
 - ~~Strikethrough~~ using double tildes
 - `Inline code` using backticks
 
-### Lists
+#### Lists
 
-#### Unordered Lists
+##### Unordered Lists
 - Item one
 - Item two
   - Nested item
   - Another nested item
 - Item three
 
-#### Ordered Lists
+##### Ordered Lists
 1. First step
 2. Second step
 3. Third step
 
-### Links and Images
+#### Links and Images
 
 [Link to external site](https://example.com)
 
-### Code Blocks
+#### Code Blocks
 
 ```javascript
 function helloGarden() {
