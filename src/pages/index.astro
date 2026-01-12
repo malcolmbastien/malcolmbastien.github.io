@@ -24,7 +24,7 @@ const postsWithDates = allPosts.map((post) => {
     return {
         ...post,
         displayDate: post.data.publishedDate || created,
-        updatedDate: post.data.updatedDate || updated || created,
+        updatedDate: updated || created,
     };
 }).filter(post => post.displayDate); // Only show posts that have a valid date from frontmatter or git
 

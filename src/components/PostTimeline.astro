@@ -61,30 +61,25 @@ const hiddenMonths = allMonths.slice(startIndex);
                                     event.type === "created" ? "➕" : "✏️";
 
                                 return (
-                                    <div
-                                        class="timeline-event flex items-start gap-4 p-4 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors relative z-10"
-                                        data-status={event.post.data.status}
-                                        data-title={event.title.toLowerCase()}
-                                        data-summary={
-                                            event.post.data.summary?.toLowerCase() ||
-                                            ""
-                                        }
-                                        data-tags={event.post.data.tags
-                                            .join(" ")
-                                            .toLowerCase()}
-                                        data-created={
-                                            event.date
-                                                .toISOString()
-                                                .split("T")[0]
-                                        }
-                                        data-updated={
-                                            event.post.updatedDate
-                                                .toISOString()
-                                                .split("T")[0]
-                                        }
-                                        data-event-year={event.date.getFullYear().toString()}
-                                        data-event-type={event.type}
-                                    >
+                                        <div
+                                            class="timeline-event flex items-start gap-4 p-4 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors relative z-10"
+                                            data-status={event.post.data.status}
+                                            data-title={event.title.toLowerCase()}
+                                            data-summary={
+                                                event.post.data.summary?.toLowerCase() ||
+                                                ""
+                                            }
+                                            data-tags={event.post.data.tags
+                                                .join(" ")
+                                                .toLowerCase()}
+                                            data-created={
+                                                event.date
+                                                    .toISOString()
+                                                    .split("T")[0]
+                                            }
+                                            data-event-year={event.date.getFullYear().toString()}
+                                            data-event-type={event.type}
+                                        >
                                         <div class="shrink-0 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl">
                                             {icon}
                                         </div>
