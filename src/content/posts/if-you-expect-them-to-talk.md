@@ -7,10 +7,6 @@ slug: if-you-expect-them-to-talk
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/05/media_httpfarm2staticflickrcom13191243928686f659aa802cmjpg_sgjprxglhxgnmqh-scaled500.jpg?w=53](http://malcolmbastien.com/wp-content/uploads/2009/05/media_httpfarm2staticflickrcom13191243928686f659aa802cmjpg_sgjprxglhxgnmqh-scaled500.jpg?w=53)
-
-Image by [greatseth](http://www.flickr.com/photos/72829857@N00/1243928686) via Flickr
-
 If you expect them to talk, then you, the ones who create the product, need to understand the exchanges that take place to enable me to talk about you favourably.
 
 Because so far, most of the exchanges the other guys are doing have been **dead wrong**.

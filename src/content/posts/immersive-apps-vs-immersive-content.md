@@ -13,8 +13,6 @@ tags:
 ---
 App shouldn’t be immersive, but their content should be.
 
-Immersive app experiences are created by removing unessential elements from the screen. Anything that isn’t content is hidden so that your user’s videos, photos or texts can take up the entire screen. It’s wrong to try and create this same immersion throughout your app though, and trying to make everything immersive results in an application that’s harder to use.
-
 When you remove menus, headings, and push data off screen like we’ve seen in the Metro style case study, the user will be  drawn more into whats on screen, but your immersive app is now more difficult to use. Each hidden element adds a dimension of complexity for the user. Your app shouldn’t be immersive except for when dealing with individual pieces of content.
 
 The [Metro style design case study](http://openmode.ca/post/28850181731/uncovering-the-compromises-of-metro-style-apps) shows us how Metro creates immersive apps in a few ways:

@@ -19,9 +19,11 @@ Inevitably though those users get hooked. So how?
 
 It’s probably because once they start using the program, it’s not like using a desktop application. Evernote is used less like a desktop application, and more like a smartphone app.
 
-My buddy [Terence Lo](https://twitter.com/#!/terencelo) replied to me on Twitter when I first shared this idea kept it simple and in perspective:
+My buddy Terence Lo replied to me on Twitter when I first shared this idea kept it simple and in perspective:
 
 > @malcolmbastien plus it solves a fundamental problem everyone has.
+> 
+> Terence Lo
 
 He’s 100% right about that, but even so I just don’t think that that completely explains why Evernote has become as popular as it has. What ashows us that there is in fact more to it is that Evernote isn’t the only, or even the first solution of its kind. There are others like Yojimbo, and 3banana that do a lot of the same thing. I don’t know if either of those are lauded as $10 million companies.
 
@@ -39,6 +41,5 @@ Is this the blueprint for the next successful consumer productivity apps  for th
 
 Except to see a lot more Evernotes, more Simplenotes, more Dropboxes, and a lot less of what we’re used to.
 
-**Links:**
-
+## Links
 - [How Evernote Turned Note Taking Into a $10 Million Business](http://mashable.com/2010/12/10/evernote-growth/)

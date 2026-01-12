@@ -145,14 +145,3 @@ function helloGarden() {
   console.log("Welcome to your digital garden!");
 }
 ```
-
-## Next Steps
-
-1. Customize the theme colors in `src/lib/theme.ts`
-2. Update the site configuration in `astro.config.mjs`
-3. Start writing your first real post
-4. Deploy to GitHub Pages or your preferred hosting
-
-Happy gardening! 🌿
-
-For more information about getting started, check out [[hello-world]].

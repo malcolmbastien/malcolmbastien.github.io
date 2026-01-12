@@ -17,7 +17,5 @@ This essay is a [Creative Commons Attribution](http://en.wikipedia.org/wiki/Crea
 
 Two versions of the essay are available, one as a PDF file, and the second as an ODT, or [Open Document](http://en.wikipedia.org/wiki/OpenDocument) file which is the open format supported by open source office suites such as [OpenOffice.org](http://www.openoffice.org/).
 
-[Identity 2.0 - PDF Version](http://openmode.ca/wp-content/uploads/2009/04/identity-2.pdf)
-
-[Identity 2.0 - Open Document Format](http://openmode.ca/wp-content/uploads/2009/04/identity-2.odt)
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxid8f541f7aced04884a864f21014a30428_yqkrggyfsbaqnxe-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxid8f541f7aced04884a864f21014a30428_yqkrggyfsbaqnxe-scaled500.gif?w=1)
+- [Identity 2.0 - PDF Version](http://openmode.ca/wp-content/uploads/2009/04/identity-2.pdf)
+- [Identity 2.0 - Open Document Format](http://openmode.ca/wp-content/uploads/2009/04/identity-2.odt)
