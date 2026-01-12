@@ -41,8 +41,6 @@ const hiddenMonths = allMonths.slice(startIndex);
 <div class="timeline max-w-4xl mx-auto" id="timeline">
     {
         (() => {
-            const now = new Date();
-
             const renderMonthSection = (
                 monthKey: string,
                 monthEvents: any[] | null,
@@ -60,42 +58,6 @@ const hiddenMonths = allMonths.slice(startIndex);
                             /* Events for this month */
                             <div class="month-events space-y-2">
                                 {monthEvents.map((event: any) => {
-                                    const diffMs =
-                                        now.getTime() - event.date.getTime();
-                                    const diffDays = Math.floor(
-                                        diffMs / (1000 * 60 * 60 * 24),
-                                    );
-                                    const diffHours = Math.floor(
-                                        diffMs / (1000 * 60 * 60),
-                                    );
-                                    const diffMinutes = Math.floor(
-                                        diffMs / (1000 * 60),
-                                    );
-
-                                    const timeAgo =
-                                        diffDays > 7
-                                            ? event.date.toLocaleDateString(
-                                                  "en-US",
-                                                  {
-                                                      month: "short",
-                                                      day: "numeric",
-                                                  },
-                                              )
-                                            : diffDays > 0
-                                              ? `${diffDays} day${
-                                                    diffDays > 1 ? "s" : ""
-                                                } ago`
-                                              : diffHours > 0
-                                                ? `${diffHours} hour${
-                                                      diffHours > 1 ? "s" : ""
-                                                  } ago`
-                                                : diffMinutes > 0
-                                                  ? `${diffMinutes} minute${
-                                                        diffMinutes > 1
-                                                            ? "s"
-                                                            : ""
-                                                    } ago`
-                                                  : "Just now";
                                     const icon =
                                         event.type === "created" ? "➕" : "✏️";
 
@@ -150,8 +112,8 @@ const hiddenMonths = allMonths.slice(startIndex);
                                                             : event.post.data
                                                                     .status ===
                                                                 "sprout"
-                                                              ? "🌿"
-                                                              : "🌳"}{" "}
+                                                               ? "🌿"
+                                                               : "🌳"}{" "}
                                                         {event.post.data.status}
                                                     </span>
 
@@ -178,10 +140,17 @@ const hiddenMonths = allMonths.slice(startIndex);
                                             </div>
                                             <div class="shrink-0 w-24 flex flex-col items-end gap-1">
                                                 <time
-                                                    class="text-sm text-slate-500 dark:text-slate-400 text-right"
+                                                    class="text-sm text-slate-500 dark:text-slate-400 text-right time-ago"
+                                                    data-date={event.date.toISOString()}
                                                     title={event.date.toLocaleString()}
                                                 >
-                                                    {timeAgo}
+                                                    {event.date.toLocaleDateString(
+                                                        "en-US",
+                                                        {
+                                                            month: "short",
+                                                            day: "numeric",
+                                                        },
+                                                    )}
                                                 </time>
                                             </div>
                                         </div>
@@ -228,7 +197,6 @@ const hiddenMonths = allMonths.slice(startIndex);
             hiddenMonths.map((month) => {
                 const monthEvents = eventsByMonthKey.get(month.key) ?? null;
                 const monthKey = month.key;
-                const now = new Date();
 
                 return (
                     <div
@@ -246,42 +214,6 @@ const hiddenMonths = allMonths.slice(startIndex);
                             /* Events for this month */
                             <div class="month-events space-y-2">
                                 {monthEvents.map((event: any) => {
-                                    const diffMs =
-                                        now.getTime() - event.date.getTime();
-                                    const diffDays = Math.floor(
-                                        diffMs / (1000 * 60 * 60 * 24),
-                                    );
-                                    const diffHours = Math.floor(
-                                        diffMs / (1000 * 60 * 60),
-                                    );
-                                    const diffMinutes = Math.floor(
-                                        diffMs / (1000 * 60),
-                                    );
-
-                                    const timeAgo =
-                                        diffDays > 7
-                                            ? event.date.toLocaleDateString(
-                                                  "en-US",
-                                                  {
-                                                      month: "short",
-                                                      day: "numeric",
-                                                  },
-                                              )
-                                            : diffDays > 0
-                                              ? `${diffDays} day${
-                                                    diffDays > 1 ? "s" : ""
-                                                } ago`
-                                              : diffHours > 0
-                                                ? `${diffHours} hour${
-                                                      diffHours > 1 ? "s" : ""
-                                                  } ago`
-                                                : diffMinutes > 0
-                                                  ? `${diffMinutes} minute${
-                                                        diffMinutes > 1
-                                                            ? "s"
-                                                            : ""
-                                                    } ago`
-                                                  : "Just now";
                                     const icon =
                                         event.type === "created" ? "➕" : "✏️";
 
@@ -336,8 +268,8 @@ const hiddenMonths = allMonths.slice(startIndex);
                                                             : event.post.data
                                                                     .status ===
                                                                 "sprout"
-                                                              ? "🌿"
-                                                              : "🌳"}{" "}
+                                                               ? "🌿"
+                                                               : "🌳"}{" "}
                                                         {event.post.data.status}
                                                     </span>
 
@@ -367,7 +299,14 @@ const hiddenMonths = allMonths.slice(startIndex);
                                                     class="text-sm text-slate-500 dark:text-slate-400 text-right"
                                                     title={event.date.toLocaleString()}
                                                 >
-                                                    {timeAgo}
+                                                    {event.date.toLocaleDateString(
+                                                        "en-US",
+                                                        {
+                                                            month: "short",
+                                                            day: "numeric",
+                                                            year: event.date.getFullYear() !== new Date().getFullYear() ? "numeric" : undefined
+                                                        },
+                                                    )}
                                                 </time>
                                                 {event.type === "updated" && (
                                                     <div class="flex items-center gap-1">

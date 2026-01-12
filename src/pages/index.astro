@@ -13,39 +13,45 @@ const batchDates = await getBatchFileDates();
 
 // Fetch git dates for all posts to create timeline events
 const postsWithDates = allPosts.map((post) => {
-    const filePath = `src/content/posts/${post.id}`;
-    const dates = batchDates.get(filePath);
+    const id = post.id;
+    const dates = batchDates.get(`src/content/posts/${id}`) || 
+                  batchDates.get(`src/content/posts/${id}.md`) || 
+                  batchDates.get(`src/content/posts/${id}.mdx`);
+    
     const created = dates?.created;
     const updated = dates?.updated;
 
     return {
         ...post,
-        displayDate: post.data.publishedDate || created || new Date(),
-        updatedDate: updated || created || new Date(),
+        displayDate: post.data.publishedDate || created,
+        updatedDate: post.data.updatedDate || updated || created,
     };
-});
+}).filter(post => post.displayDate); // Only show posts that have a valid date from frontmatter or git
 
 // Create timeline events
 const events: any[] = [];
 postsWithDates.forEach((post) => {
+    const displayDate = post.displayDate as Date;
+    const updatedDate = post.updatedDate as Date;
+
     // Add creation event
     events.push({
         type: "created",
         post,
-        date: post.displayDate,
+        date: displayDate,
         title: post.data.title,
     });
 
     // Add update event if updated significantly later
     if (
-        post.updatedDate.getTime() >
-        post.displayDate.getTime() + 1000 * 60 * 60
+        updatedDate.getTime() >
+        displayDate.getTime() + 1000 * 60 * 60
     ) {
         // More than 1 hour
         events.push({
             type: "updated",
             post,
-            date: post.updatedDate,
+            date: updatedDate,
             title: post.data.title,
         });
     }
