@@ -91,8 +91,13 @@ function getFillColor(count: number, isDarkMode: boolean) {
 
 <div
     id="activity-heatmap"
-    class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-2"
+    class="relative bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-2"
 >
+    <div
+        id="heatmap-tooltip"
+        class="fixed hidden z-50 px-2 py-1 text-[11px] font-medium text-white bg-slate-900 dark:bg-slate-800 rounded shadow-md pointer-events-none whitespace-nowrap transition-opacity duration-200"
+    >
+    </div>
     <div class="flex items-center justify-between mb-4">
         <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100">
             Activity
@@ -132,7 +137,7 @@ function getFillColor(count: number, isDarkMode: boolean) {
                                         width="12"
                                         height="12"
                                         rx="2"
-                                        class={`${getColor(dayData.count)} transition-colors duration-300 hover:stroke-slate-400 dark:hover:stroke-slate-500 hover:stroke-1 ${dayData.count > 0 ? "cursor-pointer" : ""}`}
+                                        class={`${getColor(dayData.count)} activity-day transition-colors duration-300 hover:stroke-slate-400 dark:hover:stroke-slate-500 hover:stroke-1 ${dayData.count > 0 ? "cursor-pointer" : ""}`}
                                         data-date={dayData.date}
                                         data-count={dayData.count}
                                         onclick={
@@ -369,6 +374,53 @@ function getFillColor(count: number, isDarkMode: boolean) {
             if (clickedDay) {
                 clickedDay.classList.add("selected");
             }
+        }
+
+        // Tooltip logic
+        const tooltip = document.getElementById("heatmap-tooltip");
+        const svgElement = document.querySelector(".activity-heatmap-svg");
+
+        function formatDate(dateStr) {
+            const date = new Date(dateStr + "T00:00:00");
+            return date.toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+            });
+        }
+
+        if (svgElement && tooltip) {
+            svgElement.addEventListener("mouseover", (e) => {
+                const target = e.target;
+                if (target.tagName === "rect" && target.classList.contains("activity-day")) {
+                    const count = parseInt(target.getAttribute("data-count") || "0");
+                    const date = target.getAttribute("data-date");
+                    const formattedDate = formatDate(date);
+
+                    let text = "";
+                    if (count === 0) text = `No contributions on ${formattedDate}`;
+                    else if (count === 1) text = `1 contribution on ${formattedDate}`;
+                    else text = `${count} contributions on ${formattedDate}`;
+
+                    tooltip.textContent = text;
+                    tooltip.classList.remove("hidden");
+                }
+            });
+
+            svgElement.addEventListener("mousemove", (e) => {
+                if (!tooltip.classList.contains("hidden")) {
+                    tooltip.style.left = `${e.clientX}px`;
+                    tooltip.style.top = `${e.clientY - 30}px`;
+                    tooltip.style.transform = "translateX(-50%)";
+                }
+            });
+
+            svgElement.addEventListener("mouseout", (e) => {
+                const target = e.target;
+                if (target.tagName === "rect" && target.classList.contains("activity-day")) {
+                    tooltip.classList.add("hidden");
+                }
+            });
         }
 
         // Add selected class styling
