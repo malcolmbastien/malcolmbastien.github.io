@@ -32,7 +32,7 @@ Traditional thinking sees the causes of problems mentioned earlier as a lack of 
 
 Teams that don't understand Agile principles will also pay attention to things more Agile teams won't even think of as problems. I often encounter teams that run Sprint Planning planning meetings where they commit to a specific set of user stories. They'll then start measuring and reporting the percentage of committed stories completed each sprint. More agile teams would instead either focus on a goal rather than specific stories or avoid Sprint Planning entirely.
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/08/drift-to-waterfall.png?w=840)
+![](../../assets/2024/08/drift-to-waterfall.png)
 
 The solution to prevent the drift to waterfall starts with addressing how a team perceives and interprets their problems.
 

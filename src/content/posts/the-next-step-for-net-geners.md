@@ -7,8 +7,6 @@ slug: the-next-step-for-net-geners
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpfarm1staticflickrcom2069237905527ecbe51bmjpg_horidzaidafaldt-scaled500.jpg?w=160](http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpfarm1staticflickrcom2069237905527ecbe51bmjpg_horidzaidafaldt-scaled500.jpg?w=160)
-Image by [Giant Ginkgo](http://www.flickr.com/photos/68089733@N00/69237905) via Flickr
 
 There's a lot more land to conquer for the net generation in the world of big business.
 
@@ -27,4 +25,4 @@ But these are shallow waters when we realize that in 10 years, these Net Geners 
 It seems like this is the likely outcome as well. Because Net Geners will either adapt to existing corporate cultures over the next decade (unlikely) or they will drive cultural change in the organization all through their way up. You should be expecting it.
 
 What will those changes look like?
-What would you change? 
+What would you change?

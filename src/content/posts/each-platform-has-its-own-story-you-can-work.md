@@ -14,7 +14,7 @@ tags:
   - social
   - story
 ---
-![](http://malcolmbastien.com/wp-content/uploads/2012/10/tumblr_mbmsr8ebba1qa77f2o1_1280.jpg)
+![](../../assets/2012/10/tumblr_mbmsr8ebba1qa77f2o1_1280.jpg)
 
 Each platform has its own story. You can work though many different questions and get many different answers of Who, What, When, Where, How, and Why.
 

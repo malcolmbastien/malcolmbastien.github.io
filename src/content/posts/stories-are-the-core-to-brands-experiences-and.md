@@ -14,7 +14,7 @@ tags:
   - social
   - user experience
 ---
-![](http://malcolmbastien.com/wp-content/uploads/2012/09/tumblr_mb2li9kqvz1qa77f2o1_1280.jpg)
+![](../../assets/2012/09/tumblr_mb2li9kqvz1qa77f2o1_1280.jpg)
 
 Stories are the core to brands, experiences, and customer perspective. Media is how you bring those stories to life through a variety of platforms and channels.
 

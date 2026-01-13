@@ -52,7 +52,7 @@ If the team identifies problems involving its goals and purpose, then great, but
 
 ## Conclusion
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/08/starting-agile-1.png?w=951)
+![](../../assets/2024/08/starting-agile-1.png)
 
 When helping a team start its agile journey, avoid focusing prematurely on complex practices or idealistic solutions. Start where the team is, emphasize self-directed problem solving, and allow them to navigate their own path forward.
 

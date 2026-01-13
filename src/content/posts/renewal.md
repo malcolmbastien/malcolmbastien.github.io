@@ -26,4 +26,3 @@ During this time of branching off, what is created by both sides is a redefiniti
 When an event gets too big you might not get the same out of it any more, and the only way to be fulfilled is to branch off and start a new one that better suites your needs. But as much as everybody has their own opinions and personal preferences that might lead them to think of branching off and creating a different event, for how many of us are those feelings **outweighed by fear of creating conflict** in so local of a community.
 
 In the end, how could there ever be a strong community without this sort of renewal?
-![http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpimgzemantacompixygifxid05d504f3d11f4f47b55c09a49f51ecbd_sfkabhfmultcaih-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpimgzemantacompixygifxid05d504f3d11f4f47b55c09a49f51ecbd_sfkabhfmultcaih-scaled500.gif?w=1)

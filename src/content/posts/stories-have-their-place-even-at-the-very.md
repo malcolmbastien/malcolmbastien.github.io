@@ -18,7 +18,7 @@ tags:
   - story
   - user experience
 ---
-![](http://malcolmbastien.com/wp-content/uploads/2012/10/tumblr_mbdn7vcwjz1qa77f2o1_1280.jpg)
+![](../../assets/2012/10/tumblr_mbdn7vcwjz1qa77f2o1_1280.jpg)
 
 Stories have their place even at the very beginning of marketing strategy, and a lof of the work from research and analysis should very much be thought about and be shared with others as stories.
 

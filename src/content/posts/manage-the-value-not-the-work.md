@@ -14,7 +14,7 @@ In the former approach, organizations will create projects with defined targets 
 
 In "[What is Agile?](https://blog.crisp.se/wp-content/uploads/2013/08/20130820-What-is-Agile.pdf)" Henrik Kniberg drew a picture to visualize the risk with big batch releases. On the left, we see the risk inherent with large batch sizes. On the right, we see how small batches reduce risk and deliver value sooner.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/07/image-1.png?w=2411)
+![](../../assets/2023/07/image-1.png)
 
 Too many organizations create "Agile" teams and implement "Agile" practices but do so in a big batch project context. In those organizations, managers enforce certain practices and track teams' progress to ensure their project's success. But working incrementally and iteratively in a way that delivers real value requires different a completely different set of practices.
 
@@ -70,7 +70,7 @@ Smaller features
 
 Smaller checkpoints, goal-posts or milestones
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/07/image-2.png?w=2493)Shifting from a fixed goal to smaller checkpoints
+![](../../assets/2023/07/image-2.png)Shifting from a fixed goal to smaller checkpoints
 
 Shifting from project-based thinking to an iterative and incremental way of working where teams release frequently creates more opportunities to:
 
@@ -104,7 +104,7 @@ When you work incrementally instead of on long projects, "Trust us" metrics beco
 
 As teams deliver incrementally and achieve smaller milestones, the size of their plans starts becoming smaller compared to the software already built.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/07/image-3.png?w=2457)As teams deliver, the size of their plans starts becoming smaller compared to the software already built
+![](../../assets/2023/07/image-3.png)As teams deliver, the size of their plans starts becoming smaller compared to the software already built
 
 ## Short-term Plans, Long-term Direction
 
@@ -114,7 +114,7 @@ The Principles of Product Development Flow
 
 It's less agile for teams to commit to fixed, long-term goals. Agile teams keep options open by only committing to short-term goals that provide feedback and learning opportunities. Over longer time horizons, agile teams have looser, more directional plans, which can change.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/07/image-5.png?w=2022)Agile teams have short-term plans, but only directional long-term goals
+![](../../assets/2023/07/image-5.png)Agile teams have short-term plans, but only directional long-term goals
 
 ## Focus on Working Software over Plans
 

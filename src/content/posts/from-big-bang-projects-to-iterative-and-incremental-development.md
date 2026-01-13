@@ -13,7 +13,7 @@ tags:
 ---
 Whenever I come across presentations or articles about MVPs, I often see the same image. It's the one showing a skateboard evolving into a scooter, then a bike, then a motorcycle and finally a car. Henrik Kniberg created this graphic as a part of a 2013 presentation titled "[Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)". His image went viral and is still in the top results when searching for MVP on Google. The graphic was well-intentioned, but over the last decade, it has stolen the show, and the presentation's main point has gotten lost. Everybody shared, wrote about and presented this graphic, but people haven't spent as much time absorbing the rest of the presentation.
 
-![Graphic comparing two approaches to product development: a flawed linear progression ('Not like this...') with unhappy faces; and an incremental approach showing a sequence from skateboard to car with happy faces ('Like this!').](https://openmode.wordpress.com/wp-content/uploads/2025/08/image.png?w=1363)Henrik Kniberg, [Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)
+![](../../assets/2025/08/image.png)Henrik Kniberg, [Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)
 
 In this post, I'm less interested in discussing the different ways to do MVPs, better alternative labels, or thoroughly dissecting the graphic. What I am interested in is that, after 12 years, so many IT projects are still doing Big Bang delivery.
 
@@ -37,7 +37,7 @@ Trying to "get it right" delays feedback.
 
 The Big Bang delivery approach carries a big risk: If you're building a car, and you discover halfway through that nobody wants a car, you've wasted a ton of effort.
 
-![A comparison graphic illustrating an approach to project delivery: on the left, a convoluted path to a car with obstacles, and on the right, a straight path leading directly to a car, emphasizing one large action.](https://openmode.wordpress.com/wp-content/uploads/2025/08/image-1.png?w=1578)Attempting to deliver a specific product from start to finish in one large effort. 
+![](../../assets/2025/08/image-1.png)Attempting to deliver a specific product from start to finish in one large effort. 
 
 Even "good" project plans cannot be agile:
 
@@ -59,7 +59,7 @@ Following the plan becomes more important than doing the right thing.
 
 They aim to achieve their final goal in one shot by mechanically organizing resources and activities in an optimally structured way that minimizes waste and maximizes output.
 
-![A cartoon showing a sequence of images with sad faces on early prototypes and a happy face on the final product, emphasizing the message 'Not like this....'.](https://openmode.wordpress.com/wp-content/uploads/2025/08/image-5.png?w=1179)Henrik Kniberg, [Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)
+![](../../assets/2025/08/image-5.png)Henrik Kniberg, [Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)
 
 One point from the graphic I do think is worth pointing out: In the top example, there are still deliveries happening throughout the project. The problem with the top example is that none of those deliveries are usable by the customer, and so it's impossible to create a useful feedback loop. When we talk about a Big Bang delivery, there may be deliveries happening, but the Big Bang part is when customers finally get something they can use and when useful feedback is possible. A Big Bang delivery embodies all of the guesses and assumptions baked into the project plan up until that point.
 
@@ -105,7 +105,7 @@ Speed is the only moat.
 
 ## **The Current Knowledge Threshold**
 
-![Illustration depicting the planning phase in a process improvement framework, highlighting steps to understand the direction, grasp the current condition, establish the next target condition, and iterate toward that target. Includes visuals of a figure, arrows, and key phrases in boxes.](https://openmode.wordpress.com/wp-content/uploads/2025/08/image-4.png?w=1244)Mike Rother, [Improvement Kata and Coaching Kata Practice Guide](https://public.websites.umich.edu/~jmondisa/TK/Handbook/Practice_Guide.pdf)
+![](../../assets/2025/08/image-4.png)Mike Rother, [Improvement Kata and Coaching Kata Practice Guide](https://public.websites.umich.edu/~jmondisa/TK/Handbook/Practice_Guide.pdf)
 
 Instead of only relying on the skateboard-to-car model presented in Henrik's graphic, it's also helpful to consider the "Current Knowledge Threshold" model by Mike Rother. This graphic is helpful because it illustrates what's happening at each stage in the process in more detail:
 
@@ -117,7 +117,7 @@ Next, you establish a new target condition. This isn't the ultimate destination;
 
 The overarching "Challenge" provides the necessary sense of direction, but the path to get there is flexible, evolving as teams learn. Teams consistently iterate, moving towards each target condition, learning and adapting along the way. Teams are iterating and incrementing their way closer to the "Challenge".
 
-![Illustration of the Current Knowledge Threshold model showing a progression from a single dot representing a challenge through various stages of increasing understanding, marked by dotted lines and arrows indicating movement toward deeper insights.](https://openmode.wordpress.com/wp-content/uploads/2025/08/image-3.png?w=1637)The learning process in IT product development, working towards a challenge through incremental and iterative deliveries and learning.
+![](../../assets/2025/08/image-3.png)The learning process in IT product development, working towards a challenge through incremental and iterative deliveries and learning.
 
 A lot of the material on MVPs focuses on how the goal is learning, and the Current Knowledge Threshold model does a nice job of showing what a product development learning process looks like.
 
@@ -135,7 +135,7 @@ This leads us to a core truth I often find myself coming back to: there's no suc
 
 You don't need complicated processes, and you don't need fancy agile team structures. You need "small." Small increments, little bets, fast & cheap prototypes, and rapid cycles of continuous learning and adaptation.
 
-![Comparison of Big Bang approach and Agile approach for IT product development, illustrating project delivery models.](https://openmode.wordpress.com/wp-content/uploads/2025/08/image-6.png?w=1232)Henrik Kniberg, [Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)
+![](../../assets/2025/08/image-6.png)Henrik Kniberg, [Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)
 
 Without understanding the whole of Henrik's presentation, it's too easy to talk about MVPs and value, yet still plan big, long projects.
 

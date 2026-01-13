@@ -7,8 +7,6 @@ slug: are-brands-better-off-when-they-act-like-their-customers-online
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpuploadwikimediaorgwikipediacommonsthumb77fmalesanasplatyrhynchos2jpg202pxmalesanasplatyrhynchos2jpg_gbfbpobvjsxwngk-scaled500.jpg?w=202](http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpuploadwikimediaorgwikipediacommonsthumb77fmalesanasplatyrhynchos2jpg202pxmalesanasplatyrhynchos2jpg_gbfbpobvjsxwngk-scaled500.jpg?w=202)
- 
 
 There's a lot that can be said for social media, especially when it comes to failures by companies that make the leap in joining the space with a lot of wrong predictions as to what will work best and what its customers want.
 

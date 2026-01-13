@@ -21,6 +21,3 @@ I've put some thought into a video talking about:
 Nothing hard planned yet, just some ideas to get other people thinking and let them raise their voice if they also are interested. Needless to say, as someone who has been blogging for a few years, and listening to podcasts for even longer, I think there is still a lot of value we can generate and some real good we can do by coming together as a weekly podcast.
 
 Feel free to leave a Seesmic comment from Disqus by using the "Use Media > Record Video" option.
-
-[http://seesmic.com/embeds/wrapper.swf](http://seesmic.com/embeds/wrapper.swf)
-![http://malcolmbastien.com/wp-content/uploads/2009/05/media_httpimgzemantacompixygifxid4622ef7133ef4aa2b4a76b39a4ce9fac_fcrblsybyqdkvmg-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/05/media_httpimgzemantacompixygifxid4622ef7133ef4aa2b4a76b39a4ce9fac_fcrblsybyqdkvmg-scaled500.gif?w=1)

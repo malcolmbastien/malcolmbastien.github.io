@@ -9,7 +9,7 @@ tags:
   - Image
   - Sketches
 ---
-![](http://malcolmbastien.com/wp-content/uploads/2012/10/tumblr_mbj4qoh0hf1qa77f2o1_1280.jpg)
+![](../../assets/2012/10/tumblr_mbj4qoh0hf1qa77f2o1_1280.jpg)
 
 Four types of consumers we tell our stories to, and how we want to affect them.
 

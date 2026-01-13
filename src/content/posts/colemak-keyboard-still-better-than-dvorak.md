@@ -7,8 +7,6 @@ slug: colemak-keyboard-still-better-than-dvorak
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpfarm2staticflickrcom1018807240231f74b67bfa2mjpg_ssdirllddjwdgvc-scaled500.jpg?w=240](http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpfarm2staticflickrcom1018807240231f74b67bfa2mjpg_ssdirllddjwdgvc-scaled500.jpg?w=240)
- Image by [vivified](http://www.flickr.com/photos/24856121@N00/807240231) via Flickr 
 
 It's four months since I began using the Colemak keyboard layout, what was supposedly better than either [QWERTY](http://en.wikipedia.org/wiki/QWERTY) (no contest there) as well as [Dvorak](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard), which was where the real question lay.
 
@@ -33,4 +31,3 @@ It's also been hard to find a really good tool for measuring and comparing the e
 **Go and try it out now at [www.colemak.com](http://colemak.com)**
 
 **I'd love to hear your experiences of using Colemak, the things you've liked or disliked.**
-![http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpimgzemantacompixygifxid5c5c6d008ce647f6aa1a3731c9d7e6ff_jfaohxyhismgape-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpimgzemantacompixygifxid5c5c6d008ce647f6aa1a3731c9d7e6ff_jfaohxyhismgape-scaled500.gif?w=1)

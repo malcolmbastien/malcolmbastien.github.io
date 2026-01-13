@@ -9,7 +9,7 @@ tags:
   - General
   - tools
 ---
-![](https://malcolmbastien.com/wp-content/uploads/2024/01/image-1.png?w=2500)Image: [Strategyer](https://www.strategyzer.com/)
+![](../../assets/2024/01/image-1.png)Image: [Strategyer](https://www.strategyzer.com/)
 
 Years ago, when dealing with a team facing lots of interpersonal issues and a lack of safety, where people were not able to work together, and nothing seemed to work, I turned to the [Culture Map](https://xplaner.com/culturemap/), created by [Dave Gray](https://xplaner.com/), as a way to help the team map, understand, and transform their culture. Since then, I've frequently turned to the Culture Map whenever there's been a need to help people better understand many different types of situations.
 
@@ -55,7 +55,7 @@ W. Edwards Deming
 
 Deming's quote made me think of the connection we're exploring using the Culture Map. Mapping his quote to the Culture Map, we get:
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/01/png-2.png?w=2589)
+![](../../assets/2024/01/png-2.png)
 
 If the sum of an organization's enablers, blockers and behaviours is the system, then it's also true that its enablers, blockers, and behaviours are perfectly designed to get the outcomes it does.
 

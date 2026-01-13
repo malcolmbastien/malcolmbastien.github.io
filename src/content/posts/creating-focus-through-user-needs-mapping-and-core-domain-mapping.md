@@ -42,7 +42,7 @@ These steps include:
 
 We started by identifying the different services this team provided to its users and the different activities or capabilities that enabled the team to deliver those services.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/12/shapes-at-23-12-22-15.49.57.png?w=5195)An example User Needs Map showing the value chain between users, user needs and capabilities
+![](../../assets/2023/12/shapes-at-23-12-22-15.49.57.png)An example User Needs Map showing the value chain between users, user needs and capabilities
 
 For example, if of the team's services is to provide data integration; on the User Needs Map, we would break down all the capabilities required to deliver that service, including:
 
@@ -57,7 +57,7 @@ We repeated this activity for the different services the team provides. After ma
 
 After completing the user needs mapping activity, we made a copy of all the capabilities we were able to generate and mapped them onto a [Core Domain Chart](https://github.com/ddd-crew/core-domain-charts).
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/12/shapes-at-23-12-22-15.14.23.png?w=2224)The Core Domain Chart categorizes systems into three groups depending on their business differentiation and model complexity.
+![](../../assets/2023/12/shapes-at-23-12-22-15.14.23.png)The Core Domain Chart categorizes systems into three groups depending on their business differentiation and model complexity.
 
 Traditionally, a Core Domain Chart is a tool that helps you map out the parts of your architecture as a portfolio and helps you make strategic decisions about where to focus your efforts. But instead of looking at it through the lens of system architecture, I wanted to understand the team's activities. Of the things they were doing, what was strategic? What was overhead? What was toil?
 
@@ -111,7 +111,7 @@ The goal of activities mapped to the generic domain is to get other teams to han
 
 These ideas of how to treat activities of each domain are directly inspired by the material on germane, intrinsic and extraneous cognitive load found in [Team Topologies](https://teamtopologies.com/).
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/12/shapes-at-23-12-22-16.12.54.png?w=5386)Combining the capabilities from the Users Needs Mapping onto the Core Domain Chart reveals what capabilities are Core, Supporting or Generic.
+![](../../assets/2023/12/shapes-at-23-12-22-16.12.54.png)Combining the capabilities from the Users Needs Mapping onto the Core Domain Chart reveals what capabilities are Core, Supporting or Generic.
 
 ## What Did We Learn?
 

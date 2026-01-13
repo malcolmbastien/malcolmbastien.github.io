@@ -55,7 +55,7 @@ Check the work and assess your performance in closing the gap.
 
 Use those results to identify the next target state.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/04/image-3.png?w=1584)
+![](../../assets/2023/04/image-3.png)
 
 This pattern aligns with what Ron Jeffries calls "Bracketed Intervals."
 

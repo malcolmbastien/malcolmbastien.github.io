@@ -60,7 +60,7 @@ These questions shift the focus from an isolated team backlog to a connected del
 
 Making dependencies visible is the idea behind a [proof-of-concept tool](https://team-dependency-matrix-838267439197.us-west1.run.app/) I've been exploring based on big room planning and the [Team Dependency Matrix](https://malcolmbastien.com/2023/12/28/the-team-dependency-matrix/). It focuses planning around capturing and validating dependencies.
 
-![A dashboard for Agile Big Room Planning displaying the Risk Matrix of Confidence vs. Effort, with assessment metrics like Plan Completeness, Team Load vs. Capacity, and Dependency Hotspots. It illustrates outgoing and incoming dependencies across teams and visualizes risks in project planning.](https://openmode.wordpress.com/wp-content/uploads/2025/10/image-9.png?w=1506)Dashboard for [Agile Big Room Planning](https://team-dependency-matrix-838267439197.us-west1.run.app/) app, showcasing risk metrics, team loads, and dependencies to enhance planning and delivery.
+![](../../assets/2025/10/image-9.png)Dashboard for [Agile Big Room Planning](https://team-dependency-matrix-838267439197.us-west1.run.app/) app, showcasing risk metrics, team loads, and dependencies to enhance planning and delivery.
 
 The tool captures each team's planned scope and the dependencies they have on other teams. When Team A lists a dependency on Team B, Team B sees the new incoming work, provides an estimate, and the new work is incorporated into their capacity planning
 
@@ -76,11 +76,11 @@ When planning makes dependencies between teams clear, new interactions become po
 
 This approach captures simple but typically missed data that can make quarterly or annual planning events easier and more useful for teams.
 
-![Screenshot of an Agile Big Room Planning tool interface showing teams and their estimated capacities, with options to manage dependencies and scope details.](https://openmode.wordpress.com/wp-content/uploads/2025/10/image-10.png?w=1529)Team management and project scope editing features.
+![](../../assets/2025/10/image-10.png)Team management and project scope editing features.
 
-![Screenshot of an Agile Big Room Planning tool interface showing team estimates for Web Development, including initiatives like 'Implement dark mode,' 'Add social media integration,' and 'Improve search algorithms,' along with requests from other teams.](https://openmode.wordpress.com/wp-content/uploads/2025/10/image-11.png?w=1512)Estimating view for team initiatives and requests.
+![](../../assets/2025/10/image-11.png)Estimating view for team initiatives and requests.
 
-![Report showing Agile Big Room Planning for Backend Development with planned scope and dependencies.](https://openmode.wordpress.com/wp-content/uploads/2025/10/image-12.png?w=1515)Report view showing planned scope and dependencies across teams, highlighting workload and incoming demand.
+![](../../assets/2025/10/image-12.png)Report view showing planned scope and dependencies across teams, highlighting workload and incoming demand.
 
 ### Conclusion
 

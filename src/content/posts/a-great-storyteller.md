@@ -7,8 +7,7 @@ slug: a-great-storyteller
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpuploadwikimediaorgwikipediacommonsthumb88athefriendlygiantcastlesetcbcmuseumpng200pxthefriendlygiantcastlesetcbcmuseumpng_nvschmdmymfempu-scaled500.png?w=200](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpuploadwikimediaorgwikipediacommonsthumb88athefriendlygiantcastlesetcbcmuseumpng200pxthefriendlygiantcastlesetcbcmuseumpng_nvschmdmymfempu-scaled500.png?w=200)
- 
+
 I don't know how to tell a story.
 
 In fact, I bet we're all pretty bad at it.
@@ -53,4 +52,3 @@ So let's worry less for a little while about delivering value, being "viral" (ch
 
 Who are your favourite story tellers?
 How have you seen story telling be used in business?
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxid5b40beb1718d4407b875ad34239b680d_tmchjjxgbgvkcnq-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxid5b40beb1718d4407b875ad34239b680d_tmchjjxgbgvkcnq-scaled500.gif?w=1)

@@ -14,7 +14,7 @@ tags:
   - Sketches
   - social
 ---
-![](http://malcolmbastien.com/wp-content/uploads/2012/10/tumblr_mbnaboytft1qa77f2o1_1280.jpg)
+![](../../assets/2012/10/tumblr_mbnaboytft1qa77f2o1_1280.jpg)
 
 I came up with the idea that each platform has a particular purpose based on what an outcome looks like for the user.
 

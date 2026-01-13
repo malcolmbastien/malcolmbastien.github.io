@@ -106,7 +106,7 @@ Troy Magennis
 
 Dependencies reveal more teams and interactions between teams that need to be healthy for predictable delivery to happen. Aside from the teams themselves, the interactions between teams have their own health that needs to be paid attention to.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/08/image-2.png?w=1476)The teams and the interactions between the teams need to be healthy for smooth flow.
+![](../../assets/2023/08/image-2.png)The teams and the interactions between the teams need to be healthy for smooth flow.
 
 Dependencies increase the number of teams and the number of interactions work needs to flow through smoothly, which is what makes dependencies such a risk for predictable delivery.
 
@@ -116,7 +116,7 @@ But bringing dependencies under control is also a challenge. Take all the delive
 
 This visual, inspired by Troy Magennis, helps to show just what a significant impact dependencies between multiple teams have on delivery.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/08/image.png?w=1714)Each dependency halves the chances of you delivering on time. (Learn more at [Impact of Multiple Team Dependencies in Software Development](https://observablehq.com/@troymagennis/impact-of-multiple-team-dependencies-in-software-developm))
+![](../../assets/2023/08/image.png)Each dependency halves the chances of you delivering on time. (Learn more at [Impact of Multiple Team Dependencies in Software Development](https://observablehq.com/@troymagennis/impact-of-multiple-team-dependencies-in-software-developm))
 
 ### Overburdening, Poor Code Health and Technical Debt Hurt Predictability
 
@@ -126,7 +126,7 @@ Overburdening happens when a team is under stress to deliver more work than they
 
 The unpredictability of poor code health and technical debt comes from the fact that the cost to change the system increases over time.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/08/image-3.png?w=1485)Systems can't be predictable if development costs increase uncontrollably
+![](../../assets/2023/08/image-3.png)Systems can't be predictable if development costs increase uncontrollably
 
 ### High WIP & Large Queues Hurt Predictability
 

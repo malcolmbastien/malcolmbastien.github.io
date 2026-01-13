@@ -18,8 +18,6 @@ Following are a few examples of open-source applications leading the way in this
 
 [](http://sweetcron.com/)PHP (with [CodeIgniter](http://codeigniter.com/)), GPL v3
 
-![http://malcolmbastien.com/wp-content/uploads/2008/09/media_httpopenmodecawpcontentuploads200809sweetcronlogogif_ghedgsrihycsocj-scaled500.gif?w=300](http://malcolmbastien.com/wp-content/uploads/2008/09/media_httpopenmodecawpcontentuploads200809sweetcronlogogif_ghedgsrihycsocj-scaled500.gif?w=300)
-
 Developed by Japan based developer [Yongfook](http://www.yongfook.com/) (his site is running the lastest version of Sweetcron), Sweetcron is an open source life streaming solution that collects the sum of your actions across the web based on the feeds you configure it to follow.  Sweetcron is designed as an alternative to similar services like [Friendfeed](http://friendfeed.com/), but without any of the same social networking features.
 ## Micro-Blogging: [Laconica](http://laconi.ca/trac/)
 
@@ -32,18 +30,13 @@ An example of setting up your own hosted micro-blogging network is [The Twit Ar
 
 [](http://piwik.org/)PHP, GPL v3
 
-![http://malcolmbastien.com/wp-content/uploads/2008/09/media_httpopenmodecawpcontentuploads200809piwiklogojpg_kacfidezlorhzal-scaled500.jpg?w=182](http://malcolmbastien.com/wp-content/uploads/2008/09/media_httpopenmodecawpcontentuploads200809piwiklogojpg_kacfidezlorhzal-scaled500.jpg?w=182)
-
 Formally called phpMyVisites, Piwik is an open source alternative to web analytics packages like [Google Analytics](http://www.google.com/analytics).  It's currently in Beta, and some of it's notable features include it's Plug-in support for developer created add-on functionality, and graphs and charts that are embeddable into websites.  Plug-ins for other platforms including [Wordpress](http://wordpress.org/), [Mediawiki](http://www.mediawiki.org/wiki/MediaWiki), [Docuwiki](http://docuwiki.net/index.php?title=Main_Page), and [Typo3](http://typo3.org/) have already been developed that enable Piwik to be installed onto each of the platforms with some custom options (e.g., disabling admin user tracking for Wordpress).  Personally, I would have preferred if more of their visualizations were built using Javascript rather than Flash.
 ## RSS Aggregator: [Lilina](http://getlilina.org/)
 
 [](http://getlilina.org/)PHP, GPL v2
-
-![http://malcolmbastien.com/wp-content/uploads/2008/09/media_httpgetlilinaorgsharedimageslogoblackpng_wsyjpcvdndicgjd-scaled500.png?w=125](http://malcolmbastien.com/wp-content/uploads/2008/09/media_httpgetlilinaorgsharedimageslogoblackpng_wsyjpcvdndicgjd-scaled500.png?w=125)
 
 A lightweight, RSS aggregator, Lilina was the only example I could find of a self-hosted and open source alternative to Google Reader.  It seems to be a rather new product with support for plug-ins and custom themes.  But there's a lack of documentation or media on the project homepage.  Something to look out for in the future perhaps.
 
 The room for new projects is immense.  Projects like an open-source self-hosted office suite, or a calendar application would make great applications for those people who prefer working with their data on the cloud, but at the same time want the control hosting their own data.
 
 There's a lot of room for discussion on this topic:  What are your main concerns with relying on a third party for your information? Would you use a self-hosted and open source application even if it offered less functionality?  How important is a commercial backing to these open-source and self-hosted applications, and are there any start-up opportunities there?
-![http://malcolmbastien.com/wp-content/uploads/2008/09/media_httpimgzemantacomreblogcpngxid0c84ebdde5784c028e638bd834a6ff89_xjimvhbbisbshjx-scaled500.png?w=70](http://malcolmbastien.com/wp-content/uploads/2008/09/media_httpimgzemantacomreblogcpngxid0c84ebdde5784c028e638bd834a6ff89_xjimvhbbisbshjx-scaled500.png?w=70)

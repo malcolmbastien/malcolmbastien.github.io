@@ -7,7 +7,6 @@ slug: the-reality-of-the-crowds
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpfarm4staticflickrcom312032741958827fed00b80cmjpg_jxhuanefryehrwo-scaled500.jpg?w=240](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpfarm4staticflickrcom312032741958827fed00b80cmjpg_jxhuanefryehrwo-scaled500.jpg?w=240)
 
 When a crisis occurs, or when users are all suffering with a problem, they go online. They need to find out if other people have the same problem, how to fix it, and what caused the problem to begin with. This third point, what caused the problem, helps people to understand: What the issue was, what caused it, and who to blame.
 

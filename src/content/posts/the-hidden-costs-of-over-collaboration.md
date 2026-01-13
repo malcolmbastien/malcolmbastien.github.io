@@ -24,7 +24,7 @@ The push to handle dependencies with more and more collaboration takes the oppor
 
 ## The Hidden Costs of Excessive Collaboration
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/09/hidden-costs-of-collaboration.png)The hidden costs of excessive collaboration
+![](../../assets/2024/09/hidden-costs-of-collaboration.png)The hidden costs of excessive collaboration
 
 While collaboration can be valuable, it's important to recognize the costs of relying on it too much:
 

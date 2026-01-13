@@ -30,17 +30,17 @@ When we started mapping these options, my client was the first to say, "Some of 
 
 Note that all the content in the graphics will be using the example of a fictitious neighbourhood coffee shop.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/08/image-8.png?w=1991)Breaking down options into enhancements and big changes.
+![](../../assets/2023/08/image-8.png)Breaking down options into enhancements and big changes.
 
 At this point, we had modelled the risk of our various options and what I was calling the "potential downside," so I suggested, "Why don't we add a second axis to show the potential upside?"
 
 We ended up with a 2x2 matrix with the two dimensions being the risk of doing them wrong and the value of doing them right. Adding this second axis gave us what we needed to organize our options and judge whether the client was focusing on the right options.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/08/image-9.png?w=2502)Adding a second dimension of potential upside/value.
+![](../../assets/2023/08/image-9.png)Adding a second dimension of potential upside/value.
 
 With all of our options mapped, we then annotated it with some extra information, like what actions the client was taking, what options those actions were addressing, and what options were blocked and why.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/08/image-11.png?w=1465)Annotating the model with extra info on current activities and obstacles.
+![](../../assets/2023/08/image-11.png)Annotating the model with extra info on current activities and obstacles.
 
 After we added all the various options into the model, we reflected on what it was telling us:
 
@@ -54,7 +54,7 @@ After we added all the various options into the model, we reflected on what it w
 
 ## What the Model Is Telling Us
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/08/image-10.png?w=1372)The 2x2 helps map options out into four broad categories: Big bets, Must-dos, Easy wins, and Indifferent.
+![](../../assets/2023/08/image-10.png)The 2x2 helps map options out into four broad categories: Big bets, Must-dos, Easy wins, and Indifferent.
 
 As simple as it is, I've never seen a model like this used before, so the day after we created it, I spent some time thinking about what it was telling us and how it could be used.
 
@@ -96,7 +96,7 @@ These options are the big bets because they have a lot of potential value but al
 
 If you pick up and commit to one of these options, it will likely require more time, attention and energy than anything else.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/08/image-12.png?w=1739)Exploring how each quadrant represents the relationship between value and risk.
+![](../../assets/2023/08/image-12.png)Exploring how each quadrant represents the relationship between value and risk.
 
 After you map your options, the key question you should have more clarity on is: **Are you paying attention and investing time on the right things?**
 
@@ -110,4 +110,4 @@ At most, this tool is something to pull out when faced with multiple options com
 
 Having never seen anything similar used to map out the multiple options on people's to-do lists, I figured maybe I had stumbled onto something new. But it turns out it's been around for a while. After we put this model together, I quickly searched online and found a similar model used in the investment space known as the [Risk-Return Matrix](https://www.icicidirect.com/ilearn/stocks/courses/chapter-6-risk-reward-matrix-for-investment). 
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/08/image-13.png?w=1428)Taking an idea from the investing space, where do options sit along the line?
+![](../../assets/2023/08/image-13.png)Taking an idea from the investing space, where do options sit along the line?

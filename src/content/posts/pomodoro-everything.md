@@ -8,7 +8,7 @@ tags:
   - General
   - Pomodoro
 ---
-![](http://malcolmbastien.com/wp-content/uploads/2010/09/imgres-jpeg-scaled500.jpg?w=256)
+![](../../assets/2010/09/imgres-jpeg-scaled500.jpg)
 
 Continuing on the idea of finding focus and repeating it ruthlessly.
 

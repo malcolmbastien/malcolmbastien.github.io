@@ -21,8 +21,6 @@ Fax: (416) 979-xxxx
 
 This is just embarrassing.
 
-![http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpimgzemantacompixygif_ksdtazhfcclhpdb-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpimgzemantacompixygif_ksdtazhfcclhpdb-scaled500.gif?w=1)
-
 Remember, this is Ryerson University, the school that wants to be the new silicon valley, tech start-up, innovation oriented school. Maybe the guy wants to write a smart academic article, but that's not the tone I get from this message.
 
 Is this the direction to expect that Ryerson's venture into social media going to go?  Forget the whole community and relationship part of it all... "Who's the person with the most friends? That's all I really care anything about"

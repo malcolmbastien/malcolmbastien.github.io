@@ -7,7 +7,6 @@ slug: a-risky-approach-to-feedback
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/05/media_httpopenmodecawpcontentuploads200905dsc02809developedinufraw300x201jpg_eebqbsdbeoigswe-scaled500.jpg?w=300](http://malcolmbastien.com/wp-content/uploads/2009/05/media_httpopenmodecawpcontentuploads200905dsc02809developedinufraw300x201jpg_eebqbsdbeoigswe-scaled500.jpg?w=300)
 Whenever you write something criticizing of other people's work, you should really stop and consider if publishing your message is the best thing you could be doing.
 
 This past weekend [WordCamp](http://2008.sf.wordcamp.org/) Toronto 2009 happened over 3 days, and it was a fun event. And not surprisingly like any other event, there was something about it that almost everyone didn't like. I remember during the event we all chatted a little about what we thought of the session we just sat through, the lunch that was served, and the venue. The sessions were fresh in our minds and chatting about what we though was a very natural way to make conversation with people around us that were unfamiliar.

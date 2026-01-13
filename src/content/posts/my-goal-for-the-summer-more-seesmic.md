@@ -17,6 +17,3 @@ As a brief overview for this video, I discuss:
 	Just how much Seesmic, Loic le Meur, and Gary Vaynerchuk are all very cool.
 
 Hope you enjoy.
-
-[http://seesmic.com/embeds/wrapper.swf](http://seesmic.com/embeds/wrapper.swf)
-![http://malcolmbastien.com/wp-content/uploads/2009/05/media_httpimgzemantacompixygifxide6f77117d62c452880aa26759c5457d5_kbbfexyfhgnioqf-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/05/media_httpimgzemantacompixygifxide6f77117d62c452880aa26759c5457d5_kbbfexyfhgnioqf-scaled500.gif?w=1)

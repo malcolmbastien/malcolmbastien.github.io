@@ -36,13 +36,13 @@ For each row, capture what dependencies that team has on others in the different
 
 After filling out all your backlog items and capturing your dependencies, you now have a picture of each team's scope, dependencies, and total demand.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/12/team-dependency-matrix-frame-1.jpg)Add each team's planned scope in the cells where a team intersects with itself.
+![](../../assets/2023/12/team-dependency-matrix-frame-1.jpg)Add each team's planned scope in the cells where a team intersects with itself.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/12/team-dependency-matrix-frame-2.jpg?w=5333)For each team (rows), go column by column, identifying what dependencies you have on other teams.  
+![](../../assets/2023/12/team-dependency-matrix-frame-2.jpg)For each team (rows), go column by column, identifying what dependencies you have on other teams.  
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/12/team-dependency-matrix-frame-3.jpg?w=5333)A visual aide on how to read the table. In this example, the Backend Development team needs the Database Management team for data security and backup.
+![](../../assets/2023/12/team-dependency-matrix-frame-3.jpg)A visual aide on how to read the table. In this example, the Backend Development team needs the Database Management team for data security and backup.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/12/team-dependency-matrix-frame-4.jpg?w=5653)Once completed, the table reveals a team's planned scope, dependencies, and incoming demand.
+![](../../assets/2023/12/team-dependency-matrix-frame-4.jpg)Once completed, the table reveals a team's planned scope, dependencies, and incoming demand.
 
 ## A Small Step
 

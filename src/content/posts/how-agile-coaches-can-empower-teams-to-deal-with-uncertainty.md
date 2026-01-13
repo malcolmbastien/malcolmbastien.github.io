@@ -98,7 +98,7 @@ Find opportunities for the team to take ownership and make decisions
 
 Encourage the team to self-organize and collaborate effectively
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/08/coaching-activities.png)
+![](../../assets/2024/08/coaching-activities.png)
 
 ## The Goal: Improving Team Maturity
 
@@ -126,7 +126,7 @@ Continuous improvement
 
 Experimentation, learning, and innovation
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/08/team-maturity.png)
+![](../../assets/2024/08/team-maturity.png)
 
 ## Coaching Outcomes
 

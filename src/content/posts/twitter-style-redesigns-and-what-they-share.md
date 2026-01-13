@@ -7,7 +7,6 @@ slug: twitter-style-redesigns-and-what-they-share
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpfarm1staticflickrcom173430523365c0f3c3e8ecmjpg_agfidhpvfeyuwqi-scaled500.jpg?w=240](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpfarm1staticflickrcom173430523365c0f3c3e8ecmjpg_agfidhpvfeyuwqi-scaled500.jpg?w=240)
  
 
 Who would have ever guessed that the [Twitter](http://twitter.com) phenomenon would have ever had such a far reaching design influence on other social web services? Here's just a short list of some site's I've found that have been released, or made a change to their site design that now appear to be more Twitter like:

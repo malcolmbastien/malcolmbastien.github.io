@@ -7,7 +7,6 @@ slug: speak-loudly
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpfarm2staticflickrcom1259326675375356969b4e43jpg_hvdwfdekxrfgfih-scaled500.jpg?w=199](http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpfarm2staticflickrcom1259326675375356969b4e43jpg_hvdwfdekxrfgfih-scaled500.jpg?w=199)
 
 Have you ever thought about what gets valued more between content and actions?
 

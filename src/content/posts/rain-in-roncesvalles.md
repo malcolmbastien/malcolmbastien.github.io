@@ -7,8 +7,8 @@ slug: rain-in-roncesvalles
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/07/photo2.jpg?w=300](http://malcolmbastien.com/wp-content/uploads/2009/07/photo2.jpg?w=300)
-![http://malcolmbastien.com/wp-content/uploads/2009/07/photo_21.jpg?w=225](http://malcolmbastien.com/wp-content/uploads/2009/07/photo_21.jpg?w=225)
-![http://malcolmbastien.com/wp-content/uploads/2009/07/photo_31.jpg?w=300](http://malcolmbastien.com/wp-content/uploads/2009/07/photo_31.jpg?w=300)
-![http://malcolmbastien.com/wp-content/uploads/2009/07/photo_41.jpg?w=225](http://malcolmbastien.com/wp-content/uploads/2009/07/photo_41.jpg?w=225)
-![http://malcolmbastien.com/wp-content/uploads/2009/07/photo_51.jpg?w=225](http://malcolmbastien.com/wp-content/uploads/2009/07/photo_51.jpg?w=225)
+![](../../assets/2009/07/photo2.jpg)
+![](../../assets/2009/07/photo_21.jpg)
+![](../../assets/2009/07/photo_31.jpg)
+![](../../assets/2009/07/photo_41.jpg)
+![](../../assets/2009/07/photo_51.jpg)

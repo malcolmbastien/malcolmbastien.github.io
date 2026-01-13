@@ -7,7 +7,7 @@ slug: unmasking-the-invisible-overhead-of-meetings
 tags:
   - Agile
 ---
-![](https://openmode.wordpress.com/wp-content/uploads/2025/09/create-a-highly-detailed-high-resolution-image-in-the-anime-style.png)
+![](../../assets/2025/09/create-a-highly-detailed-high-resolution-image-in-the-anime-style.png)
 
 A meeting's cost extends far beyond its scheduled time. In fact, the full, hidden cost is rarely considered and often eats up the rest of your day.
 
@@ -57,7 +57,7 @@ To understand this impact, [I prototyped a tool that visualizes a team's weekly 
 
 As these factors shift, the tool would dynamically show how overall productive working time changes. It reveals how a forty-hour work week is a finite resource, meetings and other factors interact to reduce the time people have to work and collaborate productively.
 
-![An interactive Meeting Leakage Calculator interface visualizing the distribution of weekly time allocation across productive work, meeting time, meeting leakage, informal collaboration, and cognitive load, with adjustable parameters for unscheduled time, meeting frequency, team size, multitasking, and work complexity.](https://openmode.wordpress.com/wp-content/uploads/2025/09/image-2.png?w=989)An interactive Meeting Leakage Calculator to visualize the true cost of meetings and over-collaboration.
+![](../../assets/2025/09/image-2.png)An interactive Meeting Leakage Calculator to visualize the true cost of meetings and over-collaboration.
 
 ### Towards More Intentional Collaboration
 

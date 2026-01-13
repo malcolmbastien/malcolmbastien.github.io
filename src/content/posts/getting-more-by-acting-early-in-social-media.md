@@ -7,8 +7,6 @@ slug: getting-more-by-acting-early-in-social-media
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpfarm4staticflickrcom3159301530714898a0197f0fmjpg_dgejkgtiebrbfig-scaled500.jpg?w=240](http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpfarm4staticflickrcom3159301530714898a0197f0fmjpg_dgejkgtiebrbfig-scaled500.jpg?w=240)
-
 A while ago [Seth Godin](http://sethgodin.typepad.com/) wrote a piece about the exponential cost of information the closer you get to the source.  The earlier you want information, the more it will cost you. If you're willing to wait, you can get that information for a much lower cost.
 
 I was thinking recently about the idea of exponential growth, or decline in a couple of different contexts: Exponential decline in the cost of information over time, exponential growth in the rate of innovation over time after the first milestone (the advancements in flight since the first aircraft, the growing rate of open source innovation), etc...

@@ -10,8 +10,8 @@ tags:
   - Posterous
   - Tumblr
 ---
-![http://malcolmbastien.com/wp-content/uploads/2010/08/imgres-1-jpeg-scaled500.jpg?w=96](http://malcolmbastien.com/wp-content/uploads/2010/08/imgres-1-jpeg-scaled500.jpg?w=96)
-![http://malcolmbastien.com/wp-content/uploads/2010/08/tumblr-logo-jpeg-scaled500.jpg?w=300](http://malcolmbastien.com/wp-content/uploads/2010/08/tumblr-logo-jpeg-scaled500.jpg?w=300)
+![](../../assets/2010/08/imgres-1-jpeg-scaled500.jpg)
+![](../../assets/2010/08/tumblr-logo-jpeg-scaled500.jpg)
 
 Sometimes Tumblr blogs can be really annoying (hold on)!. Many times I’ll find myself on a blog after clicking a reblogged post in my Tumblr dashboard, and for just some reason, the blog won’t have any information at all as to who’s site it is.
 

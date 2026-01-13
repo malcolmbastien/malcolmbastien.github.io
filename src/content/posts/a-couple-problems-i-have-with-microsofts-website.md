@@ -11,7 +11,7 @@ tags:
   - Skitch
   - Surface
 ---
-![http://malcolmbastien.com/wp-content/uploads/2012/10/tumblr_mbzzumsr2f1qa77f2o1_r2_1280.png](http://malcolmbastien.com/wp-content/uploads/2012/10/tumblr_mbzzumsr2f1qa77f2o1_r2_1280.png)
+![](../../assets/2012/10/tumblr_mbzzumsr2f1qa77f2o1_r2_1280.png)
 
 A couple problems I have with Microsoft’s website for Surface.
 

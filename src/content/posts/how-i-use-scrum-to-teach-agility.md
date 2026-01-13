@@ -32,7 +32,7 @@ Instead of teaching Scrum as a set of roles, artifacts and events, I start with 
 
 For the interactive exercise, I'll either use this Mural template Teaching the Scrum framework or whip up my own version of it with a few more helpers and tips that describe Scrum and its different events, roles and artifacts. The drag-and-drop activity makes the training interactive, engages the participants, and is a great exercise to get the memorization-focused parts of the session out of the way. It's a challenging exercise for groups with no clear answer.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/05/image-23.png?w=1771)[Hard Yard's Teaching the Scrum framework](https://www.mural.co/templates/teaching-the-scrum-framework) Mural template.
+![](../../assets/2023/05/image-23.png)[Hard Yard's Teaching the Scrum framework](https://www.mural.co/templates/teaching-the-scrum-framework) Mural template.
 
 After they finish with the drag-and-drop exercise, we review the answer sheet together. I then ask them some more abstract questions:
 
@@ -54,7 +54,7 @@ There are several reasons I like this approach of using Scrum as a way to teach 
 
 The workshop becomes more participant-driven rather than facilitator-led.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/05/learning-the-scrum-framework-learning-the-scrum-framework-answer.jpg?w=8495)A completed Scrum framework exercise with annotations added using orange sticky notes.
+![](../../assets/2023/05/learning-the-scrum-framework-learning-the-scrum-framework-answer.jpg)A completed Scrum framework exercise with annotations added using orange sticky notes.
 
 ## Running This Exercise
 
@@ -68,7 +68,7 @@ If you want to run this exercise yourself, here are the steps I follow:
 6. I then ask them questions about the purpose and goals of the different Scrum practices. I annotate the answer sheet as they share their responses.
 7. Once we finish, I'll create a copy of all the sticky notes and move them into another area of the board, further emphasizing them.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/05/image-25.png?w=1356)Key takeaways from a past workshop 
+![](../../assets/2023/05/image-25.png)Key takeaways from a past workshop 
 
 ## Conclusion
 

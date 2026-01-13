@@ -8,6 +8,6 @@ tags:
   - General
   - products
 ---
-![](https://malcolmbastien.com/wp-content/uploads/2024/01/image-2.png?w=1000)
+![](../../assets/2024/01/image-2.png)
 
 I’m excited about the Plattan Plus because I’ve been really enjoying my Medis earphones, and the plus model will be the first ones that have volume control on the microphone/remote.

@@ -7,4 +7,4 @@ slug: t-cafe
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/07/photo3.jpg?w=300](http://malcolmbastien.com/wp-content/uploads/2009/07/photo3.jpg?w=300)
+![](../../assets/2009/07/photo3.jpg)

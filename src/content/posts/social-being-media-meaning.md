@@ -26,4 +26,4 @@ What I see people fall into is two similar traps. On the one hand you might see 
 Thoughtful content. There's a market for it, but thoughtful content isn't powerful enough to move a pebble without some sort of action. People might very well understand and agree with the thoughts, but the lack of physical presence by the author or commitment to take action can alienate them. The great ideas shared, may well be great, but it's difficult to be socially relevant until they, or their author develop real physical presences, reputations, or reputation.
 
 **In the end, to be effective your actions need to ****mean something, and your ideas need to be executed.**
-![http://malcolmbastien.com/wp-content/uploads/2009/08/media_httpimgzemantacompixygifxidb7b1d042f1f647648e9f9b4fa073e3a7_hpkjftjihlgtgjy-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/08/media_httpimgzemantacompixygifxidb7b1d042f1f647648e9f9b4fa073e3a7_hpkjftjihlgtgjy-scaled500.gif?w=1)
+![](../../assets/2009/08/media_httpimgzemantacompixygifxidb7b1d042f1f647648e9f9b4fa073e3a7_hpkjftjihlgtgjy-scaled500.gif)

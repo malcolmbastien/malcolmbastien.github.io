@@ -12,7 +12,7 @@ tags:
   - management
   - Wardley Maps
 ---
-![A diverse group of four professionals engaged in a discussion around digital devices and holographic data displays, illustrating teamwork and innovative technology in a modern office setting.](https://openmode.wordpress.com/wp-content/uploads/2025/10/create-a-bright-and-colouful-high-resolution-image-that-embodies-the.png)
+![](../../assets/2025/10/create-a-bright-and-colouful-high-resolution-image-that-embodies-the.png)
 
 The speed at which AI coding agents help teams develop new features breaks the old models of work. If the bottleneck is no longer coding, then we need to focus our attention elsewhere. There's always a bottleneck, and it will either move upstream or downstream of the coding activity.
 
@@ -20,7 +20,7 @@ As the bottleneck shifts from developer productivity and coding velocity to orga
 
 Throughout this post, I will reference examples of doctrine principles taken from the [Wardley Doctrine & AI Impact Explorer](https://wardley-doctrine-ai-impact-explorer-512441749265.us-west1.run.app/) app that I created. This app serves as a reference guide to the 40 doctrine principles. It features AI-generated summaries on how AI adoption impacts teams and provides actionable recommendations for managers.
 
-![An interactive web page detailing Simon Wardley's doctrine on strategic management, focusing on AI's impact on organizational processes.](https://openmode.wordpress.com/wp-content/uploads/2025/10/image-2.png?w=1417)An overview of the Wardley Doctrine and AI Impact Explorer.
+![](../../assets/2025/10/image-2.png)An overview of the Wardley Doctrine and AI Impact Explorer.
 
 ## Managers Must Constantly Attack Friction and Inertia
 
@@ -36,7 +36,7 @@ To get the most out of AI, you must relentlessly attack organizational friction 
 
 ### Principles Relevant to Inertia
 
-![](https://openmode.wordpress.com/wp-content/uploads/2025/10/image-5.png?w=495)
+![](../../assets/2025/10/image-5.png)
 
 **Principle:** A bias towards action
 
@@ -74,7 +74,7 @@ Focus on creating high-speed feedback loops. Empower teams to run dozens of smal
 
 ### Principles Relevant to Velocity
 
-![](https://openmode.wordpress.com/wp-content/uploads/2025/10/image-6.png?w=495)
+![](../../assets/2025/10/image-6.png)
 
 **Principle:** Move fast
 
@@ -110,7 +110,7 @@ AI makes small teams hyper-effective. A single context engineer, paired with a p
 
 ### Principles Relevant to Productivity
 
-![](https://openmode.wordpress.com/wp-content/uploads/2025/10/image-7.png?w=504)
+![](../../assets/2025/10/image-7.png)
 
 **Principle:** Think aptitude and attitude
 
@@ -154,7 +154,7 @@ Shifting attention and focus to 'orientation' and 'validation' means focusing mo
 
 ### Principles Relevant to User Needs
 
-![](https://openmode.wordpress.com/wp-content/uploads/2025/10/image-8.png?w=499)
+![](../../assets/2025/10/image-8.png)
 
 **Principle:** Know your users
 
@@ -182,7 +182,7 @@ Shifting attention and focus to 'orientation' and 'validation' means focusing mo
 
 ## The Wardley Doctrine & AI Impact Explorer
 
-![A user interface showcasing various doctrine patterns related to organizational learning and improvement strategies, with sections for 'Know your users', 'Challenge assumptions', 'Use appropriate methods', and 'Focus on user needs'. Each section contains summaries and recommendations for managers.](https://openmode.wordpress.com/wp-content/uploads/2025/10/image-3.png?w=1398)The Wardley Doctrine & AI Impact Explorer interface, showcasing principles for modern agile leadership in the age of AI.
+![](../../assets/2025/10/image-3.png)The Wardley Doctrine & AI Impact Explorer interface, showcasing principles for modern agile leadership in the age of AI.
 
 The [Wardley Doctrine & AI Impact Explorer](https://wardley-doctrine-ai-impact-explorer-512441749265.us-west1.run.app/) is an experimental reference tool for agile leaders. It uses AI to generate summaries of the doctrine principles and gives an overview of how AI could impact each principle. The app also offers managers recommendations for leadership in this high-speed landscape.
 

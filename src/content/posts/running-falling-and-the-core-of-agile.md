@@ -37,7 +37,7 @@ Here's another analogy that helps explain the impact of landing in front of the 
 
 Imagine a ball rolling downhill with long, purple spikes poking out from the borders: every time one of those spikes hits out in front of the ball, there will be an interruption to the flow of movement that will ultimately SLOW down the smooth progression of the ball.  It will keep rolling downhill despite the slight momentum disruption because gravity and the slope/fall line are a greater force.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/05/image-28.png?w=378)
+![](../../assets/2023/05/image-28.png)
 
 Any time the purple spike hits directly under the ball's center of rotation, it will hit the downhill slope in a manner that will promote effective force transmission into the same direction the ball is currently traveling. Our feet are the same way - landing with a foot out beyond the CoM actually causes a force in the direction opposite to forward motion of the body. The foot then needs to remain in place until the CoM “catches up” to the base of support and is positioned over the foot in order to effectively carryover the forward momentum. Longer time on the ground = slower step turnover.
 
@@ -89,9 +89,9 @@ To get a better idea about what the Agile equivalent of Pose looks like, here ar
 
 [Modern Agile](https://modernagile.org/) and [Heart of Agile](https://heartofagile.com/) are two movements focused on Agile development's core principles and values. The themes of delivering value, getting feedback, learning rapidly, experimenting and improving paint a picture of agile that touches on the idea of falling and moving smoothly. They focus on the people and the work, not management methods.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/05/image-27.png?w=1152)Modern Agile
+![](../../assets/2023/05/image-27.png)Modern Agile
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/05/image-26.png?w=523)The Heart of Agile | More powerful, More human
+![](../../assets/2023/05/image-26.png)The Heart of Agile | More powerful, More human
 
 Here's a helpful quote from Allen Holub:
 

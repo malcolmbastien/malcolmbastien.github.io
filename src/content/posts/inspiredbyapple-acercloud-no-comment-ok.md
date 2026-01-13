@@ -9,7 +9,7 @@ tags:
   - General
   - Image
 ---
-![](http://malcolmbastien.com/wp-content/uploads/2012/01/tumblr_lxi4kqr1po1r9e4qao1_1280.png)inspiredbyapple:
+![](../../assets/2012/01/tumblr_lxi4kqr1po1r9e4qao1_1280.png)inspiredbyapple:
 
 AcerCloud: No comment. OK, comment - it looks like an AirPort logo upside down. This is going to be a busy week, isn’t it.
 

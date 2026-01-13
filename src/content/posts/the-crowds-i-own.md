@@ -36,4 +36,3 @@ The main difference between having Facebook Fan pages being the primary Google r
 That's a win. That's a big win that would really move around these pillars of the web to some degree.
 
 **I'd like to hear your thoughts on how plausibe or likely this could be. What do you think?**
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxid6d1d85d431864522b8f3fe10f31791ca_jeadbteligzgfeo-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxid6d1d85d431864522b8f3fe10f31791ca_jeadbteligzgfeo-scaled500.gif?w=1)

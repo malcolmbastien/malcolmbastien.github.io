@@ -18,4 +18,4 @@ Product life-cycles are another good frame to use for social listening, because 
 Just like the enemy of web analytics is measurement of page views and visitors, the enemy of social media listening is listening only for brand mentions.
 
 Social media listening and framing social discussions gives you the opportunity to measure and understand social dialog from a point of view much closer to your actual customers.
-![http://malcolmbastien.com/wp-content/uploads/2009/08/media_httpimgzemantacompixygifxidcaab939c938e4bfa92027dab88bd4422_ggaytqwncjchadh-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/08/media_httpimgzemantacompixygifxidcaab939c938e4bfa92027dab88bd4422_ggaytqwncjchadh-scaled500.gif?w=1)
+![](../../assets/2009/08/media_httpimgzemantacompixygifxidcaab939c938e4bfa92027dab88bd4422_ggaytqwncjchadh-scaled500.gif)

@@ -26,7 +26,7 @@ Well we can imagine some different ways to group these ideas together and create
 How would these dependencies be acted upon and how do the four properties of sentiment, engagement, influence and trust interact with each other? Well again we can pay attention to the different manifestations of community and communication online, each of which creates new behaviour patterns that it's users must follow.
 
 In a few examples I would think that behaviour patterns are the types of things our social media listening platforms will need to evolve to. Posting a message on Twitter might be an instance of sentiment, and sharing a link might be an example of engagement, but posting a link, and having a large percentage of your followers follow the link could be a pattern that demonstrates your influence over your followers.
-![http://malcolmbastien.com/wp-content/uploads/2009/07/media_httpimgzemantacompixygifxid8b9ca17713104610bfd96d0a66252094_vjhjlsuvdttdbza-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/07/media_httpimgzemantacompixygifxid8b9ca17713104610bfd96d0a66252094_vjhjlsuvdttdbza-scaled500.gif?w=1)
+
 **This is the beginning of my thinking of the connection between what we are measuring, and what is the best demonstration of a successful brand.**
 
 **I would appreciate any feedback on these ideas as they are now.**

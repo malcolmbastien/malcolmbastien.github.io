@@ -6,7 +6,7 @@ slug: beyond-practices-behaviours-and-goals-in-agile
 tags:
   - Agile
 ---
-![](https://malcolmbastien.com/wp-content/uploads/2024/09/behaviours-vs-practices-1.png)
+![](../../assets/2024/09/behaviours-vs-practices-1.png)
 
 Agile Coaches often work with teams and organizations deeply entrenched in the frameworks and practices that have become synonymous with Agile. One way Agile Coaches can help improve performance at these organizations is by introducing a different perspective about how those frameworks and practices, while once useful, might now be holding them back.
 
@@ -38,7 +38,7 @@ Behaviours are what's important when it comes to improving agility, not practice
 
 It doesn't just stop at behaviours. We can go even deeper. Looking more closely at the last point: "Kanban boards aren't important - but improving the end-to-end delivery of the value stream is." Why is improving the end-to-end delivery of the value stream important? Can we validate that statement? It may sound like a good idea, but does that make it important?
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/09/underlying-goals.png)
+![](../../assets/2024/09/underlying-goals.png)
 
 ## The Danger of Ritualized Practices
 

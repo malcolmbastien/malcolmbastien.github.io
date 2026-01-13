@@ -10,7 +10,7 @@ tags:
   - Sketches
   - story
 ---
-![](http://malcolmbastien.com/wp-content/uploads/2012/09/tumblr_max344vbxl1qa77f2o1_1280.jpg)
+![](../../assets/2012/09/tumblr_max344vbxl1qa77f2o1_1280.jpg)
 
 This is the first of a series showing just how much of digital marketing is about stories. Here you see green and red timelines as I thought about the last 100 years as a departure from our natural way of sharing.
 

@@ -7,7 +7,6 @@ slug: at-odds
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/05/media_httpfarm1staticflickrcom1416800577da04602jpgv0_hkkrbigjhiasnvy-scaled500.jpg?w=300](http://malcolmbastien.com/wp-content/uploads/2009/05/media_httpfarm1staticflickrcom1416800577da04602jpgv0_hkkrbigjhiasnvy-scaled500.jpg?w=300)
 Think about all the friends, relatives, and acquaintances you have. Compare those to the online people you're connected to, who you follow, who you've friended, who you haven't yet met in person.
 
 When I think of these two groups personally, I see them as unequal and uneven. They just don't match up. These different networks we have are at odds with each other.

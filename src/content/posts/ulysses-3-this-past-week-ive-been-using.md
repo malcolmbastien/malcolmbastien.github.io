@@ -8,7 +8,7 @@ tags:
   - Software
   - Ulysses 3
 ---
-![http://malcolmbastien.com/wp-content/uploads/2013/04/tumblr_ml5ss4rhnb1qa77f2o1_r2_1280.png](http://malcolmbastien.com/wp-content/uploads/2013/04/tumblr_ml5ss4rhnb1qa77f2o1_r2_1280.png)
+![](../../assets/2013/04/tumblr_ml5ss4rhnb1qa77f2o1_r2_1280.png)
 
 This past week I’ve been using Ulysses 3 (U3) as my writing studio after a long stretch of only using iA Writer and nvALT. U3 comes to the table with a system I can use for almost all of my writing needs. That’s mostly because the value proposition of U3 isn’t in just being another minimal text editor, but like its predecessor, by being a complete writing system that reduces the friction of working with text… With some added twists.
 

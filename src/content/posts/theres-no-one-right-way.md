@@ -9,7 +9,7 @@ tags:
   - teams
 status: evergreen
 ---
-![](https://openmode.wordpress.com/wp-content/uploads/2025/11/create-a-highly-detailed-high-resolution-featured-image-illustrating-the-concept-1.png)
+![](../../assets/2025/11/create-a-highly-detailed-high-resolution-featured-image-illustrating-the-concept-1.png)
 
 Every decision in Agile carries a cost. There is no single "right" way to build products or organize teams; each choice comes with a hidden set of trade-offs.
 
@@ -57,13 +57,13 @@ Because we can only poorly predict the impact of decisions, a practical approach
 
 ## The Agile Team Profiler
 
-![A user interface displaying the Agile Team Profiler tool, showcasing areas to add team practices and aggregated scores for various Agile attributes.](https://openmode.wordpress.com/wp-content/uploads/2025/11/image-1.png?w=1293)The Agile Team Profiler turns your daily practices into a clear, visual 'character sheet,' instantly highlighting your collective strengths and hidden weaknesses.
+![](../../assets/2025/11/image-1.png)The Agile Team Profiler turns your daily practices into a clear, visual 'character sheet,' instantly highlighting your collective strengths and hidden weaknesses.
 
 The [Agile Team Profiler](https://agile-team-profiler-539581219123.us-west1.run.app/) is an interactive coaching tool I built for Agile Coaches, Scrum Masters, and Managers. Its purpose is simple: to help teams gain a clearer understanding of the hidden trade-offs in their practices.
 
 Users describe their team's ways of working—from daily meetings to technical habits. The application's AI coach analyzes each practice, scoring its impact against key agile attributes. As more practices are added, the app builds a cumulative "Team Profile" that acts as a character sheet, clearly illustrating the team's collective strengths and weaknesses.
 
-![Screenshot of the Agile Team Profiler application showing practice analysis with key pros and cons, a summary of a workshop practice, and visual scoring metrics for team attributes.](https://openmode.wordpress.com/wp-content/uploads/2025/11/image-2.png?w=1003)Get a detailed breakdown for every practice, explaining the 'why' with a clear summary and key pros and cons.
+![](../../assets/2025/11/image-2.png)Get a detailed breakdown for every practice, explaining the 'why' with a clear summary and key pros and cons.
 
 ### Features
 
@@ -75,7 +75,7 @@ The application is built around a simple workflow:
 
 **AI-Generated Action Plan:** After adding practices, users can click a button to receive a custom, AI-generated action plan. This plan provides 3-4 concrete, actionable recommendations to help the team address its weaknesses.
 
-![A screenshot of the Agile Team Profiler application showing a user's team profile with various attributes assessed. The profile includes sections for Delivery Flow, Customer Value, Technical Craftsmanship, Team Culture, Continuous Improvement, and Organizational Enablement, each displaying scores and descriptions of the team's practices.](https://openmode.wordpress.com/wp-content/uploads/2025/11/image-4.png?w=1218)Just describe a team practice, and the AI coach instantly analyzes, categorizes, and grades its impact across key agile areas.
+![](../../assets/2025/11/image-4.png)Just describe a team practice, and the AI coach instantly analyzes, categorizes, and grades its impact across key agile areas.
 
 ### Attributes and Groupings
 
@@ -145,7 +145,7 @@ Systemic Impediment Removal
 
 Aligned Goals & Incentives
 
-![A digital application interface displaying an AI-generated action plan for Agile teams, outlining steps to empower team members, clarify roles, and cultivate shared ownership.](https://openmode.wordpress.com/wp-content/uploads/2025/11/image-3.png?w=699)After building your profile, get a custom, AI-generated action plan with concrete steps to amplify your strengths and address your team's biggest challenges.
+![](../../assets/2025/11/image-3.png)After building your profile, get a custom, AI-generated action plan with concrete steps to amplify your strengths and address your team's biggest challenges.
 
 ## Conclusion
 

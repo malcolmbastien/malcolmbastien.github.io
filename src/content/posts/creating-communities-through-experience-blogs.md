@@ -7,8 +7,6 @@ slug: creating-communities-through-experience-blogs
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/05/media_httpfarm4staticflickrcom30532804974756316277244emjpg_jjhladpfmhuzcpp-scaled500.jpg?w=240](http://malcolmbastien.com/wp-content/uploads/2009/05/media_httpfarm4staticflickrcom30532804974756316277244emjpg_jjhladpfmhuzcpp-scaled500.jpg?w=240)
- Image by [robclark.atsmg](http://www.flickr.com/photos/19164883@N04/2804974756) via Flickr 
 
 Getting out of the mindset of advertising and direct promotions is important. Neither activity are enough to move customers online. One thing I am seeing that looks promising is the creation of experience centric blogs. Blogs created for, and blogs written by, the people that live and breath the brand experience.
 

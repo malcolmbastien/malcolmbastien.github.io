@@ -45,7 +45,7 @@ Steps are small activities that create a positive and complete change that will 
 
 ## Pixel Pulse Threads
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/12/image-8.png?w=1629)My Etsy shop, [Pixel Pulse Threads](https://www.etsy.com/ca/shop/PixelPulseThreads)
+![](../../assets/2023/12/image-8.png)My Etsy shop, [Pixel Pulse Threads](https://www.etsy.com/ca/shop/PixelPulseThreads)
 
 I'm a big fan of the retro animes of the 80s and 90s and the City Pop genre of Japanese music. In the latter half of the year, I created an online print-on-demand shop called [Pixel Pulse Threads](https://www.etsy.com/ca/shop/PixelPulseThreads) to sell t-shirts and other goods with designs inspired by that era generated with the help of AI. 
 
@@ -66,13 +66,13 @@ Instead, in 2023, I started using [Logseq](https://logseq.com/) more as my centr
 
 Because I've been using Logseq a lot more this year, I've even considered moving everything I had in Obsidian (roughly 2,400 files) to Logseq. I have yet to make any decision, but I'm considering it.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/12/logseq_graph_20231229_1703900795178_0.png?w=2544)My Logseq graph as of December 2023
+![](../../assets/2023/12/logseq_graph_20231229_1703900795178_0.png)My Logseq graph as of December 2023
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/12/image-9.png?w=2069)My Obsidian graph as of December 2023
+![](../../assets/2023/12/image-9.png)My Obsidian graph as of December 2023
 
 ## Gaming
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/12/b7573f14-6d7a-42dc-a7a8-f8b2384469a4.png?w=1080)My [Steam Year in Review 2023](https://s.team/y23/ftqnvcg?l=english)
+![](../../assets/2023/12/b7573f14-6d7a-42dc-a7a8-f8b2384469a4.png)My [Steam Year in Review 2023](https://s.team/y23/ftqnvcg?l=english)
 
 I spend a lot of time gaming. For the first time this year, I felt the urge to achieve all the achievements in some of the games I had in my library. I got to work, looking through the games I liked and where getting all their achievements was reasonably doable.
 
@@ -93,7 +93,7 @@ If you want a complete look at my year in gaming, you can visit my [Steam Year 
 
 ## Matrix and Mastodon
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/01/image.png?w=1200)Image: [A new onboarding experience on Mastodon](https://blog.joinmastodon.org/2023/05/a-new-onboarding-experience-on-mastodon/)
+![](../../assets/2024/01/image.png)Image: [A new onboarding experience on Mastodon](https://blog.joinmastodon.org/2023/05/a-new-onboarding-experience-on-mastodon/)
 
 Finally, in 2024, I would like to have more conversations over on [Matrix](https://matrix.org/) and [Mastodon](https://joinmastodon.org/).
 

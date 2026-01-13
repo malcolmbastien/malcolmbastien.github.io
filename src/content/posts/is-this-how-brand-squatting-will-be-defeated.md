@@ -7,8 +7,6 @@ slug: is-this-how-brand-squatting-will-be-defeated
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpuploadwikimediaorgwikipediaenthumbeefpunchjjpg202pxpunchjjpg_htbnbjcgjoyhqfz-scaled500.jpg?w=202](http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpuploadwikimediaorgwikipediaenthumbeefpunchjjpg202pxpunchjjpg_htbnbjcgjoyhqfz-scaled500.jpg?w=202)
-
 Brand squatting... It's a problem for brands, but there's a big conversation going on at the same time you need to pay attention to if this is **your** problem.
 
 Brand squatting, for the uninitiated, is what is was called when some third party would go on to a social network and register a new account name under the handle of a brand, especially big brands, and hope to make a quick buck by selling it back to the company.

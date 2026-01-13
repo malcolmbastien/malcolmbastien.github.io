@@ -7,8 +7,6 @@ slug: we-notice-what-we-choose-to-notice
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/07/media_httpuploadwikimediaorgwikipediacommonsthumb44e7segmentcdegsvg256px7segmentcdegsvgpng_cfdjkiqvrtnryqc-scaled500.png?w=256](http://malcolmbastien.com/wp-content/uploads/2009/07/media_httpuploadwikimediaorgwikipediacommonsthumb44e7segmentcdegsvg256px7segmentcdegsvgpng_cfdjkiqvrtnryqc-scaled500.png?w=256)
- Image via [Wikipedia](http://commons.wikipedia.org/wiki/Image:7-segment_cdeg.svg) 
 
 Social media listening can sometimes be very easy. If you make a decision to go out and look for something in your data, you'll always get a result, and it will either be expected, surprising, or sometimes even insightful.
 
@@ -32,4 +30,3 @@ So why are things still so difficult with advanced social media listening tools 
 While tools tend to keep you in the realm of discussions that are happening, our own biases keep us in the first realm, of conversations we know they're having. That's why I like advanced listening tools with segmentation abilities. These segmentation abilities are the best method that we can use to start to approach the other 3 regions of social media discussions.
 
 *Inspiration for this post taken from [Spotto!](http://sethgodin.typepad.com/seths_blog/2009/06/spotto.html)*
-![http://malcolmbastien.com/wp-content/uploads/2009/07/media_httpimgzemantacompixygifxidae9c2758336e41849080111f13cfdfa5_budtxjlayofyaaj-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/07/media_httpimgzemantacompixygifxidae9c2758336e41849080111f13cfdfa5_budtxjlayofyaaj-scaled500.gif?w=1)

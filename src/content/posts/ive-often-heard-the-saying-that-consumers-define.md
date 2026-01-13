@@ -9,7 +9,7 @@ tags:
   - Image
   - Sketches
 ---
-![](http://malcolmbastien.com/wp-content/uploads/2012/10/tumblr_mbfmx7dejv1qa77f2o1_1280.jpg)
+![](../../assets/2012/10/tumblr_mbfmx7dejv1qa77f2o1_1280.jpg)
 
 I’ve often heard the saying that consumers define your brand story. That’s a message which is always good to keep with you, but at the same time it’s only a single slice of whats really going on.
 

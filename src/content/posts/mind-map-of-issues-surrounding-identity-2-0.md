@@ -7,8 +7,6 @@ slug: mind-map-of-issues-surrounding-identity-2-0
 tags:
   - General
 ---
-[![http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpopenmodecawpcontentuploads200903identitymap300x166png_wltftmhiwfvcrwd-scaled500.png?w=300](http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpopenmodecawpcontentuploads200903identitymap300x166png_wltftmhiwfvcrwd-scaled500.png?w=300)](http://openmode.ca/wp-content/uploads/2009/03/identity-map.png)
-
 **Issues surrounding Identity 2.0**
 
 Here is, for your viewing pleasure, a mind map I was working on Tuesday afternoon for my Identity 2.0 research essay.  There's a lot in this mind map, but I thought people might just appreciate taking a look at it.  Now for some indexable data, here's a breakdown of the main points on the graph:

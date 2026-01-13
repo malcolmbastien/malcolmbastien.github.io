@@ -7,5 +7,5 @@ slug: junctionto-tweetup
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/08/img_0002-scaled10001.jpg?w=225](http://malcolmbastien.com/wp-content/uploads/2009/08/img_0002-scaled10001.jpg?w=225)
-![http://malcolmbastien.com/wp-content/uploads/2009/08/img_0003-scaled10001.jpg?w=225](http://malcolmbastien.com/wp-content/uploads/2009/08/img_0003-scaled10001.jpg?w=225)
+![](../../assets/2009/08/img_0002-scaled10001.jpg)
+![](../../assets/2009/08/img_0003-scaled10001.jpg)

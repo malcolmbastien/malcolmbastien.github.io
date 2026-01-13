@@ -51,7 +51,7 @@ Value Stream Mapping
 
 Another way to understand cycle times is to use something like Kanbanize's [Aging WIP Chart](https://knowledgebase.kanbanize.com/hc/en-us/articles/115001141531-The-Aging-WIP-Chart), which is one of the best tools to understand the typical cycle times of different stages of a workflow and how long the cards currently in that stage have been there. A tool like the Aging WIP Chart makes determining appropriate cycle time thresholds very straightforward.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/05/image_1685221172389_0.png?w=1344)The Aging WIP Chart in [Kanbanize](https://kanbanize.com/)
+![](../../assets/2023/05/image_1685221172389_0.png)The Aging WIP Chart in [Kanbanize](https://kanbanize.com/)
 
 ## My Experience With Controlling Cycle Time
 
@@ -79,9 +79,9 @@ To implement this approach, you need to do the following steps:
 
 Capturing what work items are taking longer and why while delivery is still happening allows teams to make more real-time improvements while the details are fresh in everyone's minds.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/08/image-5.png?w=2020)Jira's Quick Filters can be used to quickly focus on cards that have been idle.
+![](../../assets/2023/08/image-5.png)Jira's Quick Filters can be used to quickly focus on cards that have been idle.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/08/image-4.png?w=1417)Jira's Card colours filters let you apply colours to cards that match your query.
+![](../../assets/2023/08/image-4.png)Jira's Card colours filters let you apply colours to cards that match your query.
 
 The query to capture work items that have been stuck in the same column for over 10 days that I use is:
 

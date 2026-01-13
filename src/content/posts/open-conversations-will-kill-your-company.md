@@ -7,8 +7,6 @@ slug: open-conversations-will-kill-your-company
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpfarm4staticflickrcom30542911261400f3815c69e7mjpg_gffchjiusgdizft-scaled500.jpg?w=157](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpfarm4staticflickrcom30542911261400f3815c69e7mjpg_gffchjiusgdizft-scaled500.jpg?w=157)
- Image by [Gauravonomics](http://www.flickr.com/photos/78601704@N00/2911261400) via Flickr 
 
 ...And if you believe that, your company has probably been steadily dying over the past year.
 

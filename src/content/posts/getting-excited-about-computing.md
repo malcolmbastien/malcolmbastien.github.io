@@ -35,7 +35,7 @@ injunctions, IPOs, and more direct competition than ever between the
 biggest companies in the world. Maybe the most profound change is the
 rise of the app ecosystems, markets ruled by private corporations.
 
-![Media_httpblogsciocom_tbvbf](http://malcolmbastien.com/wp-content/uploads/2011/09/media_httpblogsciocom_tbvbf-scaled1000.jpg?w=300)
+![](../../assets/2011/09/media_httpblogsciocom_tbvbf-scaled1000.jpg)
 
 It's a volatile time as traditional industries that have been around
 for centuries are being disrupted. Publishing of newspapers, magazines

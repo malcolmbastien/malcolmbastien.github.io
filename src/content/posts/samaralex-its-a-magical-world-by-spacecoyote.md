@@ -8,7 +8,7 @@ tags:
   - Miscellaneous
   - Image
 ---
-![http://malcolmbastien.com/wp-content/uploads/2012/01/tumblr_lxuylte22w1qc3nt1o1_1280.jpg](http://malcolmbastien.com/wp-content/uploads/2012/01/tumblr_lxuylte22w1qc3nt1o1_1280.jpg)
+![](../../assets/2012/01/tumblr_lxuylte22w1qc3nt1o1_1280.jpg)
 
 samaralex:
 It’s A Magical World by [spacecoyote](http://spacecoyote.deviantart.com/gallery/#/d2f7a3p)

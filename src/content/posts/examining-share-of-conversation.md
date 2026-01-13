@@ -10,10 +10,6 @@ tags:
 How do you know if you've made the impact that you wanted?
 
 In traditional marketing, sales figures and metrics are your post marks, as well as  your guides, but in the world of social media and discussion marketing, the currency of word of mouth is different.  New articles get posted, new tools and new trends emerge, and it becomes more of a challenge to measure the success of your product or service. I leave out “campaign” because in this world, a short term campaign is too, short sighted.
-
-![http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpuploadwikimediaorgwikipediaenthumbaa5tagcloudcloudpng300pxtagcloudcloudpng_acbfiinvacnaozq-scaled500.png?w=300](http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpuploadwikimediaorgwikipediaenthumbaa5tagcloudcloudpng300pxtagcloudcloudpng_acbfiinvacnaozq-scaled500.png?w=300)
-Image via [Wikipedia](http://en.wikipedia.org/wiki/Image:TagCloudCloud.png)
-
 One idea I've come across recently is that the unique and notable features of a product or service get discussed online, and also to no surprise, cut corners on quality and negative experiences get talked about with exponentially greater volume. All of these different conversations revolve around the brand. When it comes time to measuring, getting an idea for the “Share of Conversation”, or “Share of Discussion” of each topic can reveal how successful you've been if you planned for a campaign to focus on feature X, it can also reveal emerging issues that your community has deemed as important and discussion worthy topics.
 
 For whatever quantitative or qualitative terms emerge from your social media listening, the actual terms and connections that emerge, are only as important relative to their contextual relationship to you're goals.

@@ -63,7 +63,7 @@ What does the structure *encourage* them to do?
 
 How do people's behaviours make sense from different* perspectives*?
 
-![A flowchart illustrating the relationship between project problems, management pressure, and unintended consequences, along with solutions like seeing the system and addressing underlying gaps.](https://openmode.wordpress.com/wp-content/uploads/2025/11/untitled-2025-11-11-1134.png?w=5457)A flowchart illustrating the challenges of project management, highlighting the pitfalls of blaming teams and the importance of understanding organizational systems.
+![](../../assets/2025/11/untitled-2025-11-11-1134.png)A flowchart illustrating the challenges of project management, highlighting the pitfalls of blaming teams and the importance of understanding organizational systems.
 
 When you start to see the organization as a system, you uncover the real sources of friction affecting teams. You find the root causes of burnout, bottlenecks, and poor quality.
 

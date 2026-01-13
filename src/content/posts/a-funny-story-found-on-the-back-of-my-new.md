@@ -10,6 +10,6 @@ tags:
   - Miscellaneous
   - Image
 ---
-![http://malcolmbastien.com/wp-content/uploads/2012/01/tumblr_lx30tcyiz21qa77f2o1_r1_1280.png](http://malcolmbastien.com/wp-content/uploads/2012/01/tumblr_lx30tcyiz21qa77f2o1_r1_1280.png)
+![](../../assets/2012/01/tumblr_lx30tcyiz21qa77f2o1_r1_1280.png)
 
 A funny story found on the back of my new Cosmonaut iPad stylus. (Taken with [instagram](http://instagr.am))

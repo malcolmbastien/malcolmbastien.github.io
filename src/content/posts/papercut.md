@@ -15,7 +15,7 @@ It also makes me wonder if the single running application benefit of the iPad, w
 
 The only places I've seen animation and text work together in a really interactive way is in video games like Braid where narration happens between levels while you're still in control of the character.
 
-[![http://malcolmbastien.com/wp-content/uploads/2011/09/media_http1bpblogspot_xjkah-scaled1000.jpg?w=300](http://malcolmbastien.com/wp-content/uploads/2011/09/media_http1bpblogspot_xjkah-scaled1000.jpg?w=300)](http://malcolmbastien.com/wp-content/uploads/2011/09/media_http1bpblogspot_xjkah-scaled1000.jpg?w=300)
+![](../../assets/2011/09/media_http1bpblogspot_xjkah-scaled1000.jpg)
 
 To see Papercut replace pages with continuous text and to integrate it with visual and audible media could have big repercussions when it comes to the shape of poetry, short stories, and comics in the future.
 

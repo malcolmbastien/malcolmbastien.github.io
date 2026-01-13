@@ -120,6 +120,6 @@ Think about what you can do to make your interactions with people more effective
 
 ## Conclusion
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/08/effective-collaboration-4.png)
+![](../../assets/2024/08/effective-collaboration-4.png)
 
 Remembering these nine golden rules can help you create an environment that supports agility and promotes continuous improvement.

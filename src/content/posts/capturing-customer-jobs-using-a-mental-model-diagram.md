@@ -24,9 +24,9 @@ I first learned about Mental Model Diagrams form Indy Young's book, [Mental Mode
 >
 > On the other hand, mental model diagrams offer a broader and more in-depth understanding of people independent of an organisation. Focus and depth come mostly from having a detailed account of what happens in the problem space.
 >
-> Tiago Camacho, [Designing With Mental Model Diagrams — An Introduction](https://medium.com/seek-blog/designing-with-mental-model-diagrams-an-introduction-5eadd21daf54)
+> Tiago Camacho, [Designing With Mental Model Diagrams — An Introduction](https://medium.com/seek-blog/designing-with-mental-model-diagrams-an-introduction-5eadd21daf54)
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/mental-models-diagrams-wardley-maps-mental-models.jpg?w=5123)
+![](../../assets/2022/12/mental-models-diagrams-wardley-maps-mental-models.jpg)
 
 Focusing only on customer needs without slipping into solutioning mode can be different and sometimes difficult for people. I sometimes had to interject and point out when they posted a feature pretending to be a customer need or when they were talking about activities customers would spend time doing without calling out what customer need was driving those activities.
 
@@ -53,11 +53,11 @@ Aspirational goals are the key motivators for all other customer jobs. Identifyi
 
 We time-boxed the workshop, with the first half dedicated to identifying customer jobs, and the second half to identifying either existing or new solutions that would support those jobs. By the end of the two-hour session, our output for one persona looked something like the following:
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/mental-models-diagrams-wardley-maps-what-we-got.jpg?w=8100)
+![](../../assets/2022/12/mental-models-diagrams-wardley-maps-what-we-got.jpg)
 
 For comparison, here's what a fully formatted Mental Model Diagram might look like: 
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/mental-models-diagrams-wardley-maps-structured-mental-models-diagram-output.jpg?w=8100)
+![](../../assets/2022/12/mental-models-diagrams-wardley-maps-structured-mental-models-diagram-output.jpg)
 
 At this point, I had completed the series of workshops I was asked to facilitate. But what could we do next to achieve the team's ultimate goal of developing a strategy for their platform for the next ten years?
 

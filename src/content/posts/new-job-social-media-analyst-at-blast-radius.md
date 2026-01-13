@@ -30,4 +30,3 @@ And as Tom Smith listed as one of the reasons [Why Big Brands Struggle With Soci
 About [Blast Radius](http://www.blastradius.com):
 
 Blast Radius is a strategic interactive agency that builds long term relationships with global consumer brands to deliver innovative and profitable customer experiences.  It does this by combining business savvy, experience design, and industry-leading technologies -- including its work with ATG as an accredited partner.  With offices across North America and Europe, Blast Radius clients include BMW, EA, Jenny Craig, Newell Rubbermaid, Nike, Nintendo, Virgin and Vodafone.
-![http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpimgzemantacompixygif_ljnbgjdcgqplnbh-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/03/media_httpimgzemantacompixygif_ljnbgjdcgqplnbh-scaled500.gif?w=1)

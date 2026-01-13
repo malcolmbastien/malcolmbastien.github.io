@@ -66,7 +66,7 @@ Instead of creating a new label to give to "agile" teams to distinguish them fro
 
 In all cases I've seen new terminology invented to support an agile transformation, everybody got into the habit of using the terms, but only a small few ever really understood what the terms represented.
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/08/avoiding-autopilot.png?w=1200)
+![](../../assets/2024/08/avoiding-autopilot.png)
 
 ## Recommendations for Fostering Real Agility
 
@@ -88,7 +88,7 @@ Help teams articulate their problems and desired outcomes and develop their own 
 
 4. **Promote Continuous Improvement:** Engaging teams in ongoing reflection and improvement might be the one universally 'good' practice worth promoting. This commitment to continuous improvement is vital to fostering genuine agility and should be a top priority for all involved in agile transformations.
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/08/fostering-real-agility.png)
+![](../../assets/2024/08/fostering-real-agility.png)
 
 ## Conclusion
 

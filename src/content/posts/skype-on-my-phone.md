@@ -7,4 +7,4 @@ slug: skype-on-my-phone
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/09/photo.jpg?w=200](http://malcolmbastien.com/wp-content/uploads/2009/09/photo.jpg?w=200)
+![](../../assets/2009/09/photo.jpg)

@@ -7,8 +7,6 @@ slug: in-postrank-we-trust
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2008/09/media_httpwwwcrunchbasecomassetsimagesresized0001439214392v1max250x250png_mbqezffgyhsfgoz-scaled500.png?w=190](http://malcolmbastien.com/wp-content/uploads/2008/09/media_httpwwwcrunchbasecomassetsimagesresized0001439214392v1max250x250png_mbqezffgyhsfgoz-scaled500.png?w=190)
- 
 Last night I attended the Third Tuesday Toronto meetup featuring some of the team from [AideRSS](http://aiderss.com). The message they left everybody with "Everything so far has only been a demo".
 
 A lot of the questions that were asked came from the perspective of how AideRSS could help PR and advertising people, and a few of them were also about the future of AideRSS as a company, as a platform, and on the development of RSS as a utility vs. just a technology.

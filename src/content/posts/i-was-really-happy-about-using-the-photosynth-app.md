@@ -11,7 +11,7 @@ tags:
   - Photosynth
   - Image
 ---
-![http://malcolmbastien.com/wp-content/uploads/2012/08/tumblr_m85d6zhejl1qa77f2o1_400.png](http://malcolmbastien.com/wp-content/uploads/2012/08/tumblr_m85d6zhejl1qa77f2o1_400.png)
+![](../../assets/2012/08/tumblr_m85d6zhejl1qa77f2o1_400.png)
 
 I was really happy about using the Photosynth app for the first time to make an excellent panorama. The app has the fastest and smoothest panorama creation out of any app I’ve tried. It does a great job of just letting me adjust my camera, while it captures what it needs to automatically and gives me real time feedback.
 

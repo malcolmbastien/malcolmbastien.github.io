@@ -125,7 +125,7 @@ Who should know about this blocker?
 
 A valuable tool to help surface where delays are happening in your work, even when teams are silent, is a work item aging report. This report helps reveal which work items have been in progress the longest, and some even show how long work items have been sitting in a particular state in your kanban system. You can use this report as an early warning system against outliers.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/05/image_1685221172389_0.png?w=1344)The Aging WIP Chart in [Kanbanize](https://kanbanize.com/)
+![](../../assets/2023/05/image_1685221172389_0.png)The Aging WIP Chart in [Kanbanize](https://kanbanize.com/)
 
 ## Conclusion
 

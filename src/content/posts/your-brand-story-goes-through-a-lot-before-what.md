@@ -10,7 +10,7 @@ tags:
   - Image
   - Sketches
 ---
-![](http://malcolmbastien.com/wp-content/uploads/2012/10/tumblr_mbowtplhlm1qa77f2o1_1280.jpg)
+![](../../assets/2012/10/tumblr_mbowtplhlm1qa77f2o1_1280.jpg)
 
 Your brand story goes through a lot before what your consumers ultimately tell themselves, and others.
 

@@ -7,8 +7,6 @@ slug: internal-micro-messaging-platforms-are-gold
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpwwwcrunchbasecomassetsimagesresized0003026030260v1max250x250png_jfehbfkcfgzffgh-scaled500.png?w=250](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpwwwcrunchbasecomassetsimagesresized0003026030260v1max250x250png_jfehbfkcfgzffgh-scaled500.png?w=250)
- [](http://www.crunchbase.com) 
 
 Internal Micro Messaging Platforms Are Gold.
 

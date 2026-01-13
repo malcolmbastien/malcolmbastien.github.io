@@ -31,7 +31,7 @@ Organizations spend lots of time, money and effort putting these elements into p
 
 In StarCraft, mechanics include micro, macro, speed, offence, defence, versatility, multitasking and decision-making. Players can find guides and seek help to improve at these elements of play, but getting better only happens through practice and experience.
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/09/agile-mechanics.png)
+![](../../assets/2024/09/agile-mechanics.png)
 
 Amateurs can recognize professional levels of play when they watch matches, but it doesn't mean they play like them or perform anywhere close to the professional level.
 
@@ -58,7 +58,7 @@ While strategies provide a framework for how to organize your organization or te
 
 ## Cultivating Better Mechanics
 
-![](https://malcolmbastien.com/wp-content/uploads/2024/09/developing-strong-mechanics-2.png)Cultivating better mechanics
+![](../../assets/2024/09/developing-strong-mechanics-2.png)Cultivating better mechanics
 
 Cultivating strong mechanics is not a quick or easy process. It's challenging to grasp what mechanics are, which are important, and how to develop them. Here are five strategies that can help teams move beyond surface-level Agile and develop the deep capabilities that drive real agility:
 

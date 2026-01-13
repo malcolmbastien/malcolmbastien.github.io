@@ -7,7 +7,7 @@ slug: making-work-more-human
 tags:
   - Agile
 ---
-![A group of five people engaging in a lively discussion around a table in a bright, modern office environment. They are smiling and laughing, with a laptop and water bottles visible on the table.](https://openmode.wordpress.com/wp-content/uploads/2025/09/create-a-highly-detailed-and-high-resolution-featured-image-for-a.png)
+![](../../assets/2025/09/create-a-highly-detailed-and-high-resolution-featured-image-for-a.png)
 
 In the best, most productive teams I've worked with, people acted very naturally. On those teams, there were a lot of casual conversations where people talked about different things not related to work, people joked and laughed, but there was also the ability for the team to focus intensely and to be incredibly productive. I did some thinking, trying to figure out the conditions that created those teams, and I concluded that it always came down to treating everyone like people.
 

@@ -7,4 +7,4 @@ slug: my-vibram-fivefingers
 tags:
   - General
 ---
-These things feel like a dream.![http://malcolmbastien.com/wp-content/uploads/2009/07/photo1.jpg?w=300](http://malcolmbastien.com/wp-content/uploads/2009/07/photo1.jpg?w=300)
+These things feel like a dream.![](../../assets/2009/07/photo1.jpg)

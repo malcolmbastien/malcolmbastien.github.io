@@ -8,7 +8,7 @@ tags:
   - General
 ---
 The smartphone market is headed to a duopoly of Google’s Android and Apple’s iOS and perhaps it’s time to sweat whether a No. 3 platform has a chance in hell to compete.
-![Media_httpizdnetcombl_sebho](http://malcolmbastien.com/wp-content/uploads/2011/12/media_httpizdnetcombl_sebho-scaled699.png?w=300)
+![](../../assets/2011/12/media_httpizdnetcombl_sebho-scaled699.png)
 via [zdnet.com](http://www.zdnet.com/blog/btl/android-ios-head-to-duopoly-we-need-a-no-3-stat/64333)
 An article that didn't need to be written: iOS and Android are the two most popular smartphone platforms, the others control only small amounts of the market, and this should worry you.
 

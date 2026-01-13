@@ -34,4 +34,3 @@ Both RedWire and Refresh Events has done a good job with different themed events
 To further understand where I think our real strength as a local community lies, re-watch this video by Chris Anderson, curator of TED, where he lays out his vision for what the TED conferences could be. We completely have the same opportunity on our hands.
 
 [http://video.ted.com/assets/player/swf/EmbedPlayer.swf](http://video.ted.com/assets/player/swf/EmbedPlayer.swf)
-![http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpimgzemantacompixygifxid395565554d914848befc82c189fcd1e2_xqaidrvcaihkity-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/06/media_httpimgzemantacompixygifxid395565554d914848befc82c189fcd1e2_xqaidrvcaihkity-scaled500.gif?w=1)

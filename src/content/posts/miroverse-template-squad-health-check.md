@@ -13,7 +13,7 @@ tags:
 ---
 In March of 2022, my [Squad Health Check](https://miro.com/miroverse/squad-health-check/) Miro template got published to the [Miroverse](https://miro.com/miroverse/). The Squad Health Check, originally developed at Spotify, allows teams to reflect on topics like "Is work fun?" and "Are we learning?" or "Do we have a good sense of our mission?" and more. Making it available as a Miro template means running health check sessions with your teams is easier than ever. I want to share what I initially liked about the exercise, the changes I made with the template, and some notes from my experience using it with teams.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/05/image.png?w=1466)[Malcolm Bastien's Squad Health Check template | Miroverse](https://miro.com/miroverse/squad-health-check/)
+![](../../assets/2023/05/image.png)[Malcolm Bastien's Squad Health Check template | Miroverse](https://miro.com/miroverse/squad-health-check/)
 
 ## About the Squad Health Check
 
@@ -45,7 +45,7 @@ A Squad Health Check workshop begins by gathering people from a team and reviewi
 
 **Red**: Red means this category really sucks and needs to be addressed.
 
-![](https://malcolmbastien.com/wp-content/uploads/2023/05/image-2.png?w=1347)The Squad Health Check Miro Template
+![](../../assets/2023/05/image-2.png)The Squad Health Check Miro Template
 
 ## My Thoughts on the Squad Health Check
 

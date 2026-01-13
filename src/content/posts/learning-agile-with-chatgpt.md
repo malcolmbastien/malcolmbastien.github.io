@@ -18,9 +18,9 @@ What is agile software development?
 
 What are the criticisms of agile software development?
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/image-17.png?w=821)
+![](../../assets/2022/12/image-17.png)
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/image-14.png?w=813)
+![](../../assets/2022/12/image-14.png)
 
 Then I asked it some more complicated questions, hoping to get answers to questions with no one clear answer:
 
@@ -28,9 +28,9 @@ How can an organization transition from waterfall development to agile?
 
 How can I compare if one team is more agile than another?
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/image-4.png?w=805)
+![](../../assets/2022/12/image-4.png)
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/image-5.png?w=809)
+![](../../assets/2022/12/image-5.png)
 
 The next set of questions I asked was about combining and comparing different topics:
 
@@ -38,9 +38,9 @@ How can I use domain-driven design with an agile software development team?
 
 Is Scrum better than Kanban?
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/image-6.png?w=807)
+![](../../assets/2022/12/image-6.png)
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/image-7.png?w=811)
+![](../../assets/2022/12/image-7.png)
 
 I tried to throw it some curve balls, but of course, it handled those queries without a hitch:
 
@@ -48,9 +48,9 @@ What are the correct criteria for determining if a team is agile?
 
 Can a team follow recommended agile practices too closely and in doing so, actually become less agile?
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/image-15.png?w=820)
+![](../../assets/2022/12/image-15.png)
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/image-16.png?w=810)
+![](../../assets/2022/12/image-16.png)
 
 I experimented with more questions across a variety of topics, and while I could point out minor issues with the responses I got back, experimenting with ChatGPT was a fantastic experience. The next experiment of mine will be to think of different ways to offload some of my work to ChatGPT:
 
@@ -58,8 +58,8 @@ Create the agenda for a five-day long workshop designed to teach people with no 
 
 Next week I have to facilitate a one-and-a-half-hour workshop with 8 people using the Value Proposition Canvas to identify new products and services. The customer profile section of the canvas will already be completed and the goal of the workshop will be to complete the value map. How should I facilitate this workshop?
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/image-11.png?w=660)
+![](../../assets/2022/12/image-11.png)
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/12/image-12.png?w=816)
+![](../../assets/2022/12/image-12.png)
 
 Just incredible. This is powerful stuff.

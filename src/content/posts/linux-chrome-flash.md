@@ -7,7 +7,7 @@ slug: linux-chrome-flash
 tags:
   - General
 ---
-![http://malcolmbastien.com/wp-content/uploads/2009/08/chrome-flash-png-scaled-1000.jpg?w=300](http://malcolmbastien.com/wp-content/uploads/2009/08/chrome-flash-png-scaled-1000.jpg?w=300)
+![](../../assets/2009/08/chrome-flash-png-scaled-1000.jpg)
 This is surprisingly easy to do. Just add "--enable-plugins" to the end 
 of your shortcut command in the Gnome menu. 
  

@@ -52,17 +52,17 @@ After some *light* research, I took an inventory of each practice and listed:
 - The required materials
 - The procedures, steps or skills involved
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/09/the-service-delivery-review_-evolving-the-gemba-walk-comparing-practices-1.jpg?w=4337)Breaking down each practice into its components.
+![](../../assets/2022/09/the-service-delivery-review_-evolving-the-gemba-walk-comparing-practices-1.jpg)Breaking down each practice into its components.
 
 With this picture of the different practices broken down, I then looked at the different purposes of each and tried to identify a set of common outcomes. (The scoring was just an experiment and should not be taken seriously.)
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/09/the-service-delivery-review_-evolving-the-gemba-walk-comparing-outcomes-2.jpg?w=4618)Comparing each practice against a set of common outcomes.
+![](../../assets/2022/09/the-service-delivery-review_-evolving-the-gemba-walk-comparing-outcomes-2.jpg)Comparing each practice against a set of common outcomes.
 
 What stood out most to me between these three practices is that the Service Delivery Review is the only one that makes it a point to include customers and stakeholders as part of the process. In the Service Delivery Review, customer collaboration drives service improvements and demand prioritization. The Service Delivery Review is also the only practice that makes creating trust with customers and meeting customer fitness criteria an explicit goal.
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/09/the-service-delivery-review_-evolving-the-gemba-walk-gemba-walk-amp-toyota-kata-2.jpg?w=4618)The Gemba Walk and Toyota Kata involve the leader and the team.
+![](../../assets/2022/09/the-service-delivery-review_-evolving-the-gemba-walk-gemba-walk-amp-toyota-kata-2.jpg)The Gemba Walk and Toyota Kata involve the leader and the team.
 
-![](https://malcolmbastien.com/wp-content/uploads/2022/09/the-service-delivery-review_-evolving-the-gemba-walk-service-delivery-review-2.jpg?w=4935)The Service Delivery Review adds the customer and interested stakeholders.
+![](../../assets/2022/09/the-service-delivery-review_-evolving-the-gemba-walk-service-delivery-review-2.jpg)The Service Delivery Review adds the customer and interested stakeholders.
 
 ## Remixing the Gemba Walk
 

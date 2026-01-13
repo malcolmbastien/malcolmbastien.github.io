@@ -8,7 +8,7 @@ tags:
   - General
   - Windows Phone 7
 ---
-![http://malcolmbastien.com/wp-content/uploads/2010/11/windows-phone-7-scaled1000.jpg?w=300](http://malcolmbastien.com/wp-content/uploads/2010/11/windows-phone-7-scaled1000.jpg?w=300)
+![](../../assets/2010/11/windows-phone-7-scaled1000.jpg)
 Even when journalists say that they really like the new Windows Phone 7 devices and the experience of the phone, you'll often hear them say that it will be a challenge for Microsoft to overcome its re-entrance into the smartphone market because of how late in the game they are. The iPhone has been out for four years, and Android is now on so many different handsets that in aggregate, more android devices are being sold than iPhones.
 
 Newness

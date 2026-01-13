@@ -6,9 +6,7 @@ updatedDate: 2011-02-08
 slug: is-it-a-site-a-business-or-mostly-just-twitter
 tags:
   - General
----
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpfarm3staticflickrcom200721041285575c662de4demjpg_ambhauerhedtwhu-scaled500.jpg?w=240](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpfarm3staticflickrcom200721041285575c662de4demjpg_ambhauerhedtwhu-scaled500.jpg?w=240)
-  
+---  
 
 Just like applications were able to add a lot more functionality, and create successful businesses on [Facebook](http://facebook.com), the same needs to be done for [Twitter](http://twitter.com). There are businesses I am seeing creating new websites and businesses that in essence boil down to being a mix of **90% Twitter, and 10% different stuff**. All these new businesses then have to deal with problems like users and infrastructure.
 
@@ -30,5 +28,3 @@ Some of, or all of these features mixed in with other business areas could be th
 For example, one of these applications is a twitter like clone that lets you ask questions, receive responses, and then give credit to who helps you as a way for them to increase their on-site reputation in a particular field. It's a great idea as many of the updates on Twitter do deal with asking for and helping others, but it would probably have a better chance of taking off as an application users could add-on to their Twitter accounts. Facebook has already proved the application model works.
 
 **Do you think Twitter needs to expand to let users build apps on top of it?**
-![http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxideaa7f00e52eb45c8bbb74b77fbef6326_jhlkbaabtfjdrew-scaled500.gif?w=1](http://malcolmbastien.com/wp-content/uploads/2009/04/media_httpimgzemantacompixygifxideaa7f00e52eb45c8bbb74b77fbef6326_jhlkbaabtfjdrew-scaled500.gif?w=1)
-Image by [premasagar](http://www.flickr.com/photos/54304913@N00/2104128557) via Flickr
