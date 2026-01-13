@@ -5,10 +5,10 @@ publishedDate: 2022-12-11
 updatedDate: 2024-01-12
 slug: capturing-customer-jobs-using-a-mental-model-diagram
 tags:
-  - Design Thinking
+  - Design-Thinking
   - General
-  - jobs to be done
-  - mental model diagram
+  - jobs-to-be-done
+  - mental-model-diagram
 ---
 Recently, my client asked for my help facilitating a series of strategic planning workshops. In order to secure funding for the next fiscal year, they needed to develop and present a strategy for their platform for the next ten years describing where to invest. To create that strategy, each workshop in the series would focus on developing new features to meet the needs of the different personas they developed. This workshop created an opportunity to introduce a technique called Mental Model Diagrams and language around customer jobs, taken from Jobs Theory, aka Jobs to be Done.
 
