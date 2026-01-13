@@ -319,11 +319,25 @@ const formatDate = (date: Date) => {
       }
 
       .inline-tag {
-        @apply text-emerald-600 dark:text-emerald-400 font-medium transition-colors hover:text-emerald-500 underline decoration-emerald-500/30 underline-offset-2;
+        @apply no-underline px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 font-medium transition-all hover:bg-emerald-100 dark:hover:bg-emerald-900/50 hover:text-emerald-700 dark:hover:text-emerald-300 border border-emerald-100 dark:border-emerald-800/50;
       }
 
       .article-img, article img {
         @apply transition-transform duration-200 hover:scale-[1.01] active:scale-[0.99] cursor-zoom-in;
+      }
+
+      /* Image Captions */
+      .prose p:has(img):has(em) {
+        @apply flex flex-col items-center mb-8 text-center;
+      }
+
+      .prose p:has(img):has(em) em {
+        @apply text-sm text-slate-500 dark:text-slate-400 mt-2 not-italic;
+      }
+
+      .prose p:has(> img:only-child),
+      .prose p:has(> a > img:only-child) {
+        @apply flex justify-center mb-8;
       }
     </style>
 

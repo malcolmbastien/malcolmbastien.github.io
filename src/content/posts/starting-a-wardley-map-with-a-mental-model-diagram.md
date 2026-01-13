@@ -109,4 +109,4 @@ At this point, the client could use this map to support their ultimate goal of d
 
 One of the main challenges of a Mental Model Diagram is the effort required to collect and sort the data. Even though we only focused on two of our user's Mental Spaces, we were already to identify a non-trivial picture of customer jobs, high-level and support capabilities, industry trends and investment areas. Expanding this exercise to cover the complete set of our customer's needs could require using multiple maps.
 
-#Wardley-Maps #wardley-maps
+#Wardley-Maps 

@@ -58,7 +58,8 @@ While strategies provide a framework for how to organize your organization or te
 
 ## Cultivating Better Mechanics
 
-![](../../assets/2024/09/developing-strong-mechanics-2.png)Cultivating better mechanics
+![](../../assets/2024/09/developing-strong-mechanics-2.png)
+*Cultivating better mechanics*
 
 Cultivating strong mechanics is not a quick or easy process. It's challenging to grasp what mechanics are, which are important, and how to develop them. Here are five strategies that can help teams move beyond surface-level Agile and develop the deep capabilities that drive real agility:
 
