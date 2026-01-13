@@ -18,4 +18,3 @@ As much as blogs provide good signal, their posts are generally, too long, or fo
 What there was a need for, and will become popular beyond the scope of a single application or network is a habit of content production that balances high quality content, bite-sized length'd posts, and an open network system of following particular users, and of participating with them in discussions.
 
 What's left to be discussed is the idea of taking advantage of different types of media in sharing content and ideas of quality, the way this media rich format integrates with the different ways us as consumers are exposed to and discover interesting media pieces, and finally the sorts of ways that people can gather around a media format of this configuration as they have done for blogs and Twitter.
-![](../../assets/2009/09/media_httpimgzemantacompixygifxidcdc7a18e009b41b192a774c0679964d8_cefcmqjdfjvurbi-scaled500.gif)

@@ -19,8 +19,6 @@ tags:
   - Twitter
   - Zemanta
 ---
-[![Shady Characters](http://farm1.static.flickr.com/186/432795324_5694fad04c_m.jpg)](http://www.flickr.com/photos/17642817@N00/432795324) 
-
 If your only account on Twitter is a corporate account: **Stop.**
 
 **Start over.**
@@ -46,4 +44,3 @@ Melding a personal and corporate persona on Twitter is a bad move if neither you
 All these sort of actions are not transparent.
 
 **But just because it's not transparent doesn't mean people can't see through you.**
-![](http://img.zemanta.com/pixy.gif?x-id=7aa75199-2979-4ee6-af76-0c5292521d51)

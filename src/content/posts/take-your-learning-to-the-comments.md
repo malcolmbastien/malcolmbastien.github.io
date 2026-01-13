@@ -28,4 +28,3 @@ How many young people view participating on blogs as an learning tool?  Probably
 This is a problem that comes back to the perception of blogs by most young people.  It's hard to even say still how many young people know that there are professionally run blogs dedicated to serious topics and, that they can participate on them.  Equally as bad is what people have become use to when leaving comments.  Facebook has helping people get used to the idea of leaving comments, but mostly ones that are socially focused, humorous, or NSFW.
 
 **Do you find any value in commenting?  Maybe you should take another look.**
-![](http://img.zemanta.com/pixy.gif?x-id=74dbef50-84d8-43c2-8e41-610fd4a999eb)

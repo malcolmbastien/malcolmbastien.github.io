@@ -5,6 +5,7 @@ import ProfileHeader from "../components/Profile/ProfileHeader.astro";
 import TableOfContents from "../components/Navigation/TableOfContents.astro";
 import Backlinks from "../components/Backlinks.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import ImageLightbox from "../components/ImageLightbox.astro";
 import { getCollection } from "astro:content";
 import { getStatusColors } from "../lib/theme";
 import { getReadingTime } from "../lib/reading-time";
@@ -166,18 +167,19 @@ const formatDate = (date: Date) => {
                         >
                             {frontmatter.summary}
                         </p>
-                          <div class="flex flex-wrap gap-2">
-                              {
-                                  frontmatter.tags.map((tag: string) => (
-                                      <a
-                                          href={`/tags/${tag}`}
-                                          class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-3 py-1 rounded-md text-sm border border-slate-100 dark:border-slate-700 hover:border-emerald-500/50 hover:text-emerald-600 transition-all"
-                                      >
-                                          #{tag}
-                                      </a>
-                                  ))
-                              }
-                          </div>
+                           <div class="flex flex-wrap gap-2">
+                               {
+                                   frontmatter.tags.map((tag: string) => (
+                                       <a
+                                           href={`/topics/${tag}`}
+                                           class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-3 py-1 rounded-md text-sm border border-slate-100 dark:border-slate-700 hover:border-emerald-500/50 hover:text-emerald-600 transition-all"
+                                       >
+                                           #{tag}
+                                       </a>
+                                   ))
+                               }
+                           </div>
+
 
                           <div id="content-map-container" class="flex flex-row gap-2 mt-4 transition-opacity duration-300 opacity-0 group">
                             <div id="content-map" class="flex flex-row gap-1.5 items-center max-w-full overflow-hidden">
@@ -247,6 +249,8 @@ const formatDate = (date: Date) => {
         <SiteFooter />
     </main>
 
+    <ImageLightbox />
+
     <style is:global>
       @reference "../styles/global.css";
 
@@ -312,6 +316,14 @@ const formatDate = (date: Date) => {
       /* Draft */
       .map-dot-draft, .map-dot-wip {
         @apply bg-transparent border border-slate-400 dark:border-slate-500 border-dashed scale-110;
+      }
+
+      .inline-tag {
+        @apply text-emerald-600 dark:text-emerald-400 font-medium transition-colors hover:text-emerald-500 underline decoration-emerald-500/30 underline-offset-2;
+      }
+
+      .article-img, article img {
+        @apply transition-transform duration-200 hover:scale-[1.01] active:scale-[0.99] cursor-zoom-in;
       }
     </style>
 

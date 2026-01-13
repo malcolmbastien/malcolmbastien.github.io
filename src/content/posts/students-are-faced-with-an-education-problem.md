@@ -18,8 +18,6 @@ It's not an ambition problem, an intellectual problem, or an ability problem.  
 
 I want to be clear in getting my message across that **it's an education problem that students face** more than anything else.  All the problems of ambition, of motivation, having a hunger for knowledge and learning, it all roots from a poor education system.  The education is alright on its own, but only if you want to learn the wrong things.
 
-[![Photograph by: Fred Maidment (me) Location: UG...](http://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Brooks_Hall_UGA.jpg/202px-Brooks_Hall_UGA.jpg)](http://commons.wikipedia.org/wiki/Image:Brooks_Hall_UGA.jpg)
-
 ## The Wrong Education Causes The Right Problem
 
 It's the right problem only because it's a problem we can fix.  In general terms we can identify, what the symptoms are, what the cause is, and what the solution can be.
@@ -38,6 +36,3 @@ When you talk about getting young people active and engaged, think about the cha
 [http://video.ted.com/assets/player/swf/EmbedPlayer.swf](http://video.ted.com/assets/player/swf/EmbedPlayer.swf)
 
 *On a side note it may be a communications problem as well, because most university students can't write or communicate for the life of them.*
-
-*Image via [Wikipedia](http://commons.wikipedia.org/wiki/Image:Brooks_Hall_UGA.jpg)*
-![](http://img.zemanta.com/pixy.gif?x-id=46bf5e0d-1aa4-47cb-876c-bd2061229279)

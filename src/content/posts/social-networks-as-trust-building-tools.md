@@ -15,12 +15,11 @@ tags:
   - trust
   - Twitter
 ---
-[![Vancouver | what are you doing?](http://farm2.static.flickr.com/1249/1459939505_ceebb0f3ea_m.jpg)](http://www.flickr.com/photos/52871662@N00/1459939505) 
-
 This is something I've been meaning to write for a while, though one of Chris Brogan's posts finally got me around to doing it.
 
 Social networks have no feature or even general importance besides to the way they can be tools to help us build trust in one another.  There was a video that came out early last year, maybe two years ago that discussed Trusted Computing.  The video has one part which stuck with me and is relevant to this discussion:
 If you gain s.o. trust, you have established an interpersonal relationship, **based on communication, shared values and experiences.**
+
 ## Why "What Are You Doing?" Is Important
 
 If we look at Twitter, Facebook, and Linkedin, we can see that each of them ties into one of those three foundations 

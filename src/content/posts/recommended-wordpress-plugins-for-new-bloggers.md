@@ -20,9 +20,6 @@ tags:
 ---
 I've had a few friends in the past couple of months start new blogs, which is great, but a big part of starting a new blog is deciding on what plugins should be installed as well.  Instead of helping these new bloggers one at a time, I've decided to be a bit more efficient and will instead publish a list of what plugins I have set up on this blog.
 
-[caption id="" align="alignright" width="300" caption="Photo credit barnett on Flickr"][![Blogging Research Wordle](http://farm4.static.flickr.com/3130/2836828090_d44f5278bd_d.jpg)](http://flickr.com/photos/barnett/2836828090/)[/caption]
-Akismet - Spam Filtering
-
 Akismet is the default tool Wordpress uses to block comment spam. While not perfect, Akismet will block over 99% of spam from ever reaching your blog.  You'll need to make an account on WordPress.com to get an API key to activate Akismet.
 Cforms II - Comment Forms
 
@@ -48,19 +45,19 @@ Traditional commenting systems are a thing of the past.  Federated comments, dy
 
 IntenseDebate includes features such as:
 
-	[Comment Threading](http://intensedebate.com/features#li1)
-	[Reply-By-Email](http://intensedebate.com/features#li2)
-	[Importing/Exporting](http://intensedebate.com/features#li3)
-	[Commenter Profiles](http://intensedebate.com/features#li4)
-	[Reputation Points & Comment Voting](http://intensedebate.com/features#li5)
-	[Moderation/Blacklisting](http://intensedebate.com/features#li6)
-	[Widgets](http://intensedebate.com/features#li7)
-	[RSS Readers & Tracking](http://intensedebate.com/features#li8)
-	[Twitter](http://intensedebate.com/features#li9)
-	[FriendFeed](http://intensedebate.com/features#li10)
-	[OpenID](http://intensedebate.com/features#li11)
-	[Gravatar](http://intensedebate.com/features#li12)
-	[HTML Formatting](http://intensedebate.com/features#li13)
+- [Comment Threading](http://intensedebate.com/features#li1)
+- [Reply-By-Email](http://intensedebate.com/features#li2)
+- [Importing/Exporting](http://intensedebate.com/features#li3)
+- [Commenter Profiles](http://intensedebate.com/features#li4)
+- [Reputation Points & Comment Voting](http://intensedebate.com/features#li5)
+- [Moderation/Blacklisting](http://intensedebate.com/features#li6)
+- [Widgets](http://intensedebate.com/features#li7)
+- [RSS Readers & Tracking](http://intensedebate.com/features#li8)
+- [Twitter](http://intensedebate.com/features#li9)
+- [FriendFeed](http://intensedebate.com/features#li10)
+- [OpenID](http://intensedebate.com/features#li11)
+- [Gravatar](http://intensedebate.com/features#li12)
+- [HTML Formatting](http://intensedebate.com/features#li13)
 
 Some more commenting systems to consider include: coComment, Disqus, Js Kit, SezWho.
 

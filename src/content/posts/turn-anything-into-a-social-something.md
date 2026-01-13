@@ -20,4 +20,3 @@ What does this sharing of many types of media do for blogging? Being able to sha
 What the sharing of different content objects in their original media formats also does is transform these media objects that we are consuming into **"social objects"**. Like [Flickr](http://www.flickr.com) turned photos into social objects and how [YouTube](http://www.youtube.com/) turned videos into social objects, the freedom to share content from a wide variety of media formats directly is giving us the power to create experiences, ideas, and conversations from powerpoint decks, pdfs, mp3s, and other formats more reflective of the author's original intent.
 
 **How are your media sharing habits changing now that you can finally share many different types of media in an easy and beautiful way? How has that changed the way you can communicate ideas with others?**
-![](../../assets/2009/09/media_httpimgzemantacompixygifxidbf101e76c54c44d686a6301517dc4d18_zdslaocqebgmiab-scaled500.gif)

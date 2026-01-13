@@ -38,4 +38,3 @@ It's important to reiterate that I'm not, and we all shouldn't declared that one
 
 What are your opinions?
 Why do you even use a 3rd party commenting platform?
-![](http://img.zemanta.com/pixy.gif?x-id=7d26afd2-4890-4b81-8f3a-0effbee2d341)

@@ -63,15 +63,16 @@ const hiddenMonths = allMonths.slice(startIndex);
                                 return (
                                         <div
                                             class="timeline-event flex items-start gap-4 p-4 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors relative z-10"
-                                            data-status={event.post.data.status}
-                                            data-title={event.title.toLowerCase()}
-                                            data-summary={
-                                                event.post.data.summary?.toLowerCase() ||
-                                                ""
-                                            }
-                                            data-tags={event.post.data.tags
-                                                .join(" ")
-                                                .toLowerCase()}
+                                             data-status={event.post.data.status}
+                                             data-title={event.title.toLowerCase()}
+                                             data-summary={
+                                                 event.post.data.summary?.toLowerCase() ||
+                                                 ""
+                                             }
+                                             data-topics={event.post.data.tags
+                                                 .join(" ")
+                                                 .toLowerCase()}
+
                                             data-created={
                                                 event.date
                                                     .toISOString()

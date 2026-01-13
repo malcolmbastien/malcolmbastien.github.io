@@ -71,12 +71,13 @@ const formatDate = (date: Date) => {
                                     year: "numeric",
                                 })}
                             </time>
-                            <div class="flex items-center gap-1">
-                                <span>
-                                    {post.data.tags.length} tag
-                                    {post.data.tags.length !== 1 ? "s" : ""}
-                                </span>
-                            </div>
+                             <div class="flex items-center gap-1">
+                                 <span>
+                                     {post.data.tags.length} topic
+                                     {post.data.tags.length !== 1 ? "s" : ""}
+                                 </span>
+                             </div>
+
                         </div>
                     </a>
                 ))}

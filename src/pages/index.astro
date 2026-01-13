@@ -315,13 +315,13 @@ const currentYearValue = new Date().getFullYear();
     }
 
     const buttons = document.querySelectorAll("[data-status]");
-    const tagButtons = document.querySelectorAll("[data-tag]");
+    const topicButtons = document.querySelectorAll("[data-topic]");
     const eventTypeButtons = document.querySelectorAll("[data-event-type]");
     const timelineEvents = document.querySelectorAll(".timeline-event");
     const noResults = document.getElementById("no-results");
 
     let currentFilter = "all";
-    let currentTag = "";
+    let currentTopic = "";
     let currentEventType = "all";
     let currentYear = new Date().getFullYear().toString();
     let currentDateFilter: string | null = null;
@@ -344,7 +344,7 @@ const currentYearValue = new Date().getFullYear();
 
             const matchesFilter =
                 currentFilter === "all" || status === currentFilter;
-            const matchesTag = currentTag === "" || (htmlEvent.dataset.tags || "").includes(currentTag);
+            const matchesTopic = currentTopic === "" || (htmlEvent.dataset.topics || "").includes(currentTopic);
             const matchesEventType =
                 currentEventType === "all" || eventType === currentEventType;
             const matchesYear =
@@ -357,7 +357,7 @@ const currentYearValue = new Date().getFullYear();
 
             if (
                 matchesFilter &&
-                matchesTag &&
+                matchesTopic &&
                 matchesEventType &&
                 matchesYear &&
                 matchesDate
@@ -430,17 +430,17 @@ const currentYearValue = new Date().getFullYear();
         });
     });
 
-    tagButtons.forEach((button) => {
+    topicButtons.forEach((button) => {
         button.addEventListener("click", () => {
-            const tag = (button as HTMLElement).dataset.tag || "";
+            const topic = (button as HTMLElement).dataset.topic || "";
             itemsToShow = 20;
-            if (currentTag === tag) {
+            if (currentTopic === topic) {
                 button.classList.remove("active");
-                currentTag = "";
+                currentTopic = "";
             } else {
-                tagButtons.forEach((btn) => btn.classList.remove("active"));
+                topicButtons.forEach((btn) => btn.classList.remove("active"));
                 button.classList.add("active");
-                currentTag = tag;
+                currentTopic = topic;
             }
             updateDisplay();
         });

@@ -40,4 +40,3 @@ Or if we though of journalists as the equivalent of open source programmers... *
 I look forward to an interesting discussion in the comments.
 
 *Image by [said&done](http://www.flickr.com/photos/36199398@N00/2081701394) via Flickr*
-![](http://img.zemanta.com/pixy.gif?x-id=c23a45a3-f633-4914-99de-219d56f368d4)

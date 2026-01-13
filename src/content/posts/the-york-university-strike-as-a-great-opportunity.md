@@ -27,9 +27,9 @@ Financial issues aside, since many students with OSAP loans will be inconvenienc
 
 These students have all been given a large amount of time with nothing to do.  They have a huge opportunity which they can profit from, or which they can focus their energy in the wrong place and lose out.  Let's pull a quote from one of Seth Godin's recent posts about Boundaries:
 
-I think you can tell a lot about a person or an organization by looking at how they deal with boundaries... When there's nothing but open space, do you run? Or shrink?
-
-Seth Godin
+> I think you can tell a lot about a person or an organization by looking at how they deal with boundaries... When there's nothing but open space, do you run? Or shrink?
+>
+> Seth Godin
 
 If I was a recruiter interviewing a recent York graduate, the first thing that I would ask them would be "How did you use your time effectively and how were you productive during the strike?"  Did they stay home?  Did they go to protests?  Or did they use this freedom to start a new project?  Did they invest all that free time to develop their skills?
 

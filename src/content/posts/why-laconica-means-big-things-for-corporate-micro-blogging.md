@@ -20,4 +20,3 @@ Another add-on to this is that while John was broadcasting out messages much lik
 A micro-blogging platforms like Laconica that could be installed within an organization enable a work flow such as this.  They also provide the valuable option of keeping all communications within a corporate network and not allowing these messages, which might hold delicate and private information, reach the public.
 
 Do you think these sorts of micro-blogging implementations have an important place in the workplace of the near future?
-![http://malcolmbastien.com/wp-content/uploads/2008/08/media_httpimgzemantacomreblogepngxiddcc3d571210041739102537e584afe26_ghoyecuyuclasfd-scaled500.png?w=70](http://malcolmbastien.com/wp-content/uploads/2008/08/media_httpimgzemantacomreblogepngxiddcc3d571210041739102537e584afe26_ghoyecuyuclasfd-scaled500.png?w=70)
