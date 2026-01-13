@@ -202,6 +202,9 @@ function getFillColor(count: number, isDarkMode: boolean) {
 
             // Clear selected date when changing years
             selectedDate = null;
+            const heatmap = document.getElementById("activity-heatmap");
+            heatmap?.classList.remove("is-filtering");
+
             const event = new CustomEvent("dateFilterChange", {
                 detail: { date: null },
             });
@@ -335,9 +338,12 @@ function getFillColor(count: number, isDarkMode: boolean) {
 
         // Function to filter posts by date
         function filterByDate(dateString) {
+            const heatmap = document.getElementById("activity-heatmap");
+
             // If clicking the same date, clear the filter
             if (selectedDate === dateString) {
                 selectedDate = null;
+                heatmap?.classList.remove("is-filtering");
                 // Clear any existing date filters
                 const event = new CustomEvent("dateFilterChange", {
                     detail: { date: null },
@@ -353,6 +359,7 @@ function getFillColor(count: number, isDarkMode: boolean) {
             }
 
             selectedDate = dateString;
+            heatmap?.classList.add("is-filtering");
 
             // Dispatch custom event to notify the main filtering system
             const event = new CustomEvent("dateFilterChange", {
@@ -403,15 +410,14 @@ function getFillColor(count: number, isDarkMode: boolean) {
                     else text = `${count} contributions on ${formattedDate}`;
 
                     tooltip.textContent = text;
+                    
+                    // Position relative to the rect
+                    const rect = target.getBoundingClientRect();
+                    tooltip.style.left = `${rect.left + rect.width / 2}px`;
+                    tooltip.style.top = `${rect.top - 8}px`;
+                    tooltip.style.transform = "translate(-50%, -100%)";
+                    
                     tooltip.classList.remove("hidden");
-                }
-            });
-
-            svgElement.addEventListener("mousemove", (e) => {
-                if (!tooltip.classList.contains("hidden")) {
-                    tooltip.style.left = `${e.clientX}px`;
-                    tooltip.style.top = `${e.clientY - 30}px`;
-                    tooltip.style.transform = "translateX(-50%)";
                 }
             });
 
@@ -430,6 +436,25 @@ function getFillColor(count: number, isDarkMode: boolean) {
 				stroke: #10b981 !important;
 				stroke-width: 2px !important;
 			}
+            #activity-heatmap.is-filtering .activity-day:not(.selected) {
+                opacity: 0.3;
+            }
+            #activity-heatmap.is-filtering .activity-day.selected {
+                opacity: 1;
+            }
+            #heatmap-tooltip::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #0f172a transparent transparent transparent;
+            }
+            .dark #heatmap-tooltip::after {
+                border-color: #1e293b transparent transparent transparent;
+            }
 		`;
         document.head.appendChild(style);
     </script>
