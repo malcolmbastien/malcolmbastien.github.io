@@ -7,7 +7,7 @@ tags:
   - Agile
   - Apps
   - teams
-status: tree
+status: evergreen
 ---
 ![](https://openmode.wordpress.com/wp-content/uploads/2025/11/create-a-highly-detailed-high-resolution-featured-image-illustrating-the-concept-1.png)
 

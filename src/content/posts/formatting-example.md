@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with Your Digital Garden"
-status: "tree"
+status: "evergreen"
 tags: ["tutorial", "getting-started", "garden", "formatting", "callouts", "markdown"]
 summary: "Learn the basics of maintaining a digital garden and how to use this template."
 ---
@@ -100,7 +100,7 @@ Welcome to your new digital garden! This post demonstrates the basic features an
 
 A digital garden is a space for cultivating your thoughts and ideas over time. Unlike traditional blogs, gardens:
 
-- **Grow organically** - Posts evolve from seeds to sprouts to trees
+- **Grow organically** - Posts evolve from seeds to sprouts to evergreens
 - **Track evolution** - See how your thoughts develop over time
 - **Encourage exploration** - Discover connections between ideas
 

@@ -14,7 +14,7 @@ interface Props {
     frontmatter: {
         title: string;
         publishedDate?: Date;
-        status: "seed" | "sprout" | "tree";
+        status: "seed" | "sprout" | "evergreen";
         summary?: string;
         tags: string[];
         draft?: boolean;
@@ -91,8 +91,8 @@ const formatDate = (date: Date) => {
                                     )
                                 }
                                 {
-                                    frontmatter.status === "tree" && (
-                                        <span>🌳</span>
+                                    frontmatter.status === "evergreen" && (
+                                        <span>🌲</span>
                                     )
                                 }
                                 {

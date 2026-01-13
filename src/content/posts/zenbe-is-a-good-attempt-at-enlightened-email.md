@@ -6,7 +6,7 @@ slug: zenbe-is-a-good-attempt-at-enlightened-email
 tags:
   - General
   - Zenbe
-status: tree
+status: evergreen
 ---
 Zenbe, developed in New York, is an email service in open beta that does an impressive job of taking all the tools people usually get from different web services on the net, and integrating them all together in one nicely put together suite, and at the same time, Zenbe adds some unique and useful features of its own. I've been using Zenbe for two weeks so far, and while the service itself is still has a couple things it needs to fix, what it has managed to do is redefine what I expect a web email service to provide.
 

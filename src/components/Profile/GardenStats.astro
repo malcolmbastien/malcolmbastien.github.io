@@ -4,14 +4,14 @@ interface Props {
         all: number;
         seed: number;
         sprout: number;
-        tree: number;
+        evergreen: number;
     };
     sortedPosts: any[];
     allPosts: any[];
     progressColors: {
         seed: string;
         sprout: string;
-        tree: string;
+        evergreen: string;
     };
 }
 
@@ -49,8 +49,8 @@ const { counts, sortedPosts, allPosts, progressColors } = Astro.props;
             >
             </div>
             <div
-                class={`h-full ${progressColors.tree}`}
-                style={`width: ${(sortedPosts.filter((p) => p.data.status === "tree").length / (allPosts.length || 1)) * 100}%`}
+                class={`h-full ${progressColors.evergreen}`}
+                style={`width: ${(sortedPosts.filter((p) => p.data.status === "evergreen").length / (allPosts.length || 1)) * 100}%`}
             >
             </div>
         </div>
@@ -67,8 +67,8 @@ const { counts, sortedPosts, allPosts, progressColors } = Astro.props;
             >
             <button
                 class="tag-btn px-3 py-1.5 rounded-full text-xs font-medium"
-                data-status="tree"
-                >🌳 Trees ({counts.tree})</button
+                data-status="evergreen"
+                >🌲 Evergreen ({counts.evergreen})</button
             >
         </div>
     </div>

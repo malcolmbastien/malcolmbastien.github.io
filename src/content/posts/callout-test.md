@@ -1,6 +1,6 @@
 ---
 title: "Callout Test Kitchen"
-status: "tree"
+status: "evergreen"
 tags:
   - testing
   - styling
