@@ -21,7 +21,9 @@ When management or Agile Coaches push agile practices onto teams, they lose thei
 
 Examples of autopilot mode are when teams treat user stories as technical requirements or developer tasks or when teams use sprints only to prove they're making progress to management. In both cases, the true intent behind these practices is lost. As Allen Holub pointed out, "The term 'user story' has become not just meaningless but counterproductive."
 
-https://twitter.com/allenholub/status/1732462318934782002
+> Like “Agile“ the term “user story” has become not just meaningless but counterproductive. Any ideas about how to describe an actual user story—one that succinctly describes the users' work, not the developers'—in a word or two?
+>
+> [Allen Holub](https://x.com/allenholub/status/1732462318934782002)
 
 In my experience, when managers and Agile Coaches use their authority to promote practices as intrinsically valuable, it's a net negative. The wrong practices spread, whether they add any value or not. These practices spread quickly, become embedded, and become much more difficult to change in the future. Finally, teams miss out on any sort of learning and growth opportunities they might have had.
 
@@ -29,13 +31,10 @@ In my experience, when managers and Agile Coaches use their authority to promote
 
 To avoid falling into the trap of teams executing practices on auto-pilot, constantly refocus your team's attention on the real challenges they face:
 
-What problem are we solving?
-
-Why is solving this problem important?
-
-What do we want to have happen?
-
-What should we do next?
+1. What problem are we solving?
+2. Why is solving this problem important?
+3. What do we want to have happen?
+4. What should we do next?
 
 By regularly asking these questions, teams can break out of autopilot mode and instead start thinking critically about their process and goals.
 
@@ -45,13 +44,10 @@ Rather than proclaiming that any practice is universally valuable, teams should 
 
 For example, a team could use the following set of questions to judge the fitness of a practice:
 
-Whose needs does this practice serve?
-
-Does it add or reduce overhead?
-
-Are there other ways to solve the same problem?
-
-Is this addressing a real problem or a hypothetical one?
+- Whose needs does this practice serve?
+- Does it add or reduce overhead?
+- Are there other ways to solve the same problem?
+- Is this addressing a real problem or a hypothetical one?
 
 Real agile teams are flexible and shouldn't unquestioningly adopt or stick with practices that aren't serving their needs. Teams should adopt practices that prove useful and evolve their process based on experimentation, feedback, and experience. They improve by continuously reflecting on how they work, thinking about the challenges they face, and experimenting, resulting in something unique to them.
 
@@ -72,19 +68,12 @@ In all cases I've seen new terminology invented to support an agile transformati
 [John Shook's Change Model](https://www.lean.org/downloads/35.pdf) says we change our behaviour to change our thinking. Rather than take that lesson to mean starting an agile transformation journey with an over-emphasis on agile practices, here are four small steps to take instead:
 
 1. **Encourage Mindfulness: **Teams should always be mindful of the problems they're trying to solve, why they are doing things, and how they can improve.
-
 2. **Recognize There's No Silver Bullet:** No single practice, team structure, or framework will make you agile. True agility comes from continuously focusing on customers' needs and improving how you work to meet those needs.
-
 3. **Avoid Universal Proclamations:** If you're in an Agile Coach role, resist the urge to promote or discourage practices by labelling them universally good or bad. Instead:
-
-Help teams understand the intent of particular practices
-
-Explain the trade-offs involved
-
-Share alternative practices to consider
-
-Help teams articulate their problems and desired outcomes and develop their own solutions.
-
+	- Help teams understand the intent of particular practices
+	- Explain the trade-offs involved
+	- Share alternative practices to consider
+	- Help teams articulate their problems and desired outcomes and develop their own solutions.
 4. **Promote Continuous Improvement:** Engaging teams in ongoing reflection and improvement might be the one universally 'good' practice worth promoting. This commitment to continuous improvement is vital to fostering genuine agility and should be a top priority for all involved in agile transformations.
 
 ![](../../assets/2024/08/fostering-real-agility.png)

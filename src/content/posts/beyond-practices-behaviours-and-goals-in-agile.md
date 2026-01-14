@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: "evergreen"
 title: "Beyond Practices: Behaviours and Goals in Agile"
 publishedDate: 2024-09-30
 tags:
@@ -17,21 +17,14 @@ The revelation I often share with Managers and Scrum Masters is that none of the
 
 The presence of practices indicates some level of intent or goals, and that intent can be a good starting point for exploring what they're really trying to accomplish. That intent is the opportunity to introduce a different perspective on the Agile practices most teams have come to take for granted:
 
-**Retrospective meetings aren't important** - but constant and continuous improvement is.
-
-**Stand-up meetings aren't important** - but teams working together and collaborating is.
-
-**Estimating work isn't important** - but predictability and working in small increments are.
-
-**Sprints aren't important** - but completing potentially releasable work frequently is.
-
-**Sprint reviews aren't important** - but getting feedback from real users and using that information to guide development is.
-
-**Scrum Masters aren't important** - but coaching that helps teams increase their ability to self-manage is.
-
-**Product Owners aren't important** - but developers having contact with real users or customers is.
-
-**Kanban boards aren't important** - but improving the end-to-end delivery of the value stream is.
+- **Retrospective meetings aren't important** - but constant and continuous improvement is.
+- **Stand-up meetings aren't important** - but teams working together and collaborating is.
+- **Estimating work isn't important** - but predictability and working in small increments are.
+- **Sprints aren't important** - but completing potentially releasable work frequently is.
+- **Sprint reviews aren't important** - but getting feedback from real users and using that information to guide development is.
+- **Scrum Masters aren't important** - but coaching that helps teams increase their ability to self-manage is.
+- **Product Owners aren't important** - but developers having contact with real users or customers is.
+- **Kanban boards aren't important** - but improving the end-to-end delivery of the value stream is.
 
 Behaviours are what's important when it comes to improving agility, not practices. Agile frameworks are all about roles, meetings, artifacts and processes. When you take away the frameworks, what you have left are ways of working based on principles.
 
@@ -55,11 +48,9 @@ Organizations shouldn't offload the responsibility of a behaviour to a meeting o
 
 You can think of Agile practices as having different layers. On the surface, there are the meetings, roles, and artifacts we're accustomed to. You have to go below the surface and understand what those practices are trying to accomplish. For every meeting, role, and artifact you see, ask yourself:
 
-"Why is this being done?"
-
-"What is this practice trying to accomplish?"
-
-"If we stopped doing this practice, what would happen?"
+- "Why is this being done?"
+- "What is this practice trying to accomplish?"
+- "If we stopped doing this practice, what would happen?"
 
 Once the reasons are understood, the practices become less important, and you can focus on the original objectives and improving the core behaviours needed to achieve them.
 
@@ -67,15 +58,11 @@ Once the reasons are understood, the practices become less important, and you ca
 
 When examining Agile practices, consider asking these questions:
 
-**Sustainability**: Does the work stop if a key person takes a vacation? Does the practice create bottlenecks?
-
-**Self-organization and Trust**: Does this practice support self-organization, or is it a case of Agile mixed with command and control? Did the team decide on the solution, or was it pushed onto them?
-
-**Value vs. Waste**: Is this truly adding value, or is it waste dressed up as a value-adding activity? What would happen if we stopped this practice? What would happen if we did more of it?
-
-**Real Problem Solving**: Ask "What problem does this solve?" Are actual problems being solved, or are practices being implemented "just in case" some edge case occurs?
-
-**Talk to people**: Ask some different people what they think about the practice. Ask the team and ask their managers. What do they think the purpose is? Do they find it valuable?
+- **Sustainability**: Does the work stop if a key person takes a vacation? Does the practice create bottlenecks?
+- **Self-organization and Trust**: Does this practice support self-organization, or is it a case of Agile mixed with command and control? Did the team decide on the solution, or was it pushed onto them?
+- **Value vs. Waste**: Is this truly adding value, or is it waste dressed up as a value-adding activity? What would happen if we stopped this practice? What would happen if we did more of it?
+- **Real Problem Solving**: Ask "What problem does this solve?" Are actual problems being solved, or are practices being implemented "just in case" some edge case occurs?
+- **Talk to people**: Ask some different people what they think about the practice. Ask the team and ask their managers. What do they think the purpose is? Do they find it valuable?
 
 ## Conclusion
 

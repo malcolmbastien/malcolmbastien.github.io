@@ -1,8 +1,7 @@
 ---
-status: "seed"
+status: "evergreen"
 title: Better Planning with Two-Sided Dependencies
 publishedDate: 2025-10-14
-updatedDate: 2025-10-14
 tags:
   - Agile
   - Dependencies
@@ -19,9 +18,8 @@ Many managers and Scrum Masters are overly inwardly focused, obsessing over thei
 
 There are two main problems with how teams handle dependencies when planning any piece of work:
 
-Failing to think through all the dependencies required to deliver a piece of work.
-
-Not considering how things look from the dependent teams' perspective.
+1. Failing to think through all the dependencies required to deliver a piece of work.
+2. Not considering how things look from the dependent teams' perspective.
 
 Knowing you need another team to do something is useless if they don't also know it—and haven't planned for it. When dependencies aren't adequately accounted for and managed, what you end up with is a set of unvalidated assumptions masquerading as a plan.
 
@@ -45,13 +43,10 @@ The appeal of big room planning is its simplicity: if Team A needs something fro
 
 To capture the same benefit for teams not doing big room planning, asking a few new questions can help. For each team, ask four simple questions:
 
-What do you want to deliver?
-
-What dependencies do you have on other teams (outgoing)?
-
-What do other teams need from you (incoming)?
-
-Does your planned scope, plus these incoming dependencies, match your available capacity?
+1. What do you want to deliver?
+2. What dependencies do you have on other teams (outgoing)?
+3. What do other teams need from you (incoming)?
+4. Does your planned scope, plus these incoming dependencies, match your available capacity?
 
 These questions shift the focus from an isolated team backlog to a connected delivery system, forcing conversations that reveal the real picture of the system as a whole.
 
@@ -59,31 +54,32 @@ These questions shift the focus from an isolated team backlog to a connected del
 
 Making dependencies visible is the idea behind a [proof-of-concept tool](https://team-dependency-matrix-838267439197.us-west1.run.app/) I've been exploring based on big room planning and the [Team Dependency Matrix](https://malcolmbastien.com/2023/12/28/the-team-dependency-matrix/). It focuses planning around capturing and validating dependencies.
 
-![](../../assets/2025/10/image-9.png)Dashboard for [Agile Big Room Planning](https://team-dependency-matrix-838267439197.us-west1.run.app/) app, showcasing risk metrics, team loads, and dependencies to enhance planning and delivery.
+![](../../assets/2025/10/image-9.png)
+*Dashboard for [Agile Big Room Planning](https://team-dependency-matrix-838267439197.us-west1.run.app/) app, showcasing risk metrics, team loads, and dependencies to enhance planning and delivery.*
 
 The tool captures each team's planned scope and the dependencies they have on other teams. When Team A lists a dependency on Team B, Team B sees the new incoming work, provides an estimate, and the new work is incorporated into their capacity planning
 
 When planning makes dependencies between teams clear, new interactions become possible, creating new, helpful information. In this proof of concept, I use team scope, capacity and dependency data to create a dashboard that summarizes the system's health.
 
-**Team Load vs. Capacity:** Instantly compare a team's capacity against their planned work plus all incoming dependency requests. Seeing which teams are overloaded helps in identifying hotspots and bottlenecks before they derail the plan.
-
-**Risk Matrix:** A visual risk matrix plots work by effort and confidence, flagging the riskiest parts of the plan and enabling proactive conversations.
-
-**Plan Completeness:** Identify gaps in the plan by measuring features and dependencies without estimates, and whether low-confidence items have documented risks.
-
-**Dependency Hotspots: **Ranked lists show teams with the most outgoing and incoming dependencies. Teams with high outgoing dependencies face delivery risk; teams with high incoming dependencies face capacity overload.
+- **Team Load vs. Capacity:** Instantly compare a team's capacity against their planned work plus all incoming dependency requests. Seeing which teams are overloaded helps in identifying hotspots and bottlenecks before they derail the plan.
+- **Risk Matrix:** A visual risk matrix plots work by effort and confidence, flagging the riskiest parts of the plan and enabling proactive conversations.
+- **Plan Completeness:** Identify gaps in the plan by measuring features and dependencies without estimates, and whether low-confidence items have documented risks.
+- **Dependency Hotspots: **Ranked lists show teams with the most outgoing and incoming dependencies. Teams with high outgoing dependencies face delivery risk; teams with high incoming dependencies face capacity overload.
 
 This approach captures simple but typically missed data that can make quarterly or annual planning events easier and more useful for teams.
 
-![](../../assets/2025/10/image-10.png)Team management and project scope editing features.
+![](../../assets/2025/10/image-10.png)
+*Team management and project scope editing features.*
 
-![](../../assets/2025/10/image-11.png)Estimating view for team initiatives and requests.
+![](../../assets/2025/10/image-11.png)
+*Estimating view for team initiatives and requests.*
 
-![](../../assets/2025/10/image-12.png)Report view showing planned scope and dependencies across teams, highlighting workload and incoming demand.
+![](../../assets/2025/10/image-12.png)
+*Report view showing planned scope and dependencies across teams, highlighting workload and incoming demand.*
 
 ### Conclusion
 
-Too often, focus is misplaced on planning theatre: crafting detailed artifacts, producing polished roadmaps, and holding lengthy meetings to discuss priorities. These activities provide an *illusion* of certainty while missing the real sources of delay.
+Too often, focus is misplaced on planning theater: crafting detailed artifacts, producing polished roadmaps, and holding lengthy meetings to discuss priorities. These activities provide an *illusion* of certainty while missing the real sources of delay.
 
 If the goal is to improve delivery and reduce lead times, the first step is to understand the nature of dependencies in your system. Instead of planning isolated backlogs, focus on getting the dependencies right.
 

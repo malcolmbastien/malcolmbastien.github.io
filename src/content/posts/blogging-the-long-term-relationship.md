@@ -15,7 +15,7 @@ tags:
   - Twitter
   - YouTube
 ---
-[![Lonliness](http://farm1.static.flickr.com/24/56211890_e59174b3a7_m.jpg)](http://www.flickr.com/photos/75598511@N00/56211890)Maybe blogging will get lonely
+Maybe blogging will get lonely
 
 Blogging and long-form web writing will be around for a long time.  Even if readership drops and people start spending more and more of their time on Twitter and Facebook, for the authors Blogging will still be relevant to them.  I want to extend an idea written by Mark Evans in which he talks about the decline in attention blogs are getting
 

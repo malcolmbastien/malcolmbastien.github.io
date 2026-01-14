@@ -7,17 +7,14 @@ tags:
   - Agile
   - Team Topologies
 ---
-I've previously written about [cross-functional teams and what it means for a team to be cross-functional](https://malcolmbastien.com/2023/05/16/revisiting-the-guidance-on-cross-functional-teams/). In that same post, I wrote about Team Topology's concept of a stream-aligned team.
+I've previously written about [[revisiting-the-guidance-on-cross-functional-teams|cross-functional teams and what it means for a team to be cross-functional]]. In that same post, I wrote about Team Topology's concept of a stream-aligned team.
 
 To recap, stream-aligned teams:
 
-Deliver a product or service to external customers and have end-to-end ownership of the lifecycle.
-
-Should be able to analyze, test, build, release and monitor changes independently of other teams.
-
-Deliver value without waiting for other teams to perform parts of the work.
-
-Are close to customers and can respond quickly and effectively to customer feedback and changing needs.
+- Deliver a product or service to external customers and have end-to-end ownership of the lifecycle.
+- Should be able to analyze, test, build, release and monitor changes independently of other teams.
+- Deliver value without waiting for other teams to perform parts of the work.
+- Are close to customers and can respond quickly and effectively to customer feedback and changing needs.
 
 Suppose autonomous and independent cross-functional teams that own an entire "slice" of a business domain are the ideal way to organize for software delivery. Does that mean organizations should only have stream-aligned teams?
 
@@ -29,28 +26,27 @@ But are stream-aligned teams the answer to everything? What are the trade-offs t
 
 A stream-aligned team has all the skills and capabilities to deliver end-to-end value to customers, from idea to live service, in one "slice" of a business domain. Team Topologies has some guidance on what end-to-end ownership might look like:
 
-Generally speaking, each stream-aligned team will require a set of capabilities in order to progress work from its initial (requirements) exploration stages to production. These capabilities include (but are not restricted to):
-
-- Application security
-- Commercial and operational viability analysis
-- Design and architecture
-- Development and coding
-- Infrastructure and operability
-- Metrics and monitoring
-- Product management and ownership
-- Testing and quality assurance
-- User experience (UX)
-- Team Topologies
+> Generally speaking, each stream-aligned team will require a set of capabilities in order to progress work from its initial (requirements) exploration stages to production. These capabilities include (but are not restricted to):
+> 
+> - Application security
+> - Commercial and operational viability analysis
+> - Design and architecture
+> - Development and coding
+> - Infrastructure and operability
+> - Metrics and monitoring
+> - Product management and ownership
+> - Testing and quality assurance
+> - User experience (UX)
+> 
+> Team Topologies
 
 But how does that happen? How should one team satisfy all those capabilities? Based on what I see happening, most organizations do that by adding more people to a team.
 
 Based on this incomplete list of capabilities, even the simplest teams requires at least ten members to cover all the bases. So traditional Agile team size guidance of "7 +/- 2 people" gets tossed out as teams of 20 to 30+ people get formed. And as teams get larger, problems start appearing, including:
 
-Excessive team size
-
-Excessive cognitive load
-
-Low skills-liquidity
+- Excessive team size
+- Excessive cognitive load
+- Low skills-liquidity
 
 ### Excessive Team Size
 
@@ -84,27 +80,24 @@ However, earlier, we said, "Stream-aligned teams should be able to analyze, test
 
 When I talk about dependencies, I like using this definition from [Troy Magennis](https://www.focusedobjective.com/):
 
-Dependency: A blocker that might cause a delay in starting or finishing something we want in the future.
-
-Troy Magennis
+> Dependency: A blocker that might cause a delay in starting or finishing something we want in the future.
+>
+> Troy Magennis
 
 In our case, a dependency is anything that might delay our stream-aligned team from starting or finishing a piece of work.
 
 What differentiates a supporting team from a dependency is that dependencies sit in the flow of change, whereas supporting teams don't.
 
-Dependencies sit in the flow of change and increase the burden on stream-aligned teams.
-
-Supporting teams don't sit in the flow of change and decrease the burden on stream-aligned teams.
+- Dependencies sit in the flow of change and increase the burden on stream-aligned teams.
+- Supporting teams don't sit in the flow of change and decrease the burden on stream-aligned teams.
 
 If coordination, hand-offs, rework, delays and communication overhead between teams slows down the delivery of value to customers, you're dealing with dependencies.
 
 Whereas supporting teams:
 
-Reduce the burden on stream-aligned teams.
-
-Don't block or delay value delivery to customers.
-
-Help stream-aligned teams deliver value faster, better, and more quickly.
+- Reduce the burden on stream-aligned teams.
+- Don't block or delay value delivery to customers.
+- Help stream-aligned teams deliver value faster, better, and more quickly.
 
 If your teams face dependencies, delays, excessive communication, and hand-offs, forming effective value streams is more complicated than applying a single pattern across your organization. The task is to explore your value stream or your organization's value chain and discover potential team boundaries that help you best meet your users' needs.
 
