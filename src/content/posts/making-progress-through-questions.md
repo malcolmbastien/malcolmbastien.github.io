@@ -17,13 +17,10 @@ Noting is when you share an observation or an idea with the group to raise group
 
 When noting, I look for patterns, such as:
 
-**Connected ideas from different areas:** "Another team mentioned a possible edge case. Could that be related, or is that different in some way?"
-
-**Inconsistent terminology:** Are people talking about the same thing but using different terms?
-
-**Misaligned definitions:** Are people using the same terms but mean different things?
-
-**Reminders:** Teams usually work in high-WIP situations and are constantly overloaded. That, paired with poor systems, means they don't always remember the information they need when they need it.
+- **Connected ideas from different areas:** "Another team mentioned a possible edge case. Could that be related, or is that different in some way?"
+- **Inconsistent terminology:** Are people talking about the same thing but using different terms?
+- **Misaligned definitions:** Are people using the same terms but mean different things?
+- **Reminders:** Teams usually work in high-WIP situations and are constantly overloaded. That, paired with poor systems, means they don't always remember the information they need when they need it.
 
 When I note things, I'm paying attention to gaps or elements of the conversation that might be valuable to highlight. Noting puts ideas into the shared pool of information, creating awareness and triggering a wave of new questions and discussions from the team.
 
@@ -37,37 +34,27 @@ A big part of increasing the quality of meetings involves planning and meeting d
 
 Here are some areas I focus on:
 
-**Getting clarity on unclear concepts:** When something's off about how things fit together or when it's unclear how things flow from A to B to C, ask for clarification.
-
-**Digging deeper:** When people propose an idea, try to pull more information out of them. Ask them to share the thought process and the assumptions behind their idea.
-
-**Listen for gaps in the questions and answers:** People don't always ask the questions they intend and don't always answer the questions they get asked. Listen closely and watch for signs that questions or answers don't satisfy the original intent or reflect what the person is trying to communicate.
-
-**Addressing misinterpretations:** Use paraphrasing and ask for confirmation on what people are trying to say.
-
-**Slowing down:** Rather than rush to the next agenda item or task, ask people to summarize or revisit unresolved issues.
+- **Getting clarity on unclear concepts:** When something's off about how things fit together or when it's unclear how things flow from A to B to C, ask for clarification.
+- **Digging deeper:** When people propose an idea, try to pull more information out of them. Ask them to share the thought process and the assumptions behind their idea.
+- **Listen for gaps in the questions and answers:** People don't always ask the questions they intend and don't always answer the questions they get asked. Listen closely and watch for signs that questions or answers don't satisfy the original intent or reflect what the person is trying to communicate.
+- **Addressing misinterpretations:** Use paraphrasing and ask for confirmation on what people are trying to say.
+- **Slowing down:** Rather than rush to the next agenda item or task, ask people to summarize or revisit unresolved issues.
 
 ### Notice What's Missing
 
 A crucial skill is being able to sense and spot when something's missing or not being talked about:
 
-Does the discussion feel like it's skipped over some important points?
-
-Are there people not included in the discussion that should be?
-
-Is the team ignoring the "elephant in the room"?
-
-Does the team know the reasons behind out-of-the-ordinary questions or requests? Has something changed?
+- Does the discussion feel like it's skipped over some important points?
+- Are there people not included in the discussion that should be?
+- Is the team ignoring the "elephant in the room"?
+- Does the team know the reasons behind out-of-the-ordinary questions or requests? Has something changed?
 
 Sometimes, when people are too focused on completing tasks, they forget to consider more fundamental questions:
 
-"Should we do this work?
-
-"Is this the right problem to solve right now?"
-
-"What's the goal?"
-
-"Who cares about this problem?"
+- "Should we do this work?
+- "Is this the right problem to solve right now?"
+- "What's the goal?"
+- "Who cares about this problem?"
 
 These questions are important because they can save teams from wasting time doing work they shouldn't do in the first place.
 
@@ -75,17 +62,12 @@ These questions are important because they can save teams from wasting time doin
 
 Watch for missing context in statements. For example, if someone says, "The value is now 25," take the time to get more context:
 
-"Is 25 good? Is it bad? Why?"
-
-"Why are we changing it? What's changed?"
-
-"What was it before? Is it increasing or decreasing?"
-
-"How did we manage to get it to 25?"
-
-"How does this compare to other values?"
-
-"Now that it's 25, what happens next?"
+- "Is 25 good? Is it bad? Why?"
+- "Why are we changing it? What's changed?"
+- "What was it before? Is it increasing or decreasing?"
+- "How did we manage to get it to 25?"
+- "How does this compare to other values?"
+- "Now that it's 25, what happens next?"
 
 Questions that explore the context behind what's being discussed are helpful because they create room and space for people to jump in with questions they might have but aren't comfortable asking.
 
@@ -97,21 +79,16 @@ People tend to have a high tolerance for ambiguity, but in the negative sense th
 
 To improve the impact of noting and questioning:
 
-**Try to find the best way to capture the idea:** Rephrase what's being discussed in the simplest, clearest, most straightforward way possible.
-
-**Visualize information:** Make things visual by taking notes or drawing simple diagrams. Update things in real time as more information is shared.
-
-**Constantly seek clarification and confirmation:** Make sure the team is on the same page by constantly checking in with the group, summarizing, and asking, "Is this right?"
+- **Try to find the best way to capture the idea:** Rephrase what's being discussed in the simplest, clearest, most straightforward way possible.
+- **Visualize information:** Make things visual by taking notes or drawing simple diagrams. Update things in real time as more information is shared.
+- **Constantly seek clarification and confirmation:** Make sure the team is on the same page by constantly checking in with the group, summarizing, and asking, "Is this right?"
 
 In the case of meetings, remember to check in with people after the meetings finish. Try asking questions like:
 
-What do you think?
-
-Is anything still unclear?
-
-Was there anything you didn't get a chance to ask?
-
-Did anything come up that we should try to confirm?
+- What do you think?
+- Is anything still unclear?
+- Was there anything you didn't get a chance to ask?
+- Did anything come up that we should try to confirm?
 
 ## Conclusion
 

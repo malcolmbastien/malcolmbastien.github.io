@@ -2,11 +2,9 @@
 status: "seed"
 title: Making Media Easier
 publishedDate: 2012-01-07
-updatedDate: 2012-01-07
 tags:
-  - General
-  - instagram
-  - mixel
+  - Instagram
+  - Mixel
   - Tumblr
 ---
 Facebook, Twitter, and Google+ changed how we communicate. Now, people are familiar with social networking, and most importantly that means they’re comfortable with  liking, retweeting, reblogging and sharing.

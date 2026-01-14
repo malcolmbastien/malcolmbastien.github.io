@@ -2,10 +2,9 @@
 status: "seed"
 title: Manage the Value, Not the Work
 publishedDate: 2023-07-29
-updatedDate: 2023-07-29
 tags:
   - Agile
-  - projects
+  - Projects
 ---
 Do you think of software development as an exercise in identifying the right problem, doing the right analysis and getting the right people to code the right features? Or is it more of a discovery and learning activity where you make a bet, build something and get feedback?
 
@@ -25,17 +24,12 @@ Projects create a context where it's possible to focus too much on managing the 
 
 In these situations, managers might have certain expectations and ask questions about how teams are working, such as:
 
-"Did they complete a project canvas?"
-
-"Do they have a kanban board?"
-
-"Are they using sprints?"
-
-"What's their required throughput?"
-
-"Do they have a Scrum Master?"
-
-"Have they written all their stories?"
+- "Did they complete a project canvas?"
+- "Do they have a kanban board?"
+- "Are they using sprints?"
+- "What's their required throughput?"
+- "Do they have a Scrum Master?"
+- "Have they written all their stories?"
 
 When used appropriately, these different practices could be valuable. However, when applied in a project context, these have little to do with whether a team will succeed. They certainly don't represent how agile a team is.
 
@@ -49,9 +43,9 @@ However, the metrics aren't for the team in a project setting. In a project, the
 
 In important projects, the weekly reporting of metrics becomes a sacred ritual where teams present elaborate metrics and figures to say to their managers, "You can trust us to meet the deadline."
 
-You must adapt as the project unfolds by changing your plans. You can plan out an entire project into detailed iterations in advance, but that isn't Agile.
-
-[Agile Process - Iterative Planning](http://www.agile-process.org/iterative.html)
+> You must adapt as the project unfolds by changing your plans. You can plan out an entire project into detailed iterations in advance, but that isn't Agile.
+>
+> [Agile Process - Iterative Planning](http://www.agile-process.org/iterative.html)
 
 When managers focus on the particular agile practices teams are performing to deliver their projects, there's no upper limit on how much they can try to manage the team's activity.
 
@@ -63,13 +57,12 @@ Instead of focusing so much on ensuring teams are executing specific Agile pract
 
 The biggest thing teams can do to help to increase their chances of being successful is to make things smaller.
 
-Smaller projects
+- Smaller projects
+- Smaller features
+- Smaller checkpoints, goal-posts or milestones
 
-Smaller features
-
-Smaller checkpoints, goal-posts or milestones
-
-![](../../assets/2023/07/image-2.png)Shifting from a fixed goal to smaller checkpoints
+![](../../assets/2023/07/image-2.png)
+*Shifting from a fixed goal to smaller checkpoints*
 
 Shifting from project-based thinking to an iterative and incremental way of working where teams release frequently creates more opportunities to:
 
@@ -83,11 +76,9 @@ I recently worked with a manager and an architect who had to collaborate with a 
 
 Off the top of his head, the architect came up with three examples:
 
-Establish a handshake between both systems
-
-Exchange dummy response data
-
-Exchange test account data
+- Establish a handshake between both systems
+- Exchange dummy response data
+- Exchange test account data
 
 These example milestones built using code running on actual infrastructure act as early opportunities for feedback, helping them build confidence that they'll be able to meet their ultimate goal on time. If things start getting missed, then they act as early warning signals.
 
@@ -95,39 +86,40 @@ It's important to note that these three examples are all internal milestones. In
 
 ## Reduce The Need for "Trust Us" Metrics
 
-The measure of progress is working code. Reviews and presentations are an inexact model of progress. Working code shows just what's really been accomplished.
-
-[Agile Development Methods for Space Operations](https://ntrs.nasa.gov/api/citations/20120013429/downloads/20120013429.pdf)
+> The measure of progress is working code. Reviews and presentations are an inexact model of progress. Working code shows just what's really been accomplished.
+>
+> [Agile Development Methods for Space Operations](https://ntrs.nasa.gov/api/citations/20120013429/downloads/20120013429.pdf)
 
 When you work incrementally instead of on long projects, "Trust us" metrics become less important. As teams show they can deliver regularly, it builds trust that they are predictable, so there's less need to look at metrics.
 
 As teams deliver incrementally and achieve smaller milestones, the size of their plans starts becoming smaller compared to the software already built.
 
-![](../../assets/2023/07/image-3.png)As teams deliver, the size of their plans starts becoming smaller compared to the software already built
+![](../../assets/2023/07/image-3.png)
+*As teams deliver, the size of their plans starts becoming smaller compared to the software already built*
 
 ## Short-term Plans, Long-term Direction
 
-The most powerful way to reduce variability in forecasts is to shorten our planning horizons... Smaller scope leads to faster development, which shortens time-horizons.
-
-The Principles of Product Development Flow
+> The most powerful way to reduce variability in forecasts is to shorten our planning horizons... Smaller scope leads to faster development, which shortens time-horizons.
+>
+> The Principles of Product Development Flow
 
 It's less agile for teams to commit to fixed, long-term goals. Agile teams keep options open by only committing to short-term goals that provide feedback and learning opportunities. Over longer time horizons, agile teams have looser, more directional plans, which can change.
 
-![](../../assets/2023/07/image-5.png)Agile teams have short-term plans, but only directional long-term goals
+![](../../assets/2023/07/image-5.png)
+*Agile teams have short-term plans, but only directional long-term goals*
 
 ## Focus on Working Software over Plans
 
-Software programs should start small, be iterative, and build on success ‒ or be terminated quickly
-
-[DIB Guide: Detecting Agile BS](https://media.defense.gov/2018/Oct/09/2002049591/-1/-1/0/DIB_DETECTING_AGILE_BS_2018.10.05.PDF)
+> Software programs should start small, be iterative, and build on success ‒ or be terminated quickly
+>
+> [DIB Guide: Detecting Agile BS](https://media.defense.gov/2018/Oct/09/2002049591/-1/-1/0/DIB_DETECTING_AGILE_BS_2018.10.05.PDF)
 
 When we talk about going from working with big-batch projects to something more incremental and iterative, the core idea is changing from focusing on plans to focusing on working software.
 
 "Working Software over Plans" isn't technically spelt out in the [Agile Manifesto](https://agilemanifesto.org/), but the elements are there:
 
-"**Working software** over comprehensive documentation"
-
-"Responding to change over **following a plan**"
+- "**Working software** over comprehensive documentation"
+- "Responding to change over **following a plan**"
 
 ## Overcome Project Thinking
 

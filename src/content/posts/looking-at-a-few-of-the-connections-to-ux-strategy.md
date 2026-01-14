@@ -6,7 +6,7 @@ updatedDate: 2023-05-29
 tags:
   - Design
   - MadeWithPaper
-  - Image
+  - Images
   - Sketches
 ---
 ![](../../assets/2012/09/tumblr_mav8mynrag1qa77f2o1_1280.jpg)
