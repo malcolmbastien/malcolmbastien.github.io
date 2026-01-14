@@ -2,6 +2,8 @@
 status: seed
 title: Navigating the AI Shift With the Wardley Doctrine
 publishedDate: 2025-10-08
+featured: true
+cover: "../../assets/2025/10/create-a-bright-and-colouful-high-resolution-image-that-embodies-the.png"
 tags:
   - Agile
   - AI
@@ -9,8 +11,6 @@ tags:
   - Management
   - Wardley-Maps
 ---
-![](../../assets/2025/10/create-a-bright-and-colouful-high-resolution-image-that-embodies-the.png)
-
 The speed at which AI coding agents help teams develop new features breaks the old models of work. If the bottleneck is no longer coding, then we need to focus our attention elsewhere. There's always a bottleneck, and it will either move upstream or downstream of the coding activity.
 
 As the bottleneck shifts from developer productivity and coding velocity to organizational process and strategic alignment, the manager's job must change. Old activities like tracking tasks and reporting timelines become obsolete. The new role of managers is to define direction, instill purpose, and ask the right questions. [Simon Wardley](https://www.swardleymaps.com/)'s Doctrine—a set of 40 universal principles—provides a helpful framework for navigating this shift into the AI-enabled era.

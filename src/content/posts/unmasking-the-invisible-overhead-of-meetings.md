@@ -2,11 +2,11 @@
 status: seed
 title: Unmasking the Invisible Overhead of Meetings
 publishedDate: 2025-09-29
+featured: true
+cover: "../../assets/2025/09/create-a-highly-detailed-high-resolution-image-in-the-anime-style.png"
 tags:
   - Agile
 ---
-![](../../assets/2025/09/create-a-highly-detailed-high-resolution-image-in-the-anime-style.png)
-
 A meeting's cost extends far beyond its scheduled time. In fact, the full, hidden cost is rarely considered and often eats up the rest of your day.
 
 Every meeting creates a hidden ripple effect that affects everyone who is forced to attend. Instead of spending their time focused on delivering value, Agile teams often find themselves spending a significant amount of their time and energy in meetings dealing with those ripple effects.
