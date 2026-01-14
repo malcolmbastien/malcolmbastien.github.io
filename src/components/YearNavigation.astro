@@ -75,15 +75,13 @@ const { sortedYears } = Astro.props;
 </div>
 
 <style>
-    /* Year navigation active state - same green as filter buttons */
     .year-btn.active {
-        background-color: oklch(40.5% 0.101 131.063);
+        background-color: #059669; /* emerald-600 */
         color: white;
-        border-color: rgb(15 23 42) !important;
+        border-color: #0f172a !important;
     }
-    .dark .year-btn.active {
-        background-color: oklch(40.5% 0.101 131.063);
-        color: white;
-        border-color: rgb(15 23 42) !important;
+    :global(.dark) .year-btn.active {
+        background-color: #10b981; /* emerald-500 */
+        border-color: #0f172a !important;
     }
 </style>
