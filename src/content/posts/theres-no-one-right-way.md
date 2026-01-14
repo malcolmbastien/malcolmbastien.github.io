@@ -5,8 +5,8 @@ publishedDate: 2025-11-07
 updatedDate: 2025-11-07
 tags:
   - Agile
-  - Apps
-  - teams
+  - Applications
+  - Teams
 status: evergreen
 ---
 ![](../../assets/2025/11/create-a-highly-detailed-high-resolution-featured-image-illustrating-the-concept-1.png)
@@ -39,15 +39,11 @@ Decisions that consistently strip power from teams will ultimately create a dise
 
 When evaluating team practices, while never perfect, I try to consider decisions through several lenses:
 
-**Decision-Making Authority**: Who is making decisions?
-
-**Team Empowerment**: Does the practice help the team grow?
-
-**Agility**: Does it enhance the team's ability to respond to change?
-
-**Flow**: Does it improve the smooth flow of work?
-
-**Collaboration**: Are things being done collaboratively?
+- **Decision-Making Authority:** Who is making decisions?
+- **Team Empowerment:** Does the practice help the team grow?
+- **Agility:** Does it enhance the team's ability to respond to change?
+- **Flow:** Does it improve the smooth flow of work?
+- **Collaboration:** Are things being done collaboratively?
 
 An exclusive focus on speed, by any means necessary, misses the essence of Agile. True agility embraces operating in uncertain environments, valuing responsiveness to change, and showing respect for people. Without these pillars, fast delivery leads to brittle systems and burnt-out teams.
 
@@ -57,95 +53,66 @@ Because we can only poorly predict the impact of decisions, a practical approach
 
 ## The Agile Team Profiler
 
-![](../../assets/2025/11/image-1.png)The Agile Team Profiler turns your daily practices into a clear, visual 'character sheet,' instantly highlighting your collective strengths and hidden weaknesses.
+![](../../assets/2025/11/image-1.png)
+*The Agile Team Profiler turns your daily practices into a clear, visual 'character sheet,' instantly highlighting your collective strengths and hidden weaknesses.*
 
 The [Agile Team Profiler](https://agile-team-profiler-539581219123.us-west1.run.app/) is an interactive coaching tool I built for Agile Coaches, Scrum Masters, and Managers. Its purpose is simple: to help teams gain a clearer understanding of the hidden trade-offs in their practices.
 
 Users describe their team's ways of working—from daily meetings to technical habits. The application's AI coach analyzes each practice, scoring its impact against key agile attributes. As more practices are added, the app builds a cumulative "Team Profile" that acts as a character sheet, clearly illustrating the team's collective strengths and weaknesses.
 
-![](../../assets/2025/11/image-2.png)Get a detailed breakdown for every practice, explaining the 'why' with a clear summary and key pros and cons.
+![](../../assets/2025/11/image-2.png)
+*Get a detailed breakdown for every practice, explaining the 'why' with a clear summary and key pros and cons.*
 
 ### Features
 
 The application is built around a simple workflow:
 
-**AI-Powered Practice Analysis:** Users enter a description of a team practice, and the app uses the AI to provide an in-depth analysis. This includes scoring the practice's impact on various attributes, assigning it to a category (e.g., "Ceremonies & Meetings"), and generating a summary of its key pros and cons.
+- **AI-Powered Practice Analysis:** Users enter a description of a team practice, and the app uses the AI to provide an in-depth analysis. This includes scoring the practice's impact on various attributes, assigning it to a category (e.g., "Ceremonies & Meetings"), and generating a summary of its key pros and cons.
+- **Aggregated Team Profile:** All individual practice scores are aggregated into a single, dynamic visualization. This "character sheet" provides a holistic view of the team's strengths and weaknesses, making it easy to spot patterns and imbalances across different areas.
+- **AI-Generated Action Plan:** After adding practices, users can click a button to receive a custom, AI-generated action plan. This plan provides 3-4 concrete, actionable recommendations to help the team address its weaknesses.
 
-**Aggregated Team Profile:** All individual practice scores are aggregated into a single, dynamic visualization. This "character sheet" provides a holistic view of the team's strengths and weaknesses, making it easy to spot patterns and imbalances across different areas.
-
-**AI-Generated Action Plan:** After adding practices, users can click a button to receive a custom, AI-generated action plan. This plan provides 3-4 concrete, actionable recommendations to help the team address its weaknesses.
-
-![](../../assets/2025/11/image-4.png)Just describe a team practice, and the AI coach instantly analyzes, categorizes, and grades its impact across key agile areas.
+![](../../assets/2025/11/image-4.png)
+*Just describe a team practice, and the AI coach instantly analyzes, categorizes, and grades its impact across key agile areas.*
 
 ### Attributes and Groupings
 
 The core of the analysis on trade-offs is based on a set of attributes that represent key facets of an Agile team. These are organized into six groups:
 
-**Delivery Flow:** Focuses on how effectively the team turns ideas into working software.
+- **Delivery Flow:** Focuses on how effectively the team turns ideas into working software.
+  - Delivery Speed & Predictability
+  - Flow Efficiency
+  - Process Simplicity
+  - Sustainable Pace
+- **Customer Value:** Measures how well the team aligns with user needs and business outcomes.
+  - Customer Feedback Loop
+  - Stakeholder Alignment
+  - Outcome Orientation
+  - Mission Clarity
+- **Technical Craftsmanship:** Assesses the team's engineering quality, codebase health, and operational maturity.
+  - Built-in Quality
+  - Technical Excellence
+  - Automation Maturity
+  - End-to-End Ownership
+  - Cognitive Load Management
+- **Team Culture:** Captures the human dynamics that enable effective teamwork and collaboration.
+  - Psychological Safety
+  - Team Cohesion & Support
+  - Autonomy & Empowerment
+  - Work Transparency
+  - Inter-Team Collaboration
+- **Continuous Improvement:** Reflects the team's ability to learn, adapt, and evolve its processes over time.
+  - Continuous Improvement
+  - Learning & Experimentation
+  - Adaptability
+  - Growth Mindset
+- **Organizational Enablement:** Evaluates how the surrounding organization and leadership support the team's agile ways of working.
+  - Leadership Support
+  - Organizational Agility
+  - Systemic Impediment Removal
+  - Aligned Goals & Incentives
 
-Delivery Speed & Predictability
-
-Flow Efficiency
-
-Process Simplicity
-
-Sustainable Pace
-
-**Customer Value:** Measures how well the team aligns with user needs and business outcomes.
-
-Customer Feedback Loop
-
-Stakeholder Alignment
-
-Outcome Orientation
-
-Mission Clarity
-
-**Technical Craftsmanship:** Assesses the team's engineering quality, codebase health, and operational maturity.
-
-Built-in Quality
-
-Technical Excellence
-
-Automation Maturity
-
-End-to-End Ownership
-
-Cognitive Load Management
-
-**Team Culture:** Captures the human dynamics that enable effective teamwork and collaboration.
-
-Psychological Safety
-
-Team Cohesion & Support
-
-Autonomy & Empowerment
-
-Work Transparency
-
-Inter-Team Collaboration
-
-**Continuous Improvement:** Reflects the team's ability to learn, adapt, and evolve its processes over time.
-
-Continuous Improvement
-
-Learning & Experimentation
-
-Adaptability
-
-Growth Mindset
-
-**Organizational Enablement:** Evaluates how the surrounding organization and leadership support the team's agile ways of working.
-
-Leadership Support
-
-Organizational Agility
-
-Systemic Impediment Removal
-
-Aligned Goals & Incentives
-
-![](../../assets/2025/11/image-3.png)After building your profile, get a custom, AI-generated action plan with concrete steps to amplify your strengths and address your team's biggest challenges.
+![](../../assets/2025/11/image-3.png)
+*After building your profile, get a custom, AI-generated action plan with concrete steps to amplify your strengths and address your team's biggest challenges.*
 
 ## Conclusion
 

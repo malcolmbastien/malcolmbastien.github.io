@@ -314,8 +314,12 @@ const formatDate = (date: Date) => {
         @apply flex flex-col items-center mb-8 text-center;
       }
 
+      .prose p:has(img):has(em) img {
+        @apply mb-0;
+      }
+
       .prose p:has(img):has(em) em {
-        @apply text-sm text-slate-500 dark:text-slate-400 mt-2 not-italic;
+        @apply text-sm text-slate-500 dark:text-slate-400 mt-1 not-italic;
       }
 
       .prose p:has(> img:only-child),
