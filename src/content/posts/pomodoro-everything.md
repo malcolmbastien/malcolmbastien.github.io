@@ -3,7 +3,6 @@ status: "seed"
 title: Pomodoro Everything
 publishedDate: 2010-09-08
 updatedDate: 2025-11-06
-slug: pomodoro-everything
 tags:
   - General
   - Pomodoro

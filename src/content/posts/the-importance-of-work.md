@@ -3,7 +3,6 @@ status: "seed"
 title: The Importance of Work
 publishedDate: 2010-11-25
 updatedDate: 2010-11-25
-slug: the-importance-of-work
 tags:
   - General
   - Work

@@ -3,7 +3,6 @@ status: "seed"
 title: "Avoiding the Practice Trap: Fostering Genuine Agility"
 publishedDate: 2024-08-03
 updatedDate: 2024-09-06
-slug: avoiding-the-practice-trap-fostering-genuine-agility
 tags:
   - Agile
   - coaching

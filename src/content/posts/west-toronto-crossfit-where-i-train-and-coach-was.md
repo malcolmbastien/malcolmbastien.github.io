@@ -3,7 +3,6 @@ status: "seed"
 title: West Toronto CrossFit Featured on BlogTO
 publishedDate: 2013-04-11
 updatedDate: 2024-01-13
-slug: west-toronto-crossfit-where-i-train-and-coach-was
 tags:
   - CrossFit
   - Gallery

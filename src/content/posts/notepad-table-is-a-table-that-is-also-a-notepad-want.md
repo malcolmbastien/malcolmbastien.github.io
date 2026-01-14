@@ -3,7 +3,6 @@ status: "seed"
 title: notepad table is a table that is also a notepad. WANT
 publishedDate: 2010-11-09
 updatedDate: 2010-11-09
-slug: notepad-table-is-a-table-that-is-also-a-notepad-want
 tags:
   - General
   - Link

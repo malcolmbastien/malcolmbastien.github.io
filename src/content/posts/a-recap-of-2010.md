@@ -3,7 +3,6 @@ status: "seed"
 title: A Recap of 2010
 publishedDate: 2010-12-31
 updatedDate: 2024-01-07
-slug: a-recap-of-2010
 tags:
   - Year in Review
 ---

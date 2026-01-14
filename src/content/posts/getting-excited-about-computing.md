@@ -3,7 +3,6 @@ status: "seed"
 title: Getting Excited About Computing
 publishedDate: 2011-09-15
 updatedDate: 2011-12-28
-slug: getting-excited-about-computing
 tags:
   - General
 ---

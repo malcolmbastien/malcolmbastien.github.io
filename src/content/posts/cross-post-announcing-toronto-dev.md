@@ -3,7 +3,6 @@ status: "seed"
 title: Cross Post - Announcing Toronto Dev
 publishedDate: 2008-12-19
 updatedDate: 2024-01-08
-slug: cross-post-announcing-toronto-dev
 tags:
   - Canada
   - Creative Commons

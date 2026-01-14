@@ -3,7 +3,6 @@ status: "seed"
 title: Learning to Trash It and Start Over
 publishedDate: 2011-08-11
 updatedDate: 2011-08-11
-slug: learning-to-trash-it-and-start-over
 tags:
   - General
 ---

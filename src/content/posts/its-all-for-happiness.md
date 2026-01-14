@@ -3,7 +3,6 @@ status: "seed"
 title: It's All For Happiness
 publishedDate: 2012-01-13
 updatedDate: 2012-01-13
-slug: its-all-for-happiness
 tags:
   - General
 ---

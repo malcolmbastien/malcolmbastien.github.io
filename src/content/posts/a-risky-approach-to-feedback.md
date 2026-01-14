@@ -3,7 +3,6 @@ status: "seed"
 title: A Risky Approach to Feedback
 publishedDate: 2009-05-16
 updatedDate: 2011-02-08
-slug: a-risky-approach-to-feedback
 tags:
   - General
 ---

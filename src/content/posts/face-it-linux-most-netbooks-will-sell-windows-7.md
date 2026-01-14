@@ -3,7 +3,6 @@ status: "seed"
 title: Face it Linux, Most Netbooks Will Sell Windows 7
 publishedDate: 2009-02-09
 updatedDate: 2009-02-09
-slug: face-it-linux-most-netbooks-will-sell-windows-7
 tags:
   - brian proffitt
   - Free Software Foundation

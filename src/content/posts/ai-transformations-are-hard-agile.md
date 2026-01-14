@@ -3,7 +3,6 @@ status: "seed"
 title: AI Transformations Are Hard-Agile
 publishedDate: 2025-10-03
 updatedDate: 2025-10-03
-slug: ai-transformations-are-hard-agile
 tags:
   - Agile
   - AI

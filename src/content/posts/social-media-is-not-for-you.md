@@ -3,7 +3,6 @@ status: seed
 title: Social Media Is Not For You
 publishedDate: 2009-01-12
 updatedDate: 2009-01-12
-slug: social-media-is-not-for-you
 tags:
   - 4 hour work week
   - David Allen

@@ -3,7 +3,6 @@ status: "seed"
 title: Four Platforms That Are Changing Writing
 publishedDate: 2012-08-16
 updatedDate: 2013-05-26
-slug: four-platforms-that-are-changing-writing
 tags:
   - Blogger
   - Blogging

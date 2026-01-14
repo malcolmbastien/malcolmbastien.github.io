@@ -3,7 +3,6 @@ status: "seed"
 title: Action to Enterprising Presentation Prep
 publishedDate: 2008-03-16
 updatedDate: 2008-03-16
-slug: action-to-enterprising-presentation-prep
 tags:
   - General
 ---

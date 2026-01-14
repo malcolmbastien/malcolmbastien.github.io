@@ -3,7 +3,6 @@ status: "seed"
 title: Linux + Chrome + Flash
 publishedDate: 2009-08-30
 updatedDate: 2011-02-08
-slug: linux-chrome-flash
 tags:
   - General
 ---

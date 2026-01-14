@@ -3,7 +3,6 @@ status: "seed"
 title: Each Platform Has its Own Story
 publishedDate: 2012-10-09
 updatedDate: 2023-05-29
-slug: each-platform-has-its-own-story-you-can-work
 tags:
   - analytics
   - Content

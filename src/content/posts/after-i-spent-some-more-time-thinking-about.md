@@ -3,7 +3,6 @@ status: "seed"
 title: Digital Strategy &amp; UX Strategy
 publishedDate: 2012-09-24
 updatedDate: 2023-05-29
-slug: after-i-spent-some-more-time-thinking-about
 tags:
   - digital strategy
   - MadeWithPaper

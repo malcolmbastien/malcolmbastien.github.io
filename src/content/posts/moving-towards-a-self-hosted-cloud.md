@@ -3,7 +3,6 @@ status: "seed"
 title: Moving Towards A Self-Hosted Cloud
 publishedDate: 2008-09-08
 updatedDate: 2011-02-08
-slug: moving-towards-a-self-hosted-cloud
 tags:
   - General
 ---

@@ -3,7 +3,6 @@ status: "seed"
 title: My One Keyboard Struggle
 publishedDate: 2009-09-15
 updatedDate: 2009-09-15
-slug: my-one-keyboard-struggle
 tags:
   - General
 ---

@@ -3,7 +3,6 @@ status: "seed"
 title: A Network of People, Devices, and Things
 publishedDate: 2012-09-26
 updatedDate: 2023-05-29
-slug: its-important-to-realize-that-we-live-in-a-world
 tags:
   - MadeWithPaper
   - Mobile

@@ -3,7 +3,6 @@ status: "seed"
 title: The Social Context
 publishedDate: 2012-09-27
 updatedDate: 2023-05-29
-slug: understand-a-bit-about-the-social-context-in-how
 tags:
   - MadeWithPaper
   - Image

@@ -3,7 +3,6 @@ status: "seed"
 title: Identity 2.0 - An Introduction to Identity On the Social Web
 publishedDate: 2009-04-17
 updatedDate: 2011-02-08
-slug: identity-2-0-an-introduction-to-identity-on-the-social-web
 tags:
   - General
 ---

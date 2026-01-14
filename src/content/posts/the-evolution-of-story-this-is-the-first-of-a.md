@@ -3,7 +3,6 @@ status: "seed"
 title: The Evolution of Story
 publishedDate: 2012-09-25
 updatedDate: 2023-05-29
-slug: the-evolution-of-story-this-is-the-first-of-a
 tags:
   - MadeWithPaper
   - Image

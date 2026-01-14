@@ -3,7 +3,6 @@ status: "seed"
 title: None
 publishedDate: 2012-02-06
 updatedDate: 2024-04-14
-slug: you-are-a-product-of-your-environment-so-choose
 tags:
   - General
   - Quote

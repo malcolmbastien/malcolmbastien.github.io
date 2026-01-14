@@ -3,7 +3,6 @@ status: "seed"
 title: Blogging to Push Ideas
 publishedDate: 2010-12-15
 updatedDate: 2010-12-15
-slug: blogging-to-push-ideas
 tags:
   - General
 ---

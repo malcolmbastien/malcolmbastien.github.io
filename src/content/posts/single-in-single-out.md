@@ -3,7 +3,6 @@ status: seed
 title: Single In, Single Out
 publishedDate: 2009-01-20
 updatedDate: 2024-01-08
-slug: single-in-single-out
 tags:
   - Aggretating
   - Best Practices

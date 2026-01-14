@@ -3,7 +3,6 @@ status: "seed"
 title: Bit by Bit
 publishedDate: 2010-08-20
 updatedDate: 2010-08-20
-slug: bit-by-bit
 tags:
   - General
 ---

@@ -3,7 +3,6 @@ status: "seed"
 title: Be Your Own Purple Cow
 publishedDate: 2008-05-07
 updatedDate: 2008-05-07
-slug: be-your-own-purple-cow
 tags:
   - General
 ---

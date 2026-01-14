@@ -3,7 +3,6 @@ status: "seed"
 title: Mapping Options Using a Risk-Value Matrix
 publishedDate: 2023-08-26
 updatedDate: 2023-12-23
-slug: mapping-options-using-a-risk-value-matrix
 tags:
   - frameworks
   - General

@@ -3,7 +3,6 @@ status: "seed"
 title: The Platform Owners Are In Control
 publishedDate: 2011-09-12
 updatedDate: 2011-12-28
-slug: the-platform-owners-are-in-control
 tags:
   - General
 ---

@@ -3,7 +3,6 @@ status: "seed"
 title: Turn Jira's Control Chart Into a Lead Time Scatterplot
 publishedDate: 2022-11-27
 updatedDate: 2024-01-13
-slug: turn-jiras-control-chart-into-a-lead-time-scatterplot
 tags:
   - General
   - Jira

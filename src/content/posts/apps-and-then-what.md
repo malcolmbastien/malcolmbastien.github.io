@@ -3,7 +3,6 @@ status: "seed"
 title: Apps, and Then What?
 publishedDate: 2010-12-03
 updatedDate: 2010-12-03
-slug: apps-and-then-what
 tags:
   - Apps
   - General

@@ -3,7 +3,6 @@ status: "seed"
 title: MacHeist vs. Shit You Can Get For Free
 publishedDate: 2009-11-05
 updatedDate: 2009-11-05
-slug: macheist-vs-shit-you-can-get-for-free
 tags:
   - General
 ---

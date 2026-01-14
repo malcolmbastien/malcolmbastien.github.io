@@ -3,7 +3,6 @@ status: "seed"
 title: Uniqlo Calendar
 publishedDate: 2010-02-03
 updatedDate: 2010-02-03
-slug: uniqlo-calendar
 tags:
   - General
   - Link

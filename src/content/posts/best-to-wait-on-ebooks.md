@@ -3,7 +3,6 @@ status: "seed"
 title: Best to Wait on Ebooks
 publishedDate: 2010-06-14
 updatedDate: 2010-06-14
-slug: best-to-wait-on-ebooks
 tags:
   - General
 ---

@@ -3,7 +3,6 @@ status: "seed"
 title: Where Are The Problems?
 publishedDate: 2023-07-12
 updatedDate: 2023-07-15
-slug: where-are-the-problems
 tags:
   - Agile
   - coaching

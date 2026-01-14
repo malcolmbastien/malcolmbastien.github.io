@@ -2,7 +2,6 @@
 status: "evergreen"
 title: Favourite Things
 publishedDate: 2025-07-28
-slug: favourite-things
 tags:
   - stuff
 ---

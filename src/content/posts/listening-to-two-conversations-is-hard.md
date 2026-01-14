@@ -3,7 +3,6 @@ status: "seed"
 title: Listening to Two Conversations is Hard
 publishedDate: 2009-05-23
 updatedDate: 2011-02-08
-slug: listening-to-two-conversations-is-hard
 tags:
   - General
 ---

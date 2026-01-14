@@ -3,7 +3,6 @@ status: "seed"
 title: Why Can The iPad Be Frustrating?
 publishedDate: 2012-01-08
 updatedDate: 2012-01-08
-slug: why-can-the-ipad-be-frustrating
 tags:
   - General
   - iPad

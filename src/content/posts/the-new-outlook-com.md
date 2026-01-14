@@ -3,7 +3,6 @@ status: "seed"
 title: The New Outlook.com
 publishedDate: 2012-08-08
 updatedDate: 2013-05-26
-slug: the-new-outlook-com
 tags:
   - Gmail
   - Metro

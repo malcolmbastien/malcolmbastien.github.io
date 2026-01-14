@@ -3,7 +3,6 @@ status: "seed"
 title: My 14 Most Valuable RSS Feeds
 publishedDate: 2008-01-01
 updatedDate: 2008-01-01
-slug: my-14-most-valuable-rss-feeds
 tags:
   - Feeds
   - General

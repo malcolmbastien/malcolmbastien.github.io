@@ -3,7 +3,6 @@ status: "seed"
 title: None
 publishedDate: 2011-05-17
 updatedDate: 2013-05-21
-slug: iida-infobar-a01-interface-by-iidaofficial
 tags:
   - General
   - Video

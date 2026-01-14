@@ -3,7 +3,6 @@ status: "seed"
 title: Digital Strategy
 publishedDate: 2012-09-25
 updatedDate: 2023-05-29
-slug: trying-to-visualize-the-digital-strategy-process
 tags:
   - Business
   - digital

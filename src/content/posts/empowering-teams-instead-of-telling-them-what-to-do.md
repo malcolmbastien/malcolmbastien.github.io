@@ -3,7 +3,6 @@ status: "seed"
 title: Empowering Teams Instead of Telling Them What to Do
 publishedDate: 2023-05-01
 updatedDate: 2023-05-09
-slug: empowering-teams-instead-of-telling-them-what-to-do
 tags:
   - Agile
   - General

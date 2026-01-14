@@ -3,7 +3,6 @@ status: "seed"
 title: Minimal Mac
 publishedDate: 2009-10-21
 updatedDate: 2009-10-21
-slug: minimal-mac-2
 tags:
   - General
   - Link

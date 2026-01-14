@@ -3,7 +3,6 @@ status: "seed"
 title: Turn Anything Into a Social Something
 publishedDate: 2009-09-14
 updatedDate: 2011-02-08
-slug: turn-anything-into-a-social-something
 tags:
   - General
 ---

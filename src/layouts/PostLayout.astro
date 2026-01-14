@@ -22,6 +22,8 @@ interface Props {
         draft?: boolean;
         featuredImage?: any;
         featuredImageAlt?: string;
+        featured?: boolean;
+        cover?: any;
     };
     filePath: string;
     gitCreated?: Date | null;
@@ -59,7 +61,7 @@ const formatDate = (date: Date) => {
 <Layout
     title={frontmatter.title}
     description={frontmatter.summary}
-    image={frontmatter.featuredImage?.src}
+    image={frontmatter.featuredImage?.src || frontmatter.cover?.src}
     type="article"
     publishedTime={createdDate.toISOString()}
     modifiedTime={hasBeenUpdated ? gitUpdated!.toISOString() : undefined}
@@ -145,12 +147,12 @@ const formatDate = (date: Date) => {
                         </div>
 
                         {
-                            frontmatter.featuredImage && (
-                                <div class="mb-8 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800">
+                            (frontmatter.featuredImage || frontmatter.cover) && (
+                                <div class="mb-8">
                                     <Image
-                                        src={frontmatter.featuredImage}
+                                        src={frontmatter.featuredImage || frontmatter.cover}
                                         alt={frontmatter.featuredImageAlt || frontmatter.title}
-                                        class="w-full h-auto object-cover max-h-100"
+                                        class="w-full h-auto rounded-xl"
                                         loading="eager"
                                     />
                                 </div>

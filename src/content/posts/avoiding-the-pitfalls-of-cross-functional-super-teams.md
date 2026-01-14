@@ -3,7 +3,6 @@ status: "seed"
 title: Avoiding The Pitfalls of Cross-Functional Super Teams
 publishedDate: 2023-07-25
 updatedDate: 2024-02-13
-slug: avoiding-the-pitfalls-of-cross-functional-super-teams
 tags:
   - Agile
   - Team Topologies

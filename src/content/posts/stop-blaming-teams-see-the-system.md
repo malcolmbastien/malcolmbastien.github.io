@@ -2,7 +2,6 @@
 title: "Stop Blaming Teams: See the System"
 publishedDate: 2025-11-12
 updatedDate: 2025-12-05
-slug: stop-blaming-teams-see-the-system
 tags:
   - Agile
   - systems thinking

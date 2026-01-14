@@ -3,7 +3,6 @@ status: "seed"
 title: How the iPad Shattered The PC
 publishedDate: 2011-08-25
 updatedDate: 2011-08-25
-slug: how-the-ipad-shattered-the-pc
 tags:
   - General
 ---

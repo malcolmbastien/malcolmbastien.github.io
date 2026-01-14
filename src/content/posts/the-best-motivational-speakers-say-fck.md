@@ -3,7 +3,6 @@ status: seed
 title: The Best Motivational Speakers Say &quot;F*ck&quot;
 publishedDate: 2008-12-18
 updatedDate: 2024-01-08
-slug: the-best-motivational-speakers-say-fck
 tags:
   - 37signals
   - Communications

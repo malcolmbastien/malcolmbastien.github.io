@@ -3,7 +3,6 @@ status: "seed"
 title: None
 publishedDate: 2012-01-09
 updatedDate: 2013-05-21
-slug: inspiredbyapple-acercloud-no-comment-ok
 tags:
   - Apple
   - General

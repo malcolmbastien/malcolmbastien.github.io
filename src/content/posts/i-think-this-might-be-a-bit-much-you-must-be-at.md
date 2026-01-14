@@ -3,7 +3,6 @@ status: "seed"
 title: None
 publishedDate: 2010-07-16
 updatedDate: 2013-05-21
-slug: i-think-this-might-be-a-bit-much-you-must-be-at
 tags:
   - General
   - Image

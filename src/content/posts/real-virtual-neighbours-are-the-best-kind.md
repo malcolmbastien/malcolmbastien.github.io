@@ -2,7 +2,6 @@
 status: "seed"
 title: Real Virtual-Neighbours Are The Best Kind
 publishedDate: 2010-01-31
-slug: real-virtual-neighbours-are-the-best-kind
 tags:
   - General
   - JunctionTO

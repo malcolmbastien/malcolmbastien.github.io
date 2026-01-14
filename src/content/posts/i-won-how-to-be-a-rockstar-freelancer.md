@@ -3,7 +3,6 @@ status: "seed"
 title: I&#039;ve Won &quot;How To Be a Rockstar Freelancer&quot;
 publishedDate: 2007-12-23
 updatedDate: 2007-12-22
-slug: i-won-how-to-be-a-rockstar-freelancer
 tags:
   - contest
   - E-book

@@ -3,7 +3,6 @@ status: "seed"
 title: The New Air
 publishedDate: 2011-08-08
 updatedDate: 2011-08-14
-slug: the-new-air
 tags:
   - General
 ---

@@ -3,7 +3,6 @@ status: seed
 title: The Real Limit Of Social Media
 publishedDate: 2009-01-16
 updatedDate: 2009-01-16
-slug: the-real-limit-of-social-media
 tags:
   - General
   - Ideas

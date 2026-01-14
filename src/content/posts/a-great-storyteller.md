@@ -3,7 +3,6 @@ status: "seed"
 title: A Great Storyteller
 publishedDate: 2009-04-27
 updatedDate: 2011-02-08
-slug: a-great-storyteller
 tags:
   - General
 ---

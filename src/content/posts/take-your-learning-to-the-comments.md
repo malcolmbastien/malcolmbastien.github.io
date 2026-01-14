@@ -3,7 +3,6 @@ status: seed
 title: Take Your Learning To The Comments
 publishedDate: 2009-01-18
 updatedDate: 2009-01-18
-slug: take-your-learning-to-the-comments
 tags:
   - Blogging
   - Blogs

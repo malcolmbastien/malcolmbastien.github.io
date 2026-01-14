@@ -3,7 +3,6 @@ status: "seed"
 title: SimpleText for Mac client
 publishedDate: 2009-11-20
 updatedDate: 2009-11-20
-slug: simpletext-for-mac-client
 tags:
   - General
 ---

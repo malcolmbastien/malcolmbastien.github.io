@@ -3,7 +3,6 @@ status: "seed"
 title: Manage the Value, Not the Work
 publishedDate: 2023-07-29
 updatedDate: 2023-07-29
-slug: manage-the-value-not-the-work
 tags:
   - Agile
   - projects

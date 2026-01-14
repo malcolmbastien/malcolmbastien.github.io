@@ -3,7 +3,6 @@ status: "seed"
 title: Give it Your Best Shot
 publishedDate: 2011-08-18
 updatedDate: 2011-08-18
-slug: give-it-your-best-shot
 tags:
   - General
 ---

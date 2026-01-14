@@ -3,7 +3,6 @@ status: "seed"
 title: It Works Just Like Your Phone
 publishedDate: 2012-08-09
 updatedDate: 2013-05-26
-slug: it-works-just-like-your-phone
 tags:
   - Apple
   - iCloud

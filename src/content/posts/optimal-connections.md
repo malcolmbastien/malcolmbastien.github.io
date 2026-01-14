@@ -3,7 +3,6 @@ status: "seed"
 title: Optimal Connections
 publishedDate: 2010-08-26
 updatedDate: 2011-02-08
-slug: optimal-connections
 tags:
   - General
   - Social Networks

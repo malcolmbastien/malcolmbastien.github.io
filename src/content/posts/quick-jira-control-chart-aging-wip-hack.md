@@ -2,7 +2,6 @@
 status: "evergreen"
 title: Quick Jira Control Chart Aging WIP Hack
 publishedDate: 2022-09-13
-slug: quick-jira-control-chart-aging-wip-hack
 tags:
   - Agile
   - Jira

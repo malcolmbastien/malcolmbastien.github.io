@@ -3,7 +3,6 @@ status: seed
 title: The Reason That Social Analytics Will Succeed Over Traditional
 publishedDate: 2009-03-02
 updatedDate: 2009-03-02
-slug: the-reason-that-social-analytics-will-succeed-over-traditional
 tags:
   - Business
   - General

@@ -3,7 +3,6 @@ status: "seed"
 title: MUJI Book
 publishedDate: 2010-11-09
 updatedDate: 2010-11-09
-slug: muji-book
 tags:
   - General
   - Link

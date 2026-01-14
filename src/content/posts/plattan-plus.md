@@ -3,7 +3,6 @@ status: "seed"
 title: Plattan Plus
 publishedDate: 2011-05-14
 updatedDate: 2024-01-07
-slug: plattan-plus
 tags:
   - General
   - products

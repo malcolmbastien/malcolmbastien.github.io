@@ -2,7 +2,6 @@
 title: There's No One Right Way
 publishedDate: 2025-11-07
 updatedDate: 2025-11-07
-slug: theres-no-one-right-way
 tags:
   - Agile
   - Apps

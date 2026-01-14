@@ -3,7 +3,6 @@ status: "seed"
 title: SIFE Ryerson With CakePHP
 publishedDate: 2007-10-05
 updatedDate: 2007-10-05
-slug: sife-ryerson-with-cakephp
 tags:
   - General
 ---

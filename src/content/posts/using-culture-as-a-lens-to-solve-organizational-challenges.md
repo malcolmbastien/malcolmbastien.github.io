@@ -3,7 +3,6 @@ status: "seed"
 title: Using Culture as a Lens to Solve Organizational Challenges
 publishedDate: 2024-01-06
 updatedDate: 2024-01-07
-slug: using-culture-as-a-lens-to-solve-organizational-challenges
 tags:
   - Culture
   - General

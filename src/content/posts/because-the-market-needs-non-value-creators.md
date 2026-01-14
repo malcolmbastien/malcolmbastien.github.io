@@ -3,7 +3,6 @@ status: "seed"
 title: Because The Market Needs Non-Value Creators
 publishedDate: 2011-12-01
 updatedDate: 2011-12-28
-slug: because-the-market-needs-non-value-creators
 tags:
   - General
 ---

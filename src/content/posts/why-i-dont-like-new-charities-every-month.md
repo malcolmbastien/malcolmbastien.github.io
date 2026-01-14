@@ -3,7 +3,6 @@ status: seed
 title: Why I Don&#039;t Like New Charities Every Month
 publishedDate: 2009-04-25
 updatedDate: 2009-04-24
-slug: why-i-dont-like-new-charities-every-month
 tags:
   - General
   - technology

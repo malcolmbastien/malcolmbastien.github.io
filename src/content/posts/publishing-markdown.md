@@ -3,7 +3,6 @@ status: "seed"
 title: Publishing Markdown
 publishedDate: 2011-12-30
 updatedDate: 2013-05-26
-slug: publishing-markdown
 tags:
   - Blogging
   - markdown

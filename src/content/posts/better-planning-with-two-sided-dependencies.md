@@ -3,7 +3,6 @@ status: "seed"
 title: Better Planning with Two-Sided Dependencies
 publishedDate: 2025-10-14
 updatedDate: 2025-10-14
-slug: better-planning-with-two-sided-dependencies
 tags:
   - Agile
   - Dependencies

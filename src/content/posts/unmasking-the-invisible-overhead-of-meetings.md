@@ -3,7 +3,6 @@ status: "seed"
 title: Unmasking the Invisible Overhead of Meetings
 publishedDate: 2025-09-29
 updatedDate: 2025-09-29
-slug: unmasking-the-invisible-overhead-of-meetings
 tags:
   - Agile
 ---

@@ -3,7 +3,6 @@ status: "seed"
 title: The User Interfaces of CrossFit and Paleo
 publishedDate: 2012-07-12
 updatedDate: 2013-05-26
-slug: the-user-interfaces-of-crossfit-and-paleo
 tags:
   - CrossFit
   - Health

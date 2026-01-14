@@ -3,7 +3,6 @@ status: "seed"
 title: Introducing BM Stack
 publishedDate: 2010-12-02
 updatedDate: 2011-02-08
-slug: introducing-bm-stack
 tags:
   - bmgen
   - BM Stack

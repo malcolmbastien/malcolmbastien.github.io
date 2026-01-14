@@ -3,7 +3,6 @@ status: "seed"
 title: What's Next For The Mac?
 publishedDate: 2012-08-13
 updatedDate: 2013-05-26
-slug: whats-next-for-the-mac
 tags:
   - Apple
   - iOS

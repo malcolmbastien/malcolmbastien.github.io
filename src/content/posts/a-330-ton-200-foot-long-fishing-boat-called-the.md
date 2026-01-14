@@ -3,7 +3,6 @@ status: "seed"
 title: The Kyotokumaru
 publishedDate: 2013-03-11
 updatedDate: 2024-01-13
-slug: a-330-ton-200-foot-long-fishing-boat-called-the
 tags:
   - japan
   - links

@@ -3,7 +3,6 @@ status: "seed"
 title: In PostRank We Trust
 publishedDate: 2008-09-17
 updatedDate: 2011-02-08
-slug: in-postrank-we-trust
 tags:
   - General
 ---

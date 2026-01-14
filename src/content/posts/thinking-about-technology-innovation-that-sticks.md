@@ -3,7 +3,6 @@ status: "seed"
 title: Thinking About Technology Innovation That Sticks
 publishedDate: 2011-01-20
 updatedDate: 2011-01-20
-slug: thinking-about-technology-innovation-that-sticks
 tags:
   - General
   - innovation

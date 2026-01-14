@@ -3,7 +3,6 @@ status: "seed"
 title: Colemak Keyboard - Still Better Than Dvorak?
 publishedDate: 2009-06-02
 updatedDate: 2011-02-08
-slug: colemak-keyboard-still-better-than-dvorak
 tags:
   - General
 ---

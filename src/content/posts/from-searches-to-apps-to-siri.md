@@ -3,7 +3,6 @@ status: "seed"
 title: From Searches to Apps to Siri
 publishedDate: 2012-08-09
 updatedDate: 2013-05-26
-slug: from-searches-to-apps-to-siri
 tags:
   - Apple
   - iOS

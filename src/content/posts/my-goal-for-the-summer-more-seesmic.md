@@ -3,7 +3,6 @@ status: "seed"
 title: My Goal For The Summer? More Seesmic
 publishedDate: 2009-05-14
 updatedDate: 2011-02-08
-slug: my-goal-for-the-summer-more-seesmic
 tags:
   - General
 ---

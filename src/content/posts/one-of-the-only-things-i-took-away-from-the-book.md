@@ -3,7 +3,6 @@ status: "seed"
 title: Basic Business Metrics
 publishedDate: 2012-10-04
 updatedDate: 2023-05-29
-slug: one-of-the-only-things-i-took-away-from-the-book
 tags:
   - Business
   - MadeWithPaper

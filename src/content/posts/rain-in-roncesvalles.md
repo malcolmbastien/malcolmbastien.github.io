@@ -3,7 +3,6 @@ status: "seed"
 title: Rain in Roncesvalles
 publishedDate: 2009-07-27
 updatedDate: 2011-02-08
-slug: rain-in-roncesvalles
 tags:
   - Photos
 ---

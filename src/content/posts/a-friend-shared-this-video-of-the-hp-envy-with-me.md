@@ -3,7 +3,6 @@ status: "seed"
 title: HP ENVY Design
 publishedDate: 2012-01-06
 updatedDate: 2013-05-26
-slug: a-friend-shared-this-video-of-the-hp-envy-with-me
 tags:
   - General
   - hp envy

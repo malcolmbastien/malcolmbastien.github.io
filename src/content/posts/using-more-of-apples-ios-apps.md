@@ -3,7 +3,6 @@ status: "seed"
 title: Using More of Apple's iOS Apps
 publishedDate: 2012-03-30
 updatedDate: 2012-03-30
-slug: using-more-of-apples-ios-apps
 tags:
   - Apple
   - Apps

@@ -3,7 +3,6 @@ status: "seed"
 title: Playing Weiqi at the Water Pavilion
 publishedDate: 2013-03-11
 updatedDate: 2024-01-13
-slug: via-the-metropolitan-museum-of-art-playing
 tags:
   - art
   - Miscellaneous

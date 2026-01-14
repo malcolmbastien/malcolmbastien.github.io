@@ -3,7 +3,6 @@ status: "seed"
 title: Putting Metro on iOS
 publishedDate: 2012-08-02
 updatedDate: 2013-05-26
-slug: i-was-really-happy-about-using-the-photosynth-app
 tags:
   - iOS
   - Metro

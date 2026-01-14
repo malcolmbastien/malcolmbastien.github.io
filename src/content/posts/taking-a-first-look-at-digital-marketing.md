@@ -3,7 +3,6 @@ status: "seed"
 title: Taking A First Look at Digital Marketing
 publishedDate: 2008-03-10
 updatedDate: 2008-03-10
-slug: taking-a-first-look-at-digital-marketing
 tags:
   - General
 ---

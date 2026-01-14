@@ -3,7 +3,6 @@ status: "seed"
 title: From Big Bang Projects to Iterative and Incremental Development
 publishedDate: 2025-08-02
 updatedDate: 2025-08-02
-slug: from-big-bang-projects-to-iterative-and-incremental-development
 tags:
   - Agile
   - General

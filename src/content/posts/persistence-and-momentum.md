@@ -3,7 +3,6 @@ status: "seed"
 title: Persistence and Momentum
 publishedDate: 2009-08-03
 updatedDate: 2009-08-03
-slug: persistence-and-momentum
 tags:
   - General
 ---

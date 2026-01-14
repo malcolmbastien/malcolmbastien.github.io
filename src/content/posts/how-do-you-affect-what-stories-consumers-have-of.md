@@ -3,7 +3,6 @@ status: "seed"
 title: Use Stories to Affect Stories
 publishedDate: 2012-10-08
 updatedDate: 2023-05-29
-slug: how-do-you-affect-what-stories-consumers-have-of
 tags:
   - MadeWithPaper
   - Image

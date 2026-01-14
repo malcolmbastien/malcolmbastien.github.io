@@ -3,7 +3,6 @@ status: "seed"
 title: Is This How Brand Squatting Will Be Defeated?
 publishedDate: 2009-03-24
 updatedDate: 2011-02-08
-slug: is-this-how-brand-squatting-will-be-defeated
 tags:
   - General
 ---

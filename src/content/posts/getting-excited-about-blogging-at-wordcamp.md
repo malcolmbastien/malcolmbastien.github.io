@@ -3,7 +3,6 @@ status: "seed"
 title: Getting Excited About Blogging At Wordcamp
 publishedDate: 2008-10-06
 updatedDate: 2024-01-08
-slug: getting-excited-about-blogging-at-wordcamp
 tags:
   - Blogging
   - General

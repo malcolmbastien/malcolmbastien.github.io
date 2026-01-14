@@ -3,7 +3,6 @@ status: "seed"
 title: Boat Cruise
 publishedDate: 2009-09-14
 updatedDate: 2011-02-08
-slug: boat-cruise
 tags:
   - General
 ---

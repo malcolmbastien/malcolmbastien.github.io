@@ -3,7 +3,6 @@ status: "seed"
 title: Shut Up and Take My Money!
 publishedDate: 2012-01-09
 updatedDate: 2012-01-09
-slug: shut-up-and-take-my-money
 tags:
   - General
   - gimmebar

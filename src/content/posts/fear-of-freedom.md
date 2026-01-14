@@ -3,7 +3,6 @@ status: "seed"
 title: Fear Of Freedom
 publishedDate: 2007-08-29
 updatedDate: 2007-08-29
-slug: fear-of-freedom
 tags:
   - General
 ---

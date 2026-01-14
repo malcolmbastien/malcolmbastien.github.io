@@ -3,7 +3,6 @@ status: "seed"
 title: The Purpose of Each Platform
 publishedDate: 2012-10-09
 updatedDate: 2023-05-29
-slug: i-came-up-with-the-idea-that-each-platform-has-a
 tags:
   - analytics
   - Business

@@ -3,7 +3,6 @@ status: "seed"
 title: Making Products Last
 publishedDate: 2011-08-10
 updatedDate: 2011-08-15
-slug: making-products-last
 tags:
   - General
 ---

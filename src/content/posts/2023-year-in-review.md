@@ -3,7 +3,6 @@ status: "seed"
 title: 2023 Year in Review
 publishedDate: 2024-01-01
 updatedDate: 2024-01-07
-slug: 2023-year-in-review
 tags:
   - Blogging
   - coaching

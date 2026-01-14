@@ -3,7 +3,6 @@ status: "seed"
 title: The Digital Strategy Process
 publishedDate: 2012-09-24
 updatedDate: 2023-05-29
-slug: this-loop-breaks-down-a-digital-strategy-process
 tags:
   - Brand
   - digital strategy

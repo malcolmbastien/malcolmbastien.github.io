@@ -3,7 +3,6 @@ status: "seed"
 title: It's a Magical World
 publishedDate: 2012-01-19
 updatedDate: 2013-05-26
-slug: samaralex-its-a-magical-world-by-spacecoyote
 tags:
   - Miscellaneous
   - Image

@@ -3,7 +3,6 @@ status: "seed"
 title: New Facebook, And Everyone Hates Malcolm
 publishedDate: 2009-03-16
 updatedDate: 2011-02-08
-slug: new-facebook-and-everyone-hates-malcolm
 tags:
   - General
 ---

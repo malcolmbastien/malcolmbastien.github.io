@@ -3,7 +3,6 @@ status: "seed"
 title: Research &amp; Insights Into Stories
 publishedDate: 2012-10-04
 updatedDate: 2023-05-29
-slug: stories-have-their-place-even-at-the-very
 tags:
   - analytics
   - card sorts

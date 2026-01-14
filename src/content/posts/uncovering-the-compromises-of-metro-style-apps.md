@@ -3,7 +3,6 @@ status: "seed"
 title: Uncovering the Compromises of Metro Style Apps
 publishedDate: 2012-08-06
 updatedDate: 2012-08-06
-slug: uncovering-the-compromises-of-metro-style-apps
 tags:
   - General
   - iOS

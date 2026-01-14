@@ -3,7 +3,6 @@ status: "seed"
 title: Desktop Mouse Movement
 publishedDate: 2010-03-05
 updatedDate: 2013-05-21
-slug: desktop-mouse-movement
 tags:
   - General
   - Image

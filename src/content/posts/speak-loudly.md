@@ -3,7 +3,6 @@ status: "seed"
 title: Speak Loudly
 publishedDate: 2009-06-29
 updatedDate: 2011-02-08
-slug: speak-loudly
 tags:
   - General
 ---

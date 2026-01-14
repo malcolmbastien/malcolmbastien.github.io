@@ -3,7 +3,6 @@ status: "seed"
 title: Put it Down
 publishedDate: 2011-02-08
 updatedDate: 2024-01-07
-slug: put-it-down
 tags:
   - Adam King
   - General

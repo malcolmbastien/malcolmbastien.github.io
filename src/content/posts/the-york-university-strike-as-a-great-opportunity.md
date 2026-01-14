@@ -3,7 +3,6 @@ status: seed
 title: The York University Strike As A Great Opportunity
 publishedDate: 2009-01-14
 updatedDate: 2024-01-08
-slug: the-york-university-strike-as-a-great-opportunity
 tags:
   - Facebook
   - General

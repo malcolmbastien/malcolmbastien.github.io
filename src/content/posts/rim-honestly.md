@@ -3,7 +3,6 @@ status: "seed"
 title: RIM Honestly
 publishedDate: 2012-07-11
 updatedDate: 2012-07-11
-slug: rim-honestly
 tags:
   - General
   - RIM

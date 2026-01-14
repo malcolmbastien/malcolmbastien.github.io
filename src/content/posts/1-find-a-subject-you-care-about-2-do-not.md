@@ -3,7 +3,6 @@ status: "seed"
 title: Advice to Writers by Vonnegut
 publishedDate: 2012-01-03
 updatedDate: 2013-05-26
-slug: 1-find-a-subject-you-care-about-2-do-not
 tags:
   - Quote
   - Writing

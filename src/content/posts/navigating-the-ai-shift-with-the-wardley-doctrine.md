@@ -3,7 +3,6 @@ status: "seed"
 title: Navigating the AI Shift With the Wardley Doctrine
 publishedDate: 2025-10-08
 updatedDate: 2025-10-08
-slug: navigating-the-ai-shift-with-the-wardley-doctrine
 tags:
   - Agile
   - AI

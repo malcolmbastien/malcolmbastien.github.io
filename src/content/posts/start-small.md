@@ -3,7 +3,6 @@ status: "seed"
 title: Start Small
 publishedDate: 2010-09-21
 updatedDate: 2010-09-21
-slug: start-small
 tags:
   - Focus
   - General

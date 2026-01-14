@@ -3,7 +3,6 @@ status: "seed"
 title: Colemak Keyboard Layout - Better Than QWERTY, Better Than Dvorak
 publishedDate: 2009-02-04
 updatedDate: 2009-02-03
-slug: colemak-keyboard-layout-better-than-qwerty-better-than-dvorak
 tags:
   - Colemak
   - Dvorak

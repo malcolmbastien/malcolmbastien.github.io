@@ -3,7 +3,6 @@ status: "seed"
 title: How Customers Engage With a Brand's Story
 publishedDate: 2012-10-07
 updatedDate: 2023-05-29
-slug: four-types-of-consumers-we-tell-our-stories-to
 tags:
   - MadeWithPaper
   - Image

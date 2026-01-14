@@ -3,7 +3,6 @@ status: "seed"
 title: Why Work Waits
 publishedDate: 2023-05-29
 updatedDate: 2023-05-29
-slug: why-work-waits
 tags:
   - Agile
   - General

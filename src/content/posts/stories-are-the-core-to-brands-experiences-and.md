@@ -3,7 +3,6 @@ status: "seed"
 title: Media Tells Stories
 publishedDate: 2012-09-28
 updatedDate: 2023-05-29
-slug: stories-are-the-core-to-brands-experiences-and
 tags:
   - analytics
   - Content

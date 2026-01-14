@@ -3,7 +3,6 @@ status: seed
 title: Some Blogging Wisdom
 publishedDate: 2009-02-14
 updatedDate: 2024-01-08
-slug: some-blogging-wisdom
 tags:
   - Blogging
   - Dave Winer

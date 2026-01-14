@@ -3,7 +3,6 @@ status: seed
 title: Don't Let the Interruption Become Your Focus
 publishedDate: 2010-11-11
 updatedDate: 2010-11-11
-slug: dont-let-the-interruption-become-your-focus
 tags:
   - General
   - Pomodoro

@@ -3,7 +3,6 @@ status: "seed"
 title: More Focused Writing With OmmWriter
 publishedDate: 2010-11-29
 updatedDate: 2010-11-29
-slug: more-focused-writing-with-ommwriter
 tags:
   - General
 ---

@@ -3,7 +3,6 @@ status: "seed"
 title: 5 Ways to Get The Most Out of University
 publishedDate: 2007-12-18
 updatedDate: 2024-01-08
-slug: 5-ways-to-get-the-most-out-of-university
 tags:
   - Education
   - General

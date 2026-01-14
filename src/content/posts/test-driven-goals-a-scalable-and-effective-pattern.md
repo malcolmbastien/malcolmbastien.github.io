@@ -3,7 +3,6 @@ status: "seed"
 title: "Test-Driven Goals: A Scalable and Effective Pattern"
 publishedDate: 2023-04-27
 updatedDate: 2023-07-30
-slug: test-driven-goals-a-scalable-and-effective-pattern
 tags:
   - Agile
   - General

@@ -3,7 +3,6 @@ status: "seed"
 title: We Notice What We Choose To Notice
 publishedDate: 2009-07-01
 updatedDate: 2011-02-08
-slug: we-notice-what-we-choose-to-notice
 tags:
   - General
 ---

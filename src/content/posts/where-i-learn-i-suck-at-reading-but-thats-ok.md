@@ -3,7 +3,6 @@ status: "seed"
 title: Where I Learn I Suck at Reading, But That's OK
 publishedDate: 2010-08-06
 updatedDate: 2010-08-06
-slug: where-i-learn-i-suck-at-reading-but-thats-ok
 tags:
   - General
 ---

@@ -3,7 +3,6 @@ status: "seed"
 title: South Korea, April 2023
 publishedDate: 2023-04-18
 updatedDate: 2025-09-06
-slug: south-korea-april-2023
 tags:
   - Busan
   - Gyeong Ju

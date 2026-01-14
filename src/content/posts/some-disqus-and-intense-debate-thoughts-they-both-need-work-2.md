@@ -3,7 +3,6 @@ status: "seed"
 title: Some DISQUS and Intense Debate Thoughts - They Both Need Work
 publishedDate: 2009-02-15
 updatedDate: 2009-02-15
-slug: some-disqus-and-intense-debate-thoughts-they-both-need-work-2
 tags:
   - Blogs
   - Comment Systems

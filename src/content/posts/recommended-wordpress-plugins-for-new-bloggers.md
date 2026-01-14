@@ -3,7 +3,6 @@ status: "seed"
 title: Recommended Wordpress Plugins For New Bloggers
 publishedDate: 2009-02-02
 updatedDate: 2009-02-01
-slug: recommended-wordpress-plugins-for-new-bloggers
 tags:
   - Beginner
   - Blogging

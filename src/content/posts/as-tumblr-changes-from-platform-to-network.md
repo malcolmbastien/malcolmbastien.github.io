@@ -3,7 +3,6 @@ status: "seed"
 title: As Tumblr Changes From Platform To Network
 publishedDate: 2010-09-28
 updatedDate: 2010-09-28
-slug: as-tumblr-changes-from-platform-to-network
 tags:
   - Blogging
   - General

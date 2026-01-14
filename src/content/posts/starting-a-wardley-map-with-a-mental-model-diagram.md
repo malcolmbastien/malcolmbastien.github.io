@@ -3,7 +3,6 @@ status: "seed"
 title: Starting a Wardley Map with a Mental Model Diagram
 publishedDate: 2022-12-19
 updatedDate: 2024-01-12
-slug: starting-a-wardley-map-with-a-mental-model-diagram
 tags:
   - Mental-Model-Diagrams
   - Wardley-Maps

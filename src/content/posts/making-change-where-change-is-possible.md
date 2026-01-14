@@ -3,7 +3,6 @@ status: "seed"
 title: Making Change Where Change is Possible
 publishedDate: 2023-05-05
 updatedDate: 2023-05-09
-slug: making-change-where-change-is-possible
 tags:
   - Agile
 ---

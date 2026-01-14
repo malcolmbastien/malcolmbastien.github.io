@@ -3,7 +3,6 @@ status: "seed"
 title: Drift to Waterfall
 publishedDate: 2024-08-19
 updatedDate: 2024-09-06
-slug: drift-to-waterfall
 tags:
   - Agile
   - coaching

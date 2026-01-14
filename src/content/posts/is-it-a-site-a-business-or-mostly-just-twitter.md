@@ -3,7 +3,6 @@ status: "seed"
 title: Is It A Site? A Business? Or Mostly Just Twitter?
 publishedDate: 2009-04-27
 updatedDate: 2011-02-08
-slug: is-it-a-site-a-business-or-mostly-just-twitter
 tags:
   - General
 ---  

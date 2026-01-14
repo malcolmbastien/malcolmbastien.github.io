@@ -3,7 +3,6 @@ status: "seed"
 title: The Prize of Attention
 publishedDate: 2011-02-22
 updatedDate: 2024-01-07
-slug: the-prize-of-attention
 tags:
   - General
 ---

@@ -3,7 +3,6 @@ status: "seed"
 title: Unbundle the Value
 publishedDate: 2025-08-05
 updatedDate: 2025-09-02
-slug: unbundle-the-value
 tags:
   - Agile
   - doctrine

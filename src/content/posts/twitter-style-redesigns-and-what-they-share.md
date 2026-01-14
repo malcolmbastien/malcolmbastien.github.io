@@ -3,7 +3,6 @@ status: "seed"
 title: Twitter Style Redesigns And What They Share
 publishedDate: 2009-04-18
 updatedDate: 2011-02-08
-slug: twitter-style-redesigns-and-what-they-share
 tags:
   - General
 ---

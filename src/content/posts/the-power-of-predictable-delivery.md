@@ -3,7 +3,6 @@ status: "seed"
 title: The Power of Predictable Delivery
 publishedDate: 2023-08-05
 updatedDate: 2023-08-05
-slug: the-power-of-predictable-delivery
 tags:
   - Agile
   - Dependencies

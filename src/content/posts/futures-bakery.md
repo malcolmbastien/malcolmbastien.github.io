@@ -3,7 +3,6 @@ status: "seed"
 title: Futures Bakery
 publishedDate: 2009-09-05
 updatedDate: 2011-02-08
-slug: futures-bakery
 tags:
   - General
 ---

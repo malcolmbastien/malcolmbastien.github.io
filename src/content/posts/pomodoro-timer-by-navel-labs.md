@@ -3,7 +3,6 @@ status: "seed"
 title: Pomodoro Timer by Navel Labs
 publishedDate: 2009-12-05
 updatedDate: 2011-02-08
-slug: pomodoro-timer-by-navel-labs
 tags:
   - Applications
   - General

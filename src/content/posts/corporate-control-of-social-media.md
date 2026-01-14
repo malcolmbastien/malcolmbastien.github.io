@@ -3,7 +3,6 @@ status: "seed"
 title: Corporate Control of Social Media 
 publishedDate: 2009-08-07
 updatedDate: 2009-08-07
-slug: corporate-control-of-social-media
 tags:
   - General
 ---

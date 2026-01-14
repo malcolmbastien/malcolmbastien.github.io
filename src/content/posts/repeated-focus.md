@@ -2,7 +2,6 @@
 status: "evergreen"
 title: Repeated Focus
 publishedDate: 2010-09-07
-slug: repeated-focus
 tags:
   - Focus
   - General

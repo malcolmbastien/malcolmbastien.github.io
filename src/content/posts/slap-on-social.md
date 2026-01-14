@@ -3,7 +3,6 @@ status: "seed"
 title: Slap On Social  
 publishedDate: 2010-11-11
 updatedDate: 2010-11-11
-slug: slap-on-social
 tags:
   - General
   - Yammer

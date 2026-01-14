@@ -3,7 +3,6 @@ status: "seed"
 title: None
 publishedDate: 2010-02-02
 updatedDate: 2013-05-21
-slug: who-knew-about-this-tumblr-always-with-the
 tags:
   - General
   - Image

@@ -3,7 +3,6 @@ status: "seed"
 title: The Mac App Store’s future of irrelevance – Marco.org
 publishedDate: 2012-08-15
 updatedDate: 2013-05-26
-slug: the-mac-app-stores-future-of-irrelevance-marco-org
 tags:
   - App Store
   - Apple

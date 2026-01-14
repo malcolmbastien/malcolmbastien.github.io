@@ -3,7 +3,6 @@ status: "seed"
 title: What Has Microsoft Learned From Metro?
 publishedDate: 2012-07-23
 updatedDate: 2012-07-23
-slug: what-has-microsoft-learned-from-metro
 tags:
   - General
   - Metro

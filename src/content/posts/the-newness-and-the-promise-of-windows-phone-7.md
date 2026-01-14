@@ -3,7 +3,6 @@ status: "seed"
 title: The Newness and The Promise of Windows Phone 7
 publishedDate: 2010-11-09
 updatedDate: 2011-02-08
-slug: the-newness-and-the-promise-of-windows-phone-7
 tags:
   - General
   - Windows Phone 7

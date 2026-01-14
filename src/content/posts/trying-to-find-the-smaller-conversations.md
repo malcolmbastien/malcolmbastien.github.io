@@ -3,7 +3,6 @@ status: "seed"
 title: Trying to Find the Smaller Conversations
 publishedDate: 2010-08-26
 updatedDate: 2010-08-26
-slug: trying-to-find-the-smaller-conversations
 tags:
   - Conversations
   - General

@@ -3,7 +3,6 @@ status: "seed"
 title: Reblogging - Not So Much
 publishedDate: 2010-01-18
 updatedDate: 2010-01-18
-slug: reblogging-not-so-much
 tags:
   - General
   - reblog

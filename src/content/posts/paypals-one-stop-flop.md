@@ -3,7 +3,6 @@ status: "seed"
 title: PayPal's One-Stop Flop
 publishedDate: 2011-10-18
 updatedDate: 2011-12-28
-slug: paypals-one-stop-flop
 tags:
   - General
 ---

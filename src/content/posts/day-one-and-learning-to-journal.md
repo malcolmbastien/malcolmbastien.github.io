@@ -3,7 +3,6 @@ status: "seed"
 title: Day One and Learning to Journal
 publishedDate: 2011-08-12
 updatedDate: 2011-08-15
-slug: day-one-and-learning-to-journal
 tags:
   - General
 ---

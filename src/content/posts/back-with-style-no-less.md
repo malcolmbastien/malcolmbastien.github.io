@@ -3,7 +3,6 @@ status: "seed"
 title: Back. With Style No Less.
 publishedDate: 2009-12-15
 updatedDate: 2011-02-08
-slug: back-with-style-no-less
 tags:
   - Basic Maths
   - Blogging

@@ -3,7 +3,6 @@ status: "seed"
 title: Something Routine
 publishedDate: 2010-06-22
 updatedDate: 2010-06-22
-slug: something-routine
 tags:
   - General
 ---

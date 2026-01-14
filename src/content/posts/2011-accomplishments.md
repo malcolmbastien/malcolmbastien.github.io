@@ -3,7 +3,6 @@ status: "seed"
 title: 2011 Accomplishments
 publishedDate: 2012-01-02
 updatedDate: 2012-01-02
-slug: 2011-accomplishments
 tags:
   - General
   - new years

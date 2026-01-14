@@ -3,7 +3,6 @@ status: "seed"
 title: None
 publishedDate: 2010-07-14
 updatedDate: 2013-05-21
-slug: de-la-soul-stakes-is-high-via-naskoolgrap-just
 tags:
   - General
   - Video

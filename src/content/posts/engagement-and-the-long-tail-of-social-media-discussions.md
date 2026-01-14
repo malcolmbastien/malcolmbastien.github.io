@@ -3,7 +3,6 @@ status: "seed"
 title: Engagement and The Long Tail of Social Media Discussions
 publishedDate: 2009-08-06
 updatedDate: 2011-02-08
-slug: engagement-and-the-long-tail-of-social-media-discussions
 tags:
   - General
 ---

@@ -3,7 +3,6 @@ status: "seed"
 title: Getting Into The Mixx
 publishedDate: 2008-09-30
 updatedDate: 2024-01-08
-slug: getting-into-the-mixx
 tags:
   - General
 ---

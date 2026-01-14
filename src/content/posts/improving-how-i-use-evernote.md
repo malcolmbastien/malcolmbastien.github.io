@@ -3,7 +3,6 @@ status: "seed"
 title: Improving How I Use Evernote
 publishedDate: 2012-04-02
 updatedDate: 2012-04-02
-slug: improving-how-i-use-evernote
 tags:
   - evernote
   - General

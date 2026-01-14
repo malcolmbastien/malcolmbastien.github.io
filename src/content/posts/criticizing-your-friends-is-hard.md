@@ -3,7 +3,6 @@ status: "seed"
 title: Criticizing Your Friends is Hard
 publishedDate: 2009-05-28
 updatedDate: 2011-02-08
-slug: criticizing-your-friends-is-hard
 tags:
   - General
 ---

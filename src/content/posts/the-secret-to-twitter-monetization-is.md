@@ -3,7 +3,6 @@ status: seed
 title: The Secret to Twitter Monetization Is...
 publishedDate: 2008-12-16
 updatedDate: 2024-01-08
-slug: the-secret-to-twitter-monetization-is
 tags:
   - Business
   - Gary Vaynerchuk

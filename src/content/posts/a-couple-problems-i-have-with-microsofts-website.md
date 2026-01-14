@@ -3,7 +3,6 @@ status: "seed"
 title: A Quick Look at the Surface Site
 publishedDate: 2012-10-16
 updatedDate: 2013-05-25
-slug: a-couple-problems-i-have-with-microsofts-website
 tags:
   - General
   - Microsoft

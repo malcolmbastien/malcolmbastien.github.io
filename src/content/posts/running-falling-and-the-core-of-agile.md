@@ -3,7 +3,6 @@ status: "seed"
 title: Running, Falling, and the Core of Agile
 publishedDate: 2023-05-24
 updatedDate: 2023-08-04
-slug: running-falling-and-the-core-of-agile
 tags:
   - Agile
   - Kanban

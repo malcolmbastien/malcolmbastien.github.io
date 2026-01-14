@@ -3,7 +3,6 @@ status: "seed"
 title: Future Stories
 publishedDate: 2012-09-25
 updatedDate: 2023-05-29
-slug: i-called-personal-analytics-and-collaboration-in
 tags:
   - Collaboration
   - MadeWithPaper

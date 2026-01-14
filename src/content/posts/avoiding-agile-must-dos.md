@@ -3,7 +3,6 @@ status: "seed"
 title: Avoiding Agile Must-Dos
 publishedDate: 2024-09-09
 updatedDate: 2024-09-09
-slug: avoiding-agile-must-dos
 tags:
   - Agile
 ---

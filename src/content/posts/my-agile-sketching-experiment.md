@@ -3,7 +3,6 @@ status: "seed"
 title: My Agile Sketching Experiment
 publishedDate: 2023-05-18
 updatedDate: 2023-05-19
-slug: my-agile-sketching-experiment
 tags:
   - Agile
   - Excalidraw

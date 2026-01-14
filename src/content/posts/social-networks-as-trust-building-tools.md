@@ -3,7 +3,6 @@ status: seed
 title: Social Networks as Trust Building Tools
 publishedDate: 2009-02-11
 updatedDate: 2009-02-11
-slug: social-networks-as-trust-building-tools
 tags:
   - Chris Brogan
   - Communication

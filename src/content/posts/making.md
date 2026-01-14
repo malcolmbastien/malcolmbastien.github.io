@@ -3,7 +3,6 @@ status: "seed"
 title: Making
 publishedDate: 2011-02-20
 updatedDate: 2024-01-07
-slug: making
 tags:
   - General
 ---

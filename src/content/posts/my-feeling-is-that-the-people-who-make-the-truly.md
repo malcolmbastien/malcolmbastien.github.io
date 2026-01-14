@@ -3,7 +3,6 @@ status: "seed"
 title: None
 publishedDate: 2011-12-31
 updatedDate: 2013-05-26
-slug: my-feeling-is-that-the-people-who-make-the-truly
 tags:
   - General
   - Learning

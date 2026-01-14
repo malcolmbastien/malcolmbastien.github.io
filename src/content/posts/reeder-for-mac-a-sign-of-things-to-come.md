@@ -3,7 +3,6 @@ status: "seed"
 title: Reeder for Mac a Sign of Things to Come
 publishedDate: 2010-12-09
 updatedDate: 2010-12-09
-slug: reeder-for-mac-a-sign-of-things-to-come
 tags:
   - General
   - Reeder

@@ -3,7 +3,6 @@ status: "seed"
 title: 3x3 Lessons From My Summer Reading Part 1
 publishedDate: 2008-09-14
 updatedDate: 2024-01-08
-slug: 3x3-lessons-from-my-summer-reading-part-1
 tags:
   - Books
   - General

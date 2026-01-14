@@ -3,7 +3,6 @@ status: "seed"
 title: Story Gets Us to Emotion
 publishedDate: 2012-10-05
 updatedDate: 2023-05-29
-slug: i-saw-a-quote-about-experiences-being-better-than
 tags:
   - Brand
   - emotion

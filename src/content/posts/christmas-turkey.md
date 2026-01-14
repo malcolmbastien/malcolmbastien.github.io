@@ -3,7 +3,6 @@ status: "seed"
 title: Christmas Turkey!
 publishedDate: 2009-12-25
 updatedDate: 2011-02-08
-slug: christmas-turkey
 tags:
   - Foodshots
   - General

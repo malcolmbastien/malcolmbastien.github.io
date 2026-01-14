@@ -3,7 +3,6 @@ status: "seed"
 title: The Reason for Innovation
 publishedDate: 2012-10-04
 updatedDate: 2023-05-29
-slug: for-a-while-i-had-a-hard-time-figuring-out-what
 tags:
   - innovation
   - MadeWithPaper

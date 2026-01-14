@@ -3,7 +3,6 @@ status: seed
 title: Thinking About The Newsstand of The Future
 publishedDate: 2009-02-26
 updatedDate: 2009-02-26
-slug: thinking-about-the-newsstand-of-the-future
 tags:
   - Business
   - General

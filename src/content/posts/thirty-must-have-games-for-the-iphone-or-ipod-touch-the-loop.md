@@ -3,7 +3,6 @@ status: "seed"
 title: Thirty must-have games for the iPhone or iPod touch | The Loop
 publishedDate: 2009-12-03
 updatedDate: 2009-12-03
-slug: thirty-must-have-games-for-the-iphone-or-ipod-touch-the-loop
 tags:
   - General
 ---

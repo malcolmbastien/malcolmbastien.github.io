@@ -3,7 +3,6 @@ status: "seed"
 title: The Value of Tablet Huddle Experiences
 publishedDate: 2010-12-22
 updatedDate: 2010-12-22
-slug: the-value-of-tablet-huddle-experiences
 tags:
   - Apps
   - General

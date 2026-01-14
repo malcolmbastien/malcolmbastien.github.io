@@ -3,7 +3,6 @@ status: "seed"
 title: None
 publishedDate: 2012-01-26
 updatedDate: 2024-04-14
-slug: put-it-before-them-briefly-so-they-will-read-it
 tags:
   - General
   - Quote

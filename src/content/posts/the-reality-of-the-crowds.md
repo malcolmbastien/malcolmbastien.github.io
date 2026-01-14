@@ -3,7 +3,6 @@ status: "seed"
 title: The Reality Of The Crowds
 publishedDate: 2009-04-22
 updatedDate: 2011-02-08
-slug: the-reality-of-the-crowds
 tags:
   - General
 ---

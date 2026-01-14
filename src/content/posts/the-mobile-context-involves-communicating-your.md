@@ -3,7 +3,6 @@ status: "seed"
 title: The Mobile Context
 publishedDate: 2012-09-28
 updatedDate: 2023-05-29
-slug: the-mobile-context-involves-communicating-your
 tags:
   - MadeWithPaper
   - Mobile

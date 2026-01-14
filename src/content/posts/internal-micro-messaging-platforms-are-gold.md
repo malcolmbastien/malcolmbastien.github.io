@@ -3,7 +3,6 @@ status: "seed"
 title: Internal Micro Messaging Platforms Are Gold
 publishedDate: 2009-04-23
 updatedDate: 2011-02-08
-slug: internal-micro-messaging-platforms-are-gold
 tags:
   - General
 ---

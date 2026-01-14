@@ -3,7 +3,6 @@ status: "seed"
 title: The Death of The Boring Blog Post?
 publishedDate: 2009-11-19
 updatedDate: 2011-02-08
-slug: the-death-of-the-boring-blog-post
 tags:
   - General
 ---

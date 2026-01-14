@@ -3,7 +3,6 @@ status: "seed"
 title: Chatting About Event Overload In Toronto
 publishedDate: 2009-09-28
 updatedDate: 2009-09-28
-slug: chatting-about-event-overload-in-toronto
 tags:
   - General
 ---

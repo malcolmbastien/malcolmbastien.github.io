@@ -3,7 +3,6 @@ status: "seed"
 title: None
 publishedDate: 2012-05-03
 updatedDate: 2013-05-26
-slug: newyorker-cartoon-of-the-day-for-more
 tags:
   - Miscellaneous
   - Image

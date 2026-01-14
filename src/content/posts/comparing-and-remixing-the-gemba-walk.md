@@ -3,7 +3,6 @@ status: "seed"
 title: Comparing and Remixing the Gemba Walk
 publishedDate: 2022-09-18
 updatedDate: 2024-01-13
-slug: comparing-and-remixing-the-gemba-walk
 tags:
   - Agile
   - gemba

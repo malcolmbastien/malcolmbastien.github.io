@@ -3,7 +3,6 @@ status: "seed"
 title: Making Media Easier
 publishedDate: 2012-01-07
 updatedDate: 2012-01-07
-slug: making-media-easier
 tags:
   - General
   - instagram

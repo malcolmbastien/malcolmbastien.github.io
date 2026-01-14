@@ -3,7 +3,6 @@ status: "seed"
 title: Open Conversations Will Kill Your Company
 publishedDate: 2009-04-28
 updatedDate: 2011-02-08
-slug: open-conversations-will-kill-your-company
 tags:
   - General
 ---

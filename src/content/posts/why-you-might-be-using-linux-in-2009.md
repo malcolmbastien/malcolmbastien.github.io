@@ -3,7 +3,6 @@ status: "seed"
 title: Why You Might Be Using Linux in 2009
 publishedDate: 2008-12-22
 updatedDate: 2011-02-08
-slug: why-you-might-be-using-linux-in-2009
 tags:
   - Amarok
   - Cloud
