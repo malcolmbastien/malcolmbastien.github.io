@@ -6,10 +6,10 @@ import ProfileHeader from "../components/Profile/ProfileHeader.astro";
 import YearNavigation from "../components/YearNavigation.astro";
 import PostTimeline from "../components/PostTimeline.astro";
 import SiteFooter from "../components/SiteFooter.astro";
-import { getBatchFileDates } from "../lib/git-history";
+import { getBatchFileDates, type FileDates } from "../lib/git-history";
 
 const allPosts = await getCollection("posts");
-const batchDates = await getBatchFileDates();
+const batchDates = (await getBatchFileDates()) as Map<string, FileDates>;
 
 // Fetch git dates for all posts to create timeline events
 const postsWithDates = allPosts.map((post) => {
@@ -19,15 +19,14 @@ const postsWithDates = allPosts.map((post) => {
                   batchDates.get(`src/content/posts/${id}.mdx`);
     
     const created = dates?.created;
-    const updated = dates?.updated;
+    const allGitDates = dates?.allDates || new Set<string>();
 
     const displayDate = post.data.publishedDate || created;
-    const updatedDate = updated || created || displayDate;
 
     return {
         ...post,
         displayDate,
-        updatedDate,
+        allGitDates,
     };
 }).filter(post => post.displayDate); // Only show posts that have a valid date from frontmatter or git
 
@@ -35,7 +34,7 @@ const postsWithDates = allPosts.map((post) => {
 const events: any[] = [];
 postsWithDates.forEach((post) => {
     const displayDate = post.displayDate as Date;
-    const updatedDate = post.updatedDate as Date;
+    const displayDateStr = displayDate.toISOString().split("T")[0];
 
     // Add creation event
     events.push({
@@ -45,19 +44,21 @@ postsWithDates.forEach((post) => {
         title: post.data.title,
     });
 
-    // Add update event if updated significantly later
-    if (
-        updatedDate.getTime() >
-        displayDate.getTime() + 1000 * 60 * 60
-    ) {
-        // More than 1 hour
-        events.push({
-            type: "updated",
-            post,
-            date: updatedDate,
-            title: post.data.title,
-        });
-    }
+    // Add update events for all other unique git dates
+    post.allGitDates.forEach((dateStr: string) => {
+        // Only add as update if it's a different day than creation
+        if (dateStr !== displayDateStr) {
+            // We use 12:00 PM for these historical updates to ensure they sort reasonably
+            // or we could try to find the actual time, but dateStr is just the day
+            const updateDate = new Date(dateStr + "T12:00:00");
+            events.push({
+                type: "updated",
+                post,
+                date: updateDate,
+                title: post.data.title,
+            });
+        }
+    });
 });
 
 // Aggregate events: group multiple updates to same post within short time
@@ -65,7 +66,9 @@ const aggregatedEvents: any[] = [];
 const eventGroups = new Map();
 
 events.forEach((event) => {
-    const key = `${event.post.slug}-${event.type}`;
+    // Group by slug, type, AND date (day) to ensure at most one event per post per day per type
+    const dateStr = (event.date as Date).toISOString().split("T")[0];
+    const key = `${event.post.slug}-${event.type}-${dateStr}`;
     if (!eventGroups.has(key)) {
         eventGroups.set(key, []);
     }

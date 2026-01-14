@@ -105,9 +105,15 @@ export async function getFileDates(filePath: string): Promise<{ created: Date | 
  * Optimized batch fetch for all post dates.
  * This is much faster than calling getFileDates individually for 100s of posts.
  */
-let batchDatesCache: Map<string, { created: Date, updated: Date }> | null = null;
+export interface FileDates {
+	created: Date;
+	updated: Date;
+	allDates: Set<string>; // ISO strings (YYYY-MM-DD)
+}
 
-export async function getBatchFileDates(): Promise<Map<string, { created: Date, updated: Date }>> {
+let batchDatesCache: Map<string, FileDates> | null = null;
+
+export async function getBatchFileDates(): Promise<Map<string, FileDates>> {
 	if (batchDatesCache) return batchDatesCache;
 
 	try {
@@ -122,7 +128,7 @@ export async function getBatchFileDates(): Promise<Map<string, { created: Date, 
 			'src/content/posts'
 		]);
 
-		const results = new Map<string, { created: Date, updated: Date }>();
+		const results = new Map<string, FileDates>();
 		const lines = raw.split('\n');
 		
 		let currentTimestamp: number | null = null;
@@ -136,16 +142,21 @@ export async function getBatchFileDates(): Promise<Map<string, { created: Date, 
 			} else if (currentTimestamp && trimmed.startsWith('src/content/posts/')) {
 				const filePath = trimmed;
 				const date = new Date(currentTimestamp);
+				const dateStr = date.toISOString().split('T')[0];
 				
 				const existing = results.get(filePath);
 				if (!existing) {
-					results.set(filePath, { created: date, updated: date });
+					results.set(filePath, { 
+						created: date, 
+						updated: date, 
+						allDates: new Set([dateStr]) 
+					});
 				} else {
 					// Since git log is descending, the first one we see is the latest (updated)
 					// and the last one we see is the earliest (created)
-					// But we should check just in case
 					if (date > existing.updated) existing.updated = date;
 					if (date < existing.created) existing.created = date;
+					existing.allDates.add(dateStr);
 				}
 			}
 		}
