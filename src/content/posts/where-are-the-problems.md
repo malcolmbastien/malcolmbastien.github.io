@@ -1,23 +1,19 @@
 ---
-status: "seed"
+status: "evergreen"
 title: Where Are The Problems?
 publishedDate: 2023-07-12
-updatedDate: 2023-07-15
 tags:
   - Agile
-  - coaching
+  - Coaching
 ---
 When I first started coaching teams, I aimed to teach people the techniques and methods they could use to manage their work better. Recently, I've adopted a different approach that actually leaves techniques for last and instead starts with problems and needs.
 
 I was thinking about my initial approach and how it's changed over the past few years and compared that to what I see others doing. From that comparison, I came up with a short list of alternate approaches to Agile coaching when faced with a problem:
 
-**The coach fixes the problem**: This looks like implementing new practices, frameworks, models and structures.
-
-**The coach helps the team fix the problem**: This approach focuses on learning and growth. It could look like training and workshops or even a conversation.
-
-**The coach sees the people as the problem, and the coach fixes the people**: This looks like reprogramming how people think, where the blame for how the system works is placed on individuals or groups within the system.
-
-**The coach looks for more problems**: Where are the problems? What else is bothering you? Are there any other issues that are contributing to your problems? What do other people think the problem is?
+1. **The coach fixes the problem**: This looks like implementing new practices, frameworks, models and structures.
+2. **The coach helps the team fix the problem**: This approach focuses on learning and growth. It could look like training and workshops or even a conversation.
+3. **The coach sees the people as the problem, and the coach fixes the people**: This looks like reprogramming how people think, where the blame for how the system works is placed on individuals or groups within the system.
+4. **The coach looks for more problems**: Where are the problems? What else is bothering you? Are there any other issues that are contributing to your problems? What do other people think the problem is?
 
 The last approach, looking for more problems, is now how I start conversations with managers and teams. The problem people say they have is only part of the truth. When someone says they have a problem, the opportunity isn't just to solve it; it's to look at how things work and do things differently.
 
@@ -25,19 +21,13 @@ Recently a Manager and his Scrum Master came to me asking to help solve a proble
 
 I could address this problem by focusing on how they run their stand-ups or by looking at the individual characteristics of the Scrum Master and any faults they might have. I could also hunt for more problems.
 
-Why does he need to extract updates from his team?
-
-What's wrong with the way the team shares updates?
-
-Why do they need updates?
-
-Why's the status of the work hidden?
-
-Why can't the team provide updates?
-
-Why's the work late?
-
-What kind of commitments is the team making?
+- Why does he need to extract updates from his team?
+- What's wrong with the way the team shares updates?
+- Why do they need updates?
+- Why's the status of the work hidden?
+- Why can't the team provide updates?
+- Why's the work late?
+- What kind of commitments is the team making?
 
 Most problems people struggle with are the effect of a system of problems, and as we discuss these questions, we're writing things down and building a map of problems. By the end of the activity, we've identified many issues and previously hidden obstacles.
 
@@ -49,13 +39,10 @@ We can make the process easier on people by anchoring the discussion and problem
 
 Start with by figuring out what annoys people or what keeps them up at night, and then poke at it from different perspectives:
 
-So what? What problems does it cause?
-
-What do you want to happen instead?
-
-When that happens, what else happens?
-
-Are there any other issues contributing to your problems?
+- So what? What problems does it cause?
+- What do you want to happen instead?
+- When that happens, what else happens?
+- Are there any other issues contributing to your problems?
 
 Going back to the Scrum Master example from earlier, do you want to be able to extract status updates from your team members? Or do you actually want to deliver on your commitments on time? Problem discovery and problem mapping help uncover better needs. 
 

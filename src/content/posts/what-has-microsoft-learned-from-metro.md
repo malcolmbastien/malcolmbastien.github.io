@@ -22,12 +22,13 @@ Not long after the iPad was introduced, Apple held an event on October 10, 2010 
 
 The features they brought to the desktop included:
 
-Multi-Touch gestures
-App Store
-Launchpad
-Full screen apps
-Auto save
-Apps resume when launched
+- Multi-Touch gestures
+- App Store
+- Launchpad
+- Full screen apps
+- Auto save
+- Apps resume when launched
+
 The driving view in Apple’s ecosystem is that iOS is appropriate for mobile, while OS X for meant for the desktop. But that obviously hasn’t stopped Apple from deciding that certain parts of iOS could also work on the desktop. One of the nice benefits this had for consumers is that it built on consumers’ experience with their phones. What consumers learnt in one setting could now be applied in another.
 
 Since last year when Microsoft revealed what Windows 8 would look like, the overarching message has been Windows, and Metro everywhere. Metro will run on phones, tablets, and desktops.

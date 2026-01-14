@@ -20,6 +20,7 @@ Next month...
 And so on and so on...
 
 It's not my style, and it doesn't make sense to me that it would be the style of a community who could accomplish more. Obviously some people like that, maybe some people feel obligated to. To me it always looks like people are making a lot of noise around donating a couple bucks. And at every opportunity to make a lot of noise, way too much **"self-stroking"** goes on.
+
 ## Enough Charities, Let's Tackle Some Problems
 
 What we should be doing is creating longer term projects, that can help causes over a long, or continually. Developing solutions like that actually take some serious problem solving to accomplish. A project with the schedule flexibility to develop a plan and deliverables that take advantage of what  real expertise and skills can offer. Something **concrete and sustaining that lasts beyond our involvement in it**.
@@ -38,6 +39,7 @@ We should be able to create:
 - Some that gives repeatedly to groups in need.
 
 **Anything but a big deal.**
+
 ## Let's Not De-emphasis Technology
 
 I'm going to say it. **Technology is fucking amazing.**
@@ -47,6 +49,7 @@ It always rubs me the wrong way when people who have no tech background, shout o
 Technology is not code - it's products that solve needs. Sometimes the application to solve a need doesn't exist yet, and we need developers to make it. That argument is enough for me to think that sometimes we should emphasis the fuck out of creating technology that can accomplish big things.
 
 And we should create that technology, just for the joy of what it will provide.
+
 ## Don't Do It Out of Self-Interest
 
 Not being transparent about self-interest destroys trust.

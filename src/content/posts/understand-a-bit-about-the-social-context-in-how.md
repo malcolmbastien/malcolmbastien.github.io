@@ -2,7 +2,6 @@
 status: "seed"
 title: The Social Context
 publishedDate: 2012-09-27
-updatedDate: 2023-05-29
 tags:
   - MadeWithPaper
   - Image

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: "evergreen"
 title: 2022 Recap
 publishedDate: 2023-01-03
 updatedDate: 2024-01-07
@@ -7,7 +7,7 @@ tags:
   - Blogging
   - Miro
   - Workshops
-  - Year in Review
+  - Year-In-Review
 ---
 The year passed by quickly, and it's challenging to come up with a list of my accomplishments over the past year. Aside from some other minor achievements that I won't bother listing, only a little stands out about 2022. In any case, I'm proud of the work that I did.
 
@@ -36,4 +36,4 @@ Early in 2022, I went on a kick between February and April, publishing five diff
 
 ## Blog
 
-In the latter part of the year, I cracked open the blog I started in 2007, which was last updated in 2013 and wrote [seven posts](https://malcolmbastien.com/2022/). It's not a lot, but I'm happy to have another outlet to express myself aside from the short-form thoughts I often post to [Mastodon](https://mastodon.social/@malcolm).
+In the latter part of the year, I cracked open the blog I started in 2007, which was last updated in 2013 and wrote seven posts. It's not a lot, but I'm happy to have another outlet to express myself aside from the short-form thoughts I often post to [Mastodon](https://mastodon.social/@malcolm).

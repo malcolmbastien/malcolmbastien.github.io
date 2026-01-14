@@ -16,36 +16,36 @@ I’ll let the ads speak for themselves.
 
 Dell Snap Covers: [youtube http://www.youtube.com/watch?v=oOHBTf-JA54]
 
-  Windows Live:
+Windows Live:
 
-  [youtube http://www.youtube.com/watch?v=Lel3swo4RMc]
+[youtube http://www.youtube.com/watch?v=Lel3swo4RMc]
 
-  New PC:
+New PC:
 
-  [youtube http://www.youtube.com/watch?v=ORrzKZuc2JI]
+[youtube http://www.youtube.com/watch?v=ORrzKZuc2JI]
 
-  Staples New PC:
+Staples New PC:
 
-  [youtube http://www.youtube.com/watch?v=L8D1e3kD4W8]
+[youtube http://www.youtube.com/watch?v=L8D1e3kD4W8]
 
-  Asus Slate:
+Asus Slate:
 
-  [youtube http://www.youtube.com/watch?v=AAQibE-CHw8]
+[youtube http://www.youtube.com/watch?v=AAQibE-CHw8]
 
-  ## iPad Commercials
+## iPad Commercials
 
-  iPad is Delicious:
+iPad is Delicious:
 
-  [youtube http://www.youtube.com/watch?v=btfbIVGES1I]
+[youtube http://www.youtube.com/watch?v=btfbIVGES1I]
 
-  We’ll Always:
+We’ll Always:
 
-  [youtube http://www.youtube.com/watch?v=v_gQHtXsLtU]
+[youtube http://www.youtube.com/watch?v=v_gQHtXsLtU]
 
-  iPad is Iconic:
+iPad is Iconic:
 
-  [youtube http://www.youtube.com/watch?v=oh_hvHLj4mE]
+[youtube http://www.youtube.com/watch?v=oh_hvHLj4mE]
 
-  iPad is Electric:
+iPad is Electric:
 
-  [youtube http://www.youtube.com/watch?v=Zxx-aMs0ruY]
+[youtube http://www.youtube.com/watch?v=Zxx-aMs0ruY]

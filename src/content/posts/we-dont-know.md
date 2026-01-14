@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: "evergreen"
 title: We Don't Know
 publishedDate: 2025-05-25
 updatedDate: 2025-06-08
@@ -20,17 +20,12 @@ But what if we stopped trying so hard to fight against uncertainty and trying to
 
 Projects often start with a flurry of planning, timelines, and detailed specifications. People try to nail down every aspect upfront, making guesses about things like:
 
-How long it will take
-
-How much it will cost
-
-Who will use it
-
-What the return will be
-
-What all the risks are
-
-What we don't know
+- How long it will take
+- How much it will cost
+- Who will use it
+- What the return will be
+- What all the risks are
+- What we don't know
 
 Teams then pitch these guesses to managers to get their buy-in.
 
@@ -52,57 +47,44 @@ If you accept the truth of "We don't know " and realize that anything else is im
 
 **Focus on Outcomes:**
 
-**Define Clear Outcomes:** Instead of focusing on delivering a list of features (outputs), define the desired business or user outcomes (e.g., "increase user engagement by X%," "reduce customer support calls by Y%").
-
-**Measure Impact:** Regularly assess whether the delivered features are actually achieving the desired outcomes. If not, be prepared to adjust.
+- **Define Clear Outcomes:** Instead of focusing on delivering a list of features (outputs), define the desired business or user outcomes (e.g., "increase user engagement by X%," "reduce customer support calls by Y%").
+- **Measure Impact:** Regularly assess whether the delivered features are actually achieving the desired outcomes. If not, be prepared to adjust.
 
 **Small, Frequent Releases/Iterations:**
 
-**Minimize Batch Size:** Break down work into the smallest valuable increments that can be delivered independently. Minimizing batch size allows for frequent feedback and less "sunk cost" if a change is needed.
-
-**Short Sprints/Iterations:** Work in short, time-boxed iterations (e.g., 1-2 weeks). Short iterations enable frequent reviews and changes.
+- **Minimize Batch Size:** Break down work into the smallest valuable increments that can be delivered independently. Minimizing batch size allows for frequent feedback and less "sunk cost" if a change is needed.
+- **Short Sprints/Iterations:** Work in short, time-boxed iterations (e.g., 1-2 weeks). Short iterations enable frequent reviews and changes.
 
 **Emphasis on Feedback Loops:**
 
-**Early and Continuous User Feedback:** Get working software into the hands of real users as early and often as possible. Don't wait until the "final product." Early user feedback validates assumptions and highlights problems quickly.
-
-**Regular Retrospectives:** Dedicate time after each iteration to reflect on what went well, what didn't, and what can be improved. Regular retrospectives foster a culture of continuous learning and adaptation.
-
-**Stakeholder Collaboration:** Involve stakeholders directly in the development process so they can provide real-time input and understand trade-offs.
+- **Early and Continuous User Feedback:** Get working software into the hands of real users as early and often as possible. Don't wait until the "final product." Early user feedback validates assumptions and highlights problems quickly.
+- **Regular Retrospectives:** Dedicate time after each iteration to reflect on what went well, what didn't, and what can be improved. Regular retrospectives foster a culture of continuous learning and adaptation.
+- **Stakeholder Collaboration:** Involve stakeholders directly in the development process so they can provide real-time input and understand trade-offs.
 
 **Flexible Planning and Prioritization:**
 
-**Adaptive Planning:** Plan at a high level for the long term but in detail only for the immediate future. Revisit and adjust plans frequently based on new information.
-
-**Value-Driven Prioritization:** Focus on delivering the highest business value items first. Even if feedback informs you that your direction needs to change, you've already delivered the most important things. Techniques like CD3 or Weighted Shortest Job First (WSJF) can be helpful.
-
-**Emergent Design:** Allow the design to evolve as you learn rather than trying to perfect it upfront.
+- **Adaptive Planning:** Plan at a high level for the long term but in detail only for the immediate future. Revisit and adjust plans frequently based on new information.
+- **Value-Driven Prioritization:** Focus on delivering the highest business value items first. Even if feedback informs you that your direction needs to change, you've already delivered the most important things. Techniques like CD3 or Weighted Shortest Job First (WSJF) can be helpful.
+- **Emergent Design:** Allow the design to evolve as you learn rather than trying to perfect it upfront.
 
 **Experimentation and Hypothesis-Driven Development:**
 
-**Treat New Ideas as Hypotheses:** Frame new features or initiatives as testable hypotheses (e.g., "We believe X feature will lead to Y outcome for Z users").
-
-**Minimum Viable Product (MVP):** Build the smallest possible version of a new idea that can deliver value and gather learning.
-
-**A/B Testing and Analytics:** Test to validate hypotheses and measure the impact of new features. Testing and analytics help you learn what works and what doesn't before scaling.
-
-**Fail Fast, Learn Faster:** Embrace the idea that some experiments will fail. The goal is to learn from those failures quickly and pivot.
+- **Treat New Ideas as Hypotheses:** Frame new features or initiatives as testable hypotheses (e.g., "We believe X feature will lead to Y outcome for Z users").
+- **Minimum Viable Product (MVP):** Build the smallest possible version of a new idea that can deliver value and gather learning.
+- **A/B Testing and Analytics:** Test to validate hypotheses and measure the impact of new features. Testing and analytics help you learn what works and what doesn't before scaling.
+- **Fail Fast, Learn Faster:** Embrace the idea that some experiments will fail. The goal is to learn from those failures quickly and pivot.
 
 **Cross-Functional Teams**:
 
-**Empowered Teams:** Give teams the autonomy and responsibility to decide *how* to achieve their goals. Having empowered teams fosters ownership and faster decision-making.
-
-**Shared Understanding and Vision:** Improve the quality and speed of decision-making by ensuring everyone on the team understands the product vision, goals, and customer needs.
-
-**Blended Skill Sets:** Teams with diverse skills (development, design, testing, product ownership) can address challenges holistically and reduce dependencies.
+- **Empowered Teams:** Give teams the autonomy and responsibility to decide *how* to achieve their goals. Having empowered teams fosters ownership and faster decision-making.
+- **Shared Understanding and Vision:** Improve the quality and speed of decision-making by ensuring everyone on the team understands the product vision, goals, and customer needs.
+- **Blended Skill Sets:** Teams with diverse skills (development, design, testing, product ownership) can address challenges holistically and reduce dependencies.
 
 **Culture and Mindset:**
 
-**Psychological Safety:** Speed up learning by creating an environment where team members feel safe to voice concerns, admit mistakes, and propose new ideas without fear.
-
-**Trust:** Build a culture where teams operate with confidence in each other. Foster high standards for competence and commitment, minimizing the need for oversight, detailed reporting, and "checking."
-
-**Continuous Learning:** Foster a culture where both individual and team learning is valued and encouraged. The pressure to meet timelines kills the conditions needed for learning to flourish.
+- **Psychological Safety:** Speed up learning by creating an environment where team members feel safe to voice concerns, admit mistakes, and propose new ideas without fear.
+- **Trust:** Build a culture where teams operate with confidence in each other. Foster high standards for competence and commitment, minimizing the need for oversight, detailed reporting, and "checking."
+- **Continuous Learning:** Foster a culture where both individual and team learning is valued and encouraged. The pressure to meet timelines kills the conditions needed for learning to flourish.
 
 Each of these practices aims to better enable us to react to change in the face of uncertainty. We don't take direction from a plan. We set our direction from what the real world tells us. We organize ourselves so that our systems, culture, and teams align with that goal.
 

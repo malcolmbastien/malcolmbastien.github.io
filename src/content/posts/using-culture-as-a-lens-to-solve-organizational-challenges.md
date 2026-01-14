@@ -1,14 +1,13 @@
 ---
-status: "seed"
+status: "evergreen"
 title: Using Culture as a Lens to Solve Organizational Challenges
 publishedDate: 2024-01-06
-updatedDate: 2024-01-07
 tags:
   - Culture
-  - General
-  - tools
+  - Tools
 ---
-![](../../assets/2024/01/image-1.png)Image: [Strategyer](https://www.strategyzer.com/)
+![](../../assets/2024/01/image-1.png)
+*Image: [Strategyer](https://www.strategyzer.com/)*
 
 Years ago, when dealing with a team facing lots of interpersonal issues and a lack of safety, where people were not able to work together, and nothing seemed to work, I turned to the [Culture Map](https://xplaner.com/culturemap/), created by [Dave Gray](https://xplaner.com/), as a way to help the team map, understand, and transform their culture. Since then, I've frequently turned to the Culture Map whenever there's been a need to help people better understand many different types of situations.
 
@@ -20,19 +19,17 @@ What I've come to realize after using this tool for so long is that it's more th
 
 The Culture Map is a tool to facilitate conversations about the elements of an organization's culture:
 
-**Outcomes:** The tangible, positive or negative results and impacts an organization or group gets as a consequence of their behaviours.
-
-**Behaviours:** Specific, concrete, tangible, and observable ways people act and interact with each other.
-
-**Enablers and blockers:** The explicit or implicit structures and systems that lead to people's positive or negative behaviours.
+- **Outcomes:** The tangible, positive or negative results and impacts an organization or group gets as a consequence of their behaviours.
+- **Behaviours:** Specific, concrete, tangible, and observable ways people act and interact with each other.
+- **Enablers and blockers:** The explicit or implicit structures and systems that lead to people's positive or negative behaviours.
 
 Dave Gray originally developed the Culture Map to use for cultural change initiatives to help clients understand the cultural blockers and enablers that are often reinforced, intentionally or unintentionally, by management. 
 
 The output of a culture mapping workshop is a set of culture maps that describe both the current outcomes, behaviours and enablers of a group and another set that describes the desired outcomes and what new behaviours or enablers will be required.
 
-Culture mapping is a tool for understanding your current organizational culture and envisioning the desired state so you can find and overcome barriers to change.
-
-Dave Gray, [Three Tools to More Effectively Collaborate Across Your Organization](https://xplane.com/three-tools-to-more-effectively-collaborate-across-your-organization/)
+> Culture mapping is a tool for understanding your current organizational culture and envisioning the desired state so you can find and overcome barriers to change.
+> 
+> Dave Gray, [Three Tools to More Effectively Collaborate Across Your Organization](https://xplane.com/three-tools-to-more-effectively-collaborate-across-your-organization/)
 
 ## The Culture Lens
 
@@ -40,17 +37,15 @@ I've come to realize that rather than just using the Culture Map to diagnose and
 
 When dealing with many different types of work challenges, the Culture Map can help us find cultural explanations for people's behaviours:
 
-Suppose you have managers who act selfishly and who like to control people. It doesn't sound like a great place to work, but if it's happening, then it must be working somewhat. What kind of outcomes is it getting? What's influencing or supporting managers to act that way?
-
-In the case of Project Managers that are overburdened, stressed and on the verge of breaking down, if everybody knows about it, why is nobody able to do anything? What's happening, but more importantly, what's not happening?
-
-If someone asks a question or proposes a new way of working, does the culture support them? Or do people react negatively and shut down those who take the initiative or stand out? How do leaders and managers behave in these situations? What's driving that behaviour? What unwritten rules are people following?
+- Suppose you have managers who act selfishly and who like to control people. It doesn't sound like a great place to work, but if it's happening, then it must be working somewhat. What kind of outcomes is it getting? What's influencing or supporting managers to act that way?
+- In the case of Project Managers that are overburdened, stressed and on the verge of breaking down, if everybody knows about it, why is nobody able to do anything? What's happening, but more importantly, what's not happening?
+- If someone asks a question or proposes a new way of working, does the culture support them? Or do people react negatively and shut down those who take the initiative or stand out? How do leaders and managers behave in these situations? What's driving that behaviour? What unwritten rules are people following?
 
 There's a saying by W. Edwards Deming:
 
-Every system is perfectly designed to get the result that it does.
-
-W. Edwards Deming
+> Every system is perfectly designed to get the result that it does.
+>
+> W. Edwards Deming
 
 Deming's quote made me think of the connection we're exploring using the Culture Map. Mapping his quote to the Culture Map, we get:
 
@@ -58,7 +53,8 @@ Deming's quote made me think of the connection we're exploring using the Culture
 
 If the sum of an organization's enablers, blockers and behaviours is the system, then it's also true that its enablers, blockers, and behaviours are perfectly designed to get the outcomes it does.
 
-An organization's enablers, blockers, and behaviours are perfectly designed to get the outcomes it does.
+> [!QUOTE]
+> An organization's enablers, blockers, and behaviours are perfectly designed to get the outcomes it does.
 
 While this parallel between the culture map and Deming's quote on systems helps to highlight how enablers and behaviours are strongly linked to outcomes, the quote doesn't translate perfectly because culture and outcomes aren't separate things.
 
@@ -82,8 +78,6 @@ The Culture Map is a small step that can provide lots of value, and after mappin
 
 More Culture Map resources:
 
-[The Culture Map: a systematic & intentional tool for designing great company culture](https://www.strategyzer.com/library/the-culture-map-a-systematic-intentional-tool-for-designing-great-company-culture) by Strategyzer
-
-[Best practices: how to use The Culture Map](https://www.strategyzer.com/library/best-practices-how-to-use-the-culture-map) by Strategyzer
-
-[All about Culture Mapping](https://medium.com/@davegray/all-about-culture-mapping-ba6d23b34513) by Dave Gray
+- [The Culture Map: a systematic & intentional tool for designing great company culture](https://www.strategyzer.com/library/the-culture-map-a-systematic-intentional-tool-for-designing-great-company-culture) by Strategyzer
+- [Best practices: how to use The Culture Map](https://www.strategyzer.com/library/best-practices-how-to-use-the-culture-map) by Strategyzer
+- [All about Culture Mapping](https://medium.com/@davegray/all-about-culture-mapping-ba6d23b34513) by Dave Gray

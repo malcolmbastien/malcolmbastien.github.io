@@ -9,9 +9,10 @@ tags:
   - Kanban
   - Metrics
 ---
-In an earlier post, [Quick Jira Control Chart Aging WIP Hack](https://malcolmbastien.com/2022/09/13/quick-jira-control-chart-aging-wip-hack/), I walked through the process of using Jira's control chart report to get a view of a team's aging work in progress. Aging work in progress is a simple and effective tool to help manage a team's work. Soon after publishing that article, I created another filter to turn Jira's control chart into what people in the kanban community call a lead time scatterplot.
+In an earlier post, [[quick-jira-control-chart-aging-wip-hack|Quick Jira Control Chart Aging WIP Hack]], I walked through the process of using Jira's control chart report to get a view of a team's aging work in progress. Aging work in progress is a simple and effective tool to help manage a team's work. Soon after publishing that article, I created another filter to turn Jira's control chart into what people in the kanban community call a lead time scatterplot.
 
-![](../../assets/2022/11/image-2.png)A lead time scatterplot using Jira's control chart report
+![](../../assets/2022/11/image-2.png)
+*A lead time scatterplot using Jira's control chart report*
 
 A lead time scatterplot shows completed work items on the x-axis, where every marker represents a story. Stories are plotted left to right from oldest to most recently completed. How long each story took to complete is plotted against the y-axis.
 
@@ -19,7 +20,8 @@ The lead time scatterplot view shows the overall trend of how long it takes for 
 
 To create the lead time scatterplot graph, you need to create a new quick filter with the following query:
 
-![](../../assets/2022/11/image.png)Jira quick filters
+![](../../assets/2022/11/image.png)
+*Jira quick filters*
 
 Jira isn't a kanban tool and doesn't provide that same functionality around confidence levels. Instead, it shows a running average and some information about standard deviation, which some would argue isn't appropriate for measuring knowledge work. Still, without being too concerned about the detailed stats, using Jira's control chart as a lead time scatterplot is a quick way of understanding trends in performance.
 

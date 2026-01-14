@@ -2,9 +2,8 @@
 status: "seed"
 title: We Notice What We Choose To Notice
 publishedDate: 2009-07-01
-updatedDate: 2011-02-08
 tags:
-  - General
+  - Social-Media
 ---
 
 Social media listening can sometimes be very easy. If you make a decision to go out and look for something in your data, you'll always get a result, and it will either be expected, surprising, or sometimes even insightful.
@@ -15,10 +14,10 @@ The zero in the image, is possible in the LCD display of many calculators. If we
 
 In social media discussions there's a 2x2 model of the discussions happening online, and it's a balance between knowns and unknowns.
 
-	The discussions **we know they're having**
-	The discussions **we don't know they're having**
-	The discussions **we know they're not having**
-	The discussions **we don't know they're not having**
+- The discussions **we know they're having**
+- The discussions **we don't know they're having**
+- The discussions **we know they're not having**
+- The discussions **we don't know they're not having**
 
 What social media listening tools are able to do is give you access to each of these realms, but not much else. Without a good listening tool you are practically shut out completely from identifying or exploring this entire set.
 

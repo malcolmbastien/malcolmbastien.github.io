@@ -52,7 +52,7 @@ These questions shift the focus from an isolated team backlog to a connected del
 
 ## Make Dependencies Visible
 
-Making dependencies visible is the idea behind a [proof-of-concept tool](https://team-dependency-matrix-838267439197.us-west1.run.app/) I've been exploring based on big room planning and the [Team Dependency Matrix](https://malcolmbastien.com/2023/12/28/the-team-dependency-matrix/). It focuses planning around capturing and validating dependencies.
+Making dependencies visible is the idea behind a [proof-of-concept tool](https://team-dependency-matrix-838267439197.us-west1.run.app/) I've been exploring based on big room planning and the [[the-team-dependency-matrix|Team Dependency Matrix]]. It focuses planning around capturing and validating dependencies.
 
 ![](../../assets/2025/10/image-9.png)
 *Dashboard for [Agile Big Room Planning](https://team-dependency-matrix-838267439197.us-west1.run.app/) app, showcasing risk metrics, team loads, and dependencies to enhance planning and delivery.*

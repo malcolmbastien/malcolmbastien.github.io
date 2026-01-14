@@ -2,7 +2,6 @@
 status: "seed"
 title: Unmasking the Invisible Overhead of Meetings
 publishedDate: 2025-09-29
-updatedDate: 2025-09-29
 tags:
   - Agile
 ---
@@ -42,21 +41,17 @@ It's hard to prove or argue about the value of a team's many meetings; instead, 
 
 To understand this impact, [I prototyped a tool that visualizes a team's weekly time allocation](https://gemini.google.com/share/794b0eb9e517). This interactive tool shows the distribution of hours across productive work, meeting time, informal collaboration, cognitive load, and meeting leakage. The tool has various dials you can use to adjust different factors to see their real-world effects:
 
-**Meeting Frequency:** The number of 30-minute or 1-hour sessions.
-
-**Team Size:** Larger teams often require more time for alignment and establishing shared context.
-
-**Multitasking:** The more individuals juggle different tasks, the more common context switching becomes.
-
-**Interdependencies:** The time team members need getting support from others can generate unplanned interruptions.
-
-**Work Complexity:** Larger and more complex projects require additional coordination and planning overhead.
-
-**Team Location:** Remote setups can optimize against physical travel time, while hybrid models introduce unique communication challenges.
+- **Meeting Frequency:** The number of 30-minute or 1-hour sessions.
+- **Team Size:** Larger teams often require more time for alignment and establishing shared context.
+- **Multitasking:** The more individuals juggle different tasks, the more common context switching becomes.
+- **Interdependencies:** The time team members need getting support from others can generate unplanned interruptions.
+- **Work Complexity:** Larger and more complex projects require additional coordination and planning overhead.
+- **Team Location:** Remote setups can optimize against physical travel time, while hybrid models introduce unique communication challenges.
 
 As these factors shift, the tool would dynamically show how overall productive working time changes. It reveals how a forty-hour work week is a finite resource, meetings and other factors interact to reduce the time people have to work and collaborate productively.
 
-![](../../assets/2025/09/image-2.png)An interactive Meeting Leakage Calculator to visualize the true cost of meetings and over-collaboration.
+![](../../assets/2025/09/image-2.png)
+*An interactive Meeting Leakage Calculator to visualize the true cost of meetings and over-collaboration.*
 
 ### Towards More Intentional Collaboration
 

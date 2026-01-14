@@ -4,26 +4,18 @@ title: Watch Out - Great Looking Ubuntu Intrepid Apps
 publishedDate: 2008-12-20
 updatedDate: 2008-12-20
 tags:
-  - Alarm Clock
-  - Applications
-  - General
+  - Software
   - Gmail
   - Gnome
   - Growl
   - GTD
-  - Hack Week
-  - Intrepid Ibex
   - Linux
-  - novell
-  - POP3
   - Productivity
   - Remember The Milk
-  - software
   - Specto
   - Tasque
   - Teeworlds
   - Ubuntu
-  - Ubuntu Tweak
 ---
 When you install a fresh new version of Ubuntu on your machine, is there a time when you find yourself scrolling through the entire list of all available applications to install?  Hoping to find something new that may make using your Linux system that much more easier, productive, or fun to use?
 

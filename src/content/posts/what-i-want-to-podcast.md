@@ -12,10 +12,10 @@ Maybe it's time to start a podcast.
 
 I've put some thought into a video talking about:
 
-	Who I would like to be involved
-	What I would like to talk about
-	Why I think it's important for me and other people to get together and give some attention to issues that affect us and other students and young professionals
-	What I don't want to talk about.
+- Who I would like to be involved
+- What I would like to talk about
+- Why I think it's important for me and other people to get together and give some attention to issues that affect us and other students and young professionals
+- What I don't want to talk about.
 
 Nothing hard planned yet, just some ideas to get other people thinking and let them raise their voice if they also are interested. Needless to say, as someone who has been blogging for a few years, and listening to podcasts for even longer, I think there is still a lot of value we can generate and some real good we can do by coming together as a weekly podcast.
 
