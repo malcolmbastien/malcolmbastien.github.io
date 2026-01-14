@@ -6,10 +6,12 @@ import ProfileHeader from "../components/Profile/ProfileHeader.astro";
 import YearNavigation from "../components/YearNavigation.astro";
 import PostTimeline from "../components/PostTimeline.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import { getStatusColors } from "../lib/theme";
 import { getBatchFileDates, type FileDates } from "../lib/git-history";
 
 const allPosts = await getCollection("posts");
 const batchDates = (await getBatchFileDates()) as Map<string, FileDates>;
+const statusColors = getStatusColors();
 
 // Fetch git dates for all posts to create timeline events
 const postsWithDates = allPosts.map((post) => {
@@ -264,8 +266,8 @@ const currentYearValue = new Date().getFullYear();
                                     </p>
                                 )}
                                 <div class="mt-4 flex items-center gap-3">
-                                    <span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-sm bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400">
-                                        {post.data.status}
+                                    <span class={`text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-sm ${statusColors[post.data.status as keyof typeof statusColors]}`}>
+                                        {post.data.status === "seed" ? "🌱" : post.data.status === "sprout" ? "🌿" : "🌲"} {post.data.status}
                                     </span>
                                     {post.data.tags.slice(0, 2).map((tag) => (
                                         <span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium">
@@ -306,8 +308,8 @@ const currentYearValue = new Date().getFullYear();
                                     <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
                                         {post.displayDate?.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
                                     </span>
-                                    <span class="text-[10px] px-1.5 py-0.5 rounded-sm bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
-                                        {post.data.status}
+                                    <span class={`text-[10px] px-1.5 py-0.5 rounded-sm font-bold uppercase tracking-wider ${statusColors[post.data.status as keyof typeof statusColors]}`}>
+                                        {post.data.status === "seed" ? "🌱" : post.data.status === "sprout" ? "🌿" : "🌲"} {post.data.status}
                                     </span>
                                 </div>
                                 <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">

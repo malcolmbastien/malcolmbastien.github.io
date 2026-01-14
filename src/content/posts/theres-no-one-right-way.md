@@ -1,5 +1,6 @@
 ---
 title: There's No One Right Way
+summary: Learn how to navigate the complexities of Agile practices and make informed decisions that balance trade-offs.
 publishedDate: 2025-11-07
 updatedDate: 2025-11-07
 tags:
