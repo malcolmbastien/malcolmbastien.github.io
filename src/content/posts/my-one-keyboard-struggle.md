@@ -20,6 +20,6 @@ I've found sometimes that while Colemak has some real nice benefits to it, that 
 
 Remember sequences of letters for each hand for different words is a much more complex challenge rather than knowing the keyboard position of keys and knowing which ones to alternate between as you move back and forth from left-right-left-right.
 
-I'm stil struggling to understand if this is a solo issue I'm having or if other people have asked the same questions before. Any insights on what actually works better would be appreciated!
+I'm still struggling to understand if this is a solo issue I'm having or if other people have asked the same questions before. Any insights on what actually works better would be appreciated!
 
 PS. If you are still using QWERTY, then you are really doing yourself a disservice! Change your keyboard already!

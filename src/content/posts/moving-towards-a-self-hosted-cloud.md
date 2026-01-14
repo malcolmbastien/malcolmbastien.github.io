@@ -13,11 +13,13 @@ Google is only one example, but it's the most severe one because of the huge amo
 The idea of creating open-source, self-hosted alternatives to these web services is at important step in moving the web forward in a direction collaboration and openness, rather than just dependence and criticism.
 
 Following are a few examples of open-source applications leading the way in this.  Like the commercial solutions that preceded many of them, there is still lots of room for competition between open-source implementations and, lots of people hoping for continued innovation.
+
 ## Life Streaming: [Sweetcron](http://sweetcron.com/)
 
 [](http://sweetcron.com/)PHP (with [CodeIgniter](http://codeigniter.com/)), GPL v3
 
 Developed by Japan based developer [Yongfook](http://www.yongfook.com/) (his site is running the lastest version of Sweetcron), Sweetcron is an open source life streaming solution that collects the sum of your actions across the web based on the feeds you configure it to follow.  Sweetcron is designed as an alternative to similar services like [Friendfeed](http://friendfeed.com/), but without any of the same social networking features.
+
 ## Micro-Blogging: [Laconica](http://laconi.ca/trac/)
 
 PHP, AGPL v3
@@ -25,11 +27,13 @@ PHP, AGPL v3
 Developed by Montreal based Evan Prodromou, [Wikipedia description:]
 Laconica is an open source micro-blogging tool written in PHP that implements the [OpenMicroBlogging](http://en.wikipedia.org/wiki/OpenMicroBlogging) standard. Laconica was created as an open source, distributed alternative to Twitter, and was originally used by the [Identi.ca](http://identi.ca) micro-blogging service.
 An example of setting up your own hosted micro-blogging network is [The Twit Army](http://army.twit.tv/), set up for fans of the [TWiT](http://twit.tv/) podcast network.
+
 ## Web Analytics: [Piwik](http://piwik.org/)
 
 [](http://piwik.org/)PHP, GPL v3
 
 Formally called phpMyVisites, Piwik is an open source alternative to web analytics packages like [Google Analytics](http://www.google.com/analytics).  It's currently in Beta, and some of it's notable features include it's Plug-in support for developer created add-on functionality, and graphs and charts that are embeddable into websites.  Plug-ins for other platforms including [Wordpress](http://wordpress.org/), [Mediawiki](http://www.mediawiki.org/wiki/MediaWiki), [Docuwiki](http://docuwiki.net/index.php?title=Main_Page), and [Typo3](http://typo3.org/) have already been developed that enable Piwik to be installed onto each of the platforms with some custom options (e.g., disabling admin user tracking for Wordpress).  Personally, I would have preferred if more of their visualizations were built using Javascript rather than Flash.
+
 ## RSS Aggregator: [Lilina](http://getlilina.org/)
 
 [](http://getlilina.org/)PHP, GPL v2

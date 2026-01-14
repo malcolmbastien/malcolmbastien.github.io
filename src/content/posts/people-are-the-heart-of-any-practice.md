@@ -10,7 +10,7 @@ There's an endless number of boxes for different Agile practices that organizati
 
 While Agile practices can be helpful, it's dangerous to focus too much on just the action of doing the different practices. Success with any Agile practice depends on having the right attitude and embracing the Agile way of doing things.
 
-## **Don't Do Checkbox Agile**
+## Don't Do Checkbox Agile
 
 When you only focus on implementing Agile practices without also embracing the purpose and spirit of the practices, you open the door to perverted goals. For example:
 
@@ -20,7 +20,7 @@ When you only focus on implementing Agile practices without also embracing the p
 
 Unfortunately, because Agile has become so popular, this is the only experience many people have. For many people, this is what it means to work in an Agile team: the same management command and control, just with more meetings and some funny job titles.
 
-## **Signals of Broken Agile**
+## Signals of Broken Agile
 
 Over the years, I've seen that certain violations are problematic enough to indicate a core failure in embracing Agile:
 
@@ -30,7 +30,7 @@ Over the years, I've seen that certain violations are problematic enough to indi
 
 These problems are hazardous because their impact ripples through teams and departments, promoting behaviours that go against Agile. They negatively affect teams and limit the potential benefits that Agile or any other practice can create.
 
-## **Agile Manifesto Litmus Test**
+## Agile Manifesto Litmus Test
 
 No matter how many Agile practices your company implements, a quick test to gauge if you're doing real Agile is to flip around the value statements from the Manifesto for Agile Software Development:
 
@@ -47,7 +47,7 @@ In the absence of the values, Agile practices are hardly Agile at all.
 
 Mike Burrows, Kanban from the Inside
 
-## **Your Attitude Impacts Outcomes**
+## Your Attitude Impacts Outcomes
 
 Agile is broader than just a set of activities; it's a cultural way of working because your attitude affects how you do things and the outcomes you get from them. This idea presents itself in different ways at different levels in an organization.
 
@@ -75,7 +75,7 @@ When trying to introduce new ways of working, the goals of practices and the peo
 
 Agile practices are only effective when they're a natural extension of the team's values. Without people who embody Agile's values and principles, the practices are just empty rituals that can actually hinder you.
 
-## **Conclusion**
+## Conclusion
 
 Agile should improve the experience of both developers and customers. Teams should *want* to do Agile. If your version of Agile isn't creating a better experience for customers and developers and improving outcomes, then something's wrong.
 

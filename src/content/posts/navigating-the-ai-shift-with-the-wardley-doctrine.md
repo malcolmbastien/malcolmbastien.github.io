@@ -2,14 +2,12 @@
 status: "seed"
 title: Navigating the AI Shift With the Wardley Doctrine
 publishedDate: 2025-10-08
-updatedDate: 2025-10-08
 tags:
   - Agile
   - AI
-  - doctrine
   - Leadership
-  - management
-  - Wardley Maps
+  - Management
+  - Wardley-Maps
 ---
 ![](../../assets/2025/10/create-a-bright-and-colouful-high-resolution-image-that-embodies-the.png)
 
@@ -19,7 +17,8 @@ As the bottleneck shifts from developer productivity and coding velocity to orga
 
 Throughout this post, I will reference examples of doctrine principles taken from the [Wardley Doctrine & AI Impact Explorer](https://wardley-doctrine-ai-impact-explorer-512441749265.us-west1.run.app/) app that I created. This app serves as a reference guide to the 40 doctrine principles. It features AI-generated summaries on how AI adoption impacts teams and provides actionable recommendations for managers.
 
-![](../../assets/2025/10/image-2.png)An overview of the Wardley Doctrine and AI Impact Explorer.
+![](../../assets/2025/10/image-2.png)
+*An overview of the Wardley Doctrine and AI Impact Explorer.*
 
 ## Managers Must Constantly Attack Friction and Inertia
 
@@ -45,6 +44,8 @@ To get the most out of AI, you must relentlessly attack organizational friction 
 
 **Recommendations for Managers:** Promote a High-Velocity Culture - Actively reward teams for small, fast, reversible production changes, demonstrating that speed of iteration is the organization's ultimate competitive advantage, while simultaneously building strong guardrails.
 
+---
+
 **Principle:** Manage Inertia
 
 **Summary:** Actively address resistance to change stemming from existing practices, political capital, or past investments.
@@ -52,6 +53,8 @@ To get the most out of AI, you must relentlessly attack organizational friction 
 **The Impact of AI:** The primary source of organizational inertia shifts from technical debt/legacy code (which AI can resolve) to political capital and vested interests in old processes/structures that AI renders obsolete.
 
 **Recommendations for Managers:** Fund Process Re-engineering - Dedicate budget and senior leadership attention to re-engineering or dismantling managerial, HR, and approval processes that no longer align with AI-accelerated development speed.
+
+---
 
 **Principle:** Design for constant evolution
 
@@ -83,6 +86,8 @@ Focus on creating high-speed feedback loops. Empower teams to run dozens of smal
 
 **Recommendations for Managers:** Define Reversible Changes - Empower teams with autonomy for high-velocity deployment, provided all changes are small, isolated, and easily reversible (built-in "undo" capability) to mitigate the cost of speed.
 
+---
+
 **Principle:** Distribute power and decision-making
 
 **Summary:** Empower individuals and teams to make decisions closer to the work, fostering autonomy and responsiveness.
@@ -90,6 +95,8 @@ Focus on creating high-speed feedback loops. Empower teams to run dozens of smal
 **The impact of AI:** Velocity demands that decision-making happen at the point of action (the prompt). Managers must decentralize power to the prompt engineers and the teams closest to the AI execution.
 
 **Recommendations for Managers:** Delegate Prompt Authority - Empower small, cross-functional teams with full ownership and decision rights over the components they build, trusting their proximate knowledge and AI-driven speed over centralized review.
+
+---
 
 **Principle:** Commit to the direction, be adaptive along the path
 
@@ -119,6 +126,8 @@ AI makes small teams hyper-effective. A single context engineer, paired with a p
 
 **The Impact of AI:** Incentivize Prompt Mastery & Curiosity - Establish career paths and recognition programs that reward staff for their ability to frame complex problems for AI and critically evaluate the strategic implications of generated solutions.
 
+---
+
 **Principle:** Use appropriate tools
 
 **Summary:** Select and apply tools and techniques that are suitable for the specific context, such as mapping or financial models.
@@ -126,6 +135,8 @@ AI makes small teams hyper-effective. A single context engineer, paired with a p
 **The Impact of AI:** AI eliminates the technical friction of learning new tools. The choice of tool becomes a purely strategic decision regarding vendor lock-in, data sovereignty, and security, decoupled from the effort/training costs.
 
 **Recommendations for Managers:** Develop a Strategic Tooling Framework - Shift from technical to strategic evaluation. With AI lowering the adoption cost of any tool, your decision framework must prioritize non-technical factors like vendor lock-in, data sovereignty, security posture, and total cost of ownership. The key question moves from 'Can we use this tool?' to 'Should we commit to this tool?'
+
+---
 
 **Principle:** Provide purpose, mastery & autonomy
 
@@ -135,6 +146,8 @@ AI makes small teams hyper-effective. A single context engineer, paired with a p
 
 **Recommendations for Managers: **Revise Career Ladders - Update engineering career paths and promotion criteria to explicitly reward skills beyond coding. Create senior and principal tracks for 'AI Strategists' or 'Solution Architects' whose primary responsibilities are complex problem framing, prompt engineering, and the strategic auditing of AI-generated systems.
 
+---
+
 **Principle:** Be humble
 
 **Summary:** Practice active listening, selflessness, and demonstrate fortitude in the face of challenges.
@@ -143,7 +156,7 @@ AI makes small teams hyper-effective. A single context engineer, paired with a p
 
 **Recommendations for Managers:** Launch a 'Reverse Mentorship' Program - Pair senior leaders who have deep business context with junior engineers who are AI-native. The goal is cross-training: leaders learn what's now possible with AI, and engineers learn what business problems are most valuable to solve. This fosters humility and practical skill transfer.
 
-## **Escape the Feature Factory**
+## Escape the Feature Factory
 
 Without a deep focus on user needs, AI accelerates the creation of waste. When development is fast and cheap, the risk is of becoming a highly efficient feature factory that builds things nobody needs. Managers must shift focus from "building" to "orientation" and "validation."
 
@@ -163,6 +176,8 @@ Shifting attention and focus to 'orientation' and 'validation' means focusing mo
 
 **Recommendations for Managers:** Empower Validation - Focus investment and staff capacity (freed up from coding) into deeper qualitative research and expansive A/B testing, prioritizing strategic validation before execution.
 
+---
+
 **Principle:** Focus on user needs
 
 **Summary:** Prioritize understanding and addressing the fundamental requirements and problems of the users.
@@ -170,6 +185,8 @@ Shifting attention and focus to 'orientation' and 'validation' means focusing mo
 **The Impact of AI:** With development speed decoupled from cost, management must become extremely disciplined about delivering value versus producing features. The risk is drowning the customer in irrelevant, quickly-built software.
 
 **Recommendations for Managers:** Prioritize Outcome Metrics - Shift success metrics from feature output to a direct link with measurable, validated user outcomes, mitigating the risk of infinite, low-value feature sprawl.
+
+---
 
 **Principle**: Listen to your ecosystems
 
@@ -181,7 +198,8 @@ Shifting attention and focus to 'orientation' and 'validation' means focusing mo
 
 ## The Wardley Doctrine & AI Impact Explorer
 
-![](../../assets/2025/10/image-3.png)The Wardley Doctrine & AI Impact Explorer interface, showcasing principles for modern agile leadership in the age of AI.
+![](../../assets/2025/10/image-3.png)
+*The Wardley Doctrine & AI Impact Explorer interface, showcasing principles for modern agile leadership in the age of AI.*
 
 The [Wardley Doctrine & AI Impact Explorer](https://wardley-doctrine-ai-impact-explorer-512441749265.us-west1.run.app/) is an experimental reference tool for agile leaders. It uses AI to generate summaries of the doctrine principles and gives an overview of how AI could impact each principle. The app also offers managers recommendations for leadership in this high-speed landscape.
 
