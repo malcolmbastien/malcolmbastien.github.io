@@ -11,8 +11,6 @@ A couple years ago was a huge Linux user. I followed almost everything happening
 
 What Drumbeat is, to play off the imagery, is the drumming of many different people working on many different projects, all contributing to the open web. It's all modeled in this diagram that Mark Surman posted to his blog last week.
 
-[![](http://commonspace.files.wordpress.com/2010/04/funder-graphics1.png?w=283&h=194)](http://commonspace.wordpress.com/2010/04/16/new-drumbeat-description/)
-
 Many different practical open web ideas turn into projects, the more active projects are highlighted on the website and at local events, with the best of these projects being funded.
 
 But what if there was only one project.

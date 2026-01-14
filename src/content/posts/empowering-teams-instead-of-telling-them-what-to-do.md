@@ -67,13 +67,10 @@ These tasks from Directors are more productive as opportunities to change the sy
 
 Some possible such opportunities include:
 
-Forming new social connections and relationships within the organization.
-
-Bringing together different levels of the hierarchy.
-
-Increasing people's awareness of organizational needs or goals
-
-Allowing teams and people to grow by taking on new challenges and the freedom to develop their own solutions rather than assigning them tasks.
+- Forming new social connections and relationships within the organization.
+- Bringing together different levels of the hierarchy.
+- Increasing people's awareness of organizational needs or goals
+- Allowing teams and people to grow by taking on new challenges and the freedom to develop their own solutions rather than assigning them tasks.
 
 Good ideas come from the people who are closest to the work. More resilience comes from increasing the informal network density in a system. Instead of focusing on what management wants, look for opportunities to collaborate across the hierarchy to develop even better solutions. Involve team members in the process to solve the problems management cares about.
 
@@ -81,11 +78,9 @@ Good ideas come from the people who are closest to the work. More resilience com
 
 Notice how much feedback about what a team should or shouldn't do is getting shared directly with the team. In the cases when a manager or director is sharing instructions about what teams should be doing through a proxy like an Agile Coach, there are a couple of questions you could ask:
 
-Why is there a difference between what management wants and what teams are doing?
-
-Why aren't these instructions being shared directly with the teams?
-
-If it's a good idea that addresses a problem, why isn't it coming from the team?
+- Why is there a difference between what management wants and what teams are doing?
+- Why aren't these instructions being shared directly with the teams?
+- If it's a good idea that addresses a problem, why isn't it coming from the team?
 
 In the context of management making decisions about what teams should do, my first objection is always, "If the team is the one that is going to have to do this thing, why aren't they the ones coming up with the idea?"
 
@@ -105,14 +100,10 @@ The most fun and interesting work happens when I explore where requests come fro
 
 To illustrate what you can find from exploration, here are some examples in the context of an organization of what could be motivating management to give new directions you might come across:
 
-There's some goal they want to achieve.
-
-There's a local or personal pain they are trying to avoid.
-
-A problem happened once, and now the whole organization is over-correcting.
-
-Executives issued a new mandate that management now find themselves responsible for delivering.
-
-They heard about another company doing something and now they want to copy them.
+- There's some goal they want to achieve.
+- There's a local or personal pain they are trying to avoid.
+- A problem happened once, and now the whole organization is over-correcting.
+- Executives issued a new mandate that management now find themselves responsible for delivering.
+- They heard about another company doing something and now they want to copy them.
 
 In any business, countless causes can drive decisions about how teams work that have nothing to do with customers and everything to do with how people decide to run the organization.

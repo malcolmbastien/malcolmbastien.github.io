@@ -15,12 +15,11 @@ tags:
 ---
 And they will sell **well**.
 
- [![Ubuntu Inside](http://farm2.static.flickr.com/1370/819712100_bcdc5e3cef_m.jpg)](http://farm2.static.flickr.com/1370/819712100_bcdc5e3cef_m.jpg) Image by [Kordite](http://www.flickr.com/photos/25329410@N00/819712100) via Flickr 
-
  People all over the place are kidding themselves.  One of which include Brian Proffitt.  I tried to write a comment in response to his article talking about Linux's competitiveness on Netbooks given that Windows 7 can run on netbooks (thanks for turning off comments on your blog but leaving the comment form live by the way) but resorted to doing a full post instead.  With this news that Windows 7 will run on netbooks, people are concentrating on all the wrong ideas, and doing absolutely nothing helpful to aid in the real future of Linux on the netbook.
 
 One of Brian's points is this:
-"..**cost will be the big factor** in how well each OS  succeeds... the financial headlines and their own accounting books will quickly convince them that **the biggest profit margin** is the way to go."
+> "..**cost will be the big factor** in how well each OS  succeeds... the financial headlines and their own accounting books will quickly convince them that **the biggest profit margin** is the way to go."
+
 There's two big pain points I have with this quote.
 
 ## Why A Free OS Won't Sell - You Still Have To Pay

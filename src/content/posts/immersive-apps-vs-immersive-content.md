@@ -16,9 +16,10 @@ When you remove menus, headings, and push data off screen like we’ve seen in t
 
 The [Metro style design case study](http://openmode.ca/post/28850181731/uncovering-the-compromises-of-metro-style-apps) shows us how Metro creates immersive apps in a few ways:
 
-It hides menus on each side of the screen. Since each is activated by a gesture it also hides the means to open those menus.
-It hides date navigation within a pinch gesture. Going from a month view to a year view requires pinching-in.
-It shows only a single month on screen while hiding the other 11 off screen, forcing the user to scroll.
+- It hides menus on each side of the screen. Since each is activated by a gesture it also hides the means to open those menus.
+- It hides date navigation within a pinch gesture. Going from a month view to a year view requires pinching-in.
+- It shows only a single month on screen while hiding the other 11 off screen, forcing the user to scroll.
+
 Each technique to make Metro more immersive also makes it more difficult to use.
 
 ## Defining What’s Content

@@ -42,7 +42,8 @@ If you went to my profile page on Identi.ca you'd see that I use various # tags 
 I saw Evan Prodromou use this on Identi.ca and find it a very elegant evolution of re-tweeting.  The recycling symbol represents well the nature behind re-tweeting someone, and since the majority of the time re-tweeting is not done by hand but instead by using a function in your Twitter client, you don't actually enter the special character code (twitter it self could convert RT's to this symbol automatically though if it wanted.
 
 It would look really elegant if re-tweeting simply became:
-"♻AccordionGuy Jon Stewart takes apart Bill O'Reilly's double-standard on rights to privacy. Namely, if you're a liberal, you have none: http://is.gd/j6Vb"
+
+> ♻AccordionGuy Jon Stewart takes apart Bill O'Reilly's double-standard on rights to privacy. Namely, if you're a liberal, you have none: http://is.gd/j6Vb
 
 ### $ Events
 

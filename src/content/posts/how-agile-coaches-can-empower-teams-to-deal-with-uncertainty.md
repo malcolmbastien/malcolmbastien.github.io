@@ -11,11 +11,9 @@ When someone asks me to define Agile, I often say it's about moving forward even
 
 In large organizations, management might promote Agile but still want some assurances. They like to see things like:
 
-A fixed set of team practices, roles, and ceremonies that every team will follow
-
-Standardized Kanban board designs and processes
-
-Agile teams working within waterfall project structures
+- A fixed set of team practices, roles, and ceremonies that every team will follow
+- Standardized Kanban board designs and processes
+- Agile teams working within waterfall project structures
 
 Whether it's about what the team does or how, all these expectations share a common belief: that knowing the answers upfront is possible. And the first people to provide those answers are the experts on agile, the Agile Coaches.
 
@@ -35,67 +33,40 @@ A real team should be able to do their work and solve their problems without rel
 
 Coaches don't directly affect outcomes; they focus on the teams. Instead of telling teams what to do or making decisions for them, there are a few ways Agile Coaches help a team achieve its goals. Coaches do this by:
 
-Creating clarity and shared understanding around challenges
-
-Emphasizing the process of discovering answers through experimentation and feedback.
-
-Focusing on team dynamics
+- Creating clarity and shared understanding around challenges
+- Emphasizing the process of discovering answers through experimentation and feedback.
+- Focusing on team dynamics
 
 The coach's job isn't to do the team's work but to help them develop their ability to tackle challenges. Coaches pay attention to how things are working and identify opportunities to help the team grow and improve. They nudge the team closer to becoming the team they want to be. This also means that for coaching to work, teams need to accept coaching and be willing, engaged, and care about their work.
 
 So, what can Agile Coaches do to provide real, lasting value? Here are some key areas:
 
-**Educate:**
-
-Train team members, managers and leaders on Agile principles and practices.
-
-Share knowledge and experience to enhance the team's understanding of Agile.
-
-**Improve team facilitation, collaboration, and communication:**
-
-Help the team improve how they facilitate team meetings, retrospectives, and problem-solving sessions.
-
-Help the team collaborate with stakeholders to resolve organizational impediments.
-
-Help the team communicate progress and outcomes to stakeholders.
-
-**Install feedback loops:**
-
-Implement feedback loops for the team to reflect on their workflows and practices
-
-Implement feedback loops to identify and remove impediments and blockers.
-
-Implement feedback loops for the team to assess their progress towards their goals and identify areas for improvement.
-
-**Highlight and note:**
-
-Listen and ask questions to raise awareness on important issues.
-
-**Provide expert Agile guidance:**
-
-Advise on implementing Agile tools and practices.
-
-**Collaborate with the team:**
-
-Collaborate closely with the team on their work and with their improvement efforts
-
-Mentor individuals on their Agile journey.
-
-**Role model:**
-
-Embody Agile values and principles
-
-Foster a culture of transparency, trust, and continuous improvement.
-
-Encourage active participation, collaboration, and open communication
-
-Help to create a conducive environment for Agile to thrive
-
-Support continuous learning and professional development
-
-Find opportunities for the team to take ownership and make decisions
-
-Encourage the team to self-organize and collaborate effectively
+1. **Educate:**
+	- Train team members, managers and leaders on Agile principles and practices.
+	- Share knowledge and experience to enhance the team's understanding of Agile.
+2.  **Improve team facilitation, collaboration, and communication:**
+	- Help the team improve how they facilitate team meetings, retrospectives, and problem-solving sessions.
+	- Help the team collaborate with stakeholders to resolve organizational impediments.
+	- Help the team communicate progress and outcomes to stakeholders.
+3. **Install feedback loops:**
+	- Implement feedback loops for the team to reflect on their workflows and practices
+	- Implement feedback loops to identify and remove impediments and blockers.
+	- Implement feedback loops for the team to assess their progress towards their goals and identify areas for improvement.
+4. **Highlight and note:**
+	- Listen and ask questions to raise awareness on important issues.
+5. **Provide expert Agile guidance:**
+	- Advise on implementing Agile tools and practices.
+6. **Collaborate with the team:**
+	- Collaborate closely with the team on their work and with their improvement efforts
+	- Mentor individuals on their Agile journey.
+7. **Role model:**
+	- Embody Agile values and principles
+	- Foster a culture of transparency, trust, and continuous improvement.
+	- Encourage active participation, collaboration, and open communication
+	- Help to create a conducive environment for Agile to thrive
+	- Support continuous learning and professional development
+	- Find opportunities for the team to take ownership and make decisions
+	- Encourage the team to self-organize and collaborate effectively
 
 ![](../../assets/2024/08/coaching-activities.png)
 
@@ -107,23 +78,15 @@ Coaching is the activity of long-term team development. Coaches still care about
 
 Everything an Agile Coach does aims to improve the team's maturity via these levers, which include:
 
-Development processes and workflows
-
-Collaboration and communication
-
-Teamwork and trust
-
-Prioritization and focusing on high-value work
-
-Understanding and applying Agile principles
-
-Problem-solving and decision-making
-
-Self-organization and leadership
-
-Continuous improvement
-
-Experimentation, learning, and innovation
+- Development processes and workflows
+- Collaboration and communication
+- Teamwork and trust
+- Prioritization and focusing on high-value work
+- Understanding and applying Agile principles
+- Problem-solving and decision-making
+- Self-organization and leadership
+- Continuous improvement
+- Experimentation, learning, and innovation
 
 ![](../../assets/2024/08/team-maturity.png)
 
@@ -131,31 +94,19 @@ Experimentation, learning, and innovation
 
 When Agile Coaches perform their role effectively, teams improve, and when teams improve, we can expect two sets of outcomes: Team outcomes and business outcomes.
 
-**Team outcomes:**
-
-Streamlined processes, reduced waste and fewer bottlenecks
-
-Improved predictability
-
-Improved productivity and efficiency
-
-Enhanced problem-solving skills
-
-Increased employee engagement and satisfaction
-
-**Business outcomes:**
-
-Faster delivery of high-quality products
-
-Better alignment between team efforts and business goals
-
-Increased adaptability to changing requirements
-
-Improved customer satisfaction
-
-More transparency
-
-Reduced project risk
+- **Team outcomes:**
+	- Streamlined processes, reduced waste and fewer bottlenecks
+	- Improved predictability
+	- Improved productivity and efficiency
+	- Enhanced problem-solving skills
+	- Increased employee engagement and satisfaction
+- **Business outcomes:**
+	- Faster delivery of high-quality products
+	- Better alignment between team efforts and business goals
+	- Increased adaptability to changing requirements
+	- Improved customer satisfaction
+	- More transparency
+	- Reduced project risk
 
 ## Embrace Uncertainty
 
@@ -167,9 +118,8 @@ Solutions can only be discovered through action, which is core to how Agile team
 
 Agile coaches should stop thinking their expertise gives them the ability to tell organizations and teams how they should work. It's contrary to the very idea of Agile. Instead, they can make their biggest impact by creating a bridge between two opposing ideas:
 
-People want certainty
-
-We work in uncertain environments where things are constantly changing
+1. People want certainty
+2. We work in uncertain environments where things are constantly changing
 
 This can be achieved through team and organizational agility—the ability to respond to change, learn quickly, adjust rapidly, and constantly satisfy users' needs.
 

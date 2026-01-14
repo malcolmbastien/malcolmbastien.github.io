@@ -23,11 +23,11 @@ The idea of a home directory, with subdirectories for our different data types, 
 
 iCloud does away with the directory tree structure, or at least iCloud modifies it in a few ways:
 
-Apps each have their own isolated directories
-Folders can only exist at the top level
-Each directory is cloud synced
-File extensions no longer matter
-Let me talk about the first two points which are the most important to understand.
+- Apps each have their own isolated directories
+- Folders can only exist at the top level
+- Each directory is cloud synced
+- File extensions no longer matter
+- Let me talk about the first two points which are the most important to understand.
 
 ## Directories
 
@@ -49,10 +49,11 @@ If you use five different text editors, move documents between applications, or 
 
 iCloud improves the way regular users have had to do things:
 
-It’s easier to open applications than files on the file system. (ex. Launchpad & iOS)
-iCloud is already set-up on the Mac and iOS
-iCloud is ubiquitous across multiple macs and iOS devices
-iCloud is free
+- It’s easier to open applications than files on the file system. (ex. Launchpad & iOS)
+- iCloud is already set-up on the Mac and iOS
+- iCloud is ubiquitous across multiple macs and iOS devices
+- iCloud is free
+
 No matter if you’re an expert or a novice, iOS has quickly helped users adopt the mental model of launching an app then choosing your file. Like much of what Apple’s doing, the habits and mental models people have developed on iOS are being implemented on the Mac. iCloud will be a bumpy transition for some, but for most users it will give them a single mental model and a single language to use. Making things simpler is key to making them easier, and effortless.
 
 Just like purchasing and installing applications, the file system is the next element of classic computing to fade into the background.

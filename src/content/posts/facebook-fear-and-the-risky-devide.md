@@ -14,13 +14,11 @@ tags:
   - Social Network
   - Twitter
 ---
-[![Risk](http://farm1.static.flickr.com/141/333325967_a450c1d39b_m.jpg)](http://www.flickr.com/photos/73139089@N00/333325967)
-
 When you use Facebook to have fun and screw around with your friends, it's easy, and you need not worry too much about it.
 
 That's a very comfortable and confined little world.
 
-Breakdown the walls and then Facebook suddenly exposes you to so much more uncertainty.  Risk of embarrassment, employers looking through your information, people maliciously collecting your contact and identity information... Sure there are privacy options and practices to keep you safe, but at the same time there's a good reason why you hear so much about all these risks in the news.  How many times have you heard in the past year the recommendation to have zero expectation of prvacy?
+Breakdown the walls and then Facebook suddenly exposes you to so much more uncertainty.  Risk of embarrassment, employers looking through your information, people maliciously collecting your contact and identity information... Sure there are privacy options and practices to keep you safe, but at the same time there's a good reason why you hear so much about all these risks in the news.  How many times have you heard in the past year the recommendation to have zero expectation of privacy?
 
 Suddenly your private little abode on the Internet you share with your college friends puts you into a big world of unknowns. There are some people who see this wide open space and capitalize on it.  They develop a personal brand, and extend their messages' reach, they find opportunities for new business, etc...
 

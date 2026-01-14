@@ -56,7 +56,7 @@ Recently, the CEO of Lenovo said he wants his company to make products for all t
 
 > “…Our aspiration is to gain market share and to continue to outgrow the market,” Mr. Yang said, noting that his company will focus on creating devices for all segments of the tablet market, including low-priced devices. “We will be one of the strongest players in this arena,” Mr. Yang said. “We want to become the leader in this industry and I believe that is definitely achievable, that is our aspiration.”
 > 
-> – [Lenovo sets sights on Apple in tablet PC race](http://www.bgr.com/2011/08/22/lenovo-sets-sights-on-apple-in-tablet-pc-race/)
+> [Lenovo sets sights on Apple in tablet PC race](http://www.bgr.com/2011/08/22/lenovo-sets-sights-on-apple-in-tablet-pc-race/)
 
 There are no different segments for tablets. There’s one type of tablet people want. Ones that deliver exceptional and responsive media experiences. Cheaper tablets won’t work because they won’t be able to meet the requirements that are necessary to deliver that experience.
 
@@ -76,6 +76,6 @@ Steve Jobs said this was going to happen. Jobs said the day is coming when only 
 
 > "PCs are going to be like trucks,” Jobs said. “They are still going to be around.” However, he said, only “one out of x people will need them.”
 > 
-> – [Steve Jobs at D8: Post-PC era is nigh](http://news.cnet.com/8301-13860_3-20006526-56.html)
+> [Steve Jobs at D8: Post-PC era is nigh](http://news.cnet.com/8301-13860_3-20006526-56.html)
 
 Other companies will argue this, they’ll try to negotiate and make compromises between the two. Hopefully the points above have explained the reasons for the change, and why computing can never go back to being based on compromises.

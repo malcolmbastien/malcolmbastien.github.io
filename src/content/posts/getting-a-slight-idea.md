@@ -6,46 +6,33 @@ updatedDate: 2010-12-10
 tags:
   - General
 ---
-Last week [Josh](http://twitter.com/joshdavey/) showed me a clip from
-the documentary on advertising, Art & Copy. In one scene that I saw, a
-guy said something about how advertising can create something that
-its audience will get, in this case it was creating a particular
-brand of humour. People who get the joke and think it was funny start
-having a relationship with the brand. Not everyone will get the
-humour, but those who do share something in common with the brand, and
-with each other.
+Last week [Josh](http://twitter.com/joshdavey/) showed me a clip from the documentary on advertising, Art & Copy. In one scene that I saw, a guy said something about how advertising can create something that its audience will get, in this case it was creating a particular brand of humour. People who get the joke and think it was funny start having a relationship with the brand. Not everyone will get the humour, but those who do share something in common with the brand, and with each other.
 
-That made me think about what other sorts of stuff we as groups of
-people get. It doesn’t just have to be humour.
+That made me think about what other sorts of stuff we as groups of people get. It doesn’t just have to be humour.
 
-Three years ago only a few people got Twitter. Now that everyone gets
-it, everyone has have it. As a result of that, since everyone has it,
-I feel less of a connection to those who get it.
+Three years ago only a few people got Twitter. Now that everyone gets it, everyone has have it. As a result of that, since everyone has it, I feel less of a connection to those who get it.
 
 So I thought about that, and I also thought about some Field Notes
-notebooks I bought recently. They’re a product that a small but loyal
-number of people get. They have a couple of unique qualities, but most
-of them should lead the average consumer not to buy them.
+notebooks I bought recently. They’re a product that a small but loyal number of people get. They have a couple of unique qualities, but most of them should lead the average consumer not to buy them.
 
 When I compare them to the well known  Moleskin brand…
 
-They are smaller.
-They don’t have a bookmark.
-They don’t have a elastic band.
-They don’t have a back pocket.
-They don’t come as many varieties.
-They only come in one size.
-There are no perforated pages.
-They’re harder to find in stores.
-They’re more expensive than a Moleskine.
+- They are smaller.
+- They don’t have a bookmark.
+- They don’t have a elastic band.
+- They don’t have a back pocket.
+- They don’t come as many varieties.
+- They only come in one size.
+- There are no perforated pages.
+- They’re harder to find in stores.
+- They’re more expensive than a Moleskine.
 
-Three positive aspects about the product and the brand:
+Four positive aspects about the product and the brand:
 
-It’s made in the USA.
-They have a great social media presence and they release great media.
-There’s humour laced throughout the product.
-The brand is associated with jobs where people make things or do
-dirty, unappealing work
+- It’s made in the USA.
+- They have a great social media presence and they release great media.
+- There’s humour laced throughout the product.
+- The brand is associated with jobs where people make things or do dirty, unappealing work
 
 Even given these points, some people like this product more than
 Molekines. And I think it goes further than the products being
@@ -69,17 +56,14 @@ what should contribute to its undesirableness.
 
 Two definitions of slight that are in tune with what I’m going after:
 
-Not profound or substantial; somewhat trivial or superficial
-Not sturdy and strongly built
+1. Not profound or substantial; somewhat trivial or superficial
+2. Not sturdy and strongly built
 
 Maybe that slightness is what brings people together around the brand.
 
-Maybe instead of making a product that was better than the Moleskine,
-they instead made a product, as best as possible, to embody those
-values.
+Maybe instead of making a product that was better than the Moleskine, they instead made a product, as best as possible, to embody those values.
 
-What came out of that may not be a “better” product, but it’s one with
-a well sculpted place and meaning.
+What came out of that may not be a “better” product, but it’s one with a well sculpted place and meaning.
 
 In John Meada’s The Laws of Simplicity, he says that lightness and
 size are characteristics of simplicity.

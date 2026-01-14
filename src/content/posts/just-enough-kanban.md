@@ -9,9 +9,9 @@ tags:
 ---
 One of the most helpful things you can do when facing a problem is to visualize the situation. In software or service delivery, kanban is a handy method that lets teams visualize and better manage their business or workflows.
 
-If you don't know what else to do, make it visual. Find some way to make what's happening visual so you can see the flow.
-
-John Shook
+> If you don't know what else to do, make it visual. Find some way to make what's happening visual so you can see the flow.
+>
+> John Shook
 
 What I often see happen when teams or managers encounter challenges is they jump to implementing unnecessarily complicated kanban systems that describe ideal end-states rather than simpler systems focused on dealing with the challenges in front of them.
 
@@ -27,13 +27,10 @@ A kanban board with lots of columns might seem impressive and give the impressio
 
 Implementing overly complicated kanban systems or imposing pre-made boards on teams can create friction, slow teams down, or promote regressive management behaviours. Some types of friction teams can encounter include:
 
-Effort goes into implementing a system board, communicating how to use it, and the benefits it will achieve, but everything stays the same.
-
-Self-organization doesn't happen.
-
-Teams abandon the kanban systems.
-
-The systems become a tool for micro-management or command and control.
+- Effort goes into implementing a system board, communicating how to use it, and the benefits it will achieve, but everything stays the same.
+- Self-organization doesn't happen.
+- Teams abandon the kanban systems.
+- The systems become a tool for micro-management or command and control.
 
 ![](../../assets/2023/12/ineffective-kanban-systems.png)
 
@@ -59,15 +56,11 @@ When faced with a challenge, a team's first goal shouldn't be to solve for some 
 
 A better approach is to start by understanding where the team is and the current situation.
 
-How does the team's work happen?
-
-What's working well?
-
-What's not working?
-
-What challenges are they facing?
-
-What's important to them?
+- How does the team's work happen?
+- What's working well?
+- What's not working?
+- What challenges are they facing?
+- What's important to them?
 
 Based on the answers to those questions, the team will be in a better spot to determine what direction they should move in and what they need from their kanban system.
 
@@ -87,9 +80,9 @@ Kanban systems that act as reference guides or communicate more information than
 
 Kanban systems are powerful tools to visualize and manage work, but it's misguided to think the boards solve any problems on their own. Boards don't solve your problems for you. You need to decide what to do based on what you see.
 
-Kanban is great in helping you visualize the current situation, but it doesn't tell you what to do. You need to decide that!
-
-Mattias Skarin, Real-World Kanban
+> Kanban is great in helping you visualize the current situation, but it doesn't tell you what to do. You need to decide that!
+>
+> Mattias Skarin, Real-World Kanban
 
 Better kanban systems don't guarantee better outcomes. They are only as good as the people who use them and the actions they take. Kanban systems help you understand how work happens so you can identify and solve your real problems and take the appropriate actions. "Better" is a quality of people's decisions and actions, not a board's design.
 
@@ -99,8 +92,6 @@ Kanban systems help teams by supporting the conditions needed for their desired 
 
 For a better chance of finding success with kanban:
 
-Do just enough kanban and only build the first iteration of your kanban system. Don't start by building the final version.
-
-Do just enough kanban so that your system helps you take the next best step.
-
-Do just enough kanban so that your system provides you with the critical information you need. Don't worry about creating a perfectly accurate replica of your workflow.
+1. Do just enough kanban and only build the first iteration of your kanban system. Don't start by building the final version.
+2. Do just enough kanban so that your system helps you take the next best step.
+3. Do just enough kanban so that your system provides you with the critical information you need. Don't worry about creating a perfectly accurate replica of your workflow.

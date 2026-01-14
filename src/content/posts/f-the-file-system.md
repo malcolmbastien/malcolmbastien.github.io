@@ -38,7 +38,7 @@ Velocity to integrate with their Simplenote account. The reason people love Simp
 The fact that there’s only one application that works like this, to me, tells me that there’s a lot of opportunity for other applications
 to change.
 
-[Simplenote](http://simplenoteapp.com/)
-[Notational Velocity](http://notational.net/)
+- [Simplenote](http://simplenoteapp.com/)
+- [Notational Velocity](http://notational.net/)
 
 *(I’ve dealt with helping my mom track down photos she saved to her computer but couldn’t find a bunch of time. On Windows, I’ve had a hell of a time trying to track down my Downloads folder and figuring out how things I didn’t know I saved ended up there)*

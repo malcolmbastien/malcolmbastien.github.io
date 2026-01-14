@@ -37,21 +37,14 @@ This approach drives change through simple heuristics – practical rules of thu
 
 What this looks like is pausing before taking action, taking a moment, and first thinking:
 
-"Am I just doing the same thing?"
-
-"Could this be better?"
-
-"What could I try?"
-
-"Could we approach this task differently than we did yesterday?"
-
-"Can we make this any smoother?"
-
-"Could we try something completely new?"
-
-"What's the smallest thing we could try?"
-
-"What could we try stopping?"
+- "Am I just doing the same thing?"
+- "Could this be better?"
+- "What could I try?"
+- "Could we approach this task differently than we did yesterday?"
+- "Can we make this any smoother?"
+- "Could we try something completely new?"
+- "What's the smallest thing we could try?"
+- "What could we try stopping?"
 
 The goal is to continuously try something different in your local context and nudge things in a better direction.
 

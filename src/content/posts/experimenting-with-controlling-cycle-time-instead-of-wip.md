@@ -34,9 +34,9 @@ For example:
 
 The cycle time of a team's activities matters because having a system with a stable lead-time distribution is one of the most significant improvements a team can make. Planning, making commitments, meeting deadlines, and creating trust with customers are more straightforward when a team's delivery is under control.
 
-Understanding time in your process is key to improvement, customer fitness and better decisions in your business.
-
-Alexei Zheglov
+> Understanding time in your process is key to improvement, customer fitness and better decisions in your business.
+>
+> Alexei Zheglov
 
 Shorter and more consistent lead times mean teams can make smarter decisions on when to start new work, can respond to new requests more quickly, validate what they develop sooner, learn more and reduce their risk.
 
@@ -44,13 +44,14 @@ But system lead time, an aggregate measure of all a value stream's activities, c
 
 Value stream mapping, the process of mapping each of the steps of a workflow, is one practice teams can start doing to explore, understand and analyze how work flows through their system.
 
-The lack of understanding about how work flows—or, more commonly, doesn't flow—across a work system that's sole purpose is to deliver value to a customer is a fundamental problem that results in poor performance, poor business decisions, and poor work environments.
-
-Value Stream Mapping
+> The lack of understanding about how work flows—or, more commonly, doesn't flow—across a work system that's sole purpose is to deliver value to a customer is a fundamental problem that results in poor performance, poor business decisions, and poor work environments.
+>
+> Value Stream Mapping
 
 Another way to understand cycle times is to use something like Kanbanize's [Aging WIP Chart](https://knowledgebase.kanbanize.com/hc/en-us/articles/115001141531-The-Aging-WIP-Chart), which is one of the best tools to understand the typical cycle times of different stages of a workflow and how long the cards currently in that stage have been there. A tool like the Aging WIP Chart makes determining appropriate cycle time thresholds very straightforward.
 
-![](../../assets/2023/05/image_1685221172389_0.png)The Aging WIP Chart in [Kanbanize](https://kanbanize.com/)
+![](../../assets/2023/05/image_1685221172389_0.png)
+*The Aging WIP Chart in [Kanbanize](https://kanbanize.com/)*
 
 ## My Experience With Controlling Cycle Time
 
@@ -70,21 +71,23 @@ It also creates a new feedback loop when a work item exceeds the cycle-time thre
 
 To implement this approach, you need to do the following steps:
 
-**Define a cycle-time threshold**: For example, you can decide that any work item in a particular column for more than five days is a warning sign of a problem and that any work item in the same column for ten days deserves immediate attention.
+- **Define a cycle-time threshold:** For example, you can decide that any work item in a particular column for more than five days is a warning sign of a problem and that any work item in the same column for ten days deserves immediate attention.
 
-**Track your cycle time for each work item**: In Jira, you can use queries to automatically give issues different colours based on their cycle times or filters to highlight the work items exceeding your cycle time thresholds.
+- **Track your cycle time for each work item:** In Jira, you can use queries to automatically give issues different colours based on their cycle times or filters to highlight the work items exceeding your cycle time thresholds.
 
-**Investigate blocked work**: When cycle times exceed your thresholds, investigate and collect data to understand why those work items take longer. By understanding what kind of work gets stalled in your flow, where things get slowed down and why, you can take steps to prevent those delays from happening in the future.
+- **Investigate blocked work:** When cycle times exceed your thresholds, investigate and collect data to understand why those work items take longer. By understanding what kind of work gets stalled in your flow, where things get slowed down and why, you can take steps to prevent those delays from happening in the future.
 
 Capturing what work items are taking longer and why while delivery is still happening allows teams to make more real-time improvements while the details are fresh in everyone's minds.
 
-![](../../assets/2023/08/image-5.png)Jira's Quick Filters can be used to quickly focus on cards that have been idle.
+![](../../assets/2023/08/image-5.png)
+*Jira's Quick Filters can be used to quickly focus on cards that have been idle.*
 
-![](../../assets/2023/08/image-4.png)Jira's Card colours filters let you apply colours to cards that match your query.
+![](../../assets/2023/08/image-4.png)
+*Jira's Card colours filters let you apply colours to cards that match your query.*
 
 The query to capture work items that have been stuck in the same column for over 10 days that I use is:
 
-not status changed AFTER -10d and created 
+`not status changed AFTER -10d and created` 
 
 ## Conclusion
 

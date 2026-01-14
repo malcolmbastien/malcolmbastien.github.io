@@ -22,11 +22,11 @@ Consumers will have seen WP7 before, and consumers will have seen tablets before
 
 If it's not hardware and it's not software, then there are only a few things that remain.
 
-Apps
+## Apps
 
 Apps aren't innovative, but brining out the big guns of applications like Microsoft Office to the tablet could be. If it promises tablet productivity that goes beyond the scope of Pages, Numbers, or Keynote for the iPad, then some audiences will see this as an innovation. From a business point of view there's a lot more to Office than Word, Excel, and PowerPoint that people would like to use on a tablet.
 
-Ecosystem
+## Ecosystem
 
 I think the real opportunity will be the Ecosystem. With all the services and platforms under Microsoft, there's a good way for a tablet to extend each of those services in a unique and integrated way beyond the scope of what Apple is capable of. But like all tablet reviewers have been saying, it will require more innovation than putting Windows 7 on a tablet.
 
@@ -34,10 +34,10 @@ This would also be positive for Microsoft products and services as a whole. Less
 
 The competitive landscape in this possible future will require any company with desktop, smartphone, and tablet devices to work beautifully together.
 
-Assumptions
+## Assumptions
 
 The three big assumptions in this story are that:
 
-Innovation really **is **what's rewarded.
-Microsoft would want to use the Windows Phone 7 UI as the core concept for a new tablet interface.
-Any company needs consistency across it's different devices as to not overwhelm consumers with a new learning curve for each new product they buy. For example, next summer users who buy either OS X Lion, or an iOS device (iPod, iPhone, iPad) will to an extent only have one interface to learn, thereby reducing buying friction.
+1. Innovation really is what's rewarded.
+2. Microsoft would want to use the Windows Phone 7 UI as the core concept for a new tablet interface.
+3. Any company needs consistency across it's different devices as to not overwhelm consumers with a new learning curve for each new product they buy. For example, next summer users who buy either OS X Lion, or an iOS device (iPod, iPhone, iPad) will to an extent only have one interface to learn, thereby reducing buying friction.

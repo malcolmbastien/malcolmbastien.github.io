@@ -26,6 +26,7 @@ Meanwhile, start-up after start-up have each expanded what how and what people c
 Tumblr and Twitter are the two most recent platforms attaining a global reach, but in terms of “writing,” blogging is still the most recent invention.
 
 The most popular tech sites (what I’m most familiar with) have used blogging and and hyper-accelerated the traditional publishing model. They post more than a dozen stories a day, and they pride themselves on publishing stories as fast as possible after news happens.
+
 ## Medium, Branch, Svbtle & The Mavenist
 
 When I see [Medium](https://medium.com) or [Branch](http://www.branch.com) (I remember Branch when it was launched as Roundtable last year) I see two different platforms working to pushing people’s ideas about what writing can be online.
@@ -37,15 +38,16 @@ These ideas are about more than how to connect users to advertisers. I don’t t
 Look at how blogging has changed the world in the past 14 years, and imagine what the world would look like after four more blogging revolutions.
 
 It’s about time for change to happen.
+
 ## The Common Attributes These Platforms Share
 
 These platforms share some common attributes:
 
-	They value design
-	They are exclusive
-	They don’t have comments
-	The focus is always on the writing
-	They are all start-ups
+- They value design
+- They are exclusive
+- They don’t have comments
+- The focus is always on the writing
+- They are all start-ups
 
 ### Design Focused
 
@@ -56,6 +58,7 @@ Branch and The Mavenist are dialogues and focus on the exchange of ideas.
 Medium collects people stories in certain topics and lets them add photos to best deliver an emotional message.
 
 Svbtle is a blogging network for individuals that through colour and symbols communicates identity.
+
 ### Exclusive Memberships
 
 These platforms are all invite only, presumably the owners want to control the quality of the writing above all else. The fact that none of them support comments furthers the idea of control and quality.
@@ -63,6 +66,7 @@ These platforms are all invite only, presumably the owners want to control the q
 These four platforms have made a distinction between themselves and traditional platforms who have pursued a model of large user bases, high readership, high engagement, frequent publishing, and advertising based revenues.
 
 This idea of [The Masses vs. Great Design](http://sethgodin.typepad.com/seths_blog/2012/08/a-tacky-mess-the-masses-vs-great-design.html) comes up again with these publishing platforms. This isn’t like App.net where you are paying for a service *(People who think that paying for something is elitist are stupid)*. Developers use control to create the best experiences.
+
 ### Platforms for Good Writing
 
 It’s refreshing to see platforms based on ideals, not on revenues. That may change in the future, but just like Digg and Twitter, they started with a vision, not a pitch to advertisers.
@@ -70,11 +74,13 @@ It’s refreshing to see platforms based on ideals, not on revenues. That may ch
 Their writing isn’t content to be consumed or a tool to drive users to ads. The writing is art, valuable in and of it self.
 
 Good writing is hard, so crafting large experiences around it takes a lot of effort. Good writing can happen anywhere, but because it takes so much effort on the web it’s taken a back seat to reblogging, sharing of other people’s work, and shallow engagement.
+
 ### Made by Start-ups
 
 These four platforms were built by start-ups, and like all start-ups they are experimenting and seeing what works.
 
 These platforms don’t have any business models yet, but their focus on user experience like [I’ve mentioned before](http://openmode.ca/post/28907676575/splitting-the-social-network-for-the-best-user), makes it seem unlikely that they’ll follow the advertising funded model of traditional publications.
+
 ## Criticisms
 
 Because of the people behind it, Medium is the one platform out of the four that’s attracting the most attention. So far only a few of the developers’ friends have been invited, yet people are already criticizing it.

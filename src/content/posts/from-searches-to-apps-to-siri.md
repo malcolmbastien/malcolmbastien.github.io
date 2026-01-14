@@ -25,12 +25,14 @@ Require crafting a proper query.
 Require reading through multiple results of varying quality
 Require filtering out spam and ads.
 Requires you to navigate through desktop web layouts designed for accomplishing broad sets of tasks.
+
 ## Apps
 
 Require finding and downloading the right app.
 Require having that app on your phone all the time and having to update it.
 You have to find the app on your phone every time you want to use it (can be difficult with many apps installed).
 Gives you a well designed interface for your device and the task you want to accomplish.
+
 ## Siri
 
 You get the specific result you requested.

@@ -2,7 +2,6 @@
 status: "seed"
 title: Learning Agile with ChatGPT
 publishedDate: 2022-12-03
-updatedDate: 2024-01-13
 tags:
   - Agile
   - AI

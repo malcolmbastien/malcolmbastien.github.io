@@ -18,7 +18,7 @@ We’re seeing the selling strategy moving to selling mobile first and PCs secon
 
 Take selling a Mac for example. Mountain Lion is different than the OS X from just a few years ago, and its very different from the Windows of today. Getting someone up to date on how data works across devices is a mouthful:
 
-  You want to buy a Mac? Then you’ll also want to use an iPhone, an iPad, and maybe even get an Apple TV too so you can consume your media on your television. Your purchases will be synced across your devices, and any apps you buy can be downloaded on all of your computers. You’ll be using iCloud to store your documents and you’ll no longer use the regular file system. With iCloud all of your documents will auto save, and update across your devices and computers in real-time.
+> You want to buy a Mac? Then you’ll also want to use an iPhone, an iPad, and maybe even get an Apple TV too so you can consume your media on your television. Your purchases will be synced across your devices, and any apps you buy can be downloaded on all of your computers. You’ll be using iCloud to store your documents and you’ll no longer use the regular file system. With iCloud all of your documents will auto save, and update across your devices and computers in real-time.
 
 That’s a lot to consider. Thankfully it’s rare anybody will have to to have it explained to them because we have the reference points of iOS with the iPhone and the iPad.
 

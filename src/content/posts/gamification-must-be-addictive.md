@@ -9,10 +9,9 @@ tags:
   - ui design
 ---
 [ignore the code: Learning from Games](http://ignorethecode.net/blog/2011/12/26/learning_from_games/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+IgnoreTheCode+%28ignore+the+code%29&utm_content=Google+Reader):
-
-There are many problems with “gamification” but I don’t think this is one of them. Essentially, all UI design is about manipulating users, whether you’re coming up with the most easily understood button labels that will get people to click on the correct button, the most readable typeface that will get people to read your essay, or design ideas taken from video games.  The goal of UI design is to get people to use our products successfully. 
-
-That’s “manipulating people”.
+> There are many problems with “gamification” but I don’t think this is one of them. Essentially, all UI design is about manipulating users, whether you’re coming up with the most easily understood button labels that will get people to click on the correct button, the most readable typeface that will get people to read your essay, or design ideas taken from video games.
+> 
+> The goal of UI design is to get people to use our products successfully. That’s “manipulating people”.
 
 My issue with gamification doesn’t come from the idea, but how the term was adopted by people who had a simplistic understanding of it and employed it only as a set of tactics to manipulate their users into becoming addicted to non-rewarding, and time wasting activities like games and social networks.
 

@@ -32,14 +32,15 @@ What I do now is use Evernote to store articles I’ve already read, and that I 
 
 Here are the libraries I currently have set up:
 
-Analytics
-China
-Design
-GTD
-Programming
-Social Media
-Strategy
-Writing
+- Analytics
+- China
+- Design
+- GTD
+- Programming
+- Social Media
+- Strategy
+- Writing
+
 If I want to track sub-topics across articles I’ll use tags. I’ve created tags to track topics like “wire framing” for some Design notes, “contexts” for some GTD notes, “objective-c” for some Programming notes.
 
 (The missing piece I haven’t figured out is how best to mimic highlighting passages from those notes.)
@@ -56,12 +57,13 @@ There’s not much to say except that if I have something lying around that I co
 
 Here’s a brief list of things I’ve started to capture:
 
-Receipts
-Workout records
-Products packaging
-Restaurant menus
-Business cards
-Notebook notes
+- Receipts
+- Workout records
+- Products packaging
+- Restaurant menus
+- Business cards
+- Notebook notes
+
 One of my on going projects is to learn Mandarin. I use Evernote to store photos of any restaurant signs, street signs, and product labels I find. I translate the characters and save that information in Evernote for later if I ever want to reference a particular restaurant or product.
 
 ## Creating a Paleo Recipe Book
