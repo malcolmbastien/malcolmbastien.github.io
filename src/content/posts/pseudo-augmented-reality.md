@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Pseudo Augmented Reality
 publishedDate: 2009-09-18
 updatedDate: 2011-02-08

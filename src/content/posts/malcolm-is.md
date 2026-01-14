@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Malcolm is...
 publishedDate: 2009-09-06
 updatedDate: 2011-02-08

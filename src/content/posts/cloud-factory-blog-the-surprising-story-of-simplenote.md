@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Cloud Factory - Blog  - The Surprising Story of Simplenote
 publishedDate: 2009-11-23
 updatedDate: 2009-11-23

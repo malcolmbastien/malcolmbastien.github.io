@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Your Ideas And Blogging the Crap Out of Them
 publishedDate: 2010-08-27
 updatedDate: 2010-08-27

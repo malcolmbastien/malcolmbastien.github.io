@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Just Do Something Different
 publishedDate: 2025-06-08
 updatedDate: 2025-06-08

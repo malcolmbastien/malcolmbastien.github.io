@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Being Obsessive Is Part of The Fun
 publishedDate: 2009-10-16
 updatedDate: 2009-10-16

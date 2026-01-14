@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The Better Tech Conference Survey
 publishedDate: 2010-06-09
 updatedDate: 2010-06-09

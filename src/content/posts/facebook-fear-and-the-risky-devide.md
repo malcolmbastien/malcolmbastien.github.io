@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Facebook, Fear, and The Risky Devide
 publishedDate: 2009-02-24
 updatedDate: 2009-02-24

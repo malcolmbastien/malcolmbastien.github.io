@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: "Blogging: The Long Term Relationship"
 publishedDate: 2009-02-12
 updatedDate: 2009-02-12

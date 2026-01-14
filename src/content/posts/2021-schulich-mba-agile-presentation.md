@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: 2021 Schulich MBA Agile Presentation
 publishedDate: 2023-05-10
 updatedDate: 2023-05-09

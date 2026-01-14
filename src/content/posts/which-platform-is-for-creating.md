@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Which Platform Is For Creating?
 publishedDate: 2011-08-31
 updatedDate: 2011-12-28

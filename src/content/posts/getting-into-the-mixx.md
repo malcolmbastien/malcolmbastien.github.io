@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Getting Into The Mixx
 publishedDate: 2008-09-30
 updatedDate: 2024-01-08

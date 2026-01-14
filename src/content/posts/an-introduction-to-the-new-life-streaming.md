@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: An Introduction To The New Life-Streaming
 publishedDate: 2009-09-13
 updatedDate: 2011-02-08

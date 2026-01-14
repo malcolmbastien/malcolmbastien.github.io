@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Drumbeat The Open Web Lens
 publishedDate: 2010-04-21
 updatedDate: 2010-04-21

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Maximize Productivity by Minimizing Context Switching
 publishedDate: 2025-08-30
 updatedDate: 2025-08-30

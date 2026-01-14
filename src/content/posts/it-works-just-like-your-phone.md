@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: It Works Just Like Your Phone
 publishedDate: 2012-08-09
 updatedDate: 2013-05-26

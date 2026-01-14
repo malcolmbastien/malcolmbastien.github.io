@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Each Platform Has its Own Story
 publishedDate: 2012-10-09
 updatedDate: 2023-05-29

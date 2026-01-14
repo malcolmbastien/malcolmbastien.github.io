@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Email Declining
 publishedDate: 2012-01-05
 updatedDate: 2012-01-05

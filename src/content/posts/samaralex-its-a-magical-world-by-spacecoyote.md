@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: It's a Magical World
 publishedDate: 2012-01-19
 updatedDate: 2013-05-26

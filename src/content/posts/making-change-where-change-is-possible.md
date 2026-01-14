@@ -1,5 +1,5 @@
 ---
-status: "evergreen"
+status: evergreen
 title: Making Change Where Change is Possible
 publishedDate: 2023-05-05
 tags:

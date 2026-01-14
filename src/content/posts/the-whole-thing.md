@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The Whole Thing  
 publishedDate: 2010-10-20
 updatedDate: 2010-10-20

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Ryerson's Digital Media Zone
 publishedDate: 2009-12-10
 updatedDate: 2011-02-08

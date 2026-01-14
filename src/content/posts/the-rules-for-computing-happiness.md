@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The rules for computing happiness
 publishedDate: 2009-10-28
 updatedDate: 2009-10-28

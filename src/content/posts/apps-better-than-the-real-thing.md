@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Apps Better Than The Real Thing
 publishedDate: 2010-12-08
 updatedDate: 2010-12-08

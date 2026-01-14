@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Optimal Connections
 publishedDate: 2010-08-26
 updatedDate: 2011-02-08

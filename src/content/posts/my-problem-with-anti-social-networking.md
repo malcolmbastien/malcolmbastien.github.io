@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: My Problem With Anti-Social Networking
 publishedDate: 2011-08-24
 updatedDate: 2011-08-24

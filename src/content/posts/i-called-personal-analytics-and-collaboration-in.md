@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Future Stories
 publishedDate: 2012-09-25
 updatedDate: 2023-05-29

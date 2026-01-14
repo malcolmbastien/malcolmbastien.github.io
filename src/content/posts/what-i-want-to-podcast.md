@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: What I Want To Podcast
 publishedDate: 2009-05-15
 updatedDate: 2011-02-08

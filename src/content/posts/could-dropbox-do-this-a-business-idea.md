@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Could Dropbox Do This? A Business Idea
 publishedDate: 2009-10-16
 updatedDate: 2009-10-16

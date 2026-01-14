@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Why BNET.com Is A Really Good Site
 publishedDate: 2007-10-14
 updatedDate: 2007-10-14

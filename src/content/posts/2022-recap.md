@@ -1,5 +1,5 @@
 ---
-status: "evergreen"
+status: evergreen
 title: 2022 Recap
 publishedDate: 2023-01-03
 updatedDate: 2024-01-07

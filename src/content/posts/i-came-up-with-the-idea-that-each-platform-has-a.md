@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The Purpose of Each Platform
 publishedDate: 2012-10-09
 updatedDate: 2023-05-29

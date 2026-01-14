@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Curating
 publishedDate: 2009-06-30
 updatedDate: 2011-02-08

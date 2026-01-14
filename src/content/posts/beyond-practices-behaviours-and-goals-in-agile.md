@@ -1,5 +1,5 @@
 ---
-status: "evergreen"
+status: evergreen
 title: "Beyond Practices: Behaviours and Goals in Agile"
 publishedDate: 2024-09-30
 tags:

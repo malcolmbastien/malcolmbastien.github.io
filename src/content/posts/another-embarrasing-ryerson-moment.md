@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Another Embarrasing Ryerson Moment
 publishedDate: 2009-03-24
 updatedDate: 2011-02-08

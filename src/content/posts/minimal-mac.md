@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Minimal Mac
 publishedDate: 2009-10-20
 updatedDate: 2009-10-20

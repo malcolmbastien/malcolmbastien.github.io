@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Immersive Apps vs Immersive Content
 publishedDate: 2012-08-10
 updatedDate: 2013-05-26

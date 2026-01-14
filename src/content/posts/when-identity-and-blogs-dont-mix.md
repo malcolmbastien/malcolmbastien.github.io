@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: When Identity and Blogs Don't Mix
 publishedDate: 2010-08-20
 updatedDate: 2011-02-08

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Chrome + CrunchBang Linux
 publishedDate: 2009-08-10
 updatedDate: 2009-08-10

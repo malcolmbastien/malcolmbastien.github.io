@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Empowering Teams Instead of Telling Them What to Do
 publishedDate: 2023-05-01
 updatedDate: 2023-05-09

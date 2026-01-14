@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Rethinking Retrospectives
 publishedDate: 2023-06-02
 updatedDate: 2023-06-03

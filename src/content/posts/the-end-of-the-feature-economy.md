@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The End of the Feature Economy
 publishedDate: 2011-02-15
 updatedDate: 2024-01-07

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Achieving Agility Through Strong Mechanics
 publishedDate: 2024-09-23
 updatedDate: 2024-09-07

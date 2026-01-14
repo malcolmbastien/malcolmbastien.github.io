@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Tekkonkinkreet City
 publishedDate: 2013-03-11
 updatedDate: 2024-01-13

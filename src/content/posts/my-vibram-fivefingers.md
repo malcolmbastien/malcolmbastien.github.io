@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: My Vibram FiveFingers
 publishedDate: 2009-07-25
 updatedDate: 2011-02-08

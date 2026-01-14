@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Revisiting the Guidance on Cross-functional Teams
 publishedDate: 2023-05-16
 updatedDate: 2023-07-24

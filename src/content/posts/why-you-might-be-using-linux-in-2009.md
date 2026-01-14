@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Why You Might Be Using Linux in 2009
 publishedDate: 2008-12-22
 updatedDate: 2011-02-08

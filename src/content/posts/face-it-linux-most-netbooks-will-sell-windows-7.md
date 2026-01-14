@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Face it Linux, Most Netbooks Will Sell Windows 7
 publishedDate: 2009-02-09
 updatedDate: 2009-02-09

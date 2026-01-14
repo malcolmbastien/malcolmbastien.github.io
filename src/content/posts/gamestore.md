@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: GameStore
 publishedDate: 2012-01-03
 updatedDate: 2012-01-03

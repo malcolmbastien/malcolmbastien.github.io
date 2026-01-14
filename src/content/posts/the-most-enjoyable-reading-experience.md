@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The Most Enjoyable Reading Experience
 publishedDate: 2012-04-21
 updatedDate: 2013-05-26

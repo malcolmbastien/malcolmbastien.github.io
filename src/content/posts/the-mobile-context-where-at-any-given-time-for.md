@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Success for the Mobile Context
 publishedDate: 2012-10-12
 updatedDate: 2023-05-29

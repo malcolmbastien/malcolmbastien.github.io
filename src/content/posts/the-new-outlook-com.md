@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The New Outlook.com
 publishedDate: 2012-08-08
 updatedDate: 2013-05-26

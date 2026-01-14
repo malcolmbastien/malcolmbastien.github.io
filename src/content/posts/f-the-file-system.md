@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: F the File System
 publishedDate: 2010-12-20
 updatedDate: 2011-02-08

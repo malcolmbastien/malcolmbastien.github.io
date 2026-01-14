@@ -1,5 +1,5 @@
 ---
-status: "evergreen"
+status: evergreen
 title: Why Work Waits
 publishedDate: 2023-05-29
 tags:

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: In PostRank We Trust
 publishedDate: 2008-09-17
 updatedDate: 2011-02-08

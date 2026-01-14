@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Uniqlo Calendar
 publishedDate: 2010-02-03
 updatedDate: 2010-02-03

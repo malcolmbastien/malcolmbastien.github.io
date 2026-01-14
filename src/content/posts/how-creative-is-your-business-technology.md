@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: How Creative Is Your Business Technology?
 publishedDate: 2009-02-23
 updatedDate: 2009-02-23

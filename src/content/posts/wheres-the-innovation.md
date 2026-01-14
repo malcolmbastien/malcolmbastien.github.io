@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Where's The Innovation?
 publishedDate: 2011-08-22
 updatedDate: 2011-08-22

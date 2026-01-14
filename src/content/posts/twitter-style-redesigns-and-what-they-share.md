@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Twitter Style Redesigns And What They Share
 publishedDate: 2009-04-18
 updatedDate: 2011-02-08

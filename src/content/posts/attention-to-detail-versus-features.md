@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Attention to Detail Versus Features
 publishedDate: 2010-08-27
 updatedDate: 2010-08-27

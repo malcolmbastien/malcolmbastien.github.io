@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Creating Communities Through Experience Blogs
 publishedDate: 2009-05-25
 updatedDate: 2011-02-08

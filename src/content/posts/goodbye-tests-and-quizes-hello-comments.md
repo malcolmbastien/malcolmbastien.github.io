@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: GoodBye Tests And Quizes, Hello Comments
 publishedDate: 2009-02-13
 updatedDate: 2009-02-13

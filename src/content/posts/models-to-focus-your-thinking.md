@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Models to Focus Your Thinking
 publishedDate: 2010-09-13
 updatedDate: 2010-09-13

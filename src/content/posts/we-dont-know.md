@@ -1,5 +1,5 @@
 ---
-status: "evergreen"
+status: evergreen
 title: We Don't Know
 publishedDate: 2025-05-25
 updatedDate: 2025-06-08

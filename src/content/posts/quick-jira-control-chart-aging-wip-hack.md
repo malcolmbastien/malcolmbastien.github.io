@@ -1,5 +1,5 @@
 ---
-status: "evergreen"
+status: evergreen
 title: Quick Jira Control Chart Aging WIP Hack
 publishedDate: 2022-09-13
 tags:

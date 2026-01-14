@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Don&#039;t Take This Personally, I&#039;m Blocking You On Twitter
 publishedDate: 2008-04-30
 updatedDate: 2008-04-29

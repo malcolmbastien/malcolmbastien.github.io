@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The Invisible Bridge
 publishedDate: 2009-07-17
 updatedDate: 2011-02-08

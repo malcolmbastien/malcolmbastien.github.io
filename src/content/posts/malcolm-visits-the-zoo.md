@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Malcolm Visits the Zoo
 publishedDate: 2010-03-24
 updatedDate: 2011-02-08

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: JustNotes
 publishedDate: 2009-10-24
 updatedDate: 2009-10-24

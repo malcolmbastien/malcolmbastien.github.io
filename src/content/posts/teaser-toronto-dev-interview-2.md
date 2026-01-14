@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Teaser - Toronto Dev Interview 2
 publishedDate: 2009-07-16
 updatedDate: 2009-07-16

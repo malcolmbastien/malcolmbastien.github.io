@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Examining \"Share of Conversation\"
 publishedDate: 2009-06-15
 updatedDate: 2011-02-08

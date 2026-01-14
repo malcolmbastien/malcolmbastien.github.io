@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Best to Wait on Ebooks
 publishedDate: 2010-06-14
 updatedDate: 2010-06-14

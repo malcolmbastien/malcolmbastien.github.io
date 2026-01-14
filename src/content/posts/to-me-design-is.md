@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: To me, design is...
 publishedDate: 2010-12-22
 updatedDate: 2010-12-22

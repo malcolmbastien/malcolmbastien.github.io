@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Stories = Understanding the World
 publishedDate: 2012-09-28
 updatedDate: 2023-05-29

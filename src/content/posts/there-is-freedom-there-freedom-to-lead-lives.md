@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: There is Freedom There...
 publishedDate: 2012-05-26
 updatedDate: 2013-05-26

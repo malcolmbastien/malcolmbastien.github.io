@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The Social Story of a Brand
 publishedDate: 2012-10-11
 updatedDate: 2023-05-29

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: How Evernote Made Remembering Everything, Simple
 publishedDate: 2010-12-13
 updatedDate: 2010-12-13

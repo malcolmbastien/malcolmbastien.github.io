@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Ruthlessly Reveal
 publishedDate: 2010-09-10
 updatedDate: 2010-09-10

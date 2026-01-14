@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Avoiding The Pitfalls of Cross-Functional Super Teams
 publishedDate: 2023-07-25
 updatedDate: 2024-02-13

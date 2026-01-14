@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: My First Contribution to TechVibes.com
 publishedDate: 2009-12-03
 updatedDate: 2009-12-03

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: None
 publishedDate: 2011-05-17
 updatedDate: 2013-05-21

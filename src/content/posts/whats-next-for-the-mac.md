@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: What's Next For The Mac?
 publishedDate: 2012-08-13
 updatedDate: 2013-05-26

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The End of the PC Manufacturers
 publishedDate: 2012-08-07
 updatedDate: 2012-08-07

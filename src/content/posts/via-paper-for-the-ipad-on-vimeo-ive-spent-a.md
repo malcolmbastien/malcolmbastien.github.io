@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Paper by FiftyThree
 publishedDate: 2012-03-29
 updatedDate: 2013-05-26

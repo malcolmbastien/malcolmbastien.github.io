@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The Micro-Blogging Enabled Company
 publishedDate: 2008-09-02
 updatedDate: 2024-01-08

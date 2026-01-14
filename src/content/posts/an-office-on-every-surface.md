@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: An Office on Every Surface
 publishedDate: 2011-09-01
 updatedDate: 2011-12-28

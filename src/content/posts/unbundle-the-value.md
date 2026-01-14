@@ -1,5 +1,5 @@
 ---
-status: "evergreen"
+status: evergreen
 title: Unbundle the Value
 publishedDate: 2025-08-05
 tags:

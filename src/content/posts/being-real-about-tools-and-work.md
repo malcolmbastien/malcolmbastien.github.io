@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Being Real About Tools and Work
 publishedDate: 2011-01-25
 updatedDate: 2011-02-08

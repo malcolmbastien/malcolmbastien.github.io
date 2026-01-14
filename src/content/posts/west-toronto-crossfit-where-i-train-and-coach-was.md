@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: West Toronto CrossFit Featured on BlogTO
 publishedDate: 2013-04-11
 tags:

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: From Big Bang Projects to Iterative and Incremental Development
 publishedDate: 2025-08-02
 updatedDate: 2025-08-02

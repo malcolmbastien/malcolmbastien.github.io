@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: After The Digital Handshake, What Comes Next?
 publishedDate: 2009-04-13
 updatedDate: 2011-02-08

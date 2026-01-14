@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Navigating the AI Shift With the Wardley Doctrine
 publishedDate: 2025-10-08
 tags:

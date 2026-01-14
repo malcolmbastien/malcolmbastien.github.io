@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Phones That Feel Like Magic
 publishedDate: 2010-11-16
 updatedDate: 2010-11-16

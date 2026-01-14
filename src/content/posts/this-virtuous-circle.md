@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: "This Virtuous Circle"
 publishedDate: 2010-10-27
 updatedDate: 2011-02-08

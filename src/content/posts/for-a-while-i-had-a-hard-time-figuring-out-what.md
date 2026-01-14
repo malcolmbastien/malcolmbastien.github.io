@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The Reason for Innovation
 publishedDate: 2012-10-04
 updatedDate: 2023-05-29

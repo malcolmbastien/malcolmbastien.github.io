@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The User Interfaces of CrossFit and Paleo
 publishedDate: 2012-07-12
 updatedDate: 2013-05-26

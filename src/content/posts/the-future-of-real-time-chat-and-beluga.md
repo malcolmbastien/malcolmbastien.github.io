@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: The Future of Real-time Chat and Beluga
 publishedDate: 2011-02-11
 updatedDate: 2011-02-13

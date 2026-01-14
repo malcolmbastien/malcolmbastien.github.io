@@ -1,13 +1,13 @@
 ---
-status: "evergreen"
+status: evergreen
 title: Better Planning with Two-Sided Dependencies
 summary: Learn how to improve planning and reduce delays by managing dependencies effectively.
 publishedDate: 2025-10-14
 tags:
   - Agile
   - Dependencies
-  - plannning
-  - tools
+  - Planning
+  - Tools
 ---
 Every year, teams invest massive effort in annual plans that typically fail for one key reason: dependencies. Detailed timelines, careful estimates, and beautiful roadmaps all unravel once work begins and unforeseen issues with dependencies arise.
 
@@ -65,7 +65,7 @@ When planning makes dependencies between teams clear, new interactions become po
 - **Team Load vs. Capacity:** Instantly compare a team's capacity against their planned work plus all incoming dependency requests. Seeing which teams are overloaded helps in identifying hotspots and bottlenecks before they derail the plan.
 - **Risk Matrix:** A visual risk matrix plots work by effort and confidence, flagging the riskiest parts of the plan and enabling proactive conversations.
 - **Plan Completeness:** Identify gaps in the plan by measuring features and dependencies without estimates, and whether low-confidence items have documented risks.
-- **Dependency Hotspots: **Ranked lists show teams with the most outgoing and incoming dependencies. Teams with high outgoing dependencies face delivery risk; teams with high incoming dependencies face capacity overload.
+- **Dependency Hotspots:** Ranked lists show teams with the most outgoing and incoming dependencies. Teams with high outgoing dependencies face delivery risk; teams with high incoming dependencies face capacity overload.
 
 This approach captures simple but typically missed data that can make quarterly or annual planning events easier and more useful for teams.
 
@@ -78,7 +78,7 @@ This approach captures simple but typically missed data that can make quarterly 
 ![](../../assets/2025/10/image-12.png)
 *Report view showing planned scope and dependencies across teams, highlighting workload and incoming demand.*
 
-### Conclusion
+## Conclusion
 
 Too often, focus is misplaced on planning theater: crafting detailed artifacts, producing polished roadmaps, and holding lengthy meetings to discuss priorities. These activities provide an *illusion* of certainty while missing the real sources of delay.
 

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Recommended Wordpress Plugins For New Bloggers
 publishedDate: 2009-02-02
 updatedDate: 2009-02-01

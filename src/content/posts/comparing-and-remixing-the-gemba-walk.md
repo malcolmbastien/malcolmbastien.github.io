@@ -1,5 +1,5 @@
 ---
-status: "evergreen"
+status: evergreen
 title: Comparing and Remixing the Gemba Walk
 publishedDate: 2022-09-18
 tags:

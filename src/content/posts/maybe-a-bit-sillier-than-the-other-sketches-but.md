@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Stories and Understanding
 publishedDate: 2012-10-02
 updatedDate: 2023-05-29

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Just Enough Kanban
 publishedDate: 2023-12-21
 updatedDate: 2024-09-06

@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: 3x3 Lessons From My Summer Reading Part 1
 publishedDate: 2008-09-14
 updatedDate: 2024-01-08

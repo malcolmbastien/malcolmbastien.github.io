@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: A Network of People, Devices, and Things
 publishedDate: 2012-09-26
 updatedDate: 2023-05-29

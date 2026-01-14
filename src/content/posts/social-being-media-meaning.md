@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Social Being, Media Meaning
 publishedDate: 2009-08-05
 updatedDate: 2011-02-08

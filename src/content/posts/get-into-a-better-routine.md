@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Get Into a Better Routine
 publishedDate: 2010-12-16
 updatedDate: 2010-12-16

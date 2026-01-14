@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: JunctionTO Tweetup
 publishedDate: 2009-08-29
 updatedDate: 2011-02-08

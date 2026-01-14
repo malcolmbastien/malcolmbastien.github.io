@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Starting Agile With Retrospectives and Continuous Improvement
 publishedDate: 2024-08-26
 updatedDate: 2024-09-06

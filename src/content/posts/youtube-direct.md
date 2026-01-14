@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: YouTube Direct
 publishedDate: 2009-11-17
 updatedDate: 2009-11-17

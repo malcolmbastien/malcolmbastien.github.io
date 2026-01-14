@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: What happens when all search becomes instant?
 publishedDate: 2010-09-11
 updatedDate: 2010-09-11

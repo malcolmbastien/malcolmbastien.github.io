@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Gamification Must Be Addictive
 publishedDate: 2012-01-10
 updatedDate: 2012-01-10

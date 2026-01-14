@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Blogging and Toastmasters
 publishedDate: 2011-03-15
 updatedDate: 2011-03-16

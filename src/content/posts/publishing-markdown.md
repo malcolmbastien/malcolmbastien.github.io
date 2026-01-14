@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Publishing Markdown
 publishedDate: 2011-12-30
 updatedDate: 2013-05-26

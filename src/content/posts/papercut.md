@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Papercut
 publishedDate: 2011-09-14
 updatedDate: 2011-12-28

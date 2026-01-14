@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Learning to Trash It and Start Over
 publishedDate: 2011-08-11
 tags:

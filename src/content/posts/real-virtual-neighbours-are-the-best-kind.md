@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Real Virtual-Neighbours Are The Best Kind
 publishedDate: 2010-01-31
 tags:

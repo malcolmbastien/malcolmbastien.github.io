@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Use Stories to Affect Stories
 publishedDate: 2012-10-08
 updatedDate: 2023-05-29

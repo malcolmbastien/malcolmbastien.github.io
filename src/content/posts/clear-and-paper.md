@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Clear and Paper
 publishedDate: 2012-03-31
 updatedDate: 2013-05-26

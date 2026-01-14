@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: My 14 Most Valuable RSS Feeds
 publishedDate: 2008-01-01
 updatedDate: 2008-01-01

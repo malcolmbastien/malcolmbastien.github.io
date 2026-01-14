@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: We Notice What We Choose To Notice
 publishedDate: 2009-07-01
 tags:

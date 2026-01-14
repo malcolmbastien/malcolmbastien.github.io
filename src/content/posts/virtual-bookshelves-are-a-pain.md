@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Virtual Bookshelves Are a Pain
 publishedDate: 2010-06-14
 updatedDate: 2010-06-14

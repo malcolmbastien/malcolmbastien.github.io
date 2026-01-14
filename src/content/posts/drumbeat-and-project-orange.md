@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Drumbeat and Project Orange
 publishedDate: 2010-04-22
 updatedDate: 2010-04-22

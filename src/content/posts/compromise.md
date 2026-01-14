@@ -1,5 +1,5 @@
 ---
-status: "seed"
+status: seed
 title: Compromise
 publishedDate: 2011-09-06
 updatedDate: 2023-05-17
