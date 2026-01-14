@@ -3,6 +3,7 @@ interface Props {
     sortedYears: Array<{
         year: number;
         count: number;
+        activityCount: number;
         months: number[];
     }>;
 }
@@ -32,7 +33,7 @@ const { sortedYears } = Astro.props;
                                                     10,
                                                     Math.ceil(
                                                         Math.sqrt(
-                                                            yearData.count / 2.5,
+                                                            yearData.activityCount / 2.5,
                                                         ),
                                                     ),
                                                 ),

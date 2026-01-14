@@ -95,6 +95,39 @@ const sortedEvents = aggregatedEvents.sort(
     (a, b) => b.date.valueOf() - a.date.valueOf(),
 );
 
+// Identify which events to collapse in the timeline (show only one update per post per month)
+const creationsInMonth = new Set<string>();
+sortedEvents.forEach((e) => {
+    if (e.type === "created") {
+        const monthKey = e.date.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+        });
+        creationsInMonth.add(`${e.post.slug}-${monthKey}`);
+    }
+});
+
+const seenUpdateInMonth = new Set<string>();
+sortedEvents.forEach((event) => {
+    const monthKey = event.date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+    });
+    const postKey = `${event.post.slug}-${monthKey}`;
+
+    if (event.type === "created") {
+        event.isCollapsed = false;
+    } else {
+        // It's an update - collapse if there's a creation or a later update in the same month
+        if (creationsInMonth.has(postKey) || seenUpdateInMonth.has(postKey)) {
+            event.isCollapsed = true;
+        } else {
+            event.isCollapsed = false;
+            seenUpdateInMonth.add(postKey);
+        }
+    }
+});
+
 // Generate all months from earliest event to now
 const earliestDate =
     sortedEvents.length > 0
@@ -153,10 +186,11 @@ sortedEvents.forEach((event) => {
     const month = event.date.getMonth();
 
     if (!yearsData.has(year)) {
-        yearsData.set(year, { count: 0, months: new Set() });
+        yearsData.set(year, { count: 0, months: new Set(), uniquePosts: new Set() });
     }
-    yearsData.get(year).count++;
+    yearsData.get(year).count++; // Total activity for dots
     yearsData.get(year).months.add(month);
+    yearsData.get(year).uniquePosts.add(event.post.id); // Unique posts for the count label
 });
 
 // Convert to array and sort by year descending
@@ -164,7 +198,8 @@ const yearsArray = Array.from(yearsData.entries());
 yearsArray.sort((a, b) => b[0] - a[0]);
 const sortedYears = yearsArray.map(([year, data]) => ({
     year: year as number,
-    count: data.count as number,
+    count: data.uniquePosts.size, // Number of unique posts touched
+    activityCount: data.count as number, // Total activity volume
     months: (Array.from(data.months) as number[]).sort((a, b) => b - a), // months descending within year
 }));
 
@@ -239,24 +274,9 @@ const currentYearValue = new Date().getFullYear();
             )
         }
 
-        <div class="flex flex-col lg:flex-row gap-8">
-
-
-            <!-- Left Column: Activity Heatmap and Timeline -->
-            <div class="flex-1 min-w-0 space-y-6">
-                <ActivityHeatmap
-                    year={currentYearValue}
-                    events={sortedEvents as any}
-                />
-                <PostTimeline
-                    sortedEvents={sortedEvents}
-                    allMonths={allMonths}
-                    eventsByMonthKey={eventsByMonthKey}
-                />
-            </div>
-
-            <!-- Right Column: Navigation & Search -->
-            <div class="w-full lg:w-64 shrink-0 lg:sticky lg:top-8 h-fit z-30 pb-10">
+        <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_16rem] gap-8">
+            <!-- Right Column: Navigation & Search (Moved up to load first and avoid layout shift) -->
+            <div class="lg:sticky lg:top-8 h-fit z-30 pb-10 order-last">
                 <!-- Search Button -->
                 <div class="mb-6">
                     <a
@@ -285,6 +305,19 @@ const currentYearValue = new Date().getFullYear();
                 <div class="lg:max-h-[calc(100vh-12rem)] lg:overflow-y-auto custom-sidebar-scroll">
                     <YearNavigation sortedYears={sortedYears as any} />
                 </div>
+            </div>
+
+            <!-- Left Column: Activity Heatmap and Timeline -->
+            <div class="space-y-6">
+                <ActivityHeatmap
+                    year={currentYearValue}
+                    events={sortedEvents as any}
+                />
+                <PostTimeline
+                    sortedEvents={sortedEvents}
+                    allMonths={allMonths}
+                    eventsByMonthKey={eventsByMonthKey}
+                />
             </div>
         </div>
         <SiteFooter />
@@ -356,17 +389,24 @@ const currentYearValue = new Date().getFullYear();
             const matchesYear =
                 currentYear === "all" || eventYear === currentYear;
             
+            const isCollapsed = htmlEvent.dataset.isCollapsed === "true";
+            
             // If filtering by a specific date from the heatmap
             const eventDate = htmlEvent.dataset.created || "";
             const matchesDate =
                 currentDateFilter === null || eventDate === currentDateFilter;
+
+            // Logic: 
+            // 1. If we have a specific date filter, show the event if it matches the date, even if collapsed
+            // 2. If no date filter, hide collapsed events
+            const visibilityByCollapse = currentDateFilter !== null ? matchesDate : !isCollapsed;
 
             if (
                 matchesFilter &&
                 matchesTopic &&
                 matchesEventType &&
                 matchesYear &&
-                matchesDate
+                visibilityByCollapse
             ) {
                 totalMatchingCount++;
                 if (visibleCount < itemsToShow) {
