@@ -5,7 +5,7 @@ publishedDate: 2009-07-27
 updatedDate: 2011-02-08
 slug: rain-in-roncesvalles
 tags:
-  - General
+  - Photos
 ---
 ![](../../assets/2009/07/photo2.jpg)
 ![](../../assets/2009/07/photo_21.jpg)

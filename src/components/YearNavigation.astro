@@ -29,9 +29,11 @@ const { sortedYears } = Astro.props;
                                         {Array.from(
                                             {
                                                 length: Math.min(
-                                                    5,
+                                                    10,
                                                     Math.ceil(
-                                                        yearData.count / 5,
+                                                        Math.sqrt(
+                                                            yearData.count / 2.5,
+                                                        ),
                                                     ),
                                                 ),
                                             },

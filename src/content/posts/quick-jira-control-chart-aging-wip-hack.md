@@ -1,8 +1,7 @@
 ---
-status: "seed"
+status: "evergreen"
 title: Quick Jira Control Chart Aging WIP Hack
 publishedDate: 2022-09-13
-updatedDate: 2024-01-13
 slug: quick-jira-control-chart-aging-wip-hack
 tags:
   - Agile
@@ -16,27 +15,26 @@ A few weeks ago, I created a new custom filter that changes what information is 
 
 Here's what my team's original control chart looked like:
 
-![](../../assets/2022/09/image-10.png)My team's default control chart
+![](../../assets/2022/09/image-10.png)
+*My team's default control chart*
 
 There are a few reasons I don't like using the default control chart:
 
-It mixes data for both completed items and work in progress
+- It mixes data for both completed items and work in progress
+- It includes non-standard issue types where the lead time does not reflect the actual speed.
+- It includes issues that added were on the board before being moved to the backlog
+- Here's the query, which I added as a Quick Filter, and a bit about how it works:
+- resolution = Unresolved and status not in (Backlog) and issuetype not in (Epic)
 
-It includes non-standard issue types where the lead time does not reflect the actual speed.
-
-It includes issues that added were on the board before being moved to the backlog
-
-Here's the query, which I added as a Quick Filter, and a bit about how it works:
-
-resolution = Unresolved and status not in (Backlog) and issuetype not in (Epic)
-
-![](../../assets/2022/09/image-9.png)My new Jira Quick Filter
+![](../../assets/2022/09/image-9.png)
+*My new Jira Quick Filter*
 
 The filter gives me a new control chart with information on all the active issues in progress.
 
 To help me monitor aging WIP, this filter removes all data for issues that are finished or still on my team's backlog. Because I'm only interested in the issues that people directly work on, I also remove epics.
 
-![](../../assets/2022/09/image-11.png)My team's new control chart displaying active issues
+![](../../assets/2022/09/image-11.png)
+*My team's new control chart displaying active issues*
 
 The new chart shows significantly fewer issues, and I can immediately see what issues need attention.
 

@@ -22,17 +22,16 @@ Starting a Pomodoro is always the most challenging part. Once I'm in the middle 
 
 Some effects of this:
 
-I'm paying closer attention to the things I do that consume a lot of time.
-
-I'm noticing the activities I do that make me want to break focus more (e.g. I want to check Twitter more when I'm reading than when I'm programming)
-
-I've noticed that I'm significantly more productive when working on something during a Pomodoro session compared to working on it independently.
-
-I want to explore more opportunities to use Pomodoros.
+- I'm paying closer attention to the things I do that consume a lot of time.
+- I'm noticing the activities I do that make me want to break focus more (e.g. I want to check Twitter more when I'm reading than when I'm programming)
+- I've noticed that I'm significantly more productive when working on something during a Pomodoro session compared to working on it independently.
+- I want to explore more opportunities to use Pomodoros.
 
 When the system wasn't a routine for me, I found myself saying, "It's just X, it would be too much trouble for me to pomodoro it." However, after becoming more accustomed to the process, it shifted to "That would be great to do with Pomodoro."
 
-The Pomodoro Technique: [http://www.pomodorotechnique.com/](http://www.pomodorotechnique.com/)
-Focus Booster App: [http://www.focusboosterapp.com/](http://www.focusboosterapp.com/)
-Pomodoro Timer: [http://navel-labs.com/apps/pomodoro-timer](http://navel-labs.com/apps/pomodoro-timer)
-Pomodoro menubar app App: [http://pomodoro.ugolandini.com/](http://pomodoro.ugolandini.com/)
+## Links
+
+- [The Pomodoro Technique](http://www.pomodorotechnique.com/)
+- [Focus Booster App](http://www.focusboosterapp.com/)
+- [Pomodoro Timer](http://navel-labs.com/apps/pomodoro-timer)
+- [Pomodoro menubar app App](http://pomodoro.ugolandini.com/)

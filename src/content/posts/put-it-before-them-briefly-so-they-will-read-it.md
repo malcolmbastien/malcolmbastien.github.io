@@ -10,6 +10,7 @@ tags:
   - Quotes
   - Writing
 ---
-Put it before them briefly so they will read it, clearly so they will appreciate it, picturesquely so they will remember it and, above all, accurately, so they will be guided by its light.
 
-Joseph Pulitzer
+> Put it before them briefly so they will read it, clearly so they will appreciate it, picturesquely so they will remember it and, above all, accurately, so they will be guided by its light.
+>
+> Joseph Pulitzer
