@@ -30,9 +30,15 @@ interface MonthLabel {
 }
 
 // Generate all days for the specified year (January 1 to December 31)
-const days: DayData[] = [];
+const days: (DayData | null)[] = [];
 const startDate = new Date(year, 0, 1); // January 1st
 const endDate = new Date(year, 11, 31); // December 31st
+
+// Add padding for the first week so the grid always starts on Sunday
+const startPadding = startDate.getDay(); // 0 is Sunday, 1 is Monday...
+for (let i = 0; i < startPadding; i++) {
+    days.push(null);
+}
 
 for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
     const dateStr = d.toISOString().split("T")[0];
@@ -46,12 +52,15 @@ for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
 const monthLabels: MonthLabel[] = [];
 let lastMonth = "";
 for (let i = 0; i < days.length; i++) {
-    const d = new Date(days[i].date);
+    const dayData = days[i];
+    if (!dayData) continue;
+
+    const d = new Date(dayData.date);
     const monthKey = d.toLocaleDateString("en-US", { month: "short" });
     if (monthKey !== lastMonth) {
         const weekIndex = Math.floor(i / 7);
         // Only include months that are actually in this year and not too close to end
-        if (d.getFullYear() === year && weekIndex < 50) {
+        if (d.getFullYear() === year && weekIndex < 52) {
             monthLabels.push({
                 name: monthKey,
                 weekIndex: weekIndex,
@@ -109,14 +118,24 @@ function getFillColor(count: number, isDarkMode: boolean) {
             {year}
         </span>
     </div>
-    <div class="overflow-x-auto">
-        <svg width="700" height="110" class="mx-auto activity-heatmap-svg">
+    <div class="overflow-x-auto pb-2 custom-scrollbar">
+        <svg
+            viewBox="0 0 780 125"
+            preserveAspectRatio="xMinYMin meet"
+            class="w-full activity-heatmap-svg min-w-[700px]"
+        >
+            <!-- Day labels -->
+            <text x="0" y="33" class="fill-slate-400 dark:fill-slate-500 text-[9px] font-medium">Sun</text>
+            <text x="0" y="59" class="fill-slate-400 dark:fill-slate-500 text-[9px] font-medium">Tue</text>
+            <text x="0" y="85" class="fill-slate-400 dark:fill-slate-500 text-[9px] font-medium">Thu</text>
+            <text x="0" y="111" class="fill-slate-400 dark:fill-slate-500 text-[9px] font-medium">Sat</text>
+
             {
                 monthLabels.map((label) => (
                     <text
-                        x={label.weekIndex * 13 + 6}
-                        y="10"
-                        text-anchor="middle"
+                        x={label.weekIndex * 14 + 30}
+                        y="12"
+                        text-anchor="start"
                         class="fill-slate-500 dark:fill-slate-400 text-[10px] font-medium"
                     >
                         {label.name}
@@ -126,7 +145,7 @@ function getFillColor(count: number, isDarkMode: boolean) {
             {
                 Array.from({ length: Math.ceil(days.length / 7) }).map(
                     (_, weekIndex) => (
-                        <g transform={`translate(${weekIndex * 13}, 18)`}>
+                        <g transform={`translate(${weekIndex * 14 + 30}, 24)`}>
                             {Array.from({ length: 7 }).map((_, dayIndex) => {
                                 const dayData = days[weekIndex * 7 + dayIndex];
                                 if (!dayData) return null;
@@ -173,20 +192,13 @@ function getFillColor(count: number, isDarkMode: boolean) {
         let selectedDate = null;
         let currentYear = year;
 
-        // Define getFillColor for use in updateHeatmapYear
-        function getFillColor(count, isDarkMode) {
-            if (!isDarkMode) {
-                if (count === 0) return "#f1f5f9";
-                if (count === 1) return "#a7f3d0";
-                if (count === 2) return "#34d399";
-                if (count >= 3) return "#059669";
-                return "#f1f5f9";
-            }
-            if (count === 0) return "#1a241a";
-            if (count === 1) return "#064e3b66";
-            if (count === 2) return "#15803d";
-            if (count >= 3) return "#10b981";
-            return "#1a241a";
+        // Function to get Tailwind classes for colors
+        function getColor(count) {
+            if (count === 0) return "fill-slate-100 dark:fill-[#1a241a]";
+            if (count === 1) return "fill-emerald-200 dark:fill-emerald-900/40";
+            if (count === 2) return "fill-emerald-400 dark:fill-emerald-700";
+            if (count >= 3) return "fill-emerald-600 dark:fill-emerald-500";
+            return "fill-slate-100 dark:fill-[#1a241a]";
         }
 
         // Function to update heatmap for a specific year
@@ -227,6 +239,12 @@ function getFillColor(count: number, isDarkMode: boolean) {
             const startDate = new Date(newYear, 0, 1);
             const endDate = new Date(newYear, 11, 31);
 
+            // Add padding for the first week so the grid always starts on Sunday
+            const startPadding = startDate.getDay();
+            for (let i = 0; i < startPadding; i++) {
+                days.push(null);
+            }
+
             for (
                 let d = new Date(startDate);
                 d <= endDate;
@@ -248,6 +266,25 @@ function getFillColor(count: number, isDarkMode: boolean) {
                 svg.removeChild(svg.firstChild);
             }
 
+            // Add day labels to SVG
+            const dayLabels = [
+                { name: "Sun", y: 33 },
+                { name: "Tue", y: 59 },
+                { name: "Thu", y: 85 },
+                { name: "Sat", y: 111 }
+            ];
+
+            dayLabels.forEach(label => {
+                const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                text.setAttribute("x", "0");
+                text.setAttribute("y", String(label.y));
+                text.setAttribute("class", "fill-slate-400 dark:fill-slate-500");
+                text.setAttribute("font-size", "9px");
+                text.setAttribute("font-weight", "500");
+                text.textContent = label.name;
+                svg.appendChild(text);
+            });
+
             // Rebuild month labels
             const monthLabels = [];
             let lastMonth = "";
@@ -255,13 +292,16 @@ function getFillColor(count: number, isDarkMode: boolean) {
                 document.documentElement.classList.contains("dark");
 
             for (let i = 0; i < days.length; i++) {
-                const d = new Date(days[i].date);
+                const dayData = days[i];
+                if (!dayData) continue;
+
+                const d = new Date(dayData.date);
                 const monthKey = d.toLocaleDateString("en-US", {
                     month: "short",
                 });
                 if (monthKey !== lastMonth) {
                     const weekIndex = Math.floor(i / 7);
-                    if (d.getFullYear() === newYear && weekIndex < 50) {
+                    if (d.getFullYear() === newYear && weekIndex < 52) {
                         monthLabels.push({
                             name: monthKey,
                             weekIndex: weekIndex,
@@ -277,10 +317,10 @@ function getFillColor(count: number, isDarkMode: boolean) {
                     "http://www.w3.org/2000/svg",
                     "text",
                 );
-                text.setAttribute("x", String(label.weekIndex * 13 + 6));
-                text.setAttribute("y", "10");
-                text.setAttribute("text-anchor", "middle");
-                text.setAttribute("fill", isDarkMode ? "#94a3b8" : "#64748b");
+                text.setAttribute("x", String(label.weekIndex * 14 + 30));
+                text.setAttribute("y", "12");
+                text.setAttribute("text-anchor", "start");
+                text.setAttribute("class", "fill-slate-500 dark:fill-slate-400");
                 text.setAttribute("font-size", "10px");
                 text.setAttribute("font-weight", "500");
                 text.textContent = label.name;
@@ -295,7 +335,7 @@ function getFillColor(count: number, isDarkMode: boolean) {
                     "http://www.w3.org/2000/svg",
                     "g",
                 );
-                g.setAttribute("transform", `translate(${weekIndex * 13}, 18)`);
+                g.setAttribute("transform", `translate(${weekIndex * 14 + 30}, 24)`);
 
                 for (let dayIndex = 0; dayIndex < 7; dayIndex++) {
                     const dataIndex = weekIndex * 7 + dayIndex;
@@ -316,16 +356,14 @@ function getFillColor(count: number, isDarkMode: boolean) {
                     rect.setAttribute("data-date", dayData.date);
                     rect.setAttribute("data-count", String(dayData.count));
 
-                    const fillColor = getFillColor(dayData.count, isDarkMode);
-                    rect.setAttribute("fill", fillColor);
                     rect.setAttribute(
                         "class",
-                        `activity-day ${dayData.count > 0 ? "cursor-pointer" : ""}`,
+                        `activity-day ${getColor(dayData.count)} ${dayData.count > 0 ? "cursor-pointer" : ""}`,
                     );
 
                     if (dayData.count > 0) {
                         rect.onclick = function () {
-                            filterByDate(dayData.date);
+                            window.filterByDate(dayData.date);
                         };
                     }
 
@@ -337,7 +375,7 @@ function getFillColor(count: number, isDarkMode: boolean) {
         };
 
         // Function to filter posts by date
-        function filterByDate(dateString) {
+        window.filterByDate = function(dateString) {
             const heatmap = document.getElementById("activity-heatmap");
 
             // If clicking the same date, clear the filter
@@ -410,13 +448,13 @@ function getFillColor(count: number, isDarkMode: boolean) {
                     else text = `${count} contributions on ${formattedDate}`;
 
                     tooltip.textContent = text;
-                    
+
                     // Position relative to the rect
                     const rect = target.getBoundingClientRect();
                     tooltip.style.left = `${rect.left + rect.width / 2}px`;
                     tooltip.style.top = `${rect.top - 8}px`;
                     tooltip.style.transform = "translate(-50%, -100%)";
-                    
+
                     tooltip.classList.remove("hidden");
                 }
             });
