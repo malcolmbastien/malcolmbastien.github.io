@@ -4,7 +4,7 @@ title: Because The Market Needs Non-Value Creators
 publishedDate: 2011-12-01
 updatedDate: 2011-12-28
 tags:
-  - General
+  - Smartphones
 ---
 The smartphone market is headed to a duopoly of Google’s Android and Apple’s iOS and perhaps it’s time to sweat whether a No. 3 platform has a chance in hell to compete.
 

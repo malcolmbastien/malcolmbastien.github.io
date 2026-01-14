@@ -5,9 +5,7 @@ publishedDate: 2012-03-31
 updatedDate: 2013-05-26
 tags:
   - Apps
-  - clear
   - Mobile
-  - paper
   - Software
   - Tech
 ---

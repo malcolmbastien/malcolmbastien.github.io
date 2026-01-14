@@ -2,10 +2,9 @@
 status: seed
 title: Avoiding The Pitfalls of Cross-Functional Super Teams
 publishedDate: 2023-07-25
-updatedDate: 2024-02-13
 tags:
   - Agile
-  - Team Topologies
+  - Team-Topologies
 ---
 I've previously written about [[revisiting-the-guidance-on-cross-functional-teams|cross-functional teams and what it means for a team to be cross-functional]]. In that same post, I wrote about Team Topology's concept of a stream-aligned team.
 

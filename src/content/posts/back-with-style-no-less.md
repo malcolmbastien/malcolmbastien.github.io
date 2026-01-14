@@ -4,16 +4,14 @@ title: Back. With Style No Less.
 publishedDate: 2009-12-15
 updatedDate: 2011-02-08
 tags:
-  - Basic Maths
   - Blogging
   - Design
   - General
-  - Merlin Mann
   - PyRoom
-  - Smashing Magazine
+  - Smashing-Magazine
   - Thoughts
-  - Web development
-  - Wordpress
+  - Web-Development
+  - WordPress
 ---
 It's been a long while since this site has seen much action. It feels good to write something with some thought to it again. I want to take a bit of time tonight and a bit of journaling, a bit of reflecting, and a bit of looking forward on to ideas that matter.
 

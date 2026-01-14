@@ -8,10 +8,10 @@ tags:
 ---
 ***TR*****: What today is Microsoft’s vision of the future office?**
 
-Mundie: We will continue to see desktop computing. In fact, one of the things that I have predicted is that there will be a successor to the desktop, and I think it’s the room. There will be what I call a fixed computing environment, and it should evolve in quite dramatic ways to become a much richer and immersive experience.
+> Mundie: We will continue to see desktop computing. In fact, one of the things that I have predicted is that there will be a successor to the desktop, and I think it’s the room. There will be what I call a fixed computing environment, and it should evolve in quite dramatic ways to become a much richer and immersive experience.
 
-We will see a lot more displays in the office, and they will be built into surfaces horizontally and also be on the walls or in the walls. I think that a kind of completely continuous model, where you are using speech, gesture, and touch in a more integrated way, will become more commonplace.
-- via [instapaper.com](http://www.instapaper.com/go/194379227/text)
+> We will see a lot more displays in the office, and they will be built into surfaces horizontally and also be on the walls or in the walls. I think that a kind of completely continuous model, where you are using speech, gesture, and touch in a more integrated way, will become more commonplace.
+> via [instapaper.com](http://www.instapaper.com/go/194379227/text)
 
 My problem with a future like this is that it prescribes an environment where computers are given more precedence and control of our environment than we are.
 

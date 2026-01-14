@@ -35,7 +35,7 @@ Given this, it makes sense to me that brands are less interested in blogging now
 
 Ok, so more and more brands are trying to come across as human. I think I’m on to something, but then I get stuck. At this point, I can only ask myself a bunch of other questions:
 
-How does this affect large businesses versus smaller ones?
-What’s really necessary in a brand and what’s unnecessary?
-Why can’t we just expose the people behind a brand?
-What do people really want?
+- How does this affect large businesses versus smaller ones?
+- What’s really necessary in a brand and what’s unnecessary?
+- Why can’t we just expose the people behind a brand?
+- What do people really want?

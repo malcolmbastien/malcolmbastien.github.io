@@ -9,6 +9,7 @@ tags:
   - Social
 ---
 [Nobody Goes to Facebook Anymore. It’s Too Crowded. « Uncrunched](http://uncrunched.com/2012/01/03/nobody-goes-to-facebook-anymore-its-too-crowded)
+
 So, no, most of us aren’t going to spend the time removing friends on Facebook. Instead many of us are using new social networks, like Path (we’re an investor) and the upcoming Just.Me (we’re also investors, guess how much we like this space) to start fresh. Facebook is for thousands of people you don’t know. The start fresh new services can be finely crafted from the start to include only your actual friends. And they’re made for mobile. Update: Check out Ourspot as well.
 
 Path and others are giving us what we want – A nice, sophisticated and diverse conversation with friends, like sitting together at a table just laughing and talking and drinking a latte. Facebook is more like the top picture above. Chaos.

@@ -8,7 +8,9 @@ tags:
 ---
 A quote from a recent New York Times piece on the monetization of real-time search:
 
-“Others say examples abound of queries that could be matched with ads: a search for tweets about snow conditions may be an advertising opportunity for ski resorts; one about poor cellphone coverage could attract ads from a rival network; one about restaurants could be matched with ads showing up-to-the-minute seating availability at the local deli.” - [How High Will Real-Time Search Fly?](http://www.nytimes.com/2009/10/25/business/25ping.html)
+> “Others say examples abound of queries that could be matched with ads: a search for tweets about snow conditions may be an advertising opportunity for ski resorts; one about poor cellphone coverage could attract ads from a rival network; one about restaurants could be matched with ads showing up-to-the-minute seating availability at the local deli.”
+> 
+> [How High Will Real-Time Search Fly?](http://www.nytimes.com/2009/10/25/business/25ping.html)
 
 Some lights clicked for me when I read this passage and connected it with the Mint financial data service.
 

@@ -25,34 +25,32 @@ The platform experiences growing pains and stress as it changes to meet new type
 
 To see how a similar platform has evolved over time, we can look at how Twitter has changed. Enough of Twitter’s new features match not only maturing users, but a changing role in society:
 
-Location
-Trends
-Recommended Users
-A change into being a channel for the mainstream media and celebrities.
-Lists
-Multitude of applications in the ecosystem
-App integrations
+- Location
+- Trends
+- Recommended Users
+- A change into being a channel for the mainstream media and celebrities.
+- Lists
+- Multitude of applications in the ecosystem
+- App integrations
 
 Some additions made to Twitter via third party developers could also be considered enhancements to the platform since some users now swear by these new interfaces, such as:
 
-Dashboard controls (Tweetdeck, Hootsuite, Seesmic)
-Multi-account control
-Work-flow control
-Advanced filtering and searching
-*(other ones I’m probably forgetting…)*
+- Dashboard controls (Tweetdeck, Hootsuite, Seesmic)
+- Multi-account control
+- Work-flow control
+- Advanced filtering and searching
+- *(other ones I’m probably forgetting…)*
 
 Compared to Twitter, Tumblr has remain remarkably the same, and the only big addition to the platform has been the introduction of premium themes, and a Tumblr directory.
 
 Let me repeat some of the consumer uses of Tumblr:
 
-Producing content
-Sharing content
-
-Reblogging other Tumblr posts
-Using the Tumblr bookmarklet to share content from the Internet
-
-Consuming content
-Forming connections with the other people.
+- Producing content
+- Sharing content
+- Reblogging other Tumblr posts
+- Using the Tumblr bookmarklet to share content from the Internet
+- Consuming content
+- Forming connections with the other people.
 
 Each of these types of activities **brings people to Tumblr**. It increases the time spent on the platform and connects people more with the Tumblr brand. As you bring more elements of a social network into a blogging platform, people are going to want the platforms to match their needs or they will migrate.
 
@@ -66,8 +64,8 @@ Some of these problems also affect the business Tumble users.
 
 First, let’s look at how businesses are using Tumblr. There are at least two main types of usage:
 
-**Mainstream Media**: Media outlets are coming online and using Tumblr as a classic “Tumblog”. They share interesting tidbits of information, throwing what they find against the wall and seeing what sticks or resonates with their readers.
-**Startups and small businesses**: The startups and small businesses I see using Tumblr use it more as a traditional blog. Being a startup they also don’t want to invest too many resources in developing their blog as they have more important things they could be doing. They post edited content that communicates brand messages with the their community.
+- **Mainstream Media**: Media outlets are coming online and using Tumblr as a classic “Tumblog”. They share interesting tidbits of information, throwing what they find against the wall and seeing what sticks or resonates with their readers.
+- **Startups and small businesses**: The startups and small businesses I see using Tumblr use it more as a traditional blog. Being a startup they also don’t want to invest too many resources in developing their blog as they have more important things they could be doing. They post edited content that communicates brand messages with the their community.
 
 One of the differences here is that there’s less resources and control needed to manage a “see what sticks” blog.
 

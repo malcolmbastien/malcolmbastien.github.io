@@ -18,7 +18,7 @@ tags:
 > 
 > Products are tools. Brands are illusions. Loyalty should be reserved for people.
 > 
-> — Ed Finkler (@funkatron) [November 29, 2011](https://twitter.com/funkatron/status/141540228111400960)
+> Ed Finkler (@funkatron) [November 29, 2011](https://twitter.com/funkatron/status/141540228111400960)
 
 I’m a fan of buying fewer, high quality things that will best improve your way of life, or improve your work. But products don’t improve people, and an identity achieved through purchasing or consuming (aka desire) is an illusion.
 

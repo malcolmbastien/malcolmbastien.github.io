@@ -10,7 +10,9 @@ I was reading over the email I got from the guys at StartMeUp Ryerson who recent
 
 My buddy Daniel Patricio's business Orange Rhino Media is one of the finalists, this is the short description of what ORM does:
 
-Orange Rhino Media is a digital marketing company with an understanding of how to leverage new technologies to drive results. We develop web applications and execute and manage social media marketing campaigns. We are currently beta testing our web application - Pinpoint Social, the toolbox for social media monetisation.
+> Orange Rhino Media is a digital marketing company with an understanding of how to leverage new technologies to drive results. We develop web applications and execute and manage social media marketing campaigns. We are currently beta testing our web application
+>
+> Pinpoint Social, the toolbox for social media monetisation.
 
 That's pretty good I think. It describes what sort of company they are, what types of projects they work on, and what their current focus is.
 

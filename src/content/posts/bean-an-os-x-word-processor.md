@@ -4,8 +4,7 @@ title: "Bean: An OS X Word Processor"
 publishedDate: 2009-11-01
 updatedDate: 2009-11-01
 tags:
-  - General
-  - Link
+  - Software
 ---
 This is one of the first Mac applications I ever found, years before I was even using a Mac.
 
