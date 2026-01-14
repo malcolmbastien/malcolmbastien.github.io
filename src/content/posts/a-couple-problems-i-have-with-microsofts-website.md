@@ -4,10 +4,7 @@ title: A Quick Look at the Surface Site
 publishedDate: 2012-10-16
 updatedDate: 2013-05-25
 tags:
-  - General
   - Microsoft
-  - Image
-  - Skitch
   - Surface
 ---
 ![](../../assets/2012/10/tumblr_mbzzumsr2f1qa77f2o1_r2_1280.png)
