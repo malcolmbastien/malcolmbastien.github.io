@@ -11,10 +11,10 @@ allPosts.forEach((post) => {
     });
 });
 
-// Get top 12 topics by count
+// Get top 16 topics by count
 const topTopics = Object.entries(topicCounts)
     .sort(([, a], [, b]) => b - a)
-    .slice(0, 12);
+    .slice(0, 16);
 ---
 
 <div
