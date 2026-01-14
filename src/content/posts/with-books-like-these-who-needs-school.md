@@ -2,7 +2,6 @@
 status: seed
 title: With Books Like These, Who Needs School?
 publishedDate: 2008-12-24
-updatedDate: 2024-01-08
 tags:
   - Books
   - Education

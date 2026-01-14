@@ -2,7 +2,6 @@
 status: seed
 title: The End of Failure
 publishedDate: 2011-08-26
-updatedDate: 2011-12-28
 tags:
   - General
 ---

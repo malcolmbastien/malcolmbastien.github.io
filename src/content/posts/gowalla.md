@@ -2,7 +2,6 @@
 status: seed
 title: Gowalla
 publishedDate: 2010-09-14
-updatedDate: 2011-02-08
 tags:
   - Foursquare
   - General

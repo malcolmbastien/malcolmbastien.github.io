@@ -2,7 +2,6 @@
 status: seed
 title: Video Review of The Paradox Of Choice
 publishedDate: 2009-02-13
-updatedDate: 2009-02-13
 tags:
   - Barry Schwartz
   - General

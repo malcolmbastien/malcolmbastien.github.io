@@ -2,7 +2,6 @@
 status: seed
 title: Watch Out - Great Looking Ubuntu Intrepid Apps
 publishedDate: 2008-12-20
-updatedDate: 2008-12-20
 tags:
   - Software
   - Gmail

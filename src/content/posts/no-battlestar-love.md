@@ -2,7 +2,6 @@
 status: seed
 title: No Battlestar Love?
 publishedDate: 2008-03-06
-updatedDate: 2008-03-06
 tags:
   - bsg
   - General

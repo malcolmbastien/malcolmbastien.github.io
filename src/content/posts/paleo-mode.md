@@ -2,7 +2,6 @@
 status: seed
 title: Paleo Mode
 publishedDate: 2012-08-23
-updatedDate: 2013-05-26
 tags:
   - Health
   - Paleo

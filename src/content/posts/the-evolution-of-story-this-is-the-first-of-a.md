@@ -2,7 +2,6 @@
 status: seed
 title: The Evolution of Story
 publishedDate: 2012-09-25
-updatedDate: 2023-05-29
 tags:
   - MadeWithPaper
   - Image

@@ -2,7 +2,6 @@
 status: seed
 title: Real-time Brands
 publishedDate: 2013-04-12
-updatedDate: 2013-05-23
 tags:
   - Advertising
   - Business

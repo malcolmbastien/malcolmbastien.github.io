@@ -2,7 +2,6 @@
 status: seed
 title: Getting a Slight Idea
 publishedDate: 2010-12-10
-updatedDate: 2010-12-10
 tags:
   - General
 ---

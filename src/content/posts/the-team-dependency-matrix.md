@@ -2,7 +2,6 @@
 status: seed
 title: The Team Dependency Matrix
 publishedDate: 2023-12-28
-updatedDate: 2025-10-10
 tags:
   - Agile
   - Dependencies

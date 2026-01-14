@@ -2,7 +2,6 @@
 status: seed
 title: How Good Is the Asus Eee 1000?
 publishedDate: 2009-01-25
-updatedDate: 2024-01-08
 tags:
   - ASUS Eee PC
   - Best Buy

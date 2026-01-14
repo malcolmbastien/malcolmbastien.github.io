@@ -2,7 +2,6 @@
 status: seed
 title: Creating Focus Through User Needs Mapping and Core Domain Mapping
 publishedDate: 2023-12-23
-updatedDate: 2023-12-23
 tags:
   - Cognitive Load
   - Core Domain Chart

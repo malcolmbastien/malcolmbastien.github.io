@@ -2,7 +2,6 @@
 status: seed
 title: Refining The Innovative And The New
 publishedDate: 2011-08-15
-updatedDate: 2011-08-15
 tags:
   - General
 ---

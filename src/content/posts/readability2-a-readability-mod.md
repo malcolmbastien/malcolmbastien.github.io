@@ -2,7 +2,6 @@
 status: seed
 title: Readability2 – A Readability Mod
 publishedDate: 2009-11-03
-updatedDate: 2009-11-03
 tags:
   - bookmarklets
   - Freebies

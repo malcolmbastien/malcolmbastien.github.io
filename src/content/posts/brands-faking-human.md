@@ -2,7 +2,6 @@
 status: seed
 title: Brands Faking Human
 publishedDate: 2012-01-12
-updatedDate: 2012-01-12
 tags:
   - branding
   - buffer

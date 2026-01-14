@@ -2,7 +2,6 @@
 status: seed
 title: The Sandwich Rebuttal
 publishedDate: 2010-01-02
-updatedDate: 2010-01-02
 tags:
   - Chris Brogan
   - Gary Vaynerchuk

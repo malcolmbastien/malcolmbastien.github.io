@@ -2,7 +2,6 @@
 status: seed
 title: Share Your Data
 publishedDate: 2010-01-16
-updatedDate: 2010-01-16
 tags:
   - General
   - Web Analytics

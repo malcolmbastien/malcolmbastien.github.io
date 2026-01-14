@@ -2,7 +2,6 @@
 status: seed
 title: The Logic Baffles Me
 publishedDate: 2009-11-09
-updatedDate: 2009-11-09
 tags:
   - General
 ---

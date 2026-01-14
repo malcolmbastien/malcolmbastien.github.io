@@ -2,7 +2,6 @@
 status: seed
 title: The Power of Framing Social Dialogue
 publishedDate: 2009-08-04
-updatedDate: 2011-02-08
 tags:
   - General
 ---

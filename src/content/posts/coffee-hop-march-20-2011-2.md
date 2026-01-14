@@ -2,7 +2,6 @@
 status: evergreen
 title: "Coffee Hop: March 20, 2011"
 publishedDate: 2011-03-20
-updatedDate: 2011-08-14
 tags:
   - Toronto
   - Coffee

@@ -2,7 +2,6 @@
 status: seed
 title: Why Do Location Sharing?
 publishedDate: 2010-01-30
-updatedDate: 2010-01-30
 tags:
   - General
   - location sharing

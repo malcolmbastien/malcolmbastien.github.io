@@ -2,7 +2,6 @@
 status: seed
 title: The Desktop Is Done, Think Like iOS
 publishedDate: 2012-07-30
-updatedDate: 2013-05-26
 tags:
   - App Store
   - Apple

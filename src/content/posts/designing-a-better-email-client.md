@@ -2,7 +2,6 @@
 status: seed
 title: Designing A Better Email Client
 publishedDate: 2012-08-07
-updatedDate: 2013-05-26
 tags:
   - .Mail
   - Email

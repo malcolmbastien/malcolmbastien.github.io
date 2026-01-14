@@ -2,7 +2,6 @@
 status: seed
 title: If You Expect Them to Talk
 publishedDate: 2009-05-21
-updatedDate: 2023-05-26
 tags:
   - General
 ---

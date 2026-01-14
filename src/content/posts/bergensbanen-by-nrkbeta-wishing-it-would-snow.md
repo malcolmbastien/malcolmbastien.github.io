@@ -2,7 +2,6 @@
 status: seed
 title: Bergensbanen
 publishedDate: 2012-01-10
-updatedDate: 2013-05-26
 tags:
   - bergen
   - Miscellaneous

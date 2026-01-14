@@ -2,7 +2,6 @@
 status: seed
 title: Analyzing The New Mac Ads
 publishedDate: 2012-07-31
-updatedDate: 2013-05-26
 tags:
   - Apple
 ---

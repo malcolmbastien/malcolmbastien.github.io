@@ -2,7 +2,6 @@
 status: seed
 title: Flipboard
 publishedDate: 2010-08-08
-updatedDate: 2010-08-08
 tags:
   - General
 ---

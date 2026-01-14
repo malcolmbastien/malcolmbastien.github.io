@@ -2,7 +2,6 @@
 status: seed
 title: Ulysses 3
 publishedDate: 2013-04-12
-updatedDate: 2013-05-23
 tags:
   - Software
   - Ulysses 3

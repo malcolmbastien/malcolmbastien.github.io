@@ -2,7 +2,6 @@
 status: seed
 title: WriteRoom for iPhone 2.4 now in app store
 publishedDate: 2009-11-11
-updatedDate: 2009-11-11
 tags:
   - General
 ---

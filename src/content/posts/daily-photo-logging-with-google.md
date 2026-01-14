@@ -2,7 +2,6 @@
 status: seed
 title: Daily Photo Logging with Google+
 publishedDate: 2012-04-17
-updatedDate: 2013-05-26
 tags:
   - Google
   - Social

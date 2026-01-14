@@ -2,7 +2,6 @@
 status: seed
 title: Experimenting With Controlling Cycle Time Instead of WIP
 publishedDate: 2023-08-18
-updatedDate: 2023-12-23
 tags:
   - Agile
   - Jira

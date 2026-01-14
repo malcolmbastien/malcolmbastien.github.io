@@ -2,7 +2,6 @@
 status: seed
 title: In 2 Months
 publishedDate: 2007-08-23
-updatedDate: 2007-08-23
 tags:
   - General
 ---

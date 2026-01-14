@@ -2,7 +2,6 @@
 status: seed
 title: People Are the Heart of Any Practice
 publishedDate: 2025-08-08
-updatedDate: 2025-08-08
 tags:
   - Agile
 ---

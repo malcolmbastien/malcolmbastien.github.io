@@ -2,7 +2,6 @@
 status: seed
 title: Innovating For a Windows Tablet
 publishedDate: 2010-11-08
-updatedDate: 2010-11-08
 tags:
   - Apple
   - General

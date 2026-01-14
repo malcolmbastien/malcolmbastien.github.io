@@ -2,7 +2,6 @@
 status: seed
 title: One-Time Efforts
 publishedDate: 2024-08-10
-updatedDate: 2024-09-06
 tags:
   - Agile
 ---

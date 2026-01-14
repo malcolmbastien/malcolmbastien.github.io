@@ -2,7 +2,6 @@
 status: seed
 title: Ubuntu On Netbooks - NBR VS Keyboard Control With Gnome Do
 publishedDate: 2009-06-28
-updatedDate: 2009-06-28
 tags:
   - General
 ---

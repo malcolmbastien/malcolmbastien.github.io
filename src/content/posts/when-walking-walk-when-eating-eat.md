@@ -2,7 +2,6 @@
 status: seed
 title: None
 publishedDate: 2010-02-01
-updatedDate: 2010-02-01
 tags:
   - General
   - Quote

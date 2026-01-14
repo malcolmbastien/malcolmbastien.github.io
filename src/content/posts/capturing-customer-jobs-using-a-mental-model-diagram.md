@@ -2,7 +2,6 @@
 status: seed
 title: Capturing Customer Jobs Using a Mental Model Diagram
 publishedDate: 2022-12-11
-updatedDate: 2024-01-12
 featured: true
 cover: "../../assets/2022/12/mental-models-diagrams-wardley-maps-mental-models.jpg"
 tags:

@@ -2,7 +2,6 @@
 status: seed
 title: App as Digital Proxy
 publishedDate: 2012-09-26
-updatedDate: 2023-05-29
 tags:
   - MadeWithPaper
   - Mobile

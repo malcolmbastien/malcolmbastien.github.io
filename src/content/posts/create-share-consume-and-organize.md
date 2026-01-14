@@ -2,7 +2,6 @@
 status: seed
 title: Create Share Consume and Organize
 publishedDate: 2010-08-19
-updatedDate: 2010-08-19
 tags:
   - Apps
   - General

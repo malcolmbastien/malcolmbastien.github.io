@@ -2,7 +2,6 @@
 status: seed
 title: Twitter’s Inevitable Consistency
 publishedDate: 2012-08-21
-updatedDate: 2013-05-26
 tags:
   - App.net
   - Social

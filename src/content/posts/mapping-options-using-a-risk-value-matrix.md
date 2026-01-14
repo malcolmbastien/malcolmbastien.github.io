@@ -2,7 +2,6 @@
 status: seed
 title: Mapping Options Using a Risk-Value Matrix
 publishedDate: 2023-08-26
-updatedDate: 2023-12-23
 tags:
   - frameworks
   - General

@@ -2,7 +2,6 @@
 status: seed
 title: User Experience Strategy
 publishedDate: 2012-09-24
-updatedDate: 2023-05-29
 tags:
   - Design
   - MadeWithPaper

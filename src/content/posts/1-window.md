@@ -2,7 +2,6 @@
 status: seed
 title: 1 Window
 publishedDate: 2010-09-09
-updatedDate: 2010-09-09
 tags:
   - Attention
   - Focus

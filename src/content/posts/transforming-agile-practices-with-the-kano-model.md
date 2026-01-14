@@ -2,7 +2,6 @@
 status: seed
 title: Transforming Agile Practices with the Kano Model
 publishedDate: 2025-08-17
-updatedDate: 2025-08-17
 tags:
   - Agile
   - AI

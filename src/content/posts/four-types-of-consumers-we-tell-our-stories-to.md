@@ -2,7 +2,6 @@
 status: seed
 title: How Customers Engage With a Brand's Story
 publishedDate: 2012-10-07
-updatedDate: 2023-05-29
 tags:
   - MadeWithPaper
   - Image

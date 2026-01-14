@@ -2,7 +2,6 @@
 status: seed
 title: What Text Editors Tell us About Apple's Ecosystem
 publishedDate: 2011-08-23
-updatedDate: 2011-08-23
 tags:
     - General
 ---

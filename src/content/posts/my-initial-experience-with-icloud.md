@@ -2,7 +2,6 @@
 status: seed
 title: My Initial Experience With iCloud
 publishedDate: 2012-01-04
-updatedDate: 2012-01-04
 tags:
   - Day One
   - General

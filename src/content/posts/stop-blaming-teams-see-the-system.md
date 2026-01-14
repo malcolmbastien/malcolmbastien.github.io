@@ -2,7 +2,6 @@
 title: "Stop Blaming Teams: See the System"
 summary: Problems are typically predictable outcomes of flawed organizational systems and project structures
 publishedDate: 2025-11-12
-updatedDate: 2025-12-05
 tags:
   - Agile
   - Systems-Thinking

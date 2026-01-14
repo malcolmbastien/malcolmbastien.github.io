@@ -2,7 +2,6 @@
 status: seed
 title: Cross Post - Announcing Toronto Dev
 publishedDate: 2008-12-19
-updatedDate: 2024-01-08
 tags:
   - Canada
   - Creative Commons

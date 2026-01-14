@@ -2,7 +2,6 @@
 status: seed
 title: The System That Works
 publishedDate: 2009-07-20
-updatedDate: 2009-07-20
 tags:
   - General
 ---

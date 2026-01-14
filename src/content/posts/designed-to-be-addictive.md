@@ -2,7 +2,6 @@
 status: seed
 title: Designed To Be Addictive
 publishedDate: 2010-06-23
-updatedDate: 2010-06-23
 tags:
   - General
 ---

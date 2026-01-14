@@ -2,7 +2,6 @@
 status: seed
 title: Only The Hard Stuff Matters
 publishedDate: 2011-08-17
-updatedDate: 2011-08-18
 tags:
   - General
 ---

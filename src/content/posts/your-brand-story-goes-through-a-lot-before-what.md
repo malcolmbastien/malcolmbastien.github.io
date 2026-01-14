@@ -2,7 +2,6 @@
 status: seed
 title: Mapping the Brand Story
 publishedDate: 2012-10-10
-updatedDate: 2023-05-29
 tags:
   - branding
   - MadeWithPaper

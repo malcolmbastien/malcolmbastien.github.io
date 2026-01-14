@@ -2,7 +2,6 @@
 status: seed
 title: How I Use Scrum to Teach Agility
 publishedDate: 2023-05-20
-updatedDate: 2024-02-13
 tags:
   - Agile
   - Scrum

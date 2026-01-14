@@ -2,7 +2,6 @@
 status: seed
 title: "Investing In Yourself: A Practical Guide"
 publishedDate: 2009-02-19
-updatedDate: 2024-01-08
 tags:
   - Community
   - General

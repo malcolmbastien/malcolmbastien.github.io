@@ -2,7 +2,6 @@
 status: seed
 title: CrunchBang Linux, Netbooks at High Speed
 publishedDate: 2009-01-30
-updatedDate: 2024-01-08
 tags:
   - ASUS Eee PC
   - Blogging

@@ -2,7 +2,6 @@
 status: seed
 title: Boards of Canada - Reach for the Dead
 publishedDate: 2013-05-23
-updatedDate: 2013-05-25
 tags:
   - boards of canada
   - Music

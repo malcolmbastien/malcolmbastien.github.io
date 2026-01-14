@@ -2,7 +2,6 @@
 status: seed
 title: CrossFit Update
 publishedDate: 2011-12-31
-updatedDate: 2013-05-26
 tags:
   - CrossFit
 ---

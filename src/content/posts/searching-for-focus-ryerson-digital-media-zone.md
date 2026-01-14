@@ -2,7 +2,6 @@
 status: seed
 title: Searching for Focus | Ryerson Digital Media Zone
 publishedDate: 2010-09-10
-updatedDate: 2010-09-10
 tags:
   - Focus
   - General

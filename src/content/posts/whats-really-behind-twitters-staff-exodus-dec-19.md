@@ -2,7 +2,6 @@
 status: seed
 title: What's really behind Twitter's staff exodus - Dec. 19, 2011
 publishedDate: 2012-01-03
-updatedDate: 2012-01-03
 tags:
   - General
   - Link

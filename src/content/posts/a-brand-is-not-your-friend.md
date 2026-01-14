@@ -2,7 +2,6 @@
 status: seed
 title: A Brand Is Not Your Friend
 publishedDate: 2012-01-09
-updatedDate: 2012-01-09
 tags:
   - branding
   - General

@@ -2,7 +2,6 @@
 status: seed
 title: Who Would Go To A University Unconference?
 publishedDate: 2008-03-05
-updatedDate: 2008-03-05
 tags:
   - General
   - Mind Fusion

@@ -2,7 +2,6 @@
 status: seed
 title: At Odds
 publishedDate: 2009-05-04
-updatedDate: 2011-02-08
 tags:
   - General
 ---

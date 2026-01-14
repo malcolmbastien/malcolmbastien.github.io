@@ -2,7 +2,6 @@
 status: seed
 title: Making Progress Through Questions
 publishedDate: 2024-09-02
-updatedDate: 2024-09-06
 tags:
   - Agile
   - coaching

@@ -2,7 +2,6 @@
 status: seed
 title: Don't Write User Stories, Tell Stories
 publishedDate: 2023-08-09
-updatedDate: 2023-08-08
 tags:
   - Agile
   - user stories

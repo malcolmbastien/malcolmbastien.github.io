@@ -2,7 +2,6 @@
 status: seed
 title: None
 publishedDate: 2010-07-14
-updatedDate: 2013-05-21
 tags:
   - General
   - Video

@@ -2,7 +2,6 @@
 status: seed
 title: Colemak Keyboard Layout - Better Than QWERTY, Better Than Dvorak
 publishedDate: 2009-02-04
-updatedDate: 2009-02-03
 tags:
   - Colemak
   - Dvorak

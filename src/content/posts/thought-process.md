@@ -2,7 +2,6 @@
 status: seed
 title: Thought Process
 publishedDate: 2012-01-04
-updatedDate: 2012-01-04
 tags:
   - General
 ---

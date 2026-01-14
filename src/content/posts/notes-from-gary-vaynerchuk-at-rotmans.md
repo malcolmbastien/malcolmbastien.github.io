@@ -2,7 +2,6 @@
 status: seed
 title: Notes from Gary Vaynerchuk at Rotmans
 publishedDate: 2009-10-29
-updatedDate: 2009-10-29
 tags:
   - General
 ---

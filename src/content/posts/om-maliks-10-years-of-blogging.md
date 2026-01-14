@@ -2,7 +2,6 @@
 status: seed
 title: Om Malik's 10 Years of Blogging
 publishedDate: 2012-01-11
-updatedDate: 2012-01-11
 tags:
   - Blogging
   - General

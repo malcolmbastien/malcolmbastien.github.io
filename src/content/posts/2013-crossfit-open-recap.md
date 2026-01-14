@@ -2,7 +2,6 @@
 status: seed
 title: 2013 CrossFit Open Recap
 publishedDate: 2013-04-10
-updatedDate: 2013-05-23
 tags:
   - CrossFit
 ---

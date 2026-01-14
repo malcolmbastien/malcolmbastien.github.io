@@ -2,7 +2,6 @@
 status: seed
 title: Designing Metro Apps on iOS
 publishedDate: 2012-07-24
-updatedDate: 2013-05-26
 tags:
   - Apple
   - Design

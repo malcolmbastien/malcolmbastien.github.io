@@ -2,7 +2,6 @@
 status: seed
 title: Something Routine
 publishedDate: 2010-06-22
-updatedDate: 2010-06-22
 tags:
   - General
 ---

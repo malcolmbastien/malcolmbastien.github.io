@@ -2,7 +2,6 @@
 status: seed
 title: Facebook Home
 publishedDate: 2013-04-15
-updatedDate: 2022-09-11
 tags:
   - Android
   - Facebook Home

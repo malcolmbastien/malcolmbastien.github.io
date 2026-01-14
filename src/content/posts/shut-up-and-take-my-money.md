@@ -2,7 +2,6 @@
 status: seed
 title: Shut Up and Take My Money!
 publishedDate: 2012-01-09
-updatedDate: 2012-01-09
 tags:
   - General
   - gimmebar

@@ -2,7 +2,6 @@
 status: seed
 title: Making Work More Human
 publishedDate: 2025-09-06
-updatedDate: 2025-09-06
 tags:
   - Agile
 ---

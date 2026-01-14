@@ -2,7 +2,6 @@
 status: seed
 title: The York University Strike As A Great Opportunity
 publishedDate: 2009-01-14
-updatedDate: 2024-01-08
 tags:
   - Facebook
   - General

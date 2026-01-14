@@ -2,7 +2,6 @@
 status: seed
 title: Simple Desktops
 publishedDate: 2009-10-30
-updatedDate: 2009-10-30
 tags:
   - General
 ---

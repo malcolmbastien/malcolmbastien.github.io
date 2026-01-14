@@ -2,7 +2,6 @@
 status: seed
 title: None
 publishedDate: 2012-05-03
-updatedDate: 2013-05-26
 tags:
   - Miscellaneous
   - Image

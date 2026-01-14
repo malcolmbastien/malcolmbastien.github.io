@@ -2,7 +2,6 @@
 status: seed
 title: The Hidden Costs of Over-Collaboration
 publishedDate: 2024-09-16
-updatedDate: 2024-09-07
 tags:
   - Agile
   - Collaboration

@@ -1,7 +1,6 @@
 ---
 title: Zenbe Is A Good Attempt At Enlightened Email
 publishedDate: 2008-10-03
-updatedDate: 2024-01-08
 tags:
   - General
   - Zenbe

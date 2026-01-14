@@ -2,7 +2,6 @@
 status: seed
 title: Social Media Without the Tweets and Check-ins
 publishedDate: 2012-10-16
-updatedDate: 2023-08-30
 tags:
   - Foursquare
   - Social

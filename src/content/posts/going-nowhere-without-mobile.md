@@ -2,7 +2,6 @@
 status: seed
 title: Going Nowhere Without Mobile
 publishedDate: 2010-11-05
-updatedDate: 2010-11-05
 tags:
   - General
   - Mobile

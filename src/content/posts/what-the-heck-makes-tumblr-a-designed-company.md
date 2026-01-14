@@ -2,7 +2,6 @@
 status: seed
 title: What The Heck Makes Tumblr a "Designed" Company
 publishedDate: 2010-02-01
-updatedDate: 2010-02-01
 tags:
   - General
   - Posterous

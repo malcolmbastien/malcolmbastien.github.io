@@ -2,7 +2,6 @@
 status: seed
 title: Languages Evolve, Twitter&#039;s Should Too
 publishedDate: 2009-02-11
-updatedDate: 2009-02-10
 tags:
   - Evan Prodromou
   - General

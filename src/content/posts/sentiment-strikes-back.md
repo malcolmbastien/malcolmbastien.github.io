@@ -2,7 +2,6 @@
 status: seed
 title: Sentiment Strikes Back
 publishedDate: 2009-07-16
-updatedDate: 2011-02-08
 tags:
   - General
 ---

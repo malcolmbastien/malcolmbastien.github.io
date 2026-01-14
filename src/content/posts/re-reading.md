@@ -2,7 +2,6 @@
 status: seed
 title: Re-Reading
 publishedDate: 2012-05-31
-updatedDate: 2012-05-31
 tags:
   - General
   - Reading

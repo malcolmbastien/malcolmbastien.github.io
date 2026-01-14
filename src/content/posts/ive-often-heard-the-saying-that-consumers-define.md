@@ -2,7 +2,6 @@
 status: seed
 title: Customers Create Stories for Every Interaction
 publishedDate: 2012-10-05
-updatedDate: 2023-05-29
 tags:
   - MadeWithPaper
   - Image

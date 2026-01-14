@@ -2,7 +2,6 @@
 status: seed
 title: How Creative Is Your Business Technology?
 publishedDate: 2009-02-23
-updatedDate: 2009-02-23
 tags:
   - Creativity
   - Don't Make Me Think

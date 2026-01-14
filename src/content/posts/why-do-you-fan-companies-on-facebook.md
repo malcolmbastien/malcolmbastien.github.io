@@ -2,7 +2,6 @@
 status: seed
 title: Why Do You Fan Companies on Facebook?
 publishedDate: 2009-10-28
-updatedDate: 2009-10-28
 tags:
   - Facebook
   - General

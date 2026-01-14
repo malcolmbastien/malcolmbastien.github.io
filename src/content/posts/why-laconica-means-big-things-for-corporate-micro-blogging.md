@@ -2,7 +2,6 @@
 status: seed
 title: Why Laconica Means Big Things For Corporate Micro Blogging
 publishedDate: 2008-08-28
-updatedDate: 2011-02-08
 tags:
   - General
 ---

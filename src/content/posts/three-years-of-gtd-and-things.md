@@ -2,7 +2,6 @@
 status: seed
 title: Three Years of GTD and Things
 publishedDate: 2012-04-04
-updatedDate: 2013-05-26
 tags:
   - GTD
   - Productivity

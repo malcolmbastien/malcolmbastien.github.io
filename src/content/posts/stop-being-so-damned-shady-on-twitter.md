@@ -2,7 +2,6 @@
 status: seed
 title: Stop Being So Damned Shady On Twitter
 publishedDate: 2009-02-27
-updatedDate: 2009-02-27
 tags:
   - Aiderss
   - Akoha

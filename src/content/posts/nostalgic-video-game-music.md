@@ -2,7 +2,6 @@
 status: seed
 title: None
 publishedDate: 2009-11-15
-updatedDate: 2013-05-21
 tags:
   - General
   - Audio
