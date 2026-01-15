@@ -4,7 +4,7 @@ title: Don't Write User Stories, Tell Stories
 publishedDate: 2023-08-09
 tags:
   - Agile
-  - user stories
+  - User-Stories
 ---
 User stories are narrative stories describing the goals that users and customers have. They are a way for teams to describe what they want to build in agile software development. But in the teams I see using stories, they've become more of a commodity of Agile. Stories are objects that get written, passed around, estimated and developed.
 

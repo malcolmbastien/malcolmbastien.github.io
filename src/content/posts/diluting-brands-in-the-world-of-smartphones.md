@@ -1,9 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: Diluting Brands in the World of Smartphones
 publishedDate: 2010-11-15
 tags:
-  - General
+  - Smartphones
 ---
 Windows Phone 7's different UI gives app developers a chance to do something radical that would just be too unexpected for users on other platforms. On the Blackberry, apps with a lot of transitions or that try and take advantage of big type wouldn't work out. And it certainly would look out of place with the rest of the phone experience.
 

@@ -5,7 +5,6 @@ publishedDate: 2012-08-07
 tags:
   - Email
   - Software
-  - Sparrow
   - Tech
 ---
 I just read [the introduction to .Mail](http://www.vanschneider.com/work/mail/), a new email concept, and came up with some thoughts of my own on how email clients should evolve.

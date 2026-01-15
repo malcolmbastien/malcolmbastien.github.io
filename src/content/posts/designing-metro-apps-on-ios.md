@@ -5,8 +5,6 @@ publishedDate: 2012-07-24
 tags:
   - Apple
   - Design
-  - HIG
-  - Metro
   - Mobile
   - Tech
 ---

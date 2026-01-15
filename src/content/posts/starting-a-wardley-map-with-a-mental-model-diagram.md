@@ -16,9 +16,9 @@ To begin the process, we refer to one of the Wardley Mapping doctrinal patterns 
 
 ## Adding Customer Needs
 
-An essential part of mapping is the anchor of user needs. Ideally, you want to create an environment where your needs are achieved by meeting the needs of your users.
-
-Simon Wardley, [A smorgasbord of the slightly useful](https://medium.com/wardleymaps/a-smorgasbord-of-the-slightly-useful-2498a1163dd6)
+> An essential part of mapping is the anchor of user needs. Ideally, you want to create an environment where your needs are achieved by meeting the needs of your users.
+>
+> Simon Wardley, [A smorgasbord of the slightly useful](https://medium.com/wardleymaps/a-smorgasbord-of-the-slightly-useful-2498a1163dd6)
 
 We start the process of focusing on user needs by answering two questions:
 
@@ -47,7 +47,7 @@ The next step to building our map is to identify what capabilities the client re
 - **High-level capabilities:** The products or services directly supporting user needs.
 	- Site Builder
 	- Domain Management
-	- Catalogue Management
+	- Catalog Management
 	- Promotions
 	- Email Marketing
 - **Low-level capabilities:** The lower-level activities that support the high-level capabilities.

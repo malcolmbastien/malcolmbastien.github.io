@@ -1,12 +1,9 @@
 ---
-status: seed
-title: Don&#039;t Take This Personally, I&#039;m Blocking You On Twitter
+status: evergreen
+title: "Don't Take This Personally, I'm Blocking You On Twitter"
 publishedDate: 2008-04-30
 tags:
-  - General
-  - Mitch Joel
-  - Rejection
-  - Social Networks
+  - Social-Media
   - Twitter
 ---
 What does connecting on different social platforms really mean from platform to platform, and what are the differences?  As we see the online social networking space evolve and more new networks get created, we're going to have to start paying attention not so much to the feature list of each new network, but more importantly on how they are each creating new definitions for "relationships".

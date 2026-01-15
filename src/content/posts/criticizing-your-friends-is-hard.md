@@ -1,5 +1,5 @@
 ---
-status: seed
+status: evergreen
 title: Criticizing Your Friends is Hard
 publishedDate: 2009-05-28
 tags:

@@ -3,13 +3,7 @@ status: seed
 title: Cross Post - Announcing Toronto Dev
 publishedDate: 2008-12-19
 tags:
-  - Canada
-  - Creative Commons
-  - General
-  - Open Source
-  - Publishing
   - Toronto
-  - toronto dev
   - Websites
 ---
 Yesterday I launched a new blog, Toronto Dev, focused on tech and social media community and news in Toronto. This message is crossed post on that blog.

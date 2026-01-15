@@ -1,5 +1,5 @@
 ---
-status: seed
+status: evergreen
 title: Creating Focus Through User Needs Mapping and Core Domain Mapping
 publishedDate: 2023-12-23
 tags:

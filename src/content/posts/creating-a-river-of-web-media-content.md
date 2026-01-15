@@ -3,16 +3,10 @@ status: seed
 title: Creating A River of Web Media Content
 publishedDate: 2009-02-06
 tags:
-  - BackType
   - Blogs
   - Comments
-  - Content
-  - DISQUS
-  - General
-  - IntenseDebate
   - Media
-  - semantic web
-  - Ubiquity
+  - Semantic-Web
 ---
 For the longest time, the content that has been produced has fit into very nice and well-defined categories, and there was a commonly understood structure to it all. But the time is approaching fast that ideas about content online will shift. When it happens, lines will blur around our friends' "blogs", "posts", and "comments".
 
@@ -32,8 +26,8 @@ Backtype.com
 
 That's pretty exciting stuff. BackType does something predictive of what the next iteration of the web will be able to do:
 
-**Query:** "Computer! Find all of Malcolm's comments [on the Internet]!"
-**Result:** [http://www.backtype.com/people?q=Malcolm+Bastien](http://www.backtype.com/people?q=Malcolm+Bastien)
+- **Query:** "Computer! Find all of Malcolm's comments [on the Internet]!"
+- **Result:** [http://www.backtype.com/people?q=Malcolm+Bastien](http://www.backtype.com/people?q=Malcolm+Bastien)
 
 That's really powerful. One of the great things about it is that it's not local to one stream. The more queries like this are integrated into the rest of the web and our tools - perhaps by creating a Backtype plugin for [Ubiquity](http://labs.mozilla.com/2008/08/introducing-ubiquity/) - then the web will grow to another level.
 

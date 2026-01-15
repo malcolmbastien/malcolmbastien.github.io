@@ -23,17 +23,12 @@ I'm going to try to explain why for some people, CrunchBang is the perfect netbo
 
 If you own a netbook there are probably only so many reasons that you use it for:
 
-Blogging
-
-Taking notes
-
-Web browsing
-
-Email
-
-Chat
-
-Skype
+- Blogging
+- Taking notes
+- Web browsing
+- Email
+- Chat
+- Skype
 
 Netbooks are not perfect machines, but they have their strengths, and by using lightweight and fast environments that stay out of your way and give you the ability to focus netbooks perfect for people who want to be as productive as possible with their tools.
 
@@ -57,7 +52,7 @@ And of course as a mobile Internet based device, you'll want to take advantage o
 
 CrunchBang has a great active IRC channel on Freenode with 30-50 users online at any time, perfect for getting help from people in real time.  The CrunchBang Linux Forums also have just around 1000 topics that have been posted and 8000 posts.  And they have an active blog, a wiki and their own planet aggregator!
 
-* (CrunchBang isn't only available for the Eee PC, the team also have 2 different desktop images that are available at the CrunchBang wiki.)*
+*(CrunchBang isn't only available for the Eee PC, the team also have 2 different desktop images that are available at the CrunchBang wiki.)*
 
 Have you tried CrunchBang Linux?
 

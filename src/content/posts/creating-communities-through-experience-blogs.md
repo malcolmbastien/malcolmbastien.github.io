@@ -1,9 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: Creating Communities Through Experience Blogs
 publishedDate: 2009-05-25
 tags:
-  - General
+  - Blogging
 ---
 
 Getting out of the mindset of advertising and direct promotions is important. Neither activity are enough to move customers online. One thing I am seeing that looks promising is the creation of experience centric blogs. Blogs created for, and blogs written by, the people that live and breath the brand experience.

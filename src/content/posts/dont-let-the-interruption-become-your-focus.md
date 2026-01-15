@@ -1,9 +1,8 @@
 ---
-status: seed
+status: evergreen
 title: Don't Let the Interruption Become Your Focus
 publishedDate: 2010-11-11
 tags:
-  - General
   - Pomodoro
 ---
 Over the past few months, ever since reading _The Creative Habit_ and _Making Ideas Happen_, I've thought a bunch about focus and what it can do for your work. I wrote about interruption, distraction, focus techniques like the Pomodoro Technique, and how losing focus is the enemy of productivity.

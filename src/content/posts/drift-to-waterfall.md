@@ -1,12 +1,12 @@
 ---
-status: seed
+status: evergreen
 title: Drift to Waterfall
 publishedDate: 2024-08-19
 tags:
   - Agile
-  - coaching
-  - principles
-  - teams
+  - Coaching
+  - Principles
+  - Teams
 ---
 A typical scenario I encounter with teams that want to be more agile is when they slowly start slipping into more Waterfall ways of working. This drift to waterfall happens when the solutions teams come up with to solve their problems and end up negatively impacting the team's agility and adaptability.
 
