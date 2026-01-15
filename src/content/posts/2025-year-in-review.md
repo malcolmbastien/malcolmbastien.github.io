@@ -1,0 +1,89 @@
+---
+title: 2025 Year in Review
+status: seed       
+tags:
+  - Year-In-Review
+summary: A look back at what happened in 2025
+draft: true              # Optional, adds WIP banner
+---
+
+# Vibe coded apps
+* [Team Flow Mapping](https://teamflowmapping.com/)
+* [DelayCost Visualizer](https://studio--delaycost-visualizer.us-central1.hosted.app/)
+* [Wardley Doctrine & AI Impact Explorer](https://wardley-doctrine-ai-impact-explorer-512441749265.us-west1.run.app/)
+* [Agile Big Room Planning](https://team-dependency-matrix-838267439197.us-west1.run.app)
+* [Firebase Studio App](https://studio--ganttify-6q9ac.us-central1.hosted.app/)
+* [Agile Team Profiler](https://agile-team-profiler-539581219123.us-west1.run.app)
+* [OutlineFlow](https://studio--outlineflow.us-central1.hosted.app/)
+* [Ganttify](https://studio--ganttify-6q9ac.us-central1.hosted.app/)
+
+# Blog
+
+I tried hard this year to write about topics I thought would be impactful and give people with alternative perspectives and paths to agility than the behaviours I saw in my day to day work. In my day to day, I saw poor management, people following the path of least resistence, and more focuse more on getting things done than considering:
+
+- What are we building?
+- Why are we doing it?
+- Does it add real value?
+- Is this having a positive impact on the team?
+
+In terms of stats, here's what 2025 looked like on the blog.
+
+- 15 posts
+- 16.8k words
+- 4.2k views
+
+## Obsidian
+
+I didn't spend as much time adding or grooming my Obsidian content in 2025 than I had in previous years. With the exception of the new AI and Maching Learning notes I captured, I spent a lot more of my time experimenting and building things than I did reading or note taking.
+
+I also spent time in the latter part of the year relearning how to using and configuring emacs, and how to use Org Mode.
+
+I don't think I'll ever remove Obsidian from my workflow, but in this age of software, I appreciate using applications with exceptionally high performance, stability, longevity, and customization. That pursuit occasionally leads me to try out and learn different applications.
+
+## Learned the Graphite Keyboard Layout
+
+In the quest for better comfort and ergonomics, I've learned a few different keyboard layouts.
+
+This year I decided to take the leap again and switch from using Engram, which I picked up in 2021 and learn Graphite.
+
+
+Overall my keyboard layout journey has looked like:
+
+QWERTY -> Dvorak -> Colemak -> Engram -> Graphite 
+
+Learning to type with a new keyboard layout is a very disruptive endeavour. It takes a lot of time, requires daily practice, and means having to start all over. But nevertheless, I find it pretty fun whenever I do it.
+
+## Video games played
+
+To help me create this ranking of how much I liked all of the games I played this year from most to least, I quickly created an app in Google AI Studio to take in all the games I played during the year and ask me a series of comparison questions.
+
+1. Clair Obscure (100%)
+2. Mars First Logistics (100%)
+   - I really enjoyed the freedom and creativity this game provided. This game was the best implementation i've played of clean, cel-shaded, Moebius-like art. Even better than what Sable was able to do. 
+3. Core Keeper (100%)
+   - This game was such a cute adventure, with fun progression, and lots of fun discoveries and secrets to find. This would have been really nice to play in a co-op world with someone, but as a solo player it was fun too.
+4. Monster Hunter Wilds
+   - I was really looking forward to this game after waiting for years, and put a lot of hours into it when it launched. Unfortunately the game's poor performance and end-game activities drove me away for good and I've had very little reason to ever pick it up again.
+5. Marvel Rivals (100%)
+6. Everspace 2 (100%)
+7. My Time at Portia
+8. Nova Lands (100%)
+9. Sable (100%)
+10. Jusant (100%)
+    - I wasn't too big a fan of how the narrative of this game was delivered, but it created such a cool world and had engaging controls.
+    - Because the game is so short, this is one I recommend lots of people pick up.
+11. Chants of Senaar (100%)
+12. BALL X PIT (100%)
+13. Escape from Duckov
+14. Backpack Hero (100%)
+15. Mega Bonk
+16. Legend of Grindea
+17. Blue Prince
+18. Balatro
+19. Slime Rancher
+20. I am Future (100%)
+21. Luma Island (100%)
+22. Heroes of Hammerwatch 2
+23. Littlewood
+24. Linked: Banner of the Spark
+25. Outer Wilds

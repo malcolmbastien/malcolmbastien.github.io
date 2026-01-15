@@ -3,7 +3,7 @@ status: seed
 title: A Recap of 2010
 publishedDate: 2010-12-31
 tags:
-  - Year in Review
+  - Year-In-Review
 ---
 
 - Helped organize [Connect IT 2010](http://connectitconference.com/)
