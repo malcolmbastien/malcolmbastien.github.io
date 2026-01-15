@@ -1,12 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: Twitter’s Inevitable Consistency
 publishedDate: 2012-08-21
 tags:
-  - App.net
-  - Social
-  - Tech
-  - Twitter
+  - Social-Media
 ---
 Twitter’s API updates and it’s direction that third party clients need to provide an experience more consistent with Twitter’s was inevitable for an ad supported network.
 

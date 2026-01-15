@@ -1,14 +1,26 @@
 ---
-status: seed
+status: evergreen
 title: Trying to Find the Smaller Conversations
 publishedDate: 2010-08-26
 tags:
-  - Conversations
-  - General
-  - Social Networks
+  - Social-Media
 ---
-At the very last meal of our latest cottage weekend before our car ride back to Toronto, @joshdavey challenged us and forced us to admit if we got value out of Twitter anymore. We started discussing the Buzz Kill story that Leo Laporte published and how for us yelling in a room full of other people yelling had become a habit that we all unknowingly found ourselves in as we started gaining larger twitter audiences.  The most important part about the conversation we were having was it’s small nature. What was expressed was a constant frustration at observing the way people we know behave in ways online that were misaligned with their behaviours when we talk to them in person.  We were all victims of being forced to shift our conversational patterns, from tight conversation, to loose conversation, and into broadcasting as our maturity on social networks matured. Eventually we started to seek out more networks to find places to have tight conversations. It worked for a period of time, but they all expanded eventually  Every network is like this because every network has mechanisms and incentives to increase your connectedness to other users. There’s no social network that rewards small networks among users.  One reason I think we keep finding ourselves in broadcast situations is that most of the different networks we join are all open. I’ve already been experimenting with private blogs over the past year as a way to keep communications tight among a close circle of friends, but what I found out though was that the effort blogging requires compared to Twitter in a public setting carries over and still makes it an inaccessible medium for those who with different workflows.  More recently we’ve started experimenting with a private group on status.net. The purpose of starting a private group isn’t to have a place to express ideas that are inappropriate to share publicly, instead it’s a mechanism to keep the group controlled and small, and to replicate the ways regular conversation work. There’s almost no danger of a tweet being shared, emailed, or scraped by a social media monitoring service.  It’s also fundamentally about letting the opportunity for tight conversations to happen more frequently. And on top of that, along the conversation spectrum of broadcasting, loose conversation, tight conversation, there’s finally no conversation, but personal introspection. What I think we are enabling ourselves to do by backing off from a shouting-room only environment is to reduce our investment in broadcasting (especially given the potential wasteful nature of investing in those messages like Leo Laporte will tell you) and reinvesting those resources into what is potentially more valuable.
+At the very last meal of our latest cottage weekend before our car ride back to Toronto, @joshdavey challenged us and forced us to admit if we got value out of Twitter anymore. 
 
-@joshdavey: [http://twitter.com/joshdavey](http://twitter.com/joshdavey)
-Buzz Kill: [http://leoville.com/buzz-kill](http://leoville.com/buzz-kill) 
-Status.net: [http://status.net/](http://status.net/)
+We started discussing the Buzz Kill story that Leo Laporte published and how for us yelling in a room full of other people yelling had become a habit that we all unknowingly found ourselves in as we started gaining larger twitter audiences.
+
+The most important part about the conversation we were having was it’s small nature. What was expressed was a constant frustration at observing the way people we know behave in ways online that were misaligned with their behaviours when we talk to them in person. We were all victims of being forced to shift our conversational patterns, from tight conversation, to loose conversation, and into broadcasting as our maturity on social networks matured. 
+
+Eventually we started to seek out more networks to find places to have tight conversations. It worked for a period of time, but they all expanded eventually  Every network is like this because every network has mechanisms and incentives to increase your connectedness to other users.
+
+There’s no social network that rewards small networks among users. One reason I think we keep finding ourselves in broadcast situations is that most of the different networks we join are all open.
+
+I’ve already been experimenting with private blogs over the past year as a way to keep communications tight among a close circle of friends, but what I found out though was that the effort blogging requires compared to Twitter in a public setting carries over and still makes it an inaccessible medium for those who with different workflows.
+
+More recently we’ve started experimenting with a private group on status.net. The purpose of starting a private group isn’t to have a place to express ideas that are inappropriate to share publicly, instead it’s a mechanism to keep the group controlled and small, and to replicate the ways regular conversation work. There’s almost no danger of a tweet being shared, emailed, or scraped by a social media monitoring service. It’s also fundamentally about letting the opportunity for tight conversations to happen more frequently.
+
+Along the conversation spectrum of broadcasting, loose conversation, tight conversation, there’s finally no conversation, but personal introspection. What I think we are enabling ourselves to do by backing off from a shouting-room only environment is to reduce our investment in broadcasting (especially given the potential wasteful nature of investing in those messages like Leo Laporte will tell you) and reinvesting those resources into what is potentially more valuable.
+
+- [@joshdavey](http://twitter.com/joshdavey)
+- [Buzz Kill](http://leoville.com/buzz-kill) 
+- [Status.net](http://status.net/)

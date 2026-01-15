@@ -3,7 +3,7 @@ status: seed
 title: Turn Anything Into a Social Something
 publishedDate: 2009-09-14
 tags:
-  - General
+  - Sociad-Media
 ---
 But more specifically, turning any sort of media from a static object to be consumed into something to share, repost, discuss, and to consume in formats beyond the original intention.
 

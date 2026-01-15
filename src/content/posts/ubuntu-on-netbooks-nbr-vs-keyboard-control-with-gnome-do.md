@@ -1,9 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: Ubuntu On Netbooks - NBR VS Keyboard Control With Gnome Do
 publishedDate: 2009-06-28
 tags:
-  - General
+  - Linux
 ---
 As soon as canonical announced the development of a netbook specific interface for Ubuntu and the first videos came out, it was very appealing and cool to run a Ubuntu NetBook Remix version of ubuntu on your netbook. I first started using NBR with the Easy Peasy distro of Ubuntu for netbooks. What you quickly discover though is that controlling the system while using the trackpad found on most netbooks is less than ideal.
 

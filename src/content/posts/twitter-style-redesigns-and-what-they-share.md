@@ -1,9 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: Twitter Style Redesigns And What They Share
 publishedDate: 2009-04-18
 tags:
-  - General
+  - Social-Media
 ---
  
 
@@ -20,12 +20,18 @@ It also looks like people are seeing creative ways in which communities and peop
 
 ## Who else can redesign?
 
-**[Wordpress](http://wordpress.org):** Apparently, people are blogging less and moving to the less time and commitment intensive micro blogging. Believe that or not, it would seem to me that a popular platform like WordPress should start looking at how people will produce content online in the future, and where they fit into that. If they do look towards the future, they might see WordPress as more than just a blogging platform, and as a tool to bring together all the different media people produce, a.k.a. life streaming.
+### [Wordpress](http://wordpress.org)
+
+Apparently, people are blogging less and moving to the less time and commitment intensive micro blogging. Believe that or not, it would seem to me that a popular platform like WordPress should start looking at how people will produce content online in the future, and where they fit into that. If they do look towards the future, they might see WordPress as more than just a blogging platform, and as a tool to bring together all the different media people produce, a.k.a. life streaming.
 
 Even if WordPress is a themeable platform, if they were to create a new default theme for a life streaming edition, then it would have a large impact on the way people use the software.
 
-**[Delicious](http://delicious.com):** Social bookmarking needs a refresh. Considering now that sites such as PostRank are not only giving people better ways to find high quality content, but these and other sites are going to displace Delicious which hasn't evolved past saving and tagging bookmarks in the past few years.
+### [Delicious](http://delicious.com)
 
-**[Digg](http://digg.com) & [Reddit](http://reddit.com/):** New versions of Digg have always been spot on whenever they came out. Reddit has always been pretty bland. Never the less, these social news sites seem like good candidates for a Twitter style redesign. In the case of these two sites, a radical redesign would do a lot to put users more in the center of the news links that are shared, discussed, and voted on by the sites larger community, as well as the connections of the user.**
+Social bookmarking needs a refresh. Considering now that sites such as PostRank are not only giving people better ways to find high quality content, but these and other sites are going to displace Delicious which hasn't evolved past saving and tagging bookmarks in the past few years.
+
+### [Digg](http://digg.com) & [Reddit](http://reddit.com/)
+
+New versions of Digg have always been spot on whenever they came out. Reddit has always been pretty bland. Never the less, these social news sites seem like good candidates for a Twitter style redesign. In the case of these two sites, a radical redesign would do a lot to put users more in the center of the news links that are shared, discussed, and voted on by the sites larger community, as well as the connections of the user.**
 
 I'm sure I missed a large list of sites who are changing, or coming up with new sites based on the same sort of design ideas, and even though I'm not a designer, what I think is interesting about this trend is the diversity to which different sites are trying this new layout, and ultimately, new experience applied to the services they provide. It's also really fascinating to see the new types of services that can exist when they take some of that experience and imbue it with even more creativity and are able to create, hopefully, something really different.  Although the draw back seems to be that the way people interact might start to feel very stale, very quickly given the amount of repetition that's possible.

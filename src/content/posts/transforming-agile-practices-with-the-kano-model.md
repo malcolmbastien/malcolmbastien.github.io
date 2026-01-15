@@ -1,12 +1,12 @@
 ---
-status: seed
+status: evergreen
 title: Transforming Agile Practices with the Kano Model
 publishedDate: 2025-08-17
 tags:
   - Agile
   - AI
-  - Apps
-  - Kano Model
+  - Tools
+  - Kano-Model
 ---
 Many agile transformations focus on replacing rigid, waterfall processes with a standard set of ceremonies, roles, and artifacts. Agile maturity is often measured by how many of these practices a team has adopted, or making sure they've adopted the right ones: Long-lived teams are "more agile" than project teams; frequent deployments are "more agile" than big-bang releases.
 
@@ -24,13 +24,10 @@ Let's take the example of Work-in-Progress (WIP) limits. A typical maturity asse
 
 This Kano-based approach digs deeper by breaking the practice down. We could ask the team to rate their satisfaction with specific behaviours:
 
-The act of *setting* WIP limits.
-
-The discipline of *following* WIP limits.
-
-The habit of *updating* WIP limits when the context changes.
-
-The focus on limiting WIP at the *bottleneck*.
+- The act of *setting* WIP limits.
+- The discipline of *following* WIP limits.
+- The habit of *updating* WIP limits when the context changes.
+- The focus on limiting WIP at the *bottleneck*.
 
 Does following these behaviours make a positive impact? Would you feel a negative impact if your team did them less or stopped? Which ones are the most important? This granular view moves us from abstract guidance to context-specific insights that a team can act on.
 
@@ -40,15 +37,11 @@ The Kano Model is a powerful tool for understanding customer satisfaction. It pl
 
 When we apply this to agile practices, we can ask these questions to team members, managers, stakeholders, or even customer collaborators. By asking team members how they feel about the presence or absence of a specific work habit, we can categorize those habits into five distinct types:
 
-**Performance:** These are "more is better" practices. The better you do them, the more satisfied the team is. The worse you do them, the less satisfied they are.
-
-**Must-be:** These are the non-negotiables. You expect them, and their absence causes major dissatisfaction. However, when done well, customers are just neutral.
-
-**Attractive:** The "wow" factors. These are delightful surprises. When present, they bring a lot of satisfaction, but their absence doesn't cause any dissatisfaction because nobody expected them in the first place.
-
-**Indifferent:** These practices don't move the needle on satisfaction at all. The team doesn't care whether they are present or absent.
-
-**Reverse:** This is the critical category for improvement. A high degree of functionality in these areas actively *causes dissatisfaction*. These are counterproductive, wasteful activities.
+- **Performance:** These are "more is better" practices. The better you do them, the more satisfied the team is. The worse you do them, the less satisfied they are.
+- **Must-be:** These are the non-negotiables. You expect them, and their absence causes major dissatisfaction. However, when done well, customers are just neutral.
+- **Attractive:** The "wow" factors. These are delightful surprises. When present, they bring a lot of satisfaction, but their absence doesn't cause any dissatisfaction because nobody expected them in the first place.
+- **Indifferent:** These practices don't move the needle on satisfaction at all. The team doesn't care whether they are present or absent.
+- **Reverse:** This is the critical category for improvement. A high degree of functionality in these areas actively *causes dissatisfaction*. These are counterproductive, wasteful activities.
 
 ## Use "Reverse" to Spot Waste
 
@@ -60,9 +53,8 @@ Many corporate agile practices start with good intentions but live on long past 
 
 Once you've gathered the data and categorized your team's micro-practices, you can have a focused conversation about what's creating value for people and what's not:
 
-**Amplify the Good:** How can we do more of what we classified as Attractive? How can we invest in improving our Performance practices?
-
-**Eliminate the Waste:** What can we stop or change how we do things from the Reverse category? What Indifferent activities that don't make a difference can we simplify or remove?
+- **Amplify the Good:** How can we do more of what we classified as Attractive? How can we invest in improving our Performance practices?
+- **Eliminate the Waste:** What can we stop or change how we do things from the Reverse category? What Indifferent activities that don't make a difference can we simplify or remove?
 
 This method has an advantage in that it's harder to game. Asking "Are stand-ups important?" is a leading question where people will likely give the answer they know is "correct". But asking about 10 different, specific elements of *how your team conducts its stand-up* forces people to think about things differently and could help reveal new insights.
 
@@ -78,13 +70,17 @@ After completing the survey, the app generates a Kano Model graph, a profile of 
 
 The prototype uses AI to generate a profile and recommendations, but the idea is that after the data is collected from a team, the reflective part of the exercise and coming up with recommendations could be done as part of a workshop activity.
 
-![](../../assets/2025/08/image-12.png)The Agile Profiler prototype app allows users to select various Agile practices and ceremonies for evaluation.
+![](../../assets/2025/08/image-12.png)
+*The Agile Profiler prototype app allows users to select various Agile practices and ceremonies for evaluation.*
 
-![](../../assets/2025/08/image-10.png)Visual representation of Agile practice evaluation using the Kano Model, highlighting satisfaction and functionality of five elements of a practice.
+![](../../assets/2025/08/image-10.png)
+*Visual representation of Agile practice evaluation using the Kano Model, highlighting satisfaction and functionality of five elements of a practice.*
 
-![](../../assets/2025/08/image-11.png)Insights into an Agile practice analysis on user stories with recommendations for improvement.
+![](../../assets/2025/08/image-11.png)
+*Insights into an Agile practice analysis on user stories with recommendations for improvement.*
 
-![](../../assets/2025/08/image-13.png)The overview of a Kano analysis displaying responses and the resulting classifications for an Agile practice.
+![](../../assets/2025/08/image-13.png)
+*The overview of a Kano analysis displaying responses and the resulting classifications for an Agile practice.*
 
 ## Conclusion: Focus on Practices that Add Value
 

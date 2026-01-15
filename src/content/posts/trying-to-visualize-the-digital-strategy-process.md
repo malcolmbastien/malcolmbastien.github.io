@@ -4,9 +4,9 @@ title: Digital Strategy
 publishedDate: 2012-09-25
 tags:
   - Business
-  - digital
+  - Digital
   - MadeWithPaper
-  - Image
+  - Images
   - Sketches
   - Strategy
 ---

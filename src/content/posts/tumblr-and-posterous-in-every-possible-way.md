@@ -3,7 +3,7 @@ status: seed
 title: Tumblr and Posterous In Every Possible Way
 publishedDate: 2009-10-11
 tags:
-  - General
+  - Software
 ---
 Ok, so recently the appeal of hosting, managing, and dealing with the hassles of managing my own WordPress blog have gotten to me. And after looking into what lifestream has shifted to from the complete shift of Steve Rubel to Posterous over the past 90 days I've decided that the time is right to - soon- move over to using a 3rd party provider to manage my blogging needs.
 
@@ -13,7 +13,7 @@ Which leads to what I've spent the better part of two days doing, comparing on a
 
 Here's a mind dump of what I like and dislike from each service so far after spending the time looking at the two closely (I haven't really read any reviews by people on what they think of the service, mostly just the content other people have made and the documentation).
 
-Posterous
+## Posterous
 
 **Posterous Pros:**
 
@@ -34,7 +34,7 @@ Posterous
 - There collections of themes is still very sparse.
 - They don't let me use Disqus for my commenting (The default commenting works, but I just want Disqus). Since they don't enable Javascript, I can't plug it in using custom theming as well.
 
-Tumblr
+## Tumblr
 
 **Tumblr Pros:**
 

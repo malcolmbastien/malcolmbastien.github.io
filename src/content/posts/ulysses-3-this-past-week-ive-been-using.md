@@ -1,5 +1,5 @@
 ---
-status: seed
+status: evergreen
 title: Ulysses 3
 publishedDate: 2013-04-12
 tags:
