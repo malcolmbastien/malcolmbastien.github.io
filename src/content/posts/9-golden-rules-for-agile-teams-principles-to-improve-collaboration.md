@@ -46,11 +46,9 @@ In both cases, I want to encourage more mindfulness.
 
 People get too focused on the tasks getting done but ignore the side effects:
 
-Low-maturity organizations like to see people busy with work. These cultures want big work breakdowns with tasks and names attached to them.
-
-Collaboration suffers when there is a division between people who assign and “manage” the tasks and those who execute them.
-
-There’s the opportunity cost of the wasted resources you could have invested elsewhere.
+- Low-maturity organizations like to see people busy with work. These cultures want big work breakdowns with tasks and names attached to them.
+- Collaboration suffers when there is a division between people who assign and “manage” the tasks and those who execute them.
+- There’s the opportunity cost of the wasted resources you could have invested elsewhere.
 
 Instead of carelessly handing out or working on tasks, both parties should pause first and talk about the intended outcomes. These discussions about outcomes and strategy are different from the work that typically appears on a team’s task board, so this type of collaboration is rarely considered or practiced.
 
@@ -60,11 +58,9 @@ When people are negatively surprised, it indicates a communication breakdown. Th
 
 Examples include:
 
-When managers surprise their teams by announcing that they’re implementing new policies
-
-When people learn about important events only when they receive a meeting invitation.
-
-Surprises occur when people communicate and make decisions in isolated pockets and only involve the rest of the team after the fact.
+- When managers surprise their teams by announcing that they’re implementing new policies
+- When people learn about important events only when they receive a meeting invitation.
+- Surprises occur when people communicate and make decisions in isolated pockets and only involve the rest of the team after the fact.
 
 ## Don’t Show and Tell; Do It Together
 
@@ -96,9 +92,8 @@ When facing issues, resist the urge to resolve them by adding new meetings or pr
 
 Some problems with this approach include:
 
-Increasing complexity without addressing core issues.
-
-Assuming all existing practices are necessary.
+- Increasing complexity without addressing core issues.
+- Assuming all existing practices are necessary.
 
 Another danger is how it costs more to remove a new process after it has been introduced and adopted. Instead of adding something new to fix a problem, examine current ways of working, understand the root causes, and fix the real problem.
 
@@ -110,11 +105,9 @@ The most common way Coaches can waste people’s time or make things worse is by
 
 To avoid falling into this trap:
 
-Increase team focus and awareness of the outcomes they’re trying to achieve.
-
-Work to empower teams to make their own decisions.
-
-Think about what you can do to make your interactions with people more effective. Ask yourself, “How can I make this easier for the other person?”
+- Increase team focus and awareness of the outcomes they’re trying to achieve.
+- Work to empower teams to make their own decisions.
+- Think about what you can do to make your interactions with people more effective. Ask yourself, “How can I make this easier for the other person?”
 
 ## Conclusion
 

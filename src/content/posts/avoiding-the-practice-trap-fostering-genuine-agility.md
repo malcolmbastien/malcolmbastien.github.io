@@ -66,7 +66,7 @@ In all cases I've seen new terminology invented to support an agile transformati
 
 [John Shook's Change Model](https://www.lean.org/downloads/35.pdf) says we change our behaviour to change our thinking. Rather than take that lesson to mean starting an agile transformation journey with an over-emphasis on agile practices, here are four small steps to take instead:
 
-1. **Encourage Mindfulness: **Teams should always be mindful of the problems they're trying to solve, why they are doing things, and how they can improve.
+1. **Encourage Mindfulness:** Teams should always be mindful of the problems they're trying to solve, why they are doing things, and how they can improve.
 2. **Recognize There's No Silver Bullet:** No single practice, team structure, or framework will make you agile. True agility comes from continuously focusing on customers' needs and improving how you work to meet those needs.
 3. **Avoid Universal Proclamations:** If you're in an Agile Coach role, resist the urge to promote or discourage practices by labelling them universally good or bad. Instead:
 	- Help teams understand the intent of particular practices

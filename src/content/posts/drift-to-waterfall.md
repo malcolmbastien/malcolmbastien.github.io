@@ -12,13 +12,10 @@ A typical scenario I encounter with teams that want to be more agile is when the
 
 Let's look at some real-life examples that illustrate the drift to waterfall in action:
 
-A team experiences issues with changing requirements, so it decides to lock down the requirements for its next project before starting development.
-
-To address confusion around roles, a team creates detailed RACI-based role expectations.
-
-Late deliveries prompt the introduction of thorough project planning and estimation.
-
-Escaped defects lead to additional review meetings.
+- A team experiences issues with changing requirements, so it decides to lock down the requirements for its next project before starting development.
+- To address confusion around roles, a team creates detailed RACI-based role expectations.
+- Late deliveries prompt the introduction of thorough project planning and estimation.
+- Escaped defects lead to additional review meetings.
 
 These solutions are all logical and seem to address the problems directly. However, these remedies all move teams to a more Waterfall-based approach, emphasizing working with fixed scope, upfront planning, rigid roles and responsibilities, and extra quality reviews.
 
@@ -44,13 +41,13 @@ Here's how Agile principles could alternatively guide us to resolve the problems
 
 Instead of locking down requirements, consider these principles:
 
-Business people and developers must work together daily throughout the project.
+> Business people and developers must work together daily throughout the project.
+>
+> Principles behind the Agile Manifesto
 
-Principles behind the Agile Manifesto
-
-"Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
-
-Principles behind the Agile Manifesto
+> Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
+>
+> Principles behind the Agile Manifesto
 
 These principles remind us that change is inevitable and that being able to respond to change is an advantage. Rather than trying to eliminate change, teams should find ways to embrace it.
 
@@ -58,13 +55,13 @@ These principles remind us that change is inevitable and that being able to resp
 
 Rather than creating explicit and rigid role definitions, remember:
 
-Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.
+> Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.
+>
+> Principles behind the Agile Manifesto
 
-Principles behind the Agile Manifesto
-
-Develop people who are deep in one area and broad in many.
-
-The Principles of Product Development Flow
+> Develop people who are deep in one area and broad in many.
+>
+> The Principles of Product Development Flow
 
 These principles emphasize the power of team motivation and trusting people to do what's right. They encourage teams to think of people more as T-shaped individuals rather than as single functional experts with strict role assignments.
 
@@ -72,13 +69,13 @@ These principles emphasize the power of team motivation and trusting people to d
 
 Instead of detailed upfront planning, consider:
 
-Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.
+> Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.
+> 
+> Principles behind the Agile Manifesto
 
-Principles behind the Agile Manifesto
-
-Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.
-
-Principles behind the Agile Manifesto
+> Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.
+> 
+> Principles behind the Agile Manifesto
 
 These principles promote frequent delivery and short feedback cycles instead of long-term planning.
 
@@ -86,13 +83,13 @@ These principles promote frequent delivery and short feedback cycles instead of 
 
 Rather than adding review gates, think about:
 
-Peer reviewed change approval mechanisms (such as pair programming or code review by other developers) are as effective at creating stable systems as change advisory boards--but have a drastically better throughput.
+> Peer reviewed change approval mechanisms (such as pair programming or code review by other developers) are as effective at creating stable systems as change advisory boards--but have a drastically better throughput.
+> 
+> Lean Enterprise
 
-Lean Enterprise
-
-Quality is made in the board room.
-
-W. Edwards Deming
+> Quality is made in the board room.
+> 
+> W. Edwards Deming
 
 These concepts encourage building quality from the start and treating it as a product of your development process rather than a separate phase.
 
@@ -102,11 +99,9 @@ As Agile coaches, our role is not to implement Agile practices but to guide a
 
 Coaching Agile principles involves:
 
-Asking probing questions to explore how teams are working and why.
-
-Helping teams understand the principles supporting Agile practices.
-
-Encouraging teams to develop their own solutions guided by Agile principles.
+- Asking probing questions to explore how teams are working and why.
+- Helping teams understand the principles supporting Agile practices.
+- Encouraging teams to develop their own solutions guided by Agile principles.
 
 Often, my first conversation with teams about how they work is asking them, "Why are you doing this?" The answer is frequently "Because we have to," and at that point, the conversation ends. The requirement to conform kills self-organization and agility.
 

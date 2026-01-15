@@ -49,26 +49,26 @@ Part of the solution starts with broadening the options available for three cate
 
 ### Types of Dependencies
 
-> Even though most teams resolve dependencies by adding or borrowing people, dependencies are never on people. This simplistic view ignores the nuances of different types of dependencies:
->
-> [Strode and Huff, "A Taxonomy of Dependencies in Agile Software Development."](https://www.researchgate.net/publication/267706181_A_Taxonomy_of_Dependencies_in_Agile_Software_Development)
-
 - Knowledge dependencies
 - Task dependencies
 - Resource dependencies
 
 Your dependency on a person could be on their domain knowledge. It could be on a task only they can complete. It could be a business process like an approval or review for which they are responsible.
 
-### Team Interaction Modes
-
-> Similarly, there are various ways to resolve dependencies beyond just collaboration:
+> Even though most teams resolve dependencies by adding or borrowing people, dependencies are never on people. This simplistic view ignores the nuances of different types of dependencies:
 >
-> [Team Topology's Team Interaction Modes](https://teamtopologies.com/key-concepts)
+> [Strode and Huff, "A Taxonomy of Dependencies in Agile Software Development."](https://www.researchgate.net/publication/267706181_A_Taxonomy_of_Dependencies_in_Agile_Software_Development)
+
+### Team Interaction Modes
 
 - X-as-a-service
 - Facilitation
 - Collaboration
 - Temporary, fully-embedded team members
+
+> Similarly, there are various ways to resolve dependencies beyond just collaboration:
+>
+> [Team Topology's Team Interaction Modes](https://teamtopologies.com/key-concepts)
 
 ### Dependency Management
 

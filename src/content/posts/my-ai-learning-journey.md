@@ -78,7 +78,7 @@ There are many services offering solutions to help you create apps from a prompt
 		- [Roo Code](https://github.com/RooCodeInc/Roo-Code)
 		- [Kilo Code](https://github.com/Kilo-Org/kilocode)
 		- [Gemini Code Assist](https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist)
-- CLI tools
+- **CLI tools**
 	- [Gemini CLI](https://github.com/google-gemini/gemini-cli)
 	- [opencode](https://github.com/sst/opencode)
 - **Task management for AI development**
@@ -99,9 +99,6 @@ Using these different AI coding agents through VS Code was fine, but perhaps not
 ### AI Agent Experiments GitHub
 
 While experimenting with AI agents, I needed a place to push my code, so I created a new GitHub repository set up for use with GitHub Pages.
-
-- [https://malcolmbastien.github.io/](https://malcolmbastien.github.io/)
-- [GitHub repository](https://github.com/malcolmbastien/malcolmbastien.github.io)
 
 It was pretty exciting to see ideas flow from my head and get deployed directly to my repository. Once I played around with things for a bit and got used to what was going on, I had the LLM model the process as a flow diagram:
 
