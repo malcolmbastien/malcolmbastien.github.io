@@ -4,13 +4,9 @@ title: Facebook, Fear, and The Risky Devide
 publishedDate: 2009-02-24
 tags:
   - Facebook
-  - General
   - Leadership
-  - Online Communities
   - Privacy
-  - Seth Godin
-  - Social Media
-  - Social Network
+  - Social-Media
   - Twitter
 ---
 When you use Facebook to have fun and screw around with your friends, it's easy, and you need not worry too much about it.

@@ -3,18 +3,9 @@ status: seed
 title: Recommended Wordpress Plugins For New Bloggers
 publishedDate: 2009-02-02
 tags:
-  - Beginner
   - Blogging
-  - Friendfeed
-  - General
-  - Google Analytics
-  - Google XML Sitemaps
-  - JS-Kit
-  - Plugins
-  - SezWho
   - Twitter
-  - Wordpress
-  - WordPress.com Stats
+  - WordPress
 ---
 I've had a few friends in the past couple of months start new blogs, which is great, but a big part of starting a new blog is deciding on what plugins should be installed as well.  Instead of helping these new bloggers one at a time, I've decided to be a bit more efficient and will instead publish a list of what plugins I have set up on this blog.
 

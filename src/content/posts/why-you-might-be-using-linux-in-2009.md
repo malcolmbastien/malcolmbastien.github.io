@@ -3,23 +3,11 @@ status: seed
 title: Why You Might Be Using Linux in 2009
 publishedDate: 2008-12-22
 tags:
-  - Amarok
-  - Cloud
-  - Dolphin
-  - Easy Peasy
-  - Eeepc
-  - Gadgets
-  - General
-  - Google Desktop
+  - Google
   - KDE
-  - KDE4
   - Linux
-  - Linux adoption
-  - Netbook
-  - ubunte-eee
   - Ubuntu
-  - Web Browser
-  - windows 7
+  - Windows
 ---
 Whatever you do, 2009 is looking to be a big year.  That no exception when it comes to Linux. Applications and large projects continue to develop and make major releases multiple times per year.  And while every year people predict that the next might be "The Year" for Linux adoption, here's a list of some major products and trends that will play a part in attracting new attention to Linux in 2009.
 

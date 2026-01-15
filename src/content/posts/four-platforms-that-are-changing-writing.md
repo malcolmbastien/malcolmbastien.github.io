@@ -3,17 +3,11 @@ status: seed
 title: Four Platforms That Are Changing Writing
 publishedDate: 2012-08-16
 tags:
-  - Blogger
   - Blogging
-  - Branch
-  - Medium
   - Software
-  - Svbtle
-  - Tech
-  - The Mavenist
   - Tumblr
   - Twitter
-  - Wordpress
+  - WordPress
   - Writing
 ---
 Not since 1998 when blogging was first introduced to the world has writing changed. Recently, four platforms made by start-ups and individuals have done more to change writing than anyone else in the world.

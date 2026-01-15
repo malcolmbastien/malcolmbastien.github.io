@@ -4,9 +4,6 @@ title: What's Next For The Mac?
 publishedDate: 2012-08-13
 tags:
   - Apple
-  - iOS
-  - Mac
-  - OS X
   - Tech
 ---
 The past two releases of Mac OS X, Lion and Mountain Lion, were both focused around the changes they made to make the desktop more like iOS. Their changes affected how apps can notify users to updates, included day-to-day applications like Notes and Reminders which are synced across all devices, and more.

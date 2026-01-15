@@ -5,10 +5,7 @@ publishedDate: 2013-04-12
 tags:
   - Advertising
   - Business
-  - Douglas Rushkoff
   - Marketing
-  - oreo
-  - Present Shock
 ---
 Real-time content, real-time analytics, and real-time marketing all sound increasingly interesting and cool, but they’re also increasingly expensive and require real-time permission, real-time resources, and real-time creative insights. At the end of it all who’s to say what the results of all that real-time marketing will be, or when they’ll deliver? Is the reward, real-time brand, real-time trust, and real-time results?
 
@@ -16,7 +13,7 @@ I have a feeling that whatever the return on real-time marketing are, companies 
 
 ## Present Shock
 
-Those are some of the things I started thinking about after reading an [interview with Douglas Rushkoff in the ￼Nieman Journalism Lab](http://www.niemanlab.org/2013/04/douglas-rushkoff-wants-you-to-quit-tweetdeck-and-read-a-book/) about his new book, Present Shock. What immediately got my attention was when Rushkoff laid out five of the principals of the phenomenon he calls Present Shock, and how  people and media are changing their behaviour and perception of the world, only a few years after of the introduction of real-time and mobile media.
+Those are some of the things I started thinking about after reading an [interview with Douglas Rushkoff in the Nieman Journalism Lab](http://www.niemanlab.org/2013/04/douglas-rushkoff-wants-you-to-quit-tweetdeck-and-read-a-book/) about his new book, Present Shock. What immediately got my attention was when Rushkoff laid out five of the principals of the phenomenon he calls Present Shock, and how  people and media are changing their behaviour and perception of the world, only a few years after of the introduction of real-time and mobile media.
 
 While the interview covers a couple of interesting topics and talks about the impact these behaviours have on journalism, attention, social media, and technology, the behaviours outlined most likely manifest in every aspect of our lives without us realizing it.
 

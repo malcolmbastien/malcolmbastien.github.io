@@ -4,19 +4,12 @@ title: How Creative Is Your Business Technology?
 publishedDate: 2009-02-23
 tags:
   - Creativity
-  - Don't Make Me Think
   - Espresso
   - General
-  - Guneet Singh
-  - John Maeda
-  - Laws of Simplicity
-  - pcto09
-  - PodCamp Toronto
-  - Ryerson University
-  - Steven Krug
+  - PodCamp
+  - Toronto
+  - Ryerson
 ---
-[![weekend creative : punch collage](http://farm3.static.flickr.com/2167/2250158125_9fdf9f547a_m.jpg)](http://www.flickr.com/photos/96666162@N00/2250158125) 
-
 I had the chance to meet up with some of the people working at Espresso while at PodCamp Toronto, and after getting into a brief discussion about what sort of stuff my program covered at Ryerson, Guneet Singh from Espresso made a great point about what's important when solving problems with IT.  What he said was to look at combining technology and creativity.
 
 In most of my courses we've been drilled the message that you need to relate using information technology back to solving a business problem, which is sort of like saying that buying things necessitates having money. Smart people figured that out decades ago (which says something about the people who still haven't figured it out).

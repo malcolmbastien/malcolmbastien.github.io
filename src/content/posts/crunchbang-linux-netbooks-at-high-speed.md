@@ -3,19 +3,12 @@ status: seed
 title: CrunchBang Linux, Netbooks at High Speed
 publishedDate: 2009-01-30
 tags:
-  - ASUS Eee PC
   - Blogging
-  - chat
-  - Crunchbang
-  - Dropbox
-  - Easy Peasy
-  - Email
-  - General
   - Linux
-  - Netbook
-  - skype
+  - Dropbox
+  - Email
+  - Linux
   - Ubuntu
-  - Window Manager
 ---
 Ever since getting my Eee PC, I've used Easy Peasy as my netbook optimized operating system.  But last week I discovered CrunchBang Linux (also referred to as #!), a distribution built on top of Ubuntu that uses OpenBox as its Window Manager. CruchBang Linux and its OpenBox environment are perfectly suited to the Eee PC.  CrunchBang has a Eee specific release called CrunchEee.  Eee PCs are by not slow, and they can run well by using a lot more resource intensive systems, but there's just no need for it.
 
@@ -32,7 +25,7 @@ If you own a netbook there are probably only so many reasons that you use it for
 
 Netbooks are not perfect machines, but they have their strengths, and by using lightweight and fast environments that stay out of your way and give you the ability to focus netbooks perfect for people who want to be as productive as possible with their tools.
 
-## Speed and Simplicity.
+## Speed and Simplicity
 
 Lightweight desktops environments are sometimes perceived as being more complicated than other environments such as Gnome or KDE, but CrunchBang does a great job of keeping options and controls easy to use when you want to, and out of your way when you don't.  It's about keeping your environment task focused. For when you want to, there are a few customization options that CrunchBang provides you with.
 

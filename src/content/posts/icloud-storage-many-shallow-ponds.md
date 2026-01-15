@@ -4,10 +4,6 @@ title: "iCloud Storage: Many Shallow Ponds"
 publishedDate: 2012-08-13
 tags:
   - Apple
-  - iCloud
-  - iOS
-  - Mac
-  - OS X
   - Tech
 ---
 In five years we’re going to look back at the way we’ve been managing our documents and feel silly. We may even feel silly for managing our documents in the first place.

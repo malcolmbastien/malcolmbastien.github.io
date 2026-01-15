@@ -3,12 +3,7 @@ status: seed
 title: The Desktop Is Done, Think Like iOS
 publishedDate: 2012-07-30
 tags:
-  - App Store
   - Apple
-  - iOS
-  - Mac
-  - Mountain Lion
-  - OS X
   - Tech
 ---
 It’s time to think of the desktop operating system as outdated. And if we’re going to continue using iPads and iPhones, then the way we think about and use OS X needs to change as well.

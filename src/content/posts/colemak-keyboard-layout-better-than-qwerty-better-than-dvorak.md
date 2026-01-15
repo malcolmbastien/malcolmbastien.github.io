@@ -1,12 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: Colemak Keyboard Layout - Better Than QWERTY, Better Than Dvorak
 publishedDate: 2009-02-04
 tags:
-  - Colemak
-  - Dvorak
   - Productivity
-  - QWERTY
   - Typing
 ---
 If Dvorak is an alternative keyboard layout, then Colemak is an alt-alt-layout.  Designed to be easy to learn for QWERTY keyboard users, the Colemak keyboard layout has a lot going for it as far as being not only a better keyboard layout for typing, but also one that people might even be compelled to switch to!
@@ -15,8 +12,8 @@ Colemak was designed after the QWERTY and Dvorak layouts were designed. In fact,
 
 I switched over to Colemak after being a Dvorak typist for two years, and even though Colemak is only marginally better than Dvorak (both are vastly superior than the QWERTY layout) I decided that **a small increase in productivity is still an increase in productivity**.** **Because that's what the purpose of a good keyboard layout is, as seamless as possible a way to input data onto computers.  **Good keyboard layouts help you type faster and ****be more productive** (You still need to put in the proper time for practice and training though). If not to help you type faster, which many people can already do using the QWERTY layout, at least to let you continue to type fast without destroying your wrists.
 
- [![The Colemak keyboard layout.](http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/KB_US-Colemak.svg/202px-KB_US-Colemak.svg.png)](http://commons.wikipedia.org/wiki/Image:KB_US-Colemak.svg) 
- *Colemak Keyboard Layout via [Wikipedia](http://commons.wikipedia.org/wiki/Image:KB_US-Colemak.svg) *
+ ![The Colemak keyboard layout](http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/KB_US-Colemak.svg/202px-KB_US-Colemak.svg.png)
+ *Colemak Keyboard Layout via [Wikipedia](http://commons.wikipedia.org/wiki/Image:KB_US-Colemak.svg)*
 
 Not to get too philosophical, but if you've become more of a content producer online, type at a computer for most of the day, or like to try your hands at any life hack that could save you time, I hope you try switching to a more efficient layout.  There are a lot of life hacks being written now on using different tools and applications, or different desktop environment modifications to do etc... but why not pay the same attention to the method in which you interact with and transmit information 95% of the time?It's actually a fun way to challenge yourself and to relearn a skill.  After all, starting from scratch is sometimes the only way to improve.  It is literally like starting from scratch at 15 characters per minutes for the first little while.
 

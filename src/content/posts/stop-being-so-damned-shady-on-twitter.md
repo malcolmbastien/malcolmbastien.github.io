@@ -1,21 +1,10 @@
 ---
-status: seed
+status: evergreen
 title: Stop Being So Damned Shady On Twitter
 publishedDate: 2009-02-27
 tags:
-  - Aiderss
-  - Akoha
-  - Business
-  - DISQUS
-  - General
-  - Online Communities
-  - RedWire
-  - Refresh Events
-  - Social Media
-  - Social Networking
-  - Starbucks
+  - Social-Media
   - Twitter
-  - Zemanta
 ---
 If your only account on Twitter is a corporate account: **Stop.**
 
@@ -31,7 +20,7 @@ Let's examine some good cases then compare them.
 
 **Starbucks**; Here is a common example that we are seeing more of. Everybody knows a company like Starbucks, and some people are big Starbucks fans. The important part is when Starbucks made their Twitter account, because everyone knew the company, it was pretty obvious what was going on.  Presumably Starbucks was going to start engage with customers through social channels and promote the brand in whatever ways. That's fine. They actually gave the account some personality which was even better.
 
-**[RedWire](http://www.redwirenation.com/), ****Disqus, ****AideRSS, ****[Refresh Events](http://www.refresh-events.ca/), Akoha, Zemanta**; You can find example after example of corporate accounts on Twitter, but the important part is that all people who manage these accounts each have their own personal account on Twitter as well.  Each one has a personal account to separate between their personal network and those who aren't interested in receiving info about the particular company.
+[RedWire](http://www.redwirenation.com/), Disqus, AideRSS, [Refresh Events](http://www.refresh-events.ca/), Akoha, Zemanta; You can find example after example of corporate accounts on Twitter, but the important part is that all people who manage these accounts each have their own personal account on Twitter as well.  Each one has a personal account to separate between their personal network and those who aren't interested in receiving info about the particular company.
 
 In the two sets of examples here, either the company is worldwide and globally recognized (aka not your company), or the people behind the company have all done their foot work to establish a reputation for themselves. It all really a lot of common sense.
 

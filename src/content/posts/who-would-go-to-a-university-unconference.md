@@ -1,13 +1,11 @@
 ---
-status: seed
+status: evergreen
 title: Who Would Go To A University Unconference?
 publishedDate: 2008-03-05
 tags:
-  - General
   - Mind Fusion
-  - sife
-  - unconference
-  - University
+  - School
+  - Ryerson
 ---
 I'm catching a break right now during the day of the [Ryerson Business Forum](http://rbf.ryerson.ca/), and thinking of the potential of running a continuous unconference series at Ryerson. The group I'm a part of, [SIFE Ryerson](http://siferyerson.com), is pretty ahead of the ball in terms of engaging students, and late last month I came up with the idea of what's now called the Mind Fusion unconference series to try and grow interest in entrepreneurship from a different way than has been tried before at our school.
 

@@ -5,11 +5,10 @@ publishedDate: 2011-09-15
 tags:
   - General
 ---
-[gallery]
 
 It seems like we all know where computing is going.
 
-Tablets, ultraportable laptops, NFC, smart phones, the Internet of Things...
+Tablets, ultra-portable laptops, NFC, smart phones, the Internet of Things...
 
 We know it's coming. It's just a matter of when it'll be ready for consumers.
 
@@ -25,6 +24,6 @@ There's still a lot of unresolved issues with software in general that the world
 
 It's a volatile time as traditional industries that have been around for centuries are being disrupted. Publishing of newspapers, magazines and books, brick and mortar stores, television, movies and music. Better experiences delivered through new hardware and software are disrupting these industries.
 
-These industries will always exist, and we already have an idea how we'll experience them (Tablets, ultraportable laptops, NFC, Smart phones, the Internet of Things). In the next few years we'll see some try to save their businesses, and we'll see others use innovative software to completely reimagine them.
+These industries will always exist, and we already have an idea how we'll experience them (Tablets, ultra-portable laptops, NFC, Smart phones, the Internet of Things). In the next few years we'll see some try to save their businesses, and we'll see others use innovative software to completely reimagine them.
 
 Discovering over the next 10 years what that software will look and how it will work is what really excites me.

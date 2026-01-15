@@ -1,10 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: Why Do Location Sharing?
 publishedDate: 2010-01-30
 tags:
-  - General
-  - location sharing
+  - Social-Media
 ---
 Can you please contribute your reasons for using location sharing applications?
 
