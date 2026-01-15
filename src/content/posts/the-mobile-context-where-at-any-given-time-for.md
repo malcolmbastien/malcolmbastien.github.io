@@ -4,8 +4,7 @@ title: Success for the Mobile Context
 publishedDate: 2012-10-12
 tags:
   - MadeWithPaper
-  - Image
-  - Mobile
+  - Images
   - Sketches
 ---
 ![](../../assets/2012/10/tumblr_mbsqqcrexk1qa77f2o1_1280.jpg)
