@@ -3,7 +3,7 @@ status: seed
 title: The Next Step For Net Geners 
 publishedDate: 2009-06-08
 tags:
-  - General
+  - Work
 ---
 
 There's a lot more land to conquer for the net generation in the world of big business.

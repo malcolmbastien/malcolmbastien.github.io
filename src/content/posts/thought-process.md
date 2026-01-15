@@ -1,9 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: Thought Process
 publishedDate: 2012-01-04
 tags:
-  - General
+  - School
 ---
 Last month I attended a showing at Ryerson of a documentary on Ayn Rand and Objectivism. Near the end of the Q&A session, one of the Objectivism representatives gave us advice not to make our decision just based on what they were saying, but to come to our own conclusions by thinking for ourselves.
 

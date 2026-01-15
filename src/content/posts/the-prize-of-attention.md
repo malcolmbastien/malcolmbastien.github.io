@@ -7,7 +7,9 @@ tags:
 ---
 I was reading Bird by Bird yesterday, and I came across a passage that gives an explanation of what the advantage is of simplicity compared to complexity. It’s one of only a few I’ve found that doesn’t go into zen, or that doesn’t include “less is more” cliches.
 
-> Mostly things are not that way, that simple and pure, with so much focus given to each syllable of life as life sings itself. But that kind of attention is the prize. To be engrossed by something outside ourselves is a powerful antidote for the rational mind, the mind that so frequently has its head up its own ass — seeing things in such a narrow and darkly narcissistic way that it presents a colo-rectal theology, offering hope to no one. - Anne Lamont
+> Mostly things are not that way, that simple and pure, with so much focus given to each syllable of life as life sings itself. But that kind of attention is the prize. To be engrossed by something outside ourselves is a powerful antidote for the rational mind, the mind that so frequently has its head up its own ass — seeing things in such a narrow and darkly narcissistic way that it presents a colo-rectal theology, offering hope to no one.
+> 
+> Anne Lamont
 
 You can find a lot of examples of getting engrossed by something outside yourself if you start to look around: When in a good book, when listening or playing music, when drawing or painting. It even happens if you are playing or watching sports.
 

@@ -3,10 +3,10 @@ status: seed
 title: The Micro-Blogging Enabled Company
 publishedDate: 2008-09-02
 tags:
-  - General
+  - Social-Media
   - Laconica
 ---
-In [my last post](http://openmode.ca/2008/08/28/why-laconica-means-big-things-for-corporate-micro-blogging/) I talked about how the portability allowed by a platform like [Laconica](http://laconi.ca/) means big things for business.  Now with these tools, each business is able to have it's own internal [micro-blogging](http://en.wikipedia.org/wiki/Micro-blogging) platform, and it's own Lifestream, powered by the people who work there.
+In [[why-laconica-means-big-things-for-corporate-micro-blogging|Why Laconica Means Big Things For Corporate Micro Blogging]] I talked about how the portability allowed by a platform like [Laconica](http://laconi.ca/) means big things for business.  Now with these tools, each business is able to have it's own internal [micro-blogging](http://en.wikipedia.org/wiki/Micro-blogging) platform, and it's own Lifestream, powered by the people who work there.
 
 When looking at how micro-blogging in an internal setting will impact a business, it's important to start understanding what it's going to mean for a company to be “Micro Blogging Enabled”.  What images will come to mind when we know a company runs an internal micro-blogging platform.  Could corporate micro-blogging catch on enough in the short term future enough for us to look for companies to be enabled in this sort of way?
 

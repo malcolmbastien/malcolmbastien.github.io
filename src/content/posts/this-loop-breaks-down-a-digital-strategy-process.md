@@ -1,18 +1,14 @@
 ---
-status: seed
+status: evergreen
 title: The Digital Strategy Process
 publishedDate: 2012-09-24
 tags:
-  - Brand
-  - digital strategy
-  - emotion
-  - innovation
-  - insights
+  - Brands
+  - Innovation
   - MadeWithPaper
-  - Image
+  - Images
   - Sketches
-  - story
-  - user experience
+  - UX
 ---
 ![](../../assets/2012/09/tumblr_mav90iisfp1qa77f2o1_1280.jpg)
 

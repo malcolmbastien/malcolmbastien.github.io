@@ -16,7 +16,7 @@ Every decision in Agile carries a cost. There is no single "right" way to build 
 
 Agile teams often select practices with a specific goal in mind, overlooking the less obvious consequences.
 
-For example, escalating a technical disagreement between two teams to a senior manager might be the fastest way to resolve it. But the price is that teams lose autonomy and decision-making power, and the manager, removed from the day-to-day context, risks making a suboptimal choice.
+For example, escalating a technical disagreement between two teams to a senior manager might be the fastest way to resolve it. But the price is that teams lose autonomy and decision-making power, and the manager, removed from the day-to-day context, risks making a sub-optimal choice.
 
 In another example, consider upfront planning, like spending weeks preparing for a two-week project kick-off workshop. Project kick-off workshops may help managers communicate requirements to teams and prepare developers to start coding quickly, but they also bring significant trade-offs: Requirements become locked in, teams get disconnected from the discovery process, and the focus shifts to maximizing scope instead of starting small and iterating.
 

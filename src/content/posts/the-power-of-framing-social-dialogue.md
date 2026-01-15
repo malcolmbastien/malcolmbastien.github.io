@@ -1,9 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: The Power of Framing Social Dialogue
 publishedDate: 2009-08-04
 tags:
-  - General
+  - Social-Media
 ---
 Last week I was impressed to see Quotes become part of the social media listening tool Scout Labs’ listening dashboard. Providing an easy window to view qualitative examples of voice of the consumer is something that I always spend time searching for using other social media tools, or build new widgets explicitly to handle. More importantly though we can see models being built around consumer discussions in social media that tools are able to exploit for data retrieval.
 

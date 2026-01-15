@@ -3,7 +3,6 @@ status: seed
 title: Designing A Better Email Client
 publishedDate: 2012-08-07
 tags:
-  - .Mail
   - Email
   - Software
   - Sparrow

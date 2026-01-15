@@ -52,6 +52,5 @@ The only problem is that not everyone has Beluga.
 
 See, it does everything.
 
-[Beluga](http://belugapods.com)
-
-[](http://belugapods.com)[Convore](https://convore.com/)
+- [Beluga](http://belugapods.com)
+- [Convore](https://convore.com/)

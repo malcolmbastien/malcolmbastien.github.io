@@ -1,17 +1,11 @@
 ---
-status: seed
+status: evergreen
 title: The York University Strike As A Great Opportunity
 publishedDate: 2009-01-14
 tags:
   - Facebook
-  - General
-  - Josh Kaufman
-  - Personal MBA
-  - Seth Godin
-  - side projects
-  - students
-  - Toronto Star
-  - York University
+  - School
+  - Toronto
 ---
 There was an article published on Thestar.com yesterday about using Facebook to negatively advertise York University in hopes that some bad press might encourage them to solve the problem at the school quicker. You can read the entire article here: Parents use Facebook to put heat on York U..
 

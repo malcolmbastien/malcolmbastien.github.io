@@ -1,5 +1,5 @@
 ---
-status: seed
+status: evergreen
 title: The User Interfaces of CrossFit and Paleo
 publishedDate: 2012-07-12
 tags:
@@ -18,21 +18,21 @@ The interfaces hide the complexity of the programs and make it really simple for
 
 CrossFit’s interface doesn’t require you to:
 
-	Plan your workouts
-	Risk over developing certain muscle groups
-	Bias yourself towards strength or towards conditioning
-	Risk injuring yourself
-	Understand the reasons for using different movements
+- Plan your workouts
+- Risk over developing certain muscle groups
+- Bias yourself towards strength or towards conditioning
+- Risk injuring yourself
+- Understand the reasons for using different movements
 
 The CrossFit interface can be boiled down to:
 
-	Pay for CrossFit
-	Show up at your box
-	Do your best at the workout put in front of you
+- Pay for CrossFit
+- Show up at your box
+- Do your best at the workout put in front of you
 
 With Paleo, you get the benefit of all the scientific research having already been done for you. Instead of spending the years reading scientific papers, or the time and money for a nutrition degree, you can rely on all the research that’s already been done and synthesized in the Paleo books by Dr. Loren Cordain. Though those books are extra to Paleo’s interface:
 
-	Buy Paleo
-	Eat Paleo
+- Buy Paleo
+- Eat Paleo
 
 The final step in each interface is “See massive improvements in health and fitness!

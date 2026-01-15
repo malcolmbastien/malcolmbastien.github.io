@@ -4,10 +4,8 @@ title: From Big Bang Projects to Iterative and Incremental Development
 publishedDate: 2025-08-02
 tags:
   - Agile
-  - General
-  - project-management
-  - projects
-  - spotify
+  - Projects
+  - Spotify
 ---
 Whenever I come across presentations or articles about MVPs, I often see the same image. It's the one showing a skateboard evolving into a scooter, then a bike, then a motorcycle and finally a car. Henrik Kniberg created this graphic as a part of a 2013 presentation titled "[Spotify - the unproject culture](https://blog.crisp.se/wp-content/uploads/2014/03/unproject.pdf)". His image went viral and is still in the top results when searching for MVP on Google. The graphic was well-intentioned, but over the last decade, it has stolen the show, and the presentation's main point has gotten lost. Everybody shared, wrote about and presented this graphic, but people haven't spent as much time absorbing the rest of the presentation.
 
@@ -55,7 +53,7 @@ Even "good" project plans cannot be agile:
 
 One point from the graphic I do think is worth pointing out: In the top example, there are still deliveries happening throughout the project. The problem with the top example is that none of those deliveries are usable by the customer, and so it's impossible to create a useful feedback loop. When we talk about a Big Bang delivery, there may be deliveries happening, but the Big Bang part is when customers finally get something they can use and when useful feedback is possible. A Big Bang delivery embodies all of the guesses and assumptions baked into the project plan up until that point.
 
-## **MVPs, Big Bang & Projects**
+## MVPs, Big Bang & Projects
 
 Henrik's graphic is a metaphor about delivering something to customers that serves their needs, the advantages of getting feedback and integrating that feedback into the product development process. To focus on just the "Not like this..." slide for a moment, the graphic gets in the way of the lesson in a couple of ways:
 
@@ -91,7 +89,7 @@ When we focus more on discovery and learning, the speed of learning becomes crit
 > [!IMPORTANT]
 > Speed is the only moat.
 
-## **The Current Knowledge Threshold**
+## The Current Knowledge Threshold
 
 ![](../../assets/2025/08/image-4.png)
 *Mike Rother, [Improvement Kata and Coaching Kata Practice Guide](https://public.websites.umich.edu/~jmondisa/TK/Handbook/Practice_Guide.pdf)*

@@ -4,12 +4,10 @@ title: The New Outlook.com
 publishedDate: 2012-08-08
 tags:
   - Gmail
-  - Metro
   - Microsoft
-  - Outlook
   - Software
   - Tech
-  - Windows 8
+  - Windows
 ---
 I forgot to mention it last week, but the new [Outlook.com](http://Outlook.com) was launched and is one of the first publicly available applications to use the Metro interface. Like I’ve mentioned before on the blog, people haven’t gotten many opportunities to use Metro. They’ll want to try using Metro soon because it’s going to be launched on Windows 8th this October.
 

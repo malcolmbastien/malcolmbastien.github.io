@@ -23,13 +23,10 @@ A large part of the servers and websites on the Internet run on something called
 
 The [acronym](http://en.wikipedia.org/wiki/Acronym) **LAMP** refers to a [solution stack](http://en.wikipedia.org/wiki/Solution_stack) of software, usually [free and open source software](http://en.wikipedia.org/wiki/Free_and_open_source_software), used to run dynamic [Web sites](http://en.wikipedia.org/wiki/Web_site) or [servers](http://en.wikipedia.org/wiki/Server_%28computing%29). The original expansion is as follows:
 
-Linux, referring to the operating system;
-
-Apache, the Web server;
-
-MySQL or mSQL, the database management system (or database server);
-
-Perl or others, i.e., PHP, Python, the programming languages.
+- Linux, referring to the operating system;
+- Apache, the Web server;
+- MySQL or mSQL, the database management system (or database server);
+- Perl or others, i.e., PHP, Python, the programming languages.
 
 With Linux, turning your computer into a [LAMP server](http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29) is a really simple task.  Having an appreciation and some experience with these terms, how they fit together, and how they enable so many powerful websites to run smoothly is priceless.
 
@@ -59,7 +56,7 @@ C and Java both have their place, but for almost anybody who want to start learn
 
 ## Understand How Free Software Can Help Business
 
-The default repositories for Ubuntu (a set of listings of applications you can choose to download and install absolutely for free) for example, gives you instant access to 1000s of different applications. While a lot of them are older and not very helpful, there are also some of the most useful applications available that are are just **awesome**.  I've listed before some of [my favourite new applications that were included in the Intrepid Ibex release of Ubuntu](../2008/12/watch-out-great-looking-ubuntu-intrepid-apps/).
+The default repositories for Ubuntu (a set of listings of applications you can choose to download and install absolutely for free) for example, gives you instant access to 1000s of different applications. While a lot of them are older and not very helpful, there are also some of the most useful applications available that are are just **awesome**.  I've listed before some of [[watch-out-great-looking-ubuntu-intrepid-apps|my favourite new applications that were included in the Intrepid Ibex release of Ubuntu]].
 
 You can find tons of blog posts, or Linux magazine articles comparing the various free and open source accounting applications, office suites, graphical applications, etc...  As you spend a bit of time with these different applications you'll start to see that some of the open source applications are so good, and of such high quality, that **it's just sad when people on Windows are paying money for bad software**.
 

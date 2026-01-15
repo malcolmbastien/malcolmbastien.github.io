@@ -22,9 +22,11 @@ I never had or heard of a coop job like that though.
 
 If I look I can find plenty enough reasons not to volunteer to put in more hours at the office: the culture of the 9 to 5, organizations' vertical power structures, and how the eight hour workday suppresses creative and productive work, the idea of knowledge work.
 
-Certainly when I've read about how to do fulfilling work or be satifsied with your work/life balance, "doing more work" has never showed up.
+Certainly when I've read about how to do fulfilling work or be satisfied with your work/life balance, "doing more work" has never showed up.
 
-"No is easier to do. Yes is easier to say." - Jason Fried
+> No is easier to do. Yes is easier to say.
+> 
+> Jason Fried
 
 Doing more low-level tasks than others is only really good for giving people the impression that you are a "hard worker" or "committed to the job". They may get you a job eventually, but neither will motivate you. Neither will make you feel good about the work, or about staying with the company.
 
@@ -38,6 +40,6 @@ I was hesitant about writing out this blog post initially. "Malcolm you just can
 
 "Looking back on all of those overtime nights and weekends from my first decade as a designer, I would say that at least a third of that time was unnecessary. For me there was a romantic allure to the idea of toiling away on the work that you so desperately want a chance to prove yourself worthy of. I wanted to be at the office more than I truly needed to be there. This romantic ideal can be consuming; when you’re trying to make a name for yourself, it can dominate a disproportionate amount of your worldview. In my twenties, I clearly overdid it by creating the expectation among my peers and superiors — and within myself — that I would stay at the office as long as it took to create the impression of enormous sacrifice for my ‘art.’
 
-Meanwhile, I missed out on so much. I had no meaningful equity stake in most of those employment situations, so all that overtime was true foolishness, was tantamount to throwing money down a well. More importantly, I was oblivious to a lot of what was going on around me — friends, family, relationships. Working late nights and weekends made me an unpleasant person. I spent years like that, and in retrospect it held me back more than it propelled me forward. That is, whatever success I have today, I feel like I have it in spite of the unhealthily skewed perspective on the importance of work that I held so tightly. I’d have gotten much further — not just personally but professionally — if I’d taken a bit more time out of the office." - Khoi Vinh
-
-Students, Don’t Do As I Have Done: [http://www.subtraction.com/2010/11/16/students-dont-do-as-i-have-done](http://www.subtraction.com/2010/11/16/students-dont-do-as-i-have-done)
+> Meanwhile, I missed out on so much. I had no meaningful equity stake in most of those employment situations, so all that overtime was true foolishness, was tantamount to throwing money down a well. More importantly, I was oblivious to a lot of what was going on around me — friends, family, relationships. Working late nights and weekends made me an unpleasant person. I spent years like that, and in retrospect it held me back more than it propelled me forward. That is, whatever success I have today, I feel like I have it in spite of the unhealthily skewed perspective on the importance of work that I held so tightly. I’d have gotten much further — not just personally but professionally — if I’d taken a bit more time out of the office.
+> 
+> Khoi Vinh, [Students, Don’t Do As I Have Done](http://www.subtraction.com/2010/11/16/students-dont-do-as-i-have-done)

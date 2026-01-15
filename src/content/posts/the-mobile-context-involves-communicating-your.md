@@ -5,7 +5,7 @@ publishedDate: 2012-09-28
 tags:
   - MadeWithPaper
   - Mobile
-  - Image
+  - Images
   - Sketches
 ---
 ![](../../assets/2012/09/tumblr_mb2iuknhee1qa77f2o1_1280.jpg)

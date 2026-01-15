@@ -3,21 +3,10 @@ status: seed
 title: Social Media Is Not For You
 publishedDate: 2009-01-12
 tags:
-  - 4 hour work week
-  - David Allen
-  - Digsby
   - Efficiency
   - Facebook
-  - Flock
-  - Friendfeed
-  - General
-  - Leo Babauta
-  - Online Communities
   - Productivity
-  - social media diet
-  - Social Networks
-  - tim ferriss
-  - time savers
+  - Social-Media
   - TweetDeck
   - Twitter
   - Zenbe

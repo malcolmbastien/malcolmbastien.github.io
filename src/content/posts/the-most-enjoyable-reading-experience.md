@@ -3,9 +3,6 @@ status: seed
 title: The Most Enjoyable Reading Experience
 publishedDate: 2012-04-21
 tags:
-  - instapaper
-  - pocket
-  - readability
   - Reading
   - Software
 ---
@@ -15,10 +12,11 @@ Reading is such an intimate and rewarding experience that to be as enjoyable as 
 
 Reading is made up of four processes:
 
-Collecting: What tools you use to collect
-Connecting: What news sources you’re connected to
-Reading: How you choose to read, and what devices you read on
-Enablement: What do you do with it after
+- Collecting: What tools you use to collect
+- Connecting: What news sources you’re connected to
+- Reading: How you choose to read, and what devices you read on
+- Enablement: What do you do with it after
+
 There are different devices, tools, platforms, and services available for each stage, and people who haven’t considered them are limiting themselves.
 
 To collect news you can use RSS or one of the many news apps on the iPad like Flipboard, Pulse, FLUD, or Zite. Then on each of those you can choose which sources to add; whether to tie in news from your social networks, or let the app recommend items for you. Then you might want to read the moment you find something, or save it to one of the read it later apps like Instapaper, Readability, or Pocket (more on this in a bit). It doesn’t end after we finish reading either. We can share on Facebook or Twitter, email friends, post to bookmarking services, Favourite items, and create an archive of what we’ve read.
@@ -41,10 +39,11 @@ I do have concerns that Pocket is a mix of a fresh new product, but encumbered b
 
 The web service has a control bar at the bottom containing all four of:
 
-A bottom slide up menu
-A popup menu
-A switch control
-A right slide in menu
+- A bottom slide up menu
+- A popup menu
+- A switch control
+- A right slide in menu
+
 On the mobile clients, changes to the reading experience are all met with a harsh flash as the text disappears before reloading. The ability to set, create, but not delete tags also frustrates me. The app has a nice, fresh look to it, but the lack of refinement in some areas removes me from my content. That really is where Readability’s contribution is to the market; it’s focus, refinement and reading experience greatly surpasses any of its competitors, and they all know it.
 
 But what best suites my reading and sharing? When I average out how each platform meets my needs of a beautiful reading experience with the sharing features I want, Pocket comes out ahead for now.

@@ -1,18 +1,14 @@
 ---
 status: seed
-title: The Best Motivational Speakers Say &quot;F*ck&quot;
+title: 'The Best Motivational Speakers Say "F*ck"'
 publishedDate: 2008-12-18
 tags:
   - 37signals
   - Communications
   - Emotions
-  - Gary Vaynerchuk
-  - General
-  - language
+  - Language
   - Motivation
-  - Public Speaking
-  - Richard Maxwell
-  - Robert Dickman
+  - Public-Speaking
 ---
 The best motivational videos are the ones where the speakers say "Fuck".
 
@@ -37,10 +33,5 @@ If you know any other videos like please include a link in the comments!
 
 Enjoy.
 
-### David Heinemeier Hansson Creator of Rails; Partner, 37Signals talks at startup school 2008
-
-[http://www.omnisio.com/bin/Embed.swf?embedID=dkbBwqZuir3yqSadbiFy2w](http://www.omnisio.com/bin/Embed.swf?embedID=dkbBwqZuir3yqSadbiFy2w)
-
-### Gary Vaynerchuk's Park Avenue Motivational Discussion
-
-[http://www.viddler.com/player/a531d079/](http://www.viddler.com/player/a531d079/)
+- [David Heinemeier Hansson Creator of Rails; Partner, 37Signals talks at startup school 2008](http://www.omnisio.com/bin/Embed.swf?embedID=dkbBwqZuir3yqSadbiFy2w)
+- [Gary Vaynerchuk's Park Avenue Motivational Discussion](http://www.viddler.com/player/a531d079/)

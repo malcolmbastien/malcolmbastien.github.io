@@ -1,15 +1,10 @@
 ---
-status: seed
+status: evergreen
 title: The Whole Thing  
 publishedDate: 2010-10-20
 tags:
   - Apple
-  - General
   - Google
-  - iOS
-  - iPad
-  - iPhone
-  - OS X
 ---
 The idea that Apple's experiences from creating the iPhone and iPad have gone full circle to influence their laptops and operating system are pretty compelling. The interesting part about it is that it was only because they managed all parts of the product that this was possible.
 
@@ -17,7 +12,7 @@ If Apple didn't make their laptops, they [conceivably] wouldn't know that traits
 
 The iPad's battery life was the first one that was long enough. It works? Get other devices to hit that same number.
 
-The instant on of the iPad gave users access to that device's content and features, which because of the form factor and the use cases were of a different nature compared to the iPhone, another instant on device. The spread of Facetime to the Mac is another example; for Facetime to be adopted users need among other things a consistent experience with the app. That consistent experience is  already found across all the company's computers, phones, mp3 players, and tablets. Can it help the adoption of software the same way it has helped the adoption of devices?
+The instant on of the iPad gave users access to that device's content and features, which because of the form factor and the use cases were of a different nature compared to the iPhone, another instant on device. The spread of FaceTime to the Mac is another example; for FaceTime to be adopted users need among other things a consistent experience with the app. That consistent experience is  already found across all the company's computers, phones, mp3 players, and tablets. Can it help the adoption of software the same way it has helped the adoption of devices?
 
 Apple's control of the app market, their design standards, and the relationship between iOS and OS X makes it possible for the GUI elements, interaction elements, and features to evolve together. You can see how photos and albums in the newest version of iPhoto looks so much like the iPad experience.
 

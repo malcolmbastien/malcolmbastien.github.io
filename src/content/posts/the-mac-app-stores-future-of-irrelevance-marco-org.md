@@ -3,18 +3,18 @@ status: seed
 title: The Mac App Store’s future of irrelevance – Marco.org
 publishedDate: 2012-08-15
 tags:
-  - App Store
   - Apple
-  - OS X
   - Tech
 ---
 [The Mac App Store’s future of irrelevance – Marco.org](http://www.marco.org/2012/07/26/mac-app-store-future):
 
-Apple can never require an App-Store-only future and all of the simplicity and security benefits that it could bring, if that was ever their goal. And with reduced buyer confidence, fewer developers can afford to make their software App Store-only.
-
-This even may reduce the long-term success of iCloud and the platform lock-in it could bring for Apple. Only App Store apps can use iCloud, but many Mac developers can’t or won’t use it because of the App Store’s political instability.
-
-The Mac App Store is in significant danger of becoming an irrelevant, low-traffic flea market where buyers rarely venture for serious purchases. And I bet that’s not what Apple had in mind at all.
+> Apple can never require an App-Store-only future and all of the simplicity and security benefits that it could bring, if that was ever their goal. And with reduced buyer confidence, fewer developers can afford to make their software App Store-only.
+> 
+> This even may reduce the long-term success of iCloud and the platform lock-in it could bring for Apple. Only App Store apps can use iCloud, but many Mac developers can’t or won’t use it because of the App Store’s political instability.
+> 
+> The Mac App Store is in significant danger of becoming an irrelevant, low-traffic flea market where buyers rarely venture for serious purchases. And I bet that’s not what Apple had in mind at all.
+> 
+> Marco Arment
 
 Replace Mac App Store with iOS App Store and Marco’s predictions become far fetched.
 
@@ -36,14 +36,15 @@ Because the beauty of iCloud, **when you are a user** is that it just works. Whe
 
 People already do make serious purchases on the Mac App Store
 
-Lion ($29)
-Mountain Lion ($19)
-Pages, Numbers & Keynote
-iPhoto, iMovie & Garage Band
-OmniGroup apps (Priced $15-$200)
-Development software (Coda 2 is $75, BBEdit is $50)
-Aperture ($80)
-Final Cut Pro ($299)
+- Lion ($29)
+- Mountain Lion ($19)
+- Pages, Numbers & Keynote
+- iPhoto, iMovie & Garage Band
+- OmniGroup apps (Priced $15-$200)
+- Development software (Coda 2 is $75, BBEdit is $50)
+- Aperture ($80)
+- Final Cut Pro ($299)
+
 Speaking of Lion and Mountain Lion… Before the Mac App Store I only **ever** got a new operating by buying one at Future Shop, or by downloading and burning an ISO image of a Linux boot disc!
 
 The idea of “serious purchases” is only up for debate when you talk about audiences (designers, photographers, developers, businesses), alternatives (Firefox vs Safari, Word vs Pages), or apps that require deeper system access (Concentrate, TextExpander, Dragon Dictate).

@@ -5,15 +5,10 @@ publishedDate: 2009-03-02
 tags:
   - Business
   - General
-  - Google Analytics
-  - Log Analysis
-  - Site Management
-  - Social Media
+  - Analytics
+  - Social-Media
   - Statistics
-  - Word of Mouth
 ---
-[![Radian6 Social Media Monitoring](http://farm3.static.flickr.com/2402/1680018176_b262235379_m.jpg)](http://www.flickr.com/photos/10582760@N08/1680018176)
-
 Because for social media-ites, social media analytics is a lot easier to do anything with.
 
 Especially if think you understand people online. (*Chances are you do!*)
@@ -36,4 +31,6 @@ If you take into consideration the target user for these two platforms, traditio
 
 ## What I'm Afraid Of
 
-With this growing discussion of social media analytics, people are also picking up the message that analytics data is useless unless it can provide business insight. What I'm Afraid of is that social media professionals will evangelize SMA tools as being able to provide that insight and spread the message that traditional analytics can only ever provide that** "analytics-junk"**. I'm afraid of people comparing the two on a platform level, apples to oranges, rather than identifying them as being different tools used to help solve different problems.
+With this growing discussion of social media analytics, people are also picking up the message that analytics data is useless unless it can provide business insight. What I'm Afraid of is that social media professionals will evangelize SMA tools as being able to provide that insight and spread the message that traditional analytics can only ever provide that **"analytics-junk"**.
+
+I'm afraid of people comparing the two on a platform level, apples to oranges, rather than identifying them as being different tools used to help solve different problems.

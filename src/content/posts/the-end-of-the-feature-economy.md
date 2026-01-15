@@ -52,5 +52,6 @@ Software should help people accomplish the whole of their work.
 
 A quote on appropriateness:
 
-> “I think the most important thing to recognize is that we’re now living in a world of excess. Excess data, excess access, excess “stuff.” Our behavior and mindset should change accordingly. The discussions we have should not be about consuming less or having more, but rather “What is better?” and “What is appropriate?”
+> I think the most important thing to recognize is that we’re now living in a world of excess. Excess data, excess access, excess “stuff.” Our behavior and mindset should change accordingly. The discussions we have should not be about consuming less or having more, but rather “What is better?” and “What is appropriate?”
+> 
 > [Frank Chimero – Your Shit, My Stuff, Goldilocks, and Making the Bed You Sleep In](http://blog.frankchimero.com/post/2831408736/your-shit-my-stuff-goldilocks-and-making-the-bed-you)

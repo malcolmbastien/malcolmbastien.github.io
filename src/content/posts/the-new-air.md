@@ -1,9 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: The New Air
 publishedDate: 2011-08-08
 tags:
-  - General
+  - Apple
 ---
 When the MacBook Air was first released in 2008 its audience was limited even by Apple standards. The laptop cost $1800, it wasn't exceptionally powerful, and it didn't include an optical drive. Its price and features put it out of the range of the average consumer and it appealed more to executives who needed a small laptop to use while travelling. On top of that, it received some bad press because of overheating issues.
 

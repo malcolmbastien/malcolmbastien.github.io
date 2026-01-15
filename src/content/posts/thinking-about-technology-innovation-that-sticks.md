@@ -1,11 +1,10 @@
 ---
-status: seed
+status: evergreen
 title: Thinking About Technology Innovation That Sticks
 publishedDate: 2011-01-20
 tags:
-  - General
-  - innovation
-  - technology
+  - Innovation
+  - Technology
 ---
 Sometimes I think about technology and get taken aback by why some ideas haven't been realized, and what direction the industry is going in. One idea that has kept popping up in my mind over the past few weeks is why files on computers are inaccessible if you're not on the right computer or network.
 

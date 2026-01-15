@@ -6,11 +6,8 @@ tags:
   - General
   - Ideas
   - Motivation
-  - Seth Godin
   - Social Media
-  - Social Network
-  - solutions
-  - startup
+  - Startups
   - Twitter
   - YouTube
 ---

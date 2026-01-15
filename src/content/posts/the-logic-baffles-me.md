@@ -3,7 +3,7 @@ status: seed
 title: The Logic Baffles Me
 publishedDate: 2009-11-09
 tags:
-  - General
+  - School
 ---
 *“I now have read and assessed the work term reports for WKT400 & 502, and by receiving this message you have received a “pass” for your report or reports.*
 

@@ -1,18 +1,13 @@
 ---
-status: seed
+status: evergreen
 title: The Secret to Twitter Monetization Is...
 publishedDate: 2008-12-16
 tags:
   - Business
-  - Gary Vaynerchuk
-  - General
-  - Jet Blue
-  - Josh Davey
   - Monetization
-  - Online Communities
-  - Social Network
+  - Online-Communities
+  - Social-Networks
   - Twitter
-  - Word of Mouth
 ---
 The secret to Twitter monetization is exactly what has been happening for the past 2 years.
 

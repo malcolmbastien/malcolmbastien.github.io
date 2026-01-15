@@ -1,9 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: The System That Works
 publishedDate: 2009-07-20
 tags:
-  - General
+  - Social-Media
 ---
 Social media authorities, the ones I trust, have built up their reputations over time, through activities such as blogging, and podcasting. Continual engagement over a long period without any abuse of that relationship. And because of their long term commitment, they have my trust.
 

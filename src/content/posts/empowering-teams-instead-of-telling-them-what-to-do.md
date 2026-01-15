@@ -4,7 +4,6 @@ title: Empowering Teams Instead of Telling Them What to Do
 publishedDate: 2023-05-01
 tags:
   - Agile
-  - General
 ---
 In the context of organizational change, whether it's part of a formal "Agile Transformation" or just trying to make things better, one behaviour I frequently have to deal with is when Directors or VPs, who I'll refer to as management, tell me something along the lines of "The teams need to do this." They might think my role as an Agile Coach is to deliver their instructions to their different teams and ensure they get carried out.
 

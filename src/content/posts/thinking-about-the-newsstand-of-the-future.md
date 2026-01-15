@@ -1,23 +1,18 @@
 ---
-status: seed
+status: evergreen
 title: Thinking About The Newsstand of The Future
 publishedDate: 2009-02-26
 tags:
   - Business
-  - General
   - Journalism
   - Media
-  - Molson
   - Newspapers
-  - Open Source
-  - Saleem Khan
-  - Social Media
+  - Open-Source
+  - Social-Media
 ---
 Following along with some more PodCamp Toronto discussion that happened this past weekend (most of it at the party sponsored by Molson), a lot of the content at the sessions that happened tended to lean on what might make an important topic at other unconference to come.
 
 **The problem of perception.**
-
-[![News Stand](http://farm3.static.flickr.com/2084/2081701394_64e6a883c5_m.jpg)](http://www.flickr.com/photos/36199398@N00/2081701394)
 
 So much of the session topics at PodCamp Toronto were looking at issues from a certain perspective and how applying social media best practices is the natural next step in solving the problem.  One thing that maybe should have been talked about a bit more is the idea that social media really isn’t able to solve our problems if we are looking at problems from the wrong angle in the first place.
 
@@ -36,5 +31,3 @@ Assuming they are still around... **What will the news stand of the future look 
 Or if we though of journalists as the equivalent of open source programmers... **How will journalists and news papers survive if the product is free?**
 
 I look forward to an interesting discussion in the comments.
-
-*Image by [said&done](http://www.flickr.com/photos/36199398@N00/2081701394) via Flickr*

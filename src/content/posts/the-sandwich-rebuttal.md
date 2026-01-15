@@ -1,11 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: The Sandwich Rebuttal
 publishedDate: 2010-01-02
 tags:
-  - Chris Brogan
-  - Gary Vaynerchuk
-  - General
+  - Social-Media
 ---
 It only recently clicked to me that the sort of de-facto complaint that non-users and long-time haters of Twitter have been spewing is exactly the opportunity they are unable to see.
 
@@ -13,12 +11,12 @@ The “I don’t care if your eating a sandwich” attitude was like a virus. Ma
 
 If I was in the business of sandwiches, or had a passion for all the million varieties of sandwiches that existed, then Twitter’s penultimate tweet would be “I’m eating a sandwich”
 
-I would have a blog about sandwiches and share a ton of pictures of my sandwich creations ([http://scanwiches.com/](http://scanwiches.com/))
-I’d go and review the sandwiches all around my neighborhood and my city.
-I’d video tape and interview artisan sandwich makers for a podcast.
-I’d build a community of sandwich lovers.
-I’d hold sandwich meetups. (hey, they have them for cupcakes)
-Not to mention, I would probably be perpetually full and satisfied.
+- I would have a blog about sandwiches and share a ton of pictures of my sandwich creations ([http://scanwiches.com/](http://scanwiches.com/))
+- I’d go and review the sandwiches all around my neighborhood and my city.
+- I’d video tape and interview artisan sandwich makers for a podcast.
+- I’d build a community of sandwich lovers.
+- I’d hold sandwich meetups. (hey, they have them for cupcakes)
+- Not to mention, I would probably be perpetually full and satisfied.
 
 Damn, I just feel stupid for connecting the dots so late for what I think everybody has heard before as a complaint about their friends don’t use Twitter.
 

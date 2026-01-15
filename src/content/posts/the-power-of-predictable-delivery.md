@@ -1,12 +1,13 @@
 ---
-status: seed
+status: evergreen
 title: The Power of Predictable Delivery
 publishedDate: 2023-08-05
 tags:
   - Agile
   - Dependencies
-  - flow
-  - predictability
+  - Flow
+  - Kanban
+  - Predictability
 ---
 With most of the Agile teams I've been exposed to, I've noticed that they spend easily over a hundred person-hours every month on practices like updating plans, reporting metrics, estimating, and sharing status updates. To them, these are some of the core practices that make them Agile.
 
@@ -26,17 +27,17 @@ Just like agility, whether a team is predictable or not is a property of a syste
 
 A system is predictable when it is...
 
-Behaving in a way that is expected
+> Behaving in a way that is expected
+>
+> [Merriam-Webster](https://www.merriam-webster.com/dictionary/predictable)
 
-[Merriam-Webster](https://www.merriam-webster.com/dictionary/predictable)
+> Capable of being predicted: able to be known, seen, or declared in advance
+>
+> [Merriam-Webster](https://www.merriam-webster.com/dictionary/predictable)
 
-Capable of being predicted: able to be known, seen, or declared in advance
-
-[Merriam-Webster](https://www.merriam-webster.com/dictionary/predictable)
-
-Acting or happening in a way that is expected
-
-[Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/predictable)
+> Acting or happening in a way that is expected
+>
+> [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/predictable)
 
 But it's not enough for teams or systems to work in expected ways. It's more important that they can predictably meet their commitments to customers or other teams.
 
@@ -54,25 +55,19 @@ In organizations with that kind of trust and predictable delivery, unnecessary p
 
 ### Better Predictability Enables Better Decision Making
 
-Healthier interactions, more trust, and better information about delivery lead to better decision-making. Predictable systems let managers make optimal decisions that otherwise would not be possible.
+Healthier interactions, more trust, and better information about delivery lead to better decision-making. Predictable systems let managers make optimal decisions that otherwise would not be possible:
 
-"When is the optimal time to start this work?"
-
-"When is the right time to prepare our marketing and sales activities to support this new feature?"
-
-"How much more information do we need to make a decision?"
-
-"Of these three options, which should we choose?"
+- "When is the optimal time to start this work?"
+- "When is the right time to prepare our marketing and sales activities to support this new feature?"
+- "How much more information do we need to make a decision?"
+- "Of these three options, which should we choose?"
 
 Predictable delivery also leads to removing the expensive behaviours teams in unstable systems employ to try to make guarantees on delivery:
 
-Adding buffer time and need to start projects earlier
-
-Cutting scope late in a project and creating the need for extra releases.
-
-Adding additional people to try and create sufficient capacity or protect against delays
-
-Teams crunching at the end of projects to get everything ready or deal with unexpected quality problems
+- Adding buffer time and need to start projects earlier
+- Cutting scope late in a project and creating the need for extra releases.
+- Adding additional people to try and create sufficient capacity or protect against delays
+- Teams crunching at the end of projects to get everything ready or deal with unexpected quality problems
 
 Instead of focusing so much time and money on ensuring a successful delivery through their system, teams with predictable delivery can focus more on optimizing the value their systems produce.
 
@@ -82,29 +77,25 @@ One challenge in shifting the conversation from speed to predictability is figur
 
 If someone was to show me a team and ask me, "Is this team predictable?" Here's what I might look at:
 
-**Due-date completion rate/on-time percentage**: This metric is the percentage of work items delivered on or before the dates committed to by the team.
-
-**Cycle-time distribution**: The lead time (the time it takes to complete a work item from start to finish) of the team's completed work, shown as a lead time curve. We want to pay attention to the height, length, and size of how long the tail of the curve is.
-
-**Flow**: Work items should consistently move through the different activities in a team's kanban system. The team's work should flow smoothly through the system without interruption. The number of items entering the board matches the number of items leaving the board. 
-
-**Work item age**: The age of the cards in the kanban system (how long they've been in progress) is stable. 
-
-**Backlog size and age**: The team's backlog (the list of work items waiting to start) should be limited. Teams should have just enough options to start working on something new quickly and efficiently as needed. But there should be only a few weeks (or maybe months) worth of work waiting to start.
-
-**Deployment frequency**: The team makes regular deployments to production. Progress is visible and measurable, based on working software that delivers value to customers.
+- **Due-date completion rate/on-time percentage:** This metric is the percentage of work items delivered on or before the dates committed to by the team.
+- **Cycle-time distribution:** The lead time (the time it takes to complete a work item from start to finish) of the team's completed work, shown as a lead time curve. We want to pay attention to the height, length, and size of how long the tail of the curve is.
+- **Flow:** Work items should consistently move through the different activities in a team's kanban system. The team's work should flow smoothly through the system without interruption. The number of items entering the board matches the number of items leaving the board. 
+- **Work item age:** The age of the cards in the kanban system (how long they've been in progress) is stable. 
+- **Backlog size and age:** The team's backlog (the list of work items waiting to start) should be limited. Teams should have just enough options to start working on something new quickly and efficiently as needed. But there should be only a few weeks (or maybe months) worth of work waiting to start.
+- **Deployment frequency:** The team makes regular deployments to production. Progress is visible and measurable, based on working software that delivers value to customers.
 
 ## What Hurts Predictability
 
 ### Dependencies Hurt Predictability
 
-I don't think you can forecast or actually understand the performance of an organization unless you get a grip on dependencies between multiple teams.
-
-Troy Magennis
+> I don't think you can forecast or actually understand the performance of an organization unless you get a grip on dependencies between multiple teams.
+>
+> Troy Magennis
 
 Dependencies reveal more teams and interactions between teams that need to be healthy for predictable delivery to happen. Aside from the teams themselves, the interactions between teams have their own health that needs to be paid attention to.
 
-![](../../assets/2023/08/image-2.png)The teams and the interactions between the teams need to be healthy for smooth flow.
+![](../../assets/2023/08/image-2.png)
+*The teams and the interactions between the teams need to be healthy for smooth flow.*
 
 Dependencies increase the number of teams and the number of interactions work needs to flow through smoothly, which is what makes dependencies such a risk for predictable delivery.
 
@@ -114,7 +105,8 @@ But bringing dependencies under control is also a challenge. Take all the delive
 
 This visual, inspired by Troy Magennis, helps to show just what a significant impact dependencies between multiple teams have on delivery.
 
-![](../../assets/2023/08/image.png)Each dependency halves the chances of you delivering on time. (Learn more at [Impact of Multiple Team Dependencies in Software Development](https://observablehq.com/@troymagennis/impact-of-multiple-team-dependencies-in-software-developm))
+![](../../assets/2023/08/image.png)
+*Each dependency halves the chances of you delivering on time. (Learn more at [Impact of Multiple Team Dependencies in Software Development](https://observablehq.com/@troymagennis/impact-of-multiple-team-dependencies-in-software-developm))*
 
 ### Overburdening, Poor Code Health and Technical Debt Hurt Predictability
 
@@ -124,13 +116,14 @@ Overburdening happens when a team is under stress to deliver more work than they
 
 The unpredictability of poor code health and technical debt comes from the fact that the cost to change the system increases over time.
 
-![](../../assets/2023/08/image-3.png)Systems can't be predictable if development costs increase uncontrollably
+![](../../assets/2023/08/image-3.png)
+*Systems can't be predictable if development costs increase uncontrollably*
 
 ### High WIP & Large Queues Hurt Predictability
 
-Our real problem is periods of inactivity, not slow activities.
-
-Don Reinersten, The Principles of Product Development Flow
+> Our real problem is periods of inactivity, not slow activities.
+>
+> Don Reinersten, The Principles of Product Development Flow
 
 Work in progress is the amount of work committed and started by the team but not completed.
 
