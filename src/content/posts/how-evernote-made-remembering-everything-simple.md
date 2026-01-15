@@ -1,9 +1,9 @@
 ---
-status: seed
-title: How Evernote Made Remembering Everything, Simple
+status: evergreen
+title: How Evernote Made Remembering Everything Simple
 publishedDate: 2010-12-13
 tags:
-  - General
+  - Software
 ---
 The first time you tell people about Evernote, they never get it. Give them a few months though and they’ll come back to you raving about how much they love the premium subscription they just bought for the note taking service.
 
@@ -39,5 +39,4 @@ Is this the blueprint for the next successful consumer productivity apps  for th
 
 Except to see a lot more Evernotes, more Simplenotes, more Dropboxes, and a lot less of what we’re used to.
 
-## Links
 - [How Evernote Turned Note Taking Into a $10 Million Business](http://mashable.com/2010/12/10/evernote-growth/)

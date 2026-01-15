@@ -3,7 +3,8 @@ status: seed
 title: Only The Hard Stuff Matters
 publishedDate: 2011-08-17
 tags:
-  - General
+  - Productivity
+  - Books
 ---
 After using many productivity apps, and going through tons of productivity books, blog posts, and podcasts I’ve come to the conclusion that when it comes to productivity the only thing that matters is doing the stuff that’s hard.
 

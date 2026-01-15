@@ -1,10 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: Plattan Plus
 publishedDate: 2011-05-14
 tags:
-  - General
-  - products
+  - Products
 ---
 ![](../../assets/2024/01/image-2.png)
 

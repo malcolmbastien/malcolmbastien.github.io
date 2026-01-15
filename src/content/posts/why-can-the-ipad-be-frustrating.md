@@ -1,10 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: Why Can The iPad Be Frustrating?
 publishedDate: 2012-01-08
 tags:
-  - General
-  - iPad
+  - Apple
   - Tech
 ---
 For as long as I’ve owned them, I’ve enjoyed the Apple products I own like my MacBook Pro, MacBook Air, iPhone, and my iPad. But unlike my iPhone or Macs, the iPad can get me really frustrated. Occasionally I’ll use my iPad at a cafe and everything will be going fine, then in the next moment things start to fall apart.

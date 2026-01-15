@@ -1,9 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: The Future of Real-time Chat and Beluga
 publishedDate: 2011-02-11
 tags:
-  - General
+  - Software
 ---
 Chat has been a space that’s gone unchanged in the past decade, but that hasn’t stopped two new startups from taking a shot at it.
 

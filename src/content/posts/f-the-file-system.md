@@ -1,11 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: F the File System
 publishedDate: 2010-12-20
 tags:
-  - General
-  - Notational Velocity
-  - Simplenote
+  - Software
 ---
 Enough with the file system.
 
@@ -17,8 +15,7 @@ This problem is the case with all programs on all operating systems.
 
 Why can’t we find the information we want to work on through search?
 
-Google’s proved that people are comfortable with getting information through search. Whether you want to look up information on the web,
-find contacts in your address book, search through email archives, or find a document, search is natural. Meanwhile, there’s been no change on the desktop in the past ten years to how we work with information.
+Google’s proved that people are comfortable with getting information through search. Whether you want to look up information on the web, find contacts in your address book, search through email archives, or find a document, search is natural. Meanwhile, there’s been no change on the desktop in the past ten years to how we work with information.
 
 When you can get to everything through search, it reduces complexity.
 And when users have this option, the requirements change:
@@ -31,8 +28,7 @@ And when users have this option, the requirements change:
 
 These ideas are already used in mobile and in online apps, but no desktop applications use them.
 
-The only desktop application I know of that doesn’t use files in the traditional way is Notational Velocity. Most people use Notational
-Velocity to integrate with their Simplenote account. The reason people love Simplenote so much is because their work is all saved automatically, it’s automatically synced on every device they used, and they can access all of their work through search.
+The only desktop application I know of that doesn’t use files in the traditional way is Notational Velocity. Most people use Notational Velocity to integrate with their Simplenote account. The reason people love Simplenote so much is because their work is all saved automatically, it’s automatically synced on every device they used, and they can access all of their work through search.
 
 The fact that there’s only one application that works like this, to me, tells me that there’s a lot of opportunity for other applications
 to change.

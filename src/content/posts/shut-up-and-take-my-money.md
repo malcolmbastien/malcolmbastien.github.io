@@ -3,14 +3,11 @@ status: seed
 title: Shut Up and Take My Money!
 publishedDate: 2012-01-09
 tags:
-  - General
-  - gimmebar
-  - pinboard
-  - pinterest
+  - Software
 ---
-[Don’t Be A Free User](http://blog.pinboard.in/2011/12/don_t_be_a_free_user/) -
-
-  Someone builds a cool, free product, it gets popular, and that popularity attracts a buyer. The new owner shuts the product down and the founders issue a glowing press release about how excited they are about synergies going forward. They are never heard from again.
+> [Don’t Be A Free User](http://blog.pinboard.in/2011/12/don_t_be_a_free_user/) -
+>
+> Someone builds a cool, free product, it gets popular, and that popularity attracts a buyer. The new owner shuts the product down and the founders issue a glowing press release about how excited they are about synergies going forward. They are never heard from again.
 
 I’m getting more and more tired of running into companies offering services that don’t directly make money off of me as a user. I want to be a customer, not a user. It’s difficult for me to point out where these feelings are coming from but [D.H.H.’s talk from Startup School 2008](http://www.justin.tv/hackertv/b/259414909) about Zappos and how they *“…are selling fucking shoes!”* was the one of the first thing I saw that made me realize the absurdity of how many free services existed that were designed around offering a service for free for the purpose of getting a huge audience.
 

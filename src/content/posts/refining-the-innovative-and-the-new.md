@@ -3,7 +3,9 @@ status: seed
 title: Refining The Innovative And The New
 publishedDate: 2011-08-15
 tags:
-  - General
+  - Socia-Media
+  - Google
+  - Apple
 ---
 In the past few years Apple has released some of the most innovative products we’ve ever seen, and Apple’s growing popularity in the mainstream means more and more consumers are paying attention to design.
 

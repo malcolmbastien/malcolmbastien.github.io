@@ -1,12 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: Put it Down
 publishedDate: 2011-02-08
 tags:
-  - Adam King
-  - General
-  - NoteSlate
-  - Seth Godin
+  - Noteslate
 ---
 It’s an event whenever I notice two people write about the same idea at the same time. In the big world of the internet, seeing anything serendipitous happen make me stop and look. make me stop and look. When I notice two articles and see overlap in their ideas, I take it as a sign that it’s an idea that I should pay particular attention to.
 
@@ -38,4 +35,4 @@ Meanwhile, the challenge of putting everything aside and focusing completely on 
 
 It’s time that we put everything else down and work.
 
-[NoteSlate](http://www.noteslate.com/)
+- [NoteSlate](http://www.noteslate.com/)

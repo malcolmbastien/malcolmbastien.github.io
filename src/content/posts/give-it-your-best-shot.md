@@ -3,7 +3,7 @@ status: seed
 title: Give it Your Best Shot
 publishedDate: 2011-08-18
 tags:
-  - General
+  - Books
 ---
 In July I read the book [The Art of Power](http://www.amazon.ca/gp/product/0061242365/ref=as_li_ss_tl?ie=UTF8&tag=opemod-20&linkCode=as2&camp=15121&creative=390961&creativeASIN=0061242365) by Thích Nhất Hạnh, and in one part of the book it said to ask yourself if you’re capable of giving something your best effort. This reminded me a lot of discussions about failure, and it made me think if we aren’t wasting a lot of time by focusing on failure.
 

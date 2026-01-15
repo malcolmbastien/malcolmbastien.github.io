@@ -3,7 +3,8 @@ status: seed
 title: What Text Editors Tell us About Apple's Ecosystem
 publishedDate: 2011-08-23
 tags:
-    - General
+    - Apple
+    - Software
 ---
 The reason why Apple’s app ecosystem will give them a competitive advantage for years is the same reason why people are making and buying $20 text editors on the App Store.
 

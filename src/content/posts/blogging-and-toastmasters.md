@@ -4,7 +4,6 @@ title: Blogging and Toastmasters
 publishedDate: 2011-03-15
 tags:
   - Blogging
-  - General
 ---
 I’m not a big fan of Toast Masters.
 

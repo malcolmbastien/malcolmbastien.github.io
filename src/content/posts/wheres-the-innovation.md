@@ -1,9 +1,10 @@
 ---
-status: seed
+status: evergreen
 title: Where's The Innovation?
 publishedDate: 2011-08-22
 tags:
-  - General
+  - Apple
+  - Tech
 ---
 You can only do consumption on the iPad. Consumers want Flash and real multitasking. You need a stylus to be productive. The iPad’s not powerful enough.    When it comes to technology companies’s responses to the iPad, these are the *illusions* those companies have shaped their products around.
 

@@ -4,7 +4,6 @@ title: GameStore
 publishedDate: 2012-01-03
 tags:
   - Apple
-  - General
 ---
 The other day it was revealed that [Apple accidentally released a GameStore app into the AppStore](http://www.macgasm.net/2012/01/02/apple-accidentally-puts-gamestore-on-the-app-store-and-then-yanks-it/). I’m going to jump right ahead and say that in a 2012 we’ll most likely see an update to iOS and OS X that splits games out of the AppStore into their own separate store.
 

@@ -1,10 +1,10 @@
 ---
-status: seed
+status: evergreen
 title: Reeder for Mac a Sign of Things to Come
 publishedDate: 2010-12-09
 tags:
-  - General
-  - Reeder
+  - Software
+  - RSS
 ---
 The very popular iPhone and iPad RSS reader app, Reeder, now has a beta available for the Mac. I think what happens with it is going to have a big impact.
 

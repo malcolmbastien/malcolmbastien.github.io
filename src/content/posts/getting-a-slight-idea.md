@@ -14,7 +14,7 @@ Three years ago only a few people got Twitter. Now that everyone gets it, everyo
 So I thought about that, and I also thought about some Field Notes
 notebooks I bought recently. They’re a product that a small but loyal number of people get. They have a couple of unique qualities, but most of them should lead the average consumer not to buy them.
 
-When I compare them to the well known  Moleskin brand…
+When I compare them to the well known Moleskin brand…
 
 - They are smaller.
 - They don’t have a bookmark.

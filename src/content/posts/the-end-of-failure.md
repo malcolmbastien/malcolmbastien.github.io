@@ -3,7 +3,7 @@ status: seed
 title: The End of Failure
 publishedDate: 2011-08-26
 tags:
-  - General
+  - Failure
 ---
 In an [episode of Mitch Joel’s Six Pixels of Separation podcast](http://www.twistimage.com/podcast/archives/spos-243---its-time-to-ship-with-seth-godin/) I listened to a few weeks ago, [Seth Godin](http://sethgodin.typepad.com/) was on and he asked what would happen if you *“Failed at a blog post?”* Thinking about failure like that made it seem ridiculous, and as he continued I wondered if it’s paid too much attention?
 

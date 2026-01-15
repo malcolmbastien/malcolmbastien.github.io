@@ -4,8 +4,7 @@ title: Email Declining
 publishedDate: 2012-01-05
 tags:
   - Email
-  - General
-  - Sparrow
+  - Software
   - Tech
 ---
 I was chatting with a friend the other day about if email is really changing. Something I brought up was how hard it is to separate the signal from the “Twitter will replace email in 2012” hype.

@@ -3,11 +3,8 @@ status: seed
 title: My Initial Experience With iCloud
 publishedDate: 2012-01-04
 tags:
-  - Day One
-  - General
-  - iA Writer
-  - iCloud
-  - Simplenote
+  - Apple
+  - Software
   - Tech
 ---
 **Update: What I forgot to mention is that I’m discussing iCloud as it appears in third party applications. I’m not discussing my experience with things such as Photo Stream, iCloud backup, or iCloud contacts/mail.**

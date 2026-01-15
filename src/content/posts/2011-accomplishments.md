@@ -1,10 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: 2011 Accomplishments
 publishedDate: 2012-01-02
 tags:
-  - General
-  - new years
+  - Year-In-Review
 ---
 I feel weird coming up with a list of my accomplishments in 2011. Last year was the first year I ever took an account of the things I had done in the year before and collect them into a [single blog post](http://malcolmbastien.posterous.com/a-recap-of-2010). So this year I’m comparing 2011 to what was for me a pretty decent 2010. Before I even started making the list, I knew it wasn’t going to be as good.
 

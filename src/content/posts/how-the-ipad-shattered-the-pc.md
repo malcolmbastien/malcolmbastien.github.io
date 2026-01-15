@@ -3,7 +3,7 @@ status: seed
 title: How the iPad Shattered The PC
 publishedDate: 2011-08-25
 tags:
-  - General
+  - Apple
 ---
 First, for the sake of moving forward, let’s accept it and admit that the PC was disrupted. It had a long run, but now there’s a better solution.
 

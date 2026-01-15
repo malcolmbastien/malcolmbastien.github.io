@@ -4,7 +4,7 @@ title: Being Real About Tools and Work
 publishedDate: 2011-01-25
 tags:
   - Field Notes
-  - General
+  - Apple
 ---
 ![](../../assets/2011/01/img_0457-scaled-1000.jpg)
 
@@ -12,7 +12,13 @@ This photo was me at Dark Horse Espresso Monday morning two weeks ago taking a s
 
 There was no technology on the table.  In fact, the idea of taking out my phone for any reason seemed absurd and the quickest way to ruin the rhythm I had gotten myself into.  When I thought about what was special about that moment I thought a lot about last year and how I tried to develop productive and creative habits by using apps. Having access to powerful and enabling technology in our pockets I figured when thinking about the broader implications, would make it easier for people to use it everyday and would eventually become habit forming, the ultimate outcome being turning us more creative and giving us more opportunities to create, capture, and to reflect.
 
-But while sitting there at the table without any devices at all made I felt more creative and productive than I had in a long time of trying to achieve that feeling through apps.  Do physical objects make it easier to dive into deep thought?  That might have been part of it. Sitting there with a big laptop screen in front of me would have definitely disconnected me from my environment to some extent.  In fact what I took away is from this super focused and rewarding work session was how much going to the office afterwards made me dislike cushiony office chairs, fake wood tables, and non-natural light.  This made me take a second look at something I had seen weeks earlier. I was looking at the concept of an amazing looking iPad app when someone wrote about how in Apple's Human Interface Guidelines it encourages making applications that look and behave like real objects... 
+But while sitting there at the table without any devices at all made I felt more creative and productive than I had in a long time of trying to achieve that feeling through apps.
+
+Do physical objects make it easier to dive into deep thought?
+
+That might have been part of it. Sitting there with a big laptop screen in front of me would have definitely disconnected me from my environment to some extent. In fact what I took away is from this super focused and rewarding work session was how much going to the office afterwards made me dislike cushiony office chairs, fake wood tables, and non-natural light.
+
+This made me take a second look at something I had seen weeks earlier. I was looking at the concept of an amazing looking iPad app when someone wrote about how in Apple's Human Interface Guidelines it encourages making applications that look and behave like real objects... 
  
  > "Whenever possible, add a realistic, physical dimension to your application. The more true to life your application looks and behaves, the easier it is for people to understand how it works and the more they enjoy using it."
  

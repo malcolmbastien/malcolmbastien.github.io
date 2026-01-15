@@ -4,8 +4,7 @@ title: The Value of Tablet Huddle Experiences
 publishedDate: 2010-12-22
 tags:
   - Apps
-  - General
-  - iPad
+  - Apple
 ---
 Whenever I came across non-universal apps, on the App Store, the ones that you need to buy twice in order to use on your iPad and on your iPhone, I used to think that the developer was trying to get an extra couple bucks out of me. 
 

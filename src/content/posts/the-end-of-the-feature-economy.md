@@ -3,7 +3,7 @@ status: seed
 title: The End of the Feature Economy
 publishedDate: 2011-02-15
 tags:
-  - General
+  - Software
 ---
 After buying my first Mac last year and switching from using free Linux software to paying for software for the first time in a decade, I quickly started to appreciate the quality and how beautiful these apps made by independent developers were. After chatting with my other friends who had switched, I discovered this had happened to them as well. Not after long, simple and beautiful software filled up my computer, and my workflow.
 

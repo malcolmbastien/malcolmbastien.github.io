@@ -1,9 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: Blogging to Push Ideas
 publishedDate: 2010-12-15
 tags:
-  - General
+  - Blogging
 ---
 Think, push email rather than pushing a point of view.
 

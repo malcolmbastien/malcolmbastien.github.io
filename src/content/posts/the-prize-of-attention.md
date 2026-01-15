@@ -1,9 +1,9 @@
 ---
-status: seed
+status: evergreen
 title: The Prize of Attention
 publishedDate: 2011-02-22
 tags:
-  - General
+  - Books
 ---
 I was reading Bird by Bird yesterday, and I came across a passage that gives an explanation of what the advantage is of simplicity compared to complexity. It’s one of only a few I’ve found that doesn’t go into zen, or that doesn’t include “less is more” cliches.
 

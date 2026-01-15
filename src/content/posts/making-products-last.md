@@ -12,7 +12,10 @@ I wish this topic came up more. When it comes to small changes that could have a
 ## A Story from Japan
 
 My friends at the [Mjolk](http://mjolk.ca/), a furniture store in the Junction took a trip to Japan last winter. While there they visited with an older designer who talked about well made products, and about how long anything you buy should last.
-“We shared a very inspirational conversation about the longevity of a well made product. Professor Oda pulled out a scarf and a pair of leather gloves that he has personally owned for over 40 years. He held up his scarf and told me that when he was younger he purchased this wool scarf that was well beyond his salary, it took him a very long time to be able to afford it, but he purchased it with the intention of having it for at least 25 years. That he said is the magic number, if you can’t pick a product up and say confidently that this product will serve you well for a minimum of 25 years, it is not a good purchase.” – [Asahikawa day 3 – part 2 – KITKA Design Toronto](http://kitkadesigntoronto.com/?p=12007)
+
+> We shared a very inspirational conversation about the longevity of a well made product. Professor Oda pulled out a scarf and a pair of leather gloves that he has personally owned for over 40 years. He held up his scarf and told me that when he was younger he purchased this wool scarf that was well beyond his salary, it took him a very long time to be able to afford it, but he purchased it with the intention of having it for at least 25 years. That he said is the magic number, if you can’t pick a product up and say confidently that this product will serve you well for a minimum of 25 years, it is not a good purchase.
+> 
+> [Asahikawa day 3 – part 2 – KITKA Design Toronto](http://kitkadesigntoronto.com/?p=12007)
 
 ## The Same Thing With Technology
 
