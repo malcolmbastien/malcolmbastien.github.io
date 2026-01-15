@@ -4,9 +4,9 @@ title: South Korea, April 2023
 publishedDate: 2023-04-18
 tags:
   - Busan
-  - Gyeong Ju
   - Photography
-  - South Korea
+  - Galleries
+  - South-Korea
   - Travel
 ---
 ![](../../assets/2023/04/20230406_144028314_ios-1.jpg)
