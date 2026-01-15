@@ -9,6 +9,7 @@ import { remarkWikiLinks } from './src/lib/remark-wiki-links.mjs';
 import { remarkLinkDistinction } from './src/lib/remark-link-distinction.mjs';
 import { remarkHashtags } from './src/lib/remark-hashtags.mjs';
 import { remarkAssetShortcuts } from './src/lib/remark-asset-shortcuts.mjs';
+import { remarkGallery } from './src/lib/remark-gallery.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,7 +21,7 @@ export default defineConfig({
 		defaultStrategy: 'hover'
 	},
 	markdown: {
-		remarkPlugins: [remarkDirective, remarkDraftContainer, remarkCallouts, remarkWikiLinks, remarkLinkDistinction, remarkHashtags, remarkAssetShortcuts],
+		remarkPlugins: [remarkDirective, remarkDraftContainer, remarkCallouts, remarkWikiLinks, remarkLinkDistinction, remarkHashtags, remarkAssetShortcuts, remarkGallery],
 	},
 	vite: {
 		plugins: [tailwindcss()]
