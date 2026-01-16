@@ -36,12 +36,6 @@ export function remarkWikiLinks() {
     }
   }
 
-  const stageIcons = {
-    seed: '🌱',
-    sprout: '🌿',
-    evergreen: '🌲'
-  };
-
   return (tree) => {
     visit(tree, 'text', (node, index, parent) => {
       if (!node.value) return;
@@ -74,7 +68,6 @@ export function remarkWikiLinks() {
           .replace(/[^\w-]/g, '');
 
         const stage = slugToStage.get(slug);
-        const icon = stage ? stageIcons[stage] : '';
         const label = (displayText || linkTarget).trim();
 
         const linkNode = {
@@ -98,26 +91,6 @@ export function remarkWikiLinks() {
             }
           ]
         };
-
-        if (icon) {
-          linkNode.children.push({
-            type: 'text',
-            value: ' '
-          });
-          // Use a proper mdast node that will be converted to a span
-          linkNode.children.push({
-            type: 'text',
-            value: icon,
-            data: {
-              hName: 'span',
-              hProperties: { 
-                className: ['status-icon'],
-                'data-stage': stage,
-                title: `Stage: ${stage}`
-              }
-            }
-          });
-        }
 
         newChildren.push(linkNode);
         lastIndex = matchIndex + fullMatch.length;
