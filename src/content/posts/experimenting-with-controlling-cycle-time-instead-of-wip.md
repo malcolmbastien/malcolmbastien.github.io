@@ -27,9 +27,8 @@ I like to use "Cycle Time" when measuring the time required for work to flow thr
 
 For example:
 
-**Cycle time:** The cycle time for development was seven days, whereas the cycle time for testing was three days.
-
-**Lead time:** The team's lead time from when they started the work to when they deployed was three weeks.
+- **Cycle time:** The cycle time for development was seven days, whereas the cycle time for testing was three days.
+- **Lead time:** The team's lead time from when they started the work to when they deployed was three weeks.
 
 The cycle time of a team's activities matters because having a system with a stable lead-time distribution is one of the most significant improvements a team can make. Planning, making commitments, meeting deadlines, and creating trust with customers are more straightforward when a team's delivery is under control.
 
@@ -58,9 +57,8 @@ Last year, I joined a team using Jira to manage their work. From the moment I jo
 
 In this sort of situation, trying to use WIP limits would run into different problems:
 
-Because WIP limits apply to an entire column, issues in Feature Team A might block any other work from starting.
-
-Because different feature teams are working on various projects in other domains, people can't quickly swarm across projects to resolve bottlenecks.
+- Because WIP limits apply to an entire column, issues in Feature Team A might block any other work from starting.
+- Because different feature teams are working on various projects in other domains, people can't quickly swarm across projects to resolve bottlenecks.
 
 Since Jira treats all issues the same, WIP limits can easily get exceeded when teams add different work to their boards. On a Jira board tracking epics, stories, sub-tasks, dependencies, and developer tasks, those WIP limits would get quickly clogged by items that aren't necessarily actionable.
 
@@ -86,7 +84,9 @@ Capturing what work items are taking longer and why while delivery is still happ
 
 The query to capture work items that have been stuck in the same column for over 10 days that I use is:
 
-`not status changed AFTER -10d and created` 
+```
+not status changed AFTER -10d and created
+``` 
 
 ## Conclusion
 

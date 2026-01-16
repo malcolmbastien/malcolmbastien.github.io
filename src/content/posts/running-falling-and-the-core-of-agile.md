@@ -19,7 +19,7 @@ The Pose Method works by identifying repetitive “poses” during a running cyc
 
 ![](https://cdn.websites.hibu.com/ca9a9cf4f5024372bc9c30f729fa5363/dms3rep/multi/pose-fall-pull.gif)
 
-The Pose (Picture #1) equates to landing with your mid-foot directly under your Center of Mass (CoM). Landing with the foot directly under the hips allows us to continue momentum with limited braking force.
+The Pose (Picture \#1) equates to landing with your mid-foot directly under your Center of Mass (CoM). Landing with the foot directly under the hips allows us to continue momentum with limited braking force.
 
 [The Pose Method and Effortless Running (evolutionsportspt.com)](https://www.evolutionsportspt.com/the-pose-method-and-effortless-running)
 
@@ -37,9 +37,9 @@ Imagine a ball rolling downhill with long, purple spikes poking out from the bor
 
 ![](../../assets/2023/05/image-28.png)
 
-Any time the purple spike hits directly under the ball's center of rotation, it will hit the downhill slope in a manner that will promote effective force transmission into the same direction the ball is currently traveling. Our feet are the same way - landing with a foot out beyond the CoM actually causes a force in the direction opposite to forward motion of the body. The foot then needs to remain in place until the CoM “catches up” to the base of support and is positioned over the foot in order to effectively carryover the forward momentum. Longer time on the ground = slower step turnover.
-
-[The Pose Method and Effortless Running (evolutionsportspt.com)](https://www.evolutionsportspt.com/the-pose-method-and-effortless-running)
+> Any time the purple spike hits directly under the ball's center of rotation, it will hit the downhill slope in a manner that will promote effective force transmission into the same direction the ball is currently traveling. Our feet are the same way - landing with a foot out beyond the CoM actually causes a force in the direction opposite to forward motion of the body. The foot then needs to remain in place until the CoM “catches up” to the base of support and is positioned over the foot in order to effectively carryover the forward momentum. Longer time on the ground = slower step turnover.
+>
+> [The Pose Method and Effortless Running (evolutionsportspt.com)](https://www.evolutionsportspt.com/the-pose-method-and-effortless-running)
 
 ## What Keeps Agile Teams on the Ground
 
@@ -49,25 +49,18 @@ With Agile, we want to accomplish the same goal: Stay in Pose, and maximize the 
 
 In the talk, [The Alternate Path to Enterprise Agility](https://www.youtube.com/watch?v=RsayVfMVjbU), David J. Anderson outlines some practices organizations should consider removing from their process:
 
-Estimates
-
-Iterations
-
-Planning
-
-Prioritization
-
-Backlog grooming
-
-Dependency management
+- Estimates
+- Iterations
+- Planning
+- Prioritization
+- Backlog grooming
+- Dependency management
 
 There are others I see daily:
 
-Managing work in multiple places instead of a single system
-
-Poor meeting facilitation, where people talk for hours about systems and solutions instead of doing collaborative modelling
-
-Implementing new processes and roles because an Agile framework tells them to
+- Managing work in multiple places instead of a single system
+- Poor meeting facilitation, where people talk for hours about systems and solutions instead of doing collaborative modelling
+- Implementing new processes and roles because an Agile framework tells them to
 
 I say teams should work to "get rid of" these practices instead of "get better at" because many teams get caught in the trap of trying to get better at things they would be better off stopping completely. A team won't become Agile by starting these activities and won't get any more Agile by improving how they do them.
 
@@ -87,28 +80,30 @@ To get a better idea about what the Agile equivalent of Pose looks like, here ar
 
 [Modern Agile](https://modernagile.org/) and [Heart of Agile](https://heartofagile.com/) are two movements focused on Agile development's core principles and values. The themes of delivering value, getting feedback, learning rapidly, experimenting and improving paint a picture of agile that touches on the idea of falling and moving smoothly. They focus on the people and the work, not management methods.
 
-![](../../assets/2023/05/image-27.png)Modern Agile
+![](../../assets/2023/05/image-27.png)
+*[Modern Agile](https://modernagile.org/)*
 
-![](../../assets/2023/05/image-26.png)The Heart of Agile | More powerful, More human
+![](../../assets/2023/05/image-26.png)
+*[Heart of Agile](https://heartofagile.com/)*
 
 Here's a helpful quote from Allen Holub:
 
-Build small.
-Talk to each other.
-
-If anybody tells you that "Agile" is anything other than that, I wouldn’t pay much attention to them.
-
-Allen Holub, [Twitter - @allenholub](https://twitter.com/allenholub/status/1469129253878829056)
+> Build small.
+> Talk to each other.
+>
+> If anybody tells you that "Agile" is anything other than that, I wouldn’t pay much attention to them.
+>
+> Allen Holub, [Twitter - @allenholub](https://twitter.com/allenholub/status/1469129253878829056)
 
 Another quote from Kevlin Henney:
 
-For all the non-prescriptiveness of the Agile Manifesto, that is unambiguously a core value:
-
-Responding to change over following a plan
-
-That is what the word agile entails. It is not simply achieving a sustainable speed in an optimal direction; it is being able to change both speed and direction, and to do so easily.
-
-Kevlin Henney, [Agility ≠ Speed](https://kevlinhenney.medium.com/agility-speed-96057078fe40)
+> For all the non-prescriptiveness of the Agile Manifesto, that is unambiguously a core value:
+>
+> Responding to change over following a plan
+>
+> That is what the word agile entails. It is not simply achieving a sustainable speed in an optimal direction; it is being able to change both speed and direction, and to do so easily.
+>
+> Kevlin Henney, [Agility ≠ Speed](https://kevlinhenney.medium.com/agility-speed-96057078fe40)
 
 ## Conclusion
 

@@ -22,8 +22,12 @@ There are a few reasons I don't like using the default control chart:
 - It mixes data for both completed items and work in progress
 - It includes non-standard issue types where the lead time does not reflect the actual speed.
 - It includes issues that added were on the board before being moved to the backlog
-- Here's the query, which I added as a Quick Filter, and a bit about how it works:
-- resolution = Unresolved and status not in (Backlog) and issuetype not in (Epic)
+
+Here's the query, which I added as a Quick Filter, and a bit about how it works:
+
+```
+resolution = Unresolved and status not in (Backlog) and issuetype not in (Epic)
+```
 
 ![](../../assets/2022/09/image-9.png)
 *My new Jira Quick Filter*
@@ -37,8 +41,8 @@ To help me monitor aging WIP, this filter removes all data for issues that are f
 
 The new chart shows significantly fewer issues, and I can immediately see what issues need attention.
 
-Unfortunately, the stats on this control chart don't update while items sit in a status. Jira's control chart will only update when an issue's status changes. It's probably not a big problem if your team has short lead times, but the control chart will underrepresent the actual item age.
+Unfortunately, the stats on this control chart don't update while items sit in a status. Jira's control chart will only update when an issue's status changes. It's probably not a big problem if your team has short lead times, but the control chart will under-represent the actual item age.
 
 ## Conclusion
 
-With this new control chart, we have something Delivery Managers and Scrum Master can use to actively manage their teams by quickly scanning the current situation and spotting problem issues. This view would benefit teams dealing with high amounts of work in progress or teams with long lead time tails.
+With this new control chart, we have something Delivery Managers and Scrum Masters can use to actively manage their teams by quickly scanning the current situation and spotting problem issues. This view would benefit teams dealing with high amounts of work in progress or teams with long lead time tails.

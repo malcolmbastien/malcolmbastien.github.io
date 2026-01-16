@@ -9,38 +9,43 @@ summary: How I've configured emacs for the goal of writing
 draft: true              # Optional, adds WIP banner
 ---
 
-- Doom Emacs
-- Shortcuts
-
 ## Doom Emacs
+
+![[../../assets/2026/01/20260115233245.png]]
+*[Doom Emacs](https://github.com/doomemacs/doomemacs)*
+
+I decided to use Doom Emacs. When I first started I actually spent a few days trying to start from scratch, by following some tutorials and installing a few plugins I was able to get something pretty good, but the ceiling or limit to what Emacs can do is so high. I resisted it a bit at first, but I eventually made the decision to offload the work on creating a crafted Emacs experience people who have been this for years, and with that decided to install [Doom Emacs](https://github.com/doomemacs/doomemacs).
 
 
 ### Plugins
 
+Here's a subset of the plugins I've enabled in Doom Emacs related to writing:
+- zen
+- undo
+- syntax
+- grammar
+- markdown
+
+A lot of what you need from Doom Emacs is enabled by default.
+
+One of Emacs default behaviours I didn't like was how moving the cursor up or down would skip wrapped lines.
+
+To fix that, I needed to add this to my `config.el` file
+
+```
+(map! :nv "j" #'evil-next-visual-line
+      :nv "k" #'evil-previous-visual-line
+      :nv [up]   #'evil-previous-visual-line
+      :nv [down] #'evil-next-visual-line)
+```
+
 ## Shortcuts
 
-### Notes
-| Key | Description |
-| --- | --- |
-| `SPC` `n` `n` | Org capture |
-| `SPC` `n` `t` | Show all (not done) TODO entries from all agenda files in a single list |
-| `SPC` `n` `v` | Show all entries that contain a phrase or words or regular expressions |
-| `SPC` `n` `y` | Exports the current buffer/selection to the clipboard |
-| `SPC` `n` `f` | Find file in notes |
-| `SPC` `n` `F` | Browse notes |
-| `SPC` `n` `s` | Search notes |
-| `SPC` `n` `S` | Jump to an Org headline in 'org-agenda-files' |
+There's a plus and minus to using a keyboard driven application. On the plus side, you can execute commands and navigate very quickly. But the negative is that until these commands and actions become muscle memory, things are very slow.
 
+One thing I appreciate about Emacs is how you can search through every available command by using the hotkey `M x` or (Alt + x). It helps, but the there are so many actions you need to learn the hotkeys for. I tried saving all the shortcuts i thought would be important in Obsidian.
 
-### Leaving Emacs
-| Key | Description |
-| --- | --- |
-| :qa    | Quit Emacs    |
-| :wqa | Save all buffers and quit Emacs |
-| `SPC` `q` `q` | Quit Emacs |
-| `SPC` `q` `r` | Restart Emacs and restore session |
-
-### Finding/saving files
+### Finding/Saving Files
 
 | Key | Description |
 | --- | --- |
@@ -52,12 +57,13 @@ draft: true              # Optional, adds WIP banner
 | `SPC` `o` `p` | Initialize or toggle treemacs |
 | `SPC` `o` `P` | find and focus the current file in the treemacs window |
 
-### Buffer management
-
-|Key|Description|
-|---|---|
-|`SPC` `,` or `SPC` `b` `b`|Switch to another buffer|
-|`SPC` `<` or `SPC` `b` `S-b`|Switch to another buffer across workspaces|
+### Leaving Emacs
+| Key | Description |
+| --- | --- |
+| `:qa`    | Quit Emacs    |
+| `:wqa` | Save all buffers and quit Emacs |
+| `SPC` `q` `q` | Quit Emacs |
+| `SPC` `q` `r` | Restart Emacs and restore session |
 
 ### Search (and Replace)
 
@@ -68,16 +74,14 @@ draft: true              # Optional, adds WIP banner
 |`SPC` `s` `d`|Search in current directory (recursive)|
 |`SPC` `s` `S-d`|Search in another directory (recursive)|
 
-###  Scratch buffer
+### Buffer Management
 
 |Key|Description|
 |---|---|
-|`SPC` `x` or `SPC` `b` `x`|Open global scratch buffer in a popup|
-|`SPC` `b` `S-x`|Switch to global scratch buffer in current window|
-|`SPC` `p` `x`|Open project-local scratch buffer in a popup|
-|`SPC` `p` `S-x`|Switch to project-local scratch buffer in current window|
+|`SPC` `,` or `SPC` `b` `b`|Switch to another buffer|
+|`SPC` `<` or `SPC` `b` `S-b`|Switch to another buffer across workspaces|
 
-### Window management
+### Window Management
 
 |Key|Description|
 |---|---|
@@ -93,32 +97,13 @@ draft: true              # Optional, adds WIP banner
 |`{N}` `C-w` <code>\|</code>  |Change width of current window to `N` (a number)|
 |`{N}` `C-w` `_`|Change height of current window to `N` lines|
 
-### View
+### Font Size
 
 |Key|Description|
 |---|---|
 |`C--` | Decrease font size |
 |`C-=` | Increase font size |
 |`C-+` | Reset font size |
-
-### Editting
-
-|Key|Description|
-|---|---|
-| `>` | Right indent  |
-| `<` | Left indent |
-| `=` | Indent text |
-| `~` | Invert case of character |
-| `C-z` | Enable Emacs state |
-| `C-]` | Jump to tag under point |
-| `$` | Move the cursor to the end of the current line |
-
-### Help
-
-|Key|Description|
-|---|---|
-| `SPC` `h` `b` `f` | Show bindings for a mode |
-
 
 ### Writing
 
@@ -150,6 +135,10 @@ draft: true              # Optional, adds WIP banner
 | `r` | **Replace** a single character and stay in Normal mode. |
 | `o` | Open a new line **below** the current one and enter Insert mode. |
 | `O` | Open a new line **above** the current one. |
+| `>` | Right indent  |
+| `<` | Left indent |
+| `=` | Indent text |
+| `~` | Invert case of character |
 | `u` | **Undo**. |
 |`C-r` | **Redo**. |
 
@@ -166,3 +155,4 @@ draft: true              # Optional, adds WIP banner
 | `f` `[char]` | **Find** the next occurrence of a character on that line |
 | `%` | Jump between matching brackets |
 | `:[number]` | Jump to a specific line number |
+| `C-]` | Jump to tag under point |
