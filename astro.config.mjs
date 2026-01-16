@@ -20,6 +20,7 @@ export default defineConfig({
 		prefetchAll: true,
 		defaultStrategy: 'hover'
 	},
+// 	remarkPlugins: [remarkDirective, remarkDraftContainer, remarkCallouts, remarkWikiLinks, remarkLinkDistinction, remarkHashtags, remarkAssetShortcuts, remarkGallery],
 	markdown: {
 		remarkPlugins: [remarkDirective, remarkDraftContainer, remarkCallouts, remarkWikiLinks, remarkLinkDistinction, remarkHashtags, remarkAssetShortcuts, remarkGallery],
 	},

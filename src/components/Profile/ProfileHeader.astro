@@ -3,18 +3,18 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { theme } from "../../lib/theme";
 import { Picture } from "astro:assets";
 
-const posts = await getCollection("posts");
-const publishedPosts = posts.filter((post) => post.data);
+const notes = await getCollection("notes");
+const publishedNotes = notes.filter((note) => note.data);
 const counts = {
-    all: publishedPosts.length,
-    seed: publishedPosts.filter(
-        (p: CollectionEntry<"posts">) => p.data.status === "seed",
+    all: publishedNotes.length,
+    seed: publishedNotes.filter(
+        (n: CollectionEntry<"notes">) => n.data.stage === "seed",
     ).length,
-    sprout: publishedPosts.filter(
-        (p: CollectionEntry<"posts">) => p.data.status === "sprout",
+    sprout: publishedNotes.filter(
+        (n: CollectionEntry<"notes">) => n.data.stage === "sprout",
     ).length,
-    evergreen: publishedPosts.filter(
-        (p: CollectionEntry<"posts">) => p.data.status === "evergreen",
+    evergreen: publishedNotes.filter(
+        (n: CollectionEntry<"notes">) => n.data.stage === "evergreen",
     ).length,
 };
 

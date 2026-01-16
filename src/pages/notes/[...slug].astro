@@ -1,0 +1,36 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import NoteLayout from '../../layouts/NoteLayout.astro';
+import { getFileDates } from '../../lib/git-history';
+
+export async function getStaticPaths() {
+	const notes = await getCollection('notes');
+	const backlinksMap = await import('../../lib/backlinks.ts').then(m => m.buildBacklinksMap());
+
+	return notes.map((entry: CollectionEntry<'notes'>) => {
+        const relatedSlugs = backlinksMap[entry.id] || [];
+        const relatedNotes = notes.filter(n => relatedSlugs.includes(n.id));
+        return {
+            params: { slug: entry.id },
+            props: {
+                entry,
+                backlinkedNotes: relatedNotes
+            },
+        };
+    });
+}
+
+interface Props {
+	entry: CollectionEntry<'notes'>;
+	backlinkedNotes: CollectionEntry<'notes'>[];
+}
+
+const { entry, backlinkedNotes } = Astro.props;
+const { Content } = await entry.render();
+const filePath = `src/content/notes/${entry.id}`;
+const { created, updated } = await getFileDates(filePath);
+---
+
+<NoteLayout frontmatter={entry.data} filePath={filePath} gitCreated={created} gitUpdated={updated} backlinkedNotes={backlinkedNotes} noteBody={entry.body}>
+	<Content />
+</NoteLayout>

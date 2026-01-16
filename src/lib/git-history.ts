@@ -117,7 +117,7 @@ export async function getBatchFileDates(): Promise<Map<string, FileDates>> {
 	if (batchDatesCache) return batchDatesCache;
 
 	try {
-		// Get all commits and files in src/content/posts
+		// Get all commits and files in src/content/notes
 		// format: timestamp
 		// file_path
 		const raw = await git.raw([
@@ -125,7 +125,7 @@ export async function getBatchFileDates(): Promise<Map<string, FileDates>> {
 			'--format=%at',
 			'--name-only',
 			'--',
-			'src/content/posts'
+			'src/content/notes'
 		]);
 
 		const results = new Map<string, FileDates>();
@@ -139,7 +139,7 @@ export async function getBatchFileDates(): Promise<Map<string, FileDates>> {
 
 			if (/^\d+$/.test(trimmed)) {
 				currentTimestamp = parseInt(trimmed) * 1000;
-			} else if (currentTimestamp && trimmed.startsWith('src/content/posts/')) {
+			} else if (currentTimestamp && trimmed.startsWith('src/content/notes/')) {
 				const filePath = trimmed;
 				const date = new Date(currentTimestamp);
 				const dateStr = date.toISOString().split('T')[0];
@@ -187,7 +187,7 @@ export async function getAllCommits(): Promise<CommitInfo[]> {
 
 export async function getPostsCommits(): Promise<CommitInfo[]> {
 	try {
-		const log = await git.log(['--', 'src/content/posts/']);
+		const log = await git.log(['--', 'src/content/notes/']);
 		return log.all.map(commit => ({
 			date: commit.date,
 			message: commit.message,

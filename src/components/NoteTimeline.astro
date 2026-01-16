@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 interface Props {
     sortedEvents: Array<{
         type: string;
-        post: any;
+        note: any;
         date: Date;
         title: string;
         count?: number;
@@ -62,7 +62,7 @@ sortedEvents.forEach((event) => {
                              {monthEvents.map((event: any) => {
                                  const icon =
                                      event.type === "created" ? "➕" : "✏️";
-                                 const isFeatured = event.post.data.featured;
+                                 const isFeatured = event.note.data.featured;
                                  const eventYear = event.date.getFullYear().toString();
                                  const isInitialBatch = eventBatchStatus.get(event);
 
@@ -73,16 +73,15 @@ sortedEvents.forEach((event) => {
                                                  ? "border-emerald-500/30 bg-emerald-50/10 dark:bg-emerald-500/5 shadow-sm ring-1 ring-emerald-500/20" 
                                                  : "border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50"
                                              }`}
-                                              data-stage={event.post.data.stage}
+                                              data-stage={event.note.data.stage}
                                               data-title={event.title.toLowerCase()}
                                               data-summary={
-                                                  event.post.data.summary?.toLowerCase() ||
+                                                  event.note.data.summary?.toLowerCase() ||
                                                   ""
                                               }
-                                              data-topics={event.post.data.tags
+                                              data-topics={event.note.data.tags
                                                   .join(" ")
                                                   .toLowerCase()}
-
 
                                              data-created={
                                                  event.date
@@ -93,7 +92,7 @@ sortedEvents.forEach((event) => {
                                              data-event-type={event.type}
                                              data-is-collapsed={event.isCollapsed ? "true" : "false"}
                                              data-is-initial-batch={isInitialBatch ? "true" : "false"}
-                                         >
+                                          >
                                          <div class="flex flex-1 items-start gap-4 min-w-0 w-full">
                                             <div class="shrink-0 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl">
                                                 {icon}
@@ -102,29 +101,29 @@ sortedEvents.forEach((event) => {
                                             <div class="flex-1 min-w-0 flex flex-col self-stretch">
                                                 <h4 class="font-bold text-lg text-slate-900 dark:text-slate-100 mb-1">
                                                     <a
-                                                        href={`/posts/${event.post.slug}`}
+                                                        href={`/notes/${event.note.id}`}
                                                         class="group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors after:absolute after:inset-0"
                                                     >
                                                         {event.title}
                                                     </a>
                                                 </h4>
                                                 <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
-                                                    {event.post.data.summary ||
+                                                    {event.note.data.summary ||
                                                         ""}
                                                 </p>
                                                  <div class="flex items-center gap-3 mt-auto pt-3">
                                                     <span
-                                                        class={`px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${stageColors[event.post.data.stage as keyof typeof stageColors]}`}
+                                                        class={`px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${stageColors[event.note.data.stage as keyof typeof stageColors]}`}
                                                     >
-                                                        {event.post.data
+                                                        {event.note.data
                                                             .stage === "seed"
                                                             ? "🌱"
-                                                            : event.post.data
+                                                            : event.note.data
                                                                     .stage ===
                                                                 "sprout"
                                                                ? "🌿"
                                                                : "🌲"}{" "}
-                                                        {event.post.data.stage}
+                                                        {event.note.data.stage}
                                                     </span>
 
 
@@ -134,7 +133,7 @@ sortedEvents.forEach((event) => {
                                                     </span>
 
                                                     <div class="flex flex-wrap gap-1">
-                                                        {event.post.data.tags
+                                                        {event.note.data.tags
                                                             .slice(0, 2)
                                                             .map(
                                                                 (
@@ -150,10 +149,10 @@ sortedEvents.forEach((event) => {
                                                 </div>
                                             </div>
 
-                                            {isFeatured && event.post.data.cover && (
+                                            {isFeatured && event.note.data.cover && (
                                                 <div class="hidden md:block w-48 h-32 shrink-0 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700">
                                                     <Image
-                                                        src={event.post.data.cover}
+                                                        src={event.note.data.cover}
                                                         alt={event.title}
                                                         class="w-full h-full object-cover"
                                                     />
@@ -178,10 +177,10 @@ sortedEvents.forEach((event) => {
                                          </div>
 
                                          {/* Mobile cover image */}
-                                         {isFeatured && event.post.data.cover && (
+                                         {isFeatured && event.note.data.cover && (
                                              <div class="md:hidden w-full h-48 shrink-0 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 mt-2">
                                                  <Image
-                                                     src={event.post.data.cover}
+                                                     src={event.note.data.cover}
                                                      alt={event.title}
                                                      class="w-full h-full object-cover"
                                                  />
