@@ -572,38 +572,6 @@ const currentYearValue = new Date().getFullYear();
         });
     }
 
-    buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const stage = (button as HTMLElement).dataset.stage || "all";
-            itemsToShow = 10;
-            if (currentFilter === stage) {
-                button.classList.remove("active");
-                currentFilter = "all";
-            } else {
-                buttons.forEach((btn) => btn.classList.remove("active"));
-                button.classList.add("active");
-                currentFilter = stage;
-            }
-            updateDisplay();
-        });
-    });
-
-    topicButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const topic = (button as HTMLElement).dataset.topic || "";
-            itemsToShow = 10;
-            if (currentTopic === topic) {
-                button.classList.remove("active");
-                currentTopic = "";
-            } else {
-                topicButtons.forEach((btn) => btn.classList.remove("active"));
-                button.classList.add("active");
-                currentTopic = topic;
-            }
-            updateDisplay();
-        });
-    });
-
     eventTypeButtons.forEach((button) => {
         button.addEventListener("click", () => {
             const eventType =
@@ -691,6 +659,19 @@ const currentYearValue = new Date().getFullYear();
             }
 
             updateDisplay();
+
+            // Scroll to the selected month section
+            setTimeout(() => {
+                const monthSection = document.querySelector(
+                    `.month-section[data-month="${monthKey}"]`,
+                );
+                if (monthSection) {
+                    monthSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                    });
+                }
+            }, 10);
         });
     });
 
