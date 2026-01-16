@@ -11,7 +11,7 @@ draft: true              # Optional, adds WIP banner
 
 ## Doom Emacs
 
-![[../../assets/2026/01/20260115233245.png]]
+![](../../assets/2026/01/20260115233245.png)
 *[Doom Emacs](https://github.com/doomemacs/doomemacs)*
 
 I decided to use Doom Emacs. When I first started I actually spent a few days trying to start from scratch, by following some tutorials and installing a few plugins I was able to get something pretty good, but the ceiling or limit to what Emacs can do is so high. I resisted it a bit at first, but I eventually made the decision to offload the work on creating a crafted Emacs experience people who have been this for years, and with that decided to install [Doom Emacs](https://github.com/doomemacs/doomemacs).
