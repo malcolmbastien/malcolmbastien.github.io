@@ -82,7 +82,11 @@ export function remarkWikiLinks() {
           children: [
             {
               type: 'text',
-              value: label
+              value: label,
+              data: {
+                hName: 'span',
+                hProperties: { className: ['link-text'] }
+              }
             }
           ]
         };
