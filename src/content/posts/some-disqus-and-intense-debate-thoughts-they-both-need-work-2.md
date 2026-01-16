@@ -14,13 +14,14 @@ I recently changed the comment systems on Open Mode And Toronto Dev to both use 
 Besides DISQUS's great response rate to joining the discussions we were having about the service, DISQUS also has built into its system the ability to easily record Seesmic video comments.  That was my biggest motivator for switching, DISQUS has had that feature for a long while, and Intense Debate doesn't.  I wanted Seesmic comments so I could simply give my readers the option to participate that way if they wanted.
 
 Now each system has some different strengths going for it, but right off the bat I am feeling frustration with some of the things I'm seeing with DISQUS.  Consider this my list of things I think DIQUS is doing well, and my "Please change this" requests for the service.
-### Good:
+
+## Good:
 
 - **Minimalist and Fast:** DISQUS is really less intrusive when implemented on a blog than Intense Debate is, and it feels snapper & faster to load.
 - **Seesmic, Facebook Connect, and Friendfeed commenting:** These are options that are all essential now and it great that DIQUS will even pull in comments from different sources like FriendFeed.
 - **Nicer community pages:** The community pages for DISQUS powered blog, like the community page for Open Mode, do a better job of giving not only the blog admin information, but also useful information for anybody in general.  But even though I think it's a bit better than Intense Debates blog pages, I'd still like to see more *useful* information about my blogs commenters, and trends.
 
-### Bad:
+## Bad:
 
 - **Options pages are confusing and too big:** The Settings page for an DISQUS comment site is 4 screens long. And some of the options are not needed (like font size) or unclear (please use a radio form with image rather than only select forms all the time).
 - **I can't do front end comment moderation:** DISQUS only lets me Reply or Reblog other people's comments while Intense Debate lets me Delete or Block IP of comments as well.  (I actually changes all the settings for one blog and copied over different widgets, and then realized that the DISQUS admin area had been set to the wrong blog in it's select box... *Enough with the select boxes already!*)

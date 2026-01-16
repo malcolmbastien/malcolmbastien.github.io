@@ -48,12 +48,12 @@ If we think about user stories as stories we tell to one another, the guidance o
 
 One example of this is to apply the INVEST principles to the way we tell user stories. INVEST stands for **I**ndependent, **N**egotiable, **V**aluable, **E**stimable, **S**mall, and **T**estable. These are criteria that help us create well-formed user stories. INVEST becomes more helpful if we forget about trying to write stories and instead focus on telling stories that meet these criteria.
 
-- **Independent**: The stories you tell should be complete, whole stories.
-- **Negotiable**: The stories you tell should focus on the user, not the systems.
-- **Valuable**: The stories you tell should help the user in some way.
-- **Estimable**: The stories you tell should be coherent and possible to estimate.
-- **Small**: The stories you tell should be short or micro-stories.
-- **Testable**: The stories you tell should lead to questions and discussion.
+- **Independent:** The stories you tell should be complete, whole stories.
+- **Negotiable:** The stories you tell should focus on the user, not the systems.
+- **Valuable:** The stories you tell should help the user in some way.
+- **Estimable:** The stories you tell should be coherent and possible to estimate.
+- **Small:** The stories you tell should be short or micro-stories.
+- **Testable:** The stories you tell should lead to questions and discussion.
 
 ### Tell Bigger Stories With User Story Maps
 

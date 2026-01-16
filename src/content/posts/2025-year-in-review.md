@@ -3,22 +3,32 @@ title: 2025 Year in Review
 status: seed
 tags:
   - Year-In-Review
+  - Obsidian
+  - Video-Games
+  - AI
+  - Typing
 summary: A look back at what happened in 2025
 draft: true              # Optional, adds WIP banner
 ---
 
-# Vibe coded apps
-* [Team Flow Mapping](https://teamflowmapping.com/)
-* [DelayCost Visualizer](https://studio--delaycost-visualizer.us-central1.hosted.app/)
-* [Wardley Doctrine & AI Impact Explorer](https://wardley-doctrine-ai-impact-explorer-512441749265.us-west1.run.app/)
-* [Agile Big Room Planning](https://team-dependency-matrix-838267439197.us-west1.run.app)
-* [Agile Team Profiler](https://agile-team-profiler-539581219123.us-west1.run.app)
-* [OutlineFlow](https://studio--outlineflow.us-central1.hosted.app/)
-* [Ganttify](https://studio--ganttify-6q9ac.us-central1.hosted.app/)
+## AI
+
+Like I wrote about in [[my-ai-learning-journey|My AI Learning Journey]], I spent the bulk of July watching lectures and learning about different concepts related to AI and LLMs.
+
+### Vibe Coded Apps
+- [Team Flow Mapping](https://teamflowmapping.com/)
+	- Team Flow Mapping started as a simple idea, but grew into a basic, but full featured application that took about a month of full-time development.
+	- Developing Team Flow Mapping taught me a lot, which I cover more in [[building-team-flow-mapping|Building Team Flow Mapping]].
+- [DelayCost Visualizer](https://studio--delaycost-visualizer.us-central1.hosted.app/)
+- [Wardley Doctrine & AI Impact Explorer](https://wardley-doctrine-ai-impact-explorer-512441749265.us-west1.run.app/)
+- [Agile Big Room Planning](https://team-dependency-matrix-838267439197.us-west1.run.app)
+- [Agile Team Profiler](https://agile-team-profiler-539581219123.us-west1.run.app)
+- [OutlineFlow](https://studio--outlineflow.us-central1.hosted.app/)
+- [Ganttify](https://studio--ganttify-6q9ac.us-central1.hosted.app/)
 
 ## Blog
 
-I tried hard this year to write about topics I thought would be impactful and give people with alternative perspectives and paths to agility than the behaviours I saw in my day to day work. In my day to day, I saw poor management, people following the path of least resistence, and more focuse more on getting things done than considering:
+I tried hard this year to write about topics I thought would be impactful and give people with alternative perspectives and paths to agility than the behaviours I saw in my day to day work. In my day to day, I saw poor management, people following the path of least resistance, and more focused more on getting things done than considering:
 
 - What are we building?
 - Why are we doing it?
@@ -33,13 +43,20 @@ In terms of stats, here's what 2025 looked like on the blog.
 
 ## Obsidian
 
-I didn't spend as much time adding or grooming my Obsidian content in 2025 than I had in previous years. With the exception of the new AI and Maching Learning notes I captured, I spent a lot more of my time experimenting and building things than I did reading or note taking.
+I didn't spend as much time adding or grooming my [Obsidian](https://obsidian.md/) content in 2025 than I had in previous years. With the exception of the new AI and Machine Learning notes I captured, I spent a lot more of my time experimenting and building things than I did reading or note taking.
 
-I also spent time in the latter part of the year relearning how to using and configuring emacs, and how to use Org Mode.
+In previous years I was using both Obsidian and [Logseq](https://logseq.com/), but since 2023 Logseq has had very few updates as they invested most of their resources developing a new database driven version of the application. While I enjoyed using an outliner with block-based editting and built-in queries, performance really suffered with my large vault. And meanwhile, Obsidian has consistently been developing at a high velocity with the community plug-in ecosystem becoming more and more mature.
+
+I also spent time in the latter part of the year relearning how to using and configuring Emacs, and how to use [Org Mode](https://orgmode.org/).
 
 I don't think I'll ever remove Obsidian from my workflow, but in this age of software, I appreciate using applications with exceptionally high performance, stability, longevity, and customization. That pursuit occasionally leads me to try out and learn different applications.
 
-Two of my main reasons for learning Emacs was using Org Mode as a GTD app, and because I've seen emacs described as one the best tools in existence for editting text. And while the learning curve is still high, things are better now than they were 10 years ago, and being able to get help from AI on my specific issues has been a big help.
+Two of my main reasons for learning Emacs was using Org Mode as a GTD app, and because I've seen Emacs described as one the best tools in existence for editing text. And while the learning curve is still high, things are better now than they were 10 years ago, and being able to get help from AI on my specific issues has been a big help.
+
+I cover how I setup and use Emacs for writing in [[my-emacs-writing-setup|My Emacs Writing Setup]].
+
+![](../../assets/2026/01/20260115195423.png)
+*My Obsidian graph as of December 2025*
 
 ## Started Learning Piano
 
@@ -47,13 +64,16 @@ This year, I found myself with more free time after work than I had in the past.
 
 So I bought a keyboard, and every day after work I would practice for about an hour or so, then after doing a short workout and dinner, I'd go back and practice for a bit longer.
 
-I have to say the one thing I really don't like about playing piano, and I'm sure it's the same for every instrument, is just how uncomfortable some of the hand positions can be. I feels pretty horrible whenever I have to twist my hands or fully stretch my hands in order to play an octave with the side of my pinky finger and thumb.
+I have to say the one thing I really don't like about playing piano, and I'm sure it's the same for every instrument, is just how uncomfortable some of the hand positions can be. I feels pretty horrible whenever I have to twist my hands or fully stretch my hands in order to play an octave with the side of my pinky finger and my thumb.
 
 ## Learned the Graphite Keyboard Layout
 
 In the quest for better comfort and ergonomics, I've learned a few different keyboard layouts.
 
-This year I decided to take the leap again and switch from using Engram, which I picked up in 2021 and learn Graphite.
+This year I decided to take the leap again and switch from using Engram, which I picked up in 2021, and start using [Graphite](https://github.com/rdavison/graphite-layout).
+
+![](../../assets/2026/01/20260115190843.png)
+*Colors indicates expected fingering*
 
 Overall my keyboard layout journey has looked like:
 
@@ -61,7 +81,15 @@ QWERTY -> Dvorak -> Colemak -> Engram -> Graphite
 
 Learning to type with a new keyboard layout is very disruptive to your productivity. It takes a lot of time, requires daily practice, and means having to start all over. But nevertheless, I find it fun and rewarding whenever I do it.
 
-## Video games played
+## Video Games
+
+
+### Steam Replay 2025
+
+![](../../assets/2026/01/20260115195730.png)
+*[Steam Replay 2025](https://s.team/y25/ftqnvcg?l=english)*
+
+### Games Played
 
 To help me create this ranking of how much I liked all of the games I played this year from most to least, I quickly created an app in Google AI Studio to take in all the games I played during the year and ask me a series of comparison questions.
 

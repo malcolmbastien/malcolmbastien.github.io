@@ -22,7 +22,7 @@ Skip ahead to 2009 when tools like [DISQUS](http://disqus.com) and [IntenseDebat
 
 Whenever you fill out the "Website" or "URL" field in a comment form when you publish a comment on a blog or other website, [BackType](http://www.backtype.com/) attributes it to you. **We give comment authors a profile featuring all the comments they've written on the Internet.**
 
-Backtype.com
+### Backtype.com
 
 That's pretty exciting stuff. BackType does something predictive of what the next iteration of the web will be able to do:
 
