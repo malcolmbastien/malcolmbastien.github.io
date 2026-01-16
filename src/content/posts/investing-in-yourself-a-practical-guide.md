@@ -3,15 +3,8 @@ status: seed
 title: "Investing In Yourself: A Practical Guide"
 publishedDate: 2009-02-19
 tags:
-  - Community
-  - General
-  - Online Communities
-  - Personal Brand
-  - programming
-  - resources
-  - Social Media
-  - Unconferences
-  - Web Analytics
+  - Programming
+  - Social-Media
 ---
 There's been a lot of talk about how in down-times like these when you might be having a hard time finding work, that investing in yourself is the best thing you can do.  Which I say is absolutely true.  I want to try and take the idea a step further with a practical resource on how people can go about doing that. By no means will this be a thorough guide, but instead a starting point. This can even become a live resource.
 
@@ -91,63 +84,50 @@ You’ll have a much harder time trying to survive on your own in this time… I
 
 **Books & Blogs**
 
-[Never Eat Alone](http://www.amazon.com/Never-Eat-Alone-Secrets-Relationship/dp/0385512058%3FSubscriptionId%3D0G81C5DAZ03ZR9WH9X82%26tag%3Dopemod-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0385512058) – Keith Ferrazzi
-
-[‘Branding’ is an Overrated Buzzword](http://personalmba.com/branding-overrated-buzzword/) – This article breaks down the idea of “personal brand” into something much more relevant and actionable.
+- [Never Eat Alone](http://www.amazon.com/Never-Eat-Alone-Secrets-Relationship/dp/0385512058%3FSubscriptionId%3D0G81C5DAZ03ZR9WH9X82%26tag%3Dopemod-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0385512058) – Keith Ferrazzi
+- [‘Branding’ is an Overrated Buzzword](http://personalmba.com/branding-overrated-buzzword/) – This article breaks down the idea of “personal brand” into something much more relevant and actionable.
 
 **Social Networks**
 
-Find more people you should be following on Twitter by using [Mr.Tweet](http://mrtweet.net/)
+Find more people you should be following on Twitter by using [Mr.Tweet](http://mrtweet.net/)
 
-[Ten Ways to Use LinkedIn to Find a Job](http://blog.guykawasaki.com/2009/02/10-ways-to-use.html) – Guy Kawasaki
+[Ten Ways to Use LinkedIn to Find a Job](http://blog.guykawasaki.com/2009/02/10-ways-to-use.html) – Guy Kawasaki
 
 **Meetups and Unconferences**
 
-[Toronto Dev Events](http://torontodev.ca/events/)
-
-[BarCamp.org](http://barcamp.org/)
-
-[Meetup.com](http://www.meetup.com/)
+- [Toronto Dev Events](http://torontodev.ca/events/)
+- [BarCamp.org](http://barcamp.org/)
+- [Meetup.com](http://www.meetup.com/)
 
 ## Productive Habits
 
 **Books**
 
-The Power of Less - Leo Babauta of Zen Habits
-
-Getting Things Done - David Allen
-
-The Four Hour Work Week - Timothy Ferriss
+- The Power of Less - Leo Babauta of Zen Habits
+- Getting Things Done - David Allen
+- The Four Hour Work Week - Timothy Ferriss
 
 **Blogs**
 
-43 Folders
-
-Zen Habits
+- 43 Folders
+- Zen Habits
 
 ## **Reader Contributions**
 
-**Skills*** (Thanks to Josh Davey)***:**
+**Skills:** *(Thanks to Josh Davey)*:
 
-Madeam PHP Framework
+- Madeam PHP Framework
 
-**Personal Development** (*Thanks to Will Lam, Puleen Patel, Alex Cohen, *Marianne O'Connor, Milo*)***:**
+**Personal Development:** *(Thanks to Will Lam, Puleen Patel, Alex Cohen, *Marianne O'Connor, Milo)*
 
-What Smart Students Know - Adam Robinson
-
-80/20 Principle - Richard Koch
-
-Think and Grow Rich - Napoleon Hill
-
-Career Renegade - Jonathan Fields
-
-The Last Lecture - Randy Pausch
-
-How to Win Friends and Influence People - Dale Carnegie
-
- How to Stop Worrying and Start Living - Dale Carnegie
-
-Getting Rich Slowly
+- What Smart Students Know - Adam Robinson
+- 80/20 Principle - Richard Koch
+- Think and Grow Rich - Napoleon Hill
+- Career Renegade - Jonathan Fields
+- The Last Lecture - Randy Pausch
+- How to Win Friends and Influence People - Dale Carnegie
+- How to Stop Worrying and Start Living - Dale Carnegie
+- Getting Rich Slowly
 
 **Help me to expand this list!
 What would be other useful resources or categories?

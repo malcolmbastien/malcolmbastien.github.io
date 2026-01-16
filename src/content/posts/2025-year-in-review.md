@@ -1,6 +1,6 @@
 ---
 title: 2025 Year in Review
-status: seed       
+status: seed
 tags:
   - Year-In-Review
 summary: A look back at what happened in 2025
@@ -12,12 +12,11 @@ draft: true              # Optional, adds WIP banner
 * [DelayCost Visualizer](https://studio--delaycost-visualizer.us-central1.hosted.app/)
 * [Wardley Doctrine & AI Impact Explorer](https://wardley-doctrine-ai-impact-explorer-512441749265.us-west1.run.app/)
 * [Agile Big Room Planning](https://team-dependency-matrix-838267439197.us-west1.run.app)
-* [Firebase Studio App](https://studio--ganttify-6q9ac.us-central1.hosted.app/)
 * [Agile Team Profiler](https://agile-team-profiler-539581219123.us-west1.run.app)
 * [OutlineFlow](https://studio--outlineflow.us-central1.hosted.app/)
 * [Ganttify](https://studio--ganttify-6q9ac.us-central1.hosted.app/)
 
-# Blog
+## Blog
 
 I tried hard this year to write about topics I thought would be impactful and give people with alternative perspectives and paths to agility than the behaviours I saw in my day to day work. In my day to day, I saw poor management, people following the path of least resistence, and more focuse more on getting things done than considering:
 
@@ -40,18 +39,27 @@ I also spent time in the latter part of the year relearning how to using and con
 
 I don't think I'll ever remove Obsidian from my workflow, but in this age of software, I appreciate using applications with exceptionally high performance, stability, longevity, and customization. That pursuit occasionally leads me to try out and learn different applications.
 
+Two of my main reasons for learning Emacs was using Org Mode as a GTD app, and because I've seen emacs described as one the best tools in existence for editting text. And while the learning curve is still high, things are better now than they were 10 years ago, and being able to get help from AI on my specific issues has been a big help.
+
+## Started Learning Piano
+
+This year, I found myself with more free time after work than I had in the past. I didn't have the motivation to put energy into reading or writing, and wanted to try something different.
+
+So I bought a keyboard, and every day after work I would practice for about an hour or so, then after doing a short workout and dinner, I'd go back and practice for a bit longer.
+
+I have to say the one thing I really don't like about playing piano, and I'm sure it's the same for every instrument, is just how uncomfortable some of the hand positions can be. I feels pretty horrible whenever I have to twist my hands or fully stretch my hands in order to play an octave with the side of my pinky finger and thumb.
+
 ## Learned the Graphite Keyboard Layout
 
 In the quest for better comfort and ergonomics, I've learned a few different keyboard layouts.
 
 This year I decided to take the leap again and switch from using Engram, which I picked up in 2021 and learn Graphite.
 
-
 Overall my keyboard layout journey has looked like:
 
 QWERTY -> Dvorak -> Colemak -> Engram -> Graphite 
 
-Learning to type with a new keyboard layout is a very disruptive endeavour. It takes a lot of time, requires daily practice, and means having to start all over. But nevertheless, I find it pretty fun whenever I do it.
+Learning to type with a new keyboard layout is very disruptive to your productivity. It takes a lot of time, requires daily practice, and means having to start all over. But nevertheless, I find it fun and rewarding whenever I do it.
 
 ## Video games played
 
@@ -65,10 +73,14 @@ To help me create this ranking of how much I liked all of the games I played thi
 4. Monster Hunter Wilds
    - I was really looking forward to this game after waiting for years, and put a lot of hours into it when it launched. Unfortunately the game's poor performance and end-game activities drove me away for good and I've had very little reason to ever pick it up again.
 5. Marvel Rivals (100%)
+   - A great game and very fun, but like all service games, I eventually had to force myself to stop playing because it's too easy for me to get sucked into trying to unlock all the content, completing every battlepass and special event. While I could have kept playing this game for hundreds of more hours, but playing Rivals meant I wouldn't likely get to any of the other games in my library.
 6. Everspace 2 (100%)
 7. My Time at Portia
 8. Nova Lands (100%)
+   - I was really surprised with how much I liked this game. As a factory/automation game, Nova Lands is very approachable and has a unique charm to it.
+   - The only nitpick I had with this game, without spoiling much, was a mining activity that's introduced later in the game. It was the only part of the game that was repetitive.
 9. Sable (100%)
+   - This was a game I had wanted to play for a while. The world was beautiful, but movement was very janky and graphics performance could have been better.
 10. Jusant (100%)
     - I wasn't too big a fan of how the narrative of this game was delivered, but it created such a cool world and had engaging controls.
     - Because the game is so short, this is one I recommend lots of people pick up.
@@ -79,6 +91,7 @@ To help me create this ranking of how much I liked all of the games I played thi
 15. Mega Bonk
 16. Legend of Grindea
 17. Blue Prince
+    - Cool game, I liked the world we became a part of, but I'd lie if I said it wasn't incredibly frustrating and repetitive.
 18. Balatro
 19. Slime Rancher
 20. I am Future (100%)
@@ -87,3 +100,7 @@ To help me create this ranking of how much I liked all of the games I played thi
 23. Littlewood
 24. Linked: Banner of the Spark
 25. Outer Wilds
+    - I might get some flak for this, but based on how much people raved about this game, I was expecting a lot more.
+    - I was turned off by the game's main mechanic which always created a sense of pressure, forced me to rush and repeat things.
+    - While I really liked the way you uncovered new knowledge and the way you expored the world, ultimately the gameplay loop was simply "Go here, read this, go there, read that."
+    - I couldn't believe the ending sequence the game forced you through and didn't even try. I just watched a YouTube video of the ending and even then, didn't find it rewarding.
