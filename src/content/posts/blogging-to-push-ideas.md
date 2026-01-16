@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Blogging to Push Ideas
 publishedDate: 2010-12-15
 tags:

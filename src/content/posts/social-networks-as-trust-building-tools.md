@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Social Networks as Trust Building Tools
 publishedDate: 2009-02-11
 tags:

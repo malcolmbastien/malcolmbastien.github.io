@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Drumbeat The Open Web Lens
 publishedDate: 2010-04-21
 tags:

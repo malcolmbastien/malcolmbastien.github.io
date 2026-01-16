@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Renewal
 publishedDate: 2009-06-27
 tags:

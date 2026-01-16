@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Amazon Cloud Drive
 publishedDate: 2011-03-29
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: A Brand Is Not Your Friend
 publishedDate: 2012-01-09
 tags:

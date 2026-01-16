@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Notes from Gary V. at DemoCamp24
 publishedDate: 2009-12-04
 tags:

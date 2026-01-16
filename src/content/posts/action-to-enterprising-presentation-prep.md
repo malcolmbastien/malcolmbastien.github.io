@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Action to Enterprising Presentation Prep
 publishedDate: 2008-03-16
 tags:

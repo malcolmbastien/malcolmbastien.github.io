@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The Reason for Innovation
 publishedDate: 2012-10-04
 tags:

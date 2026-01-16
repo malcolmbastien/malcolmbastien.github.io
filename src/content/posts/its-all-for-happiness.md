@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: It's All For Happiness
 publishedDate: 2012-01-13
 tags:

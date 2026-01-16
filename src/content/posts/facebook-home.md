@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Facebook Home
 publishedDate: 2013-04-15
 tags:

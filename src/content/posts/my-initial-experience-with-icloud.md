@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: My Initial Experience With iCloud
 publishedDate: 2012-01-04
 tags:

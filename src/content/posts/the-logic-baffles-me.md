@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The Logic Baffles Me
 publishedDate: 2009-11-09
 tags:

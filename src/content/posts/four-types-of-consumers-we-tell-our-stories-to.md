@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: How Customers Engage With a Brand's Story
 publishedDate: 2012-10-07
 tags:

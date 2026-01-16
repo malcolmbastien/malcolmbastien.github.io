@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with Your Digital Garden"
-status: evergreen
+stage: evergreen
 tags: ["tutorial", "getting-started", "garden", "formatting", "callouts", "markdown"]
 summary: "Learn the basics of maintaining a digital garden and how to use this template."
 pinned: true

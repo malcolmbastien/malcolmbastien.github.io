@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: iOS's Disposable Games
 publishedDate: 2012-08-28
 tags:

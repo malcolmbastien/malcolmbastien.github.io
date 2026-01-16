@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: SimpleText for Mac client
 publishedDate: 2009-11-20
 tags:

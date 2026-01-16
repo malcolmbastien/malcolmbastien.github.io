@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: "Understanding OmniFocus: Attention"
 publishedDate: 2012-07-12
 tags:

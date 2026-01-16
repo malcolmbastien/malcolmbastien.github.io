@@ -1,6 +1,6 @@
 ---
 title: Kanban and Pulling Out Agility
-status: seed        # seed | sprout | evergreen
+stage: seed        # seed | sprout | evergreen
 tags:
   - Kanban
   - Agile

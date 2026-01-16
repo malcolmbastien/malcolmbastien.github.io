@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Unmasking the Invisible Overhead of Meetings
 publishedDate: 2025-09-29
 featured: true

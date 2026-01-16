@@ -6,7 +6,7 @@ tags:
   - Agile
   - Systems-Thinking
   - Teams
-status: evergreen
+stage: evergreen
 ---
 Delivering software is hard. I often see companies undertake large, complex projects that span multiple years and involve hundreds of people. Then, when things deviate from the original plan, managers start finger-pointing at their teams and say the reason for the problems is how teams are "not collaborating," or they "lack ownership," or "aren't aligned."
 

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The New Outlook.com
 publishedDate: 2012-08-08
 tags:

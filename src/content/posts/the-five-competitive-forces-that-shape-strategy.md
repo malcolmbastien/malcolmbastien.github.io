@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The Five Competitive Forces That Shape Strategy
 publishedDate: 2009-09-11
 tags:

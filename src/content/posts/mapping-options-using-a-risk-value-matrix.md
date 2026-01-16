@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Mapping Options Using a Risk-Value Matrix
 publishedDate: 2023-08-26
 tags:

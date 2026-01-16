@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Why Laptops Will Replace Professors
 publishedDate: 2008-09-11
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Papercut
 publishedDate: 2011-09-14
 tags:

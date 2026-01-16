@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Repeated Focus
 publishedDate: 2010-09-07
 tags:

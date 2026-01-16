@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: An Office on Every Surface
 publishedDate: 2011-09-01
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Splitting the Social Network for the Best User Experience
 publishedDate: 2012-08-07
 tags:

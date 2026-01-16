@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The Real Limit Of Social Media
 publishedDate: 2009-01-16
 tags:

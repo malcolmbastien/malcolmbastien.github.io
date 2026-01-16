@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: How the iPad Shattered The PC
 publishedDate: 2011-08-25
 tags:

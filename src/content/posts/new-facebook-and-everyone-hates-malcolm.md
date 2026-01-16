@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: New Facebook, And Everyone Hates Malcolm
 publishedDate: 2009-03-16
 tags:

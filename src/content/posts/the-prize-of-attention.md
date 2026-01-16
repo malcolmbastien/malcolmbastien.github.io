@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: The Prize of Attention
 publishedDate: 2011-02-22
 tags:

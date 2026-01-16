@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: A Great Storyteller
 publishedDate: 2009-04-27
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Cloud Factory - Blog  - The Surprising Story of Simplenote
 publishedDate: 2009-11-23
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Identity 2.0 - An Introduction to Identity On the Social Web
 publishedDate: 2009-04-17
 tags:

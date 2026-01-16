@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Running, Falling, and the Core of Agile
 publishedDate: 2023-05-24
 tags:

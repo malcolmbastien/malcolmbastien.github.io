@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Why You Might Be Using Linux in 2009
 publishedDate: 2008-12-22
 tags:

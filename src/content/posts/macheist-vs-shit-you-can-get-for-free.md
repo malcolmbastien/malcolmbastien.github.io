@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: MacHeist vs. Shit You Can Get For Free
 publishedDate: 2009-11-05
 tags:

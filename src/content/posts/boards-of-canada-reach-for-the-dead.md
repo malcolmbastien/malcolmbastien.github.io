@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Boards of Canada - Reach for the Dead
 publishedDate: 2013-05-23
 tags:

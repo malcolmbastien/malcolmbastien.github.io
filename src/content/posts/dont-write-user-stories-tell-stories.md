@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Don't Write User Stories, Tell Stories
 publishedDate: 2023-08-09
 tags:

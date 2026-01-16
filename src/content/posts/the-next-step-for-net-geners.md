@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The Next Step For Net Geners 
 publishedDate: 2009-06-08
 tags:

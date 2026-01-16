@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: "Avoiding the Practice Trap: Fostering Genuine Agility"
 publishedDate: 2024-08-03
 tags:

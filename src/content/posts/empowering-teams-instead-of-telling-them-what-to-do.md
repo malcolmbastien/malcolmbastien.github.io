@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Empowering Teams Instead of Telling Them What to Do
 publishedDate: 2023-05-01
 tags:

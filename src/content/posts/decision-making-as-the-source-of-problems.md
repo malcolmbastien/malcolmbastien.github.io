@@ -1,6 +1,6 @@
 ---
 title: Decision Making as the Source of Problems
-status: seed        # seed | sprout | evergreen
+stage: seed        # seed | sprout | evergreen
 tags:
   - Management
 summary: Expectating leaders to all be expert decision makers is the source of many problems.

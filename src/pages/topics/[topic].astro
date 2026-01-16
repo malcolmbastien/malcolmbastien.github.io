@@ -4,7 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 import ProfileHeader from "../../components/Profile/ProfileHeader.astro";
 import BackToGarden from "../../components/Navigation/BackToGarden.astro";
 import SiteFooter from "../../components/SiteFooter.astro";
-import { getStatusColors } from "../../lib/theme";
+import { getStageColors } from "../../lib/theme";
 
 export async function getStaticPaths() {
     const allPosts = await getCollection("posts");
@@ -22,7 +22,7 @@ const { topic } = Astro.params;
 const allPosts = await getCollection("posts");
 const filteredPosts = allPosts.filter((post) => post.data.tags.includes(topic));
 
-const statusColors = getStatusColors();
+const stageColors = getStageColors();
 
 const sortedPosts = filteredPosts.sort(
     (a, b) =>
@@ -68,16 +68,16 @@ const sortedPosts = filteredPosts.sort(
                         >
                             <div class="flex items-center gap-2 mb-2">
                                 <span
-                                    class={`px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${statusColors[post.data.status as keyof typeof statusColors]}`}
+                                    class={`px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${stageColors[post.data.stage as keyof typeof stageColors]}`}
                                 >
                                     {
-                                        post.data.status === "seed"
+                                        post.data.stage === "seed"
                                             ? "🌱"
-                                            : post.data.status === "sprout"
+                                            : post.data.stage === "sprout"
                                               ? "🌿"
                                               : "🌲"
                                     }{" "}
-                                    {post.data.status}
+                                    {post.data.stage}
                                 </span>
                                 {post.data.publishedDate && (
                                     <time class="text-sm text-slate-500 dark:text-slate-400">

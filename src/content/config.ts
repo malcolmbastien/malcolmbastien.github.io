@@ -5,7 +5,7 @@ const postsCollection = defineCollection({
 	schema: ({ image }) => z.object({
 		title: z.string(),
 		publishedDate: z.date().optional(),
-		status: z.enum(['seed', 'sprout', 'evergreen']),
+		stage: z.enum(['seed', 'sprout', 'evergreen']),
 		draft: z.boolean().optional(),
 		tags: z.array(z.string()),
 		summary: z.string().optional(),

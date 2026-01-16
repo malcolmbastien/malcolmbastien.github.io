@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Better Planning with Two-Sided Dependencies
 summary: Learn how to improve planning and reduce delays by managing dependencies effectively.
 publishedDate: 2025-10-14

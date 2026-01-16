@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: None
 publishedDate: 2009-11-15
 tags:

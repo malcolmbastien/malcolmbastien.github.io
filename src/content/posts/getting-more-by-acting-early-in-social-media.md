@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Getting More By Acting Early in Social Media
 publishedDate: 2009-03-14
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: What's Next For The Mac?
 publishedDate: 2012-08-13
 tags:

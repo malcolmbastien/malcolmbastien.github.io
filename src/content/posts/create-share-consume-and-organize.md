@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Create Share Consume and Organize
 publishedDate: 2010-08-19
 tags:

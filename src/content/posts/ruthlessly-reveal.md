@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Ruthlessly Reveal
 publishedDate: 2010-09-10
 tags:

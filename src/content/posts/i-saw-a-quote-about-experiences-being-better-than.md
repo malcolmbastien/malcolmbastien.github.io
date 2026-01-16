@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Story Gets Us to Emotion
 publishedDate: 2012-10-05
 tags:

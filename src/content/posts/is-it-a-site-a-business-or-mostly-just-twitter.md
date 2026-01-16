@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Is It A Site? A Business? Or Mostly Just Twitter?
 publishedDate: 2009-04-27
 tags:

@@ -1,6 +1,6 @@
 ---
 title: My Emacs Writing Setup
-status: seed        # seed | sprout | evergreen
+stage: seed        # seed | sprout | evergreen
 tags:
   - Emacs
   - Writing

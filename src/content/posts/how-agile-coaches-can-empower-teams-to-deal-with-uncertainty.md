@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: How Agile Coaches Can Empower Teams To Deal With Uncertainty
 publishedDate: 2024-08-05
 tags:

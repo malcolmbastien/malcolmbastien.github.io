@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Making Products Last
 publishedDate: 2011-08-10
 tags:

@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Curating
 publishedDate: 2009-06-30
 tags:

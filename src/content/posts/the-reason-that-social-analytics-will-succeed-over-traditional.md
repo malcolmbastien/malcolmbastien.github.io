@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The Reason That Social Analytics Will Succeed Over Traditional
 publishedDate: 2009-03-02
 tags:

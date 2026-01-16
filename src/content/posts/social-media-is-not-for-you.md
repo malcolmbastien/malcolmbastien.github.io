@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Social Media Is Not For You
 publishedDate: 2009-01-12
 tags:

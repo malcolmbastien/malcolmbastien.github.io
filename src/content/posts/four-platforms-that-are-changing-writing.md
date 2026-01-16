@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Four Platforms That Are Changing Writing
 publishedDate: 2012-08-16
 tags:

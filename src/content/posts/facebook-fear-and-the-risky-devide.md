@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Facebook, Fear, and The Risky Devide
 publishedDate: 2009-02-24
 tags:

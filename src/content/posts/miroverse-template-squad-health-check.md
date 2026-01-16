@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: "Miroverse Template: Squad Health Check"
 publishedDate: 2023-05-11
 tags:

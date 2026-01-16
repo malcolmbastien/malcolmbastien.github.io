@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Brands Faking Human
 publishedDate: 2012-01-12
 tags:

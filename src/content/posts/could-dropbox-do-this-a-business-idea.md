@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Could Dropbox Do This? A Business Idea
 publishedDate: 2009-10-16
 tags:

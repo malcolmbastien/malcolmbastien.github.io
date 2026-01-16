@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Uniqlo Calendar
 publishedDate: 2010-02-03
 tags:

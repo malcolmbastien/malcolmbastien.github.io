@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Digital Strategy &amp; UX Strategy
 publishedDate: 2012-09-24
 tags:

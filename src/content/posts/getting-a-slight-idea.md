@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Getting a Slight Idea
 publishedDate: 2010-12-10
 tags:

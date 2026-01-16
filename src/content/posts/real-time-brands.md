@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Real-time Brands
 publishedDate: 2013-04-12
 tags:

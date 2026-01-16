@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: The Power of Framing Social Dialogue
 publishedDate: 2009-08-04
 tags:

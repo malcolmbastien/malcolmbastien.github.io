@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Customers Create Stories for Every Interaction
 publishedDate: 2012-10-05
 tags:

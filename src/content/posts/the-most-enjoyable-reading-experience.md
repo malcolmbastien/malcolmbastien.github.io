@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The Most Enjoyable Reading Experience
 publishedDate: 2012-04-21
 tags:

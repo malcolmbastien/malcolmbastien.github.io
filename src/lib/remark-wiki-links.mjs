@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 export function remarkWikiLinks() {
-  const slugToStatus = new Map();
+  const slugToStage = new Map();
   
   // Find project root by looking for astro.config.mjs or package.json
   let root = process.cwd();
@@ -25,9 +25,9 @@ export function remarkWikiLinks() {
           const content = fs.readFileSync(filePath, 'utf-8');
           const slug = file.replace(/\.md(x)?$/, '');
           
-          const statusMatch = content.match(/^status:\s*["']?([^"'\s#\r\n]+)/m);
-          if (statusMatch) {
-            slugToStatus.set(slug.toLowerCase(), statusMatch[1].trim());
+          const stageMatch = content.match(/^stage:\s*["']?([^"'\s#\r\n]+)/m);
+          if (stageMatch) {
+            slugToStage.set(slug.toLowerCase(), stageMatch[1].trim());
           }
         } catch (e) {
           // Ignore read errors
@@ -35,6 +35,12 @@ export function remarkWikiLinks() {
       }
     }
   }
+
+  const stageIcons = {
+    seed: '🌱',
+    sprout: '🌿',
+    evergreen: '🌲'
+  };
 
   return (tree) => {
     visit(tree, 'text', (node, index, parent) => {
@@ -60,13 +66,15 @@ export function remarkWikiLinks() {
           });
         }
 
+        // Standardize slug generation
         const slug = linkTarget
           .trim()
           .toLowerCase()
           .replace(/\s+/g, '-')
           .replace(/[^\w-]/g, '');
 
-        const status = slugToStatus.get(slug);
+        const stage = slugToStage.get(slug);
+        const icon = stage ? stageIcons[stage] : '';
         const label = (displayText || linkTarget).trim();
 
         const linkNode = {
@@ -76,7 +84,7 @@ export function remarkWikiLinks() {
           data: {
             hProperties: {
               className: ['internal-link'],
-              'data-status': status || ''
+              'data-stage': stage || ''
             }
           },
           children: [
@@ -90,6 +98,26 @@ export function remarkWikiLinks() {
             }
           ]
         };
+
+        if (icon) {
+          linkNode.children.push({
+            type: 'text',
+            value: ' '
+          });
+          // Use a proper mdast node that will be converted to a span
+          linkNode.children.push({
+            type: 'text',
+            value: icon,
+            data: {
+              hName: 'span',
+              hProperties: { 
+                className: ['status-icon'],
+                'data-stage': stage,
+                title: `Stage: ${stage}`
+              }
+            }
+          });
+        }
 
         newChildren.push(linkNode);
         lastIndex = matchIndex + fullMatch.length;

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Blogging and Toastmasters
 publishedDate: 2011-03-15
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Turn Anything Into a Social Something
 publishedDate: 2009-09-14
 tags:

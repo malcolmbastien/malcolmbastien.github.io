@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: My Vibram FiveFingers
 publishedDate: 2009-07-25
 tags:

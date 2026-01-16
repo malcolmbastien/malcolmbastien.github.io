@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Some Blogging Wisdom
 publishedDate: 2009-02-14
 tags:

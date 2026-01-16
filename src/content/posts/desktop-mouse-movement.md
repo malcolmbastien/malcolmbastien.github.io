@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Desktop Mouse Movement
 publishedDate: 2010-03-05
 tags:

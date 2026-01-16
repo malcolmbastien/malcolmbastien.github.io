@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Immersive Apps vs Immersive Content
 publishedDate: 2012-08-10
 tags:

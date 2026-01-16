@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: How Can I Improve My Blog For You?
 publishedDate: 2009-06-18
 tags:

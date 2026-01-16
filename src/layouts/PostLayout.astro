@@ -7,7 +7,7 @@ import Backlinks from "../components/Backlinks.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import ImageLightbox from "../components/ImageLightbox.astro";
 import { getCollection } from "astro:content";
-import { getStatusColors } from "../lib/theme";
+import { getStageColors } from "../lib/theme";
 import { getReadingTime } from "../lib/reading-time";
 import BackToGarden from "../components/Navigation/BackToGarden.astro";
 import { Image } from "astro:assets";
@@ -16,7 +16,7 @@ interface Props {
     frontmatter: {
         title: string;
         publishedDate?: Date;
-        status: "seed" | "sprout" | "evergreen";
+        stage: "seed" | "sprout" | "evergreen";
         summary?: string;
         tags: string[];
         draft?: boolean;
@@ -45,7 +45,7 @@ const createdDate = frontmatter.publishedDate || gitCreated || new Date();
 const hasBeenUpdated =
     gitUpdated && gitUpdated.getTime() > createdDate.getTime() + 1000 * 60 * 60; // More than 1 hour difference
 
-const statusColors = getStatusColors();
+const stageColors = getStageColors();
 
 const isPostDraft = frontmatter.draft === true;
 
@@ -82,26 +82,26 @@ const formatDate = (date: Date) => {
                     >
                         <div class="flex flex-wrap items-center gap-4 mb-6">
                             <span
-                                class={`px-2 py-0.5 rounded-full text-xs font-medium border flex items-center gap-1 ${statusColors[frontmatter.status]}`}
+                                class={`px-2 py-0.5 rounded-full text-xs font-medium border flex items-center gap-1 ${stageColors[frontmatter.stage]}`}
                             >
                                 {
-                                    frontmatter.status === "seed" && (
+                                    frontmatter.stage === "seed" && (
                                         <span>🌱</span>
                                     )
                                 }
                                 {
-                                    frontmatter.status === "sprout" && (
+                                    frontmatter.stage === "sprout" && (
                                         <span>🌿</span>
                                     )
                                 }
                                 {
-                                    frontmatter.status === "evergreen" && (
+                                    frontmatter.stage === "evergreen" && (
                                         <span>🌲</span>
                                     )
                                 }
                                 {
-                                    frontmatter.status.charAt(0).toUpperCase() +
-                                        frontmatter.status.slice(1)
+                                    frontmatter.stage.charAt(0).toUpperCase() +
+                                        frontmatter.stage.slice(1)
                                 }
                             </span>
 

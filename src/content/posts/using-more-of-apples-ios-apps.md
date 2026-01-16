@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Using More of Apple's iOS Apps
 publishedDate: 2012-03-30
 tags:

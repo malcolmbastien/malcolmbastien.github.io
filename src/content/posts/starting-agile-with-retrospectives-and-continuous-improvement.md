@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Starting Agile With Retrospectives and Continuous Improvement
 publishedDate: 2024-08-26
 tags:

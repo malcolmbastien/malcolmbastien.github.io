@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Compromise
 publishedDate: 2011-09-06
 tags:

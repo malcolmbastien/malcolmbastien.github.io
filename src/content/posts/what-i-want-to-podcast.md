@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: What I Want To Podcast
 publishedDate: 2009-05-15
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Share Your Data
 publishedDate: 2010-01-16
 tags:

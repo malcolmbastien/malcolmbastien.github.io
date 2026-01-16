@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Start Small
 publishedDate: 2010-09-21
 tags:

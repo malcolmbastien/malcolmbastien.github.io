@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The Death of The Boring Blog Post?
 publishedDate: 2009-11-19
 tags:

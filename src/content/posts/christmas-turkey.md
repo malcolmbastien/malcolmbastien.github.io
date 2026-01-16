@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Christmas Turkey!
 publishedDate: 2009-12-25
 tags:

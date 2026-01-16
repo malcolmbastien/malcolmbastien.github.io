@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Rethinking Retrospectives
 publishedDate: 2023-06-02
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: RIM Honestly
 publishedDate: 2012-07-11
 tags:

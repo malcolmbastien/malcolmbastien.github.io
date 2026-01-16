@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Publishing Markdown
 publishedDate: 2011-12-30
 tags:

@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: The Value of Tablet Huddle Experiences
 publishedDate: 2010-12-22
 tags:

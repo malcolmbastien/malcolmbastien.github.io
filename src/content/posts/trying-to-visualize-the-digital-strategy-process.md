@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Digital Strategy
 publishedDate: 2012-09-25
 tags:

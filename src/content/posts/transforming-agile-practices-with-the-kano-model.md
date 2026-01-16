@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Transforming Agile Practices with the Kano Model
 publishedDate: 2025-08-17
 tags:

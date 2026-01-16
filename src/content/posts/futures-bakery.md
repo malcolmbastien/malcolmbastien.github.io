@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Futures Bakery
 publishedDate: 2009-09-05
 tags:

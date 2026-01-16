@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: 'The Best Motivational Speakers Say "F*ck"'
 publishedDate: 2008-12-18
 tags:

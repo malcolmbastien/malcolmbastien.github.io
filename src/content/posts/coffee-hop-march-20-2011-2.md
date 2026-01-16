@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: "Coffee Hop: March 20, 2011"
 publishedDate: 2011-03-20
 tags:

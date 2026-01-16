@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Mapping the Brand Story
 publishedDate: 2012-10-10
 tags:

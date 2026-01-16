@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: At Odds
 publishedDate: 2009-05-04
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Janky but Effective
-status: seed        # seed | sprout | evergreen
+stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
 summary: Too many organizations strive for high efficiency and order, but often it just worsens outcomes

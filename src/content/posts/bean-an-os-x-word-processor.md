@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: "Bean: An OS X Word Processor"
 publishedDate: 2009-11-01
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Drumbeat Will The Internet of Things be Open?
 publishedDate: 2010-04-20
 tags:

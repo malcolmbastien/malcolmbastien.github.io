@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Clear and Paper
 publishedDate: 2012-03-31
 tags:

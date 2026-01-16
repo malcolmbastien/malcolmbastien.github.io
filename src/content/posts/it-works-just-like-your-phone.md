@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: It Works Just Like Your Phone
 publishedDate: 2012-08-09
 tags:

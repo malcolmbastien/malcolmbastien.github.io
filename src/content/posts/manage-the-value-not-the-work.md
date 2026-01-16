@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Manage the Value, Not the Work
 publishedDate: 2023-07-29
 tags:

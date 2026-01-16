@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: To me, design is...
 publishedDate: 2010-12-22
 tags:

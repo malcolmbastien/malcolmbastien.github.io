@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Three Years of GTD and Things
 publishedDate: 2012-04-04
 tags:

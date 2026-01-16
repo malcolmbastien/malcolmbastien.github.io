@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Persistence and Momentum
 publishedDate: 2009-08-03
 tags:

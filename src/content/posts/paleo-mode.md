@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Paleo Mode
 publishedDate: 2012-08-23
 tags:

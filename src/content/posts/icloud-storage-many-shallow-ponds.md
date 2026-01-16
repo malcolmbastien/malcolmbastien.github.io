@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: "iCloud Storage: Many Shallow Ponds"
 publishedDate: 2012-08-13
 tags:

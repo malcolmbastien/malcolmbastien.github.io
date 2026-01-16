@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: My AI Learning Journey
 publishedDate: 2025-07-28
 tags:

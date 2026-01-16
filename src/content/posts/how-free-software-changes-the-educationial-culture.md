@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: How Free Software Changes The Educationial Culture
 publishedDate: 2007-08-18
 tags:

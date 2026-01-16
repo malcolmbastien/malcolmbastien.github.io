@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Use Stories to Affect Stories
 publishedDate: 2012-10-08
 tags:

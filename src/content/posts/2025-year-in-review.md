@@ -1,6 +1,6 @@
 ---
 title: 2025 Year in Review
-status: seed
+stage: seed
 tags:
   - Year-In-Review
   - Obsidian

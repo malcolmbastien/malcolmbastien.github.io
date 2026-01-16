@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The Micro-Blogging Enabled Company
 publishedDate: 2008-09-02
 tags:

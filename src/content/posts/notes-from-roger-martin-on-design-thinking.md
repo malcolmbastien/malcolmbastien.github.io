@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Notes From Roger Martin on Design Thinking
 publishedDate: 2009-11-19
 tags:

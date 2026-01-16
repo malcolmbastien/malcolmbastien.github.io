@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: My Goal For The Summer? More Seesmic
 publishedDate: 2009-05-14
 tags:

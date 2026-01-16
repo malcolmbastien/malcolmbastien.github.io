@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Tumblr and Posterous In Every Possible Way
 publishedDate: 2009-10-11
 tags:

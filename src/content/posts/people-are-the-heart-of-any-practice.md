@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: People Are the Heart of Any Practice
 publishedDate: 2025-08-08
 tags:

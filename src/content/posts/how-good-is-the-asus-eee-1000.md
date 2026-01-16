@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: How Good Is the Asus Eee 1000?
 publishedDate: 2009-01-25
 tags:

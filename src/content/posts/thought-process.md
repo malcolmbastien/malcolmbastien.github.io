@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Thought Process
 publishedDate: 2012-01-04
 tags:

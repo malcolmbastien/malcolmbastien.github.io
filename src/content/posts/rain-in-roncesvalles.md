@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Rain in Roncesvalles
 publishedDate: 2009-07-27
 tags:

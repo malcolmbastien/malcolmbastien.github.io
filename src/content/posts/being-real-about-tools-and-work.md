@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Being Real About Tools and Work
 publishedDate: 2011-01-25
 tags:

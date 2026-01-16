@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Gowalla
 publishedDate: 2010-09-14
 tags:

@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: The Future of Real-time Chat and Beluga
 publishedDate: 2011-02-11
 tags:

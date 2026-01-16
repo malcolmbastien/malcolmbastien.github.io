@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: What Has Microsoft Learned From Metro?
 publishedDate: 2012-07-23
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: 2023 Year in Review
 publishedDate: 2024-01-01
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Pomodoro Everything
 publishedDate: 2010-09-08
 tags:

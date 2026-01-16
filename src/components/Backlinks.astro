@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { getStatusColors } from "../lib/theme";
+import { getStageColors } from "../lib/theme";
 
 interface Props {
     backlinkedPostSlugs: string[];
@@ -18,7 +18,7 @@ const backlinkedPosts = allPosts
     })
     .sort((a, b) => b.displayDate.getTime() - a.displayDate.getTime()); // Most recent first
 
-const statusColors = getStatusColors();
+const stageColors = getStageColors();
 
 const formatDate = (date: Date) => {
     return date.toLocaleDateString("en-US", {
@@ -43,12 +43,12 @@ const formatDate = (date: Date) => {
                     >
                         <div class="flex items-center gap-2 mb-2">
                             <span
-                                class={`px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${statusColors[post.data.status as keyof typeof statusColors]}`}
+                                class={`px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${stageColors[post.data.stage as keyof typeof stageColors]}`}
                             >
-                                {post.data.status === "seed" && "🌱"}
-                                {post.data.status === "sprout" && "🌿"}
-                                {post.data.status === "evergreen" && "🌲"}
-                                {" "}{post.data.status}
+                                {post.data.stage === "seed" && "🌱"}
+                                {post.data.stage === "sprout" && "🌿"}
+                                {post.data.stage === "evergreen" && "🌲"}
+                                {" "}{post.data.stage}
                             </span>
                         </div>
                         <h4 class="text-sm font-medium text-slate-900 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors mb-2 line-clamp-2">

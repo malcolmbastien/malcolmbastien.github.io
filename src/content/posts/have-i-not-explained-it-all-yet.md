@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Have I Not Explained It All Yet?
 publishedDate: 2009-10-18
 tags:

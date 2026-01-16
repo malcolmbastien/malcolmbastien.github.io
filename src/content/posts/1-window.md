@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: 1 Window
 publishedDate: 2010-09-09
 tags:

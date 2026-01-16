@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Single In, Single Out
 publishedDate: 2009-01-20
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Creating A River of Web Media Content
 publishedDate: 2009-02-06
 tags:

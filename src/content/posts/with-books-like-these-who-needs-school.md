@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: With Books Like These, Who Needs School?
 publishedDate: 2008-12-24
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: No Battlestar Love?
 publishedDate: 2008-03-06
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: "Investing In Yourself: A Practical Guide"
 publishedDate: 2009-02-19
 tags:

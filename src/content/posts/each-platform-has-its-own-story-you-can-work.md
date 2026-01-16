@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Each Platform Has its Own Story
 publishedDate: 2012-10-09
 tags:

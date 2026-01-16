@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The Mobile Context
 publishedDate: 2012-09-28
 tags:

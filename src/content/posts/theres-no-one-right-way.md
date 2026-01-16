@@ -8,7 +8,7 @@ tags:
   - Agile
   - Applications
   - Teams
-status: evergreen
+stage: evergreen
 ---
 Every decision in Agile carries a cost. There is no single "right" way to build products or organize teams; each choice comes with a hidden set of trade-offs.
 

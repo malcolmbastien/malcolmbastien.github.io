@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Story Makes it Relevant
 publishedDate: 2012-09-27
 tags:

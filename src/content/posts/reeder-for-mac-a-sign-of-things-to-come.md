@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Reeder for Mac a Sign of Things to Come
 publishedDate: 2010-12-09
 tags:

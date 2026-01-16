@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The Crowds I Own
 publishedDate: 2009-04-21
 tags:

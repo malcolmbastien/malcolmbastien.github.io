@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Get Into a Better Routine
 publishedDate: 2010-12-16
 tags:

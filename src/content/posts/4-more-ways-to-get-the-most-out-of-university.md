@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: 4 More Ways to Get The Most Out of University
 publishedDate: 2007-12-25
 tags:

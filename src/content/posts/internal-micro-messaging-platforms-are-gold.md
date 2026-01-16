@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Internal Micro Messaging Platforms Are Gold
 publishedDate: 2009-04-23
 tags:

@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Innovating For a Windows Tablet
 publishedDate: 2010-11-08
 tags:

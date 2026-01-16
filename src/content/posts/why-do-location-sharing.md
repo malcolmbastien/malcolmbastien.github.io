@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Why Do Location Sharing?
 publishedDate: 2010-01-30
 tags:

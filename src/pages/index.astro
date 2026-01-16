@@ -6,12 +6,12 @@ import ProfileHeader from "../components/Profile/ProfileHeader.astro";
 import YearNavigation from "../components/YearNavigation.astro";
 import PostTimeline from "../components/PostTimeline.astro";
 import SiteFooter from "../components/SiteFooter.astro";
-import { getStatusColors } from "../lib/theme";
+import { getStageColors } from "../lib/theme";
 import { getBatchFileDates, type FileDates } from "../lib/git-history";
 
 const allPosts = await getCollection("posts");
 const batchDates = (await getBatchFileDates()) as Map<string, FileDates>;
-const statusColors = getStatusColors();
+const stageColors = getStageColors();
 
 // Fetch git dates for all posts to create timeline events
 const postsWithDates = allPosts.map((post) => {
@@ -309,11 +309,12 @@ const currentYearValue = new Date().getFullYear();
                                         {post.data.summary}
                                     </p>
                                 )}
-                                <div class="mt-4 flex items-center gap-3">
-                                    <span class={`text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${statusColors[post.data.status as keyof typeof statusColors]}`}>
-                                        {post.data.status === "seed" ? "🌱" : post.data.status === "sprout" ? "🌿" : "🌲"} {post.data.status}
+                                 <div class="mt-4 flex items-center gap-3">
+                                    <span class={`text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${stageColors[post.data.stage as keyof typeof stageColors]}`}>
+                                        {post.data.stage === "seed" ? "🌱" : post.data.stage === "sprout" ? "🌿" : "🌲"} {post.data.stage}
                                     </span>
                                     {post.data.tags.slice(0, 2).map((tag) => (
+
                                         <span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium">
                                             #{tag}
                                         </span>
@@ -352,8 +353,8 @@ const currentYearValue = new Date().getFullYear();
                                     <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
                                         {post.displayDate?.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
                                     </span>
-                                    <span class={`text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider ${statusColors[post.data.status as keyof typeof statusColors]}`}>
-                                        {post.data.status === "seed" ? "🌱" : post.data.status === "sprout" ? "🌿" : "🌲"} {post.data.status}
+                                    <span class={`text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider ${stageColors[post.data.stage as keyof typeof stageColors]}`}>
+                                        {post.data.stage === "seed" ? "🌱" : post.data.stage === "sprout" ? "🌿" : "🌲"} {post.data.stage}
                                     </span>
                                 </div>
                                 <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
@@ -456,7 +457,7 @@ const currentYearValue = new Date().getFullYear();
         }
     }
 
-    const buttons = document.querySelectorAll("[data-status]");
+    const buttons = document.querySelectorAll("[data-stage]");
     const topicButtons = document.querySelectorAll("[data-topic]");
     const eventTypeButtons = document.querySelectorAll("[data-event-type]");
     const timelineEvents = document.querySelectorAll(".timeline-event");
@@ -486,12 +487,12 @@ const currentYearValue = new Date().getFullYear();
 
         allTimelineEvents.forEach((event) => {
             const htmlEvent = event as HTMLElement;
-            const status = htmlEvent.dataset.status;
+            const stage = htmlEvent.dataset.stage;
             const eventYear = htmlEvent.dataset.eventYear || "";
             const eventType = htmlEvent.dataset.eventType;
 
             const matchesFilter =
-                currentFilter === "all" || status === currentFilter;
+                currentFilter === "all" || stage === currentFilter;
             const matchesTopic = currentTopic === "" || (htmlEvent.dataset.topics || "").includes(currentTopic);
             const matchesEventType =
                 currentEventType === "all" || eventType === currentEventType;
@@ -574,15 +575,15 @@ const currentYearValue = new Date().getFullYear();
 
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
-            const status = (button as HTMLElement).dataset.status || "all";
+            const stage = (button as HTMLElement).dataset.stage || "all";
             itemsToShow = 10;
-            if (currentFilter === status) {
+            if (currentFilter === stage) {
                 button.classList.remove("active");
                 currentFilter = "all";
             } else {
                 buttons.forEach((btn) => btn.classList.remove("active"));
                 button.classList.add("active");
-                currentFilter = status;
+                currentFilter = stage;
             }
             updateDisplay();
         });

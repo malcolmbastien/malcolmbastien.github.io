@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: My Agile Sketching Experiment
 publishedDate: 2023-05-18
 tags:

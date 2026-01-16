@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Readability2 – A Readability Mod
 publishedDate: 2009-11-03
 tags:

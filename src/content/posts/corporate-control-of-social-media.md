@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Corporate Control of Social Media 
 publishedDate: 2009-08-07
 tags:

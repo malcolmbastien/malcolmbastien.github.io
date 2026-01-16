@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Experimenting With Controlling Cycle Time Instead of WIP
 publishedDate: 2023-08-18
 tags:

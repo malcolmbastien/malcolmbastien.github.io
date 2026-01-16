@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Blog More and Do Less
 publishedDate: 2009-07-13
 tags:

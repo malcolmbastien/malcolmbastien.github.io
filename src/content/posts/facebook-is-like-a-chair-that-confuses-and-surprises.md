@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Facebook is Like a Chair… That Confuses and Surprises
 publishedDate: 2012-10-17
 tags:

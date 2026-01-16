@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: CrossFit Update
 publishedDate: 2011-12-31
 tags:

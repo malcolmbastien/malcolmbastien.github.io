@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Trying to Find the Smaller Conversations
 publishedDate: 2010-08-26
 tags:

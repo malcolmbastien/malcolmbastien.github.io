@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Malcolm is...
 publishedDate: 2009-09-06
 tags:

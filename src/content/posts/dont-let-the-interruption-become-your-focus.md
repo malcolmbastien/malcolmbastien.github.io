@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: Don't Let the Interruption Become Your Focus
 publishedDate: 2010-11-11
 tags:

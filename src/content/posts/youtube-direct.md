@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: YouTube Direct
 publishedDate: 2009-11-17
 tags:

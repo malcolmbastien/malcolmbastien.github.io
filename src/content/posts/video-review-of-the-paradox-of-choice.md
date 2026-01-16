@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Video Review of The Paradox Of Choice
 publishedDate: 2009-02-13
 tags:

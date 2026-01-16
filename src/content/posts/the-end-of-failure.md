@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The End of Failure
 publishedDate: 2011-08-26
 tags:

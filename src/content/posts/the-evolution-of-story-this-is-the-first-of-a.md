@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: The Evolution of Story
 publishedDate: 2012-09-25
 tags:

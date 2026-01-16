@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Social Media Without the Tweets and Check-ins
 publishedDate: 2012-10-16
 tags:

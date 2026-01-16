@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Because The Market Needs Non-Value Creators
 publishedDate: 2011-12-01
 tags:

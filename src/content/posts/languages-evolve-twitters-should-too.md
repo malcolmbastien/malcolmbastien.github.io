@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: Languages Evolve, Twitter&#039;s Should Too
 publishedDate: 2009-02-11
 tags:

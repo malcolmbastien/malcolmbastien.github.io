@@ -1,5 +1,5 @@
 ---
-status: seed
+stage: seed
 title: More Focused Writing With OmmWriter
 publishedDate: 2010-11-29
 tags:

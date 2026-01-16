@@ -1,5 +1,5 @@
 ---
-status: evergreen
+stage: evergreen
 title: The York University Strike As A Great Opportunity
 publishedDate: 2009-01-14
 tags:
