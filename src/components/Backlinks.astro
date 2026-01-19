@@ -35,7 +35,7 @@ const formatDate = (date: Date) => {
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {backlinkedNotes.map((note) => (
                     <a
-                        href={`/notes/${note.id}`}
+                        href={`/notes/${note.id.replace('.md', '')}`}
                         class="card-blueprint group block p-8 bg-white hover:shadow-[6px_6px_0_0_#f1f5f9]"
                     >
                         <div class="flex items-center gap-3 mb-5">

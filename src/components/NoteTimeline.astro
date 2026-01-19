@@ -104,14 +104,14 @@ sortedEvents.forEach((event) => {
                                              </div>
 
                                              <div class="flex-1 min-w-0">
-                                                 <h4 class="text-2xl font-bold text-terminal-dark dark:text-white mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
-                                                     <a
-                                                         href={`/notes/${event.note.id}`}
-                                                         class="after:absolute after:inset-0"
-                                                     >
-                                                         {event.title}
-                                                     </a>
-                                                 </h4>
+                                                  <h4 class="text-2xl font-bold text-terminal-dark dark:text-white mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
+                                                      <a
+                                                          href={`/notes/${event.note.id.replace('.md', '')}`}
+                                                          class="after:absolute after:inset-0"
+                                                      >
+                                                          {event.title}
+                                                      </a>
+                                                  </h4>
                                                  {event.note.data.summary && (
                                                      <p class="text-lg text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
                                                          {event.note.data.summary}

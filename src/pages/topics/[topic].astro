@@ -88,7 +88,7 @@ const sortedNotes = filteredNotes.sort(
                         <div class="space-y-8">
                             {sortedNotes.map((note) => (
                                 <a
-                                    href={`/notes/${note.id}`}
+                                    href={`/notes/${note.id.replace('.md', '')}`}
                                     class="card-blueprint group block p-10 bg-white dark:bg-slate-800"
                                 >
                                     <div class="flex justify-between items-center mb-6">

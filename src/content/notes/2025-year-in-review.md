@@ -8,7 +8,6 @@ tags:
   - AI
   - Typing
 summary: A look back at what happened in 2025
-draft: true              # Optional, adds WIP banner
 ---
 
 ## AI

@@ -313,7 +313,7 @@ const currentYearValue = new Date().getFullYear();
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {pinnedNotes.map((note) => (
                                      <a
-                                        href={`/notes/${note.id}`}
+                                        href={`/notes/${note.id.replace('.md', '')}`}
                                         class="card-blueprint pinned-note group block p-6 bg-white dark:bg-slate-800 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_-5px_rgba(0,85,255,0.1)] transition-all"
                                      >
                                         <div class="flex justify-between items-start mb-4">
@@ -355,8 +355,8 @@ const currentYearValue = new Date().getFullYear();
                  <div class="card-blueprint p-6 bg-white dark:bg-slate-800">
                      <h3 class="text-xs font-sans font-bold text-slate-500 dark:text-slate-400 mb-6 tracking-widest uppercase">Latest Creations</h3>
                      <div class="space-y-4">
-                         {latestCreations.map((note) => (
-                             <a href={`/notes/${note.id}`} class="block group">
+                          {latestCreations.map((note) => (
+                              <a href={`/notes/${note.id.replace('.md', '')}`} class="block group">
                                  <div class="flex justify-between items-start mb-2">
                                      <span class={`text-sm font-bold ${
                                           note.data.stage === 'evergreen' ? 'text-andon-emerald' :

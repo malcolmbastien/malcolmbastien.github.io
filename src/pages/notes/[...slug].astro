@@ -8,16 +8,16 @@ export async function getStaticPaths() {
 	const backlinksMap = await import('../../lib/backlinks.ts').then(m => m.buildBacklinksMap());
 
 	return notes.map((entry: CollectionEntry<'notes'>) => {
-        const relatedSlugs = backlinksMap[entry.id] || [];
-        const relatedNotes = notes.filter(n => relatedSlugs.includes(n.id));
-        return {
-            params: { slug: entry.id },
-            props: {
-                entry,
-                backlinkedNotes: relatedNotes
-            },
-        };
-    });
+         const relatedSlugs = backlinksMap[entry.id] || [];
+         const relatedNotes = notes.filter(n => relatedSlugs.includes(n.id));
+         return {
+             params: { slug: entry.id.replace('.md', '') },
+             props: {
+                 entry,
+                 backlinkedNotes: relatedNotes
+             },
+         };
+     });
 }
 
 interface Props {
