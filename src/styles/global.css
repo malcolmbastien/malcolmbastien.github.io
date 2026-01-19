@@ -67,7 +67,7 @@ h6 {
   border: 2px solid var(--color-blueprint-blue);
   position: relative;
   z-index: 10;
-  top: -9px;
+  top: 0px;
 }
 
 /* Note Card Component v1.1 */
