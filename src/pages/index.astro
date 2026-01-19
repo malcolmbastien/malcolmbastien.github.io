@@ -11,8 +11,7 @@ import SocialLinks from "../components/Profile/SocialLinks.astro";
 import TopicFocus from "../components/Profile/TopicFocus.astro";
 import { getStageColors } from "../lib/theme";
 import { getBatchFileDates, type FileDates } from "../lib/git-history";
-import { Picture } from "astro:assets";
-import malcolmHeadshot from "/src/assets/malcolm_headshot.png";
+import AboutAuthor from "../components/AboutAuthor.astro";
 
 const allNotes = await getCollection("notes");
 const batchDates = (await getBatchFileDates()) as Map<string, FileDates>;
@@ -378,19 +377,7 @@ const currentYearValue = new Date().getFullYear();
                      </div>
                  </div>
 
-                  <!-- About the Author -->
-                  <a href="/about" class="block">
-                  <div class="card-blueprint p-6 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                      <h3 class="text-xs font-sans font-bold text-slate-500 dark:text-slate-400 mb-6 tracking-widest uppercase">About the Author</h3>
-                      <div class="flex items-center gap-4">
-                          <Picture src={malcolmHeadshot} alt="Malcolm Bastien" class="w-12 h-12 rounded-full object-cover" />
-                          <div>
-                              <div class="font-bold text-terminal-dark dark:text-white">Malcolm Bastien</div>
-                              <div class="text-sm text-slate-500 dark:text-slate-400">Lean-Agile Practitioner</div>
-                          </div>
-                      </div>
-                  </div>
-                  </a>
+                   <AboutAuthor />
 
                  <!-- Garden Stats -->
                  <div class="card-blueprint p-6 bg-white">
