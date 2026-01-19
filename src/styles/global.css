@@ -56,7 +56,7 @@ h6 {
 }
 
 .dark .timeline-thread::before {
-  background-color: #1e293b;
+  background-color: var(--color-blueprint-blue);
 }
 
 .timeline-marker {
@@ -484,69 +484,63 @@ h6 {
 }
 
 .prose a.internal-link[data-stage="seed"] {
-  @apply text-[#d97706] dark:text-[#fbbf24] border-amber-200 border;
+  @apply text-[#ea580c] border-amber-200 border;
 }
 
-.dark .prose a.internal-link[data-stage="seed"] {
-  border-color: #fbbf24;
-}
+
 
 .prose a.internal-link[data-stage="sprout"] {
-  @apply text-[#7c2d12] dark:text-[#9333ea]  border-purple-200 border;
+  @apply text-[#0d9488]  border-teal-200 border;
 }
 
-.dark .prose a.internal-link[data-stage="sprout"] {
-  border-color: #9333ea;
-}
+
 
 .prose a.internal-link[data-stage="evergreen"] {
-  @apply text-[#047857] dark:text-[#10b981] border-green-200 border;
+  @apply text-[#166534] border-green-200 border;
 }
 
-.dark .prose a.internal-link[data-stage="evergreen"] {
-  border-color: #10b981;
-}
+
 
 .prose a.internal-link:hover .link-text {
   @apply underline underline-offset-2;
 }
 
 .prose a.internal-link[data-stage="seed"]:hover .link-text {
-  @apply decoration-[#d97706];
+  @apply decoration-[#ea580c];
 }
 
 .prose a.internal-link[data-stage="sprout"]:hover .link-text {
-  @apply decoration-[#7c2d12];
+  @apply decoration-[#0d9488];
 }
 
 .prose a.internal-link[data-stage="evergreen"]:hover .link-text {
-  @apply decoration-[#059669];
+  @apply decoration-[#166534];
 }
 
 /* Colored backgrounds for internal links */
 .prose a.internal-link[data-stage="seed"] {
-  @apply bg-amber-100/60 dark:bg-amber-900/20 rounded;
+  @apply bg-orange-100/60 dark:bg-orange-900/20 rounded;
 }
 
 .prose a.internal-link[data-stage="sprout"] {
-  @apply bg-purple-100/60 dark:bg-purple-900/20 rounded;
+  @apply bg-teal-100/60 dark:bg-teal-900/20 rounded;
 }
 
 .prose a.internal-link[data-stage="evergreen"] {
-  @apply bg-emerald-100/60 dark:bg-emerald-900/20 rounded;
+  @apply bg-green-100/60 dark:bg-green-900/20 rounded;
 }
 
 /* Colored backgrounds for growth stages */
 .prose a.internal-link[data-stage="seed"] {
-  @apply bg-amber-100/60 dark:bg-amber-900/20 rounded px-1;
+  @apply bg-orange-100/60 dark:bg-orange-900/20 rounded px-1;
 }
 
 .prose a.internal-link[data-stage="sprout"] {
-  @apply bg-purple-100/60 dark:bg-purple-900/20 rounded px-1;
+  @apply bg-teal-100/60 dark:bg-teal-900/20 rounded px-1;
 }
 
 .prose a.internal-link[data-stage="evergreen"] {
-  @apply bg-emerald-100/60 dark:bg-emerald-900/20 rounded px-1;
+  @apply bg-green-100/60 dark:bg-green-900/20 rounded px-1;
 }
 
 /* External links (outside the garden) */

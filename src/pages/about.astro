@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import BackToGarden from "../components/Navigation/BackToGarden.astro";
 import SocialLinks from "../components/Profile/SocialLinks.astro";
+import TableOfContents from "../components/Navigation/TableOfContents.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { Image } from "astro:assets";
 import portrait from "../assets/malcolm_portrait.jpg";
@@ -17,11 +18,8 @@ import portrait from "../assets/malcolm_portrait.jpg";
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
             <aside class="lg:col-span-3">
                 <div class="lg:sticky lg:top-24 space-y-8">
+                    <TableOfContents content={"## Experience {#career-timeline}\n## Education\n### Professional Development & Certifications {#professional-development-certifications}\n## Areas of Interest\n## Testimonials"} title="About Malcolm Bastien" minHeadings={2} />
                     <BackToGarden />
-                    <div class="card-blueprint p-6 bg-tooling-gray dark:bg-slate-800 border-none">
-                        <h3 class="text-sm font-sans font-bold text-slate-500 dark:text-slate-400 mb-4 tracking-widest uppercase">Social Links</h3>
-                        <SocialLinks class="border-none p-0 bg-transparent shadow-none!" />
-                    </div>
                 </div>
             </aside>
 
@@ -77,7 +75,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                         </div>
                                     </div>
 
-                                     <div class="ml-9 md:ml-12 card-blueprint p-8 bg-white dark:bg-slate-800 shadow-[4px_4px_0_0_#f1f5f9] dark:shadow-none border-none">
+                                      <div class="ml-9 md:ml-12 card-blueprint p-8 bg-white dark:bg-slate-800 shadow-[4px_4px_0_0_#f1f5f9] dark:shadow-none border-none">
                                         <h4 class="text-xl font-bold text-terminal-dark dark:text-white mb-6 mt-0!">Agile by Design — Toronto</h4>
                                         <p class="font-sans text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
                                             As a Senior Agile Coach, I drive Agile transformation and cultural change using a complex systems perspective to deliver exceptional outcomes. I specialize in advanced Lean and Agile software development practices to optimize value delivery and improve organizational flow.
@@ -131,17 +129,17 @@ import portrait from "../assets/malcolm_portrait.jpg";
 
                                 <div class="relative flex flex-col gap-6">
                                     <div class="flex items-center gap-6">
-                                        <div class="job-marker shrink-0"></div>
-                                        <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-1 pr-4">
-                                            <h3 class="text-2xl font-bold text-terminal-dark dark:text-white mt-0!">
-                                                Data Analyst
-                                            </h3>
-                                            <span class="metadata text-slate-300 dark:text-slate-500 font-bold text-base">2015 – 2017</span>
-                                        </div>
-                                     </div>
+                                         <div class="job-marker shrink-0"></div>
+                                         <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-1 pr-4">
+                                             <h3 class="text-2xl font-bold text-terminal-dark dark:text-white mt-0!">
+                                                 Data Analyst
+                                             </h3>
+                                             <span class="metadata text-slate-300 dark:text-slate-500 font-bold text-base">2015 – 2017</span>
+                                         </div>
+                                      </div>
 
-                                     <div class="ml-9 md:ml-12 card-blueprint p-8 bg-white dark:bg-slate-800 opacity-80 border-none">
-                                         <h4 class="text-xl font-bold text-terminal-dark dark:text-white mb-6 mt-0!">Chango — Toronto</h4>
+                                      <div class="ml-9 md:ml-12 card-blueprint p-8 bg-white dark:bg-slate-800 opacity-80 border-none">
+                                          <h4 class="text-xl font-bold text-terminal-dark dark:text-white mb-6 mt-0!">Chango — Toronto</h4>
                                         <p class="font-sans text-xl text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                                             Chango delivers a powerful platform for marketers to engage with premium audiences and target valuable individuals online. Its Intent Marketing solution applies customer intent data to programmatically drive results.
                                         </p>
@@ -163,17 +161,17 @@ import portrait from "../assets/malcolm_portrait.jpg";
 
                                 <div class="relative flex flex-col gap-6">
                                     <div class="flex items-center gap-6">
-                                        <div class="job-marker shrink-0"></div>
-                                        <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-1 pr-4">
-                                            <h3 class="text-2xl font-bold text-terminal-dark dark:text-white mt-0!">
-                                                Coach
-                                            </h3>
-                                            <span class="metadata text-slate-300 dark:text-slate-500 font-bold text-base">2012 – 2016</span>
-                                        </div>
-                                     </div>
+                                         <div class="job-marker shrink-0"></div>
+                                         <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-1 pr-4">
+                                             <h3 class="text-2xl font-bold text-terminal-dark dark:text-white mt-0!">
+                                                 Coach
+                                             </h3>
+                                             <span class="metadata text-slate-300 dark:text-slate-500 font-bold text-base">2012 – 2016</span>
+                                         </div>
+                                      </div>
 
-                                     <div class="ml-9 md:ml-12 card-blueprint p-8 bg-white dark:bg-slate-800 opacity-80 border-none">
-                                         <h4 class="text-xl font-bold text-terminal-dark dark:text-white mb-6 mt-0!">West Toronto CrossFit — Toronto</h4>
+                                      <div class="ml-9 md:ml-12 card-blueprint p-8 bg-white dark:bg-slate-800 opacity-80 border-none">
+                                          <h4 class="text-xl font-bold text-terminal-dark dark:text-white mb-6 mt-0!">West Toronto CrossFit — Toronto</h4>
                                         <p class="font-sans text-xl text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                                             As a part-time coach, I led fitness coaching and community building, helping members achieve their health and wellness goals through personalized training programs. Beyond coaching, I helped develop the West Toronto CrossFit brand, coordinated website SEO, and managed Google AdWords and Facebook advertising campaigns.
                                         </p>
@@ -191,17 +189,17 @@ import portrait from "../assets/malcolm_portrait.jpg";
 
                                 <div class="relative flex flex-col gap-6">
                                     <div class="flex items-center gap-6">
-                                        <div class="job-marker shrink-0"></div>
-                                        <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-1 pr-4">
-                                            <h3 class="text-2xl font-bold text-terminal-dark dark:text-white mt-0!">
-                                                Marketing Specialist
-                                            </h3>
-                                            <span class="metadata text-slate-300 dark:text-slate-500 font-bold text-base">2010 – 2011</span>
-                                        </div>
-                                     </div>
+                                         <div class="job-marker shrink-0"></div>
+                                         <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-1 pr-4">
+                                             <h3 class="text-2xl font-bold text-terminal-dark dark:text-white mt-0!">
+                                                 Marketing Specialist
+                                             </h3>
+                                             <span class="metadata text-slate-300 dark:text-slate-500 font-bold text-base">2010 – 2011</span>
+                                         </div>
+                                      </div>
 
-                                     <div class="ml-9 md:ml-12 card-blueprint p-8 bg-white dark:bg-slate-800 opacity-80 border-none">
-                                         <h4 class="text-xl font-bold text-terminal-dark dark:text-white mb-6 mt-0!">Microsoft — Canada</h4>
+                                      <div class="ml-9 md:ml-12 card-blueprint p-8 bg-white dark:bg-slate-800 opacity-80 border-none">
+                                          <h4 class="text-xl font-bold text-terminal-dark dark:text-white mb-6 mt-0!">Microsoft — Canada</h4>
                                         <p class="font-sans text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
                                             Responsible for organizing customer workshops across Canada focused on educating and training customers, as well as promoting the adoption of Microsoft's database, data warehousing, and business intelligence products. Worked with Microsoft partners, external agencies, and internal stakeholders to plan and execute workshop targeting, communications, and logistics. Also responsible for organizing the Canadian BizTalk Roadshow.
                                         </p>
@@ -214,21 +212,21 @@ import portrait from "../assets/malcolm_portrait.jpg";
                             Education
                         </h2>
 
-                         <div class="ml-9 md:ml-12 card-blueprint p-8 bg-white dark:bg-slate-800 mb-12 border-none">
-                            <h3 class="text-2xl font-bold text-terminal-dark dark:text-white mb-2">Toronto Metropolitan University</h3>
+                          <div class="ml-9 md:ml-12 card-blueprint p-8 bg-white dark:bg-slate-800 mb-12 border-none">
+                             <h3 class="text-2xl font-bold text-terminal-dark dark:text-white mb-2">Toronto Metropolitan University</h3>
                             <span class="metadata text-blueprint-blue dark:text-white font-bold text-sm block mb-4">2005 – 2010</span>
                             <p class="font-sans text-slate-600 dark:text-slate-300">
                                 Bachelor's Degree in Business Technology Management
                             </p>
                         </div>
 
-                        <h3 class="text-xl font-serif font-bold text-terminal-dark dark:text-white mb-8 flex items-center gap-3">
-                            <span class="w-1.5 h-1.5 bg-blueprint-blue"></span>
-                            Professional Development & Certifications
-                        </h3>
+                        <h3 id="professional-development-certifications" class="text-xl font-serif font-bold text-terminal-dark dark:text-white mb-8 flex items-center gap-3">
+                             <span class="w-1.5 h-1.5 bg-blueprint-blue"></span>
+                             Professional Development & Certifications
+                         </h3>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-xl font-bold text-blueprint-blue dark:text-white mb-4 tracking-wider">📈 Agile & Lean Practices</h4>
                                 <ul class="space-y-4 text-base">
                                     <li class="flex flex-col">
@@ -250,7 +248,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </ul>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-xl font-bold text-blueprint-blue dark:text-white mb-4 tracking-wider">🏗️ Systems Architecture & Design</h4>
                                 <ul class="space-y-4 text-base">
                                     <li class="flex flex-col">
@@ -272,7 +270,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </ul>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-xl font-bold text-blueprint-blue dark:text-white mb-4 tracking-wider">⚖️ Value & Dependency Management</h4>
                                 <ul class="space-y-4 text-base">
                                     <li class="flex flex-col">
@@ -282,7 +280,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </ul>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-xl font-bold text-blueprint-blue dark:text-white mb-4 tracking-wider">👥 Leadership & Facilitation</h4>
                                 <ul class="space-y-4 text-base">
                                     <li class="flex flex-col">
@@ -310,7 +308,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                         </h2>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-base font-bold text-blue-600 dark:text-slate-300 mb-4 tracking-wider">♻️ Agile & Lean Methodologies</h4>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-mono rounded-sm">Kanban Method</span>
@@ -323,7 +321,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </div>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-base font-bold text-blue-600 dark:text-white mb-4 tracking-wider">📦 Product Management</h4>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 text-sm font-mono rounded-sm">Product Strategy</span>
@@ -335,7 +333,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </div>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-base font-bold text-slate-600 dark:text-slate-300 mb-4 tracking-wider">🗺️ Planning & Project Management</h4>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-mono rounded-sm">Strategic Planning</span>
@@ -348,7 +346,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </div>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-base font-bold text-pink-800 dark:text-pink-300 mb-4 tracking-wider">🧩 Team Building & Leadership</h4>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-300 text-sm font-mono rounded-sm">Team Dynamics</span>
@@ -362,7 +360,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </div>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-base font-bold text-emerald-600 dark:text-emerald-300 mb-4 tracking-wider">🤝 Coaching & Facilitation</h4>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-sm font-mono rounded-sm">Agile Coaching</span>
@@ -376,7 +374,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </div>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-base font-bold text-purple-600 dark:text-purple-300 mb-4 tracking-wider">🕸️ Systems & Complexity Thinking</h4>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm font-mono rounded-sm">Cybernetics</span>
@@ -388,7 +386,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </div>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-base font-bold text-emerald-600 dark:text-emerald-300 mb-4 tracking-wider">🏰 Domain Driven Design</h4>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-sm font-mono rounded-sm">Domain Modeling</span>
@@ -399,7 +397,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </div>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-base font-bold text-orange-600 dark:text-orange-300 mb-4 tracking-wider">🎯 Strategy & Leadership</h4>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 text-sm font-mono rounded-sm">Strategic Planning</span>
@@ -410,7 +408,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </div>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-base font-bold text-blue-600 dark:text-white mb-4 tracking-wider">⚖️ Value & Dependency Management</h4>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 text-sm font-mono rounded-sm">Dependency Management</span>
@@ -420,7 +418,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </div>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-base font-bold text-teal-600 dark:text-teal-300 mb-4 tracking-wider">📚 Knowledge Management</h4>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 text-sm font-mono rounded-sm">Personal Knowledge Management</span>
@@ -433,7 +431,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </div>
                             </div>
 
-                             <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
+                              <div class="card-blueprint p-6 bg-white dark:bg-slate-800 border-none">
                                  <h4 class="text-base font-bold text-amber-800 dark:text-amber-300 mb-4 tracking-wider">💻 Technology</h4>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 text-sm font-mono rounded-sm">Mechanical Keyboards</span>
@@ -455,7 +453,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
 
                         <div class="space-y-6 mb-16">
 
-                             <blockquote class="card-blueprint p-8 bg-white dark:bg-slate-800 border-l-4 border-emerald-500">
+                              <blockquote class="card-blueprint p-8 bg-white dark:bg-slate-800 border-l-4 border-blue-500">
                                 <p class="text-slate-600 dark:text-slate-300 italic text-lg leading-relaxed mb-4">
                                     I had the pleasure of working with Malcolm on a large-scale transformation initiative, and I can confidently say he is one of the most skilled and inspiring Agile Coaches I've had the opportunity to collaborate with.
                                     <br><br>
@@ -470,7 +468,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                 </cite>
                             </blockquote>
 
-                             <blockquote class="card-blueprint p-8 bg-white dark:bg-slate-800 border-l-4 border-emerald-500">
+                              <blockquote class="card-blueprint p-8 bg-white dark:bg-slate-800 border-l-4 border-blue-500">
                                 <p class="text-slate-600 dark:text-slate-300 italic text-lg leading-relaxed mb-4">
                                     I had the pleasure of working with Malcolm several years ago. He played a key role as an Agile Coach, helping guide the team through priorities, sprint ceremonies, and cross-functional collaboration.
                                     <br><br>

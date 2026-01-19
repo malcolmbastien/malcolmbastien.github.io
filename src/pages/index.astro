@@ -316,14 +316,14 @@ const currentYearValue = new Date().getFullYear();
                                         href={`/notes/${note.id.replace('.md', '')}`}
                                         class="card-blueprint pinned-note group block p-6 bg-white dark:bg-slate-800 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_-5px_rgba(0,85,255,0.1)] transition-all"
                                      >
-                                        <div class="flex justify-between items-start mb-4">
-                                             <span class={`text-sm font-bold dark:text-white ${
-                                                  note.data.stage === 'seed' ? 'text-andon-amber' :
-                                                  note.data.stage === 'sprout' ? 'text-teal-600' :
-                                                  note.data.stage === 'evergreen' ? 'text-andon-emerald' : 'text-blueprint-blue'
-                                             }`}>
-                                                 {note.data.stage.charAt(0).toUpperCase() + note.data.stage.slice(1)}
-                                             </span>
+                                         <div class="flex justify-between items-start mb-4">
+                                              <span class={`text-sm font-bold ${
+                                                   note.data.stage === 'seed' ? 'text-[#ea580c]' :
+                                                   note.data.stage === 'sprout' ? 'text-[#0d9488]' :
+                                                   note.data.stage === 'evergreen' ? 'text-[#166534]' : 'text-blueprint-blue'
+                                              }`}>
+                                                  {note.data.stage.charAt(0).toUpperCase() + note.data.stage.slice(1)}
+                                              </span>
                                             <span class="text-sm text-slate-500 dark:text-slate-400">Pinned</span>
                                         </div>
                                         <h3 class="text-lg font-sans font-bold text-terminal-dark dark:text-white mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
@@ -357,14 +357,14 @@ const currentYearValue = new Date().getFullYear();
                      <div class="space-y-4">
                           {latestCreations.map((note) => (
                               <a href={`/notes/${note.id.replace('.md', '')}`} class="block group">
-                                 <div class="flex justify-between items-start mb-2">
-                                     <span class={`text-sm font-bold ${
-                                          note.data.stage === 'evergreen' ? 'text-andon-emerald' :
-                                          note.data.stage === 'seed' ? 'text-andon-amber' :
-                                          'text-teal-600'
-                                     }`}>
-                                         {note.data.stage.toUpperCase()}
-                                     </span>
+                                  <div class="flex justify-between items-start mb-2">
+                                      <span class={`text-sm font-bold ${
+                                           note.data.stage === 'evergreen' ? 'text-[#166534]' :
+                                           note.data.stage === 'seed' ? 'text-[#ea580c]' :
+                                           'text-[#0d9488]'
+                                      }`}>
+                                          {note.data.stage.toUpperCase()}
+                                      </span>
                                      <time class="text-xs text-slate-500 dark:text-slate-400">
                                          {note.displayDate!.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
                                      </time>
