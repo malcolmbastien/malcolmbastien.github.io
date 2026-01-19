@@ -1,11 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/Profile/Header.astro";
 import BackToGarden from "../../components/Navigation/BackToGarden.astro";
 import SiteFooter from "../../components/SiteFooter.astro";
-import { getStageColors } from "../../lib/theme";
-import ActivityHeatmap from "../../components/Profile/ActivityHeatmap.astro";
 
 export async function getStaticPaths() {
     const allNotes = await getCollection("notes");
@@ -23,19 +20,6 @@ const { topic } = Astro.params;
 const allNotes = await getCollection("notes");
 const filteredNotes = allNotes.filter((note) => note.data.tags.includes(topic!));
 
-const stageColors = getStageColors();
-
-const currentYear = new Date().getFullYear();
-
-const events = allNotes
-    .filter((note) => note.data.publishedDate)
-    .map((note) => ({
-        post: note,
-        type: "created",
-        date: note.data.publishedDate!,
-        title: note.data.title,
-    }));
-
 const sortedNotes = filteredNotes.sort(
     (a, b) =>
         (b.data.publishedDate?.getTime() || 0) -
@@ -49,14 +33,6 @@ const sortedNotes = filteredNotes.sort(
     type="website"
 >
     <main class="max-w-(--breakpoint-2xl) mx-auto p-4 md:p-8" data-pagefind-ignore>
-        <Header currentPath={Astro.url.pathname}>
-            <ActivityHeatmap
-                slot="heatmap"
-                year={currentYear}
-                events={events}
-            />
-        </Header>
-
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
             <div class="lg:col-span-3">
                 <div class="lg:sticky lg:top-24">
