@@ -318,9 +318,9 @@ const currentYearValue = new Date().getFullYear();
                                      >
                                         <div class="flex justify-between items-start mb-4">
                                              <span class={`text-sm font-bold dark:text-white ${
-                                                 note.data.stage === 'seed' ? 'text-andon-amber' :
-                                                 note.data.stage === 'sprout' ? 'text-purple-600' :
-                                                 note.data.stage === 'evergreen' ? 'text-andon-emerald' : 'text-blueprint-blue'
+                                                  note.data.stage === 'seed' ? 'text-andon-amber' :
+                                                  note.data.stage === 'sprout' ? 'text-teal-600' :
+                                                  note.data.stage === 'evergreen' ? 'text-andon-emerald' : 'text-blueprint-blue'
                                              }`}>
                                                  {note.data.stage.charAt(0).toUpperCase() + note.data.stage.slice(1)}
                                              </span>
@@ -359,9 +359,9 @@ const currentYearValue = new Date().getFullYear();
                              <a href={`/notes/${note.id}`} class="block group">
                                  <div class="flex justify-between items-start mb-2">
                                      <span class={`text-sm font-bold ${
-                                         note.data.stage === 'evergreen' ? 'text-andon-emerald' :
-                                         note.data.stage === 'seed' ? 'text-andon-amber' :
-                                         'text-purple-600'
+                                          note.data.stage === 'evergreen' ? 'text-andon-emerald' :
+                                          note.data.stage === 'seed' ? 'text-andon-amber' :
+                                          'text-teal-600'
                                      }`}>
                                          {note.data.stage.toUpperCase()}
                                      </span>

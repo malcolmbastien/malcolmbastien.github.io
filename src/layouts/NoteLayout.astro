@@ -123,9 +123,6 @@ const formatDate = (date: Date) => {
             <!-- Contextual Side (Col 10-12) -->
             <div class="lg:col-span-3">
                 <div class="lg:sticky lg:top-24 space-y-6">
-                    <div class="flex justify-end">
-                        <ThemeToggle />
-                    </div>
                      <TableOfContents
                          content={noteBody || ""}
                          title={frontmatter.title}
@@ -407,17 +404,26 @@ const formatDate = (date: Date) => {
            });
         }
 
-        // Add click handlers for immediate active state updates
-        function initTOCClickHandlers() {
-            const tocLinks = document.querySelectorAll('.toc-link');
-            tocLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    // Immediately update active state
-                    tocLinks.forEach(l => l.classList.remove('active'));
-                    link.classList.add('active');
-                });
-            });
-        }
+         // Add click handlers for immediate active state updates
+         function initTOCClickHandlers() {
+             const tocLinks = document.querySelectorAll('.toc-link');
+             tocLinks.forEach(link => {
+                 link.addEventListener('click', (e) => {
+                     e.preventDefault();
+                     const href = link.getAttribute('href');
+                     if (href && href.startsWith('#')) {
+                         const targetId = href.slice(1);
+                         const targetElement = document.getElementById(targetId);
+                         if (targetElement) {
+                             targetElement.scrollIntoView({ behavior: 'smooth' });
+                         }
+                     }
+                     // Immediately update active state
+                     tocLinks.forEach(l => l.classList.remove('active'));
+                     link.classList.add('active');
+                 });
+             });
+         }
 
         // Run on load
         initContentMap();

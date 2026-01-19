@@ -29,7 +29,7 @@ const { counts, sortedNotes, allNotes, progressColors } = Astro.props;
                 style={`width: ${(counts.seed / (counts.all || 1)) * 100}%`}
             ></div>
             <div
-                class="h-full bg-purple-600"
+                class="h-full bg-teal-600"
                 style={`width: ${(counts.sprout / (counts.all || 1)) * 100}%`}
             ></div>
             <div
@@ -43,7 +43,7 @@ const { counts, sortedNotes, allNotes, progressColors } = Astro.props;
                 <span class="text-xl font-sans font-bold text-terminal-dark dark:text-white">{counts.seed.toString().padStart(2, '0')}</span>
             </div>
             <div class="flex flex-col border-l border-slate-100 dark:border-slate-700 pl-3">
-                <span class="text-sm font-sans font-bold tracking-wide text-purple-600">Sprout</span>
+                <span class="text-sm font-sans font-bold tracking-wide text-teal-600">Sprout</span>
                 <span class="text-xl font-sans font-bold text-terminal-dark dark:text-white">{counts.sprout.toString().padStart(2, '0')}</span>
             </div>
             <div class="flex flex-col border-l border-slate-100 dark:border-slate-700 pl-3">
@@ -73,7 +73,7 @@ const { counts, sortedNotes, allNotes, progressColors } = Astro.props;
 
             <div class="bg-white dark:bg-slate-800">
                 <div class="flex items-center justify-between mb-3">
-                    <h4 class="text-base font-sans font-bold text-purple-600 flex items-center gap-2">
+                    <h4 class="text-base font-sans font-bold text-teal-600 flex items-center gap-2">
                         Sprout
                     </h4>
                     <span class="text-lg font-sans font-bold text-terminal-dark dark:text-white">{counts.sprout.toString().padStart(3, '0')}</span>
