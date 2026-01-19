@@ -15,33 +15,30 @@
 export const theme = {
   // Header coin colors
   header: {
-    seed: "bg-emerald-100/40 dark:bg-emerald-800/40 border border-emerald-300 dark:border-emerald-900",
+    seed: "bg-amber-100 dark:bg-amber-900/40 border border-amber-200 dark:border-amber-800",
     sprout:
-      "bg-emerald-200/40 dark:bg-emerald-700/40 border border-emerald-400 dark:border-emerald-700",
-    evergreen: "bg-emerald-300/40 dark:bg-emerald-600/40 border border-emerald-500 dark:border-emerald-800",
+      "bg-blue-100 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800",
+    evergreen: "bg-emerald-100 dark:bg-emerald-900/40 border border-emerald-200 dark:border-emerald-800",
   },
 
   stage: {
     seed: {
-      // badge on post card and in post header
       badge:
-        "bg-emerald-100/40 dark:bg-emerald-800/40 text-slate-600 dark:text-slate-400 border-emerald-300 dark:border-emerald-900",
-      // glow on hover of post card (deprecated - now uses card-state-based glows)
-      glow: "hover:shadow-emerald-100/50 dark:hover:shadow-emerald-900/50",
-      // colour in progress bar under "garden stats"
-      progress: "bg-emerald-100 dark:bg-emerald-800",
+        "bg-amber-50 text-andon-amber border border-amber-100",
+      glow: "hover:shadow-amber-100/50",
+      progress: "bg-andon-amber",
     },
     sprout: {
       badge:
-        "bg-emerald-200/40 dark:bg-emerald-700/40 text-green-700 dark:text-green-400 border-emerald-400 dark:border-emerald-700",
-      glow: "hover:shadow-emerald-200/50 dark:hover:shadow-emerald-800/50", // deprecated
-      progress: "bg-emerald-200 dark:bg-emerald-700",
+        "bg-blue-50 text-blueprint-blue border border-blue-100",
+      glow: "hover:shadow-blue-100/50",
+      progress: "bg-blueprint-blue",
     },
     evergreen: {
       badge:
-        "bg-emerald-300/40 dark:bg-emerald-600/40 text-emerald-800 dark:text-emerald-400 border-emerald-500 dark:border-emerald-800",
-      glow: "hover:shadow-emerald-200/75 dark:hover:shadow-emerald-700/50", // deprecated
-      progress: "bg-emerald-300 dark:bg-emerald-600",
+        "bg-emerald-50 text-andon-emerald border border-emerald-100",
+      glow: "hover:shadow-emerald-100/50",
+      progress: "bg-andon-emerald",
     },
   },
 };

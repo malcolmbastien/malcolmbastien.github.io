@@ -71,28 +71,28 @@ for (let i = 0; i < days.length; i++) {
 }
 
 function getColor(count: number) {
-    if (count === 0) return "fill-slate-100 dark:fill-[#1a241a]";
-    if (count === 1) return "fill-emerald-200 dark:fill-emerald-900/40";
-    if (count === 2) return "fill-emerald-400 dark:fill-emerald-700";
-    if (count >= 3) return "fill-emerald-600 dark:fill-emerald-500";
-    return "fill-slate-100 dark:fill-[#1a241a]";
+    if (count === 0) return "fill-slate-100 dark:fill-slate-800";
+    if (count === 1) return "fill-blue-200 dark:fill-blue-900/40";
+    if (count === 2) return "fill-blue-400 dark:fill-blue-700/60";
+    if (count >= 3) return "fill-[#0055FF] dark:fill-[#0055FF]";
+    return "fill-slate-100 dark:fill-slate-800";
 }
 
 function getFillColor(count: number, isDarkMode: boolean) {
     // Light mode colors (based on getColor)
     if (!isDarkMode) {
-        if (count === 0) return "#f1f5f9"; // slate-100
-        if (count === 1) return "#a7f3d0"; // emerald-200
-        if (count === 2) return "#34d399"; // emerald-400
-        if (count >= 3) return "#059669"; // emerald-600
+        if (count === 0) return "#f1f5f9"; // tooling-gray
+        if (count === 1) return "#bfdbfe"; // blue-200
+        if (count === 2) return "#60a5fa"; // blue-400
+        if (count >= 3) return "#0055FF"; // blueprint-blue
         return "#f1f5f9";
     }
     // Dark mode colors
-    if (count === 0) return "#1a241a";
-    if (count === 1) return "#064e3b66"; // emerald-900/40
-    if (count === 2) return "#15803d"; // emerald-700
-    if (count >= 3) return "#10b981"; // emerald-500
-    return "#1a241a";
+    if (count === 0) return "#1e293b";
+    if (count === 1) return "#1e3a8a66"; // blue-900/40
+    if (count === 2) return "#1d4ed899"; // blue-700/60
+    if (count >= 3) return "#0055FF"; // blueprint-blue
+    return "#1e293b";
 }
 
 // Keep the original getColor function for static rendering
@@ -100,35 +100,35 @@ function getFillColor(count: number, isDarkMode: boolean) {
 
 <div
     id="activity-heatmap"
-    class="relative bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-2"
+    class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 shadow-[4px_4px_0_0_#f1f5f9] dark:shadow-none"
 >
     <div
         id="heatmap-tooltip"
-        class="fixed hidden z-50 px-2 py-1 text-[11px] font-medium text-white bg-slate-900 dark:bg-slate-800 rounded shadow-md pointer-events-none whitespace-nowrap transition-opacity duration-200"
+        class="fixed hidden z-50 px-3 py-1.5 metadata text-xs font-bold text-white bg-terminal-dark shadow-lg pointer-events-none whitespace-nowrap"
     >
     </div>
-    <div class="flex items-center justify-between mb-4">
-        <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100">
-            Activity
+    <div class="flex items-center justify-between mb-8">
+        <h3 class="text-xs font-sans font-bold text-slate-500 dark:text-slate-400 tracking-widest uppercase">
+            Activity Heatmap
         </h3>
         <span
             id="heatmap-year-display"
-            class="text-sm font-bold text-emerald-600 dark:text-emerald-400"
+            class="metadata text-xs font-bold text-blue-600"
         >
             {year}
         </span>
     </div>
-    <div class="overflow-x-auto pb-2 custom-scrollbar">
+    <div class="overflow-x-auto pb-4 custom-scrollbar">
         <svg
             viewBox="0 0 780 125"
             preserveAspectRatio="xMinYMin meet"
             class="w-full activity-heatmap-svg min-w-[700px]"
         >
             <!-- Day labels -->
-            <text x="0" y="33" class="fill-slate-400 dark:fill-slate-500 text-[9px] font-medium">Sun</text>
-            <text x="0" y="59" class="fill-slate-400 dark:fill-slate-500 text-[9px] font-medium">Tue</text>
-            <text x="0" y="85" class="fill-slate-400 dark:fill-slate-500 text-[9px] font-medium">Thu</text>
-            <text x="0" y="111" class="fill-slate-400 dark:fill-slate-500 text-[9px] font-medium">Sat</text>
+            <text x="0" y="33" class="metadata fill-slate-400 dark:fill-slate-500 text-xs">SUN</text>
+            <text x="0" y="59" class="metadata fill-slate-400 dark:fill-slate-500 text-xs">TUE</text>
+            <text x="0" y="85" class="metadata fill-slate-400 dark:fill-slate-500 text-xs">THU</text>
+            <text x="0" y="111" class="metadata fill-slate-400 dark:fill-slate-500 text-xs">SAT</text>
 
             {
                 monthLabels.map((label) => (
@@ -136,9 +136,9 @@ function getFillColor(count: number, isDarkMode: boolean) {
                         x={label.weekIndex * 14 + 30}
                         y="12"
                         text-anchor="start"
-                        class="fill-slate-500 dark:fill-slate-400 text-[10px] font-medium"
+                        class="metadata fill-slate-400 dark:fill-slate-500 text-xs tracking-widest"
                     >
-                        {label.name}
+                        {label.name.toUpperCase()}
                     </text>
                 ))
             }
@@ -153,10 +153,10 @@ function getFillColor(count: number, isDarkMode: boolean) {
                                     <rect
                                         x="0"
                                         y={dayIndex * 13}
-                                        width="12"
-                                        height="12"
-                                        rx="2"
-                                        class={`${getColor(dayData.count)} activity-day transition-colors duration-300 hover:stroke-slate-400 dark:hover:stroke-slate-500 hover:stroke-1 ${dayData.count > 0 ? "cursor-pointer" : ""}`}
+                                        width="11"
+                                        height="11"
+                                        rx="0"
+                                        class={`${getColor(dayData.count)} activity-day transition-all duration-300 hover:stroke-blueprint-blue hover:stroke-2 ${dayData.count > 0 ? "cursor-pointer" : ""}`}
                                         data-date={dayData.date}
                                         data-count={dayData.count}
                                         onclick={
@@ -174,34 +174,34 @@ function getFillColor(count: number, isDarkMode: boolean) {
         </svg>
     </div>
     <div
-        class="mt-4 flex items-center justify-end gap-2 text-[10px] text-slate-400 uppercase tracking-widest"
+        class="mt-8 flex items-center justify-end gap-3 metadata text-xs text-slate-500 dark:text-slate-400 tracking-[0.2em]"
     >
-        <span>Less</span>
-        <div class="w-4 h-4 bg-slate-100 dark:bg-[#1a241a] rounded-xs"></div>
-        <div class="w-4 h-4 bg-emerald-200 dark:bg-emerald-900/40 rounded-xs">
+        <span>Min Level</span>
+        <div class="w-3 h-3 bg-slate-100 dark:bg-slate-800"></div>
+        <div class="w-3 h-3 bg-blue-200 dark:bg-blue-900/40">
         </div>
-        <div class="w-4 h-4 bg-emerald-400 dark:bg-emerald-700 rounded-xs">
+        <div class="w-3 h-3 bg-blue-400 dark:bg-blue-700/60">
         </div>
-        <div class="w-4 h-4 bg-emerald-600 dark:bg-emerald-500 rounded-xs">
+        <div class="w-3 h-3 bg-[#0055FF]">
         </div>
-        <span>More</span>
+        <span>Max Level</span>
     </div>
 
     <script define:vars={{ events, year }}>
         // Store the currently selected date and year
         let selectedDate = null;
-        
+
         // Initialize currentYear to the year provided by the server.
         // This MUST match what was rendered in the HTML initially.
         let currentYear = year;
 
         // Function to get Tailwind classes for colors
         function getColor(count) {
-            if (count === 0) return "fill-slate-100 dark:fill-[#1a241a]";
-            if (count === 1) return "fill-emerald-200 dark:fill-emerald-900/40";
-            if (count === 2) return "fill-emerald-400 dark:fill-emerald-700";
-            if (count >= 3) return "fill-emerald-600 dark:fill-emerald-500";
-            return "fill-slate-100 dark:fill-[#1a241a]";
+            if (count === 0) return "fill-slate-100 dark:fill-slate-800";
+            if (count === 1) return "fill-blue-200 dark:fill-blue-900/40";
+            if (count === 2) return "fill-blue-400 dark:fill-blue-700/60";
+            if (count >= 3) return "fill-[#0055FF]";
+            return "fill-slate-100 dark:fill-slate-800";
         }
 
         // Function to update heatmap for a specific year
@@ -281,10 +281,9 @@ function getFillColor(count: number, isDarkMode: boolean) {
                 const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
                 text.setAttribute("x", "0");
                 text.setAttribute("y", String(label.y));
-                text.setAttribute("class", "fill-slate-400 dark:fill-slate-500");
-                text.setAttribute("font-size", "9px");
-                text.setAttribute("font-weight", "500");
-                text.textContent = label.name;
+                text.setAttribute("class", "metadata fill-slate-400 dark:fill-slate-500");
+                text.setAttribute("font-size", "8px");
+                text.textContent = label.name.toUpperCase();
                 svg.appendChild(text);
             });
 
@@ -323,10 +322,9 @@ function getFillColor(count: number, isDarkMode: boolean) {
                 text.setAttribute("x", String(label.weekIndex * 14 + 30));
                 text.setAttribute("y", "12");
                 text.setAttribute("text-anchor", "start");
-                text.setAttribute("class", "fill-slate-500 dark:fill-slate-400");
-                text.setAttribute("font-size", "10px");
-                text.setAttribute("font-weight", "500");
-                text.textContent = label.name;
+                text.setAttribute("class", "metadata fill-slate-400 dark:fill-slate-500");
+                text.setAttribute("font-size", "9px");
+                text.textContent = label.name.toUpperCase();
                 svg.appendChild(text);
             });
 
@@ -355,13 +353,13 @@ function getFillColor(count: number, isDarkMode: boolean) {
                     rect.setAttribute("y", String(dayIndex * 13));
                     rect.setAttribute("width", "12");
                     rect.setAttribute("height", "12");
-                    rect.setAttribute("rx", "2");
+                    rect.setAttribute("rx", "0");
                     rect.setAttribute("data-date", dayData.date);
                     rect.setAttribute("data-count", String(dayData.count));
 
                     rect.setAttribute(
                         "class",
-                        `activity-day ${getColor(dayData.count)} ${dayData.count > 0 ? "cursor-pointer" : ""}`,
+                        `activity-day ${getColor(dayData.count)} transition-all duration-300 ${dayData.count > 0 ? "cursor-pointer" : ""}`,
                     );
 
                     if (dayData.count > 0) {
@@ -443,12 +441,12 @@ function getFillColor(count: number, isDarkMode: boolean) {
                 if (target.tagName === "rect" && target.classList.contains("activity-day")) {
                     const count = parseInt(target.getAttribute("data-count") || "0");
                     const date = target.getAttribute("data-date");
-                    const formattedDate = formatDate(date);
+                    const formattedDate = formatDate(date).toUpperCase();
 
                     let text = "";
-                    if (count === 0) text = `No contributions on ${formattedDate}`;
-                    else if (count === 1) text = `1 contribution on ${formattedDate}`;
-                    else text = `${count} contributions on ${formattedDate}`;
+                    if (count === 0) text = `Zero Operations Recorded // ${formattedDate}`;
+                    else if (count === 1) text = `001 Data Commit // ${formattedDate}`;
+                    else text = `${String(count).padStart(3, '0')} Data Commits // ${formattedDate}`;
 
                     tooltip.textContent = text;
 
@@ -473,30 +471,17 @@ function getFillColor(count: number, isDarkMode: boolean) {
         // Add selected class styling
         const style = document.createElement("style");
         style.textContent = `
-			.activity-day.selected {
-				stroke: #10b981 !important;
-				stroke-width: 2px !important;
-			}
+ 			.activity-day.selected {
+ 				stroke: #0055FF !important;
+ 				stroke-width: 2px !important;
+ 			}
             #activity-heatmap.is-filtering .activity-day:not(.selected) {
-                opacity: 0.3;
+                opacity: 0.1;
             }
             #activity-heatmap.is-filtering .activity-day.selected {
                 opacity: 1;
             }
-            #heatmap-tooltip::after {
-                content: '';
-                position: absolute;
-                top: 100%;
-                left: 50%;
-                margin-left: -5px;
-                border-width: 5px;
-                border-style: solid;
-                border-color: #0f172a transparent transparent transparent;
-            }
-            .dark #heatmap-tooltip::after {
-                border-color: #1e293b transparent transparent transparent;
-            }
-		`;
+ 		`;
         document.head.appendChild(style);
         // Initialize from attribute or default
         const initialYear = parseInt(document.documentElement.getAttribute('data-selected-year')) || year;

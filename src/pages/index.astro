@@ -2,12 +2,17 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import ActivityHeatmap from "../components/Profile/ActivityHeatmap.astro";
-import ProfileHeader from "../components/Profile/ProfileHeader.astro";
+import Header from "../components/Profile/Header.astro";
 import YearNavigation from "../components/YearNavigation.astro";
 import NoteTimeline from "../components/NoteTimeline.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import GardenStats from "../components/Profile/GardenStats.astro";
+import SocialLinks from "../components/Profile/SocialLinks.astro";
+import TopicFocus from "../components/Profile/TopicFocus.astro";
 import { getStageColors } from "../lib/theme";
 import { getBatchFileDates, type FileDates } from "../lib/git-history";
+import { Picture } from "astro:assets";
+import malcolmHeadshot from "/src/assets/malcolm_headshot.png";
 
 const allNotes = await getCollection("notes");
 const batchDates = (await getBatchFileDates()) as Map<string, FileDates>;
@@ -30,7 +35,7 @@ const notesWithDates = allNotes.map((note) => {
         displayDate,
         allGitDates,
     };
-}).filter(note => note.displayDate); // Only show notes that have a valid date from frontmatter or git
+}).filter((note): note is typeof note & { displayDate: Date } => !!note.displayDate); // Only show notes that have a valid date from frontmatter or git
 
 // Create timeline events
 const events: any[] = [];
@@ -210,9 +215,24 @@ const pinnedNotes = allNotes.filter((note) => (note.data as any).pinned === true
 
 // Get latest 3 created notes (that aren't pinned)
 const latestCreations = notesWithDates
-    .filter(p => !pinnedNotes.some(pinned => pinned.id === p.id))
-    .sort((a, b) => (b.displayDate as Date).valueOf() - (a.displayDate as Date).valueOf())
+    .filter(p => !!p.displayDate && !pinnedNotes.some(pinned => pinned.id === p.id))
+    .sort((a, b) => b.displayDate!.valueOf() - a.displayDate!.valueOf())
     .slice(0, 3);
+
+// Sort notes for stats
+const sortedNotes = notesWithDates.sort(
+    (a, b) => b.displayDate.valueOf() - a.displayDate.valueOf(),
+);
+
+// Compute note counts by stage
+const publishedNotes = allNotes.filter((note) => note.data);
+const counts = {
+    all: publishedNotes.length,
+    seed: publishedNotes.filter((n: any) => n.data.stage === "seed").length,
+    sprout: publishedNotes.filter((n: any) => n.data.stage === "sprout")
+        .length,
+    evergreen: publishedNotes.filter((n: any) => n.data.stage === "evergreen").length,
+};
 
 // Default to current year for heatmap
 const currentYearValue = new Date().getFullYear();
@@ -240,21 +260,15 @@ const currentYearValue = new Date().getFullYear();
         html:not(.js-initialized)[data-selected-year="${y.year}"] .month-section[data-year="${y.year}"]:not(:has(.timeline-event[data-event-year="${y.year}"][data-is-initial-batch="true"])) {
             display: none !important;
         }
-        
-        /* Instant Sidebar Highlighting */
+
+        /* Instant Sidebar Highlighting v1.1 */
         html[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] {
-            background-color: #059669;
-            color: white;
-            border-color: #0f172a !important;
+            color: #0055FF !important;
+            border-left-color: #0055FF !important;
+            padding-left: 0.75rem !important;
         }
-        html[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] span.text-slate-500 {
-            color: rgba(255, 255, 255, 0.9);
-        }
-        html[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] .activity-dots div {
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-        .dark html[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] {
-            background-color: #10b981;
+        html[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] span {
+            color: #0055FF !important;
         }
         html[data-selected-year="${y.year}"] .year-item:has(.year-btn[data-year="${y.year}"]) .month-submenu {
             display: block !important;
@@ -269,120 +283,135 @@ const currentYearValue = new Date().getFullYear();
             document.documentElement.setAttribute('data-selected-year', savedYear || currentYear);
         })();
     </script>
-    <main class="max-w-7xl mx-auto p-4 md:p-8" data-pagefind-ignore>
-        <ProfileHeader />
+    <main class="max-w-(--breakpoint-2xl) mx-auto p-4 md:p-8" data-pagefind-ignore>
+        <Header currentPath={Astro.url.pathname}>
+            <ActivityHeatmap
+                slot="heatmap"
+                year={currentYearValue}
+                events={sortedEvents as any}
+            />
+        </Header>
 
-        {
-            pinnedNotes.length > 0 && (
-                <div class="mb-12">
-                    <div class="flex items-center gap-2 mb-4">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5 text-emerald-500"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                        >
-                            <path
-                                fill-rule="evenodd"
-                                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                                clip-rule="evenodd"
-                            />
-                        </svg>
-                        <h2 class="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
-                            Pinned Notes
-                        </h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {pinnedNotes.map((note) => (
-                            <a
-                                href={`/notes/${note.id}`}
-                                class="group block p-5 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xs hover:border-emerald-500/50 hover:shadow-md transition-all relative overflow-hidden"
-                            >
-                                <div class="absolute top-0 right-0 p-3 opacity-20 group-hover:opacity-100 transition-opacity">
-                                    <span class="text-xs">📌</span>
-                                </div>
-                                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                                    {note.data.title}
-                                </h3>
-                                {note.data.summary && (
-                                    <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
-                                        {note.data.summary}
-                                    </p>
-                                )}
-                                <div class="mt-4 flex items-center gap-3">
-                                    <span class={`text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${stageColors[note.data.stage as keyof typeof stageColors]}`}>
-                                        {note.data.stage === "seed" ? "🌱" : note.data.stage === "sprout" ? "🌿" : "🌲"} {note.data.stage}
-                                    </span>
-                                    {note.data.tags.slice(0, 2).map((tag: string) => (
-                                        <span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium">
-                                            #{tag}
-                                        </span>
-                                    ))}
-                                </div>
-                            </a>
-                        ))}
-                    </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Year Rail  (Col 1) -->
+            <div class="lg:col-span-1 space-y-8">
+                <div class="lg:sticky lg:top-24">
+                    <YearNavigation sortedYears={sortedYears as any} />
                 </div>
-            )
-        }
+            </div>
 
-        {
-            latestCreations.length > 0 && (
-                <div class="mb-12">
-                    <div class="flex items-center gap-2 mb-4">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5 text-emerald-500"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                        >
-                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
-                        </svg>
-                        <h2 class="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
-                            Freshly Planted
-                        </h2>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {latestCreations.map((note) => (
-                            <a
-                                href={`/notes/${note.id}`}
-                                class="group block p-4 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl hover:border-emerald-500/30 transition-all"
-                            >
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
-                                        {note.displayDate?.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
-                                    </span>
-                                    <span class={`text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider ${stageColors[note.data.stage as keyof typeof stageColors]}`}>
-                                        {note.data.stage === "seed" ? "🌱" : note.data.stage === "sprout" ? "🌿" : "🌲"} {note.data.stage}
-                                    </span>
-                                </div>
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                    {note.data.title}
+            <!--  Activity Heatmap + Primary Stream (Col 2-8) -->
+            <div class="lg:col-span-7 space-y-12">
+                {
+                    pinnedNotes.length > 0 && (
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-2 h-2 bg-blueprint-blue rounded-full"></div>
+                                <h3 class="text-xs font-sans font-bold  text-terminal-dark dark:text-white tracking-widest uppercase">
+                                    Pinned Notes
                                 </h3>
-                                {note.data.summary && (
-                                    <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">
-                                        {note.data.summary}
-                                    </p>
-                                )}
-                            </a>
-                        ))}
-                    </div>
-                </div>
-            )
-        }
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {pinnedNotes.map((note) => (
+                                     <a
+                                        href={`/notes/${note.id}`}
+                                        class="card-blueprint pinned-note group block p-6 bg-white dark:bg-slate-800 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_-5px_rgba(0,85,255,0.1)] transition-all"
+                                     >
+                                        <div class="flex justify-between items-start mb-4">
+                                             <span class={`text-sm font-bold dark:text-white ${
+                                                 note.data.stage === 'seed' ? 'text-andon-amber' :
+                                                 note.data.stage === 'sprout' ? 'text-purple-600' :
+                                                 note.data.stage === 'evergreen' ? 'text-andon-emerald' : 'text-blueprint-blue'
+                                             }`}>
+                                                 {note.data.stage.charAt(0).toUpperCase() + note.data.stage.slice(1)}
+                                             </span>
+                                            <span class="text-sm text-slate-500 dark:text-slate-400">Pinned</span>
+                                        </div>
+                                        <h3 class="text-xl font-sans font-bold text-terminal-dark dark:text-white mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
+                                            {note.data.title}
+                                        </h3>
+                                        {note.data.summary && (
+                                            <p class="text-base text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                                                {note.data.summary}
+                                            </p>
+                                        )}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    )
+                }
 
-        <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_16rem] gap-8">
-            <!-- Right Column: Navigation & Search (Moved up to load first and avoid layout shift) -->
-            <div class="lg:sticky lg:top-8 h-fit z-30 pb-10 order-last">
-                <!-- Search Button -->
-                <div class="mb-6">
+                <NoteTimeline
+                    sortedEvents={sortedEvents}
+                    allMonths={allMonths}
+                    eventsByMonthKey={eventsByMonthKey}
+                    initialYear={currentYearValue.toString()}
+                />
+            </div>
+
+            <!-- Contextual Side (Col 9-12) -->
+            <div class="lg:col-span-4 space-y-8">
+                 <!-- Latest Creations -->
+                 <div class="card-blueprint p-6 bg-white dark:bg-slate-800">
+                     <h3 class="text-xs font-sans font-bold text-slate-500 dark:text-slate-400 mb-6 tracking-widest uppercase">Latest Creations</h3>
+                     <div class="space-y-4">
+                         {latestCreations.map((note) => (
+                             <a href={`/notes/${note.id}`} class="block group">
+                                 <div class="flex justify-between items-start mb-2">
+                                     <span class={`text-sm font-bold ${
+                                         note.data.stage === 'evergreen' ? 'text-andon-emerald' :
+                                         note.data.stage === 'seed' ? 'text-andon-amber' :
+                                         'text-purple-600'
+                                     }`}>
+                                         {note.data.stage.toUpperCase()}
+                                     </span>
+                                     <time class="text-xs text-slate-500 dark:text-slate-400">
+                                         {note.displayDate!.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
+                                     </time>
+                                 </div>
+                                 <h4 class="text-base font-bold text-terminal-dark dark:text-white group-hover:text-blueprint-blue transition-colors">
+                                     {note.data.title}
+                                 </h4>
+                             </a>
+                         ))}
+                     </div>
+                 </div>
+
+                  <!-- About the Author -->
+                  <a href="/about" class="block">
+                  <div class="card-blueprint p-6 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                      <h3 class="text-xs font-sans font-bold text-slate-500 dark:text-slate-400 mb-6 tracking-widest uppercase">About the Author</h3>
+                      <div class="flex items-center gap-4">
+                          <Picture src={malcolmHeadshot} alt="Malcolm Bastien" class="w-12 h-12 rounded-full object-cover" />
+                          <div>
+                              <div class="font-bold text-terminal-dark dark:text-white">Malcolm Bastien</div>
+                              <div class="text-sm text-slate-500 dark:text-slate-400">Lean-Agile Practitioner</div>
+                          </div>
+                      </div>
+                  </div>
+                  </a>
+
+                 <!-- Garden Stats -->
+                 <div class="card-blueprint p-6 bg-white">
+                     <GardenStats
+                         counts={counts}
+                         sortedNotes={sortedNotes}
+                         allNotes={allNotes}
+                         progressColors={stageColors}
+                     />
+                 </div>
+
+                <!-- Search Box v1.1 -->
+                <div class="card-blueprint p-6 bg-white dark:bg-slate-800">
+                    <h3 class="text-xs font-sans font-bold text-slate-500 dark:text-slate-400 mb-6 tracking-widest uppercase">Search</h3>
                     <a
                         href="/search"
-                        class="flex items-center gap-3 w-full px-4 py-3 bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-xl text-slate-500 dark:text-slate-400 hover:border-emerald-500/50 hover:text-emerald-600 transition-all shadow-sm group"
+                        class="flex items-center gap-4 w-full px-5 py-4 bg-tooling-gray dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:border-blueprint-blue hover:text-blueprint-blue dark:hover:text-white transition-all group"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5 text-slate-400 group-hover:text-emerald-500 transition-colors"
+                            class="h-4 w-4"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -394,28 +423,16 @@ const currentYearValue = new Date().getFullYear();
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                             ></path>
                         </svg>
-                        <span class="text-sm font-medium">Search garden...</span>
+                        <span class="text-sm font-bold text-slate-500 dark:text-slate-400 group-hover:text-terminal-dark dark:group-hover:text-white transition-colors">Search notes...</span>
                     </a>
                 </div>
 
-                <!-- Years Navigation (Scrollable if long) -->
-                <div class="lg:max-h-[calc(100vh-12rem)] lg:overflow-y-auto custom-sidebar-scroll">
-                    <YearNavigation sortedYears={sortedYears as any} />
-                </div>
-            </div>
+                <TopicFocus />
 
-            <!-- Left Column: Activity Heatmap and Timeline -->
-            <div class="space-y-6">
-                <ActivityHeatmap
-                    year={currentYearValue}
-                    events={sortedEvents as any}
-                />
-                <NoteTimeline
-                    sortedEvents={sortedEvents}
-                    allMonths={allMonths}
-                    eventsByMonthKey={eventsByMonthKey}
-                    initialYear={currentYearValue.toString()}
-                />
+                <div class="card-blueprint p-6 bg-white dark:bg-slate-800">
+                    <h3 class="text-xs font-sans font-bold text-slate-500 dark:text-slate-400 mb-6 tracking-widest uppercase">Social Links</h3>
+                    <SocialLinks class="border-none p-0 bg-transparent shadow-none!" />
+                </div>
             </div>
         </div>
         <SiteFooter />
@@ -428,19 +445,19 @@ const currentYearValue = new Date().getFullYear();
     /* Styling for the scrollable sidebar */
     .custom-sidebar-scroll {
         scrollbar-width: thin;
-        scrollbar-color: #e2e8f0 transparent;
+        scrollbar-color: #f1f5f9 transparent;
     }
     .dark .custom-sidebar-scroll {
         scrollbar-color: #1e293b transparent;
     }
     .custom-sidebar-scroll::-webkit-scrollbar {
-        width: 4px;
+        width: 3px;
     }
     .custom-sidebar-scroll::-webkit-scrollbar-track {
         background: transparent;
     }
     .custom-sidebar-scroll::-webkit-scrollbar-thumb {
-        @apply bg-slate-200 dark:bg-slate-800 rounded-full;
+        @apply bg-slate-100 dark:bg-slate-800;
     }
 
     /* CSS-driven filtering for instant load */
@@ -459,7 +476,7 @@ const currentYearValue = new Date().getFullYear();
     const buttons = document.querySelectorAll("[data-stage]");
     const topicButtons = document.querySelectorAll("[data-topic]");
     const eventTypeButtons = document.querySelectorAll("[data-event-type]");
-    const timelineEvents = document.querySelectorAll(".timeline-event");
+    const timelineEvents = document.querySelectorAll("#timeline .timeline-event");
     const noResults = document.getElementById("no-results");
 
     // Prevent browser from automatically restoring scroll position which can cause jumps
@@ -482,7 +499,7 @@ const currentYearValue = new Date().getFullYear();
         let visibleCount = 0;
 
         // Re-query to include dynamically added events
-        const allTimelineEvents = document.querySelectorAll(".timeline-event");
+        const allTimelineEvents = document.querySelectorAll("#timeline .timeline-event");
 
         allTimelineEvents.forEach((event) => {
             const htmlEvent = event as HTMLElement;
@@ -495,8 +512,8 @@ const currentYearValue = new Date().getFullYear();
             const matchesTopic = currentTopic === "" || (htmlEvent.dataset.topics || "").includes(currentTopic);
             const matchesEventType =
                 currentEventType === "all" || eventType === currentEventType;
-            
-            // Year matching is now handled by CSS for the initial paint, 
+
+            // Year matching is now handled by CSS for the initial paint,
             // but we keep this check for the "totalMatchingCount" and "Show More" logic.
             const matchesYear =
                 currentYear === "all" || eventYear === currentYear;
@@ -613,7 +630,7 @@ const currentYearValue = new Date().getFullYear();
                 monthSubmenu.classList.toggle("hidden");
             }
         } else {
-            // Note: .active class removal is still done for manual clicks to clean up 
+            // Note: .active class removal is still done for manual clicks to clean up
             // any JS-applied states, though CSS attribute handles most styling now.
             yearButtons.forEach((btn) => {
                 btn.classList.remove("active");
@@ -621,7 +638,7 @@ const currentYearValue = new Date().getFullYear();
                 const submenu = item?.querySelector(".month-submenu");
                 if (submenu) submenu.classList.add("hidden");
             });
-            
+
             // We set the variable but let the [data-selected-year] handle the UI
             currentYear = year;
 
@@ -635,10 +652,10 @@ const currentYearValue = new Date().getFullYear();
     yearButtons.forEach((button) => {
         button.addEventListener("click", (event) => {
             const year = (button as HTMLElement).dataset.year || "all";
-            
+
             // Preserve the selected year in local storage
             localStorage.setItem('selectedYear', year);
-            
+
             selectYear(year, button as HTMLElement, event.isTrusted);
         });
     });

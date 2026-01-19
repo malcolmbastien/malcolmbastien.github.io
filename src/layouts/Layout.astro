@@ -41,11 +41,11 @@ const ogImage = image.startsWith("http") ? image : url + image;
         <meta name="generator" content={Astro.generator} />
         <meta name="fediverse:creator" content="@malcolm@mastodon.social" />
 
-        <!-- Inter Font for better readability -->
+        <!-- Flow Focused Fonts v1.1 -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesk:opsz,wght@12..96,200..1000&family=IBM+Plex+Mono:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
 
@@ -149,11 +149,28 @@ const ogImage = image.startsWith("http") ? image : url + image;
         </script>
     </head>
     <body
-        class="bg-[#f0f5f3] dark:bg-[#0b0f0b] text-slate-900 dark:text-slate-100 antialiased min-h-screen"
+        class="bg-white dark:bg-[#0f172a] text-[#0f172a] dark:text-white antialiased min-h-screen"
     >
-        <div class="fixed top-6 right-6 z-100 print:hidden">
-            <ThemeToggle />
-        </div>
+        <header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700">
+            <div class="max-w-(--breakpoint-2xl) mx-auto px-4 py-6">
+                <nav class="flex items-center justify-between">
+                    <div class="flex items-center gap-8">
+                        <a href="/" class="flex items-center gap-3 group">
+                            <div class="w-8 h-8 bg-blueprint-blue rounded"></div>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-terminal-dark dark:text-white group-hover:text-blueprint-blue transition-colors">Malcolm Bastien</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">Digital Garden</span>
+                            </div>
+                        </a>
+                        <div class="hidden md:flex items-center gap-6">
+                            <a href="/" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-terminal-dark dark:hover:text-white transition-colors">Home</a>
+                            <a href="/about" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-terminal-dark dark:hover:text-white transition-colors">About</a>
+                        </div>
+                    </div>
+                    <ThemeToggle client:load />
+                </nav>
+            </div>
+        </header>
         <slot />
     </body>
 </html>

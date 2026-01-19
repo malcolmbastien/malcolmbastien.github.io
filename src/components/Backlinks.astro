@@ -28,39 +28,36 @@ const formatDate = (date: Date) => {
 
 {
     backlinkedNotes.length > 0 && (
-        <section class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-600">
-            <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-6 flex items-center gap-2">
-                Links to this note
+        <section class="mt-20 pt-14 border-t border-slate-100">
+            <h3 class="metadata text-xs font-bold text-slate-500 dark:text-slate-400 mb-10 uppercase tracking-[0.2em]">
+                Associated Nodes
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {backlinkedNotes.map((note) => (
                     <a
                         href={`/notes/${note.id}`}
-                        class="group block p-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        class="card-blueprint group block p-8 bg-white hover:shadow-[6px_6px_0_0_#f1f5f9]"
                     >
-                        <div class="flex items-center gap-2 mb-2">
+                        <div class="flex items-center gap-3 mb-5">
                             <span
-                                class={`px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${stageColors[note.data.stage as keyof typeof stageColors]}`}
+                                class={`metadata text-xs font-bold ${note.data.stage === 'evergreen' ? 'text-andon-emerald' : 'text-andon-amber'}`}
                             >
-                                {note.data.stage === "seed" && "🌱"}
-                                {note.data.stage === "sprout" && "🌿"}
-                                {note.data.stage === "evergreen" && "🌲"}
-                                {" "}{note.data.stage}
+                                {note.data.stage.toUpperCase()}
                             </span>
                         </div>
-                        <h4 class="text-sm font-medium text-slate-900 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors mb-2 line-clamp-2">
+                        <h4 class="text-xl font-bold text-terminal-dark group-hover:text-blueprint-blue transition-colors mb-3 line-clamp-2 tracking-tight">
                             {note.data.title}
                         </h4>
-                        <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 mb-3">
+                        <p class="text-xs font-sans text-slate-500 line-clamp-2 mb-6 leading-relaxed">
                             {note.data.summary}
                         </p>
-                        <div class="flex items-center justify-between text-[10px] text-slate-400">
+                        <div class="metadata text-xs text-slate-500 dark:text-slate-400 font-mono">
                             <time datetime={note.displayDate.toISOString()}>
                                 {note.displayDate.toLocaleDateString("en-US", {
-                                    month: "short",
-                                    day: "numeric",
-                                    year: "numeric",
-                                })}
+                                    month: 'short',
+                                    day: 'numeric',
+                                    year: 'numeric',
+                                }).toUpperCase()}
                             </time>
                         </div>
                     </a>

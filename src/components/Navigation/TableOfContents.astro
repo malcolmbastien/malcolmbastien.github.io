@@ -1,4 +1,7 @@
 ---
+
+import BackToGarden from "./BackToGarden.astro";
+
 // TableOfContents.astro - Automatically generates table of contents from headings
 interface Props {
     content: string;
@@ -75,55 +78,56 @@ const createTOCStructure = (
 
 const tocStructure = createTOCStructure(title, headings);
 ---
+<BackToGarden />
 
 {
     showTOC && (
-        <aside class="hidden lg:block w-72 shrink-0">
-            <div class="sticky top-8">
-                <div class="bg-white dark:bg-[#121812] border border-slate-200 dark:border-slate-800 rounded-lg p-4 shadow-sm">
-                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4 uppercase tracking-widest">
-                        Table of Contents
-                    </h3>
-                    <nav class="toc-nav">
-                        {tocStructure.map((item, index) => {
-                            const isPostTitle = index === 0 && item.id === ""; // First item with empty ID is the post title
+        <aside class="w-full">
+            <nav class="toc-nav relative">
+                    {tocStructure.map((item, index) => {
+                        const isPostTitle = index === 0 && item.id === "";
 
-                            return (
-                                <div class="toc-item">
-                                    <a
-                                        href={isPostTitle ? "#" : `#${item.id}`}
-                                        class={`block transition-colors py-1 border-l-2 border-transparent hover:border-emerald-200 dark:hover:border-emerald-700 pl-3 -ml-3 ${
-                                            isPostTitle
-                                                ? "text-base font-semibold text-slate-900 dark:text-slate-100 hover:text-emerald-700 dark:hover:text-emerald-300"
-                                                : "text-sm text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
-                                        }`}
-                                    >
-                                        {item.text}
-                                    </a>
-                                    {item.children &&
-                                        item.children.length > 0 && (
-                                            <div class="ml-4 mt-1 space-y-1">
-                                                {item.children.map((child) => (
+                        return (
+                            <div class="toc-item relative mb-4">
+                                 <a
+                                     href={isPostTitle ? "#" : `#${item.id}`}
+                                     id={`toc-${item.id}`}
+                                      class={`toc-link block transition-all py-1 pl-6 ${
+                                          isPostTitle
+                                      ? "text-base font-bold text-slate-800 dark:text-slate-100"
+                                              : "metadata text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+                                      }`}
+                                 >
+                                    {item.text.toUpperCase()}
+                                </a>
+                                {item.children &&
+                                    item.children.length > 0 && (
+                                        <div class="ml-6 mt-2 space-y-2">
+                                            {item.children.map((child, childIndex) => (
+                                                <div class="relative">
                                                     <a
-                                                        href={`#${child.id}`}
-                                                        class="block text-xs text-slate-500 dark:text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors py-0.5 border-l-2 border-transparent hover:border-emerald-200 dark:hover:border-emerald-700 pl-2 -ml-2"
-                                                    >
-                                                        {child.text}
+                                                         href={`#${child.id}`}
+                                                         id={`toc-${child.id}`}
+                                                         class="toc-link block metadata text-sm text-slate-500 dark:text-slate-400 hover:text-blueprint-blue dark:hover:text-white transition-colors py-0.5 pl-4"
+                                                     >
+                                                        {child.text.toUpperCase()}
                                                     </a>
-                                                ))}
-                                            </div>
-                                        )}
-                                </div>
-                            );
-                        })}
-                    </nav>
-                </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                            </div>
+                        );
+                    })}
+                </nav>
             </div>
         </aside>
     )
 }
 
 <style>
+    @reference "../../styles/global.css";
+
     .toc-nav {
         max-height: calc(100vh - 200px);
         overflow-y: auto;
@@ -145,4 +149,12 @@ const tocStructure = createTOCStructure(title, headings);
     .dark .toc-nav::-webkit-scrollbar-thumb {
         background: rgb(71 85 105);
     }
+
+    /* Active TOC link styling */
+    .toc-link.active {
+        @apply text-blueprint-blue dark:text-blue-300 border-blueprint-blue dark:border-blue-300;
+    }
+
+
+
 </style>

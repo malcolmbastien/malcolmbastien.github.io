@@ -1,6 +1,6 @@
 ---
 title: 2025 Year in Review
-stage: seed
+stage: sprout
 tags:
   - Year-In-Review
   - Obsidian
@@ -13,7 +13,7 @@ draft: true              # Optional, adds WIP banner
 
 ## AI
 
-Like I wrote about in [[my-ai-learning-journey|My AI Learning Journey]], I spent the bulk of July watching lectures and learning about different concepts related to AI and LLMs.
+Like I wrote about in [[my-ai-learning-journey|My AI Learning Journey]], I spent the bulk of July watching lectures and learning about different concepts related to #AI and LLMs.
 
 ### Vibe Coded Apps
 - [Team Flow Mapping](https://teamflowmapping.com/)
