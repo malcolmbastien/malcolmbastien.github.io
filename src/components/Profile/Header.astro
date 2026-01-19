@@ -9,45 +9,13 @@ const { currentPath = "/" } = Astro.props;
 
 const navItems = [
     { href: "/", label: "Garden" },
-    { href: "/topics", label: "Topics" },
-    { href: "/colophon", label: "Colophon" },
+    { href: "/topics", label: "Explorer" },
+    { href: "/colophon", label: "Map" },
     { href: "/about", label: "About" },
 ];
 ---
 
-<header class="max-w-7xl mx-auto px-6 md:px-12 pt-12 mb-16 border-b-2 border-slate-100 pb-12">
-    <div class="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
-        <div class="flex items-center gap-3">
-            <span class="font-mono uppercase tracking-widest text-blue-600 font-bold">
-                Malcolm Bastien
-            </span>
-            <span class="h-3 w-[1px] bg-slate-200 dark:bg-slate-700"></span>
-            <span class="font-mono uppercase tracking-widest opacity-50">
-                Lean-Agile Practitioner
-            </span>
-        </div>
-
-        <div class="flex items-center gap-4">
-            <nav class="flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 w-full md:w-auto justify-center md:justify-end">
-                {navItems.map((item) => (
-                    <a
-                        href={item.href}
-                        class:list={[
-                            "relative text-base font-medium tracking-wide px-4 py-2 transition-all",
-                            currentPath === item.href
-                                ? "text-terminal-dark dark:text-white after:content-[''] after:absolute after:bottom-[-2px] after:left-4 after:right-4 after:height-[2px] after:bg-blue-600"
-                                : "text-slate-500 dark:text-slate-400 hover:text-blueprint-blue dark:hover:text-white"
-                        ]}
-                    >
-                        {item.label}
-                    </a>
-                ))}
-            </nav>
-            <div class="w-[1px] h-4 bg-slate-200 dark:bg-slate-700"></div>
-            <ThemeToggle />
-        </div>
-    </div>
-
+<header class="max-w-7xl mx-auto px-6 md:px-12  mb-16 border-b-2 border-slate-100 pb-12">
     <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
         <div class="max-w-2xl">
             <h1 class="font-['Bricolage_Grotesque'] text-7xl md:text-8xl font-extrabold mb-6 tracking-tight leading-[0.9] text-slate-900 dark:text-white">
@@ -59,7 +27,6 @@ const navItems = [
                 <span class="text-blue-600 italic">Continuous Flow</span>.
             </p>
         </div>
-
         <slot name="heatmap" />
     </div>
 </header>
