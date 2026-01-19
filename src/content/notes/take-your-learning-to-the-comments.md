@@ -4,14 +4,8 @@ title: Take Your Learning To The Comments
 publishedDate: 2009-01-18
 tags:
   - Blogging
-  - Blogs
   - Education
   - Facebook
-  - General
-  - Learning
-  - Ryerson University
-  - School
-  - Youth
 ---
 As still somebody who attends university (Ryerson University, incredible value for money by the way...) I've made the decision to go into a very mind-off mode while in class. I still talk a lot in class, answer questions and the like, but I do that without any prior thinking about what my answer will be or how smart it sounds.  I'm **that** guy.
 

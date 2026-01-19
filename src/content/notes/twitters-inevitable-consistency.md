@@ -1,6 +1,6 @@
 ---
 stage: evergreen
-title: Twitter’s Inevitable Consistency
+title: "Twitter’s Inevitable Consistency"
 publishedDate: 2012-08-21
 tags:
   - Social-Media

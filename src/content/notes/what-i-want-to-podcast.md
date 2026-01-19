@@ -18,4 +18,4 @@ I've put some thought into a video talking about:
 
 Nothing hard planned yet, just some ideas to get other people thinking and let them raise their voice if they also are interested. Needless to say, as someone who has been blogging for a few years, and listening to podcasts for even longer, I think there is still a lot of value we can generate and some real good we can do by coming together as a weekly podcast.
 
-Feel free to leave a Seesmic comment from Disqus by using the "Use Media > Record Video" option.
+Feel free to leave a Seismic comment from Disqus by using the "Use Media > Record Video" option.
