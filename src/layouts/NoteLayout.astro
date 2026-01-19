@@ -63,8 +63,8 @@ const formatDate = (date: Date) => {
     modifiedTime={hasBeenUpdated ? gitUpdated!.toISOString() : undefined}
     tags={frontmatter.tags}
 >
-    <main class="max-w-(--breakpoint-2xl) mx-auto p-4 md:p-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+    <main class="max-w-(--breakpoint-xl) mx-auto p-4 md:p-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
             <!-- Primary Stream (Col 1-9) -->
             <article
                 class={`lg:col-span-9 ${isNoteDraft ? "note-is-draft relative" : ""}`}

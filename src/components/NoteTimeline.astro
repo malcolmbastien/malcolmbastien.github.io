@@ -60,7 +60,7 @@ sortedEvents.forEach((event) => {
 
                     {monthEvents && monthEvents.length > 0 ? (
                         /* Events for this month */
-                        <div class="month-events space-y-6 ml-9 md:ml-12">
+                        <div class="month-events space-y-6 ml-6 md:ml-9">
                              {monthEvents.map((event: any) => {
                                  const isFeatured = event.note.data.featured;
                                  const eventYear = event.date.getFullYear().toString();

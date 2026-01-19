@@ -282,7 +282,7 @@ const currentYearValue = new Date().getFullYear();
             document.documentElement.setAttribute('data-selected-year', savedYear || currentYear);
         })();
     </script>
-    <main class="max-w-(--breakpoint-2xl) mx-auto p-4 md:p-8" data-pagefind-ignore>
+    <main class="max-w-(--breakpoint-xl) mx-auto p-4 md:p-8" data-pagefind-ignore>
         <Header currentPath={Astro.url.pathname}>
             <ActivityHeatmap
                 slot="heatmap"
@@ -291,7 +291,7 @@ const currentYearValue = new Date().getFullYear();
             />
         </Header>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
             <!-- Year Rail  (Col 1) -->
             <div class="lg:col-span-1 space-y-8">
                 <div class="lg:sticky lg:top-24">
