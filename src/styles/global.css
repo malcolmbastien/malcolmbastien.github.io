@@ -70,6 +70,18 @@ h6 {
   top: 0px;
 }
 
+.job-marker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid var(--color-blueprint-blue);
+  position: relative;
+  z-index: 10;
+  /* Different top value for jobs */
+  top: -8px;
+}
+
 /* Note Card Component v1.1 */
 .card-blueprint {
   background: white;
