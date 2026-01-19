@@ -22,7 +22,7 @@ const { sortedYears } = Astro.props;
                             data-year={yearData.year}
                         >
                             <div class="flex flex-col gap-1 items-start">
-                                <span class="metadata text-base font-bold text-slate-500 group-hover:text-blueprint-blue transition-colors">{yearData.year}</span>
+                                <span class="metadata text-sm font-bold text-slate-500 group-hover:text-blueprint-blue transition-colors">{yearData.year}</span>
                                 <div class="flex items-center gap-1.5 opacity-60 group-hover:opacity-100 transition-opacity">
                                     <div class="activity-dots flex flex-col gap-0.5">
                                         {Array.from(
@@ -47,7 +47,7 @@ const { sortedYears } = Astro.props;
                          <div class="month-submenu hidden mt-2 space-y-3">
                              {yearData.months.map((month) => (
                                  <button
-                                      class="month-btn w-full text-left metadata text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-blueprint-blue transition-colors tracking-wide"
+                                      class="month-btn w-full text-left metadata text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-blueprint-blue transition-colors tracking-wide"
                                      data-month={new Date(yearData.year, month).toLocaleDateString("en-US", {
                                          year: "numeric",
                                          month: "long",
