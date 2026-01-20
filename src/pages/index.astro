@@ -318,11 +318,11 @@ const currentYearValue = new Date().getFullYear();
                                      >
                                          <div class="flex justify-between items-start mb-4">
                                                <span class={`text-sm font-bold text-signal-${note.data.stage}`}>
-                                                  {note.data.stage.charAt(0).toUpperCase() + note.data.stage.slice(1)}
+                                                  {note.data.stage.toUpperCase()}
                                                </span>
                                             <span class="text-sm text-secondary">Pinned</span>
                                         </div>
-                                        <h3 class="text-lg font-sans font-bold text-primary mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
+                                         <h3 class="text-lg font-sans font-bold text-terminal-dark dark:text-neutral-text-dark mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
                                             {note.data.title}
                                         </h3>
                                         {note.data.summary && (
@@ -361,7 +361,7 @@ const currentYearValue = new Date().getFullYear();
                                          {note.displayDate!.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
                                      </time>
                                  </div>
-                                 <h4 class="text-base font-bold text-primary group-hover:text-blueprint-blue transition-colors">
+                                  <h4 class="text-base font-bold text-terminal-dark dark:text-neutral-text-dark group-hover:text-blueprint-blue dark:group-hover:text-blueprint-blue transition-colors">
                                      {note.data.title}
                                  </h4>
                              </a>

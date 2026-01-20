@@ -28,8 +28,8 @@ const topTopics = Object.entries(topicCounts)
                     href={`/topics/${topic}`}
                     class="group flex items-baseline gap-2"
                 >
-                    <span class="text-sm font-sans font-bold text-primary group-hover:text-blueprint-blue transition-colors">#{topic}</span>
-                    <span class="text-xs font-sans text-secondary group-hover:text-blueprint-blue transition-colors">{count}</span>
+                    <span class="text-sm font-sans font-bold text-terminal-dark dark:text-neutral-text-dark group-hover:text-blueprint-blue dark:group-hover:text-blueprint-blue transition-colors">#{topic}</span>
+                    <span class="text-xs font-sans text-neutral-text-light dark:text-neutral-metadata-dark group-hover:text-blueprint-blue dark:group-hover:text-blueprint-blue transition-colors">{count}</span>
                 </a>
             ))
         }

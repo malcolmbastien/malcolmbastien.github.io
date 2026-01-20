@@ -67,12 +67,12 @@ sortedEvents.forEach((event) => {
                                  const isInitialBatch = eventBatchStatus.get(event);
 
                                   return (
-                                            <div
-                                               class={`timeline-event p-0 card-interactive cursor-pointer group overflow-hidden ${
-                                                   isFeatured
-                                                    ? "featured shadow-[6px_6px_0_0_#4382ff] border-blueprint-blue hover:shadow-[10px_10px_0_0_#4382ff]"
-                                                   : "hover:shadow-[4px_4px_0_0_#e2e8f0]"
-                                               }`}
+                                             <div
+                                                class={`timeline-event p-0 card-interactive cursor-pointer group overflow-hidden ${
+                                                    isFeatured
+                                                     ? "featured"
+                                                     : ""
+                                                }`}
                                                data-stage={event.note.data.stage}
                                                data-title={event.title.toLowerCase()}
                                                data-summary={
@@ -95,7 +95,7 @@ sortedEvents.forEach((event) => {
                                            >
                                           <div class="flex flex-col gap-5 p-7">
                                              <div class="flex justify-between items-center">
-                                                   <span class={`metadata text-xs font-bold text-signal-${event.note.data.stage}`}>
+                                                   <span class={`metadata text-sm font-bold text-signal-${event.note.data.stage}`}>
                                                        {event.note.data.stage.toUpperCase()}
                                                    </span>
                                                    <time class="metadata-secondary text-xs">
@@ -104,7 +104,7 @@ sortedEvents.forEach((event) => {
                                              </div>
 
                                              <div class="flex-1 min-w-0">
-                                                  <h4 class="text-2xl font-bold text-primary mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
+                                                   <h4 class="text-2xl font-bold text-terminal-dark dark:text-neutral-text-dark mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
                                                       <a
                                                           href={`/notes/${event.note.id.replace('.md', '')}`}
                                                           class="after:absolute after:inset-0"
@@ -183,11 +183,5 @@ sortedEvents.forEach((event) => {
 <style>
     .month-no-activity {
         border: 1.5px dashed #e2e8f0;
-    }
-
-    /* Featured posts keep their large shadow on hover */
-    .timeline-event.featured:hover {
-        box-shadow: 10px 10px 0 0 #4382ff !important;
-        transform: none !important;
     }
 </style>
