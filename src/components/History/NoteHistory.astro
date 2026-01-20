@@ -10,7 +10,7 @@ const history = await getFileHistory(filePath);
 
 function getEvolutionLabel(commit: any, index: number, total: number) {
     const isFirst = index === total - 1;
-    if (isFirst) return "NODE_INIT";
+    if (isFirst) return "CREATED";
 
     const { insertions, deletions, message } = commit;
     const totalChange = insertions + deletions;
@@ -18,13 +18,13 @@ function getEvolutionLabel(commit: any, index: number, total: number) {
     const msg = message.toLowerCase();
 
     // Check for polish/minor tweaks
-    if (msg.includes("typo") || msg.includes("grammar") || (totalChange > 0 && totalChange < 5)) return "REFINEMENT";
+    if (msg.includes("typo") || msg.includes("grammar") || (totalChange > 0 && totalChange < 5)) return "POLISHED";
     
-    if (insertions > 40) return "EXPANSION";
-    if (insertions > 15) return "DATA_GROWTH";
-    if (deletions > 20) return "PRUNING";
+    if (insertions > 40) return "EXPANDED";
+    if (insertions > 15) return "ADDED";
+    if (deletions > 20) return "CONDENSED";
     
-    return "MAINTENANCE";
+    return "UPDATED";
 }
 ---
 
