@@ -1,6 +1,4 @@
 ---
-import { getStageColors } from "../lib/theme";
-
 interface Props {
     backlinkedNotes: any[];
 }
@@ -14,16 +12,6 @@ const backlinkedNotes = rawBacklinkedNotes
         return { ...note, displayDate };
     })
     .sort((a, b) => b.displayDate.getTime() - a.displayDate.getTime()); // Most recent first
-
-const stageColors = getStageColors();
-
-const formatDate = (date: Date) => {
-    return date.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-    });
-};
 ---
 
 {

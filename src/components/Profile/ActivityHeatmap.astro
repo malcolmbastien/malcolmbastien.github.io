@@ -78,23 +78,6 @@ function getColor(count: number) {
     return "fill-slate-100 dark:fill-slate-800";
 }
 
-function getFillColor(count: number, isDarkMode: boolean) {
-    // Light mode colors (based on getColor)
-    if (!isDarkMode) {
-        if (count === 0) return "#f1f5f9"; // tooling-gray
-        if (count === 1) return "#bfdbfe"; // blue-200
-        if (count === 2) return "#60a5fa"; // blue-400
-        if (count >= 3) return "#4382ff"; // blueprint-blue
-        return "#f1f5f9";
-    }
-    // Dark mode colors
-    if (count === 0) return "#1e293b";
-    if (count === 1) return "#1e3a8a66"; // blue-900/40
-    if (count === 2) return "#1d4ed899"; // blue-700/60
-    if (count >= 3) return "#4382ff"; // blueprint-blue
-    return "#1e293b";
-}
-
 // Keep the original getColor function for static rendering
 ---
 
@@ -187,7 +170,7 @@ function getFillColor(count: number, isDarkMode: boolean) {
         <span>Max Level</span>
     </div>
 
-    <script define:vars={{ events, year }}>
+    <script is:inline define:vars={{ events, year }}>
         // Store the currently selected date and year
         let selectedDate = null;
 
@@ -290,8 +273,6 @@ function getFillColor(count: number, isDarkMode: boolean) {
             // Rebuild month labels
             const monthLabels = [];
             let lastMonth = "";
-            const isDarkMode =
-                document.documentElement.classList.contains("dark");
 
             for (let i = 0; i < days.length; i++) {
                 const dayData = days[i];

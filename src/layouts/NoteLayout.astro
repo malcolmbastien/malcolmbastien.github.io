@@ -4,9 +4,7 @@ import NoteHistory from "../components/History/NoteHistory.astro";
 import TableOfContents from "../components/Navigation/TableOfContents.astro";
 import Backlinks from "../components/Backlinks.astro";
 import ImageLightbox from "../components/ImageLightbox.astro";
-import ThemeToggle from "../components/ThemeToggle.astro";
 import SiteFooter from "../components/SiteFooter.astro";
-import { getStageColors } from "../lib/theme";
 import { getReadingTime } from "../lib/reading-time";
 import BackToGarden from "../components/Navigation/BackToGarden.astro";
 import AboutAuthor from "../components/AboutAuthor.astro";
@@ -40,8 +38,6 @@ const readingTime = noteBody ? getReadingTime(noteBody) : "";
 const createdDate = frontmatter.publishedDate || gitCreated || new Date();
 const hasBeenUpdated =
     gitUpdated && gitUpdated.getTime() > createdDate.getTime() + 1000 * 60 * 60; // More than 1 hour difference
-
-const stageColors = getStageColors();
 
 const isNoteDraft = frontmatter.draft === true;
 

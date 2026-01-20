@@ -6,16 +6,9 @@ interface Props {
         sprout: number;
         evergreen: number;
     };
-    sortedNotes: any[];
-    allNotes: any[];
-    progressColors: {
-        seed: string;
-        sprout: string;
-        evergreen: string;
-    };
 }
 
-const { counts, sortedNotes, allNotes, progressColors } = Astro.props;
+const { counts } = Astro.props;
 ---
 
 <div class="space-y-8">

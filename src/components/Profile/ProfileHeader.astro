@@ -1,22 +1,5 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
-import { theme } from "../../lib/theme";
 import { Picture } from "astro:assets";
-
-const notes = await getCollection("notes");
-const publishedNotes = notes.filter((note) => note.data);
-const counts = {
-    all: publishedNotes.length,
-    seed: publishedNotes.filter(
-        (n: CollectionEntry<"notes">) => n.data.stage === "seed",
-    ).length,
-    sprout: publishedNotes.filter(
-        (n: CollectionEntry<"notes">) => n.data.stage === "sprout",
-    ).length,
-    evergreen: publishedNotes.filter(
-        (n: CollectionEntry<"notes">) => n.data.stage === "evergreen",
-    ).length,
-};
 
 const gravatarUrl =
     "https://www.gravatar.com/avatar/81a9730219e8014268c171f772fa1741?s=128&d=identicon";

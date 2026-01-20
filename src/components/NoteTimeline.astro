@@ -1,5 +1,4 @@
 ---
-import { getStageColors } from "../lib/theme";
 import { Image } from "astro:assets";
 
 interface Props {
@@ -19,8 +18,7 @@ interface Props {
     initialYear?: string;
 }
 
-const { sortedEvents, allMonths, eventsByMonthKey, initialYear } = Astro.props;
-const stageColors = getStageColors();
+const { sortedEvents, allMonths, eventsByMonthKey } = Astro.props;
 
 // Pre-calculate which events are in the initial batch (first 10) for each year
 // to allow for instant, flicker-free rendering via CSS.

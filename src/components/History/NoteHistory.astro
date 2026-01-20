@@ -14,7 +14,6 @@ function getEvolutionLabel(commit: any, index: number, total: number) {
 
     const { insertions, deletions, message } = commit;
     const totalChange = insertions + deletions;
-    const netChange = insertions - deletions;
     const msg = message.toLowerCase();
 
     // Check for polish/minor tweaks

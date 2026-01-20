@@ -1,18 +1,7 @@
 ---
-import ThemeToggle from "../ThemeToggle.astro";
-
 interface Props {
     currentPath?: string;
 }
-
-const { currentPath = "/" } = Astro.props;
-
-const navItems = [
-    { href: "/", label: "Garden" },
-    { href: "/topics", label: "Explorer" },
-    { href: "/colophon", label: "Map" },
-    { href: "/about", label: "About" },
-];
 ---
 
 <header class="max-w-7xl mx-auto px-6 md:px-12  mb-16 border-b-2 border-slate-100 pb-12">
