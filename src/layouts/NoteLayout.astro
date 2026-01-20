@@ -81,9 +81,15 @@ const formatDate = (date: Date) => {
                                 <span class="opacity-80">PUBLISHED:</span>
                                 <time datetime={createdDate.toISOString()} class="text-primary">{formatDate(createdDate).toUpperCase()}</time>
                             </div>
+                            {hasBeenUpdated && (
+                                <div class="flex items-center gap-2 pl-6 border-l border-slate-100 dark:border-slate-600">
+                                    <span class="opacity-80">MODIFIED:</span>
+                                    <time datetime={gitUpdated!.toISOString()} class="text-primary">{formatDate(gitUpdated!).toUpperCase()}</time>
+                                </div>
+                            )}
                             {readingTime && (
                                 <div class="flex items-center gap-2 pl-6 border-l border-slate-100 dark:border-slate-600">
-                                    <span class="opacity-80">READ_TIME:</span>
+                                    <span class="opacity-80">READ TIME:</span>
                                     <span class="text-primary">{readingTime.toUpperCase()}</span>
                                 </div>
                             )}
@@ -99,7 +105,7 @@ const formatDate = (date: Date) => {
                     <div class="bg-tooling-gray dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-8 font-mono">
                         <div class="flex items-center gap-3 mb-8 border-b border-slate-200 dark:border-slate-700 pb-4">
                             <div class="w-2 h-2 bg-blueprint-blue rounded-full animate-pulse"></div>
-                            <h3 class="metadata text-xs font-bold text-primary tracking-widest">Commit Changelog</h3>
+                            <h3 class="metadata text-xs font-bold text-primary tracking-widest">Changelog</h3>
                         </div>
                         <NoteHistory filePath={filePath} />
                     </div>
