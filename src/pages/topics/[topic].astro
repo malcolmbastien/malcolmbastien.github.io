@@ -44,19 +44,19 @@ const sortedNotes = filteredNotes.sort(
                 <header class="mb-16 border-b border-slate-100 dark:border-slate-800 pb-10">
                     <div class="flex items-center gap-4 mb-8">
                         <div class="w-1 h-8 bg-blueprint-blue"></div>
-                        <h1 class="text-6xl font-serif font-black text-terminal-dark dark:text-white tracking-tighter leading-none">
+                        <h1 class="text-6xl font-serif font-black text-primary tracking-tighter leading-none">
                             Topic Node:<br/>{topic}
                         </h1>
                     </div>
-                    <p class="text-sm font-bold text-slate-500 dark:text-slate-400 tracking-widest">
+                    <p class="text-sm font-bold text-secondary tracking-widest">
                         Records: {sortedNotes.length.toString().padStart(3, '0')}
                     </p>
                 </header>
 
                 {
                     sortedNotes.length === 0 ? (
-                        <div class="card-blueprint p-12 text-center bg-tooling-gray dark:bg-slate-900 border-none">
-                            <p class="text-sm text-slate-500 dark:text-slate-400 italic tracking-widest">
+                        <div class="surface-elevation p-12 text-center bg-tooling-gray dark:bg-slate-900 border-none">
+                            <p class="text-sm text-secondary italic tracking-widest">
                                 Zero Records Indexed for Query
                             </p>
                         </div>
@@ -65,23 +65,23 @@ const sortedNotes = filteredNotes.sort(
                             {sortedNotes.map((note) => (
                                 <a
                                     href={`/notes/${note.id.replace('.md', '')}`}
-                                    class="card-blueprint group block p-10 bg-white dark:bg-slate-800"
+                                    class="card-interactive group block p-10"
                                 >
                                     <div class="flex justify-between items-center mb-6">
-                                        <span class={`text-sm font-bold ${note.data.stage === 'evergreen' ? 'text-andon-emerald' : 'text-andon-amber'}`}>
+                                        <span class={`text-sm font-bold text-signal-${note.data.stage}`}>
                                             {note.data.stage.charAt(0).toUpperCase() + note.data.stage.slice(1)}
                                         </span>
                                         {note.data.publishedDate && (
-                                            <time class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+                                            <time class="text-xs text-secondary font-mono">
                                                 {note.data.publishedDate.toLocaleDateString("en-US", { month: 'short', year: 'numeric' })}
                                             </time>
                                         )}
                                     </div>
-                                    <h2 class="text-3xl font-bold text-terminal-dark dark:text-white mb-4 leading-tight group-hover:text-blueprint-blue transition-colors">
+                                    <h2 class="text-3xl font-bold text-primary mb-4 leading-tight group-hover:text-blueprint-blue transition-colors">
                                         {note.data.title}
                                     </h2>
                                     {note.data.summary && (
-                                        <p class="text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed max-w-2xl">
+                                        <p class="text-secondary line-clamp-2 leading-relaxed max-w-2xl">
                                             {note.data.summary}
                                         </p>
                                     )}

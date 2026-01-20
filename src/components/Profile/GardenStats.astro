@@ -21,7 +21,7 @@ const { counts, sortedNotes, allNotes, progressColors } = Astro.props;
 <div class="space-y-8">
     <div class="space-y-5">
         <div class="flex items-center justify-between">
-            <h3 class="text-xs font-sans font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Note Stats</h3>
+            <h3 class="text-xs font-sans font-bold tracking-widest uppercase text-secondary">Note Stats</h3>
         </div>
         <div class="h-1.5 w-full bg-slate-100 dark:bg-slate-700 flex">
             <div
@@ -29,68 +29,68 @@ const { counts, sortedNotes, allNotes, progressColors } = Astro.props;
                 style={`width: ${(counts.seed / (counts.all || 1)) * 100}%`}
             ></div>
             <div
-                class="h-full bg-teal-600"
+                class="h-full bg-sprout-teal"
                 style={`width: ${(counts.sprout / (counts.all || 1)) * 100}%`}
             ></div>
             <div
-                class="h-full bg-andon-emerald"
+                class="h-full bg-evergreen-green"
                 style={`width: ${(counts.evergreen / (counts.all || 1)) * 100}%`}
             ></div>
         </div>
         <div class="grid grid-cols-3 gap-2">
             <div class="flex flex-col">
-                <span class="text-sm font-sans font-bold tracking-wide text-andon-amber">Seed</span>
-                <span class="text-xl font-sans font-bold text-terminal-dark dark:text-white">{counts.seed.toString().padStart(2, '0')}</span>
+                <span class="text-sm font-sans font-bold tracking-wide text-signal-seed">Seed</span>
+                <span class="text-xl font-sans font-bold text-primary">{counts.seed.toString().padStart(2, '0')}</span>
             </div>
             <div class="flex flex-col border-l border-slate-100 dark:border-slate-700 pl-3">
-                <span class="text-sm font-sans font-bold tracking-wide text-teal-600">Sprout</span>
-                <span class="text-xl font-sans font-bold text-terminal-dark dark:text-white">{counts.sprout.toString().padStart(2, '0')}</span>
+                <span class="text-sm font-sans font-bold tracking-wide text-signal-sprout">Sprout</span>
+                <span class="text-xl font-sans font-bold text-primary">{counts.sprout.toString().padStart(2, '0')}</span>
             </div>
             <div class="flex flex-col border-l border-slate-100 dark:border-slate-700 pl-3">
-                <span class="text-sm font-sans font-bold tracking-wide text-andon-emerald">Evergreen</span>
-                <span class="text-xl font-sans font-bold text-terminal-dark dark:text-white">{counts.evergreen.toString().padStart(2, '0')}</span>
+                <span class="text-sm font-sans font-bold tracking-wide text-signal-evergreen">Evergreen</span>
+                <span class="text-xl font-sans font-bold text-primary">{counts.evergreen.toString().padStart(2, '0')}</span>
             </div>
         </div>
     </div>
 
     <div class="space-y-6">
         <div class="flex items-center justify-between">
-            <h3 class="text-xs font-sans font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Taxonomy</h3>
+            <h3 class="text-xs font-sans font-bold tracking-widest uppercase text-secondary">Taxonomy</h3>
         </div>
 
         <div class="space-y-6">
             <div class="bg-white dark:bg-slate-800">
                 <div class="flex items-center justify-between mb-3">
-                    <h4 class="text-base font-sans font-bold text-andon-amber flex items-center gap-2">
+                    <h4 class="text-base font-sans font-bold text-signal-seed flex items-center gap-2">
                         Seed
                     </h4>
-                    <span class="text-lg font-sans font-bold text-terminal-dark dark:text-white">{counts.seed.toString().padStart(3, '0')}</span>
+                    <span class="text-lg font-sans font-bold text-primary">{counts.seed.toString().padStart(3, '0')}</span>
                 </div>
-                <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p class="text-base text-secondary leading-relaxed">
                     Raw fragments and fleeting thoughts. Fragile starting points or skeletal outlines waiting for cultivation.
                 </p>
             </div>
 
             <div class="bg-white dark:bg-slate-800">
                 <div class="flex items-center justify-between mb-3">
-                    <h4 class="text-base font-sans font-bold text-teal-600 flex items-center gap-2">
+                    <h4 class="text-base font-sans font-bold text-signal-sprout flex items-center gap-2">
                         Sprout
                     </h4>
-                    <span class="text-lg font-sans font-bold text-terminal-dark dark:text-white">{counts.sprout.toString().padStart(3, '0')}</span>
+                    <span class="text-lg font-sans font-bold text-primary">{counts.sprout.toString().padStart(3, '0')}</span>
                 </div>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p class="text-sm text-secondary leading-relaxed">
                     Ideas taking root and branching out. Posts with growing structure, contextual links, and developing themes.
                 </p>
             </div>
 
             <div class="bg-white dark:bg-slate-800">
                 <div class="flex items-center justify-between mb-3">
-                    <h4 class="text-base font-sans font-bold text-andon-emerald flex items-center gap-2">
+                    <h4 class="text-base font-sans font-bold text-signal-evergreen flex items-center gap-2">
                         Evergreen
                     </h4>
-                    <span class="text-lg font-sans font-bold text-terminal-dark dark:text-white">{counts.evergreen.toString().padStart(3, '0')}</span>
+                    <span class="text-lg font-sans font-bold text-primary">{counts.evergreen.toString().padStart(3, '0')}</span>
                 </div>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p class="text-sm text-secondary leading-relaxed">
                     Enduring and deeply interconnected insights. Polished, atomic notes that have been refined over time.
                 </p>
             </div>

@@ -29,18 +29,18 @@ const formatDate = (date: Date) => {
 {
     backlinkedNotes.length > 0 && (
         <section class="mt-20 pt-14 border-t border-slate-100">
-            <h3 class="metadata text-xs font-bold text-slate-500 dark:text-slate-400 mb-10 uppercase tracking-[0.2em]">
+            <h3 class="metadata text-xs font-bold text-secondary mb-10 uppercase tracking-[0.2em]">
                 Associated Nodes
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {backlinkedNotes.map((note) => (
                     <a
                         href={`/notes/${note.id.replace('.md', '')}`}
-                        class="card-blueprint group block p-8 bg-white hover:shadow-[6px_6px_0_0_#f1f5f9]"
+                        class="card-interactive group block p-8"
                     >
                         <div class="flex items-center gap-3 mb-5">
                             <span
-                                class={`metadata text-xs font-bold ${note.data.stage === 'evergreen' ? 'text-andon-emerald' : 'text-andon-amber'}`}
+                                class={`metadata text-xs font-bold text-signal-${note.data.stage}`}
                             >
                                 {note.data.stage.toUpperCase()}
                             </span>
@@ -51,7 +51,7 @@ const formatDate = (date: Date) => {
                         <p class="text-xs font-sans text-slate-500 line-clamp-2 mb-6 leading-relaxed">
                             {note.data.summary}
                         </p>
-                        <div class="metadata text-xs text-slate-500 dark:text-slate-400 font-mono">
+                        <div class="metadata-secondary text-xs">
                             <time datetime={note.displayDate.toISOString()}>
                                 {note.displayDate.toLocaleDateString("en-US", {
                                     month: 'short',

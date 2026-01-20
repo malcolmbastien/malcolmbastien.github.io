@@ -102,7 +102,7 @@ const tocStructure = createTOCStructure(title, headings);
                                        class={`toc-link block transition-all py-1 pl-6 ${
                                            isPostTitle
                                        ? "text-base font-bold text-slate-800 dark:text-slate-100"
-                                               : "metadata text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+                                               : "metadata text-sm font-bold text-secondary hover:text-slate-600 dark:hover:text-slate-300"
                                        }`}
                                        onclick={isPostTitle ? `window.scrollTo({top: 0, behavior: 'smooth'});` : `document.getElementById('${item.id}').scrollIntoView({behavior: 'smooth'});`}
                                   >
@@ -116,7 +116,7 @@ const tocStructure = createTOCStructure(title, headings);
                                                      <a
                                                           href={`javascript:void(0)`}
                                                           id={`toc-${child.id}`}
-                                                          class="toc-link block metadata text-sm text-slate-500 dark:text-slate-400 hover:text-blueprint-blue dark:hover:text-white transition-colors py-0.5 pl-4"
+                                                          class="toc-link block metadata text-sm text-secondary hover:text-blueprint-blue dark:hover:text-white transition-colors py-0.5 pl-4"
                                                           onclick={`document.getElementById('${child.id}').scrollIntoView({behavior: 'smooth'});`}
                                                       >
                                                         {child.text.toUpperCase()}

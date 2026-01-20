@@ -52,7 +52,7 @@ sortedEvents.forEach((event) => {
                     {/* Month header v1.1 */}
                     <div class="relative flex items-center gap-6 mb-8">
                         <div class="timeline-marker shrink-0"></div>
-                        <h3 class="metadata text-xs font-bold text-terminal-dark dark:text-white tracking-[0.2em]">
+                        <h3 class="metadata text-xs font-bold text-primary tracking-[0.2em]">
                             {monthKey.toUpperCase()}
                         </h3>
                         <div class="flex-1 h-[1px] bg-slate-100 dark:bg-slate-800"></div>
@@ -68,9 +68,9 @@ sortedEvents.forEach((event) => {
 
                                   return (
                                             <div
-                                               class={`timeline-event p-0 card-blueprint bg-white cursor-pointer group overflow-hidden ${
+                                               class={`timeline-event p-0 card-interactive cursor-pointer group overflow-hidden ${
                                                    isFeatured
-                                                   ? "featured shadow-[6px_6px_0_0_#0055FF] border-blueprint-blue hover:shadow-[10px_10px_0_0_#0055FF]"
+                                                    ? "featured shadow-[6px_6px_0_0_#4382ff] border-blueprint-blue hover:shadow-[10px_10px_0_0_#4382ff]"
                                                    : "hover:shadow-[4px_4px_0_0_#e2e8f0]"
                                                }`}
                                                data-stage={event.note.data.stage}
@@ -95,16 +95,16 @@ sortedEvents.forEach((event) => {
                                            >
                                           <div class="flex flex-col gap-5 p-7">
                                              <div class="flex justify-between items-center">
-                                                  <span class={`metadata text-xs font-bold ${event.note.data.stage === 'evergreen' ? 'text-andon-emerald' : 'text-andon-amber'}`}>
-                                                      {event.note.data.stage.toUpperCase()}
-                                                  </span>
-                                                  <time class="metadata text-xs text-slate-500 dark:text-slate-400 font-mono">
-                                                     {event.date.toLocaleDateString("en-US", { month: 'short', day: 'numeric' }).toUpperCase()}
-                                                 </time>
+                                                   <span class={`metadata text-xs font-bold text-signal-${event.note.data.stage}`}>
+                                                       {event.note.data.stage.toUpperCase()}
+                                                   </span>
+                                                   <time class="metadata-secondary text-xs">
+                                                      {event.date.toLocaleDateString("en-US", { month: 'short', day: 'numeric' }).toUpperCase()}
+                                                  </time>
                                              </div>
 
                                              <div class="flex-1 min-w-0">
-                                                  <h4 class="text-2xl font-bold text-terminal-dark dark:text-white mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
+                                                  <h4 class="text-2xl font-bold text-primary mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
                                                       <a
                                                           href={`/notes/${event.note.id.replace('.md', '')}`}
                                                           class="after:absolute after:inset-0"
@@ -113,7 +113,7 @@ sortedEvents.forEach((event) => {
                                                       </a>
                                                   </h4>
                                                  {event.note.data.summary && (
-                                                     <p class="text-lg text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                                                     <p class="text-lg text-secondary line-clamp-2 leading-relaxed">
                                                          {event.note.data.summary}
                                                      </p>
                                                  )}
@@ -122,7 +122,7 @@ sortedEvents.forEach((event) => {
                                                <div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800/50">
                                                    <div class="flex gap-3">
                                                        {event.note.data.tags.slice(0, 3).map((tag: string) => (
-                                                           <span class="text-sm text-slate-500 dark:text-slate-400">#{tag}</span>
+                                                           <span class="text-sm text-secondary">#{tag}</span>
                                                        ))}
                                                    </div>
                                                    {event.type === "created" ? (
@@ -152,7 +152,7 @@ sortedEvents.forEach((event) => {
                      ) : (
                         /* No activity message */
                         <div class="ml-9 md:ml-12 p-10 text-center bg-tooling-gray dark:bg-slate-900 border border-dashed border-slate-200 dark:border-slate-700">
-                            <p class="text-sm text-slate-500 dark:text-slate-400 tracking-widest">
+                            <p class="text-sm text-secondary tracking-widest">
                                 No Data Streams Active
                             </p>
                         </div>
@@ -173,7 +173,7 @@ sortedEvents.forEach((event) => {
     <div class="text-center mt-16 ml-9 md:ml-12">
         <button
             id="show-more-activity"
-            class="px-10 py-4 bg-terminal-dark dark:bg-white text-white dark:text-terminal-dark font-mono text-sm font-bold tracking-widest transition-all hover:bg-blueprint-blue hover:text-white dark:hover:bg-blueprint-blue shadow-[4px_4px_0_0_#e2e8f0] dark:shadow-none hover:shadow-[6px_6px_0_0_#0055FF] active:shadow-none active:translate-x-1 active:translate-y-1 hidden"
+            class="px-10 py-4 bg-terminal-dark dark:bg-white text-white dark:text-terminal-dark font-mono text-sm font-bold tracking-widest transition-all hover:bg-blueprint-blue hover:text-white dark:hover:bg-blueprint-blue shadow-[4px_4px_0_0_#e2e8f0] dark:shadow-none hover:shadow-[6px_6px_0_0_#4382ff] active:shadow-none active:translate-x-1 active:translate-y-1 hidden"
         >
             Load More Streams
         </button>
@@ -187,7 +187,7 @@ sortedEvents.forEach((event) => {
 
     /* Featured posts keep their large shadow on hover */
     .timeline-event.featured:hover {
-        box-shadow: 10px 10px 0 0 #0055FF !important;
+        box-shadow: 10px 10px 0 0 #4382ff !important;
         transform: none !important;
     }
 </style>

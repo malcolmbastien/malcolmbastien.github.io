@@ -17,8 +17,8 @@ const topTopics = Object.entries(topicCounts)
     .slice(0, 16);
 ---
 
-<div class="card-blueprint p-6 bg-white dark:bg-slate-800">
-    <h3 class="text-xs font-sans font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400 mb-6">Topics</h3>
+<div class="surface-elevation p-6">
+    <h3 class="text-xs font-sans font-bold tracking-widest uppercase text-secondary mb-6">Topics</h3>
     <div
         class="flex flex-wrap gap-x-4 gap-y-3"
     >
@@ -28,8 +28,8 @@ const topTopics = Object.entries(topicCounts)
                     href={`/topics/${topic}`}
                     class="group flex items-baseline gap-2"
                 >
-                    <span class="text-sm font-sans font-bold text-terminal-dark dark:text-white group-hover:text-blueprint-blue transition-colors">#{topic}</span>
-                    <span class="text-xs font-sans text-slate-400 dark:text-slate-500 group-hover:text-blueprint-blue transition-colors">{count}</span>
+                    <span class="text-sm font-sans font-bold text-primary group-hover:text-blueprint-blue transition-colors">#{topic}</span>
+                    <span class="text-xs font-sans text-secondary group-hover:text-blueprint-blue transition-colors">{count}</span>
                 </a>
             ))
         }

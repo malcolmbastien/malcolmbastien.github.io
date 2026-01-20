@@ -28,19 +28,19 @@ function getEvolutionLabel(commit: any, index: number, total: number) {
 }
 ---
 
-<div class="space-y-6 font-mono text-sm text-slate-500 dark:text-slate-400">
+<div class="space-y-6 font-mono text-sm text-secondary">
     {
         history.length > 0 ? (
             <div class="space-y-4">
                 {history.map((commit: any, index: number) => (
                     <div class="flex gap-4 group">
-                        <div class="shrink-0 text-slate-500 dark:text-slate-400 w-16">
+                        <div class="shrink-0 text-secondary w-16">
                             {new Date(commit.date).toLocaleDateString("en-US", { month: 'short', day: '2-digit' }).toUpperCase()}
                         </div>
                         <div class="shrink-0 text-blueprint-blue dark:text-blue-300 font-bold w-20">
                             [{getEvolutionLabel(commit, index, history.length)}]
                         </div>
-                        <div class="flex-1 text-slate-500 dark:text-slate-400 truncate group-hover:text-terminal-dark dark:group-hover:text-white transition-colors">
+                        <div class="flex-1 text-secondary truncate group-hover:text-terminal-dark dark:group-hover:text-white transition-colors">
                             {commit.message}
                         </div>
                         <div class="shrink-0 flex gap-3">
@@ -52,7 +52,7 @@ function getEvolutionLabel(commit: any, index: number, total: number) {
                                 href={`https://github.com/malcolmbastien/malcolmbastien.github.io/commit/${commit.hash}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="text-slate-500 dark:text-slate-400 hover:text-blueprint-blue transition-colors"
+                                class="text-secondary hover:text-blueprint-blue transition-colors"
                             >
                                 {commit.hash.substring(0, 7)}
                             </a>
@@ -61,7 +61,7 @@ function getEvolutionLabel(commit: any, index: number, total: number) {
                 ))}
             </div>
         ) : (
-            <p class="text-slate-500 dark:text-slate-400 italic">
+            <p class="text-secondary italic">
                 NO_HISTORY_LOGGED_FOR_NODE
             </p>
         )

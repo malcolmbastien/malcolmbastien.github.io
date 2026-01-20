@@ -27,7 +27,7 @@
         const container = document.querySelector("#search-box");
         if (container) {
             container.innerHTML = `
-                <div class="text-sm text-slate-500 dark:text-slate-400 p-4 text-center border border-dashed border-slate-200 dark:border-slate-800 rounded-lg">
+                <div class="text-sm text-secondary p-4 text-center border border-dashed border-slate-200 dark:border-slate-800 rounded-lg">
                     Search available after build
                 </div>
             `;
@@ -42,7 +42,7 @@
   @reference "../../styles/global.css";
 
   :root {
-    --pagefind-ui-primary: #0055ff;
+    --pagefind-ui-primary: #4382ff;
     --pagefind-ui-text: #0f172a;
     --pagefind-ui-background: #ffffff;
     --pagefind-ui-border: #e2e8f0;
@@ -50,7 +50,7 @@
   }
 
   .dark {
-    --pagefind-ui-primary: #0055ff;
+    --pagefind-ui-primary: #4382ff;
     --pagefind-ui-text: #ffffff;
     --pagefind-ui-background: #1e293b;
     --pagefind-ui-border: #334155;
@@ -63,11 +63,11 @@
   }
 
   #search-box .pagefind-ui__result-link {
-    @apply text-terminal-dark dark:text-white font-sans font-bold hover:text-blueprint-blue transition-colors text-xl tracking-tight;
+    @apply text-terminal-dark dark:text-neutral-text-dark font-sans font-bold hover:text-blueprint-blue transition-colors text-xl tracking-tight;
   }
 
   #search-box .pagefind-ui__result-excerpt {
-    @apply text-slate-600 dark:text-slate-400 text-sm mt-2 font-sans leading-relaxed;
+    @apply text-neutral-text-light dark:text-neutral-metadata-dark text-sm mt-2 font-sans leading-relaxed;
   }
   
   #search-box .pagefind-ui__result {
@@ -75,7 +75,7 @@
   }
 
   #search-box .pagefind-ui__message {
-    @apply text-slate-500 dark:text-slate-400 text-sm;
+    @apply text-neutral-text-light dark:text-neutral-metadata-dark text-sm;
   }
 
   #search-box .pagefind-ui__drawer {
@@ -83,7 +83,7 @@
   }
 
   #search-box .pagefind-ui__result-title {
-    @apply text-terminal-dark dark:text-white font-sans font-medium;
+    @apply text-terminal-dark dark:text-neutral-text-dark font-sans font-medium;
   }
 
   #search-box .pagefind-ui__result-tag {

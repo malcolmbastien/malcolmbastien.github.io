@@ -17,8 +17,8 @@ export const theme = {
   header: {
     seed: "bg-amber-100 dark:bg-amber-900/40 border border-amber-200 dark:border-amber-800",
     sprout:
-      "bg-blue-100 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800",
-    evergreen: "bg-emerald-100 dark:bg-emerald-900/40 border border-emerald-200 dark:border-emerald-800",
+      "bg-teal-100 dark:bg-teal-900/40 border border-teal-200 dark:border-teal-800",
+    evergreen: "bg-green-100 dark:bg-green-900/40 border border-green-200 dark:border-green-800",
   },
 
   stage: {
@@ -30,15 +30,15 @@ export const theme = {
     },
     sprout: {
       badge:
-        "bg-blue-50 text-blueprint-blue border border-blue-100",
-      glow: "hover:shadow-blue-100/50",
-      progress: "bg-blueprint-blue",
+        "bg-teal-50 text-teal-600 border border-teal-100",
+      glow: "hover:shadow-teal-100/50",
+      progress: "bg-teal-500",
     },
     evergreen: {
       badge:
-        "bg-emerald-50 text-andon-emerald border border-emerald-100",
-      glow: "hover:shadow-emerald-100/50",
-      progress: "bg-andon-emerald",
+        "bg-green-50 text-green-600 border border-green-100",
+      glow: "hover:shadow-green-100/50",
+      progress: "bg-green-500",
     },
   },
 };

@@ -74,7 +74,7 @@ function getColor(count: number) {
     if (count === 0) return "fill-slate-100 dark:fill-slate-800";
     if (count === 1) return "fill-blue-200 dark:fill-blue-900/40";
     if (count === 2) return "fill-blue-400 dark:fill-blue-700/60";
-    if (count >= 3) return "fill-[#0055FF] dark:fill-[#0055FF]";
+    if (count >= 3) return "fill-[#4382ff] dark:fill-[#4382ff]";
     return "fill-slate-100 dark:fill-slate-800";
 }
 
@@ -84,14 +84,14 @@ function getFillColor(count: number, isDarkMode: boolean) {
         if (count === 0) return "#f1f5f9"; // tooling-gray
         if (count === 1) return "#bfdbfe"; // blue-200
         if (count === 2) return "#60a5fa"; // blue-400
-        if (count >= 3) return "#0055FF"; // blueprint-blue
+        if (count >= 3) return "#4382ff"; // blueprint-blue
         return "#f1f5f9";
     }
     // Dark mode colors
     if (count === 0) return "#1e293b";
     if (count === 1) return "#1e3a8a66"; // blue-900/40
     if (count === 2) return "#1d4ed899"; // blue-700/60
-    if (count >= 3) return "#0055FF"; // blueprint-blue
+    if (count >= 3) return "#4382ff"; // blueprint-blue
     return "#1e293b";
 }
 
@@ -108,12 +108,12 @@ function getFillColor(count: number, isDarkMode: boolean) {
     >
     </div>
     <div class="flex items-center justify-between mb-8">
-        <h3 class="text-xs font-sans font-bold text-slate-500 dark:text-slate-400 tracking-widest uppercase">
+        <h3 class="text-xs font-sans font-bold text-secondary tracking-widest uppercase">
             Activity Heatmap
         </h3>
         <span
             id="heatmap-year-display"
-            class="metadata text-xs font-bold text-blue-600"
+            class="metadata text-xs font-bold text-blueprint-blue"
         >
             {year}
         </span>
@@ -174,7 +174,7 @@ function getFillColor(count: number, isDarkMode: boolean) {
         </svg>
     </div>
     <div
-        class="mt-8 flex items-center justify-end gap-3 metadata text-xs text-slate-500 dark:text-slate-400 tracking-[0.2em]"
+        class="mt-8 flex items-center justify-end gap-3 metadata text-xs text-secondary tracking-[0.2em]"
     >
         <span>Min Level</span>
         <div class="w-3 h-3 bg-slate-100 dark:bg-slate-800"></div>
@@ -182,7 +182,7 @@ function getFillColor(count: number, isDarkMode: boolean) {
         </div>
         <div class="w-3 h-3 bg-blue-400 dark:bg-blue-700/60">
         </div>
-        <div class="w-3 h-3 bg-[#0055FF]">
+        <div class="w-3 h-3 bg-[#4382ff]">
         </div>
         <span>Max Level</span>
     </div>
@@ -200,7 +200,7 @@ function getFillColor(count: number, isDarkMode: boolean) {
             if (count === 0) return "fill-slate-100 dark:fill-slate-800";
             if (count === 1) return "fill-blue-200 dark:fill-blue-900/40";
             if (count === 2) return "fill-blue-400 dark:fill-blue-700/60";
-            if (count >= 3) return "fill-[#0055FF]";
+            if (count >= 3) return "fill-[#4382ff]";
             return "fill-slate-100 dark:fill-slate-800";
         }
 
@@ -471,10 +471,10 @@ function getFillColor(count: number, isDarkMode: boolean) {
         // Add selected class styling
         const style = document.createElement("style");
         style.textContent = `
- 			.activity-day.selected {
- 				stroke: #0055FF !important;
- 				stroke-width: 2px !important;
- 			}
+  			.activity-day.selected {
+  				stroke: #4382ff !important;
+  				stroke-width: 2px !important;
+  			}
             #activity-heatmap.is-filtering .activity-day:not(.selected) {
                 opacity: 0.1;
             }

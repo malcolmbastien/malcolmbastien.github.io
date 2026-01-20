@@ -11,13 +11,13 @@ const { class: className } = Astro.props;
 
 <!-- About the Author -->
 <a href="/about" class="block cursor-pointer group">
-<div class={`card-blueprint p-6 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all duration-200 ${className || ''}`}>
-    <h3 class="text-xs font-sans font-bold text-slate-500 dark:text-slate-400 mb-6 tracking-widest uppercase group-hover:text-blueprint-blue transition-colors">About the Author</h3>
+<div class={`card-interactive p-6 hover:bg-slate-50 dark:hover:bg-slate-700 ${className || ''}`}>
+    <h3 class="text-xs font-sans font-bold text-secondary mb-6 tracking-widest uppercase group-hover:text-blueprint-blue transition-colors">About the Author</h3>
 <div class="flex items-center gap-4">
     <Picture src={malcolmHeadshot} alt="Malcolm Bastien" class="w-12 h-12 rounded-full object-cover" />
     <div>
-        <div class="font-bold text-terminal-dark dark:text-white">Malcolm Bastien</div>
-        <div class="text-sm text-slate-500 dark:text-slate-400">Lean-Agile Practitioner</div>
+        <div class="font-bold text-primary">Malcolm Bastien</div>
+        <div class="text-sm text-secondary">Lean-Agile Practitioner</div>
     </div>
 </div>
     </div>

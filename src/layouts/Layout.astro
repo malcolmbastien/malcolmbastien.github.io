@@ -169,7 +169,7 @@ const navItems = [
         <header class="max-w-7xl mx-auto px-6 md:px-12 pt-6 pb-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-10">
                 <div class="flex items-center gap-3">
-                    <span class="font-mono uppercase tracking-widest text-blue-600 font-bold">
+                    <span class="font-mono uppercase tracking-widest text-blueprint-blue font-bold">
                         Malcolm Bastien
                     </span>
                     <span class="h-3 w-[1px] bg-slate-200 dark:bg-slate-700"></span>
@@ -186,8 +186,8 @@ const navItems = [
                                 class:list={[
                                     "relative text-sm font-medium tracking-wide px-4 py-2 transition-all",
                                     currentPath === item.href
-                                        ? "text-terminal-dark dark:text-white after:content-[''] after:absolute after:bottom-[-2px] after:left-4 after:right-4 after:height-[2px] after:bg-blue-600"
-                                        : "text-slate-500 dark:text-slate-400 hover:text-blueprint-blue dark:hover:text-white"
+                                        ? "text-primary after:content-[''] after:absolute after:bottom-[-2px] after:left-4 after:right-4 after:height-[2px] after:bg-blueprint-blue"
+                                        : "text-secondary hover:text-blueprint-blue dark:hover:text-white"
                                 ]}
                             >
                                 {item.label}

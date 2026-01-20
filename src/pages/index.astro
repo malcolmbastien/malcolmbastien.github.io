@@ -262,12 +262,12 @@ const currentYearValue = new Date().getFullYear();
 
         /* Instant Sidebar Highlighting v1.1 */
         html[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] {
-            color: #0055FF !important;
-            border-left-color: #0055FF !important;
+            color: #4382ff !important;
+            border-left-color: #4382ff !important;
             padding-left: 0.75rem !important;
         }
         html[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] span {
-            color: #0055FF !important;
+            color: #4382ff !important;
         }
         html[data-selected-year="${y.year}"] .year-item:has(.year-btn[data-year="${y.year}"]) .month-submenu {
             display: block !important;
@@ -306,7 +306,7 @@ const currentYearValue = new Date().getFullYear();
                         <div class="space-y-6">
                             <div class="flex items-center gap-4">
                                 <div class="w-2 h-2 bg-blueprint-blue rounded-full"></div>
-                                <h3 class="text-xs font-sans font-bold  text-terminal-dark dark:text-white tracking-widest uppercase">
+                                <h3 class="text-xs font-sans font-bold  text-primary tracking-widest uppercase">
                                     Pinned Notes
                                 </h3>
                             </div>
@@ -314,23 +314,19 @@ const currentYearValue = new Date().getFullYear();
                                 {pinnedNotes.map((note) => (
                                      <a
                                         href={`/notes/${note.id.replace('.md', '')}`}
-                                        class="card-blueprint pinned-note group block p-6 bg-white dark:bg-slate-800 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_-5px_rgba(0,85,255,0.1)] transition-all"
+                                        class="card-interactive pinned-note group block p-6"
                                      >
                                          <div class="flex justify-between items-start mb-4">
-                                              <span class={`text-sm font-bold ${
-                                                   note.data.stage === 'seed' ? 'text-[#ea580c]' :
-                                                   note.data.stage === 'sprout' ? 'text-[#0d9488]' :
-                                                   note.data.stage === 'evergreen' ? 'text-[#166534]' : 'text-blueprint-blue'
-                                              }`}>
+                                               <span class={`text-sm font-bold text-signal-${note.data.stage}`}>
                                                   {note.data.stage.charAt(0).toUpperCase() + note.data.stage.slice(1)}
-                                              </span>
-                                            <span class="text-sm text-slate-500 dark:text-slate-400">Pinned</span>
+                                               </span>
+                                            <span class="text-sm text-secondary">Pinned</span>
                                         </div>
-                                        <h3 class="text-lg font-sans font-bold text-terminal-dark dark:text-white mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
+                                        <h3 class="text-lg font-sans font-bold text-primary mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
                                             {note.data.title}
                                         </h3>
                                         {note.data.summary && (
-                                            <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                                            <p class="text-sm text-secondary line-clamp-2 leading-relaxed">
                                                 {note.data.summary}
                                             </p>
                                         )}
@@ -352,24 +348,20 @@ const currentYearValue = new Date().getFullYear();
             <!-- Contextual Side (Col 9-12) -->
             <div class="lg:col-span-4 space-y-8">
                  <!-- Latest Creations -->
-                 <div class="card-blueprint p-6 bg-white dark:bg-slate-800">
-                     <h3 class="text-xs font-sans font-bold text-slate-500 dark:text-slate-400 mb-6 tracking-widest uppercase">Latest Creations</h3>
+                 <div class="surface-elevation p-6">
+                     <h3 class="text-xs font-sans font-bold text-secondary mb-6 tracking-widest uppercase">Latest Creations</h3>
                      <div class="space-y-4">
                           {latestCreations.map((note) => (
                               <a href={`/notes/${note.id.replace('.md', '')}`} class="block group">
-                                  <div class="flex justify-between items-start mb-2">
-                                      <span class={`text-sm font-bold ${
-                                           note.data.stage === 'evergreen' ? 'text-[#166534]' :
-                                           note.data.stage === 'seed' ? 'text-[#ea580c]' :
-                                           'text-[#0d9488]'
-                                      }`}>
-                                          {note.data.stage.toUpperCase()}
-                                      </span>
-                                     <time class="text-xs text-slate-500 dark:text-slate-400">
+                                   <div class="flex justify-between items-start mb-2">
+                                        <span class={`text-sm font-bold text-signal-${note.data.stage}`}>
+                                           {note.data.stage.toUpperCase()}
+                                       </span>
+                                     <time class="text-xs text-secondary">
                                          {note.displayDate!.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
                                      </time>
                                  </div>
-                                 <h4 class="text-base font-bold text-terminal-dark dark:text-white group-hover:text-blueprint-blue transition-colors">
+                                 <h4 class="text-base font-bold text-primary group-hover:text-blueprint-blue transition-colors">
                                      {note.data.title}
                                  </h4>
                              </a>
@@ -380,7 +372,7 @@ const currentYearValue = new Date().getFullYear();
                    <AboutAuthor />
 
                  <!-- Garden Stats -->
-                 <div class="card-blueprint p-6 bg-white">
+                 <div class="surface-elevation p-6 bg-white">
                      <GardenStats
                          counts={counts}
                          sortedNotes={sortedNotes}
@@ -390,11 +382,11 @@ const currentYearValue = new Date().getFullYear();
                  </div>
 
                 <!-- Search Box v1.1 -->
-                <div class="card-blueprint p-6 bg-white dark:bg-slate-800">
-                    <h3 class="text-xs font-sans font-bold text-slate-500 dark:text-slate-400 mb-6 tracking-widest uppercase">Search</h3>
+                <div class="surface-elevation p-6">
+                    <h3 class="text-xs font-sans font-bold text-secondary mb-6 tracking-widest uppercase">Search</h3>
                     <a
                         href="/search"
-                        class="flex items-center gap-4 w-full px-5 py-4 bg-tooling-gray dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:border-blueprint-blue hover:text-blueprint-blue dark:hover:text-white transition-all group"
+                        class="flex items-center gap-4 w-full px-5 py-4 bg-tooling-gray dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-secondary hover:border-blueprint-blue hover:text-blueprint-blue dark:hover:text-white transition-all group"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -410,14 +402,14 @@ const currentYearValue = new Date().getFullYear();
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                             ></path>
                         </svg>
-                        <span class="text-sm font-bold text-slate-500 dark:text-slate-400 group-hover:text-terminal-dark dark:group-hover:text-white transition-colors">Search notes...</span>
+                        <span class="text-sm font-bold text-secondary group-hover:text-terminal-dark dark:group-hover:text-white transition-colors">Search notes...</span>
                     </a>
                 </div>
 
                 <TopicFocus />
 
-                <div class="card-blueprint p-6 bg-white dark:bg-slate-800">
-                    <h3 class="text-xs font-sans font-bold text-slate-500 dark:text-slate-400 mb-6 tracking-widest uppercase">Social Links</h3>
+                <div class="surface-elevation p-6">
+                    <h3 class="text-xs font-sans font-bold text-secondary mb-6 tracking-widest uppercase">Social Links</h3>
                     <SocialLinks class="border-none p-0 bg-transparent shadow-none!" />
                 </div>
             </div>
