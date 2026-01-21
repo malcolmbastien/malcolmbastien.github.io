@@ -150,6 +150,7 @@ h6 {
 .timeline-thread::before {
   content: "";
   position: absolute;
+  margin-top: 7px;
   left: 5px;
   top: 0;
   bottom: 0;
