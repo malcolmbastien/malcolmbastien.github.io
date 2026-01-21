@@ -1,9 +1,11 @@
 ---
-stage: seed
+stage: evergreen
 title: A Great Storyteller
 publishedDate: 2009-04-27
 tags:
-  - General
+  - Leadership
+  - Storytelling
+summary: "Storytelling is leadership tool."
 ---
 
 I don't know how to tell a story.

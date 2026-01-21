@@ -1,9 +1,10 @@
 ---
-stage: seed
+stage: evergreen
 title: A Brand Is Not Your Friend
 publishedDate: 2012-01-09
 tags:
   - Marketing
+summary: "Although brands can help fill a need and provide relief, they're not real; prioritize real people and quality products."
 ---
 > [surroundingsignifiers - Calling “Engagement” into Question: brands, anxiety, and the obscene](http://www.surroundingsignifiers.com/blog/calling-engagement-into-question-brands-anxiety-and-the-obsc.html):
 > “The worst thing possible is to be obliged to invent one’s own motives for acting, for preferring, for buying. The individual in such circumstances is inevitably brought face to face with his own misapprehensions, his own lack of existence, his own faith and anxiety.” (Baudrillard, “The System of Objects”)

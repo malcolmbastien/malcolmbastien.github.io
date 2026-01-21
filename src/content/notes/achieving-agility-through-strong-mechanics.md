@@ -1,9 +1,10 @@
 ---
-stage: seed
+stage: evergreen
 title: Achieving Agility Through Strong Mechanics
 publishedDate: 2024-09-23
 tags:
   - Agile
+summary: "It's easy to copy the idea of what to do. It's much harder to actually do it."
 ---
 I watched a StarCraft stream last month, and the streamer, a popular StarCraft caster, said to his audience: "Strategies are easier to replicate than mechanics." He expanded and explained how professional StarCraft players don't need strategies to beat weaker players because their mechanics are so strong.
 

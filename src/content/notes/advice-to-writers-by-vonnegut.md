@@ -1,10 +1,11 @@
 ---
-stage: seed
+stage: evergreen
 title: Advice to Writers by Vonnegut
 publishedDate: 2012-01-03
 tags:
   - Quotes
   - Writing
+summary: "Kurt Vonnegut's 7 writing tips."
 ---
 
 > 1. Find a subject you care about

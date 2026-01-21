@@ -4,7 +4,7 @@ title: 3x3 Lessons From My Summer Reading Part 1
 publishedDate: 2008-09-14
 tags:
   - Books
-  - General
+summary: "Lessons from my Summer reading, including: The Paradox of Choice, The Dip, and The Laws of Simplicity."
 ---
 I've done a bit of reading over the past summer while away from school, and I've managed to read quite a few of the business books that I own (I find I have a problem of constantly walking out of book stores with 4 to 11 books in my bag). One of the things I like doing with my books is to stick on tiny tabs on the bits of each book where there's a key lesson or something worth remembering and referencing for later.
 

@@ -4,6 +4,7 @@ title: Avoiding Agile Must-Dos
 publishedDate: 2024-09-09
 tags:
   - Agile
+summary: "Agile means adaptability, not rigid practices; focus on outcomes over process compliance."
 ---
 I've worked with a few organizations so heavily focused on the operational aspects of Agile that they only thought of Agile as a set of practices teams had to follow and where doing good Agile meant completing projects successfully.
 

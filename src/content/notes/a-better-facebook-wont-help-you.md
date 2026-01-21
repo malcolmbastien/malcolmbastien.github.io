@@ -4,8 +4,7 @@ title: A Better Facebook Won't Help You
 publishedDate: 2012-01-12
 tags:
   - Facebook
-  - Path
-  - Social
+  - Social-Media
 ---
 [Nobody Goes to Facebook Anymore. It’s Too Crowded. « Uncrunched](http://uncrunched.com/2012/01/03/nobody-goes-to-facebook-anymore-its-too-crowded)
 

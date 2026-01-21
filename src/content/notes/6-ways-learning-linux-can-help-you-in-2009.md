@@ -3,7 +3,7 @@ stage: seed
 title: 6 Ways Learning Linux Can Help You in 2009
 publishedDate: 2009-03-18
 tags:
-  - General
+  - Linux
 ---
 In this recession, it's important to invest heavily in yourself.
 

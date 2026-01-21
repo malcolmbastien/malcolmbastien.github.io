@@ -1,10 +1,11 @@
 ---
-stage: seed
+stage: evergreen
 title: AI Transformations Are Hard-Agile
 publishedDate: 2025-10-03
 tags:
   - Agile
   - AI
+summary: "AI requires the same organizational agility, decentralized decisions, and cultural shift as Agile."
 ---
 Many claims and stories are circulating about AI accelerating development, with promises of compressing a week’s worth of work into just a few hours or an afternoon. In large organizations, however, individual speed rarely translates into the faster delivery of customer value.
 

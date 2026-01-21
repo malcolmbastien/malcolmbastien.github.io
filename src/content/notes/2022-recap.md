@@ -7,6 +7,7 @@ tags:
   - Miro
   - Workshops
   - Year-In-Review
+summary: "A recap of my accomplishments in 2022"
 ---
 The year passed by quickly, and it's challenging to come up with a list of my accomplishments over the past year. Aside from some other minor achievements that I won't bother listing, only a little stands out about 2022. In any case, I'm proud of the work that I did.
 

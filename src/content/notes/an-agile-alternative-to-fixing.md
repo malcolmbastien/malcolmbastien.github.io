@@ -1,9 +1,10 @@
 ---
-stage: seed
+stage: evergreen
 title: An Agile Alternative to “Fixing”
 publishedDate: 2023-07-22
 tags:
   - Agile
+summary: "Instead of applying one-time fixes, empower teams and manage constraints."
 ---
 One of my go-to definitions of Agile is working in a way of safely making progress and moving forward with imperfect information. In the journey to becoming Agile, organizations face many obstacles. Whatever their goals, there are a lot of organizational, cultural and technical challenges and constraints that teams and organizations face.
 

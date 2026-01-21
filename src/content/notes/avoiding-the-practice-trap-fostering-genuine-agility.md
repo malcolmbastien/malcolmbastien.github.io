@@ -1,10 +1,11 @@
 ---
-stage: seed
+stage: evergreen
 title: "Avoiding the Practice Trap: Fostering Genuine Agility"
 publishedDate: 2024-08-03
 tags:
   - Agile
   - Coaching
+summary: "Foster agility through mindful problem-solving, experimentation and continuous improvement."
 ---
 When organizations strive for agility, they often fall into the trap of adopting numerous agile terms and practices associated with popular frameworks like Scrum. While this approach generates a lot of internal activity, it often fails to translate into actual agility. In my experience, labelling and promoting certain practices as 'Agile' or 'Important' can be counterproductive. It leads to adopting inappropriate practices and hinders progress towards of genuine agility in the long run.
 

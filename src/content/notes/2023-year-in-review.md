@@ -1,5 +1,5 @@
 ---
-stage: seed
+stage: evergreen
 title: 2023 Year in Review
 publishedDate: 2024-01-01
 tags:
@@ -8,6 +8,7 @@ tags:
   - Gaming
   - Social-Media
   - Year-In-Review
+summary: "An overview of my accomplishments in 2023"
 ---
 As we start 2024, it's a good time to reflect on what I've achieved in 2023 and what I hope to accomplish in the coming year. Here are some reflections on the past year and my goals for 2024.
 

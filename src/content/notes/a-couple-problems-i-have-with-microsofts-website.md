@@ -5,6 +5,7 @@ publishedDate: 2012-10-16
 tags:
   - Microsoft
   - Surface
+summary: "A short critique of the Microsoft Surface website."
 ---
 ![](../../assets/2012/10/tumblr_mbzzumsr2f1qa77f2o1_r2_1280.png)
 

@@ -4,6 +4,7 @@ title: "Beyond Practices: Behaviours and Goals in Agile"
 publishedDate: 2024-09-30
 tags:
   - Agile
+summary: "Focus on behaviors like improvement and collaboration. Practices are secondary."
 ---
 ![](../../assets/2024/09/behaviours-vs-practices-1.png)
 

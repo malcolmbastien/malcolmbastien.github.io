@@ -1,12 +1,12 @@
 ---
-stage: seed
+stage: evergreen
 title: As Tumblr Changes From Platform To Network
 publishedDate: 2010-09-28
 tags:
   - Blogging
-  - General
-  - Posterous
+  - Social-Media
   - Tumblr
+summary: "Tumblr is evolving from simple blogging platform to social network."
 ---
 One neat thing about Tumblr is that more than any other blogging platform, it seems to be shifting in the way people use it and it’s becoming more like a network for producing content, sharing content, consuming content, and for forming connections with the other people. That’s just from an consumer point of view as it ignores the many ways that business and mainstream media outlets use the platform.
 

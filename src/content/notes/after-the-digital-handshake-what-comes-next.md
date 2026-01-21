@@ -1,11 +1,11 @@
 ---
-stage: seed
+stage: evergreen
 title: After The Digital Handshake, What Comes Next?
 publishedDate: 2009-04-13
 tags:
-  - General
+  - Social-Media
 ---
-If you meet a stranger at a coffee shop and buy him a drink, you've performed a memorable action.  But if the person is a close friend of yours, a free coffee won't have the same effect, you're going to have to help your friend move.
+If you meet a stranger at a coffee shop and buy him a drink, you've performed a memorable action. But if the person is a close friend of yours, a free coffee won't have the same effect, you're going to have to help your friend move.
 
 What I'm talking about is the shift in the relationship between companies and consumers as the ideas of social media become more mature in organizations.
 

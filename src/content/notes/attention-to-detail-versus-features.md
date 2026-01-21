@@ -5,9 +5,8 @@ publishedDate: 2010-08-27
 tags:
   - Apple
   - Design
-  - Features
-  - General
   - Samsung
+summary: "Apple's attention to detail wins compared to competitors' feature lists."
 ---
 Where are the examples of attention to detail on products not made by Apple?  Competitors always show you the more features their products have compared to Apple's. Take the Samsung Galaxy Tab tablet they are announcing in September. They flood the video with lists of features the product has. But will Samsung ever go on stage and say as a company, that they took more care in making the product than Apple did the iPad? That they paid more attention to the details that will affect users?
 

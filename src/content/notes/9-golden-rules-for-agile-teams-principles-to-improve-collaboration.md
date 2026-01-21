@@ -1,10 +1,11 @@
 ---
-stage: seed
+stage: evergreen
 title: "9 Golden Rules for Agile Teams: Principles to Improve Collaboration"
 publishedDate: 2024-08-09
 tags:
   - Agile
-  - coaching
+  - Coaching
+summary: "Some universally applicable guidance for Agile teams I've found helpful."
 ---
 In my time working with different teams and organizations, I’ve found myself repeating certain lessons that have proven consistently effective at helping improve how teams work together. I’ve started calling these my "Golden Rules.” These are principles that I teach to the teams and leaders I coach and that I also try to follow in my own work.
 

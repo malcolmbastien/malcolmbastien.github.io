@@ -1,5 +1,5 @@
 ---
-stage: seed
+stage: evergreen
 title: Analyzing The New Mac Ads
 publishedDate: 2012-07-31
 tags:

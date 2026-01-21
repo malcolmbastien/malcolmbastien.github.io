@@ -1,9 +1,9 @@
 ---
-stage: seed
+stage: evergreen
 title: An Office on Every Surface
 publishedDate: 2011-09-01
 tags:
-  - General
+  - Microsoft
 ---
 ***TR*****: What today is Microsoft’s vision of the future office?**
 

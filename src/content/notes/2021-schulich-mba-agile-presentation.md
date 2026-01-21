@@ -1,10 +1,11 @@
 ---
-stage: seed
+stage: evergreen
 title: 2021 Schulich MBA Agile Presentation
 publishedDate: 2023-05-10
 tags:
   - Agile
-  - talks
+  - Presentations
+summary: "The slides and an overview of a 2021 talk I delivered to an MBA class about Agile"
 ---
 In early 2021 I was asked to give a talk about Agile to an MBA class from the Schulich School of Business at York University in Toronto. I never published the slides online, but now that I'm more actively blogging again, I thought others might benefit from them. This talk included details of a large project I was a part of in the role of Agile Coach and reviewed different ideas around what real Agile was and the conditions and contexts needed for Agile to succeed.
 

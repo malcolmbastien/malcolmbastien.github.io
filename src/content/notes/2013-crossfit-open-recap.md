@@ -4,6 +4,7 @@ title: 2013 CrossFit Open Recap
 publishedDate: 2013-04-10
 tags:
   - CrossFit
+summary: "A recap of my performance and experience participating in the 2013 CrossFit Open"
 ---
 It’s about time I sat down and forced myself to write something. I’ve constantly been doing stuff, focusing on reading and learning since the last time I blogged in October, and longer still since I worked on the series of sketches that first appeared here in September. The problem was that I haven’t really dived deep enough into any particular topic to come up with interesting ideas or had many engaging conversations with friends that typically inspire new ideas in me. I’ve been getting by with sharing whatever I do come up with on Twitter and [App.net](http://app.net).
 

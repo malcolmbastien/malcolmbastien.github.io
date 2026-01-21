@@ -3,14 +3,13 @@ stage: seed
 title: Media Tells Stories
 publishedDate: 2012-09-28
 tags:
-  - analytics
-  - Content
+  - Analytics
   - MadeWithPaper
   - Mobile
-  - Image
+  - Images
   - Sketches
-  - social
-  - user experience
+  - Social-Media
+  - UX
 ---
 ![](../../assets/2012/09/tumblr_mb2li9kqvz1qa77f2o1_1280.jpg)
 

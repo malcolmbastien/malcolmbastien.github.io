@@ -1,9 +1,10 @@
 ---
-stage: seed
+stage: evergreen
 title: A Recap of 2010
 publishedDate: 2010-12-31
 tags:
   - Year-In-Review
+summary: "A short list of my accomplishments in 2010."
 ---
 
 - Helped organize [Connect IT 2010](http://connectitconference.com/)

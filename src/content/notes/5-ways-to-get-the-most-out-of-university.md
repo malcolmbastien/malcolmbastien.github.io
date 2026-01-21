@@ -4,10 +4,10 @@ title: 5 Ways to Get The Most Out of University
 publishedDate: 2007-12-18
 tags:
   - Education
-  - General
   - Habits
   - Productivity
   - University
+summary: "Recommendations on maximizing the benefit you get from university."
 ---
 In my experience, the best things available to me at university, have nothing to do with the establishment itself.  On a regular basis I see too many people putting their faith in the system, and the ones who do that have a hard time understanding the idea of taking their own earning into their own hands.  It's really painful for me to see people waste the opportunities that are available to them.  So here are five of the habits I've found that give the greatest growth while in a university environment.
 

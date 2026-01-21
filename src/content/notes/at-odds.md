@@ -1,5 +1,5 @@
 ---
-stage: seed
+stage: evergreen
 title: At Odds
 publishedDate: 2009-05-04
 tags:
@@ -19,4 +19,4 @@ This is a pretty common problem everyone deals with. But imagine what could be d
 
 We each have huge personal webs we're in the middle of, but because of issues with technology, platforms, and participation, we have major pieces missing from these webs. Sometimes it can still be difficult to reach out to certain parts of out network, or it could be impossible to create linkages between two different points.
 
-**Does the unique shape of this web we have created** **artificial behaviours** we adopt in order to work as a part of this web more easily. Staying away from the difficult points, and keeping to the closer, easier-to-reach inner circles.
+**Does the unique shape of this web we have created artificial behaviours** we adopt in order to work as a part of this web more easily. Staying away from the difficult points, and keeping to the closer, easier-to-reach inner circles.

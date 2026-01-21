@@ -1,9 +1,9 @@
 ---
-stage: seed
+stage: evergeen
 title: Are Brands Better Off When They Act Like Their Customers Online?
 publishedDate: 2009-03-09
 tags:
-  - General
+  - Social-Media
 ---
 
 There's a lot that can be said for social media, especially when it comes to failures by companies that make the leap in joining the space with a lot of wrong predictions as to what will work best and what its customers want.

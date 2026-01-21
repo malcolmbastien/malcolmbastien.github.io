@@ -5,9 +5,8 @@ publishedDate: 2010-09-09
 tags:
   - Attention
   - Focus
-  - General
-  - Ommwriter
-  - WriteRoom
+  - Software
+summary: "Having only a single window open increases focus but creates discomfort; It takes practice."
 ---
 
 

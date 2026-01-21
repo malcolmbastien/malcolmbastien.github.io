@@ -1,9 +1,9 @@
 ---
-stage: seed
+stage: evergreen
 title: An Introduction To The New Life-Streaming
 publishedDate: 2009-09-13
 tags:
-  - General
+  - Blogging
 ---
 I was so confused. Why did people always call using [Posterous](http://posterous.com/) "Life-streaming"? At first looking at it, the service was much more a blog with some nice features, but certainly not anything close to life-streaming. What I soon realized after a day of research was that the concept of life-streaming had changed without me knowing it.
 

@@ -1,9 +1,9 @@
 ---
-stage: seed
+stage: evergreen
 title: A Risky Approach to Feedback
 publishedDate: 2009-05-16
 tags:
-  - General
+  - Blogging
 ---
 Whenever you write something criticizing of other people's work, you should really stop and consider if publishing your message is the best thing you could be doing.
 

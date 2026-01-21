@@ -7,4 +7,4 @@ tags:
 ---
 This is one of the first Mac applications I ever found, years before I was even using a Mac.
 
-Bean: An OS X Word Processor
+[Bean: An OS X Word Processor](https://www.bean-osx.com/Bean.html)

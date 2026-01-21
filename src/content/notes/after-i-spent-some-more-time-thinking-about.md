@@ -3,11 +3,12 @@ stage: seed
 title: Digital Strategy &amp; UX Strategy
 publishedDate: 2012-09-24
 tags:
-  - digital strategy
+  - Strategy
   - MadeWithPaper
-  - Image
+  - Images
   - Sketches
-  - user experience
+  - UX
+summary: "A sketch depicting the difference between digital strategy and UX strategy."
 ---
 ![](../../assets/2012/09/tumblr_mavenv4oly1qa77f2o1_1280.jpg)
 

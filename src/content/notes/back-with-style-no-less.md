@@ -5,10 +5,6 @@ publishedDate: 2009-12-15
 tags:
   - Blogging
   - Design
-  - General
-  - PyRoom
-  - Smashing-Magazine
-  - Thoughts
   - Web-Development
   - WordPress
 ---
