@@ -1,5 +1,5 @@
 ---
-stage: seed
+stage: evergreen
 title: Making Work More Human
 publishedDate: 2025-09-06
 featured: true

@@ -4,14 +4,9 @@ title: Stories and Understanding
 publishedDate: 2012-10-02
 tags:
   - Education
-  - happiness
-  - health
   - MadeWithPaper
-  - politics
-  - Image
-  - religion
+  - Images
   - Sketches
-  - stories
 ---
 ![](../../assets/2012/10/tumblr_mba4jdtifj1qa77f2o1_1280.jpg)
 

@@ -1,5 +1,5 @@
 ---
-stage: seed
+stage: evergreen
 title: Maximize Productivity by Minimizing Context Switching
 publishedDate: 2025-08-30
 tags:
@@ -31,7 +31,7 @@ Working with split-focused bottleneck resources directly damages **flow efficien
 
 When people are shared, they become bottlenecks for multiple workstreams. Work slows as people on one team start needing to wait for experts who are busy with meetings, priorities, or unexpected fires related to other projects.
 
-This slowdown isn't a problem of optimizing handoffs; value is created through relationships. As Jabe Bloom says, "Social capital says that the value is not in the machines... it's not in individual human heads... It's in the relationships in your business." By splitting people's focus in an attempt to increase output, you are actually damaging the quality of interactions between people and weakening the relationships needed to create value.
+This slowdown isn't a problem of optimizing handoffs; value is created through relationships. As [Jabe Bloom](https://blog.jabebloom.com/about/) says, "Social capital says that the value is not in the machines... it's not in individual human heads... It's in the relationships in your business." By splitting people's focus in an attempt to increase output, you are actually damaging the quality of interactions between people and weakening the relationships needed to create value.
 
 ## The Myth of the Perfect Split
 

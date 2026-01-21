@@ -1,10 +1,10 @@
 ---
-stage: seed
+stage: evergreen
 title: Making Progress Through Questions
 publishedDate: 2024-09-02
 tags:
   - Agile
-  - coaching
+  - Coaching
 ---
 An Agile Coach's job is to help teams grow and enhance their effectiveness. Rather than push practices, give answers, or do the team's work for them, coaches can help teams increase their effectiveness by paying attention to the quality of conversations and the flow of information in their work.
 
