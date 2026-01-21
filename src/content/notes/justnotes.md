@@ -3,9 +3,9 @@ stage: seed
 title: JustNotes
 publishedDate: 2009-10-24
 tags:
-  - General
+  - Software
 ---
-[http://selfcoded.com/JustNotes/](http://selfcoded.com/JustNotes/)
+[JustNotes](https://www.selfcoded.com/)
 
 JustNotes is a straight forward and easy to use notes application for the Mac. The great user interface lets you focus on the important things - taking notes.
 

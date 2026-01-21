@@ -548,3 +548,53 @@
 [debug] [2026-01-21T17:35:18.193Z] > authorizing via signed-in user (malcolmbastien@gmail.com)
 [debug] [2026-01-21T17:35:18.194Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/ 200
 [debug] [2026-01-21T17:35:18.194Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/ [omitted]
+[debug] [2026-01-21T20:09:12.378Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.379Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.379Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.379Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.379Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.379Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.380Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.380Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.380Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/ [none]
+[debug] [2026-01-21T20:09:12.380Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/ x-goog-quota-user=projects/studio-4201110480-73d65
+[debug] [2026-01-21T20:09:12.390Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-21T20:09:12.390Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/studio-4201110480-73d65
+[debug] [2026-01-21T20:09:12.391Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasecrashlytics.googleapis.com [none]
+[debug] [2026-01-21T20:09:12.391Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasecrashlytics.googleapis.com x-goog-quota-user=projects/studio-4201110480-73d65
+[debug] [2026-01-21T20:09:12.391Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebaseio.com [none]
+[debug] [2026-01-21T20:09:12.391Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebaseio.com x-goog-quota-user=projects/studio-4201110480-73d65
+[debug] [2026-01-21T20:09:12.404Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.404Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.404Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.404Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.404Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.404Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.404Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.404Z] Checked if tokens are valid: true, expires at: 1769029748141
+[debug] [2026-01-21T20:09:12.404Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/ [none]
+[debug] [2026-01-21T20:09:12.404Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/ x-goog-quota-user=projects/studio-4201110480-73d65
+[debug] [2026-01-21T20:09:12.405Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-21T20:09:12.405Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/studio-4201110480-73d65
+[debug] [2026-01-21T20:09:12.406Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasecrashlytics.googleapis.com [none]
+[debug] [2026-01-21T20:09:12.406Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasecrashlytics.googleapis.com x-goog-quota-user=projects/studio-4201110480-73d65
+[debug] [2026-01-21T20:09:12.406Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebaseio.com [none]
+[debug] [2026-01-21T20:09:12.406Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebaseio.com x-goog-quota-user=projects/studio-4201110480-73d65
+[debug] [2026-01-21T20:09:12.606Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebaseio.com 403
+[debug] [2026-01-21T20:09:12.606Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebaseio.com [omitted]
+[debug] [2026-01-21T20:09:12.627Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebaseio.com 403
+[debug] [2026-01-21T20:09:12.627Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebaseio.com [omitted]
+[debug] [2026-01-21T20:09:12.644Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasecrashlytics.googleapis.com 200
+[debug] [2026-01-21T20:09:12.644Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasecrashlytics.googleapis.com [omitted]
+[debug] [2026-01-21T20:09:12.647Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-21T20:09:12.647Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-21T20:09:12.663Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasecrashlytics.googleapis.com 200
+[debug] [2026-01-21T20:09:12.663Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasecrashlytics.googleapis.com [omitted]
+[debug] [2026-01-21T20:09:12.664Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-21T20:09:12.665Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-21T20:09:12.959Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/ 200
+[debug] [2026-01-21T20:09:12.959Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/ [omitted]
+[debug] [2026-01-21T20:09:12.960Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-21T20:09:12.960Z] > authorizing via signed-in user (malcolmbastien@gmail.com)
+[debug] [2026-01-21T20:09:12.974Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/ 200
+[debug] [2026-01-21T20:09:12.974Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studio-4201110480-73d65/services/ [omitted]

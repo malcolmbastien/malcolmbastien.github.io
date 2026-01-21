@@ -134,15 +134,17 @@ sortedEvents.forEach((event) => {
                                                    )}
                                                </div>
                                           </div>
-                                          {isFeatured && event.note.data.cover && (
-                                              <div class="w-full h-48 overflow-hidden">
-                                                  <Image
-                                                      src={event.note.data.cover}
-                                                      alt={event.note.data.coverImageAlt || event.title}
-                                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                                  />
-                                              </div>
-                                          )}
+                                           {isFeatured && event.note.data.cover && (
+                                               <a href={`/notes/${event.note.id.replace('.md', '')}`} class="block">
+                                                   <div class="w-full h-48 overflow-hidden">
+                                                       <Image
+                                                           src={event.note.data.cover}
+                                                           alt={event.note.data.coverImageAlt || event.title}
+                                                           class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                       />
+                                                   </div>
+                                               </a>
+                                           )}
                                       </div>
                                   );
                              })}
