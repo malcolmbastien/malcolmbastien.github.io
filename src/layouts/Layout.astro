@@ -181,9 +181,9 @@ const navItems = [
                             <a
                                 href={item.href}
                                 class:list={[
-                                    "relative text-sm font-medium tracking-wide px-4 py-2 transition-all",
-                                    currentPath === item.href
-                                        ? "text-primary after:content-[''] after:absolute after:bottom-0.5 after:left-4 after:right-4 after:height-[2px] after:bg-blueprint-blue"
+                                    "relative text-sm tracking-wide px-4 py-2 transition-all",
+                                    currentPath.replace(/\/$/, '') === item.href.replace(/\/$/, '')
+                                        ? "text-primary font-extrabold after:content-[''] after:absolute after:bottom-0.5 after:left-4 after:right-4 after:height-[3px] after:bg-blueprint-blue"
                                         : "text-secondary hover:text-blueprint-blue dark:hover:text-white"
                                 ]}
                             >
