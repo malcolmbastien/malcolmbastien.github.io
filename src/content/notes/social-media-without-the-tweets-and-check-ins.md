@@ -14,9 +14,9 @@ On Twitter: [Dick Costolo: “The Biggest Misconception About Twitter Is That Yo
 
 On Foursquare:
 
-“Crowley compared Foursquare’s trajectory to Twitter. Even though Twitter’s content is impressive, many people are just following people and reading content. Now, check-ins are not as important as actual users who browse the app and the content curated thanks to check-ins.”
-
-[Dennis Crowley: Foursquare Considered Selling, Is The Best Local Search Tool On The Planet](http://techcrunch.com/2012/10/11/dennis-crowley-foursquare-considered-selling-is-the-best-local-search-tool-in-the-planet/)
+> Crowley compared Foursquare’s trajectory to Twitter. Even though Twitter’s content is impressive, many people are just following people and reading content. Now, check-ins are not as important as actual users who browse the app and the content curated thanks to check-ins.
+>
+> [Dennis Crowley: Foursquare Considered Selling, Is The Best Local Search Tool On The Planet](http://techcrunch.com/2012/10/11/dennis-crowley-foursquare-considered-selling-is-the-best-local-search-tool-in-the-planet/)
 
 Obviously, each network is an advertising-supported business, so the value of a user is high, but I never saw it coming that the value of a user’s activity would be so close to nil. People on Twitter don’t need to tweet, and people on Foursquare don’t need to check-in; the reality is there’s no money to be made there.
 

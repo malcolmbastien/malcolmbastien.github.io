@@ -21,19 +21,17 @@ Despite this lengthy road mapping activity and the team having 32 different init
 
 This is what the backlog of the team looked like when we started:
 
-Everything prioritized and funded for the next year was placed within one kanban state, with unplanned items beyond that placed in another.
+- Everything prioritized and funded for the next year was placed within one kanban state, with unplanned items beyond that placed in another.
+- The only information found in most cards was a brief one-liner describing the customer value of the work.
 
-The only information found in most cards was a brief one-liner describing the customer value of the work.
-
-![](../../assets/2022/09/ready-options-example-frame-1.jpg)The team's original backlog of initiatives.
+![](../../assets/2022/09/ready-options-example-frame-1.jpg)
+*The team's original backlog of initiatives.*
 
 After talking about the situation we were in, we determined that:
 
-It was challenging to identify what items the team could pull in.
-
-The structure on the portfolio kanban reflected the organization's planning and budgeting process but not the team's value stream.
-
-Discussions on what work items the team could pull started by referring to the team's original roadmap, which was outdated and lacked critical information.
+- It was challenging to identify what items the team could pull in.
+- The structure on the portfolio kanban reflected the organization's planning and budgeting process but not the team's value stream.
+- Discussions on what work items the team could pull started by referring to the team's original roadmap, which was outdated and lacked critical information.
 
 The key phrase we kept hearing is that we couldn't pull in work because other teams "Weren't ready."
 
@@ -41,7 +39,8 @@ It turned out that dependencies on other teams was the key factor in deciding wh
 
 The first step to improve the situation was making information on team dependencies explicit.
 
-![](../../assets/2022/09/ready-options-example-frame-2.jpg)The team's backlog after adding indicators for team dependencies.
+![](../../assets/2022/09/ready-options-example-frame-2.jpg)
+*The team's backlog after adding indicators for team dependencies.*
 
 Visualizing dependencies on the backlog revealed that 12 of the 23 initiatives planned for the next year depended on one or more other teams.
 
@@ -51,33 +50,29 @@ Now that the dependencies were visible, the team's manager and I asked our two P
 
 Identifying ready options was different and new for the Product Owners. The definition of "Ready" had to be repeated a few times because the topic of value kept creeping back into the conversation. Product Owners wanted to bring in valuable, but not ready initiatives. "Forget about value." I told the POs, "Value doesn't help us if we can't even work on the thing."
 
-![](../../assets/2022/09/ready-options-example-frame-3.jpg)The team's backlog after reviewing what items were "ready" for the team to pick up.
+![](../../assets/2022/09/ready-options-example-frame-3.jpg)
+*The team's backlog after reviewing what items were "ready" for the team to pick up.*
 
 The result of that activity revealed the following:
 
-Eight initiatives were ready.
-
-Three initiatives were actively in the process of getting ready.
-
-12 initiatives were not ready and were not being looked at.
-
-Only one out of the thirteen initiatives with dependencies was ready.
+- Eight initiatives were ready.
+- Three initiatives were actively in the process of getting ready.
+- 12 initiatives were not ready and were not being looked at.
+- Only one out of the thirteen initiatives with dependencies was ready.
 
 When the team identified that it had eight options ready to be picked up, it felt like we had solved the problem until we heard from one of the Product Owners, "Those are ready, but we can't pick them up."
 
 After a few more questions, we added another layer of information to indicate the value of each initiative to the backlog.
 
-![](../../assets/2022/09/ready-options-example-frame-4.jpg)The team's backlog after adding indicators for high and low-value items.
+![](../../assets/2022/09/ready-options-example-frame-4.jpg)
+*The team's backlog after adding indicators for high and low-value items.*
 
 From this latest picture of the backlog, we discovered:
 
-The majority of the ready work was of low value.
-
-The product organization was reluctant to work on them because they served a small customer segment and didn't align with any strategic goals.
-
-The two highest-value work items were not ready.
-
-There were multiple actions the Product Owners could take immediately to help move more work into "Ready," which had been sitting for idle months.
+- The majority of the ready work was of low value.
+- The product organization was reluctant to work on them because they served a small customer segment and didn't align with any strategic goals.
+- The two highest-value work items were not ready.
+- There were multiple actions the Product Owners could take immediately to help move more work into "Ready," which had been sitting for idle months.
 
 This new picture revealed to the team that the two highest-value initiatives were not viable options to start anytime soon. It also revealed that if no action was taken, within a few weeks, the only available options for the team would be the low-value ones.
 
@@ -87,27 +82,19 @@ Our discussion and this new view into the team's backlog revealed that the team 
 
 Understanding that it's unrealistic to remove dependencies completely, we talked about what activities would help get in getting options ready:
 
-Completing the organization's formal intake process.
-
-Reserving capacity with dependent teams.
-
-Reviewing architecture requirements to identify teams needed for each initiative
-
-Securing key subject matter experts from other teams to act as enablers.
-
-Investing in developing new expertise within the team.
+- Completing the organization's formal intake process.
+- Reserving capacity with dependent teams.
+- Reviewing architecture requirements to identify teams needed for each initiative
+- Securing key subject matter experts from other teams to act as enablers.
+- Investing in developing new expertise within the team.
 
 A simple definition of a "Ready Option" also started to form:
 
-No dependencies on other teams.
-
-For work with external dependencies:
-
-Completed the formal intake process.
-
-Capacity with dependent teams reserved.
-
-Got estimates from other teams for delivering any required work.
+- No dependencies on other teams.
+- For work with external dependencies:
+- Completed the formal intake process.
+- Capacity with dependent teams reserved.
+- Got estimates from other teams for delivering any required work.
 
 ## Accounting for Dependencies In Roadmap Planning
 

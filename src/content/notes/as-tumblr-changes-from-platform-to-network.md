@@ -10,17 +10,17 @@ summary: "Tumblr is evolving from simple blogging platform to social network."
 ---
 One neat thing about Tumblr is that more than any other blogging platform, it seems to be shifting in the way people use it and it’s becoming more like a network for producing content, sharing content, consuming content, and for forming connections with the other people. That’s just from an consumer point of view as it ignores the many ways that business and mainstream media outlets use the platform.
 
-While reading the SayYeah blog as they went over some of their gripes with Tumblr, I started thinking about how evolving user seem to be causing stress on the platform. A few years ago Tumblr was the easiest way to start a blog compared to Blogger or Wordpress. They were the ones people went to when they wanted a well designed system, and much lower overhead to use and manage than than Wordpress.
+While reading the SayYeah blog as they went over some of their gripes with Tumblr, I started thinking about how evolving user seem to be causing stress on the platform. A few years ago Tumblr was the easiest way to start a blog compared to Blogger or WordPress. They were the ones people went to when they wanted a well designed system, and much lower overhead to use and manage than than WordPress.
 
 Like Twitter, Tumblr’s simplicity compared to the other products that existed when it first launched helped it attract users. That simplicity helps them gain users as they got started, but I think it’s possible that the needs of those same people have changed over time, and that **those needs are forcing the platforms to mature**. The users that quickly adopted the platform because of its simplicity now want more power.
 
 ## The User Needs Cycle
 
-A new tool is launched to serve a market segment not being served by existing complicated solutions.
-Many people adopt the platform because of it’s simplicity.
-As more people join, networks form on the platform.
-People demand more control to take manage their more complex usage of the platform.
-The platform experiences growing pains and stress as it changes to meet new types of user demands.
+1. A new tool is launched to serve a market segment not being served by existing complicated solutions.
+2. Many people adopt the platform because of it’s simplicity.
+3. As more people join, networks form on the platform.
+4. People demand more control to take manage their more complex usage of the platform.
+5. The platform experiences growing pains and stress as it changes to meet new types of user demands.
 
 To see how a similar platform has evolved over time, we can look at how Twitter has changed. Enough of Twitter’s new features match not only maturing users, but a changing role in society:
 
@@ -53,7 +53,7 @@ Let me repeat some of the consumer uses of Tumblr:
 
 Each of these types of activities **brings people to Tumblr**. It increases the time spent on the platform and connects people more with the Tumblr brand. As you bring more elements of a social network into a blogging platform, people are going to want the platforms to match their needs or they will migrate.
 
-This point may also point to the reason why Posterous will avoid this particular issue as they mature and keep growing. One major part of Posterous’s platform is the autopost, this feature sends out whatever content you post to Posterous to dozens of other social networks. It does this for content that is made up of text, photos, videos, or audio. This means that the video content that you send to Posterous, doesn’t only reach other Posterous users, but it also reaches your friends on Facebook and they interact with that content on the platform they are already on. Your photos are looked at by users on Flickr, and your text posts are sent to Wordpress where you already have an audience.
+This point may also point to the reason why Posterous will avoid this particular issue as they mature and keep growing. One major part of Posterous’s platform is the autopost, this feature sends out whatever content you post to Posterous to dozens of other social networks. It does this for content that is made up of text, photos, videos, or audio. This means that the video content that you send to Posterous, doesn’t only reach other Posterous users, but it also reaches your friends on Facebook and they interact with that content on the platform they are already on. Your photos are looked at by users on Flickr, and your text posts are sent to WordPress where you already have an audience.
 
 Since all your content is being consumed by people on the networks they are already on, it limits the social network features they expect from Posterous.
 
@@ -63,7 +63,7 @@ Some of these problems also affect the business Tumble users.
 
 First, let’s look at how businesses are using Tumblr. There are at least two main types of usage:
 
-- **Mainstream Media**: Media outlets are coming online and using Tumblr as a classic “Tumblog”. They share interesting tidbits of information, throwing what they find against the wall and seeing what sticks or resonates with their readers.
+- **Mainstream Media:** Media outlets are coming online and using Tumblr as a classic “Tumblog”. They share interesting tidbits of information, throwing what they find against the wall and seeing what sticks or resonates with their readers.
 - **Startups and small businesses**: The startups and small businesses I see using Tumblr use it more as a traditional blog. Being a startup they also don’t want to invest too many resources in developing their blog as they have more important things they could be doing. They post edited content that communicates brand messages with the their community.
 
 One of the differences here is that there’s less resources and control needed to manage a “see what sticks” blog.

@@ -4,7 +4,7 @@ title: Starting Agile With Retrospectives and Continuous Improvement
 publishedDate: 2024-08-26
 tags:
   - Agile
-  - coaching
+  - Coaching
 ---
 As an Agile Coach, people occasionally ask me for help introducing agile to their teams. When asked these questions in the past, the approach I used to take was to dive deeper into the team's intent and goals. Instead of pushing practices or tools, I would ask them what they were trying to achieve with agile in the first place and if they understood how well they were serving their customers. But I often had to do a lot of explaining with that approach as it was rare for teams to think that way.
 

@@ -5,7 +5,7 @@ publishedDate: 2012-01-09
 tags:
   - Software
 ---
-> [Don’t Be A Free User](http://blog.pinboard.in/2011/12/don_t_be_a_free_user/) -
+> [Don’t Be A Free User](http://blog.pinboard.in/2011/12/don_t_be_a_free_user/):
 >
 > Someone builds a cool, free product, it gets popular, and that popularity attracts a buyer. The new owner shuts the product down and the founders issue a glowing press release about how excited they are about synergies going forward. They are never heard from again.
 

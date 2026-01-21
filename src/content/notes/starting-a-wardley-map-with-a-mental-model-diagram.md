@@ -80,7 +80,7 @@ To help answer these questions, we can start to plot additional elements onto ou
 - What trends are happening?
 - What new technologies affect our business.
 - I've identified four trends in this example scenario:
-- AI Personalization and Recommendations
+- AI Personalization & Recommendations
 - Advanced Analytics and Reporting
 - Mobile Optimization
 - Advanced Shipping Options
@@ -89,7 +89,7 @@ I've also highlighted how these trends connect to the capabilities we've already
 
 ![](../../assets/2022/12/mental-models-diagrams-wardley-maps-adding-trends.jpg)
 
-AI Personalization & Recommendations has the potential to improve many of the capabilities we offer already. Another option could be for our company to be a leader in reporting and analytics, which are vital to supporting capabilities like promotions, email marketing, and customer relationship management.
+AI Personalization & Recommendations have the potential to improve many of the capabilities we offer already. Another option could be for our company to be a leader in reporting and analytics, which are vital to supporting capabilities like promotions, email marketing, and customer relationship management.
 
 ## Identifying areas to invest
 
@@ -106,5 +106,3 @@ From the initial ask to facilitate a meeting to brainstorm new software features
 At this point, the client could use this map to support their ultimate goal of defining and presenting a strategy of specifying where and how they should invest.
 
 One of the main challenges of a Mental Model Diagram is the effort required to collect and sort the data. Even though we only focused on two of our user's Mental Spaces, we were already to identify a non-trivial picture of customer jobs, high-level and support capabilities, industry trends and investment areas. Expanding this exercise to cover the complete set of our customer's needs could require using multiple maps.
-
-#Wardley-Maps 

@@ -16,8 +16,8 @@ How did I get this from science fiction? The idea I was taught was that you're o
 
 What I see people fall into is two similar traps. On the one hand you might see people blog every day, post messages non-stop, participate and interact at a fast pace, or go to event after event. But in a way it's all just noise. At a certain point in time to achieve more activity, meaning must be removed. In this argument I take "Social Being" as meaning one who takes action, participates, and that someone who completely embodies the social being necessitates doing a lot, but who says anything useful less and less. Here are some examples of this:
 
-	As you increase the frequency of your blog posting, the amount of original thinking or meaning they could possibly have in order to meet that volume decreases.(You end up with filler posts, "best of" posts, linking to single videos while excluding any commentary on them).
-	The more conferences and social meet-ups you go to, the less you might actually have to contribute, and eventually you end up going just to be seen, or two make the rounds. You may shake 400 hands, but how could you possibly develop any deep relationships with 400 people?
+- As you increase the frequency of your blog posting, the amount of original thinking or meaning they could possibly have in order to meet that volume decreases.(You end up with filler posts, "best of" posts, linking to single videos while excluding any commentary on them).
+- The more conferences and social meet-ups you go to, the less you might actually have to contribute, and eventually you end up going just to be seen, or two make the rounds. You may shake 400 hands, but how could you possibly develop any deep relationships with 400 people?
 
 ## Media Meaning
 
