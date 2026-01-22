@@ -20,7 +20,7 @@ For example, escalating a technical disagreement between two teams to a senior m
 
 In another example, consider upfront planning, like spending weeks preparing for a two-week project kick-off workshop. Project kick-off workshops may help managers communicate requirements to teams and prepare developers to start coding quickly, but they also bring significant trade-offs: Requirements become locked in, teams get disconnected from the discovery process, and the focus shifts to maximizing scope instead of starting small and iterating.
 
-Trade-offs appear in daily routines, too. Does the Scrum Master always facilitate every meeting? Is the Product Owner the sole contact for customers? Does the team estimate every task? Each of these routine choices about process and structure has hidden trade-offs that ultimately shape team culture. Leaders and coaches must continually consider these potential impacts.
+Trade-offs appear in daily routines, too. Does the Scrum Master always facilitate every meeting? Is the Product Owner the sole contact for customers? Does the team estimate every task? Each of these routine choices about process and structure has hidden trade-offs that ultimately shape team culture. Leaders and coaches must continually consider the potential impacts.
 
 These trade-offs rarely announce themselves. Leaders, coaches, and managers must continually consider the various potential impacts of their decisions.
 

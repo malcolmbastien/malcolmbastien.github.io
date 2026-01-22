@@ -83,7 +83,7 @@ function getColor(count: number) {
 
 <div
     id="activity-heatmap"
-    class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 shadow-[4px_4px_0_0_#f1f5f9] dark:shadow-none"
+    class="hidden md:block relative w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 shadow-[4px_4px_0_0_#f1f5f9] dark:shadow-none"
 >
     <div
         id="heatmap-tooltip"
@@ -105,7 +105,7 @@ function getColor(count: number) {
         <svg
             viewBox="0 0 780 125"
             preserveAspectRatio="xMinYMin meet"
-            class="w-full activity-heatmap-svg min-w-[700px]"
+            class="w-full activity-heatmap-svg"
         >
             <!-- Day labels -->
             <text x="0" y="33" class="metadata fill-slate-400 dark:fill-slate-500 text-xs">SUN</text>

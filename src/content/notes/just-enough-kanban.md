@@ -1,5 +1,5 @@
 ---
-stage: seed
+stage: evergreen
 title: Just Enough Kanban
 publishedDate: 2023-12-21
 tags:
@@ -91,6 +91,6 @@ Kanban systems help teams by supporting the conditions needed for their desired 
 
 For a better chance of finding success with kanban:
 
-1. Do just enough kanban and only build the first iteration of your kanban system. Don't start by building the final version.
-2. Do just enough kanban so that your system helps you take the next best step.
-3. Do just enough kanban so that your system provides you with the critical information you need. Don't worry about creating a perfectly accurate replica of your workflow.
+1. **Do just enough kanban** and only build the first iteration of your kanban system. Don't start by building the final version.
+2. **Do just enough kanban** so that your system helps you take the next best step.
+3. **Do just enough kanban** so that your system provides you with the critical information you need. Don't worry about creating a perfectly accurate replica of your workflow.

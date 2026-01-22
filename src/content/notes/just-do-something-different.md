@@ -1,5 +1,5 @@
 ---
-stage: seed
+stage: evergreen
 title: Just Do Something Different
 publishedDate: 2025-06-08
 tags:
@@ -28,7 +28,7 @@ The biggest hurdle to improvement is the friction that gets in the way of people
 
 Doing things differently, experimenting and learning needs to happen in real-time as a natural aspect of working. The goal of the approach is to lower the barrier to taking action. We want to encourage many, much more smaller loops of doing things differently than before.
 
-There are lots of improvement frameworks that require more thorough planning and tracking of experiments; however, this is more akin to the OODA loop (Observe, Orient, Decide, Act) from military strategy, applied to daily work. You observe your environment, orient yourself, act, and see what happens. That experience builds an intuitive understanding. It occurs tacitly, meaning it's fast, without the expense and delay of explicit group discussions, planning, or review. If a small change didn't work out? Try something else. If it worked? Great! Now, try something different again anyway.
+There are lots of improvement frameworks that require more thorough planning and tracking of experiments; however, this is more akin to the [OODA loop](https://en.wikipedia.org/wiki/OODA_loop) (Observe, Orient, Decide, Act) from military strategy, applied to daily work. You observe your environment, orient yourself, act, and see what happens. That experience builds an intuitive understanding. It occurs tacitly, meaning it's fast, without the expense and delay of explicit group discussions, planning, or review. If a small change didn't work out? Try something else. If it worked? Great! Now, try something different again anyway.
 
 In the context of software development and delivery, the point is constant experimentation and evolution.
 
@@ -51,20 +51,20 @@ The goal is to continuously try something different in your local context and nu
 
 Even encouraging people to make small changes can encounter powerful forms of organizational and cultural resistance.
 
-**Management Pressure to Meet Project Goals**: When there's an intense focus on hitting deadlines, people are driven by the fear of missing them, and the default operating mode becomes "We just have to get it done." Pressure to hit targets leads teams to stick to the known path, even if it's inefficient. Projects often demand predictable certainty, which makes trying anything new feel inherently risky.
+**Management Pressure to Meet Project Goals:** When there's an intense focus on hitting deadlines, people are driven by the fear of missing them, and the default operating mode becomes "We just have to get it done." Pressure to hit targets leads teams to stick to the known path, even if it's inefficient. Projects often demand predictable certainty, which makes trying anything new feel inherently risky.
 
-**Cognitive Load & Comfort**: Thinking critically about every action requires a significant amount of mental energy. Our brains prefer efficiency and habit. Sticking to what we know is easier.
+**Cognitive Load & Comfort:** Thinking critically about every action requires a significant amount of mental energy. Our brains prefer efficiency and habit. Sticking to what we know is easier.
 
-**Preserving an Image of Expertise**: Some organizational cultures also reward people who project an image of confidence and expertise. Constant experimentation introduces uncertainty and admitting "I don't know," which puts that image at risk.
+**Preserving an Image of Expertise:** Some organizational cultures also reward people who project an image of confidence and expertise. Constant experimentation introduces uncertainty and admitting "I don't know," which puts that image at risk.
 
-**High Personal Risk & Friction**: In some companies, particularly those focused on extracting maximum value from existing processes, if a small experiment doesn't match or exceed standard results, people might face uncomfortable questions. The personal risk of trying something different becomes too high to bear. When there's too much organizational or cultural friction, it makes the cost of trying something new prohibitive.
+**High Personal Risk & Friction:** In some companies, particularly those focused on extracting maximum value from existing processes, if a small experiment doesn't match or exceed standard results, people might face uncomfortable questions. The personal risk of trying something different becomes too high to bear. When there's too much organizational or cultural friction, it makes the cost of trying something new prohibitive.
 
-**Blame Culture & Playing It Safe**: Lastly, in organizational cultures without psychological safety, where blame is the norm, people quickly learn to play it safe. They'll do just enough to avoid getting in trouble.
+**Blame Culture & Playing It Safe:** Lastly, in organizational cultures without psychological safety, where blame is the norm, people quickly learn to play it safe. They'll do just enough to avoid getting in trouble.
 
 ## Conclusion
 
 For this real-time experimentation to thrive, teams need the authority to make decisions about their process. They need to be genuinely empowered. The environment must also be psychologically safe. A safe environment allows people to try ideas without fear of punishment or ridicule. The need for a suitable environment and the importance of supporting people align with Lean principles, such as fostering a culture of continuous improvement and respect for individuals.
 
-Concepts such as Toyota Kata (with its Improvement Kata and Coaching Kata), A3 thinking (structured problem-solving), Hypothesis cards (framing experiments), Retrospectives (structured reflection), and Popcorn flow (a lightweight technique for team experimentation) are popular approaches to experimentation and learning. However, even these structured approaches introduce their own friction. To eliminate any process friction, I believe the core skill is simply building the habit of asking, "What could we do differently right now?" and then doing something.
+Concepts such as [Toyota Kata](https://en.wikipedia.org/wiki/Toyota_Kata) (with its Improvement Kata and Coaching Kata), A3 thinking (structured problem-solving), Hypothesis cards (framing experiments), Retrospectives (structured reflection), and Popcorn flow (a lightweight technique for team experimentation) are popular approaches to experimentation and learning. However, even these structured approaches introduce their own friction. To eliminate any process friction, I believe the core skill is simply building the habit of asking, "What could we do differently right now?" and then doing something.
 
 Real learning and adaptability in agile teams comes when trying something different and learning from those experiences becomes a habit. While frameworks provide helpful structure, growth and learning don't happen by following processes. By reducing friction and barriers to action and embracing a mindset of continuous, small-scale novelty, teams can significantly increase their speed of learning and become more resilient in the face of change. It requires an environment of psychological safety and empowerment where teams feel comfortable experimenting. The key is to just start doing something different.

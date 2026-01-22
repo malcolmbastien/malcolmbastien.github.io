@@ -10,7 +10,8 @@ tags:
 This is surprisingly easy to do. Just add "--enable-plugins" to the end 
 of your shortcut command in the Gnome menu. 
 
-Mine looks like this: 
+Mine looks like this:
+
 ```
 /opt/google/chrome/google-chrome %U --enable-plugins 
 ```
