@@ -43,13 +43,12 @@ const sortedNotes = filteredNotes.sort(
             <div class="lg:col-span-9 max-w-4xl">
                 <header class="mb-16 border-b border-slate-100 dark:border-slate-800 pb-10">
                     <div class="flex items-center gap-4 mb-8">
-                        <div class="w-1 h-8 bg-blueprint-blue"></div>
                         <h1 class="text-6xl font-serif font-black text-primary tracking-tighter leading-none">
-                            Topic Node:<br/>{topic}
+                            Topic: {topic}
                         </h1>
                     </div>
                     <p class="text-sm font-bold text-secondary tracking-widest">
-                        Records: {sortedNotes.length.toString().padStart(3, '0')}
+                        Notes: {sortedNotes.length.toString().padStart(3, '0')}
                     </p>
                 </header>
 
@@ -57,7 +56,7 @@ const sortedNotes = filteredNotes.sort(
                     sortedNotes.length === 0 ? (
                         <div class="surface-elevation p-12 text-center bg-tooling-gray dark:bg-slate-900 border-none">
                             <p class="text-sm text-secondary italic tracking-widest">
-                                Zero Records Indexed for Query
+                                Zero Notes Indexed for Topic
                             </p>
                         </div>
                     ) : (
