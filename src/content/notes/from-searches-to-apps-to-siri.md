@@ -4,8 +4,6 @@ title: From Searches to Apps to Siri
 publishedDate: 2012-08-09
 tags:
   - Apple
-  - iOS
-  - Siri
   - Tech
 ---
 When the App Store was launched on the iPhone, for the first time people could do things and and access many of their favourite services through native apps. These apps used navigation controls, fluid animations, and custom interfaces that were tailored for mobile use. This was different than the desktop where most tasks on the web began with a Google search, leading users to large websites designed for a multitude of tasks. We used to access services through their websites, and then we through their apps. Now we can access a growing number of services and accomplish an increasing number of tasks through Siri. This is an evolution that will continue to grow and affect more and more services.
@@ -42,6 +40,6 @@ One of the big leaps from web searches to Siri are the objects it can return: Ri
 
 There’s a definite trend here of users having to do less work, and getting better results. It’s no surprise that matches the design values which iOS is built on.
 
-[youtube http://www.youtube.com/watch?v=-cZ4mdrlWYM&w=560&h=315]
+[Introducing enhanced voice search on the Google Search App](https://www.youtube.com/watch?v=-cZ4mdrlWYM)
 
 *Google launches a Search App on the iPhone much like Siri.*

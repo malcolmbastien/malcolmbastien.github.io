@@ -3,9 +3,7 @@ stage: seed
 title: Introducing BM Stack
 publishedDate: 2010-12-02
 tags:
-  - bmgen
-  - BM Stack
-  - General
+  - Software
 ---
 ![](../../assets/2010/12/screen_shot_2010-12-01_at_6-13.png)
 
@@ -35,7 +33,7 @@ The tool lets you very quickly add new notes to the canvas. Some of the canvas t
 
 Just like real life, post-its come in more colours than just yellow. When I read [Business Model Generation](http://www.businessmodelgeneration.com/) I liked the idea of using different colours to represent different layers of a business model. An example of this is using two colours to describe both the customer facing and B2B facing parts of a business model. So, I found a swatch on [COLOURlovers](http://www.colourlovers.com/) of post-its and added the option to let you change the colour of your canvas notes.
 
-This took some time. Not because it was technically difficult, but because there wasn’t an intuitive way that was clear to me that made sense for changing a note’s colour. I wanted it to be easy to change the colour when you wanted, but then of hid that extra option to save space. Infact, I also added the option to add additional comments to the bottom of each note, but then later removed it.
+This took some time. Not because it was technically difficult, but because there wasn’t an intuitive way that was clear to me that made sense for changing a note’s colour. I wanted it to be easy to change the colour when you wanted, but then of hid that extra option to save space. In fact, I also added the option to add additional comments to the bottom of each note, but then later removed it.
 
 Overall the canvas was the most challenging part of the application to build, and I still don’t think I’ve nailed the perfect configuration for controlling elements on the canvas. At one point I had gotten very creative with jQuery mouse event functions like “click”, “mousedown”, “mouseleave”, “mouseout”, etc... Keeping it simple made it work the best, and made it work the fastest.
 
@@ -43,7 +41,7 @@ As the author of the canvas you can add tags to your canvas, and add a descripti
 
 Authors of canvases can edit the canvases they have made, or they can also edit a canvas and save their work as a new version. People who didn't make a canvas can only save their work as a new version. Also, the app uses [Gravatars](http://en.gravatar.com/) for all your profile pics in case you don't have one.
 
-## **Future Plans**
+## Future Plans
 
 My plans for this app are frozen indefinitely. Implementing features that would let teachers at business schools easily review and give feedback on the business models of their students came up early as a simple way of turning this application into something helpful for a lot of people. My experience in reading Business Model Generation and learning about the Business Model Canvas are a part of the foundation for working on this project after all.
 

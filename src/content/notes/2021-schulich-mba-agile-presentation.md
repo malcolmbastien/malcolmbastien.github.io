@@ -28,4 +28,4 @@ The key ideas I covered included the following:
 
 I hoped the talk surprised the students and exposed them to ideas they may not have seen before. Crafting this talk was a good learning experience for me to focus on helping communicate the context where agile excels and the conditions necessary to support the right culture.
 
-[googleapps domain="docs" dir="presentation/d/e/2PACX-1vSpwh2LtJ2evPXqZrPWDjeVW90Pc_NHyC_6NdyVz24cGPMwTWbaoekyjkclEGm0eN7rrCRV9J7i78QW/embed" query="start=false&loop=false&delayms=3000" width="960" height="569" /]
+- [Malcolm Bastien - Agile Overview 2021](https://docs.google.com/presentation/d/1HT369vRgYw-hC6F02Te7ox7kgipmDNYJE6Wu8UOq5sE/edit?usp=sharing)

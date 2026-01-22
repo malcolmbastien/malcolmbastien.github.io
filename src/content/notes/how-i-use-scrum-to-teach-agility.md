@@ -1,12 +1,12 @@
 ---
-stage: seed
+stage: evergreen
 title: How I Use Scrum to Teach Agility
 publishedDate: 2023-05-20
 tags:
   - Agile
   - Scrum
 ---
-As part of my job doing Agile Coaching, I occasionally have to give training to groups of people, and part of that training sometimes requires that I cover the Scrum framework. But because I like coaching people and teams on agility and not frameworks,* t*eaching Scrum is something I'm always conflicted about.
+As part of my job doing Agile Coaching, I occasionally have to give training to groups of people, and part of that training sometimes requires that I cover the Scrum framework. But because I like coaching people and teams on agility and not frameworks, teaching Scrum is something I'm always conflicted about.
 
 But the last time I ran a team through Scrum training, I tried a different approach which focused on exploring the meaning and purpose of the various elements in Scrum. By doing that, the Scrum training changed into a discussion about agility and ways of working.
 
@@ -26,11 +26,12 @@ Better ways of working are discovered, not prescribed. That's the lesson I want 
 
 ## How I Use Scrum to Teach Agility
 
-Instead of teaching Scrum as a set of roles, artifacts and events, I start with an interactive exercise to set the scene for a discussion on the goals of the various Scrum practices and how they relate to the goals the participants want to achieve. For example, when talking about having two-week, timeboxed iterations, "Doing Sprints" is a terrible goal, but "Getting feedback from customers every two weeks" would be much better.
+Instead of teaching Scrum as a set of roles, artifacts and events, I start with an interactive exercise to set the scene for a discussion on the goals of the various Scrum practices and how they relate to the goals the participants want to achieve. For example, when talking about having two-week, time boxed iterations, "Doing Sprints" is a terrible goal, but "Getting feedback from customers every two weeks" would be much better.
 
 For the interactive exercise, I'll either use this Mural template Teaching the Scrum framework or whip up my own version of it with a few more helpers and tips that describe Scrum and its different events, roles and artifacts. The drag-and-drop activity makes the training interactive, engages the participants, and is a great exercise to get the memorization-focused parts of the session out of the way. It's a challenging exercise for groups with no clear answer.
 
-![](../../assets/2023/05/image-23.png)[Hard Yard's Teaching the Scrum framework](https://www.mural.co/templates/teaching-the-scrum-framework) Mural template.
+![](../../assets/2023/05/image-23.png
+*[Hard Yard's Teaching the Scrum framework](https://www.mural.co/templates/teaching-the-scrum-framework) Mural template.*
 
 After they finish with the drag-and-drop exercise, we review the answer sheet together. I then ask them some more abstract questions:
 

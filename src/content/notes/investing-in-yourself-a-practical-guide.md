@@ -16,7 +16,7 @@ There's a few different categories of investing in yourself we can define, I'm g
 
 You can have a better chance of finding work, and be able to charge more by increasing your expertise in a particular field or a skill.
 
-***Update:** I should note that the skills I refer to are largely focused on technical and web skill, if you have ideas on other skills people will find useful add some in the comments.*
+**Update:** I should note that the skills I refer to are largely focused on technical and web skill, if you have ideas on other skills people will find useful add some in the comments.
 
 ### Programming
 
@@ -129,6 +129,7 @@ Find more people you should be following on Twitter by using [Mr.Tweet](http://m
 - How to Stop Worrying and Start Living - Dale Carnegie
 - Getting Rich Slowly
 
-**Help me to expand this list!
-What would be other useful resources or categories?
-What are some fast methods, or shortcuts you can think of?**
+**Help me to expand this list!**
+
+- What would be other useful resources or categories?
+- What are some fast methods, or shortcuts you can think of?

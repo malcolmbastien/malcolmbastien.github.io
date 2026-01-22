@@ -3,7 +3,7 @@ stage: seed
 title: Is It A Site? A Business? Or Mostly Just Twitter?
 publishedDate: 2009-04-27
 tags:
-  - General
+  - Social-Media
 ---  
 
 Just like applications were able to add a lot more functionality, and create successful businesses on [Facebook](http://facebook.com), the same needs to be done for [Twitter](http://twitter.com). There are businesses I am seeing creating new websites and businesses that in essence boil down to being a mix of **90% Twitter, and 10% different stuff**. All these new businesses then have to deal with problems like users and infrastructure.
@@ -16,9 +16,9 @@ I never like naming particular applications, but the trend will likely only incr
 
 Some of the unique features of Twitter that would be translate well to new business models include:
 
-- **The ****openness **of following anyone and being followed by anyone
-- **The ****opt-in** nature of the information flows
-- **The ****ease **of participating everywhere
+- **The openness** of following anyone and being followed by anyone
+- **The opt-in** nature of the information flows
+- **The ease** of participating everywhere
 - **Low time** commitment needs
 
 Some of, or all of these features mixed in with other business areas could be the recipe to dozens of new businesses. But just like we've gone past the age of "Facebook for X" (entrepreneurs, real estate, musicians, etc...), we might just be coming to the age of seeing plenty of new "Twitter for X" or "Twitter with X" businesses being started.

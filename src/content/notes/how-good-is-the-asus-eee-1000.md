@@ -5,7 +5,6 @@ publishedDate: 2009-01-25
 tags:
   - Computers
   - Linux
-  - Netbooks
   - Windows
 ---
 I don't have many tech gadgets or toys, but my Eee PC 1000 is one of the best purchases I've ever made.  Though admittedly I have conditioned myself to say that after paying so much for the 1000 model when it was still fairly new in Canada.  It definitely has some flaws, but to be one of the early adopters of netbooks and to experience and follow the development of this industry is especially rewarding because of the ideas behind netbooks, and because of how big of a part Linux will play in it.

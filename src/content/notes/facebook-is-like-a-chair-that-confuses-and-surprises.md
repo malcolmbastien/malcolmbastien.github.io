@@ -4,7 +4,6 @@ title: Facebook is Like a Chair… That Confuses and Surprises
 publishedDate: 2012-10-17
 tags:
   - Facebook
-  - General
 ---
 Facebook is like a chair… that confuses, defrauds, misleads, spams and surprises users.
 

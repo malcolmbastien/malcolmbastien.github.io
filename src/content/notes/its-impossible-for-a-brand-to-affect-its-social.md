@@ -4,7 +4,7 @@ title: The Social Story of a Brand
 publishedDate: 2012-10-11
 tags:
   - MadeWithPaper
-  - Image
+  - Images
   - Sketches
 ---
 ![](../../assets/2012/10/tumblr_mbqdi7htib1qa77f2o1_1280.jpg)

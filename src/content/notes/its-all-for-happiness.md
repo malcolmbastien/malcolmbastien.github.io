@@ -5,7 +5,7 @@ publishedDate: 2012-01-13
 tags:
   - General
 ---
-[It’s Just Stuff — Shawn Blanc](http://shawnblanc.net/2012/01/just-stuff/)
+[It’s Just Stuff — Shawn Blanc](http://shawnblanc.net/2012/01/just-stuff/):
 
 > …you can tell a lot about me by the things I own. But they are just that — things. They can be stolen, broken, taken, and lost. They should never become distractions to the things that matter most, nor should I ever allow them to define my character, my relationships, and my beliefs.
 
@@ -17,7 +17,7 @@ Shawn quoted Dustin:
 
 Dustin was talking about a person’s desire for identity, and how some brands, even if their products are similar, offer consumers a stronger identity than others. Specifically he describes three offerings: * “an ability to define themselves” * “a stylistic experience that people want to make their own” * “an extension to someone’s soul”
 
-Shawn’s post on the other hand warns against making judgements about a person based on the things he owns. Judgements should be made about how how a person treats others and things like that.
+Shawn’s post on the other hand warns against making judgments about a person based on the things he owns. Judgments should be made about how how a person treats others and things like that.
 
 Both Dustin and Shawn are talking about finding happiness. Every action we take, everything thing we buy, and even the actions we don’t take and the things we don’t buy, all are chosen based on what we think will make us happy. Everyone takes a different path, but generally everything we do is done because we think it will (directly or indirectly) make us happy.
 

@@ -3,20 +3,16 @@ stage: seed
 title: Face it Linux, Most Netbooks Will Sell Windows 7
 publishedDate: 2009-02-09
 tags:
-  - brian proffitt
-  - Free Software Foundation
-  - General
   - Linux
-  - Linux adoption
   - Microsoft
-  - Netbooks
-  - windows 7
+  - Windows
 ---
 And they will sell **well**.
 
  People all over the place are kidding themselves.  One of which include Brian Proffitt.  I tried to write a comment in response to his article talking about Linux's competitiveness on Netbooks given that Windows 7 can run on netbooks (thanks for turning off comments on your blog but leaving the comment form live by the way) but resorted to doing a full post instead.  With this news that Windows 7 will run on netbooks, people are concentrating on all the wrong ideas, and doing absolutely nothing helpful to aid in the real future of Linux on the netbook.
 
 One of Brian's points is this:
+
 > "..**cost will be the big factor** in how well each OS  succeeds... the financial headlines and their own accounting books will quickly convince them that **the biggest profit margin** is the way to go."
 
 There's two big pain points I have with this quote.
@@ -29,7 +25,7 @@ The first excerpt completely takes a stake to not only what people in the Free S
 
 Bundling Linux with netbooks will save manufacturers a couple bucks a shot. Great.  They'll need that savings when **nobody buys their product.** Like my point above, buying a new netbook is not the right time to get people to use Linux for the first time.  If the laptop next to you is selling with Windows 7, spending your $300 on a slightly cheaper system with "this Linux thing" is a riskier purchase.  But that doesn't even consider the elephant in the room: Microsoft advertising department.
 
-### Microsoft Will SELL Windows 7 on Netbooks
+### Microsoft Will Sell Windows 7 on Netbooks
 
 Microsoft won't only put windows 7 on netbooks and then put them into stores.  If Microsoft thinks Linux on netbooks is catching on with consumers, what's stopping them from investing millions into advertising the Windows 7 + netbooks combo?
 

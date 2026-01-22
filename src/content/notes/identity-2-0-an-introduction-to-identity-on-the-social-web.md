@@ -3,7 +3,7 @@ stage: seed
 title: Identity 2.0 - An Introduction to Identity On the Social Web
 publishedDate: 2009-04-17
 tags:
-  - General
+  - School
 ---
 Last night I finished a course at Ryerson where I wrote a research essay on the topic of identity systems and how the issues of identity exist as part of the new social web.  I feel like the essay is worth including on the blog and sharing because of its attempt to be a clear, and thorough introduction to the issues of identity and privacy.
 

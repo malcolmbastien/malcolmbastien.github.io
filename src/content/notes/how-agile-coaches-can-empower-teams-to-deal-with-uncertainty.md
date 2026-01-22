@@ -4,7 +4,7 @@ title: How Agile Coaches Can Empower Teams To Deal With Uncertainty
 publishedDate: 2024-08-05
 tags:
   - Agile
-  - coaching
+  - Coaching
 ---
 When someone asks me to define Agile, I often say it's about moving forward even when you don't have all the answers and instead embracing uncertainty and learning as you go. However, I've seen in the large organizations I've worked with struggle with this concept. Even if organizations want to be agile, they're deeply programmed to crave predictability and reward certainty.
 

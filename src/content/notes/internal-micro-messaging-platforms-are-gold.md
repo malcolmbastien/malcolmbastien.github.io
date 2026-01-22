@@ -14,7 +14,7 @@ Employees have the opportunity within minutes of accessing these systems to prov
 
 One inequality in organizations that uniquely effect the use of IMMPs in organizations are the work force demographic.What happens to the employee with 12 years at the company who doesn't adopt and join the internal discussions that are taking place on the IMMP when the new hire, there for one month, is actively posting messages, helping co-workers with their problems and sharing links? Of course the new hire won't become more important or useful by any means to the company, but this sort of example does two things:
 
-- Emphasises the differences between old and new ways of working,
+- Emphasizes the differences between old and new ways of working,
 - Creates an alternative conversation channel in the company, that is easy for people to miss.
 
 I've talked about on [Twitter](http://twitter.com) a bit which services I like and others not so much, but I think one of the key ways IMMPs can help change business overall is by taking Socialcast's approach and integrate more lifestreaming into their offering. Corporate integration with lifestreaming could potentially be the final blow to this antiquated notion of [work life balance](http://en.wikipedia.org/wiki/Work-life_balance) (one that younger workers would be best to forget all together while they can).

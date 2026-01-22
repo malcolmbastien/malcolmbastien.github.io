@@ -13,7 +13,7 @@ App shouldn’t be immersive, but their content should be.
 
 When you remove menus, headings, and push data off screen like we’ve seen in the Metro style case study, the user will be  drawn more into whats on screen, but your immersive app is now more difficult to use. Each hidden element adds a dimension of complexity for the user. Your app shouldn’t be immersive except for when dealing with individual pieces of content.
 
-The [Metro style design case study](http://openmode.ca/post/28850181731/uncovering-the-compromises-of-metro-style-apps) shows us how Metro creates immersive apps in a few ways:
+The [[uncovering-the-compromises-of-metro-style-apps|Metro style design case study]] shows us how Metro creates immersive apps in a few ways:
 
 - It hides menus on each side of the screen. Since each is activated by a gesture it also hides the means to open those menus.
 - It hides date navigation within a pinch gesture. Going from a month view to a year view requires pinching-in.
