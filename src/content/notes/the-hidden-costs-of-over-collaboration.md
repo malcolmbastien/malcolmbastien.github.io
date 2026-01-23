@@ -78,7 +78,7 @@ Dependency Management and shared services:
 
 - [Dynamic Reservation Systems](https://www.kanbanmaturitymodel.com/2020/11/03/scheduling-work-in-kanban-with-dynamic-reservation-systems/)
 - [Kanban's Dependency Management Poster (PDF)](https://djaa.com/wp-content/uploads/2020/12/A0-DEPENDENCES-v1.7-10142020.pdf)
-- [Kanban University - Managing Dependencies](http://Managing Dependencies)
+- [Kanban University - Managing Dependencies]([http://Managing Dependencies](https://kanban.university/managing-dependencies/))
 
 > Eliminate blocking dependencies.
 >

@@ -177,6 +177,7 @@ function getColor(count: number) {
         // Initialize currentYear to the year provided by the server.
         // This MUST match what was rendered in the HTML initially.
         let currentYear = year;
+        const allEvents = events;
 
         // Function to get Tailwind classes for colors
         function getColor(count) {
@@ -210,7 +211,7 @@ function getColor(count: number) {
 
             // Generate new data for year
             const activityMap = {};
-            events.forEach((event) => {
+            allEvents.forEach((event) => {
                 // event.date is serialized as string, convert back to Date
                 const eventDate = new Date(event.date);
                 const eventYear = eventDate.getFullYear();

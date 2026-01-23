@@ -1,5 +1,5 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import ActivityHeatmap from "../components/Profile/ActivityHeatmap.astro";
 import Header from "../components/Profile/Header.astro";
@@ -9,13 +9,12 @@ import SiteFooter from "../components/SiteFooter.astro";
 import GardenStats from "../components/Profile/GardenStats.astro";
 import SocialLinks from "../components/Profile/SocialLinks.astro";
 import TopicFocus from "../components/Profile/TopicFocus.astro";
-import { getStageColors } from "../lib/theme";
+
 import { getBatchFileDates, type FileDates } from "../lib/git-history";
 import AboutAuthor from "../components/AboutAuthor.astro";
 
 const allNotes = await getCollection("notes");
 const batchDates = (await getBatchFileDates()) as Map<string, FileDates>;
-const stageColors = getStageColors();
 
 // Fetch git dates for all notes to create timeline events
 const notesWithDates = allNotes.map((note) => {
@@ -139,8 +138,6 @@ const earliestDate =
     sortedEvents.length > 0
         ? sortedEvents[sortedEvents.length - 1]?.date || new Date()
         : new Date();
-const latestDate =
-    sortedEvents.length > 0 ? sortedEvents[0]?.date || new Date() : new Date();
 
 const allMonths: Array<{
     key: string;
@@ -218,10 +215,7 @@ const latestCreations = notesWithDates
     .sort((a, b) => b.displayDate!.valueOf() - a.displayDate!.valueOf())
     .slice(0, 3);
 
-// Sort notes for stats
-const sortedNotes = notesWithDates.sort(
-    (a, b) => b.displayDate.valueOf() - a.displayDate.valueOf(),
-);
+
 
 // Compute note counts by stage
 const publishedNotes = allNotes.filter((note) => note.data);
@@ -449,10 +443,7 @@ const currentYearValue = new Date().getFullYear();
         }
     }
 
-    const buttons = document.querySelectorAll("[data-stage]");
-    const topicButtons = document.querySelectorAll("[data-topic]");
     const eventTypeButtons = document.querySelectorAll("[data-event-type]");
-    const timelineEvents = document.querySelectorAll("#timeline .timeline-event");
     const noResults = document.getElementById("no-results");
 
     // Prevent browser from automatically restoring scroll position which can cause jumps

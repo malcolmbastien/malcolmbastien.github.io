@@ -1,22 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Profile/Header.astro";
 import BackToGarden from "../components/Navigation/BackToGarden.astro";
 import SiteFooter from "../components/SiteFooter.astro";
-import { getCollection } from "astro:content";
-import ActivityHeatmap from "../components/Profile/ActivityHeatmap.astro";
 
-const allNotes = await getCollection("notes");
-const currentYear = new Date().getFullYear();
 
-const events = allNotes
-    .filter((note) => note.data.publishedDate)
-    .map((note) => ({
-        post: note,
-        type: "created",
-        date: note.data.publishedDate!,
-        title: note.data.title,
-    }));
 
 const packages = [
     {
