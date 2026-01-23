@@ -42,9 +42,9 @@ If any of those statements are true, you're not doing Agile as it was originally
 
 Since each violation of the Agile Manifesto's values is a sign of broken agile, we can reason that succeeding with agile at least requires embracing those values.
 
-In the absence of the values, Agile practices are hardly Agile at all.
-
-Mike Burrows, Kanban from the Inside
+> In the absence of the values, Agile practices are hardly Agile at all.
+>
+> Mike Burrows, Kanban from the Inside
 
 ## Your Attitude Impacts Outcomes
 

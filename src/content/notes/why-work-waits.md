@@ -86,7 +86,7 @@ The outcome in both cases is that work gets delayed. Addressing the first type o
 
 When I talk about a blocker or impediment, here's what I'm talking about:
 
-> **Blocker or Impediment**
+> Blocker or Impediment:
 >
 > Something that makes it impossible to start or finish something we want now.
 >

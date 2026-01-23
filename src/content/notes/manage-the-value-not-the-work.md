@@ -66,11 +66,9 @@ The biggest thing teams can do to help to increase their chances of being succes
 
 Shifting from project-based thinking to an iterative and incremental way of working where teams release frequently creates more opportunities to:
 
-Validate assumptions about the customer's needs and expectations
-
-De-risk our work by identifying and resolving potential issues early
-
-Show progress using real code rather than reviews or reports
+- Validate assumptions about the customer's needs and expectations
+- De-risk our work by identifying and resolving potential issues early
+- Show progress using real code rather than reviews or reports
 
 I recently worked with a manager and an architect who had to collaborate with a team in a different country to deliver a large project. The manager started asking questions about how that overseas team would work and how we would track their progress. Instead of suggesting ways to manage the other team's work, I proposed that they design a set of incremental deliverables to act as internal checkpoints. 
 

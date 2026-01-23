@@ -139,11 +139,9 @@ If you have a piece of work you need to feed into a high WIP system, the only ch
 
 Thankfully, dealing with high WIP and large queues is much easier than dealing with dependencies, at least on paper. The answer is to control and limit queue sizes.
 
-Eject work that is currently sitting in queues
-
-Reject new work from entering the system until queues come under control
-
-Place a limit on how much work can sit in a queue
+- Eject work that is currently sitting in queues
+- Reject new work from entering the system until queues come under control
+- Place a limit on how much work can sit in a queue
 
 ## Conclusion
 

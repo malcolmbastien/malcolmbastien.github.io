@@ -7,7 +7,7 @@ tags:
   - Team-Topologies
 summary: "Cross-functional teams good, but avoid super teams; use enabling teams to reduce cognitive load."
 ---
-I've previously written about [[revisiting-the-guidance-on-cross-functional-teams|cross-functional teams and what it means for a team to be cross-functional]]. In that same post, I wrote about Team Topology's concept of a stream-aligned team.
+I've previously written about [[revisiting-the-guidance-on-cross-functional-teams|cross-functional teams]] and what it means for a team to be cross-functional. In that same post, I wrote about Team Topology's concept of a stream-aligned team.
 
 To recap, stream-aligned teams:
 
