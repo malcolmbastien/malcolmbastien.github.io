@@ -1,6 +1,6 @@
 ---
 title: A Catalogue of Problems
-status: seed        # seed | sprout | evergreen
+stage: seed        # seed | sprout | evergreen
 tags:
   - Teams
 summary: Looking at the different kinds of problems teams face.
@@ -10,7 +10,6 @@ Teams often end up dealing with issues stemming from decisions made within their
   
 The core idea is exploring the definitions of these terms and how teams experience them in a work environment. Some seem to be self-inflicted, others are unintended consequences, and others you can never plan for.
   
-
 Types of Problems:
 
 - **Issues:** Problems that are created unnecessarily, which teams then have to solve

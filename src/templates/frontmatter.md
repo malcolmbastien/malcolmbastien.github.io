@@ -1,6 +1,6 @@
 ---
 title: My Post Title
-status: seed        # seed | sprout | evergreen
+stage: seed        # seed | sprout | evergreen
 tags:
   - tag1
   - tag2
