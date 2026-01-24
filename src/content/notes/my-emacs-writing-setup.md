@@ -50,7 +50,7 @@ One thing I appreciate about Emacs is how you can search through every available
 | Key | Description |
 | --- | --- |
 | `SPC` `SPC` or `SPC` `p` `f` | Jump to file in project (like Atom/Sublime Text’s goto-anywhere) |
-|`SPC` `.` or `SPC` `f` `f` | Explore files in current directory |
+| `SPC` `.` or `SPC` `f` `f` | Explore files in current directory |
 | `SPC` `f` `S-f` | Jump to file under current directory (recursive) |
 | `SPC` `f` `s` | Save file |
 | `SPC` `f` `S-s` | Save file as (prompts for location) |
@@ -69,41 +69,41 @@ One thing I appreciate about Emacs is how you can search through every available
 
 |Key|Description|
 |---|---|
-|`SPC` `/` or `SPC` `s` `p`|Search across current project|
-|`SPC` `s` `S-p`|Search another project (prompts you to select one)|
-|`SPC` `s` `d`|Search in current directory (recursive)|
-|`SPC` `s` `S-d`|Search in another directory (recursive)|
+| `SPC` `/` or `SPC` `s` `p`|Search across current project|
+| `SPC` `s` `S-p`|Search another project (prompts you to select one)|
+| `SPC` `s` `d`|Search in current directory (recursive)|
+| `SPC` `s` `S-d`|Search in another directory (recursive)|
 
 ### Buffer Management
 
 |Key|Description|
 |---|---|
-|`SPC` `,` or `SPC` `b` `b`|Switch to another buffer|
-|`SPC` `<` or `SPC` `b` `S-b`|Switch to another buffer across workspaces|
+| `SPC` `,` or `SPC` `b` `b`|Switch to another buffer|
+| `SPC` `<` or `SPC` `b` `S-b`|Switch to another buffer across workspaces|
 
 ### Window Management
 
 |Key|Description|
 |---|---|
-|`SPC` `w` `s`|Split the window horizontally|
-|`SPC` `w` `v`|Split the window vertically|
-|`SPC` `w` `d`|Delete current window|
-|`SPC` `w` {`h`,`j`,`k`,`l`}|Select window in direction (left, below, above, right, respectively)|
-|`SPC` `w` {`S-h`,`S-j`,`S-k`,`S-l`}|Swap current window with window in direction|
-|`SPC` `w` {`C-S-h`,`C-S-j`,`C-S-k`,`C-S-l`}|Move current window to edge of frame in direction|
-|`SPC` `w` `u` or `C-w` `C-r`|Undo or redo last change to window configuration|
-|`SPC` `w` `o`| Enlarge current window. Again to undo.|
-|`SPC` `w` `m` `m`|Delete other windows. Again to undo.|
-|`{N}` `C-w` <code>\|</code>  |Change width of current window to `N` (a number)|
-|`{N}` `C-w` `_`|Change height of current window to `N` lines|
+| `SPC` `w` `s`|Split the window horizontally|
+| `SPC` `w` `v`|Split the window vertically|
+| `SPC` `w` `d`|Delete current window|
+| `SPC` `w` {`h`,`j`,`k`,`l`}|Select window in direction (left, below, above, right, respectively)|
+| `SPC` `w` {`S-h`,`S-j`,`S-k`,`S-l`}|Swap current window with window in direction|
+| `SPC` `w` {`C-S-h`,`C-S-j`,`C-S-k`,`C-S-l`}|Move current window to edge of frame in direction|
+| `SPC` `w` `u` or `C-w` `C-r`|Undo or redo last change to window configuration|
+| `SPC` `w` `o`| Enlarge current window. Again to undo.|
+| `SPC` `w` `m` `m`|Delete other windows. Again to undo.|
+| `{N}` `C-w` <code>\|</code>  |Change width of current window to `N` (a number)|
+| `{N}` `C-w` `_`|Change height of current window to `N` lines|
 
 ### Font Size
 
 |Key|Description|
 |---|---|
-|`C--` | Decrease font size |
-|`C-=` | Increase font size |
-|`C-+` | Reset font size |
+| `C--` | Decrease font size |
+| `C-=` | Increase font size |
+| `C-+` | Reset font size |
 
 ### Writing
 
@@ -140,7 +140,7 @@ One thing I appreciate about Emacs is how you can search through every available
 | `=` | Indent text |
 | `~` | Invert case of character |
 | `u` | **Undo**. |
-|`C-r` | **Redo**. |
+| `C-r` | **Redo**. |
 
 ### Jumps
 
