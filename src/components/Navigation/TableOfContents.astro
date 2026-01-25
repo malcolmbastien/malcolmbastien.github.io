@@ -5,39 +5,51 @@ interface Props {
     content: string;
     title: string;
     minHeadings?: number;
+    headings?: Array<{ depth: number; slug: string; text: string }>;
 }
 
-const { content, title, minHeadings = 3 } = Astro.props;
+const { content, title, minHeadings = 3, headings: astroHeadings } = Astro.props;
 
-// Extract headings from Markdown content (skip frontmatter)
-const contentWithoutFrontmatter = content.replace(/^---[\s\S]*?---\n/, "");
-const headingRegex = /^(#{2,6})\s+(.+)$/gm; // H2-H6 headings
-const headings: Array<{ level: number; id: string; text: string }> = [];
-let match;
+// Extract headings from Markdown content (skip frontmatter) if not provided by Astro
+let headings: Array<{ level: number; id: string; text: string }> = [];
 
-while ((match = headingRegex.exec(contentWithoutFrontmatter)) !== null) {
-    const level = match[1].length - 1; // H2 = level 1, H3 = level 2, H4 = level 3, etc.
-    const text = match[2].trim();
+if (astroHeadings && astroHeadings.length > 0) {
+    headings = astroHeadings
+        .filter(h => h.depth >= 2 && h.depth <= 6)
+        .map(h => ({
+            level: h.depth - 1,
+            id: h.slug,
+            text: h.text
+        }));
+} else {
+    const contentWithoutFrontmatter = content.replace(/^---[\s\S]*?---\n/, "");
+    const headingRegex = /^(#{2,6})\s+(.+)$/gm; // H2-H6 headings
+    let match;
 
-    // Check for {#id} in the text
-    const idMatch = text.match(/\{#([^}]+)\}/);
-    let id = "";
-    let cleanText = text;
-    if (idMatch) {
-        id = idMatch[1];
-        cleanText = text.replace(/\{#([^}]+)\}/, "").trim();
-    } else {
-        // Generate ID from text (similar to how Astro generates heading IDs)
-        id = cleanText
-            .toLowerCase()
-            .replace(/[^\w\s-]/g, "") // Remove special characters
-            .replace(/\s+/g, "-") // Replace spaces with hyphens
-            .replace(/-+/g, "-") // Replace multiple hyphens with single
-            .replace(/^-|-$/g, ""); // Remove leading/trailing hyphens
+    while ((match = headingRegex.exec(contentWithoutFrontmatter)) !== null) {
+        const level = match[1].length - 1; // H2 = level 1, H3 = level 2, H4 = level 3, etc.
+        const text = match[2].trim();
+
+        // Check for {#id} in the text
+        const idMatch = text.match(/\{#([^}]+)\}/);
+        let id = "";
+        let cleanText = text;
+        if (idMatch) {
+            id = idMatch[1];
+            cleanText = text.replace(/\{#([^}]+)\}/, "").trim();
+        } else {
+            // Generate ID from text (similar to how Astro generates heading IDs)
+            id = cleanText
+                .toLowerCase()
+                .replace(/[^\w\s-]/g, "") // Remove special characters
+                .replace(/\s+/g, "-") // Replace spaces with hyphens
+                .replace(/-+/g, "-") // Replace multiple hyphens with single
+                .replace(/^-|-$/g, ""); // Remove leading/trailing hyphens
+        }
+
+        // Include H2-H6 headings
+        headings.push({ level, id, text: cleanText });
     }
-
-    // Include H2-H6 headings
-    headings.push({ level, id, text: cleanText });
 }
 
 // Only show TOC if we have enough headings
@@ -95,14 +107,13 @@ const tocStructure = createTOCStructure(title, headings);
                         return (
                             <div class="toc-item relative mb-4">
                                   <a
-                                      href={`javascript:void(0)`}
+                                      href={isPostTitle ? "#" : `#${item.id}`}
                                       id={`toc-${item.id}`}
                                        class={`toc-link block transition-all py-1 pl-6 ${
                                            isPostTitle
                                        ? "text-base font-bold text-slate-800 dark:text-slate-100"
                                                : "metadata text-sm font-bold text-secondary hover:text-slate-600 dark:hover:text-slate-300"
                                        }`}
-                                       onclick={isPostTitle ? `window.scrollTo({top: 0, behavior: 'smooth'});` : `document.getElementById('${item.id}').scrollIntoView({behavior: 'smooth'});`}
                                   >
                                      {item.text.toUpperCase()}
                                  </a>
@@ -112,10 +123,9 @@ const tocStructure = createTOCStructure(title, headings);
                                             {item.children.map((child) => (
                                                 <div class="relative">
                                                      <a
-                                                          href={`javascript:void(0)`}
+                                                          href={`#${child.id}`}
                                                           id={`toc-${child.id}`}
                                                           class="toc-link block metadata text-sm text-secondary hover:text-blueprint-blue dark:hover:text-white transition-colors py-0.5 pl-4"
-                                                          onclick={`document.getElementById('${child.id}').scrollIntoView({behavior: 'smooth'});`}
                                                       >
                                                         {child.text.toUpperCase()}
                                                     </a>
@@ -127,7 +137,6 @@ const tocStructure = createTOCStructure(title, headings);
                         );
                     })}
                 </nav>
-            </div>
         </aside>
     )
 }

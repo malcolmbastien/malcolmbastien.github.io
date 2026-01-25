@@ -26,11 +26,11 @@ interface Props {
 }
 
 const { entry, backlinkedNotes } = Astro.props;
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
 const filePath = `src/content/notes/${entry.id}`;
 const { created, updated } = await getFileDates(filePath);
 ---
 
-<NoteLayout frontmatter={entry.data} filePath={filePath} gitCreated={created} gitUpdated={updated} backlinkedNotes={backlinkedNotes} noteBody={entry.body}>
+<NoteLayout frontmatter={entry.data} filePath={filePath} gitCreated={created} gitUpdated={updated} backlinkedNotes={backlinkedNotes} noteBody={entry.body} headings={headings}>
 	<Content />
 </NoteLayout>

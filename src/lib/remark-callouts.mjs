@@ -9,10 +9,11 @@ export function remarkCallouts() {
       const firstText = firstChild.children[0];
       if (!firstText || firstText.type !== 'text') return;
 
-      const match = firstText.value.match(/^\[!(\w+)\]/i);
+      const match = firstText.value.match(/^\[!([\w\s-]+)\]/i);
       if (!match) return;
 
-      const type = match[1].toLowerCase();
+      const rawType = match[1];
+      const type = rawType.toLowerCase().trim().replace(/\s+/g, '-');
       
       // Update the node's properties
       node.data = node.data || {};
@@ -20,10 +21,11 @@ export function remarkCallouts() {
       node.data.hProperties.className = ['markdown-alert', `markdown-alert-${type}`];
 
       // Remove the [!TYPE] text
-      firstText.value = firstText.value.replace(/^\[!(\w+)\]/i, '').trim();
+      firstText.value = firstText.value.replace(/^\[!([\w\s-]+)\]/i, '').trim();
 
       // If the paragraph is now empty, or just had the [!TYPE], we might want to add a title
-      const titleText = type.charAt(0).toUpperCase() + type.slice(1);
+      let titleText = rawType.trim().toUpperCase();
+      if (type === 'wip' || type === 'work-in-progress') titleText = 'WORK IN PROGRESS';
       
       const titleNode = {
         type: 'paragraph',

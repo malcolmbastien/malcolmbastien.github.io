@@ -79,6 +79,9 @@ Testing every supported callout type:
 > [!INFO]
 > General information callout.
 
+> [!EXAMPLE]
+> Illustrative examples.
+
 ### Action Oriented
 > [!TODO]
 > Tasks or things to be done.
@@ -105,9 +108,6 @@ Testing every supported callout type:
 > [!BUG]
 > Bug reports or technical issues.
 
-> [!EXAMPLE]
-> Illustrative examples.
-
 ### Thoughts
 > [!QUOTE]
 > For quotes or citations.
@@ -115,8 +115,15 @@ Testing every supported callout type:
 > [!IDEA]
 > Lightning bolt idea callout!
 
+### Status
+
 > [!DRAFT]
 > This is a draft block. It represents incomplete writing that is still in progress. Note the dashed border and specific styling to distinguish it from mature content.
+
+> [!WIP]
+> This is a draft block. It represents incomplete writing that is still in progress. Note the dashed border and specific styling to distinguish it from mature content.
+
+### Callout Formatting
 
 > [!TIP]
 > Callouts can span multiple lines
