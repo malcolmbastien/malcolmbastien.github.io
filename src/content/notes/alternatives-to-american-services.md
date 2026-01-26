@@ -114,13 +114,16 @@ featured: true
 
 | Service | HQ | Sovereignty | Notes |
 | :--- | :--- | :--- | :--- |
+| **[CBC Gem](https://gem.cbc.ca)** | Canada 🇨🇦 | 🟢 | Publicly owned (CBC) |
+| **[Crave](https://www.crave.ca)** | Canada 🇨🇦 | 🟢 | Owned by Bell Media |
 | **[Kobo](https://www.kobo.com)** | Canada 🇨🇦 | 🟢 | Owned by Rakuten (Japan) |
+| **[GOG](https://www.gog.com)** | Poland 🇵🇱 | 🟢 | Owned by CD Projekt; DRM-free gaming |
 | **[PeerTube](https://joinpeertube.org)** | France 🇫🇷 | 🟢 | - |
 | **[Spotify](https://spotify.com)** | Sweden 🇸🇪 | 🟡 | Relies heavily on US Google Cloud (GCP) |
 | **[Deezer](https://deezer.com)** | France 🇫🇷 | 🟡 | Partial dependency on US Cloud infra |
 
 > [!WARNING]
-> **Avoid (US-Based):** YouTube, Vimeo, Apple Music, YouTube Music, Amazon Music, Amazon Kindle, Apple Books.
+> **Avoid (US-Based):** YouTube, Netflix, Disney+, Prime Video, Hulu, Max, Vimeo, Apple Music, YouTube Music, Amazon Music, Amazon Kindle, Apple Books, Steam, Epic Games Store.
 
 ---
 
@@ -166,6 +169,24 @@ featured: true
   
 ---
   
+## 💻 Hardware & Electronics
+
+| Brand | HQ | Sovereignty | Notes |
+| :--- | :--- | :--- | :--- |
+| **[Lenovo](https://lenovo.com)** | China 🇨🇳 | 🟢 | World's largest PC vendor |
+| **[ASUS](https://asus.com)** | Taiwan 🇹🇼 | 🟢 | - |
+| **[Acer](https://acer.com)** | Taiwan 🇹🇼 | 🟢 | - |
+| **[MSI](https://msi.com)** | Taiwan 🇹🇼 | 🟢 | - |
+| **[BenQ](https://benq.com)** | Taiwan 🇹🇼 | 🟢 | - |
+| **[Samsung](https://samsung.com)** | South Korea 🇰🇷 | 🟢 | - |
+| **[LG](https://lg.com)** | South Korea 🇰🇷 | 🟢 | - |
+| **[Framework](https://frame.work)** | US-based 🇺🇸 | 🟡 | Included for repairability/openness (US-based) |
+
+> [!WARNING]
+> **Avoid (US-Based):** Apple, Dell, HP, Microsoft (Surface), Razer, NVIDIA, Intel, AMD.
+
+---
+
 ## 👕 Clothing & Apparel
   
 | Brand | HQ | Sovereignty | Notes |
