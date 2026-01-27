@@ -11,71 +11,41 @@ interface Props {
 const { sortedYears } = Astro.props;
 ---
 
-<div>
-    <div class="w-full">
-        <div class="space-y-4" id="year-navigation">
-            {
-                sortedYears.map((yearData) => (
-                    <div class="year-item group">
+<div class="flex flex-col items-start gap-6" id="year-navigation">
+    {
+        sortedYears.map((yearData) => (
+            <div class="year-item group">
+                <button
+                    class="year-btn text-sm font-bold text-slate-400 dark:text-slate-600 hover:text-black dark:hover:text-white transition-all cursor-pointer"
+                    data-year={yearData.year}
+                >
+                    {yearData.year}
+                </button>
+                
+                <div class="month-submenu hidden mt-2 flex flex-col items-start gap-2">
+                    <div class="w-6 h-0.5 bg-black dark:bg-white mt-1"></div>
+                    {yearData.months.map((month) => (
                         <button
-                            class="year-btn w-full text-left px-0 py-2 transition-all border-l-2 border-transparent"
+                            class="month-btn text-[10px] uppercase tracking-widest text-slate-400 hover:text-black dark:hover:text-white transition-colors text-left"
+                            data-month={new Date(yearData.year, month).toLocaleDateString("en-US", {
+                                year: "numeric",
+                                month: "long",
+                            })}
                             data-year={yearData.year}
                         >
-                            <div class="flex flex-col gap-1 items-start">
-                                <span class="metadata text-sm font-bold text-secondary group-hover:text-blueprint-blue transition-colors">{yearData.year}</span>
-                                <div class="flex items-center gap-1.5 opacity-60 group-hover:opacity-100 transition-opacity">
-                                    <div class="activity-dots flex flex-col gap-0.5">
-                                        {Array.from(
-                                            {
-                                                length: Math.min(
-                                                    3,
-                                                    Math.ceil(
-                                                        Math.sqrt(
-                                                            yearData.activityCount / 5,
-                                                        ),
-                                                    ),
-                                                ),
-                                            },
-                                            () => (
-                                                <div class="w-3 h-0.5 bg-slate-400 dark:bg-slate-600" />
-                                            ),
-                                        )}
-                                    </div>
-                                </div>
-                             </div>
-                         </button>
-                         <div class="month-submenu hidden mt-2 space-y-3">
-                             {yearData.months.map((month) => (
-                                 <button
-                                      class="month-btn w-full text-left metadata text-xs font-bold text-secondary hover:text-blueprint-blue transition-colors tracking-wide"
-                                     data-month={new Date(yearData.year, month).toLocaleDateString("en-US", {
-                                         year: "numeric",
-                                         month: "long",
-                                     })}
-                                     data-year={yearData.year}
-                                 >
-                                     {new Date(
-                                         yearData.year,
-                                         month,
-                                     ).toLocaleDateString("en-US", {
-                                         month: "short",
-                                     }).toUpperCase()}
-                                 </button>
-                             ))}
-                         </div>
-                    </div>
-                ))
-            }
-        </div>
-    </div>
+                            {new Date(yearData.year, month).toLocaleDateString("en-US", { month: "short" })}
+                        </button>
+                    ))}
+                </div>
+            </div>
+        ))
+    }
 </div>
 
 <style>
+    @reference "../styles/global.css";
+    /* Active states are primarily handled by CSS in Layout.astro using [data-selected-year] */
     .year-btn.active {
-        border-left-color: #4382ff !important;
-        padding-left: 0.75rem !important;
-    }
-    .year-btn.active span {
-        color: #4382ff !important;
+        @apply text-black dark:text-white;
     }
 </style>

@@ -1,490 +1,329 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BackToGarden from "../components/Navigation/BackToGarden.astro";
-import TableOfContents from "../components/Navigation/TableOfContents.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { Image } from "astro:assets";
 import portrait from "../assets/malcolm_portrait.jpg";
+
+// This page uses specific styling from the provided mockup
 ---
 
 <Layout
-    title="About - Malcolm Bastien"
-    description="Learn about Malcolm Bastien, an Agile Coach from Toronto specializing in Agile transformation, Lean practices, and complex systems thinking."
+    title="Malcolm Bastien | Agile Coach & Professional Profile"
+    description="I’m an Agile Coach focused on improving predictability and accelerating flow using complexity and systems-thinking-based approaches to teams and work."
     type="website"
 >
-    <main class="max-w-(--breakpoint-xl) mx-auto p-4 md:p-8" data-pagefind-ignore>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
-            <aside class="lg:col-span-3">
-                <div class="lg:sticky lg:top-24 space-y-8">
-                    <TableOfContents content={"## Experience {#career-timeline}\n## Education\n### Professional Development & Certifications {#professional-development-certifications}\n## Areas of Interest\n## Testimonials"} title="About Malcolm Bastien" minHeadings={2} />
-                    <BackToGarden />
-                </div>
-            </aside>
+    <div class="max-w-7xl mx-auto px-6 pt-12 pb-20 flex flex-col md:flex-row gap-12" data-pagefind-ignore>
+        <!-- Sidebar Navigation -->
+        <aside class="hidden md:block w-56 flex-shrink-0 sticky top-24 h-fit">
+            <nav class="space-y-1" id="about-nav">
+                <p class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">On this page</p>
+                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium active" href="#intro">Intro</a>
+                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium" href="#experience">Experience</a>
+                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium" href="#certifications">Certifications</a>
+                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium" href="#interests">Areas of Interest</a>
+                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium" href="#testimonials">Testimonials</a>
+                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium" href="#education">Education</a>
+            </nav>
+            <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800">
+                <BackToGarden />
+            </div>
+        </aside>
 
-            <article class="lg:col-span-9" data-pagefind-body>
-                <div class="surface-elevation p-8 md:p-14">
-                    <div class="mb-14">
-                        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
-                            <div class="shrink-0">
-                                <Image
-                                    src={portrait}
-                                    alt="Malcolm Bastien - Agile Coach"
-                                    widths={[240, 480, portrait.width]}
-                                    sizes="(max-width: 640px) 188px, 240px"
-                                    loading="eager"
-                                    class="w-48 h-64 rounded-lg shadow-[4px_4px_0_0_#f1f5f9] dark:shadow-none border-2 border-slate-200 dark:border-slate-700 object-cover object-top"
-                                />
-                            </div>
-                            <div class="flex-1">
-                                <h1 class="text-6xl font-serif font-black text-primary tracking-tighter mb-6">
-                                    Malcolm Bastien
-                                </h1>
-                                <p class="font-sans italic text-xl text-slate-700 dark:text-slate-300 leading-tight opacity-90 mb-6">
-I’m an Agile Coach focused on improving predictability and accelerating flow using complexity and systems-thinking-based approaches to teams and work.
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-xs font-mono rounded-sm">Kanban</span>
-                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-xs font-mono rounded-sm">DDD</span>
-                                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-xs font-mono rounded-sm">Wardley Mapping</span>
-                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 text-xs font-mono rounded-sm">Team Topologies</span>
-                                    <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 text-xs font-mono rounded-sm">Complexity Thinking</span>                                </div>
-                            </div>
+        <!-- Main Content -->
+        <main class="flex-1 max-w-4xl" data-pagefind-body>
+            <!-- Intro Section -->
+            <section class="mb-20 scroll-mt-24" id="intro">
+                <div class="bg-white dark:bg-navy-800 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row gap-8 items-start">
+                    <div class="w-32 h-32 md:w-48 md:h-48 rounded-xl overflow-hidden bg-slate-200 flex-shrink-0">
+                         <Image
+                            src={portrait}
+                            alt="Malcolm Bastien Professional Portrait"
+                            widths={[240, 480, portrait.width]}
+                            sizes="(max-width: 640px) 128px, 192px"
+                            loading="eager"
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        />
+                    </div>
+                    <div class="flex-1">
+                        <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Malcolm Bastien</h1>
+                        <p class="text-xl font-serif text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                            I’m an <span class="text-emerald-500 dark:text-emerald-400 font-medium italic">Agile Coach</span> focused on improving predictability and accelerating flow using complexity and systems-thinking-based approaches to teams and work.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-mono rounded-full">Kanban</span>
+                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-mono rounded-full">OKRs</span>
+                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-mono rounded-full">Wardley Mapping</span>
+                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-mono rounded-full">Team Topologies</span>
+                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-mono rounded-full">Complexity Thinking</span>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div class="prose prose-slate dark:prose-invert prose-lg max-w-none">
-                        <h2 id="career-timeline" class="text-3xl font-serif font-bold text-primary tracking-tight mb-12 border-b border-slate-100 dark:border-slate-700 pb-4 mt-4!">
-                            Experience
-                        </h2>
+            <!-- Experience Section -->
+            <section class="mb-20 scroll-mt-24" id="experience">
+                <div class="flex items-center justify-between mb-12">
+                    <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Experience</h2>
+                    <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800 ml-6"></div>
+                </div>
 
-                        <div class="space-y-16">
-                            <div class="relative flex flex-col">
-                                <div class="flex items-center gap-6">
-                                    <div class="job-marker shrink-0"></div>
-                                    <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-1 pr-4">
-                                        <h3 class="text-2xl text-primary mt-0!">
-                                            Senior Agile Coach
-                                        </h3>
-                                        <span class="metadata text-blueprint-blue font-bold text-base">2017 – Present</span>
-                                    </div>
-                                </div>
-
-                                    <div class="ml-9 md:ml-12 surface-elevation shadow-[4px_4px_0_0_#f1f5f9] dark:shadow-none p-8 opacity-80 border border-slate-200 dark:border-slate-700">
-                                    <h4 class="text-xl font-bold text-primary mb-6 mt-0!">Agile by Design</h4>
-                                    <p class="font-sans text-slate-700 dark:text-slate-300 mb-8 leading-relaxed">
-                                        As a Senior Agile Coach, I drive business agility and cultural change using a complex systems perspective. I specialize in advanced Lean and Agile practices to optimize team performance, value delivery and improve flow.
-                                    </p>
-
-                                    <div class="space-y-8">
-                                        <div>
-                                            <h5 class="text-lg font-bold text-primary mb-4 flex items-center gap-3">
-                                                <span class="w-1.5 h-1.5 bg-blueprint-blue"></span>
-                                                🏆 High-Impact Deliverables
-                                            </h5>
-                                            <ul class="text-base font-sans  space-y-3 ml-4">
-                                                <li><strong>Healthcare & Banking Delivery:</strong> Coached high-stakes, multi-team projects, including the rollout of dozens of commercial banking APIs.</li>
-                                                <li><strong>Product & Architecture Strategy:</strong> Facilitated workshops using Mental Model Diagrams for product strategy and the C4 Model for fraud systems and international payment launches.</li>
-                                                <li><strong>Economic Prioritization:</strong> Introduced Cost of Delay (CoD), risk-assessment frameworks, and Lean UX canvases to shift Product Managers toward ROI-driven decision-making.</li>
-                                            </ul>
-                                        </div>
-
-                                        <div>
-                                            <h5 class="text-lg font-bold text-primary mb-4 flex items-center gap-3">
-                                                <span class="w-1.5 h-1.5 bg-blueprint-blue"></span>
-                                                📈 Quantitative Performance & Forecasting
-                                            </h5>
-                                            <ul class="text-base font-sans  space-y-3 ml-4">
-                                                <li><strong>Probabilistic Forecasting:</strong> Replaced "gut-feel" deadlines with Monte Carlo simulations, providing range-based delivery dates based on historical throughput.</li>
-                                                <li><strong>Flow Optimization:</strong> Used percentile-driven reporting (SLEs) and Aging WIP management to resolve bottlenecks before they impacted release dates.</li>
-                                            </ul>
-                                        </div>
-
-                                        <div>
-                                            <h5 class="text-lg font-bold text-primary mb-4 flex items-center gap-3">
-                                                <span class="w-1.5 h-1.5 bg-blueprint-blue"></span>
-                                                🧩 Organizational Design & Flow Engineering
-                                            </h5>
-                                            <ul class="text-base font-sans  space-y-3 ml-4">
-                                                <li><strong>Flight Levels:</strong> Architected multi-tier operating models for a B2B service line with an $11M budget, synchronizing strategy with operational reality.</li>
-                                                <li><strong>Sociotechnical Design:</strong> Applied Team Topologies and DDD to restructure engineering teams, reducing cognitive load and hand-off delays.</li>
-                                                <li><strong>Value Stream Engineering:</strong> Mapped Customer Onboarding and Fraud Screening processes, significantly reducing lead times and client "time-to-value."</li>
-                                                <li><strong>Collaborative Modelling:</strong> Used EventStorming to model payment processes and team workflows into effective Kanban systems.</li>
-                                            </ul>
-                                        </div>
-
-                                        <div>
-                                            <h5 class="text-lg font-bold text-primary mb-4 flex items-center gap-3">
-                                                <span class="w-1.5 h-1.5 bg-blueprint-blue"></span>
-                                                📊 Project & Program Delivery
-                                            </h5>
-                                            <ul class="text-base font-sans  space-y-3 ml-4">
-                                                <li><strong>Executive Visibility:</strong> Designed portfolio-level operating models and status updates for VPs/Executives to ensure transparent initiative health.</li>
-                                                <li><strong>Delivery Roadmaps:</strong> Led multi-team planning and estimation using relative sizing and historical data to provide realistic delivery roadmaps.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="relative flex flex-col mb-8">
-                                <div class="flex items-center gap-6">
-                                        <div class="job-marker shrink-0"></div>
-                                        <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-1 pr-4">
-                                            <h3 class="text-2xl font-bold text-primary mt-0!">
-                                                Data Analyst
-                                            </h3>
-                                            <span class="metadata text-slate-300 dark:text-slate-500 font-bold text-base">2015 – 2017</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="ml-9 md:ml-12 surface-elevation p-8 opacity-80 border border-slate-200 dark:border-slate-700">
-                                        <h4 class="text-xl font-bold text-primary mb-6 mt-0!">Chango</h4>
-                                    <p class="font-sans text-slate-700 dark:text-slate-300 mb-4 leading-relaxed">
-                                        Chango delivers a powerful platform for marketers to engage with premium audiences and target valuable individuals online. Its Intent Marketing solution applies customer intent data to programmatically drive results.
-                                    </p>
-                                    <ul class="text-base font-sans  space-y-2 ml-4">
-                                        <li>Learned about the real-time bidding and programmatic advertising space</li>
-                                        <li>Managed display advertising campaigns for various small to large clients</li>
-                                        <li>Performed advertising optimization and analysis to improve campaign performance and offer insights</li>
-                                        <li>Wrote map/reduce jobs to analyze large amounts of advertising, customer, demographic, and search data</li>
-                                        <li>Used SQL extensively to pull and join different data sets and uncover trends</li>
-                                        <li>Used Python for writing map/reduce jobs, processing data, and scripts for various purposes</li>
-                                        <li>Worked with Hustle, a next generation distributed, column oriented, relational OLAP Database</li>
-                                        <li>Created ad-hoc client reports and used Pandas for data analysis</li>
-                                    </ul>
-                                    <p class="text-base  mt-4 italic">
-                                        Chango was acquired by Rubicon Project in April 2015
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="relative flex flex-col mb-8">
-                                <div class="flex items-center gap-6">
-                                    <div class="job-marker shrink-0"></div>
-                                    <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-1 pr-4">
-                                        <h3 class="text-2xl font-bold text-primary mt-0!">
-                                            Coach
-                                        </h3>
-                                        <span class="metadata text-slate-300 dark:text-slate-500 font-bold text-base">2012 – 2016</span>
-                                    </div>
-                                </div>
-
-                                <div class="ml-9 md:ml-12 surface-elevation p-8 opacity-80 border border-slate-200 dark:border-slate-700">
-                                    <h4 class="text-xl font-bold text-primary mb-6 mt-0!">West Toronto CrossFit</h4>
-                                    <p class="font-sans  text-slate-700 dark:text-slate-300 mb-4 leading-relaxed">
-                                        As a part-time coach, I led fitness coaching and community building, helping members achieve their health and wellness goals through personalized training programs. Beyond coaching, I helped develop the West Toronto CrossFit brand, coordinated website SEO, and managed Google AdWords and Facebook advertising campaigns.
-                                    </p>
-                                    <div class="space-y-2">
-                                        <h5 class="text-xl font-bold text-blueprint-blue dark:text-white mb-2 tracking-wider">CrossFit Certifications</h5>
-                                        <ul class="text-base font-sans  space-y-2 ml-4">
-                                            <li>CrossFit Strongman Trainer Certificate</li>
-                                            <li>CrossFit Weightlifting Trainer Certificate</li>
-                                            <li>CrossFit Defense Trainer Certificate</li>
-                                            <li>CrossFit Endurance Trainer Certificate</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="relative flex flex-col">
-                                <div class="flex items-center gap-6">
-                                        <div class="job-marker shrink-0"></div>
-                                        <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-1 pr-4">
-                                            <h3 class="text-2xl font-bold text-primary mt-0!">
-                                                Marketing Specialist
-                                            </h3>
-                                            <span class="metadata text-slate-300 dark:text-slate-500 font-bold text-base">2010 – 2011</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="ml-9 md:ml-12 surface-elevation p-8 opacity-80 border border-slate-200 dark:border-slate-700">
-                                        <h4 class="text-xl font-bold text-primary mb-6 mt-0!">Microsoft</h4>
-                                    <p class="font-sans text-slate-700 dark:text-slate-300 leading-relaxed">
-                                        Responsible for organizing customer workshops across Canada focused on educating and training customers, as well as promoting the adoption of Microsoft's database, data warehousing, and business intelligence products. Worked with Microsoft partners, external agencies, and internal stakeholders to plan and execute workshop targeting, communications, and logistics. Also responsible for organizing the Canadian BizTalk Roadshow.
-                                    </p>
-                                </div>
-                            </div>
+                <div class="space-y-12">
+                    <!-- Senior Agile Coach -->
+                    <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800">
+                        <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-white dark:ring-background-dark"></div>
+                        <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Agile Coach</h3>
+                            <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 tracking-widest uppercase">2017 — Present</span>
                         </div>
-
-
-                        <h2 id="education" class="text-3xl font-serif font-bold text-primary tracking-tight border-b border-slate-100 dark:border-slate-700 pb-4">
-                            Education
-                        </h2>
-
-                          <div class="ml-9 md:ml-12 surface-elevation pl-8 mb-12 border border-slate-200 dark:border-slate-700">
-                             <h3 class="text-2xl font-bold text-primary mb-2">Toronto Metropolitan University</h3>
-                            <span class="metadata text-blueprint-blue dark:text-white font-bold text-sm block mb-4">2005 – 2010</span>
-                            <p class="font-sans text-slate-700 dark:text-slate-300">
-                                Bachelor's Degree in Business Technology Management
+                        <div class="bg-white dark:bg-navy-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Agile by Design</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                                As a Senior Agile Coach, I drive business agility and cultural change using a complex systems perspective. I specialize in advanced Lean and Agile practices to optimize team performance, value delivery and improve flow.
                             </p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <span class="material-symbols-outlined text-amber-500 mr-3 text-lg">workspace_premium</span>
+                                        <div>
+                                            <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">High-Impact Deliverables</p>
+                                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
+                                                <li>Healthcare & Banking Delivery: Coached high-stakes, multi-team projects including the rollout of dozens of commercial banking APIs.</li>
+                                                <li>Product & Architecture Strategy: Facilitated workshops using Mental Model Diagrams for product strategy.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <span class="material-symbols-outlined text-blue-500 mr-3 text-lg">trending_up</span>
+                                        <div>
+                                            <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">Quantitative Performance & Forecasting</p>
+                                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
+                                                <li>Probabilistic Forecasting: Replaced "gut feel" deadlines with Monte Carlo simulations.</li>
+                                                <li>Flow Optimization: Used percentile-driven reporting (SLEs) and Aging WIP management.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <span class="material-symbols-outlined text-emerald-500 mr-3 text-lg">account_tree</span>
+                                        <div>
+                                            <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">Organizational Design & Flow Engineering</p>
+                                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
+                                                <li>Flight Levels: Architected multi-tier operating models for B2B service lines.</li>
+                                                <li>Sociotechnical Design: Applied Team Topologies and DDD to restructure teams.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <span class="material-symbols-outlined text-purple-500 mr-3 text-lg">rocket_launch</span>
+                                        <div>
+                                            <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">Project & Program Delivery</p>
+                                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
+                                                <li>Executive Visibility: Designed portfolio-level operating models for VPs/Executives.</li>
+                                                <li>Delivery Roadmaps: Led multi-team planning using relative sizing.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
 
-                        <h3 id="professional-development-certifications" class="text-xl font-serif font-bold text-primary flex items-center gap-3">
-                             <span class="w-1.5 h-1.5 bg-blueprint-blue"></span>
-                             Professional Development & Certifications
-                         </h3>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                  <h4 class="text-xl font-bold text-blueprint-blue dark:text-white mb-4 tracking-wider">🧭 Strategy & Sensemaking</h4>
-                                  <ul class="space-y-4 text-base">
-                                       <li><span class="font-bold text-primary">Awareness in Wardley Mapping</span><br><span class="text-secondary">GCATI — 2021</span></li>
-                                       <li><span class="font-bold text-primary">Re-wilding Agile Masterclass</span></li>
-                                       <li><span class="font-bold text-primary">Wardley Mapping: Designing Epistemically Healthy Organizations</span></li>
-                                       <li><span class="font-bold text-primary">Cynefin Masterclass</span></li>
-                                       <li><span class="font-bold text-primary">Agendashift Deep Dive</span></li>
-                                  </ul>
-                            </div>
-
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                  <h4 class="text-xl font-bold text-blueprint-blue dark:text-white mb-4 tracking-wider">🏗️ Organizational Architecture</h4>
-                                  <ul class="space-y-4 text-base">
-                                       <li><span class="font-bold text-primary">Introduction to Flight Levels</span><br><span class="text-secondary">Flight Levels Academy — 2021</span></li>
-                                       <li><span class="font-bold text-primary">Flight Levels Systems Architecture</span><br><span class="text-secondary">Flight Levels Academy — 2021</span></li>
-                                       <li><span class="font-bold text-primary">Flight Level 2 Design</span><br><span class="text-secondary">Flight Levels Academy — 2022</span></li>
-                                       <li><span class="font-bold text-primary">Independent Value Streams with DDD</span><br><span class="text-secondary">Team Topologies Academy — 2022</span></li>
-                                  </ul>
-                            </div>
-
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                  <h4 class="text-xl font-bold text-blueprint-blue dark:text-white mb-4 tracking-wider">📈 Operational Flow & Kanban</h4>
-                                  <ul class="space-y-4 text-base">
-                                       <li><span class="font-bold text-primary">Kanban Management Professional</span><br><span class="text-secondary">Kanban University — 2017</span></li>
-                                       <li><span class="font-bold text-primary">Enterprise Services Planning Professional</span><br><span class="text-secondary">Kanban University — 2022</span></li>
-                                       <li><span class="font-bold text-primary">Kanban Coaching Professional Masterclass</span></li>
-                                       <li><span class="font-bold text-primary">Fast Flow of Change Workshop</span></li>
-                                  </ul>
-                            </div>
-
-                               <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                   <h4 class="text-xl font-bold text-blueprint-blue dark:text-white mb-4 tracking-wider">📊 Metrics & Forecasting</h4>
-                                    <ul class="space-y-4 text-base">
-                                        <li><span class="font-bold text-primary">Dependency Management — capture, fix, and avoid</span><br><span class="text-secondary">Focused Objective LLC — 2022</span></li>
-                                        <li><span class="font-bold text-primary">Practical Forecasting Essentials</span></li>
-                                        <li><span class="font-bold text-primary">Practical Metrics and Coaching Using Data</span></li>
-                                        <li><span class="font-bold text-primary">Data-Driven Coaching for Teams Deep-Dive</span></li>
-                                    </ul>
-                              </div>
-
-                               <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                  <h4 class="text-xl font-bold text-blueprint-blue dark:text-white mb-4 tracking-wider">🔍 Product Discovery & Engineering</h4>
-                                  <ul class="space-y-4 text-base">
-                                       <li><span class="font-bold text-primary">Specification By Example Workshop</span><br><span class="text-secondary">Avanscoperta — 2022</span></li>
-                                       <li><span class="font-bold text-primary">TPS Leadership Masterclass</span></li>
-                                       <li><span class="font-bold text-primary">Domain Storytelling Workshop</span></li>
-                                       <li><span class="font-bold text-primary">EventStorming Facilitation</span></li>
-                                       <li><span class="font-bold text-primary">Gherkin Masterclass</span></li>
-                                  </ul>
-                             </div>
-
-                               <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                  <h4 class="text-xl font-bold text-blueprint-blue dark:text-white mb-4 tracking-wider">👥 Leadership & Collaboration</h4>
-                                  <ul class="space-y-4 text-base">
-                                       <li><span class="font-bold text-primary">Level 1: Empathy Toy Training</span><br><span class="text-secondary">Twenty One Toys — 2018</span></li>
-                                       <li><span class="font-bold text-primary">Accelerated Performance Program Online Meeting Magic</span><br><span class="text-secondary">Dan Roam's Napkin Academy — 2020</span></li>
-                                       <li><span class="font-bold text-primary">Managing Virtual Teams</span><br><span class="text-secondary">LinkedIn — 2020</span></li>
-                                       <li><span class="font-bold text-primary">Executive Presence on Video Conference Calls</span><br><span class="text-secondary">LinkedIn — 2020</span></li>
-                                       <li><span class="font-bold text-primary">Technical Leadership Masterclass</span></li>
-                                  </ul>
-                             </div>
-
-                           </div>
-
-                        <h2 id="areas-of-interest" class="text-3xl font-serif font-bold text-primary tracking-tight border-b border-slate-100 dark:border-slate-700 pb-4">
-                            Areas of Interest
-                        </h2>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                 <h4 class="text-base font-bold text-blueprint-blue dark:text-slate-300 mb-4 tracking-wider">♻️ Agile & Lean Methodologies</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-mono rounded-sm">Kanban Method</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-mono rounded-sm">Scrum</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-mono rounded-sm">Continuous Improvement</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-mono rounded-sm">Iterative Development</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-mono rounded-sm">XP (Extreme Programming)</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-mono rounded-sm">Lean</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-mono rounded-sm">Toyota Production System</span>
-                                </div>
-                            </div>
-
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                 <h4 class="text-base font-bold text-blueprint-blue dark:text-white mb-4 tracking-wider">📦 Product Management</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 text-sm font-mono rounded-sm">Product Strategy</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 text-sm font-mono rounded-sm">Roadmapping</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 text-sm font-mono rounded-sm">Backlog Management</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 text-sm font-mono rounded-sm">User Research</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 text-sm font-mono rounded-sm">Product-Market Fit</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 text-sm font-mono rounded-sm">Value Proposition Design</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 text-sm font-mono rounded-sm">Lean UX</span>
-                                </div>
-                            </div>
-
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                 <h4 class="text-base font-bold text-slate-700 dark:text-slate-300 mb-4 tracking-wider">🗺️ Planning & Project Management</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-mono rounded-sm">OKRs</span>
-                                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-mono rounded-sm">Cost of Delay</span>
-                                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-mono rounded-sm">Risk Management</span>
-                                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-mono rounded-sm">Portfolio Management</span>
-                                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-mono rounded-sm">Dependency Management</span>
-                                </div>
-                            </div>
-
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                 <h4 class="text-base font-bold text-pink-800 dark:text-pink-300 mb-4 tracking-wider">🧩 Team Building & Leadership</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-300 text-sm font-mono rounded-sm">Team Dynamics</span>
-                                    <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-300 text-sm font-mono rounded-sm">Psychological Safety</span>
-                                    <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-300 text-sm font-mono rounded-sm">Self-organization</span>
-                                    <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-300 text-sm font-mono rounded-sm">Organizational Culture</span>
-                                    <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-300 text-sm font-mono rounded-sm">Team Topologies</span>
-                                </div>
-                            </div>
-
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                 <h4 class="text-base font-bold text-emerald-600 dark:text-emerald-300 mb-4 tracking-wider">🤝 Collaborative Modeling</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-sm font-mono rounded-sm">Story Mapping</span>
-                                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-sm font-mono rounded-sm">Impact Mapping</span>
-                                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-sm font-mono rounded-sm">Spec by Example</span>
-                                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-sm font-mono rounded-sm">Wardley Mapping</span>
-                                </div>
-                            </div>
-
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                 <h4 class="text-base font-bold text-purple-600 dark:text-purple-300 mb-4 tracking-wider">🕸️ Systems & Complexity Thinking</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm font-mono rounded-sm">Complex Adaptive Systems</span>
-                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm font-mono rounded-sm">Systems Thinking</span>
-                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm font-mono rounded-sm">Feedback Loops</span>
-                                </div>
-                            </div>
-
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                 <h4 class="text-base font-bold text-emerald-600 dark:text-emerald-300 mb-4 tracking-wider">🏰 Domain Driven Design</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-sm font-mono rounded-sm">Domain Modeling</span>
-                                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-sm font-mono rounded-sm">Bounded Contexts</span>
-                                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-sm font-mono rounded-sm">Context Mapping</span>
-                                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-sm font-mono rounded-sm">EventStorming</span>
-                                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-sm font-mono rounded-sm">Domain Storytelling</span>
-                                </div>
-                            </div>
-
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                 <h4 class="text-base font-bold text-orange-600 dark:text-orange-300 mb-4 tracking-wider">🎯 Strategy & Leadership</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 text-sm font-mono rounded-sm">Strategic Planning</span>
-                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 text-sm font-mono rounded-sm">Change Management</span>
-                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 text-sm font-mono rounded-sm">Team Leadership</span>
-                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 text-sm font-mono rounded-sm">Coaching</span>
-                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 text-sm font-mono rounded-sm">Facilitation</span>
-                                </div>
-                            </div>
-
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                 <h4 class="text-base font-bold text-blueprint-blue dark:text-white mb-4 tracking-wider">⚖️ Value & Dependency Management</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 text-sm font-mono rounded-sm">Dependency Management</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 text-sm font-mono rounded-sm">Value Stream Mapping</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 text-sm font-mono rounded-sm">Portfolio Management</span>
-                                </div>
-                            </div>
-
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                 <h4 class="text-base font-bold text-teal-600 dark:text-teal-300 mb-4 tracking-wider">📚 Knowledge Management</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 text-sm font-mono rounded-sm">Personal Knowledge Management</span>
-                                    <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 text-sm font-mono rounded-sm">Digital Gardens</span>
-                                    <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 text-sm font-mono rounded-sm">Zettelkasten</span>
-                                    <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 text-sm font-mono rounded-sm">Note-taking</span>
-                                    <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 text-sm font-mono rounded-sm">Obsidian</span>
-                                    <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 text-sm font-mono rounded-sm">Logseq</span>
-                                    <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 text-sm font-mono rounded-sm">Org Mode</span>
-                                </div>
-                            </div>
-
-                              <div class="surface-elevation pt-2 pb-6 px-6 border border-slate-200 dark:border-slate-700">
-                                 <h4 class="text-base font-bold text-amber-800 dark:text-amber-300 mb-4 tracking-wider">💻 Technology</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 text-sm font-mono rounded-sm">Mechanical Keyboards</span>
-                                    <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 text-sm font-mono rounded-sm">Ergonomics</span>
-                                    <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 text-sm font-mono rounded-sm">Video Games</span>
-                                    <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 text-sm font-mono rounded-sm">Coffee</span>
-                                    <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 text-sm font-mono rounded-sm">Linux</span>
-                                    <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 text-sm font-mono rounded-sm">Alternative Keyboard Layouts</span>
-                                    <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 text-sm font-mono rounded-sm">EUCs</span>
-                                    <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 text-sm font-mono rounded-sm">Fitness</span>
-                                </div>
-                            </div>
-
+                    <!-- Data Analyst -->
+                    <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800">
+                        <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-background-dark"></div>
+                        <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Data Analyst</h3>
+                            <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">2013 — 2017</span>
                         </div>
-
-                        <h2 id="testimonials" class="text-3xl font-serif font-bold text-primary tracking-tight mb-12 border-b border-slate-100 dark:border-slate-700 pb-4">
-                            Testimonials
-                        </h2>
-
-                        <div class="space-y-6">
-
-                              <blockquote class="surface-elevation p-8 border-l-4 border border-slate-200 dark:border-slate-700">
-                                <p class="text-slate-700 dark:text-slate-300 italic text-lg leading-relaxed mb-4">
-                                    I had the pleasure of working with Malcolm on a large-scale transformation initiative, and I can confidently say he is one of the most skilled and inspiring Agile Coaches I've had the opportunity to collaborate with.
-                                    <br><br>
-                                    Malcolm brings a rare combination of deep Agile expertise, strong leadership, and genuine empathy. He has an exceptional ability to connect with teams, meet them where they are, and guide them toward higher levels of agility and collaboration. His coaching style is both practical and empowering - he doesn't just teach Agile principles; he lives them every day.
-                                    <br><br>
-                                    What stood out most about Malcolm was his patience, active listening, and his talent for fostering trust and psychological safety within teams. He continuously encouraged transparency, adaptability, and continuous improvement, helping teams not only deliver better outcomes but also enjoy the process.
-                                    <br><br>
-                                    Beyond his technical and coaching capabilities, Malcolm is simply a pleasure to work with - positive, insightful, and consistently supportive. Any organization would be lucky to have him leading their Agile journey.
-                                </p>
-                                <cite class="text-secondary font-medium not-italic block mt-4">
-                                    — Management Consultant
-                                </cite>
-                            </blockquote>
-
-                              <blockquote class="surface-elevation p-8 border-l-4 border border-slate-200 dark:border-slate-700">
-                                <p class="text-slate-700 dark:text-slate-300 italic text-lg leading-relaxed mb-4">
-                                    I had the pleasure of working with Malcolm several years ago. He played a key role as an Agile Coach, helping guide the team through priorities, sprint ceremonies, and cross-functional collaboration.
-                                    <br><br>
-                                    Even after many years, I still remember his calm presence and thoughtful facilitation style. I'm happy to recommend him to any team looking for strong agile support and collaborative delivery leadership.
-                                </p>
-                                <cite class="text-secondary font-medium not-italic block mt-4">
-                                    — Senior Product Manager
-                                </cite>
-                            </blockquote>
-
-                            <blockquote class="surface-elevation p-8 border-l-4 border border-slate-200 dark:border-slate-700">
-                                <p class="text-slate-700 dark:text-slate-300 italic text-lg leading-relaxed mb-4">
-                                    I was fortunate to work with Malcolm as our Senior Agile coach, and his impact on our team was remarkable. He brought not only deep expertise in Agile practices but also a genuine ability to coach, mentor, and empower individuals to grow. His facilitation skills, leadership, and focus on continuous improvement helped our team deliver with higher efficiency and stronger collaboration. Beyond process, he built trust and created a safe environment where everyone felt heard and motivated. Malcolm is an exceptional Agile Coach and a true asset to any organization.
-                                </p>
-                                <cite class="text-secondary font-medium not-italic block mt-4">
-                                    — Tech Lead
-                                </cite>
-                            </blockquote>
-
-                            <blockquote class="surface-elevation p-8 border-l-4 border border-slate-200 dark:border-slate-700">
-                                <p class="text-slate-700 dark:text-slate-300 italic text-lg leading-relaxed mb-4">
-                                    I had the pleasure of working with Malcolm at ..., where his guidance as an Agile Coach made a big impact on our team. He brought clarity, patience, and practical insights that helped us improve collaboration and deliver better outcomes. I'd highly recommend him to any organization looking to strengthen their Agile practices.
-                                </p>
-                                <cite class="text-secondary font-medium not-italic block mt-4">
-                                    — Developer
-                                </cite>
-                            </blockquote>
-
-                            <blockquote class="surface-elevation p-8 border-l-4 border border-slate-200 dark:border-slate-700">
-                                <p class="text-slate-700 dark:text-slate-300 italic text-lg leading-relaxed mb-4">
-                                    I had the pleasure of working with Malcolm at ..., he was always a pleasure to work with, good for a joke or two but also an insightful discussion. Whenever I collaborated with Malcolm he instilled confidence into what I was doing and highlighted different perspectives on the task at hand, which I greatly appreciated. His consultation always left me thinking about ways to improve the approach we were taking. Aside from helping with deliverables, Malcolm was also a culture catalyst and made the work, dare I say, fun at times! I highly recommend Malcolm to any team looking for an Agile coach.
-                                </p>
-                                <cite class="text-secondary font-medium not-italic block mt-4">
-                                    — Technical Navigator
-                                </cite>
-                            </blockquote>
+                        <div class="bg-white/50 dark:bg-navy-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Chango</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic mb-4">Acquired by Rubicon Project in April 2015</p>
+                            <ul class="text-sm text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-5">
+                                <li>Learned about real-time bidding and programmatic advertising space.</li>
+                                <li>Managed display advertising campaigns for various small to large clients.</li>
+                                <li>Used SQL extensively to pull and join different data sets and uncover trends.</li>
+                                <li>Created ad-hoc client reports and used Pandas for data analysis.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </article>
-        </div>
-        <SiteFooter />
-    </main>
+            </section>
+
+            <!-- Certifications Grid -->
+            <section class="mb-20 scroll-mt-24" id="certifications">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Professional Development & Certifications</h2>
+                    <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800 ml-6"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <span class="material-symbols-outlined text-amber-500 mr-2">explore</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Strategy & Sensemaking</h4>
+                        </div>
+                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
+                            <li class="flex justify-between"><span>Awareness in Wardley Mapping</span> <span class="text-slate-400 uppercase font-mono">GCAT • 2021</span></li>
+                            <li class="flex justify-between"><span>Cynefin Masterclass</span> <span class="text-slate-400 uppercase font-mono">Cognitive Edge</span></li>
+                            <li class="flex justify-between"><span>Agendashift Deep Dive</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <span class="material-symbols-outlined text-blue-500 mr-2">architecture</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Organizational Architecture</h4>
+                        </div>
+                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
+                            <li class="flex justify-between"><span>Introduction to Flight Levels</span> <span class="text-slate-400 uppercase font-mono">FL Academy • 2021</span></li>
+                            <li class="flex justify-between"><span>Flight Levels Systems Architecture</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
+                            <li class="flex justify-between"><span>Independent Value Streams with DDD</span> <span class="text-slate-400 uppercase font-mono">2022</span></li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <span class="material-symbols-outlined text-emerald-500 mr-2">sync_alt</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Operational Flow & Kanban</h4>
+                        </div>
+                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
+                            <li class="flex justify-between"><span>Kanban Management Professional</span> <span class="text-slate-400 uppercase font-mono">2017</span></li>
+                            <li class="flex justify-between"><span>Enterprise Services Planning</span> <span class="text-slate-400 uppercase font-mono">2022</span></li>
+                            <li class="flex justify-between"><span>Kanban Coaching Professional</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <span class="material-symbols-outlined text-purple-500 mr-2">query_stats</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Metrics & Forecasting</h4>
+                        </div>
+                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
+                            <li class="flex justify-between"><span>Dependency Management</span> <span class="text-slate-400 uppercase font-mono">Focused Objective</span></li>
+                            <li class="flex justify-between"><span>Practical Metrics for Coaching</span> <span class="text-slate-400 uppercase font-mono">2022</span></li>
+                            <li class="flex justify-between"><span>Data Driven Coaching for Teams</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Areas of Interest -->
+            <section class="mb-20 scroll-mt-24" id="interests">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Areas of Interest</h2>
+                    <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800 ml-6"></div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-xs mr-2">psychology</span> Agile & Lean
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Kanban</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Scrum</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Continuous Improvement</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Flow</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-xs mr-2">groups</span> Leadership
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Team Dynamics</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Self-Organization</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Team Topologies</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-xs mr-2">layers</span> Systems
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Domain Driven Design</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Complexity</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Cybernetics</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="mb-20 scroll-mt-24" id="testimonials">
+                <div class="flex items-center justify-between mb-12">
+                    <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Testimonials</h2>
+                    <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800 ml-6"></div>
+                </div>
+                <div class="space-y-12">
+                    <blockquote class="relative pl-8 border-l-4 border-blue-600 dark:border-blue-500">
+                        <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
+                            "I had the pleasure of working with Malcolm on a large-scale transformation initiative, and I can confidently say he is one of the most skilled and inspiring Agile Coaches I've had the opportunity to collaborate with. Malcolm brings a rare combination of deep Agile expertise, strong leadership, and genuine empathy."
+                        </p>
+                        <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Management Consultant</footer>
+                    </blockquote>
+                    <blockquote class="relative pl-8 border-l-4 border-slate-400 dark:border-slate-600">
+                        <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
+                            "Even after many years, I still remember his calm presence and thoughtful facilitation style. I'm happy to recommend him to any team looking for strong agile support and collaborative delivery leadership."
+                        </p>
+                        <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Senior Product Manager</footer>
+                    </blockquote>
+                    <blockquote class="relative pl-8 border-l-4 border-blue-600/30 dark:border-blue-500/30">
+                        <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
+                            "I was fortunate to work with Malcolm as our Senior Agile Coach, and his impact on our team was remarkable. He brought not only deep expertise in Agile practices but also a genuine ability to coach, mentor, and empower individuals to grow."
+                        </p>
+                        <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Tech Lead</footer>
+                    </blockquote>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="mb-20 scroll-mt-24" id="education">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Education</h2>
+                    <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800 ml-6"></div>
+                </div>
+                <div class="bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex items-center justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Toronto Metropolitan University</h3>
+                        <p class="text-slate-500 dark:text-slate-400">Bachelor's Degree in Business Technology Management</p>
+                    </div>
+                    <span class="text-sm font-mono text-slate-400 uppercase">2008 — 2013</span>
+                </div>
+            </section>
+        </main>
+    </div>
+    <SiteFooter />
 </Layout>
+
+<style is:global>
+    @reference "../styles/global.css";
+
+    .sidebar-link.active {
+        @apply text-blue-600 dark:text-blue-400 font-bold;
+    }
+</style>
+
+<script>
+    // Simple scroll spy for sidebar highlighting
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.sidebar-link');
+    
+    function updateActiveLink() {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = (section as HTMLElement).offsetTop;
+            if (window.scrollY >= sectionTop - 150) {
+                current = section.getAttribute('id') || '';
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveLink);
+    // Run once on load
+    updateActiveLink();
+</script>

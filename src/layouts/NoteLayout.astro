@@ -49,6 +49,24 @@ const formatDate = (date: Date) => {
         day: "numeric",
     });
 };
+
+const getStageColorClass = (stage: string) => {
+    switch(stage) {
+        case 'seed': return 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400';
+        case 'sprout': return 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400';
+        case 'evergreen': return 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400';
+        default: return 'bg-slate-100 dark:bg-slate-800 text-slate-500';
+    }
+}
+
+const getStageDotClass = (stage: string) => {
+     switch(stage) {
+        case 'seed': return 'bg-emerald-500';
+        case 'sprout': return 'bg-blue-500';
+        case 'evergreen': return 'bg-emerald-500';
+        default: return 'bg-slate-400';
+    }
+}
 ---
 
 <Layout
@@ -60,393 +78,122 @@ const formatDate = (date: Date) => {
     modifiedTime={hasBeenUpdated ? gitUpdated!.toISOString() : undefined}
     tags={frontmatter.tags}
 >
-    <main class="max-w-(--breakpoint-xl) mx-auto p-4 md:p-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
-            <!-- Primary Stream (Col 1-9) -->
-            <article
-                class={`lg:col-span-9 ${isNoteDraft ? "note-is-draft relative" : ""}`}
-                data-pagefind-body
-            >
-                <div class="surface-elevation p-8 md:p-14 shadow-[8px_8px_0_0_#f1f5f9] dark:shadow-none">
-                     <header class="mb-10 border-b border-slate-100 dark:border-slate-700 pb-6">
-                         <div class="flex justify-between items-center mb-8">
-                             <span class={`metadata text-xs font-bold text-signal-${frontmatter.stage}`}>
-                                 {frontmatter.stage.toUpperCase()}
-                             </span>
-                         </div>
-                        <h1 class="text-5xl md:text-6xl font-serif font-black text-primary tracking-tighter mb-8 leading-tight">
-                            {frontmatter.title}
-                        </h1>
-                        <div class="flex flex-wrap items-center gap-6 text-xs metadata-secondary font-bold mb-4">
-                            <div class="flex items-center gap-2">
-                                <span class="opacity-80">PUBLISHED:</span>
-                                <time datetime={createdDate.toISOString()} class="text-primary">{formatDate(createdDate).toUpperCase()}</time>
-                            </div>
-                            {hasBeenUpdated && (
-                                <div class="flex items-center gap-2 pl-6 border-l border-slate-100 dark:border-slate-600">
-                                    <span class="opacity-80">MODIFIED:</span>
-                                    <time datetime={gitUpdated!.toISOString()} class="text-primary">{formatDate(gitUpdated!).toUpperCase()}</time>
-                                </div>
-                            )}
-                             {readingTime && (
-                                 <div class="flex items-center gap-2 pl-6 border-l border-slate-100 dark:border-slate-600">
-                                     <span class="opacity-80">READ TIME:</span>
-                                     <span class="text-primary">{readingTime.toUpperCase()}</span>
-                                 </div>
-                             )}
-                        </div>
-                        {frontmatter.tags && frontmatter.tags.length > 0 && (
-                             <div class="flex items-center gap-2 text-xs metadata-secondary font-bold">
-                                 <span class="opacity-80">TOPICS:</span>
-                                 <div class="flex flex-wrap gap-2">
-                                     {frontmatter.tags.map(tag => <a href={`/topics/${encodeURIComponent(tag)}`} class="inline-tag font-bold">#{tag}</a>)}
-                                 </div>
-                             </div>
-                         )}
-                    </header>
-                    <div class="prose prose-lg prose-slate dark:prose-invert max-w-none prose-headings:font-serif prose-headings:font-bold prose-headings:tracking-tight prose-a:text-blueprint-blue prose-img:border prose-img:border-slate-100 dark:prose-img:border-slate-700">
-                        <slot />
-                    </div>
+    <main class="max-w-7xl mx-auto px-4 py-8 lg:grid lg:grid-cols-12 lg:gap-12 items-start">
+        <!-- Left Sidebar (Col 1-2) -->
+        <aside class="hidden lg:block lg:col-span-2 sticky top-24 h-[calc(100vh-6rem)] overflow-y-auto pr-4 no-scrollbar">
+            <div class="space-y-8">
+                <div>
+                    <BackToGarden class="mb-8" />
+
+                    <h4 class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">
+                        {frontmatter.title}
+                    </h4>
+
+                    <TableOfContents
+                        content={noteBody || ""}
+                        title={frontmatter.title}
+                        headings={headings}
+                        minHeadings={2}
+                    />
                 </div>
-
-                <!-- Note History -->
-                <div class="mt-12">
-                    <div class="bg-tooling-gray dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-8 font-mono">
-                        <div class="flex items-center gap-3 mb-8 border-b border-slate-200 dark:border-slate-700 pb-4">
-                            <div class="w-2 h-2 bg-blueprint-blue rounded-full animate-pulse"></div>
-                            <h3 class="metadata text-xs font-bold text-primary tracking-widest">Changelog</h3>
-                        </div>
-                        <NoteHistory filePath={filePath} />
-                    </div>
-                </div>
-
-                <!-- Backlinks -->
-                <div class="mt-16">
-                    <Backlinks backlinkedNotes={backlinkedNotes} />
-                </div>
-
-                <!-- Back to Garden -->
-                <div class="mt-12">
-                    <BackToGarden />
-                </div>
-            </article>
-
-            <!-- Contextual Side (Col 10-12) -->
-            <div class="lg:col-span-3">
-                 <div class="lg:sticky lg:top-24 space-y-6">
-                      <TableOfContents
-                          content={noteBody || ""}
-                          title={frontmatter.title}
-                          headings={headings}
-                      />
-
-                        <AboutAuthor class="mt-6" />
-                       <BackToGarden />
-                     </div>
-                 </div>
             </div>
-        </div>
-    <SiteFooter />
+        </aside>
+
+        <!-- Main Content (Col 3-9) -->
+        <article
+            class={`lg:col-span-7 bg-white dark:bg-navy-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden ${isNoteDraft ? "note-is-draft relative" : ""}`}
+            data-pagefind-body
+        >
+            <div class="px-8 pt-10 pb-6 border-b border-slate-100 dark:border-slate-800">
+                <div 
+                    class={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full ${getStageColorClass(frontmatter.stage)} text-[10px] font-bold uppercase tracking-wider mb-6`}
+                    data-pagefind-filter="stage"
+                    data-pagefind-meta={`stage:${frontmatter.stage}`}
+                >
+                    <span class={`w-2 h-2 rounded-full ${getStageDotClass(frontmatter.stage)}`}></span>
+                    {frontmatter.stage}
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-extrabold text-black dark:text-white leading-tight mb-6">
+                    {frontmatter.title}
+                </h1>
+
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-500 dark:text-slate-400">
+                    <div class="flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-base">calendar_today</span>
+                        Published: <span class="font-medium text-slate-700 dark:text-slate-300">{formatDate(createdDate)}</span>
+                    </div>
+                    {readingTime && (
+                        <div class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-base">schedule</span>
+                            Read Time: <span class="font-medium text-slate-700 dark:text-slate-300">{readingTime}</span>
+                        </div>
+                    )}
+                    <div class="flex items-center gap-2">
+                        {frontmatter.tags.map(tag => (
+                            <a 
+                                href={`/topics/${tag}`} 
+                                class="bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded text-xs font-mono hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                            >
+                                #{tag}
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-8 prose prose-slate dark:prose-invert prose-lg max-w-none font-serif leading-relaxed">
+                <slot />
+
+                {backlinkedNotes.length > 0 && (
+                    <div class="mt-16 pt-8 border-t border-slate-100 dark:border-slate-800">
+                        <Backlinks backlinkedNotes={backlinkedNotes} />
+                    </div>
+                )}
+            </div>
+
+            <footer class="bg-slate-50 dark:bg-navy-900/80 p-8 border-t border-slate-100 dark:border-slate-800">
+                <div class="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    Changelog
+                </div>
+                {/* Brief history summary for footer */}
+                <NoteHistory filePath={filePath} />
+            </footer>
+        </article>
+
+        <!-- Right Sidebar (Col 10-12) -->
+        <aside class="hidden lg:block lg:col-span-3 space-y-8 sticky top-24">
+            <AboutAuthor />
+        </aside>
     </main>
+
+    <footer class="max-w-7xl mx-auto px-4 py-12 border-t border-slate-200 dark:border-slate-800 mt-12 text-center text-sm text-slate-500">
+        <div class="flex flex-col items-center gap-4">
+            <p>© 2026 Malcolm Bastien</p>
+        </div>
+    </footer>
 
     <ImageLightbox />
 
     <style is:global>
       @reference "../styles/global.css";
 
-      .map-dot {
-        @apply w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700;
+      .prose blockquote {
+          border-left-color: var(--color-primary);
+          font-style: italic;
       }
-
-      /* Headers */
-      .map-dot-h1, .map-dot-h2 {
-        @apply w-2.5 h-2.5 bg-slate-400 dark:bg-slate-500;
+      .prose h2, .prose h3 {
+          font-family: 'Inter', sans-serif;
+          @apply text-navy-900 dark:text-slate-100 font-bold tracking-tight;
       }
-      .map-dot-h3, .map-dot-h4 {
-        @apply w-2 h-2 bg-slate-400 dark:bg-slate-600;
-      }
-
-      /* Callouts */
-      .map-dot-callout {
-        @apply w-2.5 h-2.5;
-      }
-      .map-dot-note, .map-dot-info, .map-dot-todo { @apply bg-blueprint-blue; box-shadow: var(--shadow-blueprint); }
-      .map-dot-tip, .map-dot-success, .map-dot-done, .map-dot-check, .map-dot-idea { @apply bg-andon-emerald; box-shadow: 0 0 8px rgba(34, 197, 94, 0.5); }
-      .map-dot-important, .map-dot-abstract, .map-dot-summary, .map-dot-tldr { @apply bg-blueprint-blue; box-shadow: var(--shadow-blueprint); }
-      .map-dot-warning, .map-dot-caution, .map-dot-attention { @apply bg-andon-amber shadow-[0_0_8px_rgba(245,158,11,0.5)]; }
-      .map-dot-question, .map-dot-help, .map-dot-faq { @apply bg-andon-amber shadow-[0_0_8px_rgba(245,158,11,0.5)]; }
-      .map-dot-failure, .map-dot-fail, .map-dot-missing, .map-dot-danger, .map-dot-error { @apply bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.5)]; }
-      .map-dot-bug { @apply bg-rose-600 shadow-[0_0_8px_rgba(225,29,72,0.5)]; }
-      .map-dot-example { @apply bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.5)]; }
-      .map-dot-quote, .map-dot-cite { @apply bg-slate-400 dark:bg-slate-500; }
-
-      /* Images */
-      .map-dot-image {
-        @apply bg-blueprint-blue;
-      }
-
-      /* Lists */
-      .map-dot-list, .map-dot-ordered-list {
-        @apply bg-slate-300;
-      }
-
-      /* Quotes */
-      .map-dot-quote {
-        @apply bg-blueprint-blue opacity-50;
-      }
-
-      /* Code */
-      .map-dot-code {
-        @apply bg-terminal-dark;
-      }
-
-      /* Tables */
-      .map-dot-table {
-        @apply bg-blueprint-blue;
-      }
-
-      /* Paragraphs */
-      .map-dot-p {
-        @apply bg-slate-400 dark:bg-slate-500;
-      }
-
-      /* Draft */
-      .map-dot-draft, .map-dot-wip {
-        @apply bg-transparent border border-slate-400 dark:border-slate-500 border-dashed scale-110;
-      }
-
-      .inline-tag {
-        @apply no-underline px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/30 text-blueprint-blue dark:text-blue-400 font-medium hover:opacity-80 transition-opacity border border-blue-100 dark:border-blue-800/50;
-      }
-
-      .article-img, article img {
-        @apply transition-transform duration-200 hover:scale-[1.01] active:scale-[0.99] cursor-zoom-in;
-      }
-
-      /* Image Captions */
-      .prose p:has(img):has(em) {
-        @apply flex flex-col items-center mb-8 text-center;
-      }
-
-      .prose p:has(img):has(em) img {
-        @apply mb-0;
-      }
-
-        .prose p:has(img):has(em) em {
-            @apply text-sm text-neutral-text-light dark:text-neutral-metadata-dark mt-1 not-italic;
-        }
-
-      .prose p:has(> img:only-child),
-      .prose p:has(> a > img:only-child) {
-        @apply flex justify-center mb-8;
-      }
-
-      /* Disable automatic quotes on blockquotes */
-      .prose blockquote p:first-of-type::before {
-        content: none;
-      }
-      .prose blockquote p:last-of-type::after {
-        content: none;
-      }
-
-      /* Photo Gallery (Masonry Layout) */
-      .photo-gallery {
-        column-count: 1;
-        column-gap: 1.5rem;
-        @apply mb-12;
-      }
-
-      @media (min-width: 640px) {
-        .photo-gallery {
-          column-count: 2;
-        }
-      }
-
-      @media (min-width: 1024px) {
-        .photo-gallery {
-          column-count: 3;
-        }
-      }
-
-      .gallery-item {
-        break-inside: avoid;
-        @apply mb-6 flex flex-col items-center h-auto relative overflow-hidden rounded-xl cursor-zoom-in;
-      }
-
-      .gallery-item:hover img {
-        @apply scale-[1.02];
-      }
-
-      .gallery-item img {
-        @apply m-0 w-full h-auto object-cover rounded-xl shadow-sm transition-all duration-500 ease-out;
-      }
-
-      .gallery-item em {
-        @apply absolute bottom-0 left-0 right-0 p-4 pt-8 text-sm text-white not-italic opacity-0 translate-y-2 transition-all duration-300 ease-out pointer-events-none z-10;
-        background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
-      }
-
-      .gallery-item:hover em {
-        @apply opacity-100 translate-y-0;
-      }
-
-      @media (max-width: 640px) {
-        .photo-gallery {
-          @apply gap-4;
-          grid-template-columns: 1fr;
-        }
-      }
+      .prose h2 { @apply text-3xl mt-12 mb-6; }
+      .prose h3 { @apply text-xl mt-8 mb-4; }
 
       /* Note Styles */
       .note-is-draft::after {
         content: "DRAFT_NODE";
-        @apply absolute top-4 right-4 bg-blueprint-blue text-white text-xs font-mono font-bold px-3 py-1 z-50;
-      }
-
-      .note-draft-banner {
-        @apply flex items-center gap-6 p-8 mb-12 bg-tooling-gray border border-slate-200 text-terminal-dark;
+        @apply absolute top-4 right-4 bg-blue-500 text-white text-xs font-mono font-bold px-3 py-1 z-50;
       }
     </style>
-
-    <script>
-       function initContentMap() {
-           const content = document.querySelector('.prose');
-           const map = document.getElementById('content-map');
-           const container = document.getElementById('content-map-container');
-
-           if (!content || !map || !container) return;
-
-           // Clear existing
-           map.innerHTML = '';
-
-           const elements = Array.from(content.children);
-           const indicators: HTMLElement[] = [];
-
-           elements.forEach((el, index) => {
-               const tag = el.tagName.toLowerCase();
-
-               // Filter out elements that are too small or likely metadata (like scripts/styles)
-               if (el instanceof HTMLElement && el.offsetHeight < 5 && !tag.startsWith('h')) return;
-
-               const dot = document.createElement('div');
-               dot.className = 'map-dot';
-
-               // Assign ID to element for scrolling if it doesn't have one
-               if (!el.id) el.id = `content-node-${index}`;
-
-               // Determine type
-               if (tag.startsWith('h')) {
-                   dot.classList.add(`map-dot-${tag}`);
-               } else if (el.classList.contains('markdown-alert')) {
-                   dot.classList.add('map-dot-callout');
-                   const alertType = Array.from(el.classList)
-                       .find(c => c.startsWith('markdown-alert-'))
-                       ?.replace('markdown-alert-', '');
-                   if (alertType) dot.classList.add(`map-dot-${alertType}`);
-               } else if (el.classList.contains('draft-container')) {
-                   dot.classList.add('map-dot-draft');
-               } else if (tag === 'img' || tag === 'picture' || tag === 'figure') {
-                   dot.classList.add('map-dot-image');
-               } else if (tag === 'ul') {
-                   dot.classList.add('map-dot-list');
-               } else if (tag === 'ol') {
-                   dot.classList.add('map-dot-ordered-list');
-               } else if (tag === 'blockquote') {
-                   dot.classList.add('map-dot-quote');
-               } else if (tag === 'pre' || tag === 'code') {
-                   dot.classList.add('map-dot-code');
-               } else if (tag === 'table') {
-                   dot.classList.add('map-dot-table');
-               } else if (tag === 'p' || tag === 'div') {
-                   dot.classList.add('map-dot-p');
-               } else {
-                   // Skip hidden or metadata elements
-                   if (el.getBoundingClientRect().height === 0) return;
-                   dot.classList.add('map-dot-other');
-               }
-
-
-
-               map.appendChild(dot);
-               indicators.push(dot);
-               (dot as any).targetElement = el;
-           });
-
-           if (indicators.length > 0) {
-               container.classList.remove('hidden');
-               setTimeout(() => container.style.opacity = '1', 100);
-           }
-
-
-       }
-
-       function initTOCHighlighting() {
-           const tocLinks = document.querySelectorAll('.toc-link');
-           if (tocLinks.length === 0) return;
-
-           // Get all headings in the article
-           const headings = document.querySelectorAll('article h1, article h2, article h3, article h4, article h5, article h6');
-
-           const observerOptions = {
-               root: null,
-               rootMargin: '-80px 0px -80% 0px', // Trigger when heading is near top
-               threshold: 0
-           };
-
-           const observer = new IntersectionObserver((entries) => {
-               entries.forEach(entry => {
-                   if (entry.isIntersecting) {
-                       // Remove active class from all TOC links
-                       tocLinks.forEach(link => link.classList.remove('active'));
-
-                       // Add active class to the corresponding TOC link
-                       const tocLink = document.getElementById(`toc-${entry.target.id}`);
-                       if (tocLink) {
-                           tocLink.classList.add('active');
-                       }
-                   }
-               });
-           }, observerOptions);
-
-           // Observe all headings
-           headings.forEach(heading => {
-               observer.observe(heading);
-           });
-        }
-
-         // Add click handlers for immediate active state updates
-         function initTOCClickHandlers() {
-             const tocLinks = document.querySelectorAll('.toc-link');
-             tocLinks.forEach(link => {
-                 link.addEventListener('click', (e) => {
-                     e.preventDefault();
-                      const href = link.getAttribute('href');
-                      if (href === '#') {
-                          window.scrollTo({ top: 0, behavior: 'smooth' });
-                      } else if (href && href.startsWith('#')) {
-                          const targetId = decodeURIComponent(href.slice(1));
-                          const targetElement = document.getElementById(targetId);
-                          if (targetElement) {
-                              targetElement.scrollIntoView({ behavior: 'smooth' });
-                          }
-                      }
-                     // Immediately update active state
-                     tocLinks.forEach(l => l.classList.remove('active'));
-                     link.classList.add('active');
-                 });
-             });
-         }
-
-        // Run on load
-        initContentMap();
-        initTOCHighlighting();
-        initTOCClickHandlers();
-
-        // Re-run on Astro navigation
-        document.addEventListener('astro:after-swap', () => {
-            initContentMap();
-            initTOCHighlighting();
-            initTOCClickHandlers();
-        });
-    </script>
 </Layout>

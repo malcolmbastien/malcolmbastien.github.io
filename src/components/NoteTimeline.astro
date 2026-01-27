@@ -32,9 +32,18 @@ sortedEvents.forEach((event) => {
     eventBatchStatus.set(event, count < 10);
     yearCounters.set(year, count + 1);
 });
+
+const getStageColorClass = (stage: string) => {
+    switch(stage) {
+        case 'seed': return 'text-seed bg-amber-50 dark:bg-amber-900/30';
+        case 'sprout': return 'text-sprout bg-blue-50 dark:bg-blue-900/30';
+        case 'evergreen': return 'text-evergreen bg-emerald-50 dark:bg-emerald-900/30';
+        default: return 'text-slate-400 bg-slate-50 dark:bg-slate-900/30';
+    }
+}
 ---
 
-<div class="timeline max-w-4xl timeline-thread ml-2 md:ml-0" id="timeline">
+<div class="timeline space-y-12" id="timeline">
     {
         allMonths.map((month) => {
             const monthKey = month.key;
@@ -42,36 +51,30 @@ sortedEvents.forEach((event) => {
             const monthYear = month.date.getFullYear().toString();
 
             return (
-                <div
-                    class="month-section pb-16 last:pb-0"
+                <section
+                    class="month-section space-y-10"
                     data-month={monthKey}
                     data-year={monthYear}
                 >
-                    {/* Month header v1.1 */}
-                    <div class="relative flex items-center gap-6 mb-8">
-                        <div class="timeline-marker shrink-0"></div>
-                        <h3 class="metadata text-xs font-bold text-primary tracking-[0.2em]">
+                    {/* Month header */}
+                    <div class="flex items-center gap-2 mb-8">
+                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
                             {monthKey.toUpperCase()}
-                        </h3>
-                        <div class="flex-1 h-px bg-slate-100 dark:bg-slate-800"></div>
+                        </h2>
                     </div>
 
                     {monthEvents && monthEvents.length > 0 ? (
                         /* Events for this month */
-                        <div class="month-events space-y-6 ml-6 md:ml-9">
+                        <div class="month-events space-y-10">
                              {monthEvents.map((event: any) => {
-                                 const isFeatured = event.note.data.featured;
                                  const eventYear = event.date.getFullYear().toString();
                                  const isInitialBatch = eventBatchStatus.get(event);
 
-                                  return (
-                                             <div
-                                                class={`timeline-event p-0 card-interactive cursor-pointer group overflow-hidden ${
-                                                    isFeatured
-                                                     ? "featured"
-                                                     : ""
-                                                }`}
-                                               data-stage={event.note.data.stage}
+                                   return (
+                                              <article
+                                                 class="timeline-event bg-white dark:bg-slate-800 p-8 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group relative"
+                                                data-stage={event.note.data.stage}
                                                data-title={event.title.toLowerCase()}
                                                data-summary={
                                                    event.note.data.summary?.toLowerCase() ||
@@ -90,98 +93,82 @@ sortedEvents.forEach((event) => {
                                               data-event-type={event.type}
                                               data-is-collapsed={event.isCollapsed ? "true" : "false"}
                                               data-is-initial-batch={isInitialBatch ? "true" : "false"}
-                                           >
-                                          <div class="flex flex-col gap-5 p-7">
-                                             <div class="flex justify-between items-center">
-                                                   <span class={`metadata text-sm font-bold text-signal-${event.note.data.stage}`}>
-                                                       {event.note.data.stage.toUpperCase()}
-                                                   </span>
-                                                   <time class="metadata-secondary text-xs">
-                                                      {event.date.toLocaleDateString("en-US", { month: 'short', day: 'numeric' }).toUpperCase()}
-                                                  </time>
-                                             </div>
+                                            >
+                                           <div class="flex justify-between items-start mb-4">
+                                                <span class={`text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded ${getStageColorClass(event.note.data.stage)}`}>
+                                                    {event.note.data.stage}
+                                                </span>
+                                                <span class="font-mono text-[10px] text-slate-400 uppercase">
+                                                   {event.date.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
+                                               </span>
+                                           </div>
 
-                                             <div class="flex-1 min-w-0">
-                                                   <h4 class="text-2xl font-bold text-terminal-dark dark:text-neutral-text-dark mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
-                                                      <a
-                                                          href={`/notes/${event.note.id.replace('.md', '')}`}
-                                                          class="after:absolute after:inset-0"
-                                                      >
-                                                          {event.title}
-                                                      </a>
-                                                  </h4>
-                                                 {event.note.data.summary && (
-                                                     <p class="text-lg text-secondary line-clamp-2 leading-relaxed">
-                                                         {event.note.data.summary}
-                                                     </p>
-                                                 )}
-                                             </div>
-
-                                               <div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800/50">
-                                                   <div class="flex gap-3">
-                                                       {event.note.data.tags.slice(0, 3).map((tag: string) => (
-                                                           <span class="text-sm text-secondary">#{tag}</span>
-                                                       ))}
-                                                   </div>
-                                                   {event.type === "created" ? (
-                                                       <span class="inline-flex items-center px-2 py-1 text-xs font-bold rounded bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200">
-                                                           CREATED
-                                                       </span>
-                                                   ) : (
-                                                       <span class="inline-flex items-center px-2 py-1 text-xs font-bold rounded bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200">
-                                                           UPDATED
-                                                       </span>
-                                                   )}
-                                               </div>
-                                          </div>
-                                           {isFeatured && event.note.data.cover && (
-                                               <a href={`/notes/${event.note.id.replace('.md', '')}`} class="block">
-                                                   <div class="w-full h-48 overflow-hidden">
-                                                       <Image
-                                                           src={event.note.data.cover}
-                                                           alt={event.note.data.coverImageAlt || event.title}
-                                                           class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                                       />
-                                                   </div>
+                                            <h2 class="text-2xl font-bold text-black dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                               <a
+                                                   href={`/notes/${event.note.id.replace('.md', '')}`}
+                                                   class="after:absolute after:inset-0"
+                                               >
+                                                   {event.title}
                                                </a>
+                                           </h2>
+
+                                           {event.note.data.summary && (
+                                               <p class="text-slate-600 dark:text-slate-400 font-body mb-6 leading-relaxed">
+                                                   {event.note.data.summary}
+                                               </p>
                                            )}
-                                      </div>
-                                  );
-                             })}
+
+                                           {event.note.data.cover && (
+                                                <div class="mb-6">
+                                                    <Image
+                                                        src={event.note.data.cover}
+                                                        alt={event.note.data.coverImageAlt || event.title}
+                                                        class="w-full h-auto rounded-lg border border-slate-100 dark:border-slate-700"
+                                                    />
+                                                </div>
+                                            )}
+
+                                            <div class="flex justify-between items-center">
+                                                <div class="flex gap-3">
+                                                    {event.note.data.tags.slice(0, 3).map((tag: string) => (
+                                                        <span class="text-xs text-slate-400">#{tag}</span>
+                                                    ))}
+                                                </div>
+                                                <span class="text-[10px] font-bold text-blue-500 dark:text-blue-400 uppercase tracking-widest bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded">
+                                                    {event.type.toUpperCase()}
+                                                </span>
+                                            </div>
+                                       </article>
+                                   );
+                              })}
                         </div>
-                     ) : (
+                      ) : (
                         /* No activity message */
-                        <div class="ml-9 md:ml-12 p-10 text-center bg-tooling-gray dark:bg-slate-900 border border-dashed border-slate-200 dark:border-slate-700">
-                            <p class="text-sm text-secondary tracking-widest">
-                                No Data Streams Active
+                        <div class="p-10 text-center bg-slate-50 dark:bg-slate-900/50 border border-dashed border-slate-200 dark:border-slate-700 rounded-xl">
+                            <p class="text-sm text-slate-400 tracking-widest uppercase">
+                                No activity recorded
                             </p>
                         </div>
                     )}
-                </div>
+                </section>
             );
         })
     }
 
     {/* No results message */}
     <div id="no-results" class="hidden text-center py-12">
-        <p class="metadata text-slate-500">
-            NO_MATCHING_DATA_FOUND
+        <p class="font-mono text-slate-500">
+            No matching notes found
         </p>
     </div>
 
     {/* Show more activity button */}
-    <div class="text-center mt-16 ml-9 md:ml-12">
+    <div class="text-center pt-8">
         <button
             id="show-more-activity"
-            class="px-10 py-4 bg-terminal-dark dark:bg-white text-white dark:text-terminal-dark font-mono text-sm font-bold tracking-widest transition-all hover:bg-blueprint-blue hover:text-white dark:hover:bg-blueprint-blue shadow-[4px_4px_0_0_#e2e8f0] dark:shadow-none hover:shadow-[6px_6px_0_0_#4382ff] active:shadow-none active:translate-x-1 active:translate-y-1 hidden"
+            class="px-8 py-3 bg-primary dark:bg-white text-white dark:text-primary font-bold text-xs uppercase tracking-widest rounded-full hover:shadow-lg transition-all active:scale-95 hidden"
         >
-            Load More Streams
+            Show more activity
         </button>
     </div>
 </div>
-
-<style>
-    .month-no-activity {
-        border: 1.5px dashed #e2e8f0;
-    }
-</style>

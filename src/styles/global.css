@@ -2,19 +2,36 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
+  --color-primary: #10b981; /* Emerald 500 */
+  --color-background-light: #f8fafc;
+  --color-background-dark: #0f172a;
+  --color-content-light: #ffffff;
+  --color-content-dark: #1e293b;
+  --color-navy-800: #1e293b;
+  --color-navy-900: #0f172a;
+
+  --font-display: "Inter", sans-serif;
+  --font-serif: "Source Serif 4", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
   --color-blueprint-blue: #4382ff;
   --color-terminal-dark: #0f172a;
-  --color-canvas-white: #ffffff;
+  --color-canvas-white: #f8fafc;
   --color-tooling-gray: #f1f5f9;
-  --color-andon-amber: #ea580c;
-  --color-sprout-teal: #2dd4bf;
-  --color-evergreen-green: #22c55e;
-  --color-andon-emerald: #22c55e;
+
+  --color-seed: #f59e0b;
+  --color-sprout: #3b82f6;
+  --color-evergreen: #10b981;
+
+  --color-andon-amber: #f59e0b;
+  --color-sprout-teal: #3b82f6;
+  --color-evergreen-green: #10b981;
+  --color-andon-emerald: #10b981;
   --color-neutral-text-light: #64748b;
   --color-neutral-text-dark: #f8fafc;
   --color-neutral-metadata-dark: #cbd5e1;
-  --shadow-blueprint: 0 0 8px rgba(67, 130, 255, 0.5);
-  --shadow-blueprint-hover: 0 10px 30px -5px rgba(67, 130, 255, 0.3);
+  --shadow-blueprint: 0 0 8px rgba(59, 130, 246, 0.5);
+  --shadow-blueprint-hover: 0 10px 30px -5px rgba(59, 130, 246, 0.3);
 
   /* Callout colors */
   --callout-note-light: #0969da;
@@ -42,9 +59,9 @@
   --callout-teal-dark: #2dd4bf;
   --callout-teal-bg-dark: rgba(45, 212, 191, 0.15);
 
-  --font-serif: "Bricolage Grotesque", sans-serif;
-  --font-sans: "Public Sans", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-mono);
 }
 
 /* Enable class-based dark mode for Tailwind 4 */
@@ -62,13 +79,13 @@
 
 html {
   overflow-y: scroll;
-  font-family: var(--font-sans);
-  background-color: var(--color-canvas-white);
-  color: var(--color-terminal-dark);
+  font-family: var(--font-display);
+  background-color: var(--color-background-light);
+  color: var(--color-primary);
 }
 
-.dark html {
-  background-color: var(--color-terminal-dark);
+html.dark {
+  background-color: var(--color-background-dark);
   color: var(--color-neutral-text-dark);
 }
 
@@ -108,13 +125,13 @@ h6 {
 
 /* High-contrast Signal Text */
 @utility text-signal-seed {
-  color: #ea580c !important;
+  color: #f59e0b !important;
 }
 @utility text-signal-sprout {
-  color: #2dd4bf !important;
+  color: #3b82f6 !important;
 }
 @utility text-signal-evergreen {
-  color: #22c55e !important;
+  color: #10b981 !important;
 }
 @utility text-signal-blueprint {
   color: #4382ff !important;

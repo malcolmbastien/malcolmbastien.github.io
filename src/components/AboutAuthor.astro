@@ -9,16 +9,13 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<!-- About the Author -->
-<a href="/about" class="block cursor-pointer group">
-<div class={`card-interactive p-6 hover:bg-slate-50 dark:hover:bg-slate-700 ${className || ''}`}>
-    <h3 class="text-xs font-sans font-bold text-secondary mb-6 tracking-widest uppercase group-hover:text-blueprint-blue transition-colors">About the Author</h3>
-<div class="flex items-center gap-4">
-    <Picture src={malcolmHeadshot} alt="Malcolm Bastien" class="w-12 h-12 rounded-full object-cover" />
-    <div>
-        <div class="font-bold text-primary">Malcolm Bastien</div>
-        <div class="text-sm text-secondary">Lean-Agile Practitioner</div>
-    </div>
-</div>
+<a href="/about" class={`block bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow group ${className || ''}`}>
+    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6 transition-colors">About the Author</h3>
+    <div class="flex items-center gap-4">
+        <Picture src={malcolmHeadshot} alt="Malcolm Bastien" class="w-12 h-12 rounded-full object-cover bg-slate-100" />
+        <div>
+            <p class="font-bold text-sm text-black dark:text-white  group-hover:text-blue-500  dark:group-hover:text-blue-400">Malcolm Bastien</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Lean-Agile Practitioner</p>
+        </div>
     </div>
 </a>

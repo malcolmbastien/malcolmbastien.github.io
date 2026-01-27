@@ -17,8 +17,8 @@ const topTopics = Object.entries(topicCounts)
     .slice(0, 16);
 ---
 
-<div class="surface-elevation p-6">
-    <h3 class="text-xs font-sans font-bold tracking-widest uppercase text-secondary mb-6">Topics</h3>
+<section class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Topics</h3>
     <div
         class="flex flex-wrap gap-x-4 gap-y-3"
     >
@@ -28,8 +28,8 @@ const topTopics = Object.entries(topicCounts)
                     href={`/topics/${topic}`}
                     class="group flex items-baseline gap-2"
                 >
-                    <span class="text-sm font-sans font-bold text-terminal-dark dark:text-neutral-text-dark group-hover:text-blueprint-blue dark:group-hover:text-blueprint-blue transition-colors">#{topic}</span>
-                    <span class="text-xs font-sans text-neutral-text-light dark:text-neutral-metadata-dark group-hover:text-blueprint-blue dark:group-hover:text-blueprint-blue transition-colors">{count}</span>
+                    <span class="text-sm font-bold text-black dark:text-white group-hover:text-blue-500 dark:group-hover:dark:text-blue-400 transition-colors">#{topic}</span>
+                    <span class="text-xs text-slate-400 group-hover:text-blue-500  dark:group-hover:dark:text-blue-400 transition-colors">{count}</span>
                 </a>
             ))
         }
@@ -37,9 +37,9 @@ const topTopics = Object.entries(topicCounts)
     <div class="mt-8 pt-6 border-t border-slate-50 dark:border-slate-700">
         <a
             href="/topics"
-            class="text-sm font-medium tracking-wide text-blueprint-blue hover:opacity-70 dark:hover:text-white transition-opacity"
+            class="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-black dark:hover:text-white transition-colors"
         >
             Explore All Topics →
         </a>
     </div>
-</div>
+</section>

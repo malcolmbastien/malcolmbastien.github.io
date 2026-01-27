@@ -12,9 +12,32 @@
             showSubResults: true,
             resetFilters: true,
             translations: {
-                placeholder: "Search knowledge base..."
+                placeholder: "Search the garden..."
             }
         });
+
+        // Monitor results and apply stage-based styling
+        const observer = new MutationObserver((mutations) => {
+            const results = document.querySelectorAll('.pagefind-ui__result');
+            results.forEach(result => {
+                const tags = result.querySelectorAll('.pagefind-ui__result-tag');
+                tags.forEach(tag => {
+                    const text = tag.textContent.toLowerCase();
+                    if (text.includes('evergreen')) {
+                        result.classList.add('result-evergreen');
+                    } else if (text.includes('sprout')) {
+                        result.classList.add('result-sprout');
+                    } else if (text.includes('seed')) {
+                        result.classList.add('result-seed');
+                    }
+                });
+            });
+        });
+
+        const searchBox = document.querySelector('#search-box');
+        if (searchBox) {
+            observer.observe(searchBox, { childList: true, subtree: true });
+        }
         
         // Auto-focus the search input
         setTimeout(() => {
@@ -42,51 +65,95 @@
   @reference "../../styles/global.css";
 
   :root {
-    --pagefind-ui-primary: #4382ff;
-    --pagefind-ui-text: #0f172a;
+    --pagefind-ui-primary: #10b981;
+    --pagefind-ui-text: #1e293b;
     --pagefind-ui-background: #ffffff;
     --pagefind-ui-border: #e2e8f0;
     --pagefind-ui-tag: #f1f5f9;
   }
 
   .dark {
-    --pagefind-ui-primary: #4382ff;
-    --pagefind-ui-text: #ffffff;
-    --pagefind-ui-background: #1e293b;
-    --pagefind-ui-border: #334155;
-    --pagefind-ui-tag: #334155;
+    --pagefind-ui-primary: #10b981;
+    --pagefind-ui-text: #f8fafc;
+    --pagefind-ui-background: #0f172a;
+    --pagefind-ui-border: #1e293b;
+    --pagefind-ui-tag: #1e293b;
   }
 
   #search-box .pagefind-ui__search-input {
-    @apply border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-base focus:ring-blueprint-blue/10 focus:border-blueprint-blue transition-all py-4 px-16;
-    border-radius: 0.5rem;
+    @apply border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xl focus:ring-4 focus:ring-emerald-500/5 focus:border-emerald-500 transition-all py-5 px-14;
+    border-radius: 1rem;
+  }
+
+  /* Search Icon override */
+  #search-box .pagefind-ui__search-input::placeholder {
+    @apply text-slate-400;
   }
 
   #search-box .pagefind-ui__result-link {
-    @apply text-terminal-dark dark:text-neutral-text-dark font-sans font-bold hover:text-blueprint-blue transition-colors text-xl tracking-tight;
+    @apply text-navy-900 dark:text-white font-sans font-bold hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors text-2xl tracking-tight leading-tight;
   }
 
   #search-box .pagefind-ui__result-excerpt {
-    @apply text-neutral-text-light dark:text-neutral-metadata-dark text-sm mt-2 font-sans leading-relaxed;
+    @apply text-slate-600 dark:text-slate-400 text-[17px] mt-4 font-serif leading-relaxed;
   }
   
   #search-box .pagefind-ui__result {
-    @apply border-b border-slate-100 dark:border-slate-800 pb-8 mb-8 last:border-0;
+    @apply flex flex-col sm:flex-row gap-8 pb-16 mb-16 border-b border-slate-200 dark:border-slate-800 last:border-0;
+  }
+
+  #search-box .pagefind-ui__result-thumb {
+    @apply flex-shrink-0 w-32 h-32 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm m-0!;
+  }
+
+  #search-box .pagefind-ui__result-inner {
+    @apply flex-1 flex flex-col gap-2;
   }
 
   #search-box .pagefind-ui__message {
-    @apply text-neutral-text-light dark:text-neutral-metadata-dark text-sm;
+    @apply text-sm font-medium text-slate-500 pb-6 border-b border-slate-200 dark:border-slate-800 mb-8;
   }
 
   #search-box .pagefind-ui__drawer {
-    @apply border-t border-slate-200 dark:border-slate-700 mt-4 pt-4;
+    @apply mt-8;
   }
 
   #search-box .pagefind-ui__result-title {
-    @apply text-terminal-dark dark:text-neutral-text-dark font-sans font-medium;
+    @apply text-navy-900 dark:text-white font-sans font-bold;
   }
 
-  #search-box .pagefind-ui__result-tag {
-    @apply bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs px-2 py-1 rounded;
+  #search-box .pagefind-ui__result-nested {
+    @apply mt-6 space-y-4 ml-0!;
   }
+
+  #search-box .pagefind-ui__result-nested .pagefind-ui__result-link {
+    @apply flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors;
+  }
+
+  #search-box .pagefind-ui__result-nested .pagefind-ui__result-link::before {
+    content: "subdirectory_arrow_right";
+    font-family: 'Material Icons Round';
+    @apply text-base text-slate-400 font-normal;
+  }
+
+  #search-box .pagefind-ui__result-nested .pagefind-ui__result-excerpt {
+    @apply pl-7 text-sm text-slate-500 font-serif leading-relaxed mt-1;
+  }
+
+  #search-box .pagefind-ui__button {
+    @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all py-3;
+  }
+
+  /* Stage-based accent styling */
+  .result-evergreen { border-left: 4px solid #10b981 !important; padding-left: 1.5rem !important; }
+  .result-sprout { border-left: 4px solid #3b82f6 !important; padding-left: 1.5rem !important; }
+  .result-seed { border-left: 4px solid #f59e0b !important; padding-left: 1.5rem !important; }
+
+  .result-evergreen .pagefind-ui__result-link { @apply text-emerald-600 dark:text-emerald-400; }
+  .result-sprout .pagefind-ui__result-link { @apply text-blue-600 dark:text-blue-400; }
+  .result-seed .pagefind-ui__result-link { @apply text-amber-600 dark:text-amber-400; }
+
+  .result-evergreen .pagefind-ui__result-tag { @apply bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-800/50; }
+  .result-sprout .pagefind-ui__result-tag { @apply bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 border border-blue-100 dark:border-blue-800/50; }
+  .result-seed .pagefind-ui__result-tag { @apply bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border border-amber-100 dark:border-amber-800/50; }
 </style>

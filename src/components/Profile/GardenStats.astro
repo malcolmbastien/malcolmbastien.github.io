@@ -11,69 +11,34 @@ interface Props {
 const { counts } = Astro.props;
 ---
 
-<div class="space-y-8">
-    <div class="space-y-5">
-        <div class="flex items-center justify-between">
-            <h3 class="text-xs font-sans font-bold tracking-widest uppercase text-secondary">Note Stats</h3>
-        </div>
-        <div class="h-1.5 w-full bg-slate-100 dark:bg-slate-700 flex">
-            <div
-                class="h-full bg-andon-amber"
-                style={`width: ${(counts.seed / (counts.all || 1)) * 100}%`}
-            ></div>
-            <div
-                class="h-full bg-sprout-teal"
-                style={`width: ${(counts.sprout / (counts.all || 1)) * 100}%`}
-            ></div>
-            <div
-                class="h-full bg-evergreen-green"
-                style={`width: ${(counts.evergreen / (counts.all || 1)) * 100}%`}
-            ></div>
-        </div>
-
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Taxonomy</h3>
+    <div class="w-full h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full flex overflow-hidden mb-6">
+        <div class="bg-seed h-full" style={`width: ${(counts.seed / (counts.all || 1)) * 100}%`}></div>
+        <div class="bg-sprout h-full" style={`width: ${(counts.sprout / (counts.all || 1)) * 100}%`}></div>
+        <div class="bg-evergreen h-full" style={`width: ${(counts.evergreen / (counts.all || 1)) * 100}%`}></div>
     </div>
-
     <div class="space-y-6">
-        <div class="flex items-center justify-between">
-            <h3 class="text-xs font-sans font-bold tracking-widest uppercase text-secondary">Taxonomy</h3>
+        <div>
+            <div class="flex justify-between items-end mb-2">
+                <span class="text-[11px] font-bold text-seed uppercase tracking-[0.2em]">Seed</span>
+                <span class="font-mono text-sm font-bold text-slate-400 dark:text-slate-500">{counts.seed.toString().padStart(3, '0')}</span>
+            </div>
+            <p class="text-[12px] text-slate-500 dark:text-slate-400 leading-relaxed">Raw fragments and fleeting thoughts. Fragile starting points for cultivation.</p>
         </div>
-
-        <div class="space-y-6">
-            <div class="bg-white dark:bg-slate-800">
-                <div class="flex items-center justify-between mb-3">
-                    <h4 class="text-base font-sans font-bold text-signal-seed flex items-center gap-2">
-                        SEED
-                    </h4>
-                    <span class="text-lg font-sans font-bold text-primary">{counts.seed.toString().padStart(3, '0')}</span>
-                </div>
-                <p class="text-base text-secondary leading-relaxed">
-                    Raw fragments and fleeting thoughts. Fragile starting points or skeletal outlines waiting for cultivation.
-                </p>
+        <div>
+            <div class="flex justify-between items-end mb-2">
+                <span class="text-[11px] font-bold text-sprout uppercase tracking-[0.2em]">Sprout</span>
+                <span class="font-mono text-sm font-bold text-slate-400 dark:text-slate-500">{counts.sprout.toString().padStart(3, '0')}</span>
             </div>
-
-            <div class="bg-white dark:bg-slate-800">
-                <div class="flex items-center justify-between mb-3">
-                    <h4 class="text-base font-sans font-bold text-signal-sprout flex items-center gap-2">
-                        SPROUT
-                    </h4>
-                    <span class="text-lg font-sans font-bold text-primary">{counts.sprout.toString().padStart(3, '0')}</span>
-                </div>
-                <p class="text-sm text-secondary leading-relaxed">
-                    Ideas taking root and branching out. Posts with growing structure, contextual links, and developing themes.
-                </p>
+            <p class="text-[12px] text-slate-500 dark:text-slate-400 leading-relaxed">Ideas taking root and branching out. Growing structure and contextual links.</p>
+        </div>
+        <div>
+            <div class="flex justify-between items-end mb-2">
+                <span class="text-[11px] font-bold text-evergreen uppercase tracking-[0.2em]">Evergreen</span>
+                <span class="font-mono text-sm font-bold text-slate-400 dark:text-slate-500">{counts.evergreen.toString().padStart(3, '0')}</span>
             </div>
-
-            <div class="bg-white dark:bg-slate-800">
-                <div class="flex items-center justify-between mb-3">
-                    <h4 class="text-base font-sans font-bold text-signal-evergreen flex items-center gap-2">
-                        EVERGREEN
-                    </h4>
-                    <span class="text-lg font-sans font-bold text-primary">{counts.evergreen.toString().padStart(3, '0')}</span>
-                </div>
-                <p class="text-sm text-secondary leading-relaxed">
-                    Enduring and deeply interconnected insights. Polished, atomic notes that have been refined over time.
-                </p>
-            </div>
+            <p class="text-[12px] text-slate-500 dark:text-slate-400 leading-relaxed">Enduring and deeply interconnected insights. Polished, atomic notes.</p>
         </div>
     </div>
 </div>

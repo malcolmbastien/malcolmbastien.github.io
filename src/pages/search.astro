@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter.astro";
 ---
 
 <Layout
-    title="Search - Sprout Digital Garden"
+    title="Search | Digital Garden"
     description="Search through the thoughts, seeds, and sprouts of my digital garden."
 >
     <Fragment slot="head">
@@ -15,15 +15,40 @@ import SiteFooter from "../components/SiteFooter.astro";
                 <script src="/pagefind/pagefind-ui.js" is:inline></script>
             </>
         )}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+        <style is:inline>
+            .search-highlight {
+                background-color: #dcfce7;
+                padding: 0 2px;
+                border-radius: 2px;
+            }
+            .dark .search-highlight {
+                background-color: #166534;
+                color: #f0fdf4;
+            }
+            /* Pagefind uses mark tags for highlighting */
+            mark {
+                background-color: #dcfce7;
+                color: inherit;
+                padding: 0 2px;
+                border-radius: 2px;
+            }
+            .dark mark {
+                background-color: #166534;
+                color: #f0fdf4;
+            }
+        </style>
     </Fragment>
-    <main class="max-w-7xl mx-auto p-4 md:p-8 min-h-screen" data-pagefind-ignore>
-        <div class="mb-12">
-            <div class="surface-elevation p-8 md:p-16 shadow-[8px_8px_0_0_#f1f5f9]">
-                <h2 class="text-5xl font-serif font-black text-primary mb-12 tracking-tighter uppercase leading-none">
+    
+    <main class="max-w-4xl mx-auto px-6 py-12 min-h-screen" data-pagefind-ignore>
+        <div class="space-y-12">
+            <header>
+                <h1 class="text-4xl font-bold tracking-tight text-navy-900 dark:text-white uppercase mb-8">
                     Search
-                </h2>
-                <SearchComponent />
-            </div>
+                </h1>
+            </header>
+            
+            <SearchComponent />
         </div>
 
         <SiteFooter />

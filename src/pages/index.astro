@@ -231,8 +231,6 @@ const counts = {
 const currentYearValue = new Date().getFullYear();
 ---
 
-
-
 <Layout
     title="Malcolm Bastien - Flow Focused"
     description="A digital garden of thoughts and ideas. Explore seeds, sprouts, and evergreens of knowledge in this ever-growing collection of writings."
@@ -254,17 +252,15 @@ const currentYearValue = new Date().getFullYear();
             display: none !important;
         }
 
-        /* Instant Sidebar Highlighting v1.1 */
+        /* Instant Sidebar Highlighting */
         html[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] {
-            color: #4382ff !important;
-            border-left-color: #4382ff !important;
-            padding-left: 0.75rem !important;
+            color: black !important;
         }
-        html[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] span {
-            color: #4382ff !important;
+        html.dark[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] {
+            color: white !important;
         }
         html[data-selected-year="${y.year}"] .year-item:has(.year-btn[data-year="${y.year}"]) .month-submenu {
-            display: block !important;
+            display: flex !important;
         }
         `).join('')
     } />
@@ -276,7 +272,7 @@ const currentYearValue = new Date().getFullYear();
             document.documentElement.setAttribute('data-selected-year', savedYear || currentYear);
         })();
     </script>
-    <main class="max-w-(--breakpoint-xl) mx-auto p-4 md:p-8" data-pagefind-ignore>
+    <main class="max-w-7xl mx-auto px-6 py-12" data-pagefind-ignore>
         <Header currentPath={Astro.url.pathname}>
             <ActivityHeatmap
                 slot="heatmap"
@@ -285,51 +281,50 @@ const currentYearValue = new Date().getFullYear();
             />
         </Header>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
-            <!-- Year Rail  (Col 1) -->
-            <div class="hidden lg:block lg:col-span-1 space-y-8 order-1 lg:order-1">
-                <div class="lg:sticky lg:top-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Year Navigation (1 col) -->
+            <aside class="lg:col-span-1 hidden lg:block border-r border-slate-200 dark:border-slate-800 pr-4">
+                <div class="sticky top-24">
                     <YearNavigation sortedYears={sortedYears as any} />
                 </div>
-            </div>
+            </aside>
 
-            <!--  Activity Heatmap + Primary Stream (Col 2-8) -->
-            <div class="lg:col-span-7 space-y-12 order-2 lg:order-2">
+            <!-- Main Content (8 cols) -->
+            <div class="lg:col-span-8 space-y-12">
                 {
                     pinnedNotes.length > 0 && (
-                        <div class="space-y-6">
-                            <div class="flex items-center gap-4">
-                                <div class="w-2 h-2 bg-blueprint-blue rounded-full"></div>
-                                <h3 class="text-xs font-sans font-bold  text-primary tracking-widest uppercase">
-                                    Pinned Notes
-                                </h3>
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {pinnedNotes.map((note) => (
-                                     <a
-                                        href={`/notes/${note.id.replace('.md', '')}`}
-                                        class="card-interactive pinned-note group block p-6"
-                                     >
-                                         <div class="flex justify-between items-start mb-4">
-                                               <span class={`text-sm font-bold text-signal-${note.data.stage}`}>
-                                                  {note.data.stage.toUpperCase()}
-                                               </span>
-                                            <span class="text-sm text-secondary">Pinned</span>
-                                        </div>
-                                         <h3 class="text-lg font-sans font-bold text-terminal-dark dark:text-neutral-text-dark mb-2 leading-tight group-hover:text-blueprint-blue transition-colors">
-                                            {note.data.title}
-                                        </h3>
+                                <section>
+                                    <div class="flex items-center gap-2 mb-6">
+                                        <span class="material-symbols-outlined text-slate-400 text-sm">push_pin</span>
+                                        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Pinned Notes</h2>
+                                    </div>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        {pinnedNotes.map((note) => (
+                                            <article class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm group hover:shadow-md transition-all relative">
+                                                <div class="flex justify-between items-start mb-4">
+                                                    <span class="text-[10px] font-bold text-evergreen uppercase tracking-widest">
+                                                        {note.data.stage}
+                                                    </span>
+                                                    <span class="text-[10px] text-slate-400 font-medium italic">Pinned</span>
+                                                </div>
+                                                <h3 class="text-xl font-bold text-black dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                                    <a href={`/notes/${note.id.replace('.md', '')}`} class="after:absolute after:inset-0">
+                                                        {note.data.title}
+                                                    </a>
+                                                </h3>
                                         {note.data.summary && (
-                                            <p class="text-sm text-secondary line-clamp-2 leading-relaxed">
+                                            <p class="text-sm text-slate-500 dark:text-slate-400 font-body line-clamp-2">
                                                 {note.data.summary}
                                             </p>
                                         )}
-                                    </a>
+                                    </article>
                                 ))}
                             </div>
-                        </div>
+                        </section>
                     )
                 }
+
+                <div class="h-px bg-slate-100 dark:bg-slate-800 w-full"></div>
 
                 <NoteTimeline
                     sortedEvents={sortedEvents}
@@ -339,96 +334,56 @@ const currentYearValue = new Date().getFullYear();
                 />
             </div>
 
-            <!-- Contextual Side (Col 9-12) -->
-            <div class="lg:col-span-4 space-y-8 order-3 lg:order-3">
-                 <!-- Latest Creations -->
-                 <div class="surface-elevation p-6">
-                     <h3 class="text-xs font-sans font-bold text-secondary mb-6 tracking-widest uppercase">Latest Creations</h3>
-                     <div class="space-y-4">
-                          {latestCreations.map((note) => (
-                              <a href={`/notes/${note.id.replace('.md', '')}`} class="block group">
-                                   <div class="flex justify-between items-start mb-2">
-                                        <span class={`text-sm font-bold text-signal-${note.data.stage}`}>
-                                           {note.data.stage.toUpperCase()}
-                                       </span>
-                                     <time class="text-xs text-secondary">
-                                         {note.displayDate!.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
-                                     </time>
-                                 </div>
-                                  <h4 class="text-base font-bold text-terminal-dark dark:text-neutral-text-dark group-hover:text-blueprint-blue dark:group-hover:text-blueprint-blue transition-colors">
-                                     {note.data.title}
-                                 </h4>
-                             </a>
-                         ))}
-                     </div>
-                 </div>
+            <!-- Sidebar (3 cols) -->
+            <aside class="lg:col-span-3 space-y-10">
+                <!-- Latest Creations -->
+                <section class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Latest Creations</h3>
+                    <div class="space-y-4">
+                        {latestCreations.map((note) => (
+                            <div class="group cursor-pointer relative">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-[10px] font-bold text-seed uppercase">{note.data.stage}</span>
+                                    <span class="text-[10px] text-slate-400">
+                                        {note.displayDate!.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
+                                    </span>
+                                </div>
+                                <p class="text-sm font-semibold text-black dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                                    <a href={`/notes/${note.id.replace('.md', '')}`} class="after:absolute after:inset-0">
+                                        {note.data.title}
+                                    </a>
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
 
-                   <AboutAuthor />
+                <AboutAuthor />
 
-                  <!-- Garden Stats -->
-                  <div class="surface-elevation p-6 bg-white">
-                      <GardenStats
-                          counts={counts}
-                      />
-                  </div>
+                <GardenStats counts={counts} />
 
-                <!-- Search Box v1.1 -->
-                <div class="surface-elevation p-6">
-                    <h3 class="text-xs font-sans font-bold text-secondary mb-6 tracking-widest uppercase">Search</h3>
-                    <a
-                        href="/search"
-                        class="flex items-center gap-4 w-full px-5 py-4 bg-tooling-gray dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-secondary hover:border-blueprint-blue hover:text-blueprint-blue dark:hover:text-white transition-all group"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                            ></path>
-                        </svg>
-                        <span class="text-sm font-bold text-secondary group-hover:text-terminal-dark dark:group-hover:text-white transition-colors">Search notes...</span>
-                    </a>
-                </div>
+                <!-- Search -->
+                <section class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Search</h3>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+                        <a href="/search" class="block w-full bg-slate-50 dark:bg-slate-900 border-none rounded-lg pl-10 pr-4 py-2 text-sm text-slate-400 transition-all">
+                            Search notes...
+                        </a>
+                    </div>
+                </section>
 
                 <TopicFocus />
 
-                <div class="surface-elevation p-6">
-                    <h3 class="text-xs font-sans font-bold text-secondary mb-6 tracking-widest uppercase">Social Links</h3>
-                    <SocialLinks class="border-none p-0 bg-transparent shadow-none!" />
-                </div>
-            </div>
+                <SocialLinks />
+            </aside>
         </div>
-        <SiteFooter />
     </main>
+    <SiteFooter />
 </Layout>
 
 <style is:global>
     @reference "../styles/global.css";
-
-    /* Styling for the scrollable sidebar */
-    .custom-sidebar-scroll {
-        scrollbar-width: thin;
-        scrollbar-color: #f1f5f9 transparent;
-    }
-    .dark .custom-sidebar-scroll {
-        scrollbar-color: #1e293b transparent;
-    }
-    .custom-sidebar-scroll::-webkit-scrollbar {
-        width: 3px;
-    }
-    .custom-sidebar-scroll::-webkit-scrollbar-track {
-        background: transparent;
-    }
-    .custom-sidebar-scroll::-webkit-scrollbar-thumb {
-        @apply bg-slate-100 dark:bg-slate-800;
-    }
 
     /* CSS-driven filtering for instant load */
     .timeline-event.hidden-by-filter {
@@ -443,11 +398,8 @@ const currentYearValue = new Date().getFullYear();
         }
     }
 
-    const eventTypeButtons = document.querySelectorAll("[data-event-type]");
     const noResults = document.getElementById("no-results");
 
-    // Prevent browser from automatically restoring scroll position which can cause jumps
-    // when we dynamically filter content on load.
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
     }
@@ -465,7 +417,6 @@ const currentYearValue = new Date().getFullYear();
         let totalMatchingCount = 0;
         let visibleCount = 0;
 
-        // Re-query to include dynamically added events
         const allTimelineEvents = document.querySelectorAll("#timeline .timeline-event");
 
         allTimelineEvents.forEach((event) => {
@@ -480,21 +431,15 @@ const currentYearValue = new Date().getFullYear();
             const matchesEventType =
                 currentEventType === "all" || eventType === currentEventType;
 
-            // Year matching is now handled by CSS for the initial paint,
-            // but we keep this check for the "totalMatchingCount" and "Show More" logic.
             const matchesYear =
                 currentYear === "all" || eventYear === currentYear;
 
             const isCollapsed = htmlEvent.dataset.isCollapsed === "true";
 
-            // If filtering by a specific date from the heatmap
             const eventDate = htmlEvent.dataset.created || "";
             const matchesDate =
                 currentDateFilter === null || eventDate === currentDateFilter;
 
-            // Logic:
-            // 1. If we have a specific date filter, show the event if it matches the date, even if collapsed
-            // 2. If no date filter, hide collapsed events
             const visibilityByCollapse = currentDateFilter !== null ? matchesDate : !isCollapsed;
 
             if (
@@ -516,7 +461,6 @@ const currentYearValue = new Date().getFullYear();
             }
         });
 
-        // Show/hide month sections based on their visible events
         document.querySelectorAll(".month-section").forEach((section) => {
             const htmlSection = section as HTMLElement;
             const eventsInSection = Array.from(
@@ -533,7 +477,6 @@ const currentYearValue = new Date().getFullYear();
             }
         });
 
-        // Update "Show more" button
         if (showMoreButton) {
             if (totalMatchingCount > itemsToShow) {
                 showMoreButton.classList.remove("hidden");
@@ -556,26 +499,6 @@ const currentYearValue = new Date().getFullYear();
         });
     }
 
-    eventTypeButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const eventType =
-                (button as HTMLElement).dataset.eventType || "all";
-            itemsToShow = 10;
-            if (currentEventType === eventType) {
-                button.classList.remove("active");
-                currentEventType = "all";
-            } else {
-                eventTypeButtons.forEach((btn) =>
-                    btn.classList.remove("active"),
-                );
-                button.classList.add("active");
-                currentEventType = eventType;
-            }
-            updateDisplay();
-        });
-    });
-
-    // Year and Month navigation
     const yearButtons = document.querySelectorAll(".year-btn");
     const monthButtons = document.querySelectorAll(".month-btn");
 
@@ -586,27 +509,19 @@ const currentYearValue = new Date().getFullYear();
         ) as HTMLElement;
 
         itemsToShow = 10;
-
-        // Update the data attribute for CSS filtering (instant highlighting/hiding)
         document.documentElement.setAttribute('data-selected-year', year);
 
         if (currentYear === year) {
             if (monthSubmenu && isManualClick) {
-                // If it's a manual click on the same year, we toggle the submenu
-                // But we check if it was previously forced visible by CSS or JS
                 monthSubmenu.classList.toggle("hidden");
             }
         } else {
-            // Note: .active class removal is still done for manual clicks to clean up
-            // any JS-applied states, though CSS attribute handles most styling now.
             yearButtons.forEach((btn) => {
-                btn.classList.remove("active");
                 const item = btn.closest(".year-item");
                 const submenu = item?.querySelector(".month-submenu");
                 if (submenu) submenu.classList.add("hidden");
             });
 
-            // We set the variable but let the [data-selected-year] handle the UI
             currentYear = year;
 
             if (window.updateHeatmapYear) {
@@ -619,10 +534,7 @@ const currentYearValue = new Date().getFullYear();
     yearButtons.forEach((button) => {
         button.addEventListener("click", (event) => {
             const year = (button as HTMLElement).dataset.year || "all";
-
-            // Preserve the selected year in local storage
             localStorage.setItem('selectedYear', year);
-
             selectYear(year, button as HTMLElement, event.isTrusted);
         });
     });
@@ -632,7 +544,7 @@ const currentYearValue = new Date().getFullYear();
             const monthKey = (button as HTMLElement).dataset.month || "";
             const year = (button as HTMLElement).dataset.year || "all";
 
-            itemsToShow = 500; // Increase limit to ensure month content is visible
+            itemsToShow = 500;
 
             if (currentYear !== year) {
                 localStorage.setItem('selectedYear', year);
@@ -644,7 +556,6 @@ const currentYearValue = new Date().getFullYear();
 
             updateDisplay();
 
-            // Scroll to the selected month section
             setTimeout(() => {
                 const monthSection = document.querySelector(
                     `.month-section[data-month="${monthKey}"]`,
@@ -659,33 +570,16 @@ const currentYearValue = new Date().getFullYear();
         });
     });
 
-    // Listen for date filter changes from activity heatmap
     window.addEventListener("dateFilterChange", (e: any) => {
         currentDateFilter = e.detail.date;
         itemsToShow = 10;
         updateDisplay();
     });
 
-    // Listen for display updates when new months are revealed
     window.addEventListener("updateDisplayNeeded", () => {
         updateDisplay();
     });
 
-    // Prevent any interference with timeline event clicks
-    document.querySelectorAll(".timeline-event").forEach((event) => {
-        event.addEventListener(
-            "click",
-            (e) => {
-                e.stopPropagation();
-            },
-            true,
-        );
-        event.addEventListener("focus", (e) => e.stopPropagation(), true);
-        event.addEventListener("blur", (e) => e.stopPropagation(), true);
-    });
-
-    // Automatically select current year or preserved year on initial load
-    // We run this immediately because the script is at the bottom of the body
     const initYearSelection = () => {
         const savedYear = localStorage.getItem('selectedYear');
         const currentYearStr = new Date().getFullYear().toString();
@@ -695,7 +589,6 @@ const currentYearValue = new Date().getFullYear();
             `.year-btn[data-year="${yearToSelect}"]`,
         ) as HTMLElement;
 
-        // If saved year button doesn't exist anymore, fallback to current year
         if (!yearBtn && savedYear) {
             yearBtn = document.querySelector(
                 `.year-btn[data-year="${currentYearStr}"]`,
@@ -712,8 +605,6 @@ const currentYearValue = new Date().getFullYear();
             }
         }
 
-        // Handover: Signaling that JS is ready to handle filtering.
-        // This removes the "initial batch" CSS restriction.
         document.documentElement.classList.add('js-initialized');
     };
 
