@@ -70,6 +70,7 @@
     --pagefind-ui-background: #ffffff;
     --pagefind-ui-border: #e2e8f0;
     --pagefind-ui-tag: #f1f5f9;
+    --pagefind-ui-width: 100%;
   }
 
   .dark {
@@ -78,6 +79,20 @@
     --pagefind-ui-background: #0f172a;
     --pagefind-ui-border: #1e293b;
     --pagefind-ui-tag: #1e293b;
+  }
+
+  #search-box {
+    width: 100%;
+    max-width: none;
+  }
+
+  .pagefind-ui,
+  .pagefind-ui__form,
+  .pagefind-ui__drawer,
+  .pagefind-ui__results,
+  .pagefind-ui__result {
+    max-width: none !important;
+    width: 100% !important;
   }
 
   #search-box .pagefind-ui__search-input {

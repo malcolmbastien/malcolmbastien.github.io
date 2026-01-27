@@ -13,9 +13,9 @@ import portrait from "../assets/malcolm_portrait.jpg";
     description="I’m an Agile Coach focused on improving predictability and accelerating flow using complexity and systems-thinking-based approaches to teams and work."
     type="website"
 >
-    <div class="max-w-7xl mx-auto px-6 pt-12 pb-20 flex flex-col md:flex-row gap-12" data-pagefind-ignore>
+    <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12" data-pagefind-ignore>
         <!-- Sidebar Navigation -->
-        <aside class="hidden md:block w-56 flex-shrink-0 sticky top-24 h-fit">
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit">
             <nav class="space-y-1" id="about-nav">
                 <p class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">On this page</p>
                 <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium active" href="#intro">Intro</a>
@@ -31,7 +31,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 max-w-4xl" data-pagefind-body>
+        <div class="lg:col-span-9" data-pagefind-body>
             <!-- Intro Section -->
             <section class="mb-20 scroll-mt-24" id="intro">
                 <div class="bg-white dark:bg-navy-800 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row gap-8 items-start">
@@ -42,13 +42,13 @@ import portrait from "../assets/malcolm_portrait.jpg";
                             widths={[240, 480, portrait.width]}
                             sizes="(max-width: 640px) 128px, 192px"
                             loading="eager"
-                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                            class="w-full h-full object-cover object-top"
                         />
                     </div>
                     <div class="flex-1">
                         <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Malcolm Bastien</h1>
                         <p class="text-xl font-serif text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                            I’m an <span class="text-emerald-500 dark:text-emerald-400 font-medium italic">Agile Coach</span> focused on improving predictability and accelerating flow using complexity and systems-thinking-based approaches to teams and work.
+                            I’m an <span class="text-blue-500 dark:text-blue-400 font-medium italic">Agile Coach</span> focused on improving predictability and accelerating flow using complexity and systems-thinking-based approaches to teams and work.
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-mono rounded-full">Kanban</span>
@@ -71,10 +71,10 @@ import portrait from "../assets/malcolm_portrait.jpg";
                 <div class="space-y-12">
                     <!-- Senior Agile Coach -->
                     <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800">
-                        <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-white dark:ring-background-dark"></div>
+                        <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-white dark:ring-background-dark"></div>
                         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
                             <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Agile Coach</h3>
-                            <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 tracking-widest uppercase">2017 — Present</span>
+                            <span class="text-xs font-bold text-blue-500 dark:text-blue-400 tracking-widest uppercase">2017 — Present</span>
                         </div>
                         <div class="bg-white dark:bg-navy-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
                             <h4 class="font-bold text-slate-900 dark:text-white mb-2">Agile by Design</h4>
@@ -88,8 +88,9 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                         <div>
                                             <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">High-Impact Deliverables</p>
                                             <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
-                                                <li>Healthcare & Banking Delivery: Coached high-stakes, multi-team projects including the rollout of dozens of commercial banking APIs.</li>
-                                                <li>Product & Architecture Strategy: Facilitated workshops using Mental Model Diagrams for product strategy.</li>
+                                                <li><strong>Healthcare & Banking Delivery:</strong> Coached high-stakes, multi-team projects including new commercial banking APIs.</li>
+                                                <li><strong>Product Strategy:</strong> Facilitated workshops using Mental Model Diagrams and the Lean UX Canvas the for product strategy.</li>
+                                                <li><strong>Economic Prioritization:</strong> Introduced ROI-driven decision-making using Cost of Delay (CoD) and custom risk-assessment frameworks.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -98,8 +99,8 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                         <div>
                                             <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">Quantitative Performance & Forecasting</p>
                                             <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
-                                                <li>Probabilistic Forecasting: Replaced "gut feel" deadlines with Monte Carlo simulations.</li>
-                                                <li>Flow Optimization: Used percentile-driven reporting (SLEs) and Aging WIP management.</li>
+                                                <li><strong>Probabilistic Forecasting:</strong> Replaced gut-feel deadlines with Monte Carlo simulations.</li>
+                                                <li><strong>Flow Optimization:</strong> Implemented percentile-driven reporting (SLEs) and Aging WIP management.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -110,8 +111,10 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                         <div>
                                             <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">Organizational Design & Flow Engineering</p>
                                             <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
-                                                <li>Flight Levels: Architected multi-tier operating models for B2B service lines.</li>
-                                                <li>Sociotechnical Design: Applied Team Topologies and DDD to restructure teams.</li>
+                                                <li><strong>Flight Levels Model:</strong> Architected multi-tier operating models for B2B service lines.</li>
+                                                <li><strong>Sociotechnical Design:</strong> Applied Team Topologies and DDD to restructure teams.</li>
+                                                <li><strong>Collaborative Modelling:</strong> Used EventStorming and the C4 Model to model payment processes and team workflows.</li>
+                                                <li><strong>Value Stream Engineering:</strong> Mapped customer onboarding and fraud screening processes, reducing lead times and time-to-value.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -120,8 +123,8 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                         <div>
                                             <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">Project & Program Delivery</p>
                                             <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
-                                                <li>Executive Visibility: Designed portfolio-level operating models for VPs/Executives.</li>
-                                                <li>Delivery Roadmaps: Led multi-team planning using relative sizing.</li>
+                                                <li><strong>Executive Visibility:</strong> Designed portfolio-level operating models for VPs/Executives.</li>
+                                                <li><strong>Delivery Roadmaps:</strong> Built roadmaps and led multi-team planning and estimation workshops.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -148,6 +151,30 @@ import portrait from "../assets/malcolm_portrait.jpg";
                             </ul>
                         </div>
                     </div>
+
+                    <!-- Coach -->
+                    <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800">
+                        <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-background-dark"></div>
+                        <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Coach</h3>
+                            <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">2012 — 2016</span>
+                        </div>
+                        <div class="bg-white/50 dark:bg-navy-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <h4 class="font-bold text-slate-900 dark:text-white mb-2">West Toronto CrossFit</h4>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Specialist -->
+                    <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800">
+                        <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-background-dark"></div>
+                        <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Marketing Specialist</h3>
+                            <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">2010 — 2011</span>
+                        </div>
+                        <div class="bg-white/50 dark:bg-navy-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Microsoft</h4>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -166,7 +193,9 @@ import portrait from "../assets/malcolm_portrait.jpg";
                         <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
                             <li class="flex justify-between"><span>Awareness in Wardley Mapping</span> <span class="text-slate-400 uppercase font-mono">GCAT • 2021</span></li>
                             <li class="flex justify-between"><span>Cynefin Masterclass</span> <span class="text-slate-400 uppercase font-mono">Cognitive Edge</span></li>
-                            <li class="flex justify-between"><span>Agendashift Deep Dive</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
+                            <li class="flex justify-between"><span>Agendashift Deep Dive</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
+                            <li class="flex justify-between"><span>Re-wilding Agile Masterclass</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
+                            <li class="flex justify-between"><span>Designing Epistemically Healthy Organizations</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
                         </ul>
                     </div>
                     <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
@@ -178,6 +207,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                             <li class="flex justify-between"><span>Introduction to Flight Levels</span> <span class="text-slate-400 uppercase font-mono">FL Academy • 2021</span></li>
                             <li class="flex justify-between"><span>Flight Levels Systems Architecture</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
                             <li class="flex justify-between"><span>Independent Value Streams with DDD</span> <span class="text-slate-400 uppercase font-mono">2022</span></li>
+                            <li class="flex justify-between"><span>Flight Level 2 Design</span> <span class="text-slate-400 uppercase font-mono">2022</span></li>
                         </ul>
                     </div>
                     <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
@@ -188,7 +218,8 @@ import portrait from "../assets/malcolm_portrait.jpg";
                         <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
                             <li class="flex justify-between"><span>Kanban Management Professional</span> <span class="text-slate-400 uppercase font-mono">2017</span></li>
                             <li class="flex justify-between"><span>Enterprise Services Planning</span> <span class="text-slate-400 uppercase font-mono">2022</span></li>
-                            <li class="flex justify-between"><span>Kanban Coaching Professional</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
+                            <li class="flex justify-between"><span>Kanban Coaching Professional</span> <span class="text-slate-400 uppercase font-mono">2019</span></li>
+                            <li class="flex justify-between"><span>Fast Flow of Change</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
                         </ul>
                     </div>
                     <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
@@ -197,9 +228,35 @@ import portrait from "../assets/malcolm_portrait.jpg";
                             <h4 class="font-bold text-sm text-slate-900 dark:text-white">Metrics & Forecasting</h4>
                         </div>
                         <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
-                            <li class="flex justify-between"><span>Dependency Management</span> <span class="text-slate-400 uppercase font-mono">Focused Objective</span></li>
-                            <li class="flex justify-between"><span>Practical Metrics for Coaching</span> <span class="text-slate-400 uppercase font-mono">2022</span></li>
-                            <li class="flex justify-between"><span>Data Driven Coaching for Teams</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
+                            <li class="flex justify-between"><span>Dependency Management</span> <span class="text-slate-400 uppercase font-mono">Focused Objective • 2022</span></li>
+                            <li class="flex justify-between"><span>Practical Metrics and Coaching Using Data</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
+                            <li class="flex justify-between"><span>Practical Forecasting Essentials</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
+                            <li class="flex justify-between"><span>Data-Driven Coaching for Teams</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <span class="material-symbols-outlined text-cyan-500 mr-2">biotech</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Product Discovery & Engineering</h4>
+                        </div>
+                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
+                            <li class="flex justify-between"><span>Specification By Example Workshop</span> <span class="text-slate-400 uppercase font-mono">Avanscoperta • 2022</span></li>
+                            <li class="flex justify-between"><span>TPS Leadership Masterclass</span></li>
+                            <li class="flex justify-between"><span>Domain Storytelling Workshop</span></li>
+                            <li class="flex justify-between"><span>EventStorming Facilitation</span></li>
+                            <li class="flex justify-between"><span>Gherkin Masterclass</span></li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <span class="material-symbols-outlined text-indigo-500 mr-2">diversity_3</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Leadership & Collaboration</h4>
+                        </div>
+                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
+                            <li class="flex justify-between"><span>Level 1: Empathy Toy Training</span> <span class="text-slate-400 uppercase font-mono">Twenty One Toys — 2018</span></li>
+                            <li class="flex justify-between"><span>Accelerated Performance Program Online Meeting Magic</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
+                            <li class="flex justify-between"><span>Managing Virtual Teams</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
+                            <li class="flex justify-between"><span>Technical Leadership Masterclass</span></li>
                         </ul>
                     </div>
                 </div>
@@ -214,13 +271,16 @@ import portrait from "../assets/malcolm_portrait.jpg";
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
                     <div>
                         <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
-                            <span class="material-symbols-outlined text-xs mr-2">psychology</span> Agile & Lean
+                            <span class="material-symbols-outlined text-xs mr-2">cycle</span> Agile & Lean
                         </h4>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Kanban</span>
                             <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Scrum</span>
                             <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Continuous Improvement</span>
                             <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Flow</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Lean</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Toyota Production System</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">XP</span>
                         </div>
                     </div>
                     <div>
@@ -231,16 +291,84 @@ import portrait from "../assets/malcolm_portrait.jpg";
                             <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Team Dynamics</span>
                             <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Self-Organization</span>
                             <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Team Topologies</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Psychological Safety</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Organizational Culture</span>
                         </div>
                     </div>
                     <div>
                         <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
-                            <span class="material-symbols-outlined text-xs mr-2">layers</span> Systems
+                            <span class="material-symbols-outlined text-xs mr-2">hub</span> Systems
                         </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Domain Driven Design</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Complexity</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Cybernetics</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Complex Adaptive Systems</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Systems Thinking</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Feedback Loops</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Cynefin</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-xs mr-2">deployed_code</span> Product
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Value Proposition Design</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Lean UX</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Jobs to be Done</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-xs mr-2">tactic</span> Projects
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Delivery</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Cost of Delay</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Portfolio Management</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Dependency Management</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-xs mr-2">schema</span> Modelling
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Story Mapping</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Impact Mapping</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Spec by Example</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Wardley Mapping</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Value Stream Mapping</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-xs mr-2">token</span> DDD
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Context Mapping</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">EventStorming</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Domain Storytelling</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Domain Modeling</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-xs mr-2">menu_book</span> Knowledge
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">PKM</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Zettlekasten</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Obsidian</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Org Mode</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-xs mr-2">terminal</span> Technology
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Keyboards</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Ergonomics</span>
+                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Linux</span>
                         </div>
                     </div>
                 </div>
@@ -253,23 +381,35 @@ import portrait from "../assets/malcolm_portrait.jpg";
                     <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800 ml-6"></div>
                 </div>
                 <div class="space-y-12">
-                    <blockquote class="relative pl-8 border-l-4 border-blue-600 dark:border-blue-500">
+                    <blockquote class="relative pl-8 border-l-4 border-emerald-500 dark:border-emerald-400">
                         <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
                             "I had the pleasure of working with Malcolm on a large-scale transformation initiative, and I can confidently say he is one of the most skilled and inspiring Agile Coaches I've had the opportunity to collaborate with. Malcolm brings a rare combination of deep Agile expertise, strong leadership, and genuine empathy."
                         </p>
                         <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Management Consultant</footer>
                     </blockquote>
-                    <blockquote class="relative pl-8 border-l-4 border-slate-400 dark:border-slate-600">
+                    <blockquote class="relative pl-8 border-l-4 border-blue-500 dark:border-blue-400">
                         <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
-                            "Even after many years, I still remember his calm presence and thoughtful facilitation style. I'm happy to recommend him to any team looking for strong agile support and collaborative delivery leadership."
+                            " I had the pleasure of working with Malcolm several years ago. He played a key role as an Agile Coach, helping guide the team through priorities, sprint ceremonies, and cross-functional collaboration. Even after many years, I still remember his calm presence and thoughtful facilitation style."
                         </p>
                         <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Senior Product Manager</footer>
                     </blockquote>
-                    <blockquote class="relative pl-8 border-l-4 border-blue-600/30 dark:border-blue-500/30">
+                    <blockquote class="relative pl-8 border-l-4 border-amber-500 dark:border-amber-400">
                         <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
-                            "I was fortunate to work with Malcolm as our Senior Agile Coach, and his impact on our team was remarkable. He brought not only deep expertise in Agile practices but also a genuine ability to coach, mentor, and empower individuals to grow."
+                            "I was fortunate to work with Malcolm as our Senior Agile coach, and his impact on our team was remarkable. He brought not only deep expertise in Agile practices but also a genuine ability to coach, mentor, and empower individuals to grow."
                         </p>
                         <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Tech Lead</footer>
+                    </blockquote>
+                    <blockquote class="relative pl-8 border-l-4 border-purple-500 dark:border-purple-400">
+                        <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
+                            "I had the pleasure of working with Malcolm where his guidance as an Agile Coach made a big impact on our team. He brought clarity, patience, and practical insights that helped us improve collaboration and deliver better outcomes."
+                        </p>
+                        <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Developer</footer>
+                    </blockquote>
+                    <blockquote class="relative pl-8 border-l-4 border-indigo-500 dark:border-indigo-400">
+                        <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
+                            "I had the pleasure of working with Malcolm... he was always a pleasure to work with, good for a joke or two but also an insightful discussion. Whenever I collaborated with Malcolm he instilled confidence into what I was doing and highlighted different perspectives on the task at hand, which I greatly appreciated. His consultation always left me thinking about ways to improve the approach we were taking."
+                        </p>
+                        <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Technical Navigator</footer>
                     </blockquote>
                 </div>
             </section>
@@ -288,8 +428,8 @@ import portrait from "../assets/malcolm_portrait.jpg";
                     <span class="text-sm font-mono text-slate-400 uppercase">2008 — 2013</span>
                 </div>
             </section>
-        </main>
-    </div>
+        </div>
+    </main>
     <SiteFooter />
 </Layout>
 
@@ -305,7 +445,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
     // Simple scroll spy for sidebar highlighting
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.sidebar-link');
-    
+
     function updateActiveLink() {
         let current = '';
         sections.forEach(section => {
@@ -326,4 +466,27 @@ import portrait from "../assets/malcolm_portrait.jpg";
     window.addEventListener('scroll', updateActiveLink);
     // Run once on load
     updateActiveLink();
+
+    // Handle clicks to avoid breaking "Back" button behavior
+    document.querySelectorAll('.sidebar-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (!href || !href.startsWith('#')) return;
+            
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                // Update URL without adding to history
+                history.replaceState(null, '', href);
+                
+                // Smooth scroll to target
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 </script>

@@ -42,9 +42,9 @@ const packages = [
     description="Information about how this website was built and the tools used in its creation."
     type="website"
 >
-    <div class="max-w-7xl mx-auto px-6 pt-12 pb-20 flex flex-col lg:flex-row gap-12" data-pagefind-ignore>
+    <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12" data-pagefind-ignore>
         <!-- Left Sidebar: Navigation -->
-        <aside class="hidden lg:block w-64 flex-shrink-0 sticky top-24 h-fit">
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit">
             <nav class="space-y-1" id="colophon-nav">
                 <p class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">On this page</p>
                 <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white transition-colors font-medium active" href="#intro">Intro</a>
@@ -60,7 +60,7 @@ const packages = [
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 max-w-4xl" data-pagefind-body>
+        <div class="lg:col-span-9" data-pagefind-body>
             <header class="mb-16 scroll-mt-24" id="intro">
                 <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6">Colophon</h1>
                 <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl italic font-serif">
@@ -170,8 +170,8 @@ const packages = [
                     </div>
                 </section>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
     <SiteFooter />
 </Layout>
 
@@ -208,4 +208,27 @@ const packages = [
     window.addEventListener('scroll', updateActiveLink);
     // Run once on load
     updateActiveLink();
+
+    // Handle clicks to avoid breaking "Back" button behavior
+    document.querySelectorAll('.sidebar-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (!href || !href.startsWith('#')) return;
+            
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                // Update URL without adding to history
+                history.replaceState(null, '', href);
+                
+                // Smooth scroll to target
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 </script>

@@ -169,9 +169,60 @@ const tocStructure = createTOCStructure(title, headings);
 
     /* Active TOC link styling */
     .toc-link.active {
-        @apply text-primary dark:text-primary;
+        @apply text-blueprint-blue font-bold;
     }
 
-
-
+    .dark .toc-link.active {
+        @apply text-blue-500;
+    }
 </style>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const id = entry.target.getAttribute('id');
+            if (entry.isIntersecting) {
+                document.querySelectorAll('.toc-link').forEach((link) => {
+                    link.classList.remove('active');
+                });
+                const activeLink = document.querySelector(`.toc-link[href="#${id}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    }, {
+        rootMargin: '-100px 0px -66%',
+        threshold: 1.0
+    });
+
+    // Observe all headings that have an ID and are within the article
+    document.querySelectorAll('article h2, article h3, article h4, article h5, article h6').forEach((heading) => {
+        if (heading.getAttribute('id')) {
+            observer.observe(heading);
+        }
+    });
+
+    // Handle clicks to avoid breaking "Back" button behavior
+    document.querySelectorAll('.toc-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (!href || href === '#') return;
+            
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                // Update URL without adding to history
+                history.replaceState(null, '', href);
+                
+                // Smooth scroll to target
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>

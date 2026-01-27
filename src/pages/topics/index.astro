@@ -51,15 +51,15 @@ const growthData = [40, 25, 60, 45, 80, 55, 75, 90, 65, 30, 50, 85];
     type="website"
 >
     <main class="max-w-7xl mx-auto px-6 py-12" data-pagefind-ignore>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <!-- Left Sidebar: Alphabetical Navigation -->
             <aside class="lg:col-span-1 hidden lg:block">
-                <div class="sticky top-24 space-y-8 alphabet-nav overflow-y-auto max-h-[80vh] pr-2 no-scrollbar">
+                <div class="sticky top-24 space-y-8 alphabet-nav overflow-y-auto max-h-[80vh] pr-4 no-scrollbar border-r border-slate-200 dark:border-slate-800">
                     <div class="flex flex-col gap-2">
                         {alphabet.map(char => (
                             <a
                                 href={`#${char === "#" ? "num" : char}`}
-                                class="text-sm font-bold text-slate-400 hover:text-emerald-500 transition-colors uppercase"
+                                class="text-sm font-bold text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors uppercase"
                             >
                                 {char}
                             </a>
@@ -69,7 +69,7 @@ const growthData = [40, 25, 60, 45, 80, 55, 75, 90, 65, 30, 50, 85];
             </aside>
 
             <!-- Main Content Area -->
-            <div class="lg:col-span-8">
+            <div class="lg:col-span-10">
                 <header class="mb-12">
                     <h1 class="text-5xl font-extrabold text-navy-900 dark:text-white mb-4">Topic Index</h1>
                     <p class="text-slate-500 dark:text-slate-400 font-serif text-lg italic">A curated map of knowledge, interconnected through tags and themes.</p>
@@ -90,14 +90,14 @@ const growthData = [40, 25, 60, 45, 80, 55, 75, 90, 65, 30, 50, 85];
                                             class:list={[
                                                 "group flex items-center justify-between p-3 rounded-xl border transition-all hover:shadow-sm hover:border-slate-200 dark:hover:border-slate-700",
                                                 isPopular
-                                                    ? "bg-emerald-50/50 dark:bg-emerald-900/10 border-emerald-100 dark:border-emerald-900/30"
+                                                    ? "bg-blue-50/50 dark:bg-blue-900/10 border-blue-100 dark:border-blue-900/30"
                                                     : "bg-white dark:bg-navy-800 border-transparent"
                                             ]}
                                         >
                                             <span class:list={[
                                                 "text-sm font-medium transition-colors",
                                                 isPopular
-                                                    ? "text-emerald-700 dark:text-emerald-400 group-hover:text-emerald-800 dark:group-hover:text-emerald-300"
+                                                    ? "text-blue-700 dark:text-blue-400 group-hover:text-blue-800 dark:group-hover:text-blue-300"
                                                     : "text-slate-600 dark:text-slate-300 group-hover:text-navy-900 dark:group-hover:text-white"
                                             ]}>#{topic}</span>
                                             <span class="text-[10px] font-mono text-slate-400 bg-slate-100 dark:bg-slate-700 px-1.5 py-0.5 rounded-lg">{count}</span>
