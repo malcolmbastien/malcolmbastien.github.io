@@ -60,6 +60,11 @@ function helloGarden() {
 }
 ```
 
+#### Block quotes
+
+> Be yourself; everyone else is already taken.
+>
+> ― Oscar Wildee
 
 ## 🎨 Callouts and Special Formatting
 

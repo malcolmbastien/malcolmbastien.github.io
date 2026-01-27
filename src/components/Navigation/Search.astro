@@ -7,8 +7,8 @@
 <script is:inline>
   function initSearch() {
     if (typeof PagefindUI !== 'undefined') {
-        new PagefindUI({ 
-            element: "#search-box", 
+        new PagefindUI({
+            element: "#search-box",
             showSubResults: true,
             resetFilters: true,
             translations: {
@@ -38,7 +38,7 @@
         if (searchBox) {
             observer.observe(searchBox, { childList: true, subtree: true });
         }
-        
+
         // Auto-focus the search input
         setTimeout(() => {
             const searchInput = document.querySelector(".pagefind-ui__search-input");
@@ -96,7 +96,7 @@
   }
 
   #search-box .pagefind-ui__search-input {
-    @apply border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xl focus:ring-4 focus:ring-emerald-500/5 focus:border-emerald-500 transition-all py-5 px-14;
+    @apply border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xl focus:ring-4 focus:ring-green-500/5 focus:border-green-500 transition-all py-5 px-14;
     border-radius: 1rem;
   }
 
@@ -106,13 +106,19 @@
   }
 
   #search-box .pagefind-ui__result-link {
-    @apply text-navy-900 dark:text-white font-sans font-bold hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors text-2xl tracking-tight leading-tight;
+    @apply text-navy-900 dark:text-white font-sans font-bold hover:text-green-500 dark:hover:text-green-600 transition-colors text-2xl tracking-tight leading-tight;
   }
+
+  #search-box .pagefind-ui__result-nested .pagefind-ui__result-link {
+    @apply flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-green-500 dark:hover:text-green-600 transition-colors;
+  }
+
+
 
   #search-box .pagefind-ui__result-excerpt {
     @apply text-slate-600 dark:text-slate-400 text-[17px] mt-4 font-serif leading-relaxed;
   }
-  
+
   #search-box .pagefind-ui__result {
     @apply flex flex-col sm:flex-row gap-8 pb-16 mb-16 border-b border-slate-200 dark:border-slate-800 last:border-0;
   }
@@ -141,9 +147,7 @@
     @apply mt-6 space-y-4 ml-0!;
   }
 
-  #search-box .pagefind-ui__result-nested .pagefind-ui__result-link {
-    @apply flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors;
-  }
+
 
   #search-box .pagefind-ui__result-nested .pagefind-ui__result-link::before {
     content: "subdirectory_arrow_right";
@@ -160,15 +164,15 @@
   }
 
   /* Stage-based accent styling */
-  .result-evergreen { border-left: 4px solid #10b981 !important; padding-left: 1.5rem !important; }
-  .result-sprout { border-left: 4px solid #3b82f6 !important; padding-left: 1.5rem !important; }
-  .result-seed { border-left: 4px solid #f59e0b !important; padding-left: 1.5rem !important; }
+  .result-evergreen { border-left: 4px solid var(--color-evergreen) !important; padding-left: 1.5rem !important; }
+  .result-sprout { border-left: 4px solid var(--color-sprout) !important; padding-left: 1.5rem !important; }
+  .result-seed { border-left: 4px solid var(--color-seed) !important; padding-left: 1.5rem !important; }
 
-  .result-evergreen .pagefind-ui__result-link { @apply text-emerald-600 dark:text-emerald-400; }
-  .result-sprout .pagefind-ui__result-link { @apply text-blue-600 dark:text-blue-400; }
-  .result-seed .pagefind-ui__result-link { @apply text-amber-600 dark:text-amber-400; }
+  .result-evergreen .pagefind-ui__result-link { @apply text-green-600 dark:text-green-600; }
+  .result-sprout .pagefind-ui__result-link { @apply text-lime-600 dark:text-lime-600; }
+  .result-seed .pagefind-ui__result-link { @apply text-amber-600 dark:text-amber-600; }
 
-  .result-evergreen .pagefind-ui__result-tag { @apply bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-800/50; }
-  .result-sprout .pagefind-ui__result-tag { @apply bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 border border-blue-100 dark:border-blue-800/50; }
-  .result-seed .pagefind-ui__result-tag { @apply bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border border-amber-100 dark:border-amber-800/50; }
+  .result-evergreen .pagefind-ui__result-tag { @apply bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-600 border border-green-100 dark:border-green-800/50; }
+  .result-sprout .pagefind-ui__result-tag { @apply bg-lime-100 dark:bg-lime-900/30 text-lime-600 dark:text-lime-600 border border-lime-100 dark:border-lime-800/50; }
+  .result-seed .pagefind-ui__result-tag { @apply bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-600 border border-amber-100 dark:border-amber-800/50; }
 </style>

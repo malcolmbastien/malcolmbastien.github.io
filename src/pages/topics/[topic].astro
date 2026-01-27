@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import BackToGarden from "../../components/Navigation/BackToGarden.astro";
 import SiteFooter from "../../components/SiteFooter.astro";
+import { stages as themeStages, getStageData } from "../../lib/theme";
 
 export async function getStaticPaths() {
     const allNotes = await getCollection("notes");
@@ -38,20 +39,17 @@ const groupedByStage = {
     seed: sortedNotes.filter(n => n.data.stage === 'seed')
 };
 
-const stages = [
-    { id: 'evergreen', label: 'Evergreens', icon: 'energy_savings_leaf', color: 'text-emerald-600 dark:text-emerald-400', bgColor: 'bg-emerald-600/10', dotColor: 'bg-emerald-500 shadow-emerald-500/20' },
-    { id: 'sprout', label: 'Sprouts', icon: 'eco', color: 'text-blue-500 dark:text-blue-400', bgColor: 'bg-blue-500/10', dotColor: 'bg-blue-500 shadow-blue-500/20' },
-    { id: 'seed', label: 'Seeds', icon: 'potted_plant', color: 'text-amber-500 dark:text-amber-400', bgColor: 'bg-amber-500/10', dotColor: 'bg-amber-500 shadow-amber-500/20' }
-];
-
-const getStageTextClass = (stage: string) => {
-    switch(stage) {
-        case 'evergreen': return 'text-emerald-600 dark:text-emerald-400';
-        case 'sprout': return 'text-blue-500 dark:text-blue-400';
-        case 'seed': return 'text-amber-600 dark:text-amber-400';
-        default: return 'text-blue-500';
-    }
-}
+const stages = ['evergreen', 'sprout', 'seed'].map(id => {
+    const data = themeStages[id as keyof typeof themeStages];
+    return {
+        id,
+        label: data.label + 's', // Pluralize for this page
+        icon: data.icon,
+        color: data.colors.accent,
+        bgColor: data.colors.bgAccent,
+        dotColor: data.colors.dotShadow
+    };
+});
 ---
 
 <Layout
@@ -59,7 +57,7 @@ const getStageTextClass = (stage: string) => {
     description={`Explore all cultivated notes and ideas regarding ${topic}.`}
     type="website"
 >
-    <main class="max-w-7xl mx-auto px-6 py-12" data-pagefind-ignore>
+    <main class="w-full max-w-[1280px] mx-auto px-6 py-12" data-pagefind-ignore>
         <!-- Header Section -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
@@ -116,7 +114,7 @@ const getStageTextClass = (stage: string) => {
 
                                             <div class="flex-grow flex flex-col">
                                                 <div class="flex justify-between items-start mb-3">
-                                                    <span class:list={["text-xs font-bold uppercase tracking-widest", getStageTextClass(note.data.stage)]}>
+                                                    <span class:list={["text-xs font-bold uppercase tracking-widest", getStageData(note.data.stage).colors.text]}>
                                                         {note.data.stage}
                                                     </span>
                                                     <time class="text-slate-400 text-xs font-mono">

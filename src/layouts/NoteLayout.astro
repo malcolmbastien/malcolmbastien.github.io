@@ -8,6 +8,7 @@ import SiteFooter from "../components/SiteFooter.astro";
 import { getReadingTime } from "../lib/reading-time";
 import BackToGarden from "../components/Navigation/BackToGarden.astro";
 import AboutAuthor from "../components/AboutAuthor.astro";
+import { getStageData } from "../lib/theme";
 
 interface Props {
     frontmatter: {
@@ -36,6 +37,8 @@ const { frontmatter, filePath, gitCreated, gitUpdated, backlinkedNotes, noteBody
 // Use passed body or fallback (fallback shouldn't be needed if updated correctly)
 const readingTime = noteBody ? getReadingTime(noteBody) : "";
 
+const stageData = getStageData(frontmatter.stage);
+
 const createdDate = frontmatter.publishedDate || gitCreated || new Date();
 const hasBeenUpdated =
     gitUpdated && gitUpdated.getTime() > createdDate.getTime() + 1000 * 60 * 60; // More than 1 hour difference
@@ -49,24 +52,6 @@ const formatDate = (date: Date) => {
         day: "numeric",
     });
 };
-
-const getStageColorClass = (stage: string) => {
-    switch(stage) {
-        case 'seed': return 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400';
-        case 'sprout': return 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400';
-        case 'evergreen': return 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400';
-        default: return 'bg-slate-100 dark:bg-slate-800 text-slate-500';
-    }
-}
-
-const getStageDotClass = (stage: string) => {
-     switch(stage) {
-        case 'seed': return 'bg-emerald-500';
-        case 'sprout': return 'bg-blue-500';
-        case 'evergreen': return 'bg-emerald-500';
-        default: return 'bg-slate-400';
-    }
-}
 ---
 
 <Layout
@@ -102,11 +87,11 @@ const getStageDotClass = (stage: string) => {
         >
             <div class="px-8 pt-10 pb-6 border-b border-slate-100 dark:border-slate-800">
                 <div
-                    class={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full ${getStageColorClass(frontmatter.stage)} text-[10px] font-bold uppercase tracking-wider mb-6`}
+                    class={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full ${stageData.colors.badge} text-[10px] font-bold uppercase tracking-wider mb-6`}
                     data-pagefind-filter="stage"
                     data-pagefind-meta={`stage:${frontmatter.stage}`}
                 >
-                    <span class={`w-2 h-2 rounded-full ${getStageDotClass(frontmatter.stage)}`}></span>
+                    <span class={`w-2 h-2 rounded-full ${stageData.colors.dot}`}></span>
                     {frontmatter.stage}
                 </div>
 
@@ -135,7 +120,7 @@ const getStageDotClass = (stage: string) => {
                         {frontmatter.tags.map(tag => (
                             <a
                                 href={`/topics/${tag}`}
-                                class="bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded text-xs font-mono hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                                class="bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-lg text-sm font-medium text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-all"
                             >
                                 #{tag}
                             </a>
@@ -176,6 +161,10 @@ const getStageDotClass = (stage: string) => {
           border-left-color: var(--color-primary);
           font-style: italic;
       }
+      .prose blockquote p:first-of-type::before,
+      .prose blockquote p:last-of-type::after {
+          content: none;
+      }
       .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
           font-family: 'Inter', sans-serif;
           @apply text-navy-900 dark:text-slate-100 font-bold tracking-tight scroll-mt-24;
@@ -187,6 +176,77 @@ const getStageDotClass = (stage: string) => {
       .note-is-draft::after {
         content: "DRAFT_NODE";
         @apply absolute top-4 right-4 bg-blue-500 text-white text-xs font-mono font-bold px-3 py-1 z-50;
+      }
+
+      /* --- Link Styles from Snippet --- */
+      
+      /* Internal Links with Underline System */
+      .prose a.internal-link {
+          display: inline !important;
+          transition: all 0.2s ease-in-out !important;
+          @apply font-medium text-slate-900 dark:text-white;
+          background: transparent !important;
+          padding: 0 !important;
+          border: none !important;
+          text-decoration: none !important;
+      }
+
+      .prose a.internal-link .link-text {
+          text-decoration: underline !important;
+          text-decoration-thickness: 3px !important;
+          text-underline-offset: 4px !important;
+          transition: all 0.2s ease-in-out !important;
+          display: inline !important;
+      }
+      
+      /* Base Underline State (3px) */
+      .prose a.internal-link[data-stage="seed"] .link-text { text-decoration-color: var(--stage-seed-underline) !important; }
+      .prose a.internal-link[data-stage="sprout"] .link-text { text-decoration-color: var(--stage-sprout-underline) !important; }
+      .prose a.internal-link[data-stage="evergreen"] .link-text { text-decoration-color: var(--stage-evergreen-underline) !important; }
+      
+      /* Hover Underline State (6px) */
+      .prose a.internal-link:hover .link-text {
+          text-decoration-thickness: 6px !important;
+      }
+      .prose a.internal-link[data-stage="seed"]:hover .link-text { text-decoration-color: var(--stage-seed-underline) !important; }
+      .prose a.internal-link[data-stage="sprout"]:hover .link-text { text-decoration-color: var(--stage-sprout-underline) !important; }
+      .prose a.internal-link[data-stage="evergreen"]:hover .link-text { text-decoration-color: var(--stage-evergreen-underline) !important; }
+      
+      /* External Links */
+      .prose a.external-link {
+          @apply font-display font-semibold text-[#a855f7] hover:opacity-80 transition-opacity;
+          display: inline !important;
+          text-decoration: none !important;
+      }
+
+      .prose a.external-link .link-text {
+          text-decoration: underline !important;
+          text-decoration-color: #a855f7 !important;
+          text-decoration-thickness: 3px !important;
+          text-underline-offset: 4px !important;
+          transition: all 0.2s ease-in-out !important;
+      }
+      
+      .prose a.external-link:hover .link-text {
+          text-decoration-thickness: 6px !important;
+      }
+      
+      .prose a.external-link::after {
+          content: "north_east" !important;
+          font-family: 'Material Symbols Outlined' !important;
+          font-size: 16px !important;
+          line-height: 1 !important;
+          margin-left: 0.1rem !important;
+          opacity: 1 !important;
+          display: inline-block !important;
+          text-decoration: none !important;
+          vertical-align: middle !important;
+      }
+      
+      /* Inline Topic Links (Hashtags) */
+      .prose a.inline-tag {
+          @apply bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded-md font-display font-normal text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-all;
+          text-decoration: none !important;
       }
     </style>
 </Layout>

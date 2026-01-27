@@ -2,7 +2,7 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-primary: #10b981; /* Emerald 500 */
+  --color-primary: #22c55e; /* Green 500 */
   --color-background-light: #f8fafc;
   --color-background-dark: #0f172a;
   --color-content-light: #ffffff;
@@ -20,13 +20,18 @@
   --color-tooling-gray: #f1f5f9;
 
   --color-seed: #f59e0b;
-  --color-sprout: #3b82f6;
-  --color-evergreen: #10b981;
+  --color-sprout: #84cc16;
+  --color-evergreen: #22c55e;
+
+  /* Stage Underline Colors */
+  --stage-seed-underline: #fbbf24;
+  --stage-sprout-underline: #a3e635;
+  --stage-evergreen-underline: #16a34a;
 
   --color-andon-amber: #f59e0b;
-  --color-sprout-teal: #3b82f6;
-  --color-evergreen-green: #10b981;
-  --color-andon-emerald: #10b981;
+  --color-sprout-teal: #84cc16;
+  --color-evergreen-green: #22c55e;
+  --color-andon-emerald: #22c55e;
   --color-neutral-text-light: #64748b;
   --color-neutral-text-dark: #f8fafc;
   --color-neutral-metadata-dark: #cbd5e1;
@@ -242,10 +247,10 @@ h6 {
   color: #f59e0b !important;
 }
 @utility text-signal-sprout {
-  color: #3b82f6 !important;
+  color: #84cc16 !important;
 }
 @utility text-signal-evergreen {
-  color: #10b981 !important;
+  color: #22c55e !important;
 }
 @utility text-signal-blueprint {
   color: #4382ff !important;
@@ -319,35 +324,31 @@ h6 {
 
 /* Internal links (within the garden) - stage-specific colors */
 .prose a.internal-link {
-  @apply inline-flex items-center gap-1 no-underline transition-all;
+  @apply no-underline transition-all;
+  display: inline;
 }
 
 .prose a.internal-link[data-stage="seed"] {
-  @apply text-andon-amber bg-orange-100/60 dark:bg-orange-900/20 rounded px-1;
+  @apply text-slate-900 dark:text-white;
 }
 .prose a.internal-link[data-stage="sprout"] {
-  @apply text-sprout-teal bg-teal-100/60 dark:bg-teal-900/20 rounded px-1;
+  @apply text-slate-900 dark:text-white;
 }
 .prose a.internal-link[data-stage="evergreen"] {
-  @apply text-evergreen-green bg-green-100/60 dark:bg-green-900/20 rounded px-1;
-}
-
-.prose a.internal-link:hover .link-text {
-  @apply underline underline-offset-4;
+  @apply text-slate-900 dark:text-white;
 }
 
 /* External links (outside the garden) */
 .prose a.external-link {
-  @apply text-purple-600 dark:text-purple-400 no-underline;
-}
-
-.prose a.external-link:hover {
-  @apply underline underline-offset-4 decoration-purple-500;
+  @apply font-display font-semibold text-[#a855f7] hover:opacity-80 transition-opacity inline-flex items-center gap-1 no-underline;
 }
 
 .prose a.external-link::after {
-  content: "↗";
-  @apply ml-0.5 text-[1em] opacity-80 inline-block;
+  content: "north_east";
+  font-family: "Material Symbols Outlined";
+  font-size: 16px;
+  line-height: 1;
+  @apply ml-0 opacity-100;
 }
 
 /* Remove grey border from images in blog posts */
@@ -407,36 +408,64 @@ h6 {
 
 /* Callout Emojis */
 .markdown-alert-note .markdown-alert-title::before,
-.markdown-alert-info .markdown-alert-title::before { content: "📝" !important; }
+.markdown-alert-info .markdown-alert-title::before {
+  content: "📝" !important;
+}
 .markdown-alert-abstract .markdown-alert-title::before,
 .markdown-alert-summary .markdown-alert-title::before,
-.markdown-alert-tldr .markdown-alert-title::before { content: "📋" !important; }
+.markdown-alert-tldr .markdown-alert-title::before {
+  content: "📋" !important;
+}
 .markdown-alert-todo .markdown-alert-title::before,
 .markdown-alert-success .markdown-alert-title::before,
 .markdown-alert-check .markdown-alert-title::before,
-.markdown-alert-done .markdown-alert-title::before { content: "✅" !important; }
+.markdown-alert-done .markdown-alert-title::before {
+  content: "✅" !important;
+}
 .markdown-alert-tip .markdown-alert-title::before,
 .markdown-alert-hint .markdown-alert-title::before,
-.markdown-alert-idea .markdown-alert-title::before { content: "💡" !important; }
-.markdown-alert-important .markdown-alert-title::before { content: "❗" !important; }
+.markdown-alert-idea .markdown-alert-title::before {
+  content: "💡" !important;
+}
+.markdown-alert-important .markdown-alert-title::before {
+  content: "❗" !important;
+}
 .markdown-alert-question .markdown-alert-title::before,
 .markdown-alert-help .markdown-alert-title::before,
-.markdown-alert-faq .markdown-alert-title::before { content: "❓" !important; }
+.markdown-alert-faq .markdown-alert-title::before {
+  content: "❓" !important;
+}
 .markdown-alert-warning .markdown-alert-title::before,
 .markdown-alert-caution .markdown-alert-title::before,
-.markdown-alert-attention .markdown-alert-title::before { content: "⚠️" !important; }
+.markdown-alert-attention .markdown-alert-title::before {
+  content: "⚠️" !important;
+}
 .markdown-alert-failure .markdown-alert-title::before,
 .markdown-alert-fail .markdown-alert-title::before,
-.markdown-alert-missing .markdown-alert-title::before { content: "❌" !important; }
-.markdown-alert-danger .markdown-alert-title::before { content: "🔥" !important; }
-.markdown-alert-error .markdown-alert-title::before { content: "🚫" !important; }
-.markdown-alert-bug .markdown-alert-title::before { content: "🐛" !important; }
-.markdown-alert-example .markdown-alert-title::before { content: "📖" !important; }
+.markdown-alert-missing .markdown-alert-title::before {
+  content: "❌" !important;
+}
+.markdown-alert-danger .markdown-alert-title::before {
+  content: "🔥" !important;
+}
+.markdown-alert-error .markdown-alert-title::before {
+  content: "🚫" !important;
+}
+.markdown-alert-bug .markdown-alert-title::before {
+  content: "🐛" !important;
+}
+.markdown-alert-example .markdown-alert-title::before {
+  content: "📖" !important;
+}
 .markdown-alert-quote .markdown-alert-title::before,
-.markdown-alert-cite .markdown-alert-title::before { content: "💬" !important; }
+.markdown-alert-cite .markdown-alert-title::before {
+  content: "💬" !important;
+}
 .markdown-alert-draft .markdown-alert-title::before,
 .markdown-alert-wip .markdown-alert-title::before,
-.markdown-alert-work-in-progress .markdown-alert-title::before { content: "🚧" !important; }
+.markdown-alert-work-in-progress .markdown-alert-title::before {
+  content: "🚧" !important;
+}
 
 /* NOTE, INFO, IMPORTANT, TODO */
 .markdown-alert-note,

@@ -1,63 +1,77 @@
 /**
- * Centralized Theme Configuration
+ * Centralized Stage Configuration
  *
- * Edit colors in this file to change them throughout the entire application.
- * All stage-related colors (badges, progress bars, hover effects, headers)
- * are defined here for consistency and easy maintenance.
- *
- * Note: Glow effects are now applied inline based on card state (slate/emerald/amber)
- * rather than post stage, for better visual consistency.
- *
- * Usage:
- * - import { getStageColors, getStageGlows, getProgressColors } from '../lib/theme'
- * - Or access theme object directly: import { theme } from '../lib/theme'
+ * Edit this file to change stage-related colors, icons, and labels
+ * throughout the entire application.
  */
-export const theme = {
-  // Header coin colors
-  header: {
-    seed: "bg-amber-100 dark:bg-amber-900/40 border border-amber-200 dark:border-amber-800",
-    sprout:
-      "bg-teal-100 dark:bg-teal-900/40 border border-teal-200 dark:border-teal-800",
-    evergreen: "bg-green-100 dark:bg-green-900/40 border border-green-200 dark:border-green-800",
-  },
 
-  stage: {
-    seed: {
-      badge:
-        "bg-amber-50 text-andon-amber border border-amber-100",
-      glow: "hover:shadow-amber-100/50",
-      progress: "bg-andon-amber",
-    },
-    sprout: {
-      badge:
-        "bg-teal-50 text-teal-600 border border-teal-100",
-      glow: "hover:shadow-teal-100/50",
-      progress: "bg-teal-500",
-    },
-    evergreen: {
-      badge:
-        "bg-green-50 text-green-600 border border-green-100",
-      glow: "hover:shadow-green-100/50",
-      progress: "bg-green-500",
-    },
+export const stages = {
+  seed: {
+    label: "Seed",
+    icon: "potted_plant",
+    colors: {
+      badge: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400",
+      dot: "bg-amber-400",
+      text: "text-amber-700 dark:text-amber-400",
+      underline: "#fbbf24", // amber-400
+      accent: "text-amber-500 dark:text-amber-400",
+      bgAccent: "bg-amber-500/10",
+      dotShadow: "bg-amber-500 shadow-amber-500/20"
+    }
   },
+  sprout: {
+    label: "Sprout",
+    icon: "eco",
+    colors: {
+      badge: "bg-lime-100 dark:bg-lime-900/30 text-lime-700 dark:text-lime-400",
+      dot: "bg-lime-500",
+      text: "text-lime-700 dark:text-lime-400",
+      underline: "#a3e635", // lime-400
+      accent: "text-lime-500 dark:text-lime-400",
+      bgAccent: "bg-lime-500/10",
+      dotShadow: "bg-lime-500 shadow-lime-500/20"
+    }
+  },
+  evergreen: {
+    label: "Evergreen",
+    icon: "energy_savings_leaf",
+    colors: {
+      badge: "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400",
+      dot: "bg-green-600",
+      text: "text-green-700 dark:text-green-400",
+      underline: "#16a34a", // green-600
+      accent: "text-green-600 dark:text-green-400",
+      bgAccent: "bg-green-600/10",
+      dotShadow: "bg-green-500 shadow-green-500/20"
+    }
+  }
 };
 
-// Helper functions to get theme values
-export const getStageColors = () => ({
-  seed: theme.stage.seed.badge,
-  sprout: theme.stage.sprout.badge,
-  evergreen: theme.stage.evergreen.badge,
-});
+export type StageKey = keyof typeof stages;
 
-export const getStageGlows = () => ({
-  seed: theme.stage.seed.glow,
-  sprout: theme.stage.sprout.glow,
-  evergreen: theme.stage.evergreen.glow,
-});
+/**
+ * Helper to get stage data safely
+ */
+export const getStageData = (stage: string) => {
+  const key = stage.toLowerCase() as StageKey;
+  return (
+    stages[key] || {
+      label: stage,
+      icon: "question_mark",
+      colors: {
+        badge: "bg-slate-100 dark:bg-slate-800 text-slate-500",
+        dot: "bg-slate-400",
+        text: "text-slate-500",
+        underline: "#94a3b8",
+        accent: "text-slate-500",
+        bgAccent: "bg-slate-500/10",
+        dotShadow: "bg-slate-500 shadow-slate-500/20",
+      },
+    }
+  );
+};
 
-export const getProgressColors = () => ({
-  seed: theme.stage.seed.progress,
-  sprout: theme.stage.sprout.progress,
-  evergreen: theme.stage.evergreen.progress,
-});
+// Legacy support for theme object if needed, though stages is preferred
+export const theme = {
+  stage: stages,
+};

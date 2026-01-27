@@ -18,6 +18,8 @@ interface Props {
     initialYear?: string;
 }
 
+import { getStageData } from "../lib/theme";
+
 const { sortedEvents, allMonths, eventsByMonthKey } = Astro.props;
 
 // Pre-calculate which events are in the initial batch (first 10) for each year
@@ -33,14 +35,6 @@ sortedEvents.forEach((event) => {
     yearCounters.set(year, count + 1);
 });
 
-const getStageColorClass = (stage: string) => {
-    switch(stage) {
-        case 'seed': return 'text-seed bg-amber-50 dark:bg-amber-900/30';
-        case 'sprout': return 'text-sprout bg-blue-50 dark:bg-blue-900/30';
-        case 'evergreen': return 'text-evergreen bg-emerald-50 dark:bg-emerald-900/30';
-        default: return 'text-slate-400 bg-slate-50 dark:bg-slate-900/30';
-    }
-}
 ---
 
 <div class="timeline space-y-12" id="timeline">
@@ -95,7 +89,7 @@ const getStageColorClass = (stage: string) => {
                                               data-is-initial-batch={isInitialBatch ? "true" : "false"}
                                             >
                                            <div class="flex justify-between items-start mb-4">
-                                                <span class={`text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded ${getStageColorClass(event.note.data.stage)}`}>
+                                                <span class={`text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded ${getStageData(event.note.data.stage).colors.badge}`}>
                                                     {event.note.data.stage}
                                                 </span>
                                                 <span class="font-mono text-[10px] text-slate-400 uppercase">

@@ -20,16 +20,16 @@ const description = "The page you’re looking for doesn’t exist or may have b
         <h2 class="text-3xl md:text-5xl font-bold text-navy-900 dark:text-white mb-6 uppercase tracking-tight">
             Page Not Found
         </h2>
-        
+
         <p class="text-slate-500 dark:text-slate-400 max-w-lg mx-auto mb-12 text-lg leading-relaxed">
-            The page you’re looking for doesn’t exist or may have been moved. 
+            The page you’re looking for doesn’t exist or may have been moved.
             <span class="italic font-serif block mt-2">Like a seed that didn't sprout, this link has gone astray.</span>
         </p>
 
         <!-- Action Card -->
         <div class="w-full max-w-3xl bg-white dark:bg-navy-800 border border-slate-100 dark:border-slate-700 p-10 md:p-14 rounded-2xl shadow-xl shadow-slate-200/50 dark:shadow-none">
             <h3 class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-10">What would you like to do?</h3>
-            
+
             <div class="grid md:grid-cols-2 gap-12 text-left">
                 <!-- Go Home -->
                 <div class="space-y-4">
@@ -37,9 +37,9 @@ const description = "The page you’re looking for doesn’t exist or may have b
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                         Return to the homepage and explore the latest thoughts and cultivated notes.
                     </p>
-                    <a 
-                        href="/" 
-                        class="inline-flex items-center gap-3 bg-navy-900 dark:bg-slate-700 text-white px-6 py-3 rounded-xl text-[11px] font-bold uppercase tracking-widest hover:bg-emerald-600 dark:hover:bg-emerald-500 transition-all group"
+                    <a
+                        href="/"
+                        class="inline-flex items-center gap-3 bg-navy-900 dark:bg-slate-700 text-white px-6 py-3 rounded-xl text-[11px] font-bold uppercase tracking-widest hover:bg-green-600 dark:hover:bg-green-500 transition-all group"
                     >
                         <span class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
                         Go Home
@@ -53,13 +53,13 @@ const description = "The page you’re looking for doesn’t exist or may have b
                         Use the search function to find exactly what you're looking for.
                     </p>
                     <form action="/search" method="get" class="relative">
-                        <input 
+                        <input
                             name="q"
-                            type="text" 
-                            class="w-full bg-slate-50 dark:bg-navy-900 border-slate-200 dark:border-slate-700 rounded-xl py-2.5 pl-4 pr-10 text-sm focus:ring-emerald-500 focus:border-emerald-500 dark:text-white transition-all" 
-                            placeholder="Search ideas..." 
+                            type="text"
+                            class="w-full bg-slate-50 dark:bg-navy-900 border-slate-200 dark:border-slate-700 rounded-xl py-2.5 pl-4 pr-10 text-sm focus:ring-green-500 focus:border-green-500 dark:text-white transition-all"
+                            placeholder="Search ideas..."
                         />
-                        <button type="submit" class="absolute right-2 top-1/2 -translate-y-1/2 text-emerald-500 hover:scale-110 transition-transform">
+                        <button type="submit" class="absolute right-2 top-1/2 -translate-y-1/2 text-green-500 hover:scale-110 transition-transform">
                             <span class="material-symbols-outlined">search</span>
                         </button>
                     </form>
@@ -71,18 +71,18 @@ const description = "The page you’re looking for doesn’t exist or may have b
         {randomNote && (
             <div class="mt-16 flex flex-col items-center">
                 <div class="flex items-center gap-2 mb-4">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                     <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Random Note From the Garden</span>
                 </div>
-                <a 
-                    href={`/notes/${randomNote.id.replace('.md', '')}`} 
-                    class="group max-w-md bg-white/50 dark:bg-navy-800/50 border border-slate-100 dark:border-slate-700 p-5 rounded-2xl hover:border-emerald-500/30 transition-all text-left"
+                <a
+                    href={`/notes/${randomNote.id.replace('.md', '')}`}
+                    class="group max-w-md bg-white/50 dark:bg-navy-800/50 border border-slate-100 dark:border-slate-700 p-5 rounded-2xl hover:border-green-500/30 transition-all text-left"
                 >
                     <div class="flex items-center gap-2 mb-2">
-                        <span class="material-symbols-outlined text-emerald-500 text-base">eco</span>
-                        <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">{randomNote.data.stage}</span>
+                        <span class="material-symbols-outlined text-green-500 text-base">eco</span>
+                        <span class="text-xs font-semibold text-green-600 dark:text-green-600 uppercase tracking-wider">{randomNote.data.stage}</span>
                     </div>
-                    <h5 class="text-navy-900 dark:text-slate-100 font-bold mb-1 group-hover:text-emerald-600 transition-colors">
+                    <h5 class="text-navy-900 dark:text-slate-100 font-bold mb-1 group-hover:text-green-600 transition-colors">
                         {randomNote.data.title}
                     </h5>
                     {randomNote.data.summary && (

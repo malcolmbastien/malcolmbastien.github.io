@@ -12,6 +12,7 @@ import TopicFocus from "../components/Profile/TopicFocus.astro";
 
 import { getBatchFileDates, type FileDates } from "../lib/git-history";
 import AboutAuthor from "../components/AboutAuthor.astro";
+import { getStageData } from "../lib/theme";
 
 const allNotes = await getCollection("notes");
 const batchDates = (await getBatchFileDates()) as Map<string, FileDates>;
@@ -302,7 +303,7 @@ const currentYearValue = new Date().getFullYear();
                                         {pinnedNotes.map((note) => (
                                             <article class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm group hover:shadow-md transition-all relative">
                                                 <div class="flex justify-between items-start mb-4">
-                                                    <span class="text-[10px] font-bold text-evergreen uppercase tracking-widest">
+                                                    <span class={`text-[10px] font-bold uppercase tracking-widest ${getStageData(note.data.stage).colors.text}`}>
                                                         {note.data.stage}
                                                     </span>
                                                     <span class="text-[10px] text-slate-400 font-medium italic">Pinned</span>
@@ -343,7 +344,7 @@ const currentYearValue = new Date().getFullYear();
                         {latestCreations.map((note) => (
                             <div class="group cursor-pointer relative">
                                 <div class="flex justify-between items-center mb-1">
-                                    <span class="text-[10px] font-bold text-seed uppercase">{note.data.stage}</span>
+                                    <span class={`text-[10px] font-bold uppercase ${getStageData(note.data.stage).colors.text}`}>{note.data.stage}</span>
                                     <span class="text-[10px] text-slate-400">
                                         {note.displayDate!.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
                                     </span>

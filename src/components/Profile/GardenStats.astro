@@ -1,4 +1,6 @@
 ---
+import { stages } from "../../lib/theme";
+
 interface Props {
     counts: {
         all: number;
@@ -14,28 +16,28 @@ const { counts } = Astro.props;
 <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
     <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Taxonomy</h3>
     <div class="w-full h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full flex overflow-hidden mb-6">
-        <div class="bg-seed h-full" style={`width: ${(counts.seed / (counts.all || 1)) * 100}%`}></div>
-        <div class="bg-sprout h-full" style={`width: ${(counts.sprout / (counts.all || 1)) * 100}%`}></div>
-        <div class="bg-evergreen h-full" style={`width: ${(counts.evergreen / (counts.all || 1)) * 100}%`}></div>
+        <div class={`${stages.seed.colors.dot} h-full`} style={`width: ${(counts.seed / (counts.all || 1)) * 100}%`}></div>
+        <div class={`${stages.sprout.colors.dot} h-full`} style={`width: ${(counts.sprout / (counts.all || 1)) * 100}%`}></div>
+        <div class={`${stages.evergreen.colors.dot} h-full`} style={`width: ${(counts.evergreen / (counts.all || 1)) * 100}%`}></div>
     </div>
     <div class="space-y-6">
         <div>
             <div class="flex justify-between items-end mb-2">
-                <span class="text-[11px] font-bold text-seed uppercase tracking-[0.2em]">Seed</span>
+                <span class={`text-[11px] font-bold ${stages.seed.colors.text} uppercase tracking-[0.2em]`}>{stages.seed.label}</span>
                 <span class="font-mono text-sm font-bold text-slate-400 dark:text-slate-500">{counts.seed.toString().padStart(3, '0')}</span>
             </div>
             <p class="text-[12px] text-slate-500 dark:text-slate-400 leading-relaxed">Raw fragments and fleeting thoughts. Fragile starting points for cultivation.</p>
         </div>
         <div>
             <div class="flex justify-between items-end mb-2">
-                <span class="text-[11px] font-bold text-sprout uppercase tracking-[0.2em]">Sprout</span>
+                <span class={`text-[11px] font-bold ${stages.sprout.colors.text} uppercase tracking-[0.2em]`}>{stages.sprout.label}</span>
                 <span class="font-mono text-sm font-bold text-slate-400 dark:text-slate-500">{counts.sprout.toString().padStart(3, '0')}</span>
             </div>
             <p class="text-[12px] text-slate-500 dark:text-slate-400 leading-relaxed">Ideas taking root and branching out. Growing structure and contextual links.</p>
         </div>
         <div>
             <div class="flex justify-between items-end mb-2">
-                <span class="text-[11px] font-bold text-evergreen uppercase tracking-[0.2em]">Evergreen</span>
+                <span class={`text-[11px] font-bold ${stages.evergreen.colors.text} uppercase tracking-[0.2em]`}>{stages.evergreen.label}</span>
                 <span class="font-mono text-sm font-bold text-slate-400 dark:text-slate-500">{counts.evergreen.toString().padStart(3, '0')}</span>
             </div>
             <p class="text-[12px] text-slate-500 dark:text-slate-400 leading-relaxed">Enduring and deeply interconnected insights. Polished, atomic notes.</p>
