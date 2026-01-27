@@ -75,6 +75,112 @@
   }
 }
 
+/* --- Masonry Image Gallery --- */
+
+.photo-gallery {
+  display: block !important;
+  column-count: 1;
+  column-gap: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .photo-gallery {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .photo-gallery {
+    column-count: 3;
+  }
+}
+
+.gallery-item {
+  display: block;
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
+}
+
+.gallery-item img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid #f1f5f9 !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;
+  transition: box-shadow 0.3s !important;
+  margin: 0 !important;
+}
+
+.dark .gallery-item img {
+  border-color: #1e293b !important;
+}
+
+.gallery-item img:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1) !important;
+}
+
+.gallery-item em {
+  display: block !important;
+  font-style: normal !important;
+  font-family: var(--font-display) !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  text-align: center !important;
+  margin-top: 0.5rem !important;
+  color: #64748b !important;
+}
+
+.dark .gallery-item em {
+  color: #94a3b8 !important;
+}
+
+/* --- Single Image & Caption Styling --- */
+
+.prose p:has(img:only-of-type) {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.prose p img:only-of-type {
+  border-radius: 0.75rem !important;
+  border: 1px solid #f1f5f9 !important;
+  margin: 0 !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;
+  transition: box-shadow 0.3s !important;
+}
+
+.dark .prose p img:only-of-type {
+  border-color: #1e293b !important;
+}
+
+.prose p img:only-of-type:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1) !important;
+}
+
+.prose p:has(img:only-of-type) em {
+  margin-top: 1rem !important;
+  font-size: 0.875rem !important;
+  color: #64748b !important;
+  font-family: var(--font-display) !important;
+  font-style: normal !important;
+  display: block !important;
+  line-height: 1.5 !important;
+  max-width: 80% !important;
+}
+
+.dark .prose p:has(img:only-of-type) em {
+  color: #94a3b8 !important;
+}
+
 /* --- Core Layout & Typography --- */
 
 html {
@@ -82,6 +188,14 @@ html {
   font-family: var(--font-display);
   background-color: var(--color-background-light);
   color: var(--color-primary);
+}
+
+/* Instant theme switch support */
+.no-transitions,
+.no-transitions *,
+.no-transitions *::before,
+.no-transitions *::after {
+  transition: none !important;
 }
 
 html.dark {

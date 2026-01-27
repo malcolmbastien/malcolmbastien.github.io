@@ -3,18 +3,42 @@
 
 <button
   id="theme-toggle"
-  class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shrink-0"
+  class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors shrink-0 flex items-center justify-center h-10 w-16"
   aria-label="Toggle dark mode"
 >
-  <span class="material-symbols-outlined dark:hidden block">dark_mode</span>
-  <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+  <span class="material-symbols-outlined sun-icon translate-y-[1px]">light_mode</span>
+  <span class="material-symbols-outlined moon-icon translate-y-[1px]">dark_mode</span>
 </button>
+
+<style>
+  .moon-icon {
+    display: none;
+  }
+  
+  :global(.dark) .sun-icon {
+    display: none;
+  }
+  
+  :global(.dark) .moon-icon {
+    display: block;
+  }
+</style>
 
 <script>
   function handleToggleClick() {
-    document.documentElement.classList.toggle("dark");
-    const isDark = document.documentElement.classList.contains("dark");
+    const root = document.documentElement;
+    root.classList.add("no-transitions");
+    
+    root.classList.toggle("dark");
+    const isDark = root.classList.contains("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
+    
+    // Force a reflow to ensure the class is applied before transitions are re-enabled
+    window.getComputedStyle(root).opacity;
+    
+    requestAnimationFrame(() => {
+      root.classList.remove("no-transitions");
+    });
   }
 
   // Set up the event listener
