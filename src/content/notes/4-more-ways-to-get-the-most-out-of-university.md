@@ -8,7 +8,7 @@ tags:
   - University
 summary: "Four more ways to maximize university."
 ---
-To follow up to the last post on [5 ways to get the most out of university](http://openmode.ca/2007/12/18/5-ways-to-get-the-most-out-of-university/), I've compiled another list of 4 more specific things you can do to get more value out of your time at university.  Thanks to Will and Nick who commented on the last post with some really good points. These tasks all require a bigger investment of time and effort, but I think there's the possibility of getting stronger results from applying them
+To follow up to the last post on [[5-ways-to-get-the-most-out-of-university|5 ways to get the most out of university]], I've compiled another list of 4 more specific things you can do to get more value out of your time at university.  Thanks to Will and Nick who commented on the last post with some really good points. These tasks all require a bigger investment of time and effort, but I think there's the possibility of getting stronger results from applying them
 
 ## 1. Be Critical
 

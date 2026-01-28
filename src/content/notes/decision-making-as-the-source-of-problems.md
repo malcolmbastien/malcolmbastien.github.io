@@ -4,7 +4,6 @@ stage: seed        # seed | sprout | evergreen
 tags:
   - Management
 summary: Expectating leaders to all be expert decision makers is the source of many problems.
-draft: true              # Optional, adds WIP banner
 ---
 
 I frequently get asked to help teams solve problems, but most of the time the problems are self-inflicted, caused by managers making decisions in the attempt to achieve some short-term goal.
