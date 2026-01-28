@@ -7,14 +7,28 @@
 <script is:inline>
   function initSearch() {
     if (typeof PagefindUI !== 'undefined') {
-        new PagefindUI({
+        const pagefind = new PagefindUI({
             element: "#search-box",
             showSubResults: true,
-            resetFilters: true,
+            resetFilters: false,
+            showFilters: false,
             translations: {
                 placeholder: "Search the garden..."
             }
         });
+
+        // Trigger empty search to show all results
+        setTimeout(() => {
+            pagefind.triggerSearch("");
+        }, 100);
+
+        // Auto-focus the search input
+        setTimeout(() => {
+            const searchInput = document.querySelector(".pagefind-ui__search-input");
+            if (searchInput) {
+                searchInput.focus();
+            }
+        }, 100);
 
         // Monitor results and apply stage-based styling
         const observer = new MutationObserver(() => {
@@ -38,14 +52,6 @@
         if (searchBox) {
             observer.observe(searchBox, { childList: true, subtree: true });
         }
-
-        // Auto-focus the search input
-        setTimeout(() => {
-            const searchInput = document.querySelector(".pagefind-ui__search-input");
-            if (searchInput) {
-                searchInput.focus();
-            }
-        }, 100);
     } else {
         const container = document.querySelector("#search-box");
         if (container) {
