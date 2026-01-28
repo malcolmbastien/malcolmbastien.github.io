@@ -5,7 +5,6 @@ tags:
   - AI
   - Tools
 summary: How I built the teamflowmapping app.
-draft: true              # Optional, adds WIP banner
 ---
 
 - AI Tools

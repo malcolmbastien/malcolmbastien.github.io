@@ -6,7 +6,6 @@ tags:
   - Writing
   - Software
 summary: How I've configured emacs for the goal of writing
-draft: true              # Optional, adds WIP banner
 ---
 
 ## Doom Emacs

@@ -87,6 +87,9 @@ Testing every supported callout type:
 > [!EXAMPLE]
 > Illustrative examples.
 
+> [!IMPORTANT]
+> Important point.
+
 ### Action Oriented
 > [!TODO]
 > Tasks or things to be done.
@@ -118,7 +121,7 @@ Testing every supported callout type:
 > For quotes or citations.
 
 > [!IDEA]
-> Lightning bolt idea callout!
+> Idea callout.
 
 ### Status
 

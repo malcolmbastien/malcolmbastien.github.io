@@ -282,6 +282,8 @@ const currentYearValue = new Date().getFullYear();
             />
         </Header>
 
+        <div class="border-b  border-slate-200 dark:border-slate-800 w-full mb-10"></div>
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <!-- Year Navigation (1 col) -->
             <aside class="lg:col-span-1 hidden lg:block border-r border-slate-200 dark:border-slate-800 pr-4">
@@ -303,7 +305,7 @@ const currentYearValue = new Date().getFullYear();
                                         {pinnedNotes.map((note) => (
                                             <article class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm group hover:shadow-md transition-all relative">
                                                 <div class="flex justify-between items-start mb-4">
-                                                    <span class={`text-[10px] font-bold uppercase tracking-widest ${getStageData(note.data.stage).colors.text}`}>
+                                                    <span class={`text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded ${getStageData(note.data.stage).colors.badge}`}>
                                                         {note.data.stage}
                                                     </span>
                                                     <span class="text-[10px] text-slate-400 font-medium italic">Pinned</span>
@@ -325,7 +327,7 @@ const currentYearValue = new Date().getFullYear();
                     )
                 }
 
-                <div class="h-px bg-slate-100 dark:bg-slate-800 w-full"></div>
+                <div class="border-b  border-slate-200 dark:border-slate-800 w-full"></div>
 
                 <NoteTimeline
                     sortedEvents={sortedEvents}
@@ -344,7 +346,7 @@ const currentYearValue = new Date().getFullYear();
                         {latestCreations.map((note) => (
                             <div class="group cursor-pointer relative">
                                 <div class="flex justify-between items-center mb-1">
-                                    <span class={`text-[10px] font-bold uppercase ${getStageData(note.data.stage).colors.text}`}>{note.data.stage}</span>
+                                    <span class={`text-[10px] font-bold uppercase px-2 py-1 rounded ${getStageData(note.data.stage).colors.badge}`}>{note.data.stage}</span>
                                     <span class="text-[10px] text-slate-400">
                                         {note.displayDate!.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
                                     </span>

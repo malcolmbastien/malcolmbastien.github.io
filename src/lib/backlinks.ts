@@ -30,21 +30,30 @@ export async function buildBacklinksMap(): Promise<Record<string, string[]>> {
   const notes = await getCollection('notes');
   const backlinksMap: Record<string, string[]> = {};
 
-  // Initialize empty arrays for all notes
+  // Initialize empty arrays for all notes (using note.id which includes .md)
   notes.forEach(note => {
     backlinksMap[note.id] = [];
+  });
+
+  // Create a map from slug (without .md) to note.id (with .md) for lookup
+  const slugToIdMap: Record<string, string> = {};
+  notes.forEach(note => {
+    const slugWithoutExt = note.id.replace(/\.md$/, '');
+    slugToIdMap[slugWithoutExt] = note.id;
   });
 
   // Extract links from each note and build the backlinks map
   notes.forEach(note => {
     // note.body contains the raw markdown content
     const content = note.body || '';
-    const linkedIds = extractWikiLinks(content);
+    const linkedSlugs = extractWikiLinks(content);
 
     // Add this note as a backlink for each note it links to
-    linkedIds.forEach(linkedId => {
-      // Only add if the linked note exists (avoid broken links)
-      if (backlinksMap[linkedId] !== undefined && linkedId !== note.id) {
+    linkedSlugs.forEach(linkedSlug => {
+      // Convert slug to full note.id
+      const linkedId = slugToIdMap[linkedSlug];
+      // Only add if the linked note exists and isn't linking to itself
+      if (linkedId && linkedId !== note.id) {
         backlinkedIdsForTarget(backlinksMap[linkedId], note.id);
       }
     });

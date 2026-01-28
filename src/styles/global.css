@@ -376,14 +376,12 @@ h6 {
   color: var(--color-neutral-text-dark);
 }
 
-/* --- GitHub-style & Custom Callouts --- */
+/* --- Refined Callouts --- */
 
 .markdown-alert {
-  padding: 0.75rem 1rem;
   margin: 1.5rem 0;
-  color: inherit;
-  border-left: 0.25rem solid;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
   @apply shadow-sm;
 }
 
@@ -395,149 +393,225 @@ h6 {
   display: flex !important;
   align-items: center !important;
   gap: 0.5rem !important;
-  @apply font-bold text-sm uppercase tracking-wider mb-2;
+  padding: 1rem 1rem 0.5rem 1rem;
+  @apply text-xs font-bold uppercase tracking-wider;
 }
 
 .markdown-alert-title::before {
+  font-family: "Material Symbols Outlined" !important;
+  font-size: 20px !important;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24 !important;
+  line-height: 1 !important;
+  display: inline-block !important;
   text-transform: none !important;
   font-style: normal !important;
   font-variant: normal !important;
-  line-height: 1 !important;
-  display: inline-block !important;
 }
 
-/* Callout Emojis */
-.markdown-alert-note .markdown-alert-title::before,
+.markdown-alert > p:not(.markdown-alert-title) {
+  padding: 0.5rem 1rem 1rem 1rem;
+  font-family: var(--font-serif);
+  @apply text-slate-700 dark:text-slate-300;
+}
+
+/* Material Symbols Icons */
+.markdown-alert-note .markdown-alert-title::before {
+  content: "edit_note" !important;
+}
 .markdown-alert-info .markdown-alert-title::before {
-  content: "📝" !important;
+  content: "info" !important;
 }
 .markdown-alert-abstract .markdown-alert-title::before,
 .markdown-alert-summary .markdown-alert-title::before,
 .markdown-alert-tldr .markdown-alert-title::before {
-  content: "📋" !important;
+  content: "description" !important;
+}
+
+.markdown-alert-success .markdown-alert-title::before {
+  content: "celebration" !important;
 }
 .markdown-alert-todo .markdown-alert-title::before,
-.markdown-alert-success .markdown-alert-title::before,
 .markdown-alert-check .markdown-alert-title::before,
 .markdown-alert-done .markdown-alert-title::before {
-  content: "✅" !important;
+  content: "check_circle" !important;
 }
 .markdown-alert-tip .markdown-alert-title::before,
 .markdown-alert-hint .markdown-alert-title::before,
 .markdown-alert-idea .markdown-alert-title::before {
-  content: "💡" !important;
+  content: "lightbulb" !important;
 }
 .markdown-alert-important .markdown-alert-title::before {
-  content: "❗" !important;
+  content: "priority_high" !important;
 }
 .markdown-alert-question .markdown-alert-title::before,
 .markdown-alert-help .markdown-alert-title::before,
 .markdown-alert-faq .markdown-alert-title::before {
-  content: "❓" !important;
+  content: "help" !important;
 }
 .markdown-alert-warning .markdown-alert-title::before,
 .markdown-alert-caution .markdown-alert-title::before,
 .markdown-alert-attention .markdown-alert-title::before {
-  content: "⚠️" !important;
+  content: "warning" !important;
 }
 .markdown-alert-failure .markdown-alert-title::before,
 .markdown-alert-fail .markdown-alert-title::before,
 .markdown-alert-missing .markdown-alert-title::before {
-  content: "❌" !important;
+  content: "cancel" !important;
 }
 .markdown-alert-danger .markdown-alert-title::before {
-  content: "🔥" !important;
+  content: "local_fire_department" !important;
 }
 .markdown-alert-error .markdown-alert-title::before {
-  content: "🚫" !important;
+  content: "error" !important;
 }
 .markdown-alert-bug .markdown-alert-title::before {
-  content: "🐛" !important;
+  content: "pest_control" !important;
 }
 .markdown-alert-example .markdown-alert-title::before {
-  content: "📖" !important;
+  content: "auto_stories" !important;
 }
 .markdown-alert-quote .markdown-alert-title::before,
 .markdown-alert-cite .markdown-alert-title::before {
-  content: "💬" !important;
+  content: "format_quote" !important;
 }
-.markdown-alert-draft .markdown-alert-title::before,
-.markdown-alert-wip .markdown-alert-title::before,
-.markdown-alert-work-in-progress .markdown-alert-title::before {
-  content: "🚧" !important;
+.markdown-alert-draft .markdown-alert-title::before {
+  content: "stylus_note" !important;
 }
 
-/* NOTE, INFO, IMPORTANT, TODO */
+.markdown-alert-wip .markdown-alert-title::before,
+.markdown-alert-work-in-progress .markdown-alert-title::before {
+  content: "construction" !important;
+}
+
+/* NOTE, INFO, IMPORTANT, TODO - Blue */
 .markdown-alert-note,
 .markdown-alert-info,
 .markdown-alert-important,
 .markdown-alert-todo {
-  border-left-color: var(--callout-note-light) !important;
-  background-color: var(--callout-note-bg-light) !important;
+  background-color: rgba(59, 130, 246, 0.05) !important;
+  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+}
+.markdown-alert-note .markdown-alert-title,
+.markdown-alert-info .markdown-alert-title,
+.markdown-alert-important .markdown-alert-title,
+.markdown-alert-todo .markdown-alert-title {
+  color: #2563eb !important;
 }
 .dark .markdown-alert-note,
 .dark .markdown-alert-info,
 .dark .markdown-alert-important,
 .dark .markdown-alert-todo {
-  border-left-color: var(--callout-note-dark) !important;
-  background-color: var(--callout-note-bg-dark) !important;
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+.dark .markdown-alert-note .markdown-alert-title,
+.dark .markdown-alert-info .markdown-alert-title,
+.dark .markdown-alert-important .markdown-alert-title,
+.dark .markdown-alert-todo .markdown-alert-title {
+  color: #60a5fa !important;
 }
 
-/* ABSTRACT, SUMMARY, TLDR */
+/* ABSTRACT, SUMMARY, TLDR - Emerald */
 .markdown-alert-abstract,
 .markdown-alert-summary,
 .markdown-alert-tldr {
-  border-left-color: var(--callout-teal-light) !important;
-  background-color: var(--callout-teal-bg-light) !important;
+  background-color: rgba(16, 185, 129, 0.05) !important;
+  border: 1px solid rgba(16, 185, 129, 0.2) !important;
+}
+.markdown-alert-abstract .markdown-alert-title,
+.markdown-alert-summary .markdown-alert-title,
+.markdown-alert-tldr .markdown-alert-title {
+  color: #059669 !important;
 }
 .dark .markdown-alert-abstract,
 .dark .markdown-alert-summary,
 .dark .markdown-alert-tldr {
-  border-left-color: var(--callout-teal-dark) !important;
-  background-color: var(--callout-teal-bg-dark) !important;
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+.dark .markdown-alert-abstract .markdown-alert-title,
+.dark .markdown-alert-summary .markdown-alert-title,
+.dark .markdown-alert-tldr .markdown-alert-title {
+  color: #34d399 !important;
 }
 
-/* SUCCESS, TIP, DONE, CHECK */
+/* SUCCESS, TIP, DONE, CHECK - Green */
 .markdown-alert-success,
 .markdown-alert-tip,
 .markdown-alert-done,
 .markdown-alert-check {
-  border-left-color: var(--callout-success-light) !important;
-  background-color: var(--callout-success-bg-light) !important;
+  background-color: rgba(34, 197, 94, 0.05) !important;
+  border: 1px solid rgba(34, 197, 94, 0.2) !important;
+}
+.markdown-alert-success .markdown-alert-title,
+.markdown-alert-tip .markdown-alert-title,
+.markdown-alert-done .markdown-alert-title,
+.markdown-alert-check .markdown-alert-title {
+  color: #16a34a !important;
 }
 .dark .markdown-alert-success,
 .dark .markdown-alert-tip,
 .dark .markdown-alert-done,
 .dark .markdown-alert-check {
-  border-left-color: var(--callout-success-dark) !important;
-  background-color: var(--callout-success-bg-dark) !important;
+  background-color: rgba(34, 197, 94, 0.1) !important;
+  border-color: rgba(34, 197, 94, 0.3) !important;
+}
+.dark .markdown-alert-success .markdown-alert-title,
+.dark .markdown-alert-tip .markdown-alert-title,
+.dark .markdown-alert-done .markdown-alert-title,
+.dark .markdown-alert-check .markdown-alert-title {
+  color: #4ade80 !important;
 }
 
-/* WARNING, CAUTION, ATTENTION, IDEA */
+/* WARNING, CAUTION, ATTENTION, IDEA - Amber */
 .markdown-alert-warning,
 .markdown-alert-caution,
 .markdown-alert-attention,
 .markdown-alert-idea {
-  border-left-color: var(--callout-warning-light) !important;
-  background-color: var(--callout-warning-bg-light) !important;
+  background-color: rgba(245, 158, 11, 0.05) !important;
+  border: 1px solid rgba(245, 158, 11, 0.2) !important;
+}
+.markdown-alert-warning .markdown-alert-title,
+.markdown-alert-caution .markdown-alert-title,
+.markdown-alert-attention .markdown-alert-title,
+.markdown-alert-idea .markdown-alert-title {
+  color: #d97706 !important;
 }
 .dark .markdown-alert-warning,
 .dark .markdown-alert-caution,
 .dark .markdown-alert-attention,
 .dark .markdown-alert-idea {
-  border-left-color: var(--callout-warning-dark) !important;
-  background-color: var(--callout-warning-bg-dark) !important;
+  background-color: rgba(245, 158, 11, 0.1) !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+}
+.dark .markdown-alert-warning .markdown-alert-title,
+.dark .markdown-alert-caution .markdown-alert-title,
+.dark .markdown-alert-attention .markdown-alert-title,
+.dark .markdown-alert-idea .markdown-alert-title {
+  color: #fbbf24 !important;
 }
 
-/* FAILURE, FAIL, MISSING, DANGER, ERROR, BUG */
+/* FAILURE, FAIL, MISSING, DANGER, ERROR, BUG - Rose/Red */
 .markdown-alert-failure,
 .markdown-alert-fail,
 .markdown-alert-missing,
 .markdown-alert-danger,
 .markdown-alert-error,
 .markdown-alert-bug {
-  border-left-color: var(--callout-error-light) !important;
-  background-color: var(--callout-error-bg-light) !important;
+  background-color: rgba(244, 63, 94, 0.05) !important;
+  border: 1px solid rgba(244, 63, 94, 0.2) !important;
+}
+.markdown-alert-failure .markdown-alert-title,
+.markdown-alert-fail .markdown-alert-title,
+.markdown-alert-missing .markdown-alert-title,
+.markdown-alert-danger .markdown-alert-title,
+.markdown-alert-error .markdown-alert-title,
+.markdown-alert-bug .markdown-alert-title {
+  color: #e11d48 !important;
 }
 .dark .markdown-alert-failure,
 .dark .markdown-alert-fail,
@@ -545,42 +619,76 @@ h6 {
 .dark .markdown-alert-danger,
 .dark .markdown-alert-error,
 .dark .markdown-alert-bug {
-  border-left-color: var(--callout-error-dark) !important;
-  background-color: var(--callout-error-bg-dark) !important;
+  background-color: rgba(244, 63, 94, 0.1) !important;
+  border-color: rgba(244, 63, 94, 0.3) !important;
+}
+.dark .markdown-alert-failure .markdown-alert-title,
+.dark .markdown-alert-fail .markdown-alert-title,
+.dark .markdown-alert-missing .markdown-alert-title,
+.dark .markdown-alert-danger .markdown-alert-title,
+.dark .markdown-alert-error .markdown-alert-title,
+.dark .markdown-alert-bug .markdown-alert-title {
+  color: #fb7185 !important;
 }
 
-/* QUESTION, HELP, FAQ, EXAMPLE */
+/* QUESTION, HELP, FAQ, EXAMPLE - Purple */
 .markdown-alert-question,
 .markdown-alert-help,
 .markdown-alert-faq,
 .markdown-alert-example {
-  border-left-color: var(--callout-purple-light) !important;
-  background-color: var(--callout-purple-bg-light) !important;
+  background-color: rgba(168, 85, 247, 0.05) !important;
+  border: 1px solid rgba(168, 85, 247, 0.2) !important;
+}
+.markdown-alert-question .markdown-alert-title,
+.markdown-alert-help .markdown-alert-title,
+.markdown-alert-faq .markdown-alert-title,
+.markdown-alert-example .markdown-alert-title {
+  color: #9333ea !important;
 }
 .dark .markdown-alert-question,
 .dark .markdown-alert-help,
 .dark .markdown-alert-faq,
 .dark .markdown-alert-example {
-  border-left-color: var(--callout-purple-dark) !important;
-  background-color: var(--callout-purple-bg-dark) !important;
+  background-color: rgba(168, 85, 247, 0.1) !important;
+  border-color: rgba(168, 85, 247, 0.3) !important;
+}
+.dark .markdown-alert-question .markdown-alert-title,
+.dark .markdown-alert-help .markdown-alert-title,
+.dark .markdown-alert-faq .markdown-alert-title,
+.dark .markdown-alert-example .markdown-alert-title {
+  color: #c084fc !important;
 }
 
-/* QUOTE, CITE, DRAFT, WIP */
+/* QUOTE, CITE, DRAFT, WIP - Slate */
 .markdown-alert-quote,
 .markdown-alert-cite,
 .markdown-alert-draft,
 .markdown-alert-wip,
 .markdown-alert-work-in-progress {
-  border-left-color: #475569 !important; /* Strong Slate 600 */
-  background-color: #f1f5f9 !important; /* Slate 100 */
+  background-color: rgba(100, 116, 139, 0.05) !important;
+  border: 1px solid rgba(100, 116, 139, 0.2) !important;
+}
+.markdown-alert-quote .markdown-alert-title,
+.markdown-alert-cite .markdown-alert-title,
+.markdown-alert-draft .markdown-alert-title,
+.markdown-alert-wip .markdown-alert-title,
+.markdown-alert-work-in-progress .markdown-alert-title {
+  color: #475569 !important;
 }
 .dark .markdown-alert-quote,
 .dark .markdown-alert-cite,
 .dark .markdown-alert-draft,
 .dark .markdown-alert-wip,
 .dark .markdown-alert-work-in-progress {
-  border-left-color: #cbd5e1 !important; /* Slate 300 */
-  background-color: rgba(203, 213, 225, 0.15) !important;
+  background-color: rgba(100, 116, 139, 0.1) !important;
+  border-color: rgba(100, 116, 139, 0.3) !important;
+}
+.dark .markdown-alert-quote .markdown-alert-title,
+.dark .markdown-alert-cite .markdown-alert-title,
+.dark .markdown-alert-draft .markdown-alert-title,
+.dark .markdown-alert-wip .markdown-alert-title,
+.dark .markdown-alert-work-in-progress .markdown-alert-title {
+  color: #94a3b8 !important;
 }
 
 /* --- Filter Buttons --- */

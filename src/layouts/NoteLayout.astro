@@ -7,7 +7,6 @@ import ImageLightbox from "../components/ImageLightbox.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { getReadingTime } from "../lib/reading-time";
 import BackToGarden from "../components/Navigation/BackToGarden.astro";
-import AboutAuthor from "../components/AboutAuthor.astro";
 import { getStageData } from "../lib/theme";
 
 interface Props {
@@ -85,7 +84,7 @@ const formatDate = (date: Date) => {
             class={`lg:col-span-9 bg-white dark:bg-navy-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden ${isNoteDraft ? "note-is-draft relative" : ""}`}
             data-pagefind-body
         >
-            <div class="px-8 pt-10 pb-6 border-b border-slate-100 dark:border-slate-800">
+            <div class="px-8 pt-10 pb-6 border-b border-slate-100 dark:border-slate-700 w-full">
                 <div
                     class={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full ${stageData.colors.badge} text-[10px] font-bold uppercase tracking-wider mb-6`}
                     data-pagefind-filter="stage"
@@ -133,7 +132,7 @@ const formatDate = (date: Date) => {
                 <slot />
 
                 {backlinkedNotes.length > 0 && (
-                    <div class="mt-16 pt-8 border-t border-slate-100 dark:border-slate-800">
+                    <div class="backlinks mt-5 pt-8 ">
                         <Backlinks backlinkedNotes={backlinkedNotes} />
                     </div>
                 )}
@@ -157,8 +156,30 @@ const formatDate = (date: Date) => {
     <style is:global>
       @reference "../styles/global.css";
 
+      /* Backlinks section - remove prose link styling */
+      .prose .backlinks a {
+          text-decoration: none !important;
+          color: inherit !important;
+          font-weight: inherit !important;
+          font-family: inherit !important;
+      }
+
+      /* Ensure backlink titles transition to blue on hover */
+      .prose .backlinks h4 {
+          color: #000000 !important;
+      }
+      .dark .prose .backlinks h4 {
+          color: #ffffff !important;
+      }
+      .prose .backlinks article:hover h4 {
+          color: #2563eb !important;
+      }
+      .dark .prose .backlinks article:hover h4 {
+          color: #60a5fa !important;
+      }
+
       .prose blockquote {
-          border-left-color: var(--color-primary);
+          border-left-color: var(--color-blueprint-blue);
           font-style: italic;
       }
       .prose blockquote p:first-of-type::before,
@@ -179,7 +200,7 @@ const formatDate = (date: Date) => {
       }
 
       /* --- Link Styles from Snippet --- */
-      
+
       /* Internal Links with Underline System */
       .prose a.internal-link {
           display: inline !important;
@@ -198,12 +219,12 @@ const formatDate = (date: Date) => {
           transition: all 0.2s ease-in-out !important;
           display: inline !important;
       }
-      
+
       /* Base Underline State (3px) */
       .prose a.internal-link[data-stage="seed"] .link-text { text-decoration-color: var(--stage-seed-underline) !important; }
       .prose a.internal-link[data-stage="sprout"] .link-text { text-decoration-color: var(--stage-sprout-underline) !important; }
       .prose a.internal-link[data-stage="evergreen"] .link-text { text-decoration-color: var(--stage-evergreen-underline) !important; }
-      
+
       /* Hover Underline State (6px) */
       .prose a.internal-link:hover .link-text {
           text-decoration-thickness: 6px !important;
@@ -211,7 +232,7 @@ const formatDate = (date: Date) => {
       .prose a.internal-link[data-stage="seed"]:hover .link-text { text-decoration-color: var(--stage-seed-underline) !important; }
       .prose a.internal-link[data-stage="sprout"]:hover .link-text { text-decoration-color: var(--stage-sprout-underline) !important; }
       .prose a.internal-link[data-stage="evergreen"]:hover .link-text { text-decoration-color: var(--stage-evergreen-underline) !important; }
-      
+
       /* External Links */
       .prose a.external-link {
           @apply font-display font-semibold text-[#a855f7] hover:opacity-80 transition-opacity;
@@ -226,11 +247,11 @@ const formatDate = (date: Date) => {
           text-underline-offset: 4px !important;
           transition: all 0.2s ease-in-out !important;
       }
-      
+
       .prose a.external-link:hover .link-text {
           text-decoration-thickness: 6px !important;
       }
-      
+
       .prose a.external-link::after {
           content: "north_east" !important;
           font-family: 'Material Symbols Outlined' !important;
@@ -242,7 +263,7 @@ const formatDate = (date: Date) => {
           text-decoration: none !important;
           vertical-align: middle !important;
       }
-      
+
       /* Inline Topic Links (Hashtags) */
       .prose a.inline-tag {
           @apply bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded-md font-display font-normal text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-all;

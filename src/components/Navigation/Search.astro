@@ -17,7 +17,7 @@
         });
 
         // Monitor results and apply stage-based styling
-        const observer = new MutationObserver((mutations) => {
+        const observer = new MutationObserver(() => {
             const results = document.querySelectorAll('.pagefind-ui__result');
             results.forEach(result => {
                 const tags = result.querySelectorAll('.pagefind-ui__result-tag');
