@@ -178,17 +178,53 @@ const tocStructure = createTOCStructure(title, headings);
 </style>
 
 <script>
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const titleLink = document.querySelector('.toc-link[href="#"]');
+    const headings = Array.from(document.querySelectorAll('article h2, article h3, article h4, article h5, article h6')).filter(h => h.getAttribute('id'));
+
+    // Track which headings are currently intersecting
+    const intersectingHeadings = new Set<Element>();
+
+    function setActiveLink(link: Element | null) {
+        tocLinks.forEach((l) => l.classList.remove('active'));
+        if (link) {
+            link.classList.add('active');
+        }
+    }
+
+    // Check if we're above the first heading (only when no headings are intersecting)
+    function checkTitleActive() {
+        // Only highlight title if no headings are currently intersecting
+        if (intersectingHeadings.size > 0) {
+            return;
+        }
+
+        if (headings.length === 0) {
+            setActiveLink(titleLink);
+            return;
+        }
+
+        const firstHeading = headings[0];
+        const firstHeadingRect = firstHeading.getBoundingClientRect();
+        const offset = 120; // Account for sticky header + some padding
+
+        // If first heading is below the offset, we're "above" it
+        if (firstHeadingRect.top > offset) {
+            setActiveLink(titleLink);
+        }
+    }
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             const id = entry.target.getAttribute('id');
             if (entry.isIntersecting) {
-                document.querySelectorAll('.toc-link').forEach((link) => {
-                    link.classList.remove('active');
-                });
+                intersectingHeadings.add(entry.target);
                 const activeLink = document.querySelector(`.toc-link[href="#${id}"]`);
                 if (activeLink) {
-                    activeLink.classList.add('active');
+                    setActiveLink(activeLink);
                 }
+            } else {
+                intersectingHeadings.delete(entry.target);
             }
         });
     }, {
@@ -197,11 +233,24 @@ const tocStructure = createTOCStructure(title, headings);
     });
 
     // Observe all headings that have an ID and are within the article
-    document.querySelectorAll('article h2, article h3, article h4, article h5, article h6').forEach((heading) => {
-        if (heading.getAttribute('id')) {
-            observer.observe(heading);
-        }
+    headings.forEach((heading) => {
+        observer.observe(heading);
     });
+
+    // Check scroll position to highlight title when above first heading
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                checkTitleActive();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+
+    // Initial check
+    checkTitleActive();
 
     // Handle clicks to avoid breaking "Back" button behavior
     document.querySelectorAll('.toc-link').forEach(link => {

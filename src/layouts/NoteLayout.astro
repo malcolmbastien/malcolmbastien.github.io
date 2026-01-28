@@ -2,6 +2,7 @@
 import Layout from "./Layout.astro";
 import NoteHistory from "../components/History/NoteHistory.astro";
 import TableOfContents from "../components/Navigation/TableOfContents.astro";
+import AboutAuthor from "../components/AboutAuthor.astro";
 import Backlinks from "../components/Backlinks.astro";
 import ImageLightbox from "../components/ImageLightbox.astro";
 import SiteFooter from "../components/SiteFooter.astro";
@@ -69,13 +70,15 @@ const formatDate = (date: Date) => {
                 <div>
                     <BackToGarden class="mb-8" />
 
-                    <TableOfContents
-                        content={noteBody || ""}
-                        title={frontmatter.title}
-                        headings={headings}
-                        minHeadings={2}
-                    />
-                </div>
+                <TableOfContents
+                    content={noteBody || ""}
+                    title={frontmatter.title}
+                    headings={headings}
+                    minHeadings={2}
+                />
+
+                <AboutAuthor />
+            </div>
             </div>
         </aside>
 
