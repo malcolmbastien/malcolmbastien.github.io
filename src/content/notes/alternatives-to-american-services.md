@@ -27,10 +27,10 @@ featured: true
 
 | Service | HQ | Sovereignty | Notes |
 | :--- | :--- | :--- | :--- |
+| **[Rebel](https://rebel.com)** | Canada 🇨🇦 | 🟢 | - |
 | **[Codeberg](https://codeberg.org)** | Germany 🇩🇪 | 🟢 | - |
 | **[Bunny.net](https://bunny.net)** | Slovenia 🇸🇮 | 🟢 | - |
 | **[Hetzner](https://hetzner.com)** | Germany 🇩🇪 | 🟢 | - |
-| **[Rebel](https://rebel.com)** | Canada 🇨🇦 | 🟢 | - |
 | **[Mythic Beasts](https://mythic-beasts.com)** | United Kingdom 🇬🇧 | 🟢 | - |
 
 > [!WARNING]
@@ -48,9 +48,11 @@ featured: true
 | **[Tuta](https://tuta.com)** | Germany 🇩🇪 | 🟢 | - |
 | **[Threema](https://threema.ch)** | Switzerland 🇨🇭 | 🟢 | - |
 | **[Element](https://element.io)** | United Kingdom 🇬🇧 | 🟢 | - |
+| **[Mailbox.org](https://mailbox.org)** | Germany 🇩🇪 | 🟢 | - |
+| **[Whereby](https://whereby.com)** | Norway 🇳🇴 | 🟢 | - |
 
 > [!WARNING]
-> **Avoid (US-Based):** Slack, Microsoft Teams, Mattermost, Zulip, Discord, WhatsApp, Gmail, Outlook, Yahoo Mail.
+> **Avoid (US-Based):** Slack, Microsoft Teams, Mattermost, Zulip, Discord, WhatsApp, Gmail, Outlook, Yahoo Mail, Zoom.
 
 ---
 
@@ -61,6 +63,7 @@ featured: true
 | **[Pixelfed](https://pixelfed.org)** | Canada 🇨🇦 | 🟢 | - |
 | **[Loops](https://joinloops.org)** | Canada 🇨🇦 | 🟢 | - |
 | **[Mastodon](https://joinmastodon.org)** | Germany 🇩🇪 | 🟢 | - |
+| **[Friendica](https://friendi.ca)** | Federated 🌐 | 🟢 | - |
 
 > [!WARNING]
 > **Avoid (US-Based):** Instagram, Facebook, X (Twitter), Snapchat, Threads.
@@ -71,7 +74,7 @@ featured: true
 
 | Service | HQ | Sovereignty | Notes |
 | :--- | :--- | :--- | :--- |
-| **[Shift](https://shift.com)** | Canada 🇨🇦 | 🟢 | Owned by Redbrick |
+| **[Shift](https://shift.com)** | Canada 🇨🇦 | 🟡 | Owned by Redbrick |
 | **[Vivaldi](https://vivaldi.com)** | Norway 🇳🇴 | 🟢 | - |
 | **[Opera](https://opera.com)** | Norway 🇳🇴 | 🟢 | Majority owned by Kunlun Tech (China) |
 
@@ -86,12 +89,14 @@ featured: true
 | :--- | :--- | :--- | :--- |
 | **[1Password](https://1password.com)** | Canada 🇨🇦 |  🟢 | - |
 | **[Sync](https://www.sync.com)** | Canada 🇨🇦 | 🟢 | - |
+| **[Obsidian](https://obsidian.md)** | Canada 🇨🇦 | 🟢 | - |
 | **[Proton Pass](https://proton.me/pass)** | Switzerland 🇨🇭 | 🟢 | - |
 | **[NordPass](https://nordpass.com)** | Lithuania 🇱🇹 | 🟢 | - |
 | **[Nextcloud](https://nextcloud.com)** | Germany 🇩🇪 | 🟢 | - |
+| **[Capacities](https://capacities.io)** | Germany 🇩🇪 | 🟢 | - |
 
 > [!WARNING]
-> **Avoid (US-Based):** Bitwarden, Dashlane, LastPass, iCloud Keychain, Google Password Manager, Dropbox, Google Drive, OneDrive, iCloud, Box.
+> **Avoid (US-Based):** Bitwarden, Dashlane, LastPass, iCloud Keychain, Google Password Manager, Dropbox, Google Drive, OneDrive, iCloud, Box, Notion.
 
 ---
 
@@ -173,14 +178,15 @@ featured: true
 
 | Brand | HQ | Sovereignty | Notes |
 | :--- | :--- | :--- | :--- |
-| **[Lenovo](https://lenovo.com)** | China 🇨🇳 | 🟢 | World's largest PC vendor |
+| **[Lenovo](https://lenovo.com)** | China 🇨🇳 | 🟢 | - |
 | **[ASUS](https://asus.com)** | Taiwan 🇹🇼 | 🟢 | - |
 | **[Acer](https://acer.com)** | Taiwan 🇹🇼 | 🟢 | - |
 | **[MSI](https://msi.com)** | Taiwan 🇹🇼 | 🟢 | - |
 | **[BenQ](https://benq.com)** | Taiwan 🇹🇼 | 🟢 | - |
 | **[Samsung](https://samsung.com)** | South Korea 🇰🇷 | 🟢 | - |
 | **[LG](https://lg.com)** | South Korea 🇰🇷 | 🟢 | - |
-| **[Framework](https://frame.work)** | US-based 🇺🇸 | 🟡 | Included for repairability/openness (US-based) |
+| **[Logitech](https://logitech.com)** | Switzerland 🇨🇭 | 🟢 | - |
+| **[SteelSeries](https://steelseries.com)** | Denmark 🇩🇰 | 🟢 | - |
 
 > [!WARNING]
 > **Avoid (US-Based):** Apple, Dell, HP, Microsoft (Surface), Razer, NVIDIA, Intel, AMD.

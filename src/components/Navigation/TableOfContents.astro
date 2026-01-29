@@ -100,7 +100,7 @@ const tocStructure = createTOCStructure(title, headings);
 {
     showTOC && (
         <aside class="w-full">
-            <nav class="toc-nav relative">
+            <nav class="toc-nav relative mb-4">
                     {tocStructure.map((item, index) => {
                         const isPostTitle = index === 0 && item.id === "";
 

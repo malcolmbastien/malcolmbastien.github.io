@@ -68,8 +68,6 @@ const formatDate = (date: Date) => {
         <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit pr-4">
             <div class="space-y-8">
                 <div>
-                    <BackToGarden class="mb-8" />
-
                 <TableOfContents
                     content={noteBody || ""}
                     title={frontmatter.title}
@@ -78,6 +76,8 @@ const formatDate = (date: Date) => {
                 />
 
                 <AboutAuthor />
+                <BackToGarden class="mt-8" />
+
             </div>
             </div>
         </aside>
