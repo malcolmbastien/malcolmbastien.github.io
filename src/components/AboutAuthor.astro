@@ -9,7 +9,7 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<a href="/about" class={`block bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow group ${className || ''}`}>
+<a href="/about" class={`block bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow group ${className || ''}`}>
     <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6 transition-colors">About the Author</h3>
     <div class="flex items-center gap-4">
         <Picture src={malcolmHeadshot} alt="Malcolm Bastien" class="w-12 h-12 rounded-full object-cover bg-slate-100" />
