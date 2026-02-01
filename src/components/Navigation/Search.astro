@@ -7,7 +7,7 @@
 <script is:inline>
   function initSearch() {
     if (typeof PagefindUI !== 'undefined') {
-        new PagefindUI({
+        const pagefindUI = new PagefindUI({
             element: "#search-box",
             showSubResults: true,
             translations: {
@@ -15,13 +15,29 @@
             }
         });
 
-        // Auto-focus the search input
-        setTimeout(() => {
-            const searchInput = document.querySelector(".pagefind-ui__search-input");
-            if (searchInput) {
-                searchInput.focus();
-            }
-        }, 100);
+        // Check for query parameter in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+
+        if (query) {
+            // Wait for PagefindUI to fully initialize
+            setTimeout(() => {
+                const searchInput = document.querySelector(".pagefind-ui__search-input");
+                if (searchInput) {
+                    // Set the value and trigger input event to activate search
+                    searchInput.value = query;
+                    searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+                }
+            }, 200);
+        } else {
+            // Auto-focus only if no query (fresh search page)
+            setTimeout(() => {
+                const searchInput = document.querySelector(".pagefind-ui__search-input");
+                if (searchInput) {
+                    searchInput.focus();
+                }
+            }, 100);
+        }
     } else {
         const container = document.querySelector("#search-box");
         if (container) {
