@@ -13,6 +13,8 @@ featured: true
 - **[BuyCanadian - Services & Apps](https://www.reddit.com/r/BuyCanadian/wiki/directories/servicesandapps/)**: A community-curated list of Canadian software and digital services.
 - **[Made in Canada](https://madeincanada.social/)**: A directory focused on Canadian-made technology and platforms.
 - **[European Alternatives](https://european-alternatives.eu/)**: A comprehensive index of European software and services promoting digital sovereignty.
+- **[Getting off US tech: a guide](https://disconnect.blog/getting-off-us-tech-a-guide/)** by Paris Marx
+- **[European alternatives to American apps & software](https://www.eupedia.com/forum/threads/%F0%9F%87%AA%F0%9F%87%BA-european-alternatives-to-american-apps-software.46070/)**  by Maciamo
 
 ---
 

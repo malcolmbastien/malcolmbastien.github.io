@@ -339,12 +339,14 @@ const currentYearValue = new Date().getFullYear();
 
             <!-- Sidebar (3 cols) -->
             <aside class="lg:col-span-3 space-y-10">
+
+                <AboutAuthor />
                 <!-- Latest Creations -->
                 <section class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
                     <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Latest Creations</h3>
                     <div class="space-y-4">
-                        {latestCreations.map((note) => (
-                            <div class="group cursor-pointer relative">
+                        {latestCreations.map((note, index) => (
+                            <div class={`group cursor-pointer relative ${index !== latestCreations.length - 1 ? 'border-b border-slate-200 dark:border-slate-700 pb-4' : ''}`}>
                                 <div class="flex justify-between items-center mb-1">
                                     <span class={`text-[10px] font-bold uppercase px-2 py-1 rounded ${getStageData(note.data.stage).colors.badge}`}>{note.data.stage}</span>
                                     <span class="text-[10px] text-slate-400">
@@ -360,8 +362,6 @@ const currentYearValue = new Date().getFullYear();
                         ))}
                     </div>
                 </section>
-
-                <AboutAuthor />
 
                 <GardenStats counts={counts} />
 
