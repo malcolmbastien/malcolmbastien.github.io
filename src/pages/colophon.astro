@@ -72,11 +72,11 @@ const packages = [
                 <!-- Development & Tools -->
                 <section class="scroll-mt-24" id="development">
                     <div class="flex items-center gap-4 mb-8">
-                        <div class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></div>
+                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                         <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 flex items-center gap-2 whitespace-nowrap">
                             🛠️ Development & Tools
                         </h2>
-                        <div class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></div>
+                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <a href="https://zed.dev/" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group">
@@ -93,11 +93,11 @@ const packages = [
                 <!-- Writing Workflow -->
                 <section class="scroll-mt-24" id="writing">
                     <div class="flex items-center gap-4 mb-8">
-                        <div class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></div>
+                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                         <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 flex items-center gap-2 whitespace-nowrap">
                             ✍️ Writing Workflow
                         </h2>
-                        <div class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></div>
+                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <a href="https://obsidian.md/" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group">
@@ -114,11 +114,11 @@ const packages = [
                 <!-- Hosting & Deployment -->
                 <section class="scroll-mt-24" id="hosting">
                     <div class="flex items-center gap-4 mb-8">
-                        <div class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></div>
+                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                         <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 flex items-center gap-2 whitespace-nowrap">
                             🚀 Hosting & Deployment
                         </h2>
-                        <div class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></div>
+                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                     </div>
                     <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer" class="block bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group">
                         <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blueprint-blue dark:group-hover:text-blue-400 transition-colors">GitHub Pages</h3>
@@ -129,11 +129,11 @@ const packages = [
                 <!-- Typography -->
                 <section class="scroll-mt-24" id="typography">
                     <div class="flex items-center gap-4 mb-8">
-                        <div class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></div>
+                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                         <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 flex items-center gap-2 whitespace-nowrap">
                             🔡 Typography
                         </h2>
-                        <div class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></div>
+                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                         <a href="https://fonts.google.com/specimen/Space+Grotesk" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group">
@@ -158,11 +158,11 @@ const packages = [
                 <!-- Tech Stack -->
                 <section class="scroll-mt-24" id="techstack">
                     <div class="flex items-center gap-4 mb-8">
-                        <div class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></div>
+                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                         <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 flex items-center gap-2 whitespace-nowrap">
                             📦 Technology Stack
                         </h2>
-                        <div class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></div>
+                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {packages.map((pkg) => (
@@ -218,15 +218,15 @@ const packages = [
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
             if (!href || !href.startsWith('#')) return;
-            
+
             e.preventDefault();
             const targetId = href.substring(1);
             const targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
                 // Update URL without adding to history
                 history.replaceState(null, '', href);
-                
+
                 // Smooth scroll to target
                 targetElement.scrollIntoView({
                     behavior: 'smooth',

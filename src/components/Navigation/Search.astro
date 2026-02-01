@@ -6,8 +6,10 @@
 
 <script is:inline>
   function initSearch() {
-    if (typeof PagefindUI !== 'undefined') {
-        const pagefindUI = new PagefindUI({
+    // @ts-ignore - PagefindUI is loaded from external script
+    if (typeof window !== 'undefined' && window.PagefindUI) {
+        // @ts-ignore
+        new window.PagefindUI({
             element: "#search-box",
             showSubResults: true,
             translations: {
