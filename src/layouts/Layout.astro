@@ -38,7 +38,6 @@ const currentPath = Astro.url.pathname;
 const navItems = [
     { href: "/", label: "Garden" },
     { href: "/topics", label: "Topics" },
-    { href: "/search", label: "Search" },
     { href: "/colophon", label: "Colophon" },
     { href: "/about", label: "About" },
 ];
@@ -160,34 +159,62 @@ const navItems = [
             }
             window.localStorage.setItem("theme", theme);
         </script>
+        <script is:inline>
+            // Search keyboard shortcut (⌘K or Ctrl+K)
+            document.addEventListener('keydown', function(e) {
+                if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                    e.preventDefault();
+                    const searchInput = document.getElementById('nav-search-input');
+                    if (searchInput) {
+                        searchInput.focus();
+                    }
+                }
+            });
+        </script>
     </head>
     <body class="min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 flex flex-col">
-        <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-            <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-                <a href="/" class="flex items-center gap-2">
-                    <span class="font-bold text-lg tracking-tight text-blueprint-blue dark:text-blue-400">MALCOLM BASTIEN</span>
-                    <span class="text-slate-400 dark:text-slate-500">|</span>
-                    <span class="text-black dark:text-white font-bold uppercase tracking-widest text-xs sm:text-sm">FLOW FOCUSED</span>
-                    <span class="material-symbols-outlined text-sky-500 ml-1">waves</span>
-                </a>
-                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-                    {navItems.map((item) => (
-                        <a
-                            href={item.href}
-                            class:list={[
-                                "transition-colors",
-                                currentPath.replace(/\/$/, '') === item.href.replace(/\/$/, '')
-                                    ? "text-black dark:text-white border-b-2 border-black dark:border-white pb-1"
-                                    : "text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white"
-                            ]}
-                        >
-                            {item.label}
-                        </a>
-                    ))}
+        <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+            <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+                <div class="flex items-center gap-8">
+                    <a class="flex items-center gap-2" href="/">
+                        <span class="material-symbols-outlined text-blue-500 dark:text-blue-400 font-bold">waves</span>
+                        <span class="font-display font-bold text-lg tracking-tight hidden sm:inline-block">FLOW FOCUSED</span>
+                    </a>
+                    <div class="hidden lg:flex items-center gap-1 text-slate-500 dark:text-slate-400">
+                        {navItems.map((item) => (
+                            <a
+                                href={item.href}
+                                class:list={[
+                                    "px-3 py-1.5 text-sm transition-colors",
+                                    currentPath.replace(/\/$/, '') === item.href.replace(/\/$/, '')
+                                        ? "text-slate-900 dark:text-white font-semibold border-b-2 border-blue-500"
+                                        : "navbar-item hover:text-slate-900 dark:hover:text-white"
+                                ]}
+                            >
+                                {item.label}
+                            </a>
+                        ))}
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <form action="/search" method="GET" class="flex items-center gap-4 bg-slate-100/50 dark:bg-slate-900/50 px-2 py-1 rounded-full border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500">
+                        <div class="flex items-center pl-2 group">
+                            <span class="material-symbols-outlined text-slate-400 text-lg mr-2">search</span>
+                            <input 
+                                type="text" 
+                                name="q" 
+                                id="nav-search-input"
+                                class="bg-transparent border-none focus:ring-0 focus:outline-none text-sm w-32 md:w-48 p-0 text-slate-700 dark:text-slate-300 placeholder-slate-400" 
+                                placeholder="Search garden..."
+                                autocomplete="off"
+                            />
+                            <span class="text-[10px] font-bold text-slate-400 border border-slate-300 dark:border-slate-700 px-1.5 rounded ml-2 hidden md:block">⌘K</span>
+                        </div>
+                    </form>
                     <ThemeToggle />
-                </nav>
+                </div>
             </div>
-        </header>
+        </nav>
         <slot />
     </body>
 </html>

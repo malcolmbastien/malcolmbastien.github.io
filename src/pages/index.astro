@@ -7,7 +7,6 @@ import YearNavigation from "../components/YearNavigation.astro";
 import NoteTimeline from "../components/NoteTimeline.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import GardenStats from "../components/Profile/GardenStats.astro";
-import SocialLinks from "../components/Profile/SocialLinks.astro";
 import TopicFocus from "../components/Profile/TopicFocus.astro";
 
 import { getBatchFileDates, type FileDates } from "../lib/git-history";
@@ -361,20 +360,7 @@ const currentYearValue = new Date().getFullYear();
 
                 <GardenStats counts={counts} />
 
-                <!-- Search -->
-                <section class="bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
-                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Search</h3>
-                    <div class="relative">
-                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
-                        <a href="/search" class="block w-full bg-slate-50 dark:bg-slate-900 border-none rounded-lg pl-10 pr-4 py-2 text-sm text-slate-400 transition-all">
-                            Search notes...
-                        </a>
-                    </div>
-                </section>
-
                 <TopicFocus />
-
-                <SocialLinks />
             </aside>
         </div>
     </main>
