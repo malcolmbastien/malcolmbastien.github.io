@@ -296,7 +296,7 @@ const currentYearValue = new Date().getFullYear();
                                 <section>
                                     <div class="flex items-center gap-2 mb-6">
                                         <span class="material-symbols-outlined text-slate-400 text-sm">push_pin</span>
-                                        <h2 class="text-sm font-extrabold uppercase tracking-[0.15em] text-slate-400">Pinned Notes</h2>
+                                        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Pinned Notes</h2>
                                     </div>
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {pinnedNotes.map((note) => (
@@ -338,7 +338,7 @@ const currentYearValue = new Date().getFullYear();
             <aside class="lg:col-span-3 space-y-6">
                 <!-- Latest Creations -->
                 <section class="bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
-                    <h3 class="text-sm font-extrabold uppercase tracking-[0.15em] text-slate-400 mb-6">Latest Creations</h3>
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Latest Creations</h3>
                     <div class="space-y-4">
                         {latestCreations.map((note, index) => (
                             <div class={`group cursor-pointer relative ${index !== latestCreations.length - 1 ? 'border-b border-slate-200 dark:border-slate-700 pb-4' : ''}`}>
