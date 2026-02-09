@@ -56,53 +56,45 @@ const stages = ['evergreen', 'sprout', 'seed'].map(id => {
     description={`Explore all cultivated notes and ideas regarding ${topic}.`}
     type="website"
 >
-    <main class="w-full max-w-[1280px] mx-auto px-6 py-12" data-pagefind-ignore>
+    <main class="w-full max-w-7xl mx-auto px-6 py-12" data-pagefind-ignore>
         <!-- Header Section -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
-                <a class="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors mb-6 uppercase tracking-widest group" href="/">
-                    <span class="material-symbols-outlined text-base group-hover:-translate-x-1 transition-transform">arrow_back</span>
-                    RETURN TO GARDEN
-                </a>
-                <h1 class="text-5xl md:text-7xl font-bold text-navy-900 dark:text-white mb-4 tracking-tight">
+                <h1 class="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
                     Topic: <span class="text-blue-600 dark:text-blue-400">{topic}</span>
                 </h1>
-                <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400">
-                    <span class="text-sm font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">Notes: {sortedNotes.length.toString().padStart(3, '0')}</span>
-                    <span class="text-sm font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">Updated: {latestDate}</span>
+                <div class="flex items-center gap-6 text-slate-500 dark:text-slate-400">
+                    <span class="text-sm font-mono">{sortedNotes.length.toString().padStart(3, '0')} notes</span>
+                    <span class="text-slate-300 dark:text-slate-600">|</span>
+                    <span class="text-sm font-mono">Last updated {latestDate}</span>
                 </div>
             </div>
         </div>
 
         <!-- Knowledge Path -->
         <div class="relative">
-            <!-- Central Line -->
-            <div class="knowledge-path-line hidden md:block"></div>
-
-            <div class="space-y-20">
+            <div class="space-y-8">
                 {stages.map((stage) => {
                     const notes = groupedByStage[stage.id as keyof typeof groupedByStage];
                     if (notes.length === 0) return null;
 
                     return (
                         <section>
-                            <div class="flex items-center gap-4 mb-10 sticky top-20 bg-background-light dark:bg-background-dark py-4 z-20">
-                                <div class={`w-10 h-10 rounded-full ${stage.bgColor} flex items-center justify-center`}>
-                                    <span class={`material-symbols-outlined ${stage.color} text-xl`}>{stage.icon}</span>
-                                </div>
-                                <h2 class="text-2xl font-bold text-navy-900 dark:text-white">{stage.label}</h2>
-                                <div class="h-px flex-grow bg-slate-200 dark:bg-slate-800"></div>
+                            <div class="flex items-center gap-4 mb-4 sticky top-20 bg-background-light dark:bg-background-dark py-4 z-20">
+                                <span class={`material-symbols-outlined ${stage.color} text-2xl`}>{stage.icon}</span>
+                                <h2 class="text-2xl font-bold text-slate-900 dark:text-white">{stage.label}</h2>
+                                <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                             </div>
 
-                            <div class="space-y-8 md:pl-16 relative">
+                            <div class="md:pl-16 relative">
                                 {notes.map((note) => (
-                                    <article class="group bg-white dark:bg-navy-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 md:p-8 transition-all hover:shadow-xl hover:-translate-y-1 relative">
+                                    <article class="group border-b border-slate-200 dark:border-slate-800 pt-8 pb-8 last:border-b-0 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-700 hover:bg-stone-100 dark:hover:bg-slate-800 -mx-4 px-4 py-4 rounded relative">
                                         <!-- Connection Dot -->
                                         <div class:list={["topic-dot hidden md:block shadow-[0_0_0_4px_rgba(0,0,0,0.05)]", stage.dotColor]}></div>
 
                                         <div class="flex gap-8 flex-col md:flex-row">
                                             {note.data.cover && (
-                                                <div class="w-full md:w-64 h-44 flex-shrink-0 bg-slate-100 dark:bg-slate-900 rounded-xl overflow-hidden shadow-inner border border-slate-100 dark:border-slate-800">
+                                                <div class="w-full md:w-64 h-44 shrink-0 overflow-hidden">
                                                     <Image
                                                         src={note.data.cover}
                                                         alt={note.data.title}
@@ -111,7 +103,7 @@ const stages = ['evergreen', 'sprout', 'seed'].map(id => {
                                                 </div>
                                             )}
 
-                                            <div class="flex-grow flex flex-col">
+                                            <div class="grow flex flex-col">
                                                 <div class="flex justify-between items-start mb-3">
                                                     <span class:list={["text-xs font-bold uppercase tracking-widest", getStageData(note.data.stage).colors.text]}>
                                                         {note.data.stage}
@@ -121,21 +113,21 @@ const stages = ['evergreen', 'sprout', 'seed'].map(id => {
                                                     </time>
                                                 </div>
 
-                                                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-navy-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
-                                                    <a href={`/notes/${note.id.replace('.md', '')}`} class="after:absolute after:inset-0">
+                                                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-slate-900 dark:text-white transition-colors leading-tight">
+                                                    <a href={`/notes/${note.id.replace('.md', '')}`}>
                                                         {note.data.title}
                                                     </a>
                                                 </h3>
 
                                                 {note.data.summary && (
-                                                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-6 line-clamp-3 font-serif italic">
-                                                        "{note.data.summary}"
+                                                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-6 line-clamp-3">
+                                                        {note.data.summary}
                                                     </p>
                                                 )}
 
                                                 <div class="mt-auto flex flex-wrap gap-2">
                                                     {note.data.tags.map(t => (
-                                                        <span class="px-2.5 py-1 bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-lg text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider group-hover:border-blue-200 dark:group-hover:border-blue-900/50 transition-colors">
+                                                        <span class="text-[11px] font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide">
                                                             #{t}
                                                         </span>
                                                     ))}
@@ -157,24 +149,10 @@ const stages = ['evergreen', 'sprout', 'seed'].map(id => {
 <style is:global>
     @reference "../../styles/global.css";
 
-    .knowledge-path-line {
-        position: absolute;
-        left: 32px;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: linear-gradient(to bottom, transparent, var(--color-slate-200), transparent);
-        opacity: 0.5;
-    }
-
-    .dark .knowledge-path-line {
-        background: linear-gradient(to bottom, transparent, var(--color-slate-800), transparent);
-    }
-
     .topic-dot {
         position: absolute;
         left: -37px;
-        top: 3.5rem;
+        top: 4.5rem;
         width: 12px;
         height: 12px;
         border-radius: 50%;
