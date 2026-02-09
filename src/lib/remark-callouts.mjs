@@ -50,26 +50,26 @@ export function remarkCallouts() {
       const type = rawType.toLowerCase().trim().replace(/\s+/g, '-');
       const icon = iconMap[type] || 'info';
       
-      // Remove the [!TYPE] marker
+      // Transform <blockquote> into a <div> for the new horizontal design
+      node.data = node.data || {};
+      node.data.hName = 'div';
+      node.data.hProperties = { 
+        className: ['markdown-alert', `markdown-alert-${type}`] 
+      };
+
+      // Clean up the original text by removing the [!TYPE] marker
       firstText.value = firstText.value.replace(/^\[!([\w\s-]+)\]/i, '').trim();
 
       let titleText = rawType.trim().toUpperCase();
       if (type === 'wip' || type === 'work-in-progress') titleText = 'WIP';
       if (type === 'tldr') titleText = 'TL;DR';
       
-      // Transform the blockquote node into a container div
-      node.data = node.data || {};
-      node.data.hName = 'div';
-      node.data.hProperties = { 
-        className: ['markdown-alert', `markdown-alert-${type}`, 'my-12'] 
-      };
-
-      // Construct the internal structure
-      const anchorNode = {
+      // Construct the header (Icon + Label)
+      const headerNode = {
         type: 'paragraph',
         data: {
           hName: 'div',
-          hProperties: { className: ['margin-anchor'] }
+          hProperties: { className: ['markdown-alert-header'] }
         },
         children: [
           {
@@ -77,7 +77,7 @@ export function remarkCallouts() {
             value: icon,
             data: {
               hName: 'span',
-              hProperties: { className: ['material-symbols-outlined', 'callout-icon'] }
+              hProperties: { className: ['material-symbols-outlined', 'markdown-alert-icon'] }
             }
           },
           {
@@ -85,23 +85,24 @@ export function remarkCallouts() {
             value: titleText,
             data: {
               hName: 'span',
-              hProperties: { className: ['callout-label'] }
+              hProperties: { className: ['markdown-alert-title'] }
             }
           }
         ]
       };
 
+      // Construct the content area
       const contentNode = {
         type: 'paragraph',
         data: {
           hName: 'div',
           hProperties: { className: ['markdown-alert-content'] }
         },
-        children: node.children
+        children: [...node.children]
       };
 
-      // Set children to our new grid layout
-      node.children = [anchorNode, contentNode];
+      // Set node children to the new vertical stack
+      node.children = [headerNode, contentNode];
     });
   };
 }
