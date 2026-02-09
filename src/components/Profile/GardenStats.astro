@@ -11,6 +11,11 @@ interface Props {
 }
 
 const { counts } = Astro.props;
+
+// Calculate percentages based on total
+const seedPercent = counts.all > 0 ? (counts.seed / counts.all) * 100 : 0;
+const sproutPercent = counts.all > 0 ? (counts.sprout / counts.all) * 100 : 0;
+const evergreenPercent = counts.all > 0 ? (counts.evergreen / counts.all) * 100 : 0;
 ---
 
 <div class="bg-slate-50 dark:bg-slate-900/50 p-6 rounded-2xl border border-slate-100 dark:border-slate-800">
@@ -23,7 +28,7 @@ const { counts } = Astro.props;
                 <span class="text-xs font-mono text-slate-500">{counts.seed.toString().padStart(3, '0')}</span>
             </div>
             <div class="h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                <div class="h-full bg-amber-400 w-4/5 rounded-full"></div>
+                <div class="h-full bg-amber-400 rounded-full transition-all duration-500" style={`width: ${seedPercent}%`}></div>
             </div>
             <p class="text-xs text-slate-500 mt-2 leading-relaxed">Rough ideas and early drafts</p>
         </div>
@@ -34,7 +39,7 @@ const { counts } = Astro.props;
                 <span class="text-xs font-mono text-slate-500">{counts.sprout.toString().padStart(3, '0')}</span>
             </div>
             <div class="h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                <div class="h-full bg-emerald-400 w-1/3 rounded-full"></div>
+                <div class="h-full bg-emerald-400 rounded-full transition-all duration-500" style={`width: ${sproutPercent}%`}></div>
             </div>
             <p class="text-xs text-slate-500 mt-2 leading-relaxed">Developing concepts</p>
         </div>
@@ -45,7 +50,7 @@ const { counts } = Astro.props;
                 <span class="text-xs font-mono text-slate-500">{counts.evergreen.toString().padStart(3, '0')}</span>
             </div>
             <div class="h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                <div class="h-full bg-emerald-600 w-2/5 rounded-full"></div>
+                <div class="h-full bg-emerald-600 rounded-full transition-all duration-500" style={`width: ${evergreenPercent}%`}></div>
             </div>
             <p class="text-xs text-slate-500 mt-2 leading-relaxed">Polished, reliable notes</p>
         </div>
