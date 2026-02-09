@@ -3,16 +3,39 @@
 
 @theme {
   --color-primary: #22c55e; /* Green 500 */
-  --color-background-light: #f8fafc;
+  
+  /* Typographic Ledger - Paper Tones */
+  --color-background-light: #fdfdfd;
   --color-background-dark: #0f172a;
   --color-content-light: #ffffff;
   --color-content-dark: #1e293b;
+  --color-paper: #fdfdfd;
+  --color-paper-dark: #0f172a;
+  --color-ink: #0f172a;
+  --color-ink-dark: #f1f5f9;
+  
+  /* Primary Deep Navy */
+  --color-primary: #1e3a8a;
+  
+  /* Garden Stage Colors */
+  --color-garden-seed: #fef3c7;
+  --color-garden-sprout: #dcfce7;
+  --color-garden-evergreen: #ecfdf5;
+  --color-garden-seed-border: #f59e0b;
+  --color-garden-sprout-border: #22c55e;
+  --color-garden-evergreen-border: #10b981;
   --color-navy-800: #1e293b;
   --color-navy-900: #0f172a;
 
-  --font-display: "Inter", sans-serif;
-  --font-serif: "Source Serif 4", serif;
-  --font-mono: "JetBrains Mono", monospace;
+  /* Typography System - All Sans-Serif */
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-serif: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Roboto Mono", monospace;
+  
+  /* Ledger Spacing */
+  --ledger-baseline: 1.75rem;
+  --ledger-section-gap: 3rem;
+  --ledger-content-width: 720px;
 
   --color-blueprint-blue: #4382ff;
   --color-terminal-dark: #0f172a;
@@ -190,9 +213,54 @@
 
 html {
   overflow-y: scroll;
-  font-family: var(--font-display);
-  background-color: var(--color-background-light);
-  color: var(--color-primary);
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Instant theme switch support */
+.no-transitions,
+.no-transitions *,
+.no-transitions *::after {
+  transition: none !important;
+}
+
+html.dark {
+  background-color: var(--color-paper-dark);
+  color: var(--color-ink-dark);
+}
+
+/* Typography Hierarchy - All Sans-Serif */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--color-ink);
+  @apply dark:text-ink-dark;
+}
+
+p {
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.75;
+}
+
+/* Small Caps Utility */
+.small-caps {
+  font-variant: all-small-caps;
+  letter-spacing: 0.1em;
+}
+
+/* Tight Tracking for Hero */
+.tight-tracking {
+  letter-spacing: -0.04em;
+}
+
+/* Heatmap Cell */
+.heatmap-cell {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
 }
 
 /* Instant theme switch support */
@@ -204,18 +272,23 @@ html {
 }
 
 html.dark {
-  background-color: var(--color-background-dark);
-  color: var(--color-neutral-text-dark);
+  background-color: var(--color-paper-dark);
+  color: var(--color-ink-dark);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-serif);
+/* Typography Hierarchy - Ledger Style */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
   letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--color-ink);
+  @apply dark:text-ink-dark;
+}
+
+p {
+  font-family: var(--font-serif);
+  line-height: 1.75;
 }
 
 /* --- Semantic Utility Classes --- */
@@ -242,6 +315,140 @@ h6 {
   @apply metadata font-bold text-terminal-dark dark:text-neutral-text-dark;
 }
 
+/* --- Typographic Ledger System --- */
+
+/* Thin dividers for section breaks */
+@utility ledger-divider {
+  border-top: 1px solid #e5e5e5;
+  @apply dark:border-slate-700;
+}
+
+@utility ledger-divider-dotted {
+  border-top: 1px dotted #d4d4d4;
+  @apply dark:border-slate-600;
+}
+
+/* Reading area constraints */
+@utility ledger-prose {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Vertical rhythm spacing */
+@utility ledger-section {
+  margin-bottom: var(--ledger-section-gap);
+  padding-bottom: var(--ledger-section-gap);
+}
+
+@utility ledger-baseline {
+  line-height: var(--ledger-baseline);
+}
+
+/* Metadata in margins */
+@utility ledger-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #737373;
+  @apply dark:text-slate-400;
+}
+
+@utility ledger-meta-stage-seed {
+  @apply ledger-meta;
+  color: #d97706;
+  @apply dark:text-amber-500;
+}
+
+@utility ledger-meta-stage-sprout {
+  @apply ledger-meta;
+  color: #65a30d;
+  @apply dark:text-lime-500;
+}
+
+@utility ledger-meta-stage-evergreen {
+  @apply ledger-meta;
+  color: #16a34a;
+  @apply dark:text-green-500;
+}
+
+/* Typography hierarchy */
+@utility ledger-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--color-ink);
+  @apply dark:text-ink-dark;
+}
+
+@utility ledger-body {
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.75;
+  color: #475569;
+  @apply dark:text-slate-400;
+}
+
+/* Entry/item styling */
+@utility ledger-entry {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  @apply dark:border-slate-800;
+}
+
+/* Use regular CSS class for hover effects instead of @utility */
+.ledger-entry-hover {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.15s ease;
+  @apply dark:border-slate-800;
+}
+
+.ledger-entry-hover:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+  @apply dark:bg-slate-800/30;
+}
+
+/* Sidebar context styling */
+@utility ledger-context {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #525252;
+  @apply dark:text-slate-400;
+}
+
+@utility ledger-context-heading {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  @apply dark:text-slate-500;
+}
+
+/* Remove card shadows/backgrounds - clean typography */
+@utility no-card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Interactive typography */
+.ledger-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.ledger-link:hover {
+  border-bottom-color: currentColor;
+}
+
 /* High-contrast Signal Text */
 @utility text-signal-seed {
   color: #f59e0b !important;
@@ -261,32 +468,32 @@ h6 {
   @apply bg-white dark:bg-[#1E293B] border border-[#E2E8F0] dark:border-slate-700;
 }
 
-/* Interactive Cards */
+/* Note: Card styles deprecated - using Typographic Ledger design instead.
+   These classes remain for backwards compatibility but are now minimal. */
+
 .card-interactive {
-  @apply surface-elevation transition-all duration-300 relative;
-  /* Ensure a base state that is distinct from hover */
-  transform: translateY(0);
+  background: transparent;
+  border: none;
+  transition: opacity 0.15s ease;
 }
 
 .card-interactive:hover {
-  transform: translateY(-4px) !important;
-  border-color: #4382ff !important;
-  box-shadow: 0 12px 24px -8px rgba(67, 130, 255, 0.25) !important;
-  z-index: 10;
+  opacity: 0.8;
 }
 
-.dark .card-interactive:hover {
-  box-shadow: 0 12px 30px -8px rgba(67, 130, 255, 0.5) !important;
-}
-
-/* Specific interactive card overrides */
 .card-interactive.featured:hover {
-  box-shadow: 10px 10px 0 0 #4382ff !important;
-  transform: translate(-2px, -6px) !important;
+  opacity: 0.8;
+}
+
+/* Legacy surface-elevation - now transparent */
+.surface-elevation {
+  background: transparent;
+  border: none;
 }
 
 /* --- Timeline Components --- */
 
+/* Minimal timeline - subtle vertical line */
 .timeline-thread {
   position: relative;
 }
@@ -294,21 +501,32 @@ h6 {
 .timeline-thread::before {
   content: "";
   position: absolute;
-  margin-top: 7px;
-  left: 5px;
+  left: 0;
   top: 0;
   bottom: 0;
-  width: 1.5px;
-  @apply bg-slate-100 dark:bg-blueprint-blue;
+  width: 1px;
+  @apply bg-neutral-200 dark:bg-slate-700;
 }
 
 .timeline-marker {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  @apply bg-white dark:bg-terminal-dark border-2 border-blueprint-blue;
+  @apply bg-neutral-300 dark:bg-slate-600;
   position: relative;
   z-index: 10;
+}
+
+.timeline-marker[data-stage="seed"] {
+  @apply bg-amber-400 dark:bg-amber-600;
+}
+
+.timeline-marker[data-stage="sprout"] {
+  @apply bg-lime-500 dark:bg-lime-600;
+}
+
+.timeline-marker[data-stage="evergreen"] {
+  @apply bg-green-500 dark:bg-green-600;
 }
 
 /* --- Prose & Link Styling --- */
@@ -693,9 +911,24 @@ h6 {
 
 /* --- Filter Buttons --- */
 .filter-btn {
-  @apply px-4 py-2 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-secondary text-sm font-medium transition-all hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-slate-300;
+  @apply px-3 py-1.5 text-sm font-medium transition-all;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #737373;
+  background: transparent;
+  border: none;
+  @apply dark:text-slate-400;
+}
+
+.filter-btn:hover {
+  color: #262626;
+  @apply dark:text-slate-200;
 }
 
 .filter-btn.active {
-  @apply bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 border-slate-900 dark:border-slate-100;
+  color: #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+  @apply dark:text-white dark:border-white;
 }

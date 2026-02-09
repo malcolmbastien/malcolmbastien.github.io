@@ -32,7 +32,7 @@ const notesWithDates = allNotes.map((note) => {
         displayDate,
         allGitDates,
     };
-}).filter((note): note is typeof note & { displayDate: Date } => !!note.displayDate); // Only show notes that have a valid date from frontmatter or git
+}).filter((note): note is typeof note & { displayDate: Date } => !!note.displayDate);
 
 // Create timeline events
 const events: any[] = [];
@@ -40,7 +40,6 @@ notesWithDates.forEach((note) => {
     const displayDate = note.displayDate as Date;
     const displayDateStr = displayDate.toISOString().split("T")[0];
 
-    // Add creation event
     events.push({
         type: "created",
         note,
@@ -48,12 +47,8 @@ notesWithDates.forEach((note) => {
         title: note.data.title,
     });
 
-    // Add update events for all other unique git dates
     note.allGitDates.forEach((dateStr: string) => {
-        // Only add as update if it's a different day than creation
         if (dateStr !== displayDateStr) {
-            // We use 12:00 PM for these historical updates to ensure they sort reasonably
-            // or we could try to find the actual time, but dateStr is just the day
             const updateDate = new Date(dateStr + "T12:00:00");
             events.push({
                 type: "updated",
@@ -65,12 +60,11 @@ notesWithDates.forEach((note) => {
     });
 });
 
-// Aggregate events: group multiple updates to same note within short time
+// Aggregate events
 const aggregatedEvents: any[] = [];
 const eventGroups = new Map();
 
 events.forEach((event) => {
-    // Group by slug, type, AND date (day) to ensure at most one event per note per day per type
     const dateStr = (event.date as Date).toISOString().split("T")[0];
     const key = `${event.note.slug}-${event.type}-${dateStr}`;
     if (!eventGroups.has(key)) {
@@ -83,23 +77,21 @@ eventGroups.forEach((group) => {
     if (group.length === 1) {
         aggregatedEvents.push(group[0]);
     } else {
-        // Multiple events, aggregate them
         const firstEvent = group[0];
         const lastEvent = group[group.length - 1];
         aggregatedEvents.push({
             ...firstEvent,
             count: group.length,
-            date: lastEvent.date, // Use the most recent date
+            date: lastEvent.date,
         });
     }
 });
 
-// Sort events by date descending
 const sortedEvents = aggregatedEvents.sort(
     (a, b) => b.date.valueOf() - a.date.valueOf(),
 );
 
-// Identify which events to collapse in the timeline (show only one update per note per month)
+// Identify which events to collapse
 const creationsInMonth = new Set<string>();
 sortedEvents.forEach((e) => {
     if (e.type === "created") {
@@ -122,7 +114,6 @@ sortedEvents.forEach((event) => {
     if (event.type === "created") {
         event.isCollapsed = false;
     } else {
-        // It's an update - collapse if there's a creation or a later update in the same month
         if (creationsInMonth.has(noteKey) || seenUpdateInMonth.has(noteKey)) {
             event.isCollapsed = true;
         } else {
@@ -132,7 +123,7 @@ sortedEvents.forEach((event) => {
     }
 });
 
-// Generate all months from earliest event to now
+// Generate all months
 const earliestDate =
     sortedEvents.length > 0
         ? sortedEvents[sortedEvents.length - 1]?.date || new Date()
@@ -145,14 +136,13 @@ const allMonths: Array<{
 }> = [];
 
 const currentDate = new Date();
-currentDate.setDate(1); // Start from first day of current month
+currentDate.setDate(1);
 currentDate.setHours(0, 0, 0, 0);
 
 const endDate = new Date(earliestDate);
 endDate.setDate(1);
 endDate.setHours(0, 0, 0, 0);
 
-// Group events by month for quick lookup
 const eventsByMonthKey = new Map<string, any[]>();
 sortedEvents.forEach((event) => {
     const monthKey = event.date.toLocaleDateString("en-US", {
@@ -165,7 +155,6 @@ sortedEvents.forEach((event) => {
     eventsByMonthKey.get(monthKey)?.push(event);
 });
 
-// Generate all months from current to earliest
 while (currentDate >= endDate) {
     const monthKey = currentDate.toLocaleDateString("en-US", {
         year: "numeric",
@@ -176,12 +165,10 @@ while (currentDate >= endDate) {
         date: new Date(currentDate),
         hasActivity: eventsByMonthKey.has(monthKey),
     });
-
-    // Move to previous month
     currentDate.setMonth(currentDate.getMonth() - 1);
 }
 
-// Collect years data for sidebar
+// Collect years data
 const yearsData = new Map();
 sortedEvents.forEach((event) => {
     const year = event.date.getFullYear();
@@ -190,44 +177,58 @@ sortedEvents.forEach((event) => {
     if (!yearsData.has(year)) {
         yearsData.set(year, { count: 0, months: new Set(), uniqueNotes: new Set() });
     }
-    yearsData.get(year).count++; // Total activity for dots
+    yearsData.get(year).count++;
     yearsData.get(year).months.add(month);
-    yearsData.get(year).uniqueNotes.add(event.note.id); // Unique notes for the count label
+    yearsData.get(year).uniqueNotes.add(event.note.id);
 });
 
-// Convert to array and sort by year descending
 const yearsArray = Array.from(yearsData.entries());
 yearsArray.sort((a, b) => b[0] - a[0]);
 const sortedYears = yearsArray.map(([year, data]) => ({
     year: year as number,
-    count: data.uniqueNotes.size, // Number of unique notes touched
-    activityCount: data.count as number, // Total activity volume
-    months: (Array.from(data.months) as number[]).sort((a, b) => b - a), // months descending within year
+    count: data.uniqueNotes.size,
+    activityCount: data.count as number,
+    months: (Array.from(data.months) as number[]).sort((a, b) => b - a),
 }));
 
 // Identify pinned notes
 const pinnedNotes = allNotes.filter((note) => (note.data as any).pinned === true);
 
-// Get latest 3 created notes (that aren't pinned)
+// Get latest 3 created notes
 const latestCreations = notesWithDates
     .filter(p => !!p.displayDate && !pinnedNotes.some(pinned => pinned.id === p.id))
     .sort((a, b) => b.displayDate!.valueOf() - a.displayDate!.valueOf())
     .slice(0, 3);
 
-
-
-// Compute note counts by stage
+// Compute note counts
 const publishedNotes = allNotes.filter((note) => note.data);
 const counts = {
     all: publishedNotes.length,
     seed: publishedNotes.filter((n: any) => n.data.stage === "seed").length,
-    sprout: publishedNotes.filter((n: any) => n.data.stage === "sprout")
-        .length,
+    sprout: publishedNotes.filter((n: any) => n.data.stage === "sprout").length,
     evergreen: publishedNotes.filter((n: any) => n.data.stage === "evergreen").length,
 };
 
-// Default to current year for heatmap
 const currentYearValue = new Date().getFullYear();
+
+// Helper for stage styling
+const getStageBadgeClass = (stage: string) => {
+    switch (stage) {
+        case 'seed':
+            return 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400';
+        case 'sprout':
+            return 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400';
+        case 'evergreen':
+            return 'bg-emerald-600 text-white';
+        default:
+            return 'bg-slate-100 text-slate-700';
+    }
+};
+
+const getStageCardClass = (stage: string) => {
+    // All pinned notes use the same subtle styling regardless of stage
+    return 'bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700';
+};
 ---
 
 <Layout
@@ -237,26 +238,21 @@ const currentYearValue = new Date().getFullYear();
 >
     <style slot="head" is:inline set:html={
         sortedYears.map(y => `
-        /* Instant CSS-driven filtering */
         html[data-selected-year="${y.year}"] .timeline-event:not([data-event-year="${y.year}"]),
         html[data-selected-year="${y.year}"] .month-section:not([data-year="${y.year}"]) {
             display: none !important;
         }
 
-        /* Initial batching protection (before JS takes over) */
         html:not(.js-initialized)[data-selected-year="${y.year}"] .timeline-event[data-event-year="${y.year}"][data-is-initial-batch="false"] {
             display: none !important;
         }
-        html:not(.js-initialized)[data-selected-year="${y.year}"] .month-section[data-year="${y.year}"]:not(:has(.timeline-event[data-event-year="${y.year}"][data-is-initial-batch="true"])) {
-            display: none !important;
-        }
 
-        /* Instant Sidebar Highlighting */
         html[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] {
-            color: black !important;
+            color: #1e3a8a !important;
+            font-weight: 700;
         }
         html.dark[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] {
-            color: white !important;
+            color: #60a5fa !important;
         }
         html[data-selected-year="${y.year}"] .year-item:has(.year-btn[data-year="${y.year}"]) .month-submenu {
             display: flex !important;
@@ -264,59 +260,60 @@ const currentYearValue = new Date().getFullYear();
         `).join('')
     } />
     <script slot="head" is:inline>
-        // Set the selected year as early as possible in the HEAD to allow for CSS-driven filtering
         (function() {
             const savedYear = localStorage.getItem('selectedYear');
             const currentYear = new Date().getFullYear().toString();
             document.documentElement.setAttribute('data-selected-year', savedYear || currentYear);
         })();
     </script>
+
     <main class="max-w-7xl mx-auto px-6 py-12" data-pagefind-ignore>
         <HeroBanner />
 
-        <div class="border-b  border-slate-200 dark:border-slate-800 w-full mb-10"></div>
-
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <!-- Year Navigation (1 col) -->
-            <aside class="lg:col-span-1 hidden lg:block border-r border-slate-200 dark:border-slate-800 pr-4">
-                <div class="sticky top-24">
-                    <YearNavigation sortedYears={sortedYears as any} />
-                </div>
+            <!-- Year Navigation -->
+            <aside class="hidden lg:block lg:col-span-1 border-r border-slate-100 dark:border-slate-800 pr-4">
+                <nav class="sticky top-24 space-y-6">
+                    <div>
+                        <YearNavigation sortedYears={sortedYears as any} />
+                    </div>
+                </nav>
             </aside>
 
-            <!-- Main Content (8 cols) -->
-            <div class="lg:col-span-8 space-y-12">
-                <ActivityHeatmap
-                    year={currentYearValue}
-                    events={sortedEvents as any}
-                />
-
+            <!-- Main Content -->
+            <div class="lg:col-span-8">
+                {/* Pinned Notes Section */}
                 {
                     pinnedNotes.length > 0 && (
-                                <section>
-                                    <div class="flex items-center gap-2 mb-6">
-                                        <span class="material-symbols-outlined text-slate-400 text-sm">push_pin</span>
-                                        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Pinned Notes</h2>
-                                    </div>
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        {pinnedNotes.map((note) => (
-                                            <article class="bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm group hover:shadow-md transition-all relative">
-                                                <div class="flex justify-between items-start mb-4">
-                                                    <span class={`text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded ${getStageData(note.data.stage).colors.badge}`}>
-                                                        {note.data.stage}
-                                                    </span>
-                                                    <span class="text-[10px] text-slate-400 font-medium italic">Pinned</span>
-                                                </div>
-                                                <h3 class="text-xl font-bold text-black dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                                                    <a href={`/notes/${note.id.replace('.md', '')}`} class="after:absolute after:inset-0">
-                                                        {note.data.title}
-                                                    </a>
-                                                </h3>
+                        <section class="mb-16">
+                            <div class="flex items-center justify-between mb-8">
+                                <h2 class="text-lg font-bold text-slate-800">Pinned Notes</h2>
+                                <div class="h-px bg-slate-100 dark:bg-slate-800 flex-grow ml-6"></div>
+                            </div>
+                            <div class="space-y-8">
+                                {pinnedNotes.map((note, index) => (
+                                    <article class={`group relative pb-8 ${index !== pinnedNotes.length - 1 ? 'border-b border-slate-100 dark:border-slate-800' : ''}`}>
+                                        <div class="flex items-center justify-between mb-4">
+                                            <div class="flex items-center gap-3">
+                                                <span class={`text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider ${getStageBadgeClass(note.data.stage)}`}>
+                                                    {note.data.stage}
+                                                </span>
+                                                <span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-lg">push_pin</span>
+                                            </div>
+                                        </div>
+                                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
+                                            <a href={`/notes/${note.id.replace('.md', '')}`}>
+                                                {note.data.title}
+                                            </a>
+                                        </h3>
                                         {note.data.summary && (
-                                            <p class="text-sm text-slate-500 dark:text-slate-400 font-body line-clamp-2">
+                                            <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-4">
                                                 {note.data.summary}
                                             </p>
                                         )}
+                                        <a href={`/notes/${note.id.replace('.md', '')}`} class="text-sm font-semibold text-primary dark:text-blue-400 flex items-center gap-1 group/link hover:underline">
+                                            Read more <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+                                        </a>
                                     </article>
                                 ))}
                             </div>
@@ -324,43 +321,73 @@ const currentYearValue = new Date().getFullYear();
                     )
                 }
 
-                <div class="border-b  border-slate-200 dark:border-slate-800 w-full"></div>
-
-                <NoteTimeline
-                    sortedEvents={sortedEvents}
-                    allMonths={allMonths}
-                    eventsByMonthKey={eventsByMonthKey}
-                    initialYear={currentYearValue.toString()}
-                />
-            </div>
-
-            <!-- Sidebar (3 cols) -->
-            <aside class="lg:col-span-3 space-y-6">
-                <!-- Latest Creations -->
-                <section class="bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
-                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Latest Creations</h3>
-                    <div class="space-y-4">
-                        {latestCreations.map((note, index) => (
-                            <div class={`group cursor-pointer relative ${index !== latestCreations.length - 1 ? 'border-b border-slate-200 dark:border-slate-700 pb-4' : ''}`}>
-                                <div class="flex justify-between items-center mb-1">
-                                    <span class={`text-[10px] font-bold uppercase px-2 py-1 rounded ${getStageData(note.data.stage).colors.badge}`}>{note.data.stage}</span>
-                                    <span class="text-[10px] text-slate-400">
-                                        {note.displayDate!.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
-                                    </span>
-                                </div>
-                                <p class="text-sm font-semibold text-black dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
-                                    <a href={`/notes/${note.id.replace('.md', '')}`} class="after:absolute after:inset-0">
-                                        {note.data.title}
-                                    </a>
-                                </p>
-                            </div>
-                        ))}
+                {/* Activity Heatmap */}
+                <section class="mb-16 opacity-50 hover:opacity-100 transition-opacity">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-base font-semibold text-slate-600">Activity in {currentYearValue}</span>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-6 rounded-xl overflow-x-auto">
+                        <ActivityHeatmap
+                            year={currentYearValue}
+                            events={sortedEvents as any}
+                        />
                     </div>
                 </section>
 
+                {/* Current Stream */}
+                <section>
+                    <div class="flex items-center justify-between mb-8">
+                        <h2 class="text-lg font-bold text-slate-800">Recent Notes</h2>
+                        <div class="h-px bg-slate-100 dark:bg-slate-800 flex-grow ml-6"></div>
+                    </div>
+
+                    <NoteTimeline
+                        sortedEvents={sortedEvents}
+                        allMonths={allMonths}
+                        eventsByMonthKey={eventsByMonthKey}
+                        initialYear={currentYearValue.toString()}
+                    />
+
+                    {/* Load More Button */}
+                    <div class="mt-12 text-center">
+                        <button
+                            id="show-more-activity"
+                            class="px-8 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold rounded-full hover:scale-105 transition-transform shadow-lg hidden"
+                        >
+                            Load More Insights
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-3 space-y-12">
+                {/* Taxonomy Guide */}
                 <GardenStats counts={counts} />
 
+                {/* Key Focus Areas */}
                 <TopicFocus />
+
+                {/* Latest Creations */}
+                <div>
+                    <h4 class="text-base font-semibold text-slate-700 mb-6">Latest Notes</h4>
+                    <div class="space-y-4">
+                        {latestCreations.map((note) => (
+                            <div class="group cursor-pointer">
+                                <span class="text-xs font-medium text-slate-400 block mb-1">
+                                    {note.displayDate!.toLocaleDateString("en-US", {
+                                        month: 'short',
+                                        day: 'numeric',
+                                        year: 'numeric'
+                                    })}
+                                </span>
+                                <a href={`/notes/${note.id.replace('.md', '')}`} class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                    {note.data.title}
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </aside>
         </div>
     </main>
@@ -370,7 +397,6 @@ const currentYearValue = new Date().getFullYear();
 <style is:global>
     @reference "../styles/global.css";
 
-    /* CSS-driven filtering for instant load */
     .timeline-event.hidden-by-filter {
         display: none !important;
     }
@@ -410,30 +436,16 @@ const currentYearValue = new Date().getFullYear();
             const eventYear = htmlEvent.dataset.eventYear || "";
             const eventType = htmlEvent.dataset.eventType;
 
-            const matchesFilter =
-                currentFilter === "all" || stage === currentFilter;
+            const matchesFilter = currentFilter === "all" || stage === currentFilter;
             const matchesTopic = currentTopic === "" || (htmlEvent.dataset.topics || "").includes(currentTopic);
-            const matchesEventType =
-                currentEventType === "all" || eventType === currentEventType;
-
-            const matchesYear =
-                currentYear === "all" || eventYear === currentYear;
-
+            const matchesEventType = currentEventType === "all" || eventType === currentEventType;
+            const matchesYear = currentYear === "all" || eventYear === currentYear;
             const isCollapsed = htmlEvent.dataset.isCollapsed === "true";
-
             const eventDate = htmlEvent.dataset.created || "";
-            const matchesDate =
-                currentDateFilter === null || eventDate === currentDateFilter;
-
+            const matchesDate = currentDateFilter === null || eventDate === currentDateFilter;
             const visibilityByCollapse = currentDateFilter !== null ? matchesDate : !isCollapsed;
 
-            if (
-                matchesFilter &&
-                matchesTopic &&
-                matchesEventType &&
-                matchesYear &&
-                visibilityByCollapse
-            ) {
+            if (matchesFilter && matchesTopic && matchesEventType && matchesYear && visibilityByCollapse) {
                 totalMatchingCount++;
                 if (visibleCount < itemsToShow) {
                     htmlEvent.classList.remove("hidden-by-filter");
@@ -455,17 +467,13 @@ const currentYearValue = new Date().getFullYear();
                 (e) => !(e as HTMLElement).classList.contains("hidden-by-filter")
             );
 
-            if (hasVisibleEvent) {
-                htmlSection.style.display = "block";
-            } else {
-                htmlSection.style.display = "none";
-            }
+            htmlSection.style.display = hasVisibleEvent ? "block" : "none";
         });
 
         if (showMoreButton) {
             if (totalMatchingCount > itemsToShow) {
                 showMoreButton.classList.remove("hidden");
-                showMoreButton.textContent = `Show more activity (${totalMatchingCount - itemsToShow} remaining)`;
+                showMoreButton.textContent = `Load More Insights (${totalMatchingCount - itemsToShow} remaining)`;
             } else {
                 showMoreButton.classList.add("hidden");
             }
@@ -489,9 +497,7 @@ const currentYearValue = new Date().getFullYear();
 
     function selectYear(year: string, button: HTMLElement, isManualClick: boolean = false) {
         const yearItem = button.closest(".year-item") as HTMLElement;
-        const monthSubmenu = yearItem?.querySelector(
-            ".month-submenu",
-        ) as HTMLElement;
+        const monthSubmenu = yearItem?.querySelector(".month-submenu") as HTMLElement;
 
         itemsToShow = 10;
         document.documentElement.setAttribute('data-selected-year', year);

@@ -99,33 +99,34 @@ const tocStructure = createTOCStructure(title, headings);
 ---
 {
     showTOC && (
-        <aside class="w-full">
-            <nav class="toc-nav relative mb-4">
+        <aside class="w-full pb-6 border-b border-slate-100 dark:border-slate-800">
+            <h3 class="small-caps text-[11px] font-bold tracking-widest text-slate-500 mb-4">Contents</h3>
+            <nav class="toc-nav relative">
                     {tocStructure.map((item, index) => {
                         const isPostTitle = index === 0 && item.id === "";
 
                         return (
-                            <div class="toc-item relative mb-3">
+                            <div class="toc-item relative mb-2">
                                    <a
                                        href={isPostTitle ? "#" : `#${item.id}`}
                                        id={`toc-${item.id}`}
                                         class={`toc-link block transition-all ${
                                             isPostTitle
-                                        ? "text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4 hover:text-blueprint-blue dark:hover:text-white"
-                                                : "text-sm text-slate-600 dark:text-slate-400 hover:text-blueprint-blue dark:hover:text-white"
+                                        ? "text-xs font-medium text-slate-500 dark:text-slate-500 mb-3 hover:text-primary dark:hover:text-blue-400"
+                                                : "text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400"
                                         }`}
                                    >
                                       {item.text}
                                   </a>
                                  {item.children &&
                                      item.children.length > 0 && (
-                                         <div class="pl-3 border-l border-slate-200 dark:border-slate-800 space-y-2 mt-2">
+                                         <div class="pl-3 border-l border-slate-200 dark:border-slate-800 space-y-1.5 mt-1.5 mb-3">
                                              {item.children.map((child) => (
                                                  <div class="relative">
                                                       <a
                                                            href={`#${child.id}`}
                                                            id={`toc-${child.id}`}
-                                                           class="toc-link block text-xs text-slate-500 dark:text-slate-500 hover:text-blueprint-blue dark:hover:text-white transition-colors"
+                                                           class="toc-link block text-xs text-slate-500 dark:text-slate-500 hover:text-primary dark:hover:text-blue-400 transition-colors"
                                                        >
                                                          {child.text}
                                                       </a>

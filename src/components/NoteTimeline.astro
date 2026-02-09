@@ -23,11 +23,9 @@ import { getStageData } from "../lib/theme";
 const { sortedEvents, allMonths, eventsByMonthKey } = Astro.props;
 
 // Pre-calculate which events are in the initial batch (first 10) for each year
-// to allow for instant, flicker-free rendering via CSS.
 const yearCounters = new Map<number, number>();
 const eventBatchStatus = new Map<any, boolean>();
 
-// We process events in the same order they appear in the timeline (sorted descending)
 sortedEvents.forEach((event) => {
     const year = event.date.getFullYear();
     const count = yearCounters.get(year) || 0;
@@ -35,9 +33,22 @@ sortedEvents.forEach((event) => {
     yearCounters.set(year, count + 1);
 });
 
+// Helper to get stage badge styling
+const getStageBadgeClass = (stage: string) => {
+    switch (stage) {
+        case 'seed':
+            return 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400';
+        case 'sprout':
+            return 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400';
+        case 'evergreen':
+            return 'bg-emerald-600 text-white';
+        default:
+            return 'bg-slate-100 text-slate-700';
+    }
+};
 ---
 
-<div class="timeline space-y-8" id="timeline">
+<div class="timeline" id="timeline">
     {
         allMonths.map((month) => {
             const monthKey = month.key;
@@ -46,101 +57,113 @@ sortedEvents.forEach((event) => {
 
             return (
                 <section
-                    class="month-section space-y-6"
+                    class="month-section mb-12"
                     data-month={monthKey}
                     data-year={monthYear}
                 >
-                    {/* Month header */}
-                    <div class="flex items-center gap-2 mb-8">
-                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
-                            {monthKey.toUpperCase()}
+                    {/* Month header with line */}
+                    <div class="flex items-center gap-4 mb-8">
+                        <h2 class="text-sm font-semibold text-slate-600">
+                            {monthKey}
                         </h2>
+                        <div class="h-px bg-slate-100 dark:bg-slate-800 flex-grow"></div>
+                        <span class="text-xs font-medium text-slate-400">
+                            {monthEvents?.length || 0} entries
+                        </span>
                     </div>
 
                     {monthEvents && monthEvents.length > 0 ? (
                         /* Events for this month */
-                        <div class="month-events space-y-6">
+                        <div class="space-y-4">
                              {monthEvents.map((event: any) => {
                                  const eventYear = event.date.getFullYear().toString();
                                  const isInitialBatch = eventBatchStatus.get(event);
 
                                    return (
-                                              <article
-                                                 class="timeline-event bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group relative"
-                                                data-stage={event.note.data.stage}
-                                               data-title={event.title.toLowerCase()}
-                                               data-summary={
-                                                   event.note.data.summary?.toLowerCase() ||
-                                                   ""
-                                               }
-                                               data-topics={event.note.data.tags
-                                                   .join(" ")
-                                                   .toLowerCase()}
+                                        <article
+                                            class="timeline-event p-8 border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors group"
+                                            data-stage={event.note.data.stage}
+                                            data-title={event.title.toLowerCase()}
+                                            data-summary={
+                                                event.note.data.summary?.toLowerCase() ||
+                                                ""
+                                            }
+                                            data-topics={event.note.data.tags
+                                                .join(" ")
+                                                .toLowerCase()}
+                                            data-created={
+                                                event.date
+                                                    .toISOString()
+                                                    .split("T")[0]
+                                            }
+                                            data-event-year={eventYear}
+                                            data-event-type={event.type}
+                                            data-is-collapsed={event.isCollapsed ? "true" : "false"}
+                                            data-is-initial-batch={isInitialBatch ? "true" : "false"}
+                                        >
+                                            {/* Meta row with stage badge and date */}
+                                            <div class="flex items-center justify-between mb-4">
+                                                <div class="flex items-center gap-3">
+                                                    <span class={`text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider ${getStageBadgeClass(event.note.data.stage)}`}>
+                                                        {event.note.data.stage}
+                                                    </span>
+                                                    <span class="text-xs font-semibold text-slate-400">
+                                                        {event.date.toLocaleDateString("en-US", { 
+                                                            month: 'short', 
+                                                            day: 'numeric',
+                                                            year: 'numeric'
+                                                        })}
+                                                    </span>
+                                                </div>
+                                                {event.type === 'updated' && (
+                                                    <span class="text-xs font-semibold text-primary dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                        Updated
+                                                    </span>
+                                                )}
+                                            </div>
 
-                                              data-created={
-                                                  event.date
-                                                      .toISOString()
-                                                      .split("T")[0]
-                                              }
-                                              data-event-year={eventYear}
-                                              data-event-type={event.type}
-                                              data-is-collapsed={event.isCollapsed ? "true" : "false"}
-                                              data-is-initial-batch={isInitialBatch ? "true" : "false"}
-                                            >
-                                           <div class="flex justify-between items-start mb-4">
-                                                <span class={`text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded ${getStageData(event.note.data.stage).colors.badge}`}>
-                                                    {event.note.data.stage}
-                                                </span>
-                                                <span class="font-mono text-[10px] text-slate-400 uppercase">
-                                                   {event.date.toLocaleDateString("en-US", { month: 'short', day: 'numeric' })}
-                                               </span>
-                                           </div>
+                                            {/* Title */}
+                                            <h3 class="text-3xl font-bold text-slate-900 dark:text-white mb-4 leading-tight group-hover:underline decoration-primary/30">
+                                                <a href={`/notes/${event.note.id.replace('.md', '')}`}>
+                                                    {event.title}
+                                                </a>
+                                            </h3>
 
-                                            <h2 class="text-2xl font-bold text-black dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                                               <a
-                                                   href={`/notes/${event.note.id.replace('.md', '')}`}
-                                                   class="after:absolute after:inset-0"
-                                               >
-                                                   {event.title}
-                                               </a>
-                                           </h2>
+                                            {/* Summary */}
+                                            {event.note.data.summary && (
+                                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mb-6">
+                                                    {event.note.data.summary}
+                                                </p>
+                                            )}
 
-                                           {event.note.data.summary && (
-                                               <p class="text-slate-600 dark:text-slate-400 font-body mb-6 leading-relaxed">
-                                                   {event.note.data.summary}
-                                               </p>
-                                           )}
-
-                                           {event.note.data.cover && (
-                                                <div class="mb-6">
+                                            {/* Optional cover image */}
+                                            {event.note.data.cover && (
+                                                <div class="mb-6 max-w-xl">
                                                     <Image
                                                         src={event.note.data.cover}
                                                         alt={event.note.data.coverImageAlt || event.title}
-                                                        class="w-full h-auto rounded-lg border border-slate-100 dark:border-slate-700"
+                                                        class="w-full h-auto rounded-lg"
                                                     />
                                                 </div>
                                             )}
 
-                                            <div class="flex justify-between items-center">
-                                                <div class="flex gap-3">
-                                                    {event.note.data.tags.slice(0, 3).map((tag: string) => (
-                                                        <span class="text-xs text-slate-400">#{tag}</span>
+                                            {/* Tags */}
+                                            {event.note.data.tags.length > 0 && (
+                                                <div class="flex gap-4">
+                                                    {event.note.data.tags.slice(0, 4).map((tag: string) => (
+                                                        <span class="text-xs font-medium text-slate-400">#{tag}</span>
                                                     ))}
                                                 </div>
-                                                <span class="text-[10px] font-bold text-blue-500 dark:text-blue-400 uppercase tracking-widest bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded">
-                                                    {event.type.toUpperCase()}
-                                                </span>
-                                            </div>
-                                       </article>
-                                   );
-                              })}
+                                            )}
+                                        </article>
+                                    );
+                               })}
                         </div>
                       ) : (
                         /* No activity message */
-                        <div class="p-10 text-center bg-slate-50 dark:bg-slate-900/50 border border-dashed border-slate-200 dark:border-slate-700 rounded-lg">
-                            <p class="text-sm text-slate-400 tracking-widest uppercase">
-                                No activity recorded
+                        <div class="py-12 text-center border-b border-slate-100 dark:border-slate-800">
+                            <p class="text-xs font-medium text-slate-400">
+                                No notes this month
                             </p>
                         </div>
                     )}
@@ -150,19 +173,9 @@ sortedEvents.forEach((event) => {
     }
 
     {/* No results message */}
-    <div id="no-results" class="hidden text-center py-12">
-        <p class="font-mono text-slate-500">
+    <div id="no-results" class="hidden text-center py-16">
+        <p class="text-slate-600 dark:text-slate-400 text-lg">
             No matching notes found
         </p>
-    </div>
-
-    {/* Show more activity button */}
-    <div class="text-center pt-8">
-        <button
-            id="show-more-activity"
-            class="px-8 py-3 bg-blue-500 dark:bg-blue-400 text-white dark:text-primary font-bold text-xs uppercase tracking-widest rounded-full hover:shadow-lg transition-all active:scale-95 hidden"
-        >
-            Show more activity
-        </button>
     </div>
 </div>

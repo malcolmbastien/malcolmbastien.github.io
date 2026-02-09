@@ -34,14 +34,12 @@ interface Props {
 const { frontmatter, filePath, gitCreated, gitUpdated, backlinkedNotes, noteBody, headings } =
     Astro.props;
 
-// Use passed body or fallback (fallback shouldn't be needed if updated correctly)
 const readingTime = noteBody ? getReadingTime(noteBody) : "";
-
 const stageData = getStageData(frontmatter.stage);
 
 const createdDate = frontmatter.publishedDate || gitCreated || new Date();
 const hasBeenUpdated =
-    gitUpdated && gitUpdated.getTime() > createdDate.getTime() + 1000 * 60 * 60; // More than 1 hour difference
+    gitUpdated && gitUpdated.getTime() > createdDate.getTime() + 1000 * 60 * 60;
 
 const isNoteDraft = frontmatter.draft === true;
 
@@ -51,6 +49,20 @@ const formatDate = (date: Date) => {
         month: "long",
         day: "numeric",
     });
+};
+
+// Helper for stage badge styling
+const getStageBadgeClass = (stage: string) => {
+    switch (stage) {
+        case 'seed':
+            return 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400';
+        case 'sprout':
+            return 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400';
+        case 'evergreen':
+            return 'bg-emerald-600 text-white';
+        default:
+            return 'bg-slate-100 text-slate-700';
+    }
 };
 ---
 
@@ -63,93 +75,96 @@ const formatDate = (date: Date) => {
     modifiedTime={hasBeenUpdated ? gitUpdated!.toISOString() : undefined}
     tags={frontmatter.tags}
 >
-    <main class="max-w-7xl mx-auto px-6 py-12 lg:grid lg:grid-cols-12 lg:gap-12 items-start">
-        <!-- Left Sidebar (Col 1-2) -->
-        <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit pr-4">
-            <div class="space-y-8">
-                <div>
-                <TableOfContents
-                    content={noteBody || ""}
-                    title={frontmatter.title}
-                    headings={headings}
-                    minHeadings={2}
-                />
-
-                <AboutAuthor />
-                <BackToGarden class="mt-8" />
-
-            </div>
-            </div>
-        </aside>
-
-        <!-- Main Content (Col 3-9) -->
-        <article
-            class={`lg:col-span-9 bg-white dark:bg-navy-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden ${isNoteDraft ? "note-is-draft relative" : ""}`}
-            data-pagefind-body
-        >
-            <div class="px-8 pt-10 pb-6 border-b border-slate-100 dark:border-slate-700 w-full">
-                <div
-                    class={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full ${stageData.colors.badge} text-[10px] font-bold uppercase tracking-wider mb-6`}
-                    data-pagefind-filter="stage"
-                    data-pagefind-meta={`stage:${frontmatter.stage}`}
-                >
-                    <span class={`w-2 h-2 rounded-full ${stageData.colors.dot}`}></span>
-                    {frontmatter.stage}
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Left Sidebar - Context/Navigation -->
+            <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit pr-4 border-r border-slate-100 dark:border-slate-800">
+                <div class="space-y-8">
+                    <TableOfContents
+                        content={noteBody || ""}
+                        title={frontmatter.title}
+                        headings={headings}
+                        minHeadings={2}
+                    />
+                    <AboutAuthor />
+                    <BackToGarden class="mt-8" />
                 </div>
+            </aside>
 
-                <h1 class="text-4xl md:text-5xl font-bold text-black dark:text-white leading-tight mb-6">
-                    {frontmatter.title}
-                </h1>
-
-                <div class="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-500 dark:text-slate-400">
-                    <div class="flex items-center gap-1.5">
-                        <span class="material-symbols-outlined text-base">calendar_today</span>
-                        Published: <span class="font-medium text-slate-700 dark:text-slate-300">{formatDate(createdDate)}</span>
+            <!-- Main Content -->
+            <article
+                class={`lg:col-span-9 max-w-3xl ${isNoteDraft ? "note-is-draft relative" : ""}`}
+                data-pagefind-body
+            >
+                <!-- Article Header -->
+                <header class="mb-12 pb-8 border-b border-slate-100 dark:border-slate-800">
+                    <!-- Metadata line -->
+                    <div class="flex flex-wrap items-center gap-3 mb-6" data-pagefind-filter="stage" data-pagefind-meta={`stage:${frontmatter.stage}`}>
+                        <span class={`text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider ${getStageBadgeClass(frontmatter.stage)}`}>
+                            {frontmatter.stage}
+                        </span>
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                            {formatDate(createdDate)}
+                        </span>
+                        {hasBeenUpdated && (
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                Updated {formatDate(gitUpdated!)}
+                            </span>
+                        )}
+                        {readingTime && (
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                {readingTime}
+                            </span>
+                        )}
                     </div>
-                    {hasBeenUpdated && (
-                        <div class="flex items-center gap-1.5">
-                            <span class="material-symbols-outlined text-base">update</span>
-                            Updated: <span class="font-medium text-slate-700 dark:text-slate-300">{formatDate(gitUpdated!)}</span>
+
+                    <!-- Title -->
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white leading-tight mb-6">
+                        {frontmatter.title}
+                    </h1>
+
+                    <!-- Summary -->
+                    {frontmatter.summary && (
+                        <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed italic">
+                            {frontmatter.summary}
+                        </p>
+                    )}
+
+                    <!-- Tags -->
+                    {frontmatter.tags.length > 0 && (
+                        <div class="flex flex-wrap gap-3 mt-6">
+                            {frontmatter.tags.map(tag => (
+                                <a
+                                    href={`/topics/${tag}`}
+                                    class="text-xs font-medium text-slate-400 hover:text-primary transition-colors"
+                                >
+                                    #{tag}
+                                </a>
+                            ))}
                         </div>
                     )}
-                    {readingTime && (
-                        <div class="flex items-center gap-1.5">
-                            <span class="material-symbols-outlined text-base">schedule</span>
-                            Read Time: <span class="font-medium text-slate-700 dark:text-slate-300">{readingTime}</span>
+                </header>
+
+                <!-- Article Body -->
+                <div class="prose prose-slate dark:prose-invert prose-lg max-w-none font-sans leading-relaxed">
+                    <slot />
+
+                    {backlinkedNotes.length > 0 && (
+                        <div class="backlinks mt-16 pt-8 border-t border-slate-100 dark:border-slate-800">
+                            <Backlinks backlinkedNotes={backlinkedNotes} />
                         </div>
                     )}
-                    <div class="flex items-center gap-2">
-                        {frontmatter.tags.map(tag => (
-                            <a
-                                href={`/topics/${tag}`}
-                                class="bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-lg text-sm font-medium text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-all"
-                            >
-                                #{tag}
-                            </a>
-                        ))}
-                    </div>
                 </div>
-            </div>
 
-            <div class="p-8 prose prose-slate dark:prose-invert prose-lg max-w-none font-serif leading-relaxed">
-                <slot />
-
-                {backlinkedNotes.length > 0 && (
-                    <div class="backlinks mt-5 pt-8 ">
-                        <Backlinks backlinkedNotes={backlinkedNotes} />
+                <!-- Article Footer - Changelog -->
+                <footer class="mt-16 pt-8 border-t border-slate-100 dark:border-slate-800">
+                    <div class="small-caps text-[11px] font-bold tracking-widest text-slate-500 mb-6">
+                        Changelog
                     </div>
-                )}
-            </div>
-
-            <footer class="bg-slate-50 dark:bg-navy-900/80 p-8 border-t border-slate-100 dark:border-slate-800">
-                <div class="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    Changelog
-                </div>
-                {/* Brief history summary for footer */}
-                <NoteHistory filePath={filePath} />
-            </footer>
-        </article>
+                    <NoteHistory filePath={filePath} />
+                </footer>
+            </article>
+        </div>
     </main>
 
     <SiteFooter />
@@ -157,120 +172,110 @@ const formatDate = (date: Date) => {
     <ImageLightbox />
 
     <style is:global>
-      @reference "../styles/global.css";
+        @reference "../styles/global.css";
 
-      /* Backlinks section - remove prose link styling */
-      .prose .backlinks a {
-          text-decoration: none !important;
-          color: inherit !important;
-          font-weight: inherit !important;
-          font-family: inherit !important;
-      }
+        /* Backlinks section */
+        .prose .backlinks a {
+            text-decoration: none !important;
+            color: inherit !important;
+            font-weight: inherit !important;
+            font-family: inherit !important;
+        }
 
-      /* Ensure backlink titles transition to blue on hover */
-      .prose .backlinks h4 {
-          color: #000000 !important;
-      }
-      .dark .prose .backlinks h4 {
-          color: #ffffff !important;
-      }
-      .prose .backlinks article:hover h4 {
-          color: #2563eb !important;
-      }
-      .dark .prose .backlinks article:hover h4 {
-          color: #60a5fa !important;
-      }
+        .prose .backlinks h4 {
+            color: #0f172a !important;
+        }
+        .dark .prose .backlinks h4 {
+            color: #f1f5f9 !important;
+        }
+        .prose .backlinks article:hover h4 {
+            color: #1e3a8a !important;
+        }
+        .dark .prose .backlinks article:hover h4 {
+            color: #60a5fa !important;
+        }
 
-      .prose blockquote {
-          border-left-color: var(--color-blueprint-blue);
-          font-style: italic;
-      }
-      .prose blockquote p:first-of-type::before,
-      .prose blockquote p:last-of-type::after {
-          content: none;
-      }
-      .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-          font-family: 'Inter', sans-serif;
-          @apply text-navy-900 dark:text-slate-100 font-bold tracking-tight scroll-mt-24;
-      }
-      .prose h2 { @apply text-3xl mt-12 mb-6; }
-      .prose h3 { @apply text-xl mt-8 mb-4; }
+        .prose blockquote {
+            border-left-color: var(--color-primary);
+            font-style: italic;
+        }
+        
+        .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+            font-family: "Inter", system-ui, sans-serif;
+            @apply text-slate-900 dark:text-slate-100 font-bold tracking-tight scroll-mt-24;
+        }
+        
+        .prose h2 { @apply text-2xl mt-12 mb-6; }
+        .prose h3 { @apply text-xl mt-8 mb-4; }
 
-      /* Note Styles */
-      .note-is-draft::after {
-        content: "DRAFT_NODE";
-        @apply absolute top-4 right-4 bg-blue-500 text-white text-xs font-mono font-bold px-3 py-1 z-50;
-      }
+        /* Note Styles */
+        .note-is-draft::after {
+            content: "DRAFT_NODE";
+            @apply absolute top-4 right-4 bg-primary text-white text-xs font-mono font-bold px-3 py-1 z-50;
+        }
 
-      /* --- Link Styles from Snippet --- */
+        /* Internal Links */
+        .prose a.internal-link {
+            display: inline !important;
+            transition: all 0.2s ease-in-out !important;
+            @apply font-medium text-slate-900 dark:text-slate-100;
+            background: transparent !important;
+            padding: 0 !important;
+            border: none !important;
+            text-decoration: none !important;
+        }
 
-      /* Internal Links with Underline System */
-      .prose a.internal-link {
-          display: inline !important;
-          transition: all 0.2s ease-in-out !important;
-          @apply font-medium text-slate-900 dark:text-white;
-          background: transparent !important;
-          padding: 0 !important;
-          border: none !important;
-          text-decoration: none !important;
-      }
+        .prose a.internal-link .link-text {
+            text-decoration: underline !important;
+            text-decoration-thickness: 3px !important;
+            text-underline-offset: 4px !important;
+            transition: all 0.2s ease-in-out !important;
+            display: inline !important;
+        }
 
-      .prose a.internal-link .link-text {
-          text-decoration: underline !important;
-          text-decoration-thickness: 3px !important;
-          text-underline-offset: 4px !important;
-          transition: all 0.2s ease-in-out !important;
-          display: inline !important;
-      }
+        .prose a.internal-link[data-stage="seed"] .link-text { text-decoration-color: var(--stage-seed-underline) !important; }
+        .prose a.internal-link[data-stage="sprout"] .link-text { text-decoration-color: var(--stage-sprout-underline) !important; }
+        .prose a.internal-link[data-stage="evergreen"] .link-text { text-decoration-color: var(--stage-evergreen-underline) !important; }
 
-      /* Base Underline State (3px) */
-      .prose a.internal-link[data-stage="seed"] .link-text { text-decoration-color: var(--stage-seed-underline) !important; }
-      .prose a.internal-link[data-stage="sprout"] .link-text { text-decoration-color: var(--stage-sprout-underline) !important; }
-      .prose a.internal-link[data-stage="evergreen"] .link-text { text-decoration-color: var(--stage-evergreen-underline) !important; }
+        .prose a.internal-link:hover .link-text {
+            text-decoration-thickness: 6px !important;
+        }
 
-      /* Hover Underline State (6px) */
-      .prose a.internal-link:hover .link-text {
-          text-decoration-thickness: 6px !important;
-      }
-      .prose a.internal-link[data-stage="seed"]:hover .link-text { text-decoration-color: var(--stage-seed-underline) !important; }
-      .prose a.internal-link[data-stage="sprout"]:hover .link-text { text-decoration-color: var(--stage-sprout-underline) !important; }
-      .prose a.internal-link[data-stage="evergreen"]:hover .link-text { text-decoration-color: var(--stage-evergreen-underline) !important; }
+        /* External Links */
+        .prose a.external-link {
+            @apply font-semibold text-purple-600 hover:opacity-80 transition-opacity;
+            display: inline !important;
+            text-decoration: none !important;
+        }
 
-      /* External Links */
-      .prose a.external-link {
-          @apply font-display font-semibold text-[#a855f7] hover:opacity-80 transition-opacity;
-          display: inline !important;
-          text-decoration: none !important;
-      }
+        .prose a.external-link .link-text {
+            text-decoration: underline !important;
+            text-decoration-color: #a855f7 !important;
+            text-decoration-thickness: 3px !important;
+            text-underline-offset: 4px !important;
+            transition: all 0.2s ease-in-out !important;
+        }
 
-      .prose a.external-link .link-text {
-          text-decoration: underline !important;
-          text-decoration-color: #a855f7 !important;
-          text-decoration-thickness: 3px !important;
-          text-underline-offset: 4px !important;
-          transition: all 0.2s ease-in-out !important;
-      }
+        .prose a.external-link:hover .link-text {
+            text-decoration-thickness: 6px !important;
+        }
 
-      .prose a.external-link:hover .link-text {
-          text-decoration-thickness: 6px !important;
-      }
+        .prose a.external-link::after {
+            content: "north_east" !important;
+            font-family: 'Material Symbols Outlined' !important;
+            font-size: 16px !important;
+            line-height: 1 !important;
+            margin-left: 0.1rem !important;
+            opacity: 1 !important;
+            display: inline-block !important;
+            text-decoration: none !important;
+            vertical-align: middle !important;
+        }
 
-      .prose a.external-link::after {
-          content: "north_east" !important;
-          font-family: 'Material Symbols Outlined' !important;
-          font-size: 16px !important;
-          line-height: 1 !important;
-          margin-left: 0.1rem !important;
-          opacity: 1 !important;
-          display: inline-block !important;
-          text-decoration: none !important;
-          vertical-align: middle !important;
-      }
-
-      /* Inline Topic Links (Hashtags) */
-      .prose a.inline-tag {
-          @apply bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded-md font-display font-normal text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-all;
-          text-decoration: none !important;
-      }
+        /* Inline Topic Links */
+        .prose a.inline-tag {
+            @apply text-xs font-medium text-slate-400 hover:text-primary transition-colors;
+            text-decoration: none !important;
+        }
     </style>
 </Layout>

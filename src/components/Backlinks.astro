@@ -7,44 +7,60 @@ interface Props {
 
 const { backlinkedNotes: rawBacklinkedNotes } = Astro.props;
 
-// Process notes for display (add displayDate, sort)
 const backlinkedNotes = rawBacklinkedNotes
     .map((note) => {
         const displayDate = note.data.publishedDate || new Date();
         return { ...note, displayDate };
     })
-    .sort((a, b) => b.displayDate.getTime() - a.displayDate.getTime()); // Most recent first
+    .sort((a, b) => b.displayDate.getTime() - a.displayDate.getTime());
+
+const getStageBadgeClass = (stage: string) => {
+    switch (stage) {
+        case 'seed':
+            return 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400';
+        case 'sprout':
+            return 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400';
+        case 'evergreen':
+            return 'bg-emerald-600 text-white';
+        default:
+            return 'bg-slate-100 text-slate-700';
+    }
+};
 ---
 
 {
     backlinkedNotes.length > 0 && (
-        <section class="pt-2 border-t border-slate-100 dark:border-slate-700">
-            <div class="flex items-center gap-2 mb-6">
-                <span class="material-symbols-outlined text-slate-400 translate-y-1/3 text-sm">link</span>
-                <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Associated Nodes</h3>
+        <section>
+            <div class="flex items-center gap-3 mb-8">
+                <h3 class="small-caps text-xs font-bold tracking-[0.2em] text-slate-500">Connected Notes</h3>
+                <div class="h-px bg-slate-100 dark:bg-slate-800 flex-grow"></div>
+                <span class="text-[10px] font-medium text-slate-400">{backlinkedNotes.length} links</span>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="space-y-6">
                 {backlinkedNotes.map((note) => (
-                    <article class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm group hover:shadow-md transition-all relative">
-                        <div class="flex justify-between items-start mb-4">
-                            <span class={`text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded ${getStageData(note.data.stage).colors.badge}`}>
+                    <article class="group relative p-6 border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class={`text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider ${getStageBadgeClass(note.data.stage)}`}>
                                 {note.data.stage}
                             </span>
-                            <span class="text-[10px] text-slate-400 font-medium">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                                 {note.displayDate.toLocaleDateString("en-US", {
                                     month: 'short',
                                     day: 'numeric',
                                     year: 'numeric',
-                                }).toUpperCase()}
+                                })}
                             </span>
                         </div>
-                        <h4 class="text-xl mt-0 font-bold text-black dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                            <a href={`/notes/${note.id.replace('.md', '')}`} class="after:absolute after:inset-0">
+                        
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
+                            <a href={`/notes/${note.id.replace('.md', '')}`}>
                                 {note.data.title}
                             </a>
                         </h4>
+                        
                         {note.data.summary && (
-                            <p class="text-sm text-slate-500 dark:text-slate-400 font-body line-clamp-2">
+                            <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
                                 {note.data.summary}
                             </p>
                         )}

@@ -10,20 +10,20 @@ import portrait from "../assets/malcolm_portrait.jpg";
 
 <Layout
     title="Malcolm Bastien | Agile Coach & Professional Profile"
-    description="I’m an Agile Coach focused on improving predictability and accelerating flow using complexity and systems-thinking-based approaches to teams and work."
+    description="I'm an Agile Coach focused on improving predictability and accelerating flow using complexity and systems-thinking-based approaches to teams and work."
     type="website"
 >
     <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12" data-pagefind-ignore>
         <!-- Sidebar Navigation -->
         <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit">
             <nav class="space-y-1" id="about-nav">
-                <p class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">On this page</p>
-                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium active" href="#intro">Intro</a>
-                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium" href="#experience">Experience</a>
-                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium" href="#certifications">Certifications</a>
-                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium" href="#interests">Areas of Interest</a>
-                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium" href="#testimonials">Testimonials</a>
-                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium" href="#education">Education</a>
+                <p class="text-sm font-semibold text-slate-600 mb-4">On this page</p>
+                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium active" href="#intro">Intro</a>
+                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium" href="#experience">Experience</a>
+                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium" href="#certifications">Certifications</a>
+                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium" href="#interests">Areas of Interest</a>
+                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium" href="#testimonials">Testimonials</a>
+                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium" href="#education">Education</a>
             </nav>
             <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800">
                 <BackToGarden />
@@ -34,7 +34,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
         <div class="lg:col-span-9" data-pagefind-body>
             <!-- Intro Section -->
             <section class="mb-20 scroll-mt-24" id="intro">
-                <div class="bg-white dark:bg-navy-800 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row gap-8 items-start">
+                <div class="flex flex-col md:flex-row gap-8 items-start pb-8 border-b border-slate-200 dark:border-slate-800">
                     <div class="w-32 h-32 md:w-48 md:h-48 rounded-xl overflow-hidden bg-slate-200 shrink-0">
                          <Image
                             src={portrait}
@@ -47,15 +47,19 @@ import portrait from "../assets/malcolm_portrait.jpg";
                     </div>
                     <div class="flex-1">
                         <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Malcolm Bastien</h1>
-                        <p class="text-xl font-serif text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                            I’m an <span class="text-blue-500 dark:text-blue-400 font-medium italic">Agile Coach</span> focused on helping organizations and teams improve predictability and accelerate flow using complexity and systems-thinking-based approaches to teams and work.
+                        <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                            I'm an <span class="text-primary font-medium italic">Agile Coach</span> focused on helping organizations and teams improve predictability and accelerate flow using complexity and systems-thinking-based approaches to teams and work.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-mono rounded-full">Kanban</span>
-                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-mono rounded-full">OKRs</span>
-                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-mono rounded-full">Wardley Mapping</span>
-                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-mono rounded-full">Team Topologies</span>
-                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-mono rounded-full">Complexity Thinking</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Kanban</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">OKRs</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Wardley Mapping</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Team Topologies</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Complexity Thinking</span>
                         </div>
                     </div>
                 </div>
@@ -72,12 +76,12 @@ import portrait from "../assets/malcolm_portrait.jpg";
                     <!-- Senior Agile Coach -->
                     <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800">
                         <div class="absolute -left-0.5 top-0 w-0.5 h-1.5 bg-background-light dark:bg-background-dark"></div>
-                        <div class="absolute -left-2 top-1.5 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-white dark:ring-background-dark"></div>
+                        <div class="absolute -left-2 top-1.5 w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark"></div>
                         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
                             <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Agile Coach</h3>
-                            <span class="text-xs font-bold text-blue-500 dark:text-blue-400 tracking-widest uppercase">2017 — Present</span>
+                            <span class="text-sm font-semibold text-primary dark:text-blue-400">2017 — Present</span>
                         </div>
-                        <div class="bg-white dark:bg-navy-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
                             <h4 class="font-bold text-slate-900 dark:text-white mb-2">Agile by Design</h4>
                             <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
                                 As a Senior Agile Coach, I drive business agility and cultural change using a complex systems perspective. I specialize in advanced Lean and Agile practices to optimize team performance, value delivery and improve flow.
@@ -88,7 +92,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                         <span class="material-symbols-outlined text-amber-500 mr-3 text-lg">workspace_premium</span>
                                         <div>
                                             <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">High-Impact Deliverables</p>
-                                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
+                                            <ul class="text-sm text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
                                                 <li><strong>Healthcare & Banking Delivery:</strong> Coached high-stakes, multi-team projects including new commercial banking APIs.</li>
                                                 <li><strong>Product Strategy:</strong> Facilitated workshops using Mental Model Diagrams and the Lean UX Canvas for product strategy.</li>
                                                 <li><strong>Economic Prioritization:</strong> Introduced ROI-driven decision-making using Cost of Delay (CoD) and custom risk-assessment frameworks.</li>
@@ -99,7 +103,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                         <span class="material-symbols-outlined text-blue-500 mr-3 text-lg">trending_up</span>
                                         <div>
                                             <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">Quantitative Performance & Forecasting</p>
-                                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
+                                            <ul class="text-sm text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
                                                 <li><strong>Probabilistic Forecasting:</strong> Replaced gut-feel targets with Monte Carlo forecasts.</li>
                                                 <li><strong>Flow Optimization:</strong> Implemented percentile-driven reporting (SLAs) and Aging WIP management.</li>
                                             </ul>
@@ -111,7 +115,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                         <span class="material-symbols-outlined text-green-500 mr-3 text-lg">account_tree</span>
                                         <div>
                                             <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">Organizational Design & Flow Engineering</p>
-                                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
+                                            <ul class="text-sm text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
                                                 <li><strong>Flight Levels Model:</strong> Architected multi-tier operating models for B2B service lines.</li>
                                                 <li><strong>Sociotechnical Design:</strong> Applied Team Topologies and DDD to restructure teams.</li>
                                                 <li><strong>Collaborative Modelling:</strong> Used EventStorming and the C4 Model to model payment processes and team workflows.</li>
@@ -123,7 +127,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
                                         <span class="material-symbols-outlined text-purple-500 mr-3 text-lg">rocket_launch</span>
                                         <div>
                                             <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">Project & Program Delivery</p>
-                                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
+                                            <ul class="text-sm text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4">
                                                 <li><strong>Executive Visibility:</strong> Designed portfolio-level operating models for VPs/Executives.</li>
                                                 <li><strong>Delivery Roadmaps:</strong> Built roadmaps and led multi-team planning and estimation workshops.</li>
                                             </ul>
@@ -140,11 +144,11 @@ import portrait from "../assets/malcolm_portrait.jpg";
                         <div class="absolute -left-2 top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-background-dark"></div>
                         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
                             <h3 class="text-xl font-bold text-slate-900 dark:text-white">Data Analyst</h3>
-                            <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">2013 — 2017</span>
+                            <span class="text-sm font-semibold text-slate-400">2013 — 2017</span>
                         </div>
-                        <div class="bg-white/50 dark:bg-navy-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
                             <h4 class="font-bold text-slate-900 dark:text-white mb-2">Chango</h4>
-                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic mb-4">Acquired by Rubicon Project in April 2015</p>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-4">Acquired by Rubicon Project in April 2015</p>
                             <ul class="text-sm text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-5">
                                 <li>Learned about real-time bidding and programmatic advertising space.</li>
                                 <li>Managed display advertising campaigns for various small to large clients.</li>
@@ -160,9 +164,9 @@ import portrait from "../assets/malcolm_portrait.jpg";
                         <div class="absolute -left-2 top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-background-dark"></div>
                         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
                             <h3 class="text-xl font-bold text-slate-900 dark:text-white">Coach</h3>
-                            <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">2012 — 2016</span>
+                            <span class="text-sm font-semibold text-slate-400">2012 — 2016</span>
                         </div>
-                        <div class="bg-white/50 dark:bg-navy-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
                             <h4 class="font-bold text-slate-900 dark:text-white mb-2">West Toronto CrossFit</h4>
                         </div>
                     </div>
@@ -173,9 +177,9 @@ import portrait from "../assets/malcolm_portrait.jpg";
                         <div class="absolute -left-2 top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-background-dark"></div>
                         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
                             <h3 class="text-xl font-bold text-slate-900 dark:text-white">Marketing Specialist</h3>
-                            <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">2010 — 2011</span>
+                            <span class="text-sm font-semibold text-slate-400">2010 — 2011</span>
                         </div>
-                        <div class="bg-white/50 dark:bg-navy-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
                             <h4 class="font-bold text-slate-900 dark:text-white mb-2">Microsoft</h4>
                         </div>
                     </div>
@@ -188,78 +192,78 @@ import portrait from "../assets/malcolm_portrait.jpg";
                     <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Professional Development & Certifications</h2>
                     <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800 ml-6"></div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
                         <div class="flex items-center mb-4">
                             <span class="material-symbols-outlined text-amber-500 mr-2">explore</span>
-                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Strategy & Sensemaking</h4>
+                            <h4 class="font-bold text-base text-slate-900 dark:text-white">Strategy & Sensemaking</h4>
                         </div>
-                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
-                            <li class="flex justify-between"><span>Awareness in Wardley Mapping</span> <span class="text-slate-400 uppercase font-mono">GCAT • 2021</span></li>
-                            <li class="flex justify-between"><span>Cynefin Masterclass</span> <span class="text-slate-400 uppercase font-mono">Cognitive Edge</span></li>
-                            <li class="flex justify-between"><span>Agendashift Deep Dive</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
-                            <li class="flex justify-between"><span>Re-wilding Agile Masterclass</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
-                            <li class="flex justify-between"><span>Designing Epistemically Healthy Organizations</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
+                        <ul class="text-sm text-slate-500 dark:text-slate-400 space-y-2">
+                            <li class="flex justify-between"><span>Awareness in Wardley Mapping</span> <span class="text-slate-400 font-mono">GCAT • 2021</span></li>
+                            <li class="flex justify-between"><span>Cynefin Masterclass</span> <span class="text-slate-400 font-mono">Cognitive Edge</span></li>
+                            <li class="flex justify-between"><span>Agendashift Deep Dive</span> <span class="text-slate-400 font-mono">2020</span></li>
+                            <li class="flex justify-between"><span>Re-wilding Agile Masterclass</span> <span class="text-slate-400 font-mono">2021</span></li>
+                            <li class="flex justify-between"><span>Designing Epistemically Healthy Organizations</span> <span class="text-slate-400 font-mono">2021</span></li>
                         </ul>
                     </div>
-                    <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
+                    <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
                         <div class="flex items-center mb-4">
                             <span class="material-symbols-outlined text-blue-500 mr-2">architecture</span>
-                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Organizational Architecture</h4>
+                            <h4 class="font-bold text-base text-slate-900 dark:text-white">Organizational Architecture</h4>
                         </div>
-                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
-                            <li class="flex justify-between"><span>Introduction to Flight Levels</span> <span class="text-slate-400 uppercase font-mono">FL Academy • 2021</span></li>
-                            <li class="flex justify-between"><span>Flight Levels Systems Architecture</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
-                            <li class="flex justify-between"><span>Independent Value Streams with DDD</span> <span class="text-slate-400 uppercase font-mono">2022</span></li>
-                            <li class="flex justify-between"><span>Flight Level 2 Design</span> <span class="text-slate-400 uppercase font-mono">2022</span></li>
+                        <ul class="text-sm text-slate-500 dark:text-slate-400 space-y-2">
+                            <li class="flex justify-between"><span>Introduction to Flight Levels</span> <span class="text-slate-400 font-mono">FL Academy • 2021</span></li>
+                            <li class="flex justify-between"><span>Flight Levels Systems Architecture</span> <span class="text-slate-400 font-mono">2021</span></li>
+                            <li class="flex justify-between"><span>Independent Value Streams with DDD</span> <span class="text-slate-400 font-mono">2022</span></li>
+                            <li class="flex justify-between"><span>Flight Level 2 Design</span> <span class="text-slate-400 font-mono">2022</span></li>
                         </ul>
                     </div>
-                    <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
+                    <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
                         <div class="flex items-center mb-4">
                             <span class="material-symbols-outlined text-green-500 mr-2">sync_alt</span>
-                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Operational Flow & Kanban</h4>
+                            <h4 class="font-bold text-base text-slate-900 dark:text-white">Operational Flow & Kanban</h4>
                         </div>
-                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
-                            <li class="flex justify-between"><span>Kanban Management Professional</span> <span class="text-slate-400 uppercase font-mono">2017</span></li>
-                            <li class="flex justify-between"><span>Enterprise Services Planning</span> <span class="text-slate-400 uppercase font-mono">2022</span></li>
-                            <li class="flex justify-between"><span>Kanban Coaching Professional</span> <span class="text-slate-400 uppercase font-mono">2019</span></li>
-                            <li class="flex justify-between"><span>Fast Flow of Change</span> <span class="text-slate-400 uppercase font-mono">2021</span></li>
+                        <ul class="text-sm text-slate-500 dark:text-slate-400 space-y-2">
+                            <li class="flex justify-between"><span>Kanban Management Professional</span> <span class="text-slate-400 font-mono">2017</span></li>
+                            <li class="flex justify-between"><span>Enterprise Services Planning</span> <span class="text-slate-400 font-mono">2022</span></li>
+                            <li class="flex justify-between"><span>Kanban Coaching Professional</span> <span class="text-slate-400 font-mono">2019</span></li>
+                            <li class="flex justify-between"><span>Fast Flow of Change</span> <span class="text-slate-400 font-mono">2021</span></li>
                         </ul>
                     </div>
-                    <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
+                    <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
                         <div class="flex items-center mb-4">
                             <span class="material-symbols-outlined text-purple-500 mr-2">query_stats</span>
-                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Metrics & Forecasting</h4>
+                            <h4 class="font-bold text-base text-slate-900 dark:text-white">Metrics & Forecasting</h4>
                         </div>
-                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
-                            <li class="flex justify-between"><span>Dependency Management</span> <span class="text-slate-400 uppercase font-mono">Focused Objective • 2022</span></li>
-                            <li class="flex justify-between"><span>Practical Metrics and Coaching Using Data</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
-                            <li class="flex justify-between"><span>Practical Forecasting Essentials</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
-                            <li class="flex justify-between"><span>Data-Driven Coaching for Teams</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
+                        <ul class="text-sm text-slate-500 dark:text-slate-400 space-y-2">
+                            <li class="flex justify-between"><span>Dependency Management</span> <span class="text-slate-400 font-mono">Focused Objective • 2022</span></li>
+                            <li class="flex justify-between"><span>Practical Metrics and Coaching Using Data</span> <span class="text-slate-400 font-mono">2020</span></li>
+                            <li class="flex justify-between"><span>Practical Forecasting Essentials</span> <span class="text-slate-400 font-mono">2020</span></li>
+                            <li class="flex justify-between"><span>Data-Driven Coaching for Teams</span> <span class="text-slate-400 font-mono">2020</span></li>
                         </ul>
                     </div>
-                    <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
+                    <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
                         <div class="flex items-center mb-4">
                             <span class="material-symbols-outlined text-cyan-500 mr-2">biotech</span>
-                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Product Discovery & Engineering</h4>
+                            <h4 class="font-bold text-base text-slate-900 dark:text-white">Product Discovery & Engineering</h4>
                         </div>
-                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
-                            <li class="flex justify-between"><span>Specification By Example Workshop</span> <span class="text-slate-400 uppercase font-mono">Avanscoperta • 2022</span></li>
+                        <ul class="text-sm text-slate-500 dark:text-slate-400 space-y-2">
+                            <li class="flex justify-between"><span>Specification By Example Workshop</span> <span class="text-slate-400 font-mono">Avanscoperta • 2022</span></li>
                             <li class="flex justify-between"><span>TPS Leadership Masterclass</span></li>
                             <li class="flex justify-between"><span>Domain Storytelling Workshop</span></li>
                             <li class="flex justify-between"><span>EventStorming Facilitation</span></li>
                             <li class="flex justify-between"><span>Gherkin Masterclass</span></li>
                         </ul>
                     </div>
-                    <div class="p-6 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm">
+                    <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
                         <div class="flex items-center mb-4">
                             <span class="material-symbols-outlined text-indigo-500 mr-2">diversity_3</span>
-                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Leadership & Collaboration</h4>
+                            <h4 class="font-bold text-base text-slate-900 dark:text-white">Leadership & Collaboration</h4>
                         </div>
-                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2">
-                            <li class="flex justify-between"><span>Level 1: Empathy Toy Training</span> <span class="text-slate-400 uppercase font-mono">Twenty One Toys — 2018</span></li>
-                            <li class="flex justify-between"><span>Accelerated Performance Program Online Meeting Magic</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
-                            <li class="flex justify-between"><span>Managing Virtual Teams</span> <span class="text-slate-400 uppercase font-mono">2020</span></li>
+                        <ul class="text-sm text-slate-500 dark:text-slate-400 space-y-2">
+                            <li class="flex justify-between"><span>Level 1: Empathy Toy Training</span> <span class="text-slate-400 font-mono">Twenty One Toys — 2018</span></li>
+                            <li class="flex justify-between"><span>Accelerated Performance Program Online Meeting Magic</span> <span class="text-slate-400 font-mono">2020</span></li>
+                            <li class="flex justify-between"><span>Managing Virtual Teams</span> <span class="text-slate-400 font-mono">2020</span></li>
                             <li class="flex justify-between"><span>Technical Leadership Masterclass</span></li>
                         </ul>
                     </div>
@@ -272,107 +276,137 @@ import portrait from "../assets/malcolm_portrait.jpg";
                     <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Areas of Interest</h2>
                     <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800 ml-6"></div>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
                     <div>
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
-                            <span class="material-symbols-outlined text-xs mr-2">cycle</span> Agile & Lean
+                        <h4 class="text-sm font-semibold text-slate-600 mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-sm mr-2">cycle</span> Agile & Lean
                         </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Kanban</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Scrum</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Continuous Improvement</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Flow</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Lean</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Toyota Production System</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">XP</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Kanban</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Scrum</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Continuous Improvement</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Flow</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Lean</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">TPS</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">XP</span>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
-                            <span class="material-symbols-outlined text-xs mr-2">groups</span> Leadership
+                        <h4 class="text-sm font-semibold text-slate-600 mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-sm mr-2">groups</span> Leadership
                         </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Team Dynamics</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Self-Organization</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Team Topologies</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Psychological Safety</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Organizational Culture</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Team Dynamics</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Self-Organization</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Team Topologies</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Psychological Safety</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Culture</span>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
-                            <span class="material-symbols-outlined text-xs mr-2">hub</span> Systems
+                        <h4 class="text-sm font-semibold text-slate-600 mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-sm mr-2">hub</span> Systems
                         </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Complex Adaptive Systems</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Systems Thinking</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Feedback Loops</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Cynefin</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Complex Adaptive Systems</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Systems Thinking</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Feedback Loops</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Cynefin</span>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
-                            <span class="material-symbols-outlined text-xs mr-2">deployed_code</span> Product
+                        <h4 class="text-sm font-semibold text-slate-600 mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-sm mr-2">deployed_code</span> Product
                         </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Value Proposition Design</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Lean UX</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Jobs to be Done</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Value Proposition Design</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Lean UX</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Jobs to be Done</span>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
-                            <span class="material-symbols-outlined text-xs mr-2">tactic</span> Projects
+                        <h4 class="text-sm font-semibold text-slate-600 mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-sm mr-2">tactic</span> Projects
                         </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Delivery</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Cost of Delay</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Portfolio Management</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Dependency Management</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Delivery</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Cost of Delay</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Portfolio Management</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Dependencies</span>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
-                            <span class="material-symbols-outlined text-xs mr-2">schema</span> Modelling
+                        <h4 class="text-sm font-semibold text-slate-600 mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-sm mr-2">schema</span> Modelling
                         </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Story Mapping</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Impact Mapping</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Spec by Example</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Wardley Mapping</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Value Stream Mapping</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Story Mapping</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Impact Mapping</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Spec by Example</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Wardley Mapping</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Value Stream Mapping</span>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
-                            <span class="material-symbols-outlined text-xs mr-2">token</span> DDD
+                        <h4 class="text-sm font-semibold text-slate-600 mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-sm mr-2">token</span> DDD
                         </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Context Mapping</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">EventStorming</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Domain Storytelling</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Domain Modeling</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Context Mapping</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">EventStorming</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Domain Storytelling</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Domain Modeling</span>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
-                            <span class="material-symbols-outlined text-xs mr-2">menu_book</span> Knowledge
+                        <h4 class="text-sm font-semibold text-slate-600 mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-sm mr-2">menu_book</span> Knowledge
                         </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">PKM</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Zettlekasten</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Obsidian</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Org Mode</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">PKM</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Zettlekasten</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Obsidian</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Org Mode</span>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
-                            <span class="material-symbols-outlined text-xs mr-2">terminal</span> Technology
+                        <h4 class="text-sm font-semibold text-slate-600 mb-3 flex items-center">
+                            <span class="material-symbols-outlined text-sm mr-2">terminal</span> Technology
                         </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Keyboards</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Ergonomics</span>
-                            <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-600">Linux</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Keyboards</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Ergonomics</span>
+                            <span class="bullet-dot">•</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-400">Linux</span>
                         </div>
                     </div>
                 </div>
@@ -386,31 +420,31 @@ import portrait from "../assets/malcolm_portrait.jpg";
                 </div>
                 <div class="space-y-12">
                     <blockquote class="relative pl-8 border-l-4 border-green-500 dark:border-green-600">
-                        <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
+                        <p class="text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
                             "I had the pleasure of working with Malcolm on a large-scale transformation initiative, and I can confidently say he is one of the most skilled and inspiring Agile Coaches I've had the opportunity to collaborate with. Malcolm brings a rare combination of deep Agile expertise, strong leadership, and genuine empathy."
                         </p>
                         <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Management Consultant</footer>
                     </blockquote>
                     <blockquote class="relative pl-8 border-l-4 border-blue-500 dark:border-blue-400">
-                        <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
+                        <p class="text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
                             " I had the pleasure of working with Malcolm several years ago. He played a key role as an Agile Coach, helping guide the team through priorities, sprint ceremonies, and cross-functional collaboration. Even after many years, I still remember his calm presence and thoughtful facilitation style."
                         </p>
                         <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Senior Product Manager</footer>
                     </blockquote>
                     <blockquote class="relative pl-8 border-l-4 border-amber-500 dark:border-amber-600">
-                        <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
+                        <p class="text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
                             "I was fortunate to work with Malcolm as our Senior Agile coach, and his impact on our team was remarkable. He brought not only deep expertise in Agile practices but also a genuine ability to coach, mentor, and empower individuals to grow."
                         </p>
                         <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Tech Lead</footer>
                     </blockquote>
                     <blockquote class="relative pl-8 border-l-4 border-purple-500 dark:border-purple-400">
-                        <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
+                        <p class="text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
                             "I had the pleasure of working with Malcolm where his guidance as an Agile Coach made a big impact on our team. He brought clarity, patience, and practical insights that helped us improve collaboration and deliver better outcomes."
                         </p>
                         <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Developer</footer>
                     </blockquote>
                     <blockquote class="relative pl-8 border-l-4 border-indigo-500 dark:border-indigo-400">
-                        <p class="font-serif text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
+                        <p class="text-lg md:text-xl text-slate-700 dark:text-slate-300 italic leading-relaxed mb-4">
                             "I had the pleasure of working with Malcolm... he was always a pleasure to work with, good for a joke or two but also an insightful discussion. Whenever I collaborated with Malcolm he instilled confidence into what I was doing and highlighted different perspectives on the task at hand, which I greatly appreciated. His consultation always left me thinking about ways to improve the approach we were taking."
                         </p>
                         <footer class="text-sm font-medium text-slate-500 dark:text-slate-400">— Technical Navigator</footer>
@@ -424,12 +458,12 @@ import portrait from "../assets/malcolm_portrait.jpg";
                     <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Education</h2>
                     <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800 ml-6"></div>
                 </div>
-                <div class="bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex items-center justify-between">
+                <div class="pb-8 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
                     <div>
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white">Toronto Metropolitan University</h3>
                         <p class="text-slate-500 dark:text-slate-400">Bachelor's Degree in Business Technology Management</p>
                     </div>
-                    <span class="text-sm font-mono text-slate-400 uppercase">2008 — 2013</span>
+                    <span class="text-sm font-mono text-slate-400">2008 — 2013</span>
                 </div>
             </section>
         </div>
@@ -441,7 +475,11 @@ import portrait from "../assets/malcolm_portrait.jpg";
     @reference "../styles/global.css";
 
     .sidebar-link.active {
-        @apply text-blue-600 dark:text-blue-400 font-bold;
+        @apply text-primary dark:text-blue-400 font-bold;
+    }
+
+    .bullet-dot {
+        @apply text-slate-300 dark:text-slate-600 relative -top-0.5;
     }
 </style>
 
