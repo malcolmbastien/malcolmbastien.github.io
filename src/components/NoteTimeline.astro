@@ -43,7 +43,7 @@ const getStageBadgeClass = (stage: string) => {
         case 'evergreen':
             return 'bg-emerald-600 text-white';
         default:
-            return 'bg-slate-100 text-slate-700';
+            return 'bg-stone-100 text-stone-700';
     }
 };
 ---
@@ -63,11 +63,11 @@ const getStageBadgeClass = (stage: string) => {
                 >
                     {/* Month header with line */}
                     <div class="flex items-center gap-4 mb-8">
-                        <h2 class="text-sm font-semibold text-slate-600">
+                        <h2 class="text-sm font-semibold text-stone-600">
                             {monthKey}
                         </h2>
-                        <div class="h-px bg-slate-100 dark:bg-slate-800 flex-grow"></div>
-                        <span class="text-xs font-medium text-slate-400">
+                        <div class="h-px bg-stone-100 dark:bg-stone-800 grow"></div>
+                        <span class="text-xs font-medium text-stone-400">
                             {monthEvents?.length || 0} entries
                         </span>
                     </div>
@@ -81,7 +81,7 @@ const getStageBadgeClass = (stage: string) => {
 
                                    return (
                                         <article
-                                            class="timeline-event p-8 border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors group"
+                                            class="timeline-event p-8 border-b border-stone-100 dark:border-stone-800 hover:bg-stone-50/50 dark:hover:bg-stone-800/30 transition-colors group"
                                             data-stage={event.note.data.stage}
                                             data-title={event.title.toLowerCase()}
                                             data-summary={
@@ -101,13 +101,13 @@ const getStageBadgeClass = (stage: string) => {
                                             data-is-collapsed={event.isCollapsed ? "true" : "false"}
                                             data-is-initial-batch={isInitialBatch ? "true" : "false"}
                                         >
-                                            {/* Meta row with stage badge and date */}
+                                            {/* Meta row with stage badge, date, and activity type */}
                                             <div class="flex items-center justify-between mb-4">
                                                 <div class="flex items-center gap-3">
                                                     <span class={`text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider ${getStageBadgeClass(event.note.data.stage)}`}>
                                                         {event.note.data.stage}
                                                     </span>
-                                                    <span class="text-xs font-semibold text-slate-400">
+                                                    <span class="text-xs font-semibold text-stone-400">
                                                         {event.date.toLocaleDateString("en-US", { 
                                                             month: 'short', 
                                                             day: 'numeric',
@@ -115,15 +115,13 @@ const getStageBadgeClass = (stage: string) => {
                                                         })}
                                                     </span>
                                                 </div>
-                                                {event.type === 'updated' && (
-                                                    <span class="text-xs font-semibold text-primary dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                                                        Updated
-                                                    </span>
-                                                )}
+                                                <span class={`text-xs font-semibold px-2 py-0.5 rounded uppercase tracking-wider ${event.type === 'created' ? 'bg-stone-100 text-stone-600 dark:bg-stone-800 dark:text-stone-400' : 'bg-stone-200 text-stone-700 dark:bg-stone-700 dark:text-stone-300'}`}>
+                                                    {event.type === 'created' ? 'Created' : 'Updated'}
+                                                </span>
                                             </div>
 
                                             {/* Title */}
-                                            <h3 class="text-3xl font-bold text-slate-900 dark:text-white mb-4 leading-tight group-hover:underline decoration-primary/30">
+                                            <h3 class="text-3xl font-bold text-stone-900 dark:text-white mb-4 leading-tight group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
                                                 <a href={`/notes/${event.note.id.replace('.md', '')}`}>
                                                     {event.title}
                                                 </a>
@@ -131,7 +129,7 @@ const getStageBadgeClass = (stage: string) => {
 
                                             {/* Summary */}
                                             {event.note.data.summary && (
-                                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mb-6">
+                                                <p class="text-stone-600 dark:text-stone-400 leading-relaxed max-w-2xl mb-6">
                                                     {event.note.data.summary}
                                                 </p>
                                             )}
@@ -151,7 +149,7 @@ const getStageBadgeClass = (stage: string) => {
                                             {event.note.data.tags.length > 0 && (
                                                 <div class="flex gap-4">
                                                     {event.note.data.tags.slice(0, 4).map((tag: string) => (
-                                                        <span class="text-xs font-medium text-slate-400">#{tag}</span>
+                                                        <span class="text-xs font-medium text-stone-400">#{tag}</span>
                                                     ))}
                                                 </div>
                                             )}
@@ -161,8 +159,8 @@ const getStageBadgeClass = (stage: string) => {
                         </div>
                       ) : (
                         /* No activity message */
-                        <div class="py-12 text-center border-b border-slate-100 dark:border-slate-800">
-                            <p class="text-xs font-medium text-slate-400">
+                        <div class="py-12 text-center border-b border-stone-100 dark:border-stone-800">
+                            <p class="text-xs font-medium text-stone-400">
                                 No notes this month
                             </p>
                         </div>
@@ -174,7 +172,7 @@ const getStageBadgeClass = (stage: string) => {
 
     {/* No results message */}
     <div id="no-results" class="hidden text-center py-16">
-        <p class="text-slate-600 dark:text-slate-400 text-lg">
+        <p class="text-stone-600 dark:text-stone-400 text-lg">
             No matching notes found
         </p>
     </div>

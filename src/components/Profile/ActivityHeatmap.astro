@@ -49,9 +49,9 @@ const SQUARE_GAP = 3;
 
 function getColor(count: number) {
     if (count === 0) return "fill-slate-100 dark:fill-slate-700/50";
-    if (count === 1) return "fill-blue-200 dark:fill-blue-900";
-    if (count === 2) return "fill-blue-400";
-    if (count >= 3) return "fill-blue-600";
+    if (count === 1) return "fill-slate-300 dark:fill-slate-600";
+    if (count === 2) return "fill-slate-500 dark:fill-slate-400";
+    if (count >= 3) return "fill-primary dark:fill-blue-500";
     return "fill-slate-100 dark:fill-slate-700/50";
 }
 
@@ -63,24 +63,23 @@ const svgHeight = 7 * (SQUARE_SIZE + SQUARE_GAP) - SQUARE_GAP + 10;
 
 <div
     id="activity-heatmap"
-    class="bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm"
 >
     <div
         id="heatmap-tooltip"
-        class="fixed hidden z-50 px-3 py-1.5 font-mono text-xs font-bold text-white bg-slate-900 shadow-lg pointer-events-none whitespace-nowrap rounded"
+        class="fixed hidden z-50 px-3 py-1.5 text-xs font-semibold text-white bg-stone-800 shadow-lg pointer-events-none whitespace-nowrap rounded"
     >
     </div>
-    <div class="flex justify-between items-center mb-4">
-        <h3 class="text-[11px] font-bold uppercase tracking-widest text-slate-400">
-            Activity Heatmap {year}
-        </h3>
+    
+    <!-- Legend -->
+    <div class="flex justify-end items-center gap-2 mb-3">
         <div class="flex items-center gap-1">
-            <div class="w-2 h-2 bg-slate-100 dark:bg-slate-700 rounded-sm"></div>
-            <div class="w-2 h-2 bg-blue-300 dark:bg-blue-800 rounded-sm"></div>
-            <div class="w-2 h-2 bg-blue-500 dark:bg-blue-600 rounded-sm"></div>
-            <div class="w-2 h-2 bg-blue-600 dark:bg-blue-500 rounded-sm"></div>
+            <div class="w-2.5 h-2.5 rounded-sm bg-stone-200 dark:bg-stone-700"></div>
+            <div class="w-2.5 h-2.5 rounded-sm bg-stone-400 dark:bg-stone-600"></div>
+            <div class="w-2.5 h-2.5 rounded-sm bg-stone-600 dark:bg-stone-400"></div>
+            <div class="w-2.5 h-2.5 rounded-sm bg-primary dark:bg-blue-500"></div>
         </div>
     </div>
+    
     <div class="overflow-x-auto no-scrollbar">
         <svg
             viewBox={`0 0 ${svgWidth} ${svgHeight}`}
@@ -101,7 +100,7 @@ const svgHeight = 7 * (SQUARE_SIZE + SQUARE_GAP) - SQUARE_GAP + 10;
                                         width={SQUARE_SIZE}
                                         height={SQUARE_SIZE}
                                         rx="1"
-                                        class={`${getColor(dayData.count)} activity-day transition-all duration-300 hover:stroke-blue-500 hover:stroke-2 ${dayData.count > 0 ? "cursor-pointer" : ""}`}
+                                        class={`${getColor(dayData.count)} activity-day transition-all duration-300 hover:stroke-primary hover:stroke-2 ${dayData.count > 0 ? "cursor-pointer" : ""}`}
                                         data-date={dayData.date}
                                         data-count={dayData.count}
                                         onclick={
@@ -135,9 +134,9 @@ const svgHeight = 7 * (SQUARE_SIZE + SQUARE_GAP) - SQUARE_GAP + 10;
         // Function to get Tailwind classes for colors
         function getColor(count) {
             if (count === 0) return "fill-slate-100 dark:fill-slate-700/50";
-            if (count === 1) return "fill-blue-200 dark:fill-blue-900";
-            if (count === 2) return "fill-blue-400";
-            if (count >= 3) return "fill-blue-600";
+            if (count === 1) return "fill-slate-300 dark:fill-slate-600";
+            if (count === 2) return "fill-slate-500 dark:fill-slate-400";
+            if (count >= 3) return "fill-primary dark:fill-blue-500";
             return "fill-slate-100 dark:fill-slate-700/50";
         }
 
@@ -145,12 +144,6 @@ const svgHeight = 7 * (SQUARE_SIZE + SQUARE_GAP) - SQUARE_GAP + 10;
         window.updateHeatmapYear = function (newYear) {
             if (currentYear === newYear) return;
             currentYear = newYear;
-
-            // Update year display in title
-            const title = document.querySelector('#activity-heatmap h3');
-            if (title) {
-                title.textContent = `Activity Heatmap ${newYear}`;
-            }
 
             // Clear selected date when changing years
             selectedDate = null;
@@ -357,7 +350,7 @@ const svgHeight = 7 * (SQUARE_SIZE + SQUARE_GAP) - SQUARE_GAP + 10;
         const style = document.createElement("style");
         style.textContent = `
   			.activity-day.selected {
-  				stroke: #4382ff !important;
+  				stroke: #1e3a8a !important;
   				stroke-width: 2px !important;
   			}
             #activity-heatmap.is-filtering .activity-day:not(.selected) {

@@ -46,7 +46,7 @@ const packages = [
         <!-- Left Sidebar: Navigation -->
         <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit">
             <nav class="space-y-1" id="colophon-nav">
-                <p class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">On this page</p>
+                <p class="text-sm font-semibold text-slate-600 mb-4">On this page</p>
                 <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white transition-colors font-medium active" href="#intro">Intro</a>
                 <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white transition-colors font-medium" href="#development">Development</a>
                 <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white transition-colors font-medium" href="#writing">Writing</a>
@@ -63,7 +63,7 @@ const packages = [
         <div class="lg:col-span-9" data-pagefind-body>
             <header class="mb-16 scroll-mt-24" id="intro">
                 <h1 class="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">Colophon</h1>
-                <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl italic font-serif">
+                <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl italic">
                     This website is a digital garden — a collection of thoughts, notes, and experiments. It is designed to be fast, accessible, and easy to maintain.
                 </p>
             </header>
@@ -73,20 +73,24 @@ const packages = [
                 <section class="scroll-mt-24" id="development">
                     <div class="flex items-center gap-4 mb-8">
                         <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 flex items-center gap-2 whitespace-nowrap">
-                            🛠️ Development & Tools
+                        <h2 class="text-sm font-bold text-slate-600 flex items-center gap-2 whitespace-nowrap">
+                            Development & Tools
                         </h2>
                         <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <a href="https://zed.dev/" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blueprint-blue dark:group-hover:text-blue-400 transition-colors">Zed</h3>
+                    <div class="space-y-6">
+                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
+                                <a href="https://zed.dev/" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Zed</a>
+                            </h3>
                             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">The primary code editor used for building this site. Zed's high-performance and collaborative features make it an ideal choice for modern web development.</p>
-                        </a>
-                        <a href="https://opencode.ai/" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blueprint-blue dark:group-hover:text-blue-400 transition-colors">Open Code AI</h3>
+                        </div>
+                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
+                                <a href="https://opencode.ai/" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Open Code AI</a>
+                            </h3>
                             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Much of the implementation and technical structure was developed with the assistance of Open Code AI, an interactive coding tool that helps translate ideas into functional code.</p>
-                        </a>
+                        </div>
                     </div>
                 </section>
 
@@ -94,20 +98,24 @@ const packages = [
                 <section class="scroll-mt-24" id="writing">
                     <div class="flex items-center gap-4 mb-8">
                         <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 flex items-center gap-2 whitespace-nowrap">
-                            ✍️ Writing Workflow
+                        <h2 class="text-sm font-bold text-slate-600 flex items-center gap-2 whitespace-nowrap">
+                            Writing Workflow
                         </h2>
                         <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <a href="https://obsidian.md/" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blueprint-blue dark:group-hover:text-blue-400 transition-colors">Obsidian</h3>
+                    <div class="space-y-6">
+                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
+                                <a href="https://obsidian.md/" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Obsidian</a>
+                            </h3>
                             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">All blog posts and notes are written in Markdown using Obsidian. This allows for a seamless connection between personal notes and publicly shared content.</p>
-                        </a>
-                        <a href="https://github.com/denolehov/obsidian-git" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blueprint-blue dark:group-hover:text-blue-400 transition-colors">Obsidian Git Plugin</h3>
+                        </div>
+                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
+                                <a href="https://github.com/denolehov/obsidian-git" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Obsidian Git Plugin</a>
+                            </h3>
                             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">The site's content is pushed directly from Obsidian to GitHub using the Obsidian Git plugin, enabling a "write and publish" workflow without leaving the writing environment.</p>
-                        </a>
+                        </div>
                     </div>
                 </section>
 
@@ -115,39 +123,47 @@ const packages = [
                 <section class="scroll-mt-24" id="hosting">
                     <div class="flex items-center gap-4 mb-8">
                         <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 flex items-center gap-2 whitespace-nowrap">
-                            🚀 Hosting & Deployment
+                        <h2 class="text-sm font-bold text-slate-600 flex items-center gap-2 whitespace-nowrap">
+                            Hosting & Deployment
                         </h2>
                         <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                     </div>
-                    <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer" class="block bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group">
-                        <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blueprint-blue dark:group-hover:text-blue-400 transition-colors">Vercel</h3>
+                    <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
+                        <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
+                            <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Vercel</a>
+                        </h3>
                         <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">The site is hosted on Vercel. Every time content is pushed to the main branch, Vercel automatically triggers a build process that generates the static site and deploys it to their global edge network.</p>
-                    </a>
+                    </div>
                 </section>
 
                 <!-- Typography -->
                 <section class="scroll-mt-24" id="typography">
                     <div class="flex items-center gap-4 mb-8">
                         <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 flex items-center gap-2 whitespace-nowrap">
-                            🔡 Typography
+                        <h2 class="text-sm font-bold text-slate-600 flex items-center gap-2 whitespace-nowrap">
+                            Typography
                         </h2>
                         <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                        <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blueprint-blue dark:group-hover:text-blue-400 transition-colors">Inter</h3>
+                    <div class="space-y-6">
+                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
+                                <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Inter</a>
+                            </h3>
                             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Used for page titles, headers, UI elements, and body text. A modern geometric sans-serif with excellent weight range (300-900) that provides crisp readability at all sizes.</p>
-                        </a>
-                        <a href="https://fonts.google.com/specimen/Source+Serif+4" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blueprint-blue dark:group-hover:text-blue-400 transition-colors">Source Serif 4</h3>
+                        </div>
+                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
+                                <a href="https://fonts.google.com/specimen/Source+Serif+4" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Source Serif 4</a>
+                            </h3>
                             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Used for long-form prose and descriptions. An elegant serif designed for high-quality reading experiences on screens.</p>
-                        </a>
-                        <a href="https://fonts.google.com/specimen/JetBrains+Mono" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-navy-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all group">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blueprint-blue dark:group-hover:text-blue-400 transition-colors">JetBrains Mono</h3>
+                        </div>
+                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
+                                <a href="https://fonts.google.com/specimen/JetBrains+Mono" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">JetBrains Mono</a>
+                            </h3>
                             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Used for code blocks and technical metadata. A highly legible monospaced font specifically designed for developers.</p>
-                        </a>
+                        </div>
                     </div>
                 </section>
 
@@ -155,17 +171,19 @@ const packages = [
                 <section class="scroll-mt-24" id="techstack">
                     <div class="flex items-center gap-4 mb-8">
                         <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 flex items-center gap-2 whitespace-nowrap">
-                            📦 Technology Stack
+                        <h2 class="text-sm font-bold text-slate-600 flex items-center gap-2 whitespace-nowrap">
+                            Technology Stack
                         </h2>
                         <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="space-y-4">
                         {packages.map((pkg) => (
-                            <a href={pkg.link} target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-navy-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm transition-all group hover:shadow-md">
-                                <h4 class="font-mono text-sm font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blueprint-blue dark:group-hover:text-blue-400">{pkg.name}</h4>
-                                <p class="font-mono text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{pkg.description}</p>
-                            </a>
+                            <div class="pb-4 border-b border-slate-100 dark:border-slate-800">
+                                <h4 class="font-mono text-sm font-bold mb-2 text-slate-900 dark:text-white">
+                                    <a href={pkg.link} target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">{pkg.name}</a>
+                                </h4>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{pkg.description}</p>
+                            </div>
                         ))}
                     </div>
                 </section>
@@ -179,7 +197,7 @@ const packages = [
     @reference "../styles/global.css";
 
     .sidebar-link.active {
-        @apply text-blueprint-blue dark:text-blue-400 font-bold;
+        @apply text-primary dark:text-blue-400 font-bold;
     }
 </style>
 
