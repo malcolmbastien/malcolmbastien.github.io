@@ -53,16 +53,8 @@ const formatDate = (date: Date) => {
 
 // Helper for stage badge styling
 const getStageBadgeClass = (stage: string) => {
-    switch (stage) {
-        case 'seed':
-            return 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400';
-        case 'sprout':
-            return 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400';
-        case 'evergreen':
-            return 'bg-emerald-600 text-white';
-        default:
-            return 'bg-slate-100 text-slate-700';
-    }
+    const stageData = getStageData(stage);
+    return stageData.colors.badge;
 };
 ---
 

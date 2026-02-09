@@ -10,35 +10,38 @@ export const stages = {
     label: "Seed",
     icon: "potted_plant",
     colors: {
-      badge: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400",
-      dot: "bg-amber-400",
-      text: "text-amber-700 dark:text-amber-400",
-      underline: "#fbbf24", // amber-400
-      accent: "text-amber-500 dark:text-amber-400",
-      bgAccent: "bg-amber-500/10",
-      dotShadow: "bg-amber-500 shadow-amber-500/20"
+      badge: "bg-orange-50 dark:bg-orange-900/30 text-orange-600",
+      dot: "bg-orange-400",
+      text: "text-orange-600",
+      border: "border-orange-600",
+      underline: "#f97316", // orange-500
+      accent: "text-orange-600 dark:text-orange-400",
+      bgAccent: "bg-orange-500/10",
+      dotShadow: "bg-orange-500 shadow-orange-500/20"
     }
   },
   sprout: {
     label: "Sprout",
     icon: "eco",
     colors: {
-      badge: "bg-lime-100 dark:bg-lime-900/30 text-lime-700 dark:text-lime-400",
-      dot: "bg-lime-500",
-      text: "text-lime-700 dark:text-lime-400",
-      underline: "#a3e635", // lime-400
-      accent: "text-lime-500 dark:text-lime-400",
-      bgAccent: "bg-lime-500/10",
-      dotShadow: "bg-lime-500 shadow-lime-500/20"
+      badge: "bg-yellow-50 dark:bg-yellow-900/30 text-yellow-600",
+      dot: "bg-yellow-400",
+      text: "text-yellow-600",
+      border: "border-yellow-600",
+      underline: "#ca8a04", // yellow-600
+      accent: "text-yellow-600 dark:text-yellow-400",
+      bgAccent: "bg-yellow-500/10",
+      dotShadow: "bg-yellow-500 shadow-yellow-500/20"
     }
   },
   evergreen: {
     label: "Evergreen",
     icon: "energy_savings_leaf",
     colors: {
-      badge: "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400",
-      dot: "bg-green-600",
-      text: "text-green-700 dark:text-green-400",
+      badge: "bg-green-50 dark:bg-green-900/30 text-green-600",
+      dot: "bg-green-500",
+      text: "text-green-600",
+      border: "border-green-600",
       underline: "#16a34a", // green-600
       accent: "text-green-600 dark:text-green-400",
       bgAccent: "bg-green-600/10",
