@@ -225,6 +225,19 @@ const getStageBadgeClass = (stage: string) => {
     }
 };
 
+const getStageKeylineClass = (stage: string) => {
+    switch (stage) {
+        case 'seed':
+            return 'border-l-amber-500';
+        case 'sprout':
+            return 'border-l-emerald-500';
+        case 'evergreen':
+            return 'border-l-emerald-600';
+        default:
+            return 'border-l-slate-400';
+    }
+};
+
 const getStageCardClass = (stage: string) => {
     // All pinned notes use the same subtle styling regardless of stage
     return 'bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700';
@@ -303,7 +316,7 @@ const getStageCardClass = (stage: string) => {
                             </div>
                             <div>
                                 {pinnedNotes.map((note, index) => (
-                                    <a href={`/notes/${note.id.replace('.md', '')}`} class={`group block relative py-6 px-6 ${index !== pinnedNotes.length - 1 ? 'border-b border-stone-100 dark:border-slate-800' : ''} hover:bg-stone-100 dark:hover:bg-slate-800 transition-colors rounded-lg cursor-pointer`}>
+                                    <a href={`/notes/${note.id.replace('.md', '')}`} class={`group block relative my-4 py-2 px-5 border-l-4 ${getStageKeylineClass(note.data.stage)} hover:bg-stone-100 dark:hover:bg-slate-800 transition-colors cursor-pointer`}>
                                         <div class="flex items-center justify-between mb-4">
                                             <div class="flex items-center gap-3">
                                                 <span class={`text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider ${getStageBadgeClass(note.data.stage)}`}>
