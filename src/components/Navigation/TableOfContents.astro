@@ -2,18 +2,26 @@
 
 // TableOfContents.astro - Automatically generates table of contents from headings
 interface Props {
-    content: string;
-    title: string;
+    content?: string;
+    title?: string;
     minHeadings?: number;
     headings?: Array<{ depth: number; slug: string; text: string }>;
+    sectionIds?: Array<{ id: string; text: string }>;
 }
 
-const { content, title, minHeadings = 3, headings: astroHeadings } = Astro.props;
+const { content, title = "Table of Contents", minHeadings = 2, headings: astroHeadings, sectionIds } = Astro.props;
 
-// Extract headings from Markdown content (skip frontmatter) if not provided by Astro
 let headings: Array<{ level: number; id: string; text: string }> = [];
 
-if (astroHeadings && astroHeadings.length > 0) {
+// If sectionIds are provided directly (for pages like colophon/about), use those
+if (sectionIds && sectionIds.length > 0) {
+    headings = sectionIds.map((section, index) => ({
+        level: index === 0 ? 1 : 2,
+        id: section.id,
+        text: section.text
+    }));
+} else if (astroHeadings && astroHeadings.length > 0) {
+    // Use provided headings from Astro
     headings = astroHeadings
         .filter(h => h.depth >= 2 && h.depth <= 6)
         .map(h => ({
@@ -21,16 +29,16 @@ if (astroHeadings && astroHeadings.length > 0) {
             id: h.slug,
             text: h.text
         }));
-} else {
+} else if (content) {
+    // Extract headings from Markdown content (skip frontmatter)
     const contentWithoutFrontmatter = content.replace(/^---[\s\S]*?---\n/, "");
-    const headingRegex = /^(#{2,6})\s+(.+)$/gm; // H2-H6 headings
+    const headingRegex = /^(#{2,6})\s+(.+)$/gm;
     let match;
 
     while ((match = headingRegex.exec(contentWithoutFrontmatter)) !== null) {
-        const level = match[1].length - 1; // H2 = level 1, H3 = level 2, H4 = level 3, etc.
+        const level = match[1].length - 1;
         const text = match[2].trim();
 
-        // Check for {#id} in the text
         const idMatch = text.match(/\{#([^}]+)\}/);
         let id = "";
         let cleanText = text;
@@ -38,16 +46,14 @@ if (astroHeadings && astroHeadings.length > 0) {
             id = idMatch[1];
             cleanText = text.replace(/\{#([^}]+)\}/, "").trim();
         } else {
-            // Generate ID from text (similar to how Astro generates heading IDs)
             id = cleanText
                 .toLowerCase()
-                .replace(/[^\w\s-]/g, "") // Remove special characters
-                .replace(/\s+/g, "-") // Replace spaces with hyphens
-                .replace(/-+/g, "-") // Replace multiple hyphens with single
-                .replace(/^-|-$/g, ""); // Remove leading/trailing hyphens
+                .replace(/[^\w\s-]/g, "")
+                .replace(/\s+/g, "-")
+                .replace(/-+/g, "-")
+                .replace(/^-|-$/g, "");
         }
 
-        // Include H2-H6 headings
         headings.push({ level, id, text: cleanText });
     }
 }
@@ -57,25 +63,14 @@ const showTOC = headings.length >= minHeadings;
 
 // Create nested structure for TOC
 const createTOCStructure = (
-    title: string,
     headings: Array<{ level: number; id: string; text: string }>,
 ) => {
     const toc: Array<{ id: string; text: string; children?: any[] }> = [];
     const stack: Array<{ item: any; level: number }> = [];
 
-    // Add the post title as the first item
-    const titleItem = {
-        id: "",
-        text: title,
-        children: [],
-    };
-    toc.push(titleItem);
-    stack.push({ item: titleItem, level: 1 });
-
     headings.forEach((heading) => {
         const item = { id: heading.id, text: heading.text, children: [] };
 
-        // Find the appropriate parent level
         while (
             stack.length > 0 &&
             stack[stack.length - 1].level >= heading.level
@@ -95,49 +90,39 @@ const createTOCStructure = (
     return toc;
 };
 
-const tocStructure = createTOCStructure(title, headings);
+const tocStructure = createTOCStructure(headings);
 ---
 {
     showTOC && (
         <aside class="w-full pb-6 border-b border-slate-100 dark:border-slate-800">
-            <h3 class="small-caps text-[11px] font-bold tracking-widest text-slate-500 mb-4">Contents</h3>
+            <h3 class="text-sm font-bold tracking-widest text-slate-500 mb-4">{title}</h3>
             <nav class="toc-nav relative">
-                    {tocStructure.map((item, index) => {
-                        const isPostTitle = index === 0 && item.id === "";
-
-                        return (
-                            <div class="toc-item relative mb-2">
-                                   <a
-                                       href={isPostTitle ? "#" : `#${item.id}`}
-                                       id={`toc-${item.id}`}
-                                        class={`toc-link block transition-all ${
-                                            isPostTitle
-                                        ? "text-xs font-medium text-slate-500 dark:text-slate-500 mb-3 hover:text-primary dark:hover:text-blue-400"
-                                                : "text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400"
-                                        }`}
-                                   >
-                                      {item.text}
-                                  </a>
-                                 {item.children &&
-                                     item.children.length > 0 && (
-                                         <div class="pl-3 border-l border-slate-200 dark:border-slate-800 space-y-1.5 mt-1.5 mb-3">
-                                             {item.children.map((child) => (
-                                                 <div class="relative">
-                                                      <a
-                                                           href={`#${child.id}`}
-                                                           id={`toc-${child.id}`}
-                                                           class="toc-link block text-xs text-slate-500 dark:text-slate-500 hover:text-primary dark:hover:text-blue-400 transition-colors"
-                                                       >
-                                                         {child.text}
-                                                      </a>
-                                                 </div>
-                                             ))}
-                                         </div>
-                                     )}
-
-                            </div>
-                        );
-                    })}
+                    {tocStructure.map((item) => (
+                        <div class="toc-item relative mb-2">
+                            <a
+                                href={`#${item.id}`}
+                                id={`toc-${item.id}`}
+                                class="toc-link block text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors"
+                            >
+                                {item.text}
+                            </a>
+                            {item.children && item.children.length > 0 && (
+                                <div class="pl-3 border-l border-slate-200 dark:border-slate-800 space-y-1.5 mt-1.5 mb-3">
+                                    {item.children.map((child) => (
+                                        <div class="relative">
+                                            <a
+                                                href={`#${child.id}`}
+                                                id={`toc-${child.id}`}
+                                                class="toc-link block text-xs text-slate-500 dark:text-slate-500 hover:text-primary dark:hover:text-blue-400 transition-colors"
+                                            >
+                                                {child.text}
+                                            </a>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    ))}
                 </nav>
         </aside>
     )
@@ -170,18 +155,17 @@ const tocStructure = createTOCStructure(title, headings);
 
     /* Active TOC link styling */
     .toc-link.active {
-        @apply text-blueprint-blue font-bold;
+        @apply text-primary font-bold;
     }
 
     .dark .toc-link.active {
-        @apply text-blue-500;
+        @apply text-blue-400;
     }
 </style>
 
 <script>
     const tocLinks = document.querySelectorAll('.toc-link');
-    const titleLink = document.querySelector('.toc-link[href="#"]');
-    const headings = Array.from(document.querySelectorAll('article h2, article h3, article h4, article h5, article h6')).filter(h => h.getAttribute('id'));
+    const headings = Array.from(document.querySelectorAll('section[id], div[id], header[id]')).filter(h => h.getAttribute('id'));
 
     // Track which headings are currently intersecting
     const intersectingHeadings = new Set<Element>();
@@ -190,28 +174,6 @@ const tocStructure = createTOCStructure(title, headings);
         tocLinks.forEach((l) => l.classList.remove('active'));
         if (link) {
             link.classList.add('active');
-        }
-    }
-
-    // Check if we're above the first heading (only when no headings are intersecting)
-    function checkTitleActive() {
-        // Only highlight title if no headings are currently intersecting
-        if (intersectingHeadings.size > 0) {
-            return;
-        }
-
-        if (headings.length === 0) {
-            setActiveLink(titleLink);
-            return;
-        }
-
-        const firstHeading = headings[0];
-        const firstHeadingRect = firstHeading.getBoundingClientRect();
-        const offset = 120; // Account for sticky header + some padding
-
-        // If first heading is below the offset, we're "above" it
-        if (firstHeadingRect.top > offset) {
-            setActiveLink(titleLink);
         }
     }
 
@@ -233,25 +195,10 @@ const tocStructure = createTOCStructure(title, headings);
         threshold: 1.0
     });
 
-    // Observe all headings that have an ID and are within the article
+    // Observe all headings that have an ID
     headings.forEach((heading) => {
         observer.observe(heading);
     });
-
-    // Check scroll position to highlight title when above first heading
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                checkTitleActive();
-                ticking = false;
-            });
-            ticking = true;
-        }
-    }, { passive: true });
-
-    // Initial check
-    checkTitleActive();
 
     // Handle clicks to avoid breaking "Back" button behavior
     document.querySelectorAll('.toc-link').forEach(link => {
@@ -260,25 +207,18 @@ const tocStructure = createTOCStructure(title, headings);
             if (!href) return;
 
             e.preventDefault();
-            const targetId = href === '#' ? null : href.substring(1);
-            const targetElement = targetId ? document.getElementById(targetId) : null;
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
 
-            if (targetElement || href === '#') {
+            if (targetElement) {
                 // Update URL without adding to history
                 history.replaceState(null, '', href);
 
-                if (href === '#') {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                } else if (targetElement) {
-                    // Smooth scroll to target
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                // Smooth scroll to target
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
     });

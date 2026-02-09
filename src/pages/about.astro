@@ -1,11 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BackToGarden from "../components/Navigation/BackToGarden.astro";
+import TableOfContents from "../components/Navigation/TableOfContents.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { Image } from "astro:assets";
 import portrait from "../assets/malcolm_portrait.jpg";
 
-// This page uses specific styling from the provided mockup
+const tocSections = [
+    { id: "intro", text: "Intro" },
+    { id: "experience", text: "Experience" },
+    { id: "certifications", text: "Certifications" },
+    { id: "interests", text: "Areas of Interest" },
+    { id: "testimonials", text: "Testimonials" },
+    { id: "education", text: "Education" }
+];
 ---
 
 <Layout
@@ -16,15 +24,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
     <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12" data-pagefind-ignore>
         <!-- Sidebar Navigation -->
         <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit">
-            <nav class="space-y-1" id="about-nav">
-                <p class="text-sm font-semibold text-slate-600 mb-4">On this page</p>
-                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium active" href="#intro">Intro</a>
-                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium" href="#experience">Experience</a>
-                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium" href="#certifications">Certifications</a>
-                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium" href="#interests">Areas of Interest</a>
-                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium" href="#testimonials">Testimonials</a>
-                <a class="sidebar-link block py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium" href="#education">Education</a>
-            </nav>
+            <TableOfContents sectionIds={tocSections} title="On this page" />
             <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800">
                 <BackToGarden />
             </div>
@@ -474,61 +474,7 @@ import portrait from "../assets/malcolm_portrait.jpg";
 <style is:global>
     @reference "../styles/global.css";
 
-    .sidebar-link.active {
-        @apply text-primary dark:text-blue-400 font-bold;
-    }
-
     .bullet-dot {
         @apply text-slate-300 dark:text-slate-600 relative -top-0.5;
     }
 </style>
-
-<script>
-    // Simple scroll spy for sidebar highlighting
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.sidebar-link');
-
-    function updateActiveLink() {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = (section as HTMLElement).offsetTop;
-            if (window.scrollY >= sectionTop - 150) {
-                current = section.getAttribute('id') || '';
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', updateActiveLink);
-    // Run once on load
-    updateActiveLink();
-
-    // Handle clicks to avoid breaking "Back" button behavior
-    document.querySelectorAll('.sidebar-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
-            if (!href || !href.startsWith('#')) return;
-
-            e.preventDefault();
-            const targetId = href.substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                // Update URL without adding to history
-                history.replaceState(null, '', href);
-
-                // Smooth scroll to target
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-</script>
