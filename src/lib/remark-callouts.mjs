@@ -1,5 +1,39 @@
 import { visit } from 'unist-util-visit';
 
+const iconMap = {
+  note: 'sticky_note_2',
+  info: 'info',
+  important: 'priority_high',
+  todo: 'check_circle',
+  abstract: 'description',
+  summary: 'description',
+  tldr: 'description',
+  success: 'celebration',
+  tip: 'lightbulb',
+  hint: 'lightbulb',
+  idea: 'lightbulb',
+  done: 'check_circle',
+  check: 'check_circle',
+  warning: 'warning',
+  caution: 'warning',
+  attention: 'warning',
+  failure: 'cancel',
+  fail: 'cancel',
+  missing: 'cancel',
+  danger: 'local_fire_department',
+  error: 'error',
+  bug: 'pest_control',
+  example: 'auto_stories',
+  quote: 'format_quote',
+  cite: 'format_quote',
+  draft: 'stylus_note',
+  wip: 'construction',
+  'work-in-progress': 'construction',
+  question: 'help',
+  help: 'help',
+  faq: 'help'
+};
+
 export function remarkCallouts() {
   return (tree) => {
     visit(tree, 'blockquote', (node) => {
@@ -14,29 +48,60 @@ export function remarkCallouts() {
 
       const rawType = match[1];
       const type = rawType.toLowerCase().trim().replace(/\s+/g, '-');
+      const icon = iconMap[type] || 'info';
       
-      // Update the node's properties
-      node.data = node.data || {};
-      node.data.hProperties = node.data.hProperties || {};
-      node.data.hProperties.className = ['markdown-alert', `markdown-alert-${type}`];
-
-      // Remove the [!TYPE] text
+      // Remove the [!TYPE] marker
       firstText.value = firstText.value.replace(/^\[!([\w\s-]+)\]/i, '').trim();
 
-      // If the paragraph is now empty, or just had the [!TYPE], we might want to add a title
       let titleText = rawType.trim().toUpperCase();
-      if (type === 'wip' || type === 'work-in-progress') titleText = 'WORK IN PROGRESS';
+      if (type === 'wip' || type === 'work-in-progress') titleText = 'WIP';
+      if (type === 'tldr') titleText = 'TL;DR';
       
-      const titleNode = {
-        type: 'paragraph',
-        data: {
-          hProperties: { className: ['markdown-alert-title'] }
-        },
-        children: [{ type: 'text', value: titleText }]
+      // Transform the blockquote node into a container div
+      node.data = node.data || {};
+      node.data.hName = 'div';
+      node.data.hProperties = { 
+        className: ['markdown-alert', `markdown-alert-${type}`, 'my-12'] 
       };
 
-      // Insert title at the beginning
-      node.children.unshift(titleNode);
+      // Construct the internal structure
+      const anchorNode = {
+        type: 'paragraph',
+        data: {
+          hName: 'div',
+          hProperties: { className: ['margin-anchor'] }
+        },
+        children: [
+          {
+            type: 'text',
+            value: icon,
+            data: {
+              hName: 'span',
+              hProperties: { className: ['material-symbols-outlined', 'callout-icon'] }
+            }
+          },
+          {
+            type: 'text',
+            value: titleText,
+            data: {
+              hName: 'span',
+              hProperties: { className: ['callout-label'] }
+            }
+          }
+        ]
+      };
+
+      const contentNode = {
+        type: 'paragraph',
+        data: {
+          hName: 'div',
+          hProperties: { className: ['markdown-alert-content'] }
+        },
+        children: node.children
+      };
+
+      // Set children to our new grid layout
+      node.children = [anchorNode, contentNode];
     });
   };
 }

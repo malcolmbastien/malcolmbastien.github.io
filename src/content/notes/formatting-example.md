@@ -131,29 +131,6 @@ Testing every supported callout type:
 > [!WIP]
 > This is a draft block. It represents incomplete writing that is still in progress. Note the dashed border and specific styling to distinguish it from mature content.
 
-### Callout Formatting
-
-> [!TIP]
-> Callouts can span multiple lines
-> and include **formatting** like *italics*, `code`, and [links](https://example.com).
->
-> They can even include:
-> - Lists
-> - Multiple paragraphs
-> - Any markdown formatting
-
-### Nested Content
-
-> [!IMPORTANT]
-> You can include code blocks in callouts:
->
-> ```javascript
-> console.log("Hello from a callout!");
-> ```
->
-> And even other elements like quotes:
-> > This is a nested quote inside a callout
-
 ### Callout Best Practices
 
 - **Use sparingly** - Too many callouts can overwhelm readers

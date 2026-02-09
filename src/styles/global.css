@@ -2,7 +2,7 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-primary: #22c55e; /* Green 500 */
+  --color-primary: #2563eb;
   
   /* Typographic Ledger - Paper Tones */
   --color-background-light: #fdfdfd;
@@ -13,9 +13,6 @@
   --color-paper-dark: #0f172a;
   --color-ink: #0f172a;
   --color-ink-dark: #f1f5f9;
-
-  /* Primary Blue */
-  --color-primary: #2563eb;
 
   /* Garden Stage Colors */
   --color-garden-seed: #fef3c7;
@@ -61,35 +58,7 @@
   --shadow-blueprint: 0 0 8px rgba(59, 130, 246, 0.5);
   --shadow-blueprint-hover: 0 10px 30px -5px rgba(59, 130, 246, 0.3);
 
-  /* Callout colors */
-  --callout-note-light: #0969da;
-  --callout-note-bg-light: #ebf5ff;
-  --callout-note-dark: #388bfd;
-  --callout-note-bg-dark: rgba(56, 139, 253, 0.15);
-  --callout-success-light: #1a7f37;
-  --callout-success-bg-light: #e6ffed;
-  --callout-success-dark: #3fb950;
-  --callout-success-bg-dark: rgba(63, 185, 80, 0.15);
-  --callout-warning-light: #9a6700;
-  --callout-warning-bg-light: #fff8c5;
-  --callout-warning-dark: #d29922;
-  --callout-warning-bg-dark: rgba(210, 153, 34, 0.15);
-  --callout-error-light: #d1242f;
-  --callout-error-bg-light: #ffeef0;
-  --callout-error-dark: #f85149;
-  --callout-error-bg-dark: rgba(248, 81, 73, 0.15);
-  --callout-purple-light: #8250df;
-  --callout-purple-bg-light: #fbefff;
-  --callout-purple-dark: #bc8cff;
-  --callout-purple-bg-dark: rgba(188, 140, 255, 0.15);
-  --callout-teal-light: #059669;
-  --callout-teal-bg-light: #e6fffa;
-  --callout-teal-dark: #2dd4bf;
-  --callout-teal-bg-dark: rgba(45, 212, 191, 0.15);
-
-  --font-serif: var(--font-serif);
   --font-sans: var(--font-display);
-  --font-mono: var(--font-mono);
 }
 
 /* Enable class-based dark mode for Tailwind 4 */
@@ -104,7 +73,6 @@
 }
 
 /* --- Masonry Image Gallery --- */
-
 .photo-gallery {
   display: block !important;
   column-count: 1;
@@ -168,7 +136,6 @@
 }
 
 /* --- Single Image & Caption Styling --- */
-
 .prose p:has(img:only-of-type) {
   display: flex !important;
   flex-direction: column !important;
@@ -210,7 +177,6 @@
 }
 
 /* --- Core Layout & Typography --- */
-
 html {
   overflow-y: scroll;
   font-family: "Inter", system-ui, sans-serif;
@@ -218,7 +184,6 @@ html {
   color: var(--color-ink);
 }
 
-/* Instant theme switch support */
 .no-transitions,
 .no-transitions *,
 .no-transitions *::after {
@@ -230,53 +195,6 @@ html.dark {
   color: var(--color-ink-dark);
 }
 
-/* Typography Hierarchy - All Sans-Serif */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Inter", system-ui, sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  color: var(--color-ink);
-  @apply dark:text-ink-dark;
-}
-
-p {
-  font-family: "Inter", system-ui, sans-serif;
-  line-height: 1.75;
-}
-
-/* Small Caps Utility */
-.small-caps {
-  font-variant: all-small-caps;
-  letter-spacing: 0.1em;
-}
-
-/* Tight Tracking for Hero */
-.tight-tracking {
-  letter-spacing: -0.04em;
-}
-
-/* Heatmap Cell */
-.heatmap-cell {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-}
-
-/* Instant theme switch support */
-.no-transitions,
-.no-transitions *,
-.no-transitions *::before,
-.no-transitions *::after {
-  transition: none !important;
-}
-
-html.dark {
-  background-color: var(--color-paper-dark);
-  color: var(--color-ink-dark);
-}
-
-/* Typography Hierarchy - Ledger Style */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 700;
@@ -291,7 +209,14 @@ p {
   line-height: 1.75;
 }
 
-/* --- Semantic Utility Classes --- */
+.small-caps {
+  font-variant: all-small-caps;
+  letter-spacing: 0.1em;
+}
+
+.tight-tracking {
+  letter-spacing: -0.04em;
+}
 
 @utility text-primary {
   @apply text-terminal-dark dark:text-neutral-text-dark;
@@ -307,230 +232,7 @@ p {
   text-transform: uppercase;
 }
 
-@utility metadata-secondary {
-  @apply metadata text-neutral-text-light dark:text-neutral-metadata-dark;
-}
-
-@utility metadata-primary {
-  @apply metadata font-bold text-terminal-dark dark:text-neutral-text-dark;
-}
-
-/* --- Typographic Ledger System --- */
-
-/* Thin dividers for section breaks */
-@utility ledger-divider {
-  border-top: 1px solid #e5e5e5;
-  @apply dark:border-slate-700;
-}
-
-@utility ledger-divider-dotted {
-  border-top: 1px dotted #d4d4d4;
-  @apply dark:border-slate-600;
-}
-
-/* Reading area constraints */
-@utility ledger-prose {
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Vertical rhythm spacing */
-@utility ledger-section {
-  margin-bottom: var(--ledger-section-gap);
-  padding-bottom: var(--ledger-section-gap);
-}
-
-@utility ledger-baseline {
-  line-height: var(--ledger-baseline);
-}
-
-/* Metadata in margins */
-@utility ledger-meta {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #737373;
-  @apply dark:text-slate-400;
-}
-
-@utility ledger-meta-stage-seed {
-  @apply ledger-meta;
-  color: #d97706;
-  @apply dark:text-amber-500;
-}
-
-@utility ledger-meta-stage-sprout {
-  @apply ledger-meta;
-  color: #65a30d;
-  @apply dark:text-lime-500;
-}
-
-@utility ledger-meta-stage-evergreen {
-  @apply ledger-meta;
-  color: #16a34a;
-  @apply dark:text-green-500;
-}
-
-/* Typography hierarchy */
-@utility ledger-heading {
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  color: var(--color-ink);
-  @apply dark:text-ink-dark;
-}
-
-@utility ledger-body {
-  font-family: "Inter", system-ui, sans-serif;
-  line-height: 1.75;
-  color: #475569;
-  @apply dark:text-slate-400;
-}
-
-/* Entry/item styling */
-@utility ledger-entry {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid #f0f0f0;
-  @apply dark:border-slate-800;
-}
-
-/* Use regular CSS class for hover effects instead of @utility */
-.ledger-entry-hover {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid #f0f0f0;
-  transition: background-color 0.15s ease;
-  @apply dark:border-slate-800;
-}
-
-.ledger-entry-hover:hover {
-  background-color: rgba(0, 0, 0, 0.01);
-  @apply dark:bg-slate-800/30;
-}
-
-/* Sidebar context styling */
-@utility ledger-context {
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: #525252;
-  @apply dark:text-slate-400;
-}
-
-@utility ledger-context-heading {
-  font-family: var(--font-display);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #a3a3a3;
-  @apply dark:text-slate-500;
-}
-
-/* Remove card shadows/backgrounds - clean typography */
-@utility no-card {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-/* Interactive typography */
-.ledger-link {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s ease, color 0.15s ease;
-}
-
-.ledger-link:hover {
-  border-bottom-color: currentColor;
-}
-
-/* High-contrast Signal Text */
-@utility text-signal-seed {
-  color: #f59e0b !important;
-}
-@utility text-signal-sprout {
-  color: #84cc16 !important;
-}
-@utility text-signal-evergreen {
-  color: #22c55e !important;
-}
-@utility text-signal-blueprint {
-  color: #4382ff !important;
-}
-
-/* Elevation & Surface Logic */
-@utility surface-elevation {
-  @apply bg-white dark:bg-[#1E293B] border border-[#E2E8F0] dark:border-slate-700;
-}
-
-/* Note: Card styles deprecated - using Typographic Ledger design instead.
-   These classes remain for backwards compatibility but are now minimal. */
-
-.card-interactive {
-  background: transparent;
-  border: none;
-  transition: opacity 0.15s ease;
-}
-
-.card-interactive:hover {
-  opacity: 0.8;
-}
-
-.card-interactive.featured:hover {
-  opacity: 0.8;
-}
-
-/* Legacy surface-elevation - now transparent */
-.surface-elevation {
-  background: transparent;
-  border: none;
-}
-
-/* --- Timeline Components --- */
-
-/* Minimal timeline - subtle vertical line */
-.timeline-thread {
-  position: relative;
-}
-
-.timeline-thread::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  @apply bg-neutral-200 dark:bg-slate-700;
-}
-
-.timeline-marker {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  @apply bg-neutral-300 dark:bg-slate-600;
-  position: relative;
-  z-index: 10;
-}
-
-.timeline-marker[data-stage="seed"] {
-  @apply bg-amber-400 dark:bg-amber-600;
-}
-
-.timeline-marker[data-stage="sprout"] {
-  @apply bg-lime-500 dark:bg-lime-600;
-}
-
-.timeline-marker[data-stage="evergreen"] {
-  @apply bg-green-500 dark:bg-green-600;
-}
-
 /* --- Prose & Link Styling --- */
-
 .prose a {
   @apply text-blueprint-blue hover:opacity-80 font-bold dark:font-extrabold;
 }
@@ -540,23 +242,15 @@ p {
   text-underline-offset: 4px;
 }
 
-/* Internal links (within the garden) - stage-specific colors */
 .prose a.internal-link {
   @apply no-underline transition-all;
   display: inline;
 }
 
-.prose a.internal-link[data-stage="seed"] {
-  @apply text-slate-900 dark:text-white;
-}
-.prose a.internal-link[data-stage="sprout"] {
-  @apply text-slate-900 dark:text-white;
-}
-.prose a.internal-link[data-stage="evergreen"] {
-  @apply text-slate-900 dark:text-white;
-}
+.prose a.internal-link[data-stage="seed"] { @apply text-slate-900 dark:text-white; }
+.prose a.internal-link[data-stage="sprout"] { @apply text-slate-900 dark:text-white; }
+.prose a.internal-link[data-stage="evergreen"] { @apply text-slate-900 dark:text-white; }
 
-/* External links (outside the garden) */
 .prose a.external-link {
   @apply font-display font-semibold text-[#a855f7] hover:opacity-80 transition-opacity inline-flex items-center gap-1 no-underline;
 }
@@ -569,13 +263,6 @@ p {
   @apply ml-0 opacity-100;
 }
 
-/* Remove grey border from images in blog posts */
-.prose img {
-  box-shadow: none;
-  border: none;
-}
-
-/* Inline code styling - only for code not inside pre blocks */
 .prose code:not(pre code) {
   @apply bg-slate-100 px-1.5 py-0.5 rounded text-sm font-mono font-medium;
   color: var(--color-terminal-dark);
@@ -583,6 +270,7 @@ p {
 
 .dark .prose code:not(pre code) {
   @apply bg-slate-900;
+  color: var(--color-neutral-text-dark);
 }
 
 .prose code:not(pre code)::before,
@@ -590,324 +278,101 @@ p {
   content: none;
 }
 
-.dark .prose code:not(pre code) {
-  color: var(--color-neutral-text-dark);
+/* --- Refined Callouts (Editorial In-Column Style) --- */
+
+.prose .markdown-alert {
+  display: grid !important;
+  grid-template-columns: 140px 1fr !important;
+  gap: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 3.5rem 0 !important;
+  overflow: visible !important;
+  width: 100% !important;
 }
 
-/* --- Refined Callouts --- */
-
-.markdown-alert {
-  margin: 1.5rem 0;
-  border-radius: 0.75rem;
-  overflow: hidden;
-  @apply shadow-sm;
+/* Aggressive reset for all blockquote-related decorations from Typography plugin */
+.prose .markdown-alert::before, 
+.prose .markdown-alert::after,
+.prose .markdown-alert blockquote::before, 
+.prose .markdown-alert blockquote::after,
+.prose .markdown-alert p::before,
+.prose .markdown-alert p::after {
+  content: none !important;
 }
 
-.markdown-alert p {
-  @apply m-0 leading-relaxed;
-}
-
-.markdown-alert-title {
+.prose .markdown-alert .margin-anchor {
+  grid-column: 1 !important;
+  padding-right: 2rem !important;
   display: flex !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-  padding: 1rem 1rem 0.5rem 1rem;
-  @apply text-xs font-bold uppercase tracking-wider;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+  padding-top: 4px !important;
 }
 
-.markdown-alert-title::before {
-  font-family: "Material Symbols Outlined" !important;
-  font-size: 20px !important;
-  font-variation-settings:
-    "FILL" 0,
-    "wght" 400,
-    "GRAD" 0,
-    "opsz" 24 !important;
+.prose .markdown-alert .callout-icon {
+  font-family: 'Material Symbols Outlined' !important;
+  font-size: 24px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
   line-height: 1 !important;
   display: inline-block !important;
-  text-transform: none !important;
-  font-style: normal !important;
-  font-variant: normal !important;
+  margin-bottom: 4px !important;
+  color: var(--alert-color, #475569) !important;
 }
 
-.markdown-alert > p:not(.markdown-alert-title) {
-  padding: 0.5rem 1rem 1rem 1rem;
-  font-family: var(--font-serif);
+.prose .markdown-alert .callout-label {
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  line-height: 1 !important;
+  text-align: right !important;
+  display: block !important;
+  color: var(--alert-color, #475569) !important;
+}
+
+.prose .markdown-alert .markdown-alert-content {
+  grid-column: 2 !important;
+  border-left: 4px solid var(--alert-color, #475569) !important;
+  padding-left: 1.75rem !important;
+  min-width: 0 !important;
+}
+
+.prose .markdown-alert .markdown-alert-content p {
+  margin: 0 0 1.25rem 0 !important;
+  font-family: Georgia, serif !important;
+  font-style: italic !important;
+  font-size: 1.15rem !important;
+  line-height: 1.75 !important;
   @apply text-slate-700 dark:text-slate-300;
 }
 
-/* Material Symbols Icons */
-.markdown-alert-note .markdown-alert-title::before {
-  content: "edit_note" !important;
-}
-.markdown-alert-info .markdown-alert-title::before {
-  content: "info" !important;
-}
-.markdown-alert-abstract .markdown-alert-title::before,
-.markdown-alert-summary .markdown-alert-title::before,
-.markdown-alert-tldr .markdown-alert-title::before {
-  content: "description" !important;
+.prose .markdown-alert .markdown-alert-content p:last-child {
+  margin-bottom: 0 !important;
 }
 
-.markdown-alert-success .markdown-alert-title::before {
-  content: "celebration" !important;
-}
-.markdown-alert-todo .markdown-alert-title::before,
-.markdown-alert-check .markdown-alert-title::before,
-.markdown-alert-done .markdown-alert-title::before {
-  content: "check_circle" !important;
-}
-.markdown-alert-tip .markdown-alert-title::before,
-.markdown-alert-hint .markdown-alert-title::before,
-.markdown-alert-idea .markdown-alert-title::before {
-  content: "lightbulb" !important;
-}
-.markdown-alert-important .markdown-alert-title::before {
-  content: "priority_high" !important;
-}
-.markdown-alert-question .markdown-alert-title::before,
-.markdown-alert-help .markdown-alert-title::before,
-.markdown-alert-faq .markdown-alert-title::before {
-  content: "help" !important;
-}
-.markdown-alert-warning .markdown-alert-title::before,
-.markdown-alert-caution .markdown-alert-title::before,
-.markdown-alert-attention .markdown-alert-title::before {
-  content: "warning" !important;
-}
-.markdown-alert-failure .markdown-alert-title::before,
-.markdown-alert-fail .markdown-alert-title::before,
-.markdown-alert-missing .markdown-alert-title::before {
-  content: "cancel" !important;
-}
-.markdown-alert-danger .markdown-alert-title::before {
-  content: "local_fire_department" !important;
-}
-.markdown-alert-error .markdown-alert-title::before {
-  content: "error" !important;
-}
-.markdown-alert-bug .markdown-alert-title::before {
-  content: "pest_control" !important;
-}
-.markdown-alert-example .markdown-alert-title::before {
-  content: "auto_stories" !important;
-}
-.markdown-alert-quote .markdown-alert-title::before,
-.markdown-alert-cite .markdown-alert-title::before {
-  content: "format_quote" !important;
-}
-.markdown-alert-draft .markdown-alert-title::before {
-  content: "stylus_note" !important;
-}
+/* Color Mappings - Based on provided sample codes */
+.markdown-alert-note, .markdown-alert-quote, .markdown-alert-draft { --alert-color: #475569; }
+.dark .markdown-alert-note, .dark .markdown-alert-quote, .dark .markdown-alert-draft { --alert-color: #94a3b8; }
 
-.markdown-alert-wip .markdown-alert-title::before,
-.markdown-alert-work-in-progress .markdown-alert-title::before {
-  content: "construction" !important;
-}
+.markdown-alert-abstract, .markdown-alert-tip, .markdown-alert-success, .markdown-alert-summary { --alert-color: #2d5a27; }
+.dark .markdown-alert-abstract, .dark .markdown-alert-tip, .dark .markdown-alert-success, .dark .markdown-alert-summary { --alert-color: #4ade80; }
 
-/* NOTE, INFO, IMPORTANT, TODO - Blue */
-.markdown-alert-note,
-.markdown-alert-info,
-.markdown-alert-important,
-.markdown-alert-todo {
-  background-color: rgba(59, 130, 246, 0.05) !important;
-  border: 1px solid rgba(59, 130, 246, 0.2) !important;
-}
-.markdown-alert-note .markdown-alert-title,
-.markdown-alert-info .markdown-alert-title,
-.markdown-alert-important .markdown-alert-title,
-.markdown-alert-todo .markdown-alert-title {
-  color: #2563eb !important;
-}
-.dark .markdown-alert-note,
-.dark .markdown-alert-info,
-.dark .markdown-alert-important,
-.dark .markdown-alert-todo {
-  background-color: rgba(59, 130, 246, 0.1) !important;
-  border-color: rgba(59, 130, 246, 0.3) !important;
-}
-.dark .markdown-alert-note .markdown-alert-title,
-.dark .markdown-alert-info .markdown-alert-title,
-.dark .markdown-alert-important .markdown-alert-title,
-.dark .markdown-alert-todo .markdown-alert-title {
-  color: #60a5fa !important;
-}
+.markdown-alert-info, .markdown-alert-todo, .markdown-alert-tldr { --alert-color: #1e3a8a; }
+.dark .markdown-alert-info, .dark .markdown-alert-todo, .dark .markdown-alert-tldr { --alert-color: #60a5fa; }
 
-/* ABSTRACT, SUMMARY, TLDR - Emerald */
-.markdown-alert-abstract,
-.markdown-alert-summary,
-.markdown-alert-tldr {
-  background-color: rgba(16, 185, 129, 0.05) !important;
-  border: 1px solid rgba(16, 185, 129, 0.2) !important;
-}
-.markdown-alert-abstract .markdown-alert-title,
-.markdown-alert-summary .markdown-alert-title,
-.markdown-alert-tldr .markdown-alert-title {
-  color: #059669 !important;
-}
-.dark .markdown-alert-abstract,
-.dark .markdown-alert-summary,
-.dark .markdown-alert-tldr {
-  background-color: rgba(16, 185, 129, 0.1) !important;
-  border-color: rgba(16, 185, 129, 0.3) !important;
-}
-.dark .markdown-alert-abstract .markdown-alert-title,
-.dark .markdown-alert-summary .markdown-alert-title,
-.dark .markdown-alert-tldr .markdown-alert-title {
-  color: #34d399 !important;
-}
+.markdown-alert-important, .markdown-alert-error, .markdown-alert-bug, .markdown-alert-failure { --alert-color: #be123c; }
+.dark .markdown-alert-important, .dark .markdown-alert-error, .dark .markdown-alert-bug, .dark .markdown-alert-failure { --alert-color: #fb7185; }
 
-/* SUCCESS, TIP, DONE, CHECK - Green */
-.markdown-alert-success,
-.markdown-alert-tip,
-.markdown-alert-done,
-.markdown-alert-check {
-  background-color: rgba(34, 197, 94, 0.05) !important;
-  border: 1px solid rgba(34, 197, 94, 0.2) !important;
-}
-.markdown-alert-success .markdown-alert-title,
-.markdown-alert-tip .markdown-alert-title,
-.markdown-alert-done .markdown-alert-title,
-.markdown-alert-check .markdown-alert-title {
-  color: #16a34a !important;
-}
-.dark .markdown-alert-success,
-.dark .markdown-alert-tip,
-.dark .markdown-alert-done,
-.dark .markdown-alert-check {
-  background-color: rgba(34, 197, 94, 0.1) !important;
-  border-color: rgba(34, 197, 94, 0.3) !important;
-}
-.dark .markdown-alert-success .markdown-alert-title,
-.dark .markdown-alert-tip .markdown-alert-title,
-.dark .markdown-alert-done .markdown-alert-title,
-.dark .markdown-alert-check .markdown-alert-title {
-  color: #4ade80 !important;
-}
+.markdown-alert-warning, .markdown-alert-caution { --alert-color: #b45309; }
+.dark .markdown-alert-warning, .dark .markdown-alert-caution { --alert-color: #facc15; }
 
-/* WARNING, CAUTION, ATTENTION, IDEA - Amber */
-.markdown-alert-warning,
-.markdown-alert-caution,
-.markdown-alert-attention,
-.markdown-alert-idea {
-  background-color: rgba(245, 158, 11, 0.05) !important;
-  border: 1px solid rgba(245, 158, 11, 0.2) !important;
-}
-.markdown-alert-warning .markdown-alert-title,
-.markdown-alert-caution .markdown-alert-title,
-.markdown-alert-attention .markdown-alert-title,
-.markdown-alert-idea .markdown-alert-title {
-  color: #d97706 !important;
-}
-.dark .markdown-alert-warning,
-.dark .markdown-alert-caution,
-.dark .markdown-alert-attention,
-.dark .markdown-alert-idea {
-  background-color: rgba(245, 158, 11, 0.1) !important;
-  border-color: rgba(245, 158, 11, 0.3) !important;
-}
-.dark .markdown-alert-warning .markdown-alert-title,
-.dark .markdown-alert-caution .markdown-alert-title,
-.dark .markdown-alert-attention .markdown-alert-title,
-.dark .markdown-alert-idea .markdown-alert-title {
-  color: #fbbf24 !important;
-}
-
-/* FAILURE, FAIL, MISSING, DANGER, ERROR, BUG - Rose/Red */
-.markdown-alert-failure,
-.markdown-alert-fail,
-.markdown-alert-missing,
-.markdown-alert-danger,
-.markdown-alert-error,
-.markdown-alert-bug {
-  background-color: rgba(244, 63, 94, 0.05) !important;
-  border: 1px solid rgba(244, 63, 94, 0.2) !important;
-}
-.markdown-alert-failure .markdown-alert-title,
-.markdown-alert-fail .markdown-alert-title,
-.markdown-alert-missing .markdown-alert-title,
-.markdown-alert-danger .markdown-alert-title,
-.markdown-alert-error .markdown-alert-title,
-.markdown-alert-bug .markdown-alert-title {
-  color: #e11d48 !important;
-}
-.dark .markdown-alert-failure,
-.dark .markdown-alert-fail,
-.dark .markdown-alert-missing,
-.dark .markdown-alert-danger,
-.dark .markdown-alert-error,
-.dark .markdown-alert-bug {
-  background-color: rgba(244, 63, 94, 0.1) !important;
-  border-color: rgba(244, 63, 94, 0.3) !important;
-}
-.dark .markdown-alert-failure .markdown-alert-title,
-.dark .markdown-alert-fail .markdown-alert-title,
-.dark .markdown-alert-missing .markdown-alert-title,
-.dark .markdown-alert-danger .markdown-alert-title,
-.dark .markdown-alert-error .markdown-alert-title,
-.dark .markdown-alert-bug .markdown-alert-title {
-  color: #fb7185 !important;
-}
-
-/* QUESTION, HELP, FAQ, EXAMPLE - Purple */
-.markdown-alert-question,
-.markdown-alert-help,
-.markdown-alert-faq,
-.markdown-alert-example {
-  background-color: rgba(168, 85, 247, 0.05) !important;
-  border: 1px solid rgba(168, 85, 247, 0.2) !important;
-}
-.markdown-alert-question .markdown-alert-title,
-.markdown-alert-help .markdown-alert-title,
-.markdown-alert-faq .markdown-alert-title,
-.markdown-alert-example .markdown-alert-title {
-  color: #9333ea !important;
-}
-.dark .markdown-alert-question,
-.dark .markdown-alert-help,
-.dark .markdown-alert-faq,
-.dark .markdown-alert-example {
-  background-color: rgba(168, 85, 247, 0.1) !important;
-  border-color: rgba(168, 85, 247, 0.3) !important;
-}
-.dark .markdown-alert-question .markdown-alert-title,
-.dark .markdown-alert-help .markdown-alert-title,
-.dark .markdown-alert-faq .markdown-alert-title,
-.dark .markdown-alert-example .markdown-alert-title {
-  color: #c084fc !important;
-}
-
-/* QUOTE, CITE, DRAFT, WIP - Slate */
-.markdown-alert-quote,
-.markdown-alert-cite,
-.markdown-alert-draft,
-.markdown-alert-wip,
-.markdown-alert-work-in-progress {
-  background-color: rgba(100, 116, 139, 0.05) !important;
-  border: 1px solid rgba(100, 116, 139, 0.2) !important;
-}
-.markdown-alert-quote .markdown-alert-title,
-.markdown-alert-cite .markdown-alert-title,
-.markdown-alert-draft .markdown-alert-title,
-.markdown-alert-wip .markdown-alert-title,
-.markdown-alert-work-in-progress .markdown-alert-title {
-  color: #475569 !important;
-}
-.dark .markdown-alert-quote,
-.dark .markdown-alert-cite,
-.dark .markdown-alert-draft,
-.dark .markdown-alert-wip,
-.dark .markdown-alert-work-in-progress {
-  background-color: rgba(100, 116, 139, 0.1) !important;
-  border-color: rgba(100, 116, 139, 0.3) !important;
-}
-.dark .markdown-alert-quote .markdown-alert-title,
-.dark .markdown-alert-cite .markdown-alert-title,
-.dark .markdown-alert-draft .markdown-alert-title,
-.dark .markdown-alert-wip .markdown-alert-title,
-.dark .markdown-alert-work-in-progress .markdown-alert-title {
-  color: #94a3b8 !important;
-}
+.markdown-alert-example, .markdown-alert-question { --alert-color: #7e22ce; }
+.dark .markdown-alert-example, .dark .markdown-alert-question { --alert-color: #c084fc; }
 
 /* --- Filter Buttons --- */
 .filter-btn {
