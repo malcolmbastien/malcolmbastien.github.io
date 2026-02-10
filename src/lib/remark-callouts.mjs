@@ -50,50 +50,50 @@ export function remarkCallouts() {
       const type = rawType.toLowerCase().trim().replace(/\s+/g, '-');
       const icon = iconMap[type] || 'info';
       
-      // Transform <blockquote> into a <div> for the new horizontal design
+      // Transform blockquote to a div container
       node.data = node.data || {};
       node.data.hName = 'div';
       node.data.hProperties = { 
         className: ['markdown-alert', `markdown-alert-${type}`] 
       };
 
-      // Clean up the original text by removing the [!TYPE] marker
+      // Strip the marker
       firstText.value = firstText.value.replace(/^\[!([\w\s-]+)\]/i, '').trim();
 
       let titleText = rawType.trim().toUpperCase();
       if (type === 'wip' || type === 'work-in-progress') titleText = 'WIP';
       if (type === 'tldr') titleText = 'TL;DR';
       
-      // Construct the header (Icon + Label)
+      // Construct Header
       const headerNode = {
-        type: 'paragraph',
+        type: 'div',
         data: {
           hName: 'div',
           hProperties: { className: ['markdown-alert-header'] }
         },
         children: [
           {
-            type: 'text',
-            value: icon,
+            type: 'span',
             data: {
               hName: 'span',
               hProperties: { className: ['material-symbols-outlined', 'markdown-alert-icon'] }
-            }
+            },
+            children: [{ type: 'text', value: icon }]
           },
           {
-            type: 'text',
-            value: titleText,
+            type: 'span',
             data: {
               hName: 'span',
               hProperties: { className: ['markdown-alert-title'] }
-            }
+            },
+            children: [{ type: 'text', value: titleText }]
           }
         ]
       };
 
-      // Construct the content area
+      // Construct Content
       const contentNode = {
-        type: 'paragraph',
+        type: 'div',
         data: {
           hName: 'div',
           hProperties: { className: ['markdown-alert-content'] }
@@ -101,7 +101,6 @@ export function remarkCallouts() {
         children: [...node.children]
       };
 
-      // Set node children to the new vertical stack
       node.children = [headerNode, contentNode];
     });
   };

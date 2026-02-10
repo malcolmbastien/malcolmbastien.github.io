@@ -282,14 +282,15 @@ p {
 
 .prose .markdown-alert {
   position: relative !important;
-  padding-top: 0.75rem !important;
-  margin: 2.5rem 0 !important;
+  padding-top: 0.5rem !important;
+  margin: 3rem 0 !important;
   background: transparent !important;
   border: none !important;
   overflow: visible !important;
+  width: 100% !important;
 }
 
-/* The Horizontal Accent Lines */
+/* Horizontal Accent Divider */
 .prose .markdown-alert::before {
   content: "" !important;
   position: absolute !important;
@@ -298,7 +299,7 @@ p {
   right: 0 !important;
   height: 1px !important;
   background-color: var(--alert-color) !important;
-  opacity: 0.25 !important;
+  opacity: 0.2 !important;
   display: block !important;
 }
 
@@ -313,41 +314,12 @@ p {
   display: block !important;
 }
 
-/* Suppress Typography blockquote side effects */
-.prose .markdown-alert blockquote::before, 
-.prose .markdown-alert blockquote::after,
-.prose .markdown-alert p::before,
-.prose .markdown-alert p::after,
-.prose .markdown-alert em::before,
-.prose .markdown-alert em::after {
-  content: none !important;
-}
-
+/* Specificity override for .prose */
 .prose .markdown-alert .markdown-alert-header {
   display: flex !important;
   align-items: center !important;
   gap: 0.5rem !important;
-  margin-bottom: 0.5rem !important;
-}
-
-.prose .markdown-alert .markdown-alert-icon {
-  font-family: 'Material Symbols Outlined' !important;
-  font-size: 16px !important;
-  line-height: 1 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  color: var(--alert-color) !important;
-  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24 !important;
-}
-
-.prose .markdown-alert .markdown-alert-title {
-  font-family: var(--font-mono) !important;
-  font-size: 9px !important;
-  font-weight: 900 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.15em !important;
-  color: var(--alert-color) !important;
+  margin: 0 0 0.5rem 0 !important;
 }
 
 .prose .markdown-alert .markdown-alert-icon {
@@ -355,6 +327,10 @@ p {
   font-size: 18px !important;
   line-height: 1 !important;
   color: var(--alert-color) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 20 !important;
 }
 
 .prose .markdown-alert .markdown-alert-title {
@@ -364,6 +340,8 @@ p {
   text-transform: uppercase !important;
   letter-spacing: 0.1em !important;
   color: var(--alert-color) !important;
+  line-height: 1 !important;
+  font-style: normal !important;
 }
 
 .prose .markdown-alert .markdown-alert-content p {
@@ -375,63 +353,35 @@ p {
   @apply text-slate-700 dark:text-slate-300;
 }
 
-/* --- Color Mappings (Legacy Semantic Colors) --- */
-
-/* Blue Theme: NOTE, INFO, IMPORTANT, TODO */
-.markdown-alert-note, .markdown-alert-info, .markdown-alert-important, .markdown-alert-todo {
-  --alert-color: #2563eb;
-}
-.dark .markdown-alert-note, .dark .markdown-alert-info, .dark .markdown-alert-important, .dark .markdown-alert-todo {
-  --alert-color: #60a5fa;
+/* Aggressive cleanup */
+.prose .markdown-alert blockquote::before, 
+.prose .markdown-alert blockquote::after,
+.prose .markdown-alert p::before,
+.prose .markdown-alert p::after {
+  content: none !important;
 }
 
-/* Emerald Theme: ABSTRACT, SUMMARY, TLDR */
-.markdown-alert-abstract, .markdown-alert-summary, .markdown-alert-tldr {
-  --alert-color: #059669;
-}
-.dark .markdown-alert-abstract, .dark .markdown-alert-summary, .dark .markdown-alert-tldr {
-  --alert-color: #34d399;
-}
+/* Color Palette Mappings */
+.markdown-alert-note, .markdown-alert-quote, .markdown-alert-draft, .markdown-alert-wip { --alert-color: #3b82f6; }
+.dark .markdown-alert-note, .dark .markdown-alert-quote, .dark .markdown-alert-draft, .dark .markdown-alert-wip { --alert-color: #60a5fa; }
 
-/* Green Theme: SUCCESS, TIP, DONE, CHECK */
-.markdown-alert-success, .markdown-alert-tip, .markdown-alert-done, .markdown-alert-check {
-  --alert-color: #16a34a;
-}
-.dark .markdown-alert-success, .dark .markdown-alert-tip, .dark .markdown-alert-done, .dark .markdown-alert-check {
-  --alert-color: #4ade80;
-}
+.markdown-alert-abstract, .markdown-alert-summary, .markdown-alert-tldr { --alert-color: #10b981; }
+.dark .markdown-alert-abstract, .dark .markdown-alert-summary, .dark .markdown-alert-tldr { --alert-color: #34d399; }
 
-/* Amber Theme: WARNING, CAUTION, ATTENTION, IDEA */
-.markdown-alert-warning, .markdown-alert-caution, .markdown-alert-attention, .markdown-alert-idea {
-  --alert-color: #d97706;
-}
-.dark .markdown-alert-warning, .dark .markdown-alert-caution, .dark .markdown-alert-attention, .dark .markdown-alert-idea {
-  --alert-color: #fbbf24;
-}
+.markdown-alert-success, .markdown-alert-tip, .markdown-alert-done, .markdown-alert-check { --alert-color: #22c55e; }
+.dark .markdown-alert-success, .dark .markdown-alert-tip, .dark .markdown-alert-done, .dark .markdown-alert-check { --alert-color: #4ade80; }
 
-/* Red Theme: FAILURE, ERROR, BUG, DANGER */
-.markdown-alert-failure, .markdown-alert-error, .markdown-alert-bug, .markdown-alert-danger {
-  --alert-color: #e11d48;
-}
-.dark .markdown-alert-failure, .dark .markdown-alert-error, .dark .markdown-alert-bug, .dark .markdown-alert-danger {
-  --alert-color: #fb7185;
-}
+.markdown-alert-info, .markdown-alert-todo { --alert-color: #2563eb; }
+.dark .markdown-alert-info, .dark .markdown-alert-todo { --alert-color: #60a5fa; }
 
-/* Purple Theme: QUESTION, HELP, FAQ, EXAMPLE */
-.markdown-alert-question, .markdown-alert-help, .markdown-alert-faq, .markdown-alert-example {
-  --alert-color: #9333ea;
-}
-.dark .markdown-alert-question, .dark .markdown-alert-help, .dark .markdown-alert-faq, .dark .markdown-alert-example {
-  --alert-color: #c084fc;
-}
+.markdown-alert-important, .markdown-alert-warning, .markdown-alert-caution, .markdown-alert-attention { --alert-color: #f59e0b; }
+.dark .markdown-alert-important, .dark .markdown-alert-warning, .dark .markdown-alert-caution, .dark .markdown-alert-attention { --alert-color: #fbbf24; }
 
-/* Slate Theme: QUOTE, CITE, DRAFT, WIP */
-.markdown-alert-quote, .markdown-alert-cite, .markdown-alert-draft, .markdown-alert-wip {
-  --alert-color: #475569;
-}
-.dark .markdown-alert-quote, .dark .markdown-alert-cite, .dark .markdown-alert-draft, .dark .markdown-alert-wip {
-  --alert-color: #94a3b8;
-}
+.markdown-alert-failure, .markdown-alert-error, .markdown-alert-bug, .markdown-alert-danger { --alert-color: #ef4444; }
+.dark .markdown-alert-failure, .dark .markdown-alert-error, .dark .markdown-alert-bug, .dark .markdown-alert-danger { --alert-color: #fb7185; }
+
+.markdown-alert-example, .markdown-alert-question { --alert-color: #8b5cf6; }
+.dark .markdown-alert-example, .dark .markdown-alert-question { --alert-color: #c084fc; }
 
 /* --- Filter Buttons --- */
 .filter-btn {
