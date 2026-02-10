@@ -303,14 +303,14 @@ p {
   align-items: center !important;
   gap: 0.5rem !important;
   margin-bottom: 0.75rem !important;
-  color: var(--alert-header-color) !important;
+  color: var(--alert-color) !important;
 }
 
-.prose .markdown-alert .markdown-alert-icon {
+.prose .markdown-alert .markdown-alert-icon.material-symbols-outlined {
   font-family: "Material Symbols Outlined" !important;
   font-size: 20px !important;
   line-height: 1 !important;
-  color: inherit !important;
+  color: var(--alert-color) !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -352,7 +352,8 @@ p {
 /* Color Palette Mappings - High Specificity */
 .prose .markdown-alert.markdown-alert-note,
 .prose .markdown-alert.markdown-alert-quote,
-.prose .markdown-alert.markdown-alert-draft {
+.prose .markdown-alert.markdown-alert-draft,
+.prose .markdown-alert.markdown-alert-wip {
   --alert-color: #64748b; /* slate-500 */
   --alert-header-color: #475569; /* slate-600 */
   --alert-bg: rgba(100, 116, 139, 0.05);
