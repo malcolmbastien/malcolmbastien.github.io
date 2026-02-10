@@ -34,40 +34,68 @@ const iconMap = {
   faq: 'help'
 };
 
+// Color definitions for each type
+const colorSchemes = {
+  slate: {
+    bg: 'rgba(100, 116, 139, 0.05)',
+    border: '#64748b',
+    header: '#475569'
+  },
+  amber: {
+    bg: 'rgba(245, 158, 11, 0.05)',
+    border: '#f59e0b',
+    header: '#d97706'
+  },
+  green: {
+    bg: 'rgba(34, 197, 94, 0.05)',
+    border: '#22c55e',
+    header: '#16a34a'
+  },
+  blue: {
+    bg: 'rgba(59, 130, 246, 0.05)',
+    border: '#3b82f6',
+    header: '#2563eb'
+  },
+  red: {
+    bg: 'rgba(239, 68, 68, 0.05)',
+    border: '#ef4444',
+    header: '#dc2626'
+  },
+  purple: {
+    bg: 'rgba(168, 85, 247, 0.05)',
+    border: '#a855f7',
+    header: '#9333ea'
+  }
+};
+
 const colorMap = {
   note: 'slate',
   quote: 'slate',
   draft: 'slate',
   wip: 'slate',
   'work-in-progress': 'slate',
-  
   tip: 'amber',
   idea: 'amber',
   warning: 'amber',
   caution: 'amber',
   attention: 'amber',
   important: 'amber',
-  
   abstract: 'green',
   success: 'green',
   check: 'green',
   done: 'green',
-  
   info: 'blue',
   todo: 'blue',
-  
   error: 'red',
   bug: 'red',
   danger: 'red',
   failure: 'red',
   fail: 'red',
   missing: 'red',
-  
   example: 'purple',
   question: 'purple',
   help: 'purple',
   faq: 'purple',
-  
   summary: 'green',
   tldr: 'green',
   hint: 'amber'
@@ -75,6 +103,8 @@ const colorMap = {
 
 export function remarkCallouts() {
   return (tree) => {
+    let calloutCount = 0;
+    
     visit(tree, 'blockquote', (node) => {
       const firstChild = node.children[0];
       if (!firstChild || firstChild.type !== 'paragraph') return;
@@ -85,10 +115,12 @@ export function remarkCallouts() {
       const match = firstText.value.match(/^\[!([\w\s-]+)\]/i);
       if (!match) return;
 
+      calloutCount++;
       const rawType = match[1];
       const type = rawType.toLowerCase().trim().replace(/\s+/g, '-');
       const iconName = iconMap[type] || 'info';
       const colorTheme = colorMap[type] || 'blue';
+      const colors = colorSchemes[colorTheme];
       
       // Remove the [!TYPE] marker
       firstText.value = firstText.value.replace(/^\[!([\w\s-]+)\]/i, '').trim();
@@ -98,7 +130,7 @@ export function remarkCallouts() {
       if (type === 'wip' || type === 'work-in-progress') titleText = 'WIP';
       if (type === 'tldr') titleText = 'TL;DR';
       
-      // Create inline HTML for the callout with Material Symbols
+      // Create inline HTML for the callout with inline styles
       const contentHtml = node.children
         .map(child => {
           if (child.type === 'paragraph') {
@@ -110,17 +142,9 @@ export function remarkCallouts() {
 
       // Replace the entire blockquote with a div containing the callout
       node.type = 'html';
-      node.value = `
-        <div class="callout-block callout-${colorTheme} my-6 mx-4 sm:mx-6 p-4 sm:p-5 border-l-2">
-          <div class="callout-header flex items-center gap-2 mb-2">
-            <span class="material-symbols-outlined callout-icon">${iconName}</span>
-            <span class="callout-title">${titleText}</span>
-          </div>
-          <div class="callout-content">
-            ${contentHtml}
-          </div>
-        </div>
-      `;
+      node.value = `<div class="callout-block" style="background-color: ${colors.bg}; border-left: 2px solid ${colors.border}; margin: 1.5rem 1rem; padding: 1rem 1.25rem; font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 1.1rem; line-height: 1.6;"><div class="callout-header" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; font-family: 'Inter', system-ui, sans-serif; font-style: normal;"><span class="material-symbols-outlined callout-icon" style="font-size: 20px; color: ${colors.header}; font-variation-settings: 'FILL' 1, 'wght' 400;">${iconName}</span><span class="callout-title" style="font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: ${colors.header};">${titleText}</span></div><div class="callout-content">${contentHtml}</div></div>`;
     });
+    
+    console.log(`[remark-callouts] Transformed ${calloutCount} callouts`);
   };
 }
