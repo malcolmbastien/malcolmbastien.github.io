@@ -252,40 +252,16 @@ p {
    CALLOUTS
    ======================================== */
 
-/* Base callout block - Let inline styles handle everything */
-.callout-block {
-  /* All styles are inline: background, border-left, margin, padding, border-radius */
-}
+/* 
+  NOTE: Callout styles are defined in NoteLayout.astro with !important
+  to ensure they survive production builds and aren't overridden by
+  Tailwind Typography plugin styles.
+*/
 
-/* Callout body text */
+/* Callout body text - ensure proper spacing */
 .callout-body p {
   margin: 0 !important;
   line-height: 1.6 !important;
-}
-
-/* Callout header - flex container for icon and title */
-.callout-header {
-  /* Inline styles: display, align-items, gap, margin-bottom, font-family, font-style */
-}
-
-/* Callout icon - Material Symbol */
-.callout-icon {
-  /* Inline styles: font-size, color, font-variation-settings */
-}
-
-/* Callout title - uppercase label */
-.callout-title {
-  /* Inline styles: font-size, font-weight, text-transform, letter-spacing, color */
-}
-
-/* Callout content - contains the body text */
-.callout-content {
-  /* Body text uses Lora font from parent */
-}
-
-/* Reset paragraph margins inside callouts */
-.callout-content p {
-  margin: 0;
 }
 
 /* ========================================

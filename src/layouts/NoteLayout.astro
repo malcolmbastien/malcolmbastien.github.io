@@ -70,7 +70,7 @@ const getStageBadgeClass = (stage: string) => {
     <main class="max-w-7xl mx-auto px-6 py-12">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <!-- Left Sidebar - Context/Navigation -->
-            <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit pr-4 border-r border-slate-100 dark:border-slate-800">
+            <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit pr-4 border-r border-slate-100 dark:border-slate-800 min-w-0">
                 <div class="space-y-8">
                     <TableOfContents
                         content={noteBody || ""}
@@ -191,6 +191,26 @@ const getStageBadgeClass = (stage: string) => {
             border-left-color: var(--color-primary);
             font-style: italic;
         }
+        
+        /* Callout base styles - production-safe with !important */
+        .prose .callout-block {
+            margin: 1.5rem 0 !important;
+            padding: 1rem 1.25rem !important;
+            border-radius: 0 0.5rem 0.5rem 0 !important;
+            border-left-width: 3px !important;
+            border-left-style: solid !important;
+        }
+        
+        .prose .callout-block[data-callout-type="note"] { background-color: #f8fafc !important; border-left-color: #64748b !important; }
+        .prose .callout-block[data-callout-type="tip"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
+        .prose .callout-block[data-callout-type="warning"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
+        .prose .callout-block[data-callout-type="error"] { background-color: #fef2f2 !important; border-left-color: #ef4444 !important; }
+        .prose .callout-block[data-callout-type="danger"] { background-color: #fef2f2 !important; border-left-color: #ef4444 !important; }
+        .prose .callout-block[data-callout-type="info"] { background-color: #eff6ff !important; border-left-color: #3b82f6 !important; }
+        .prose .callout-block[data-callout-type="success"] { background-color: #f0fdf4 !important; border-left-color: #22c55e !important; }
+        .prose .callout-block[data-callout-type="abstract"] { background-color: #f0fdf4 !important; border-left-color: #22c55e !important; }
+        .prose .callout-block[data-callout-type="example"] { background-color: #faf5ff !important; border-left-color: #a855f7 !important; }
+        .prose .callout-block[data-callout-type="quote"] { background-color: #f8fafc !important; border-left-color: #64748b !important; }
         
         .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
             font-family: "Inter", system-ui, sans-serif;
