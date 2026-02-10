@@ -222,54 +222,37 @@ p { font-family: var(--font-serif); line-height: 1.75; }
 
 .prose code:not(pre code)::before, .prose code:not(pre code)::after { content: none; }
 
-/* --- Refined Callouts (Horizontal Accent Style) --- */
+/* --- Refined Callouts (Block Style) --- */
 
 .prose .markdown-alert {
-  position: relative !important;
-  padding-top: 0.5rem !important;
-  margin: 3rem 0 !important;
-  background: transparent !important;
-  border: none !important;
+  margin: 3rem 1.5rem !important;
+  padding: 1.5rem !important;
+  background-color: var(--alert-bg) !important;
+  border-left: 2px solid var(--alert-color) !important;
   overflow: visible !important;
-  width: 100% !important;
+  border-top: none !important; /* Remove previous horizontal border */
 }
 
-/* Horizontal Accent Divider */
-.prose .markdown-alert::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  height: 1px !important;
-  background-color: var(--alert-color, #475569) !important;
-  opacity: 0.25 !important;
-  display: block !important;
-}
-
+/* Remove horizontal lines from previous version */
+.prose .markdown-alert::before,
 .prose .markdown-alert::after {
-  content: "" !important;
-  position: absolute !important;
-  top: -1px !important;
-  left: 0 !important;
-  width: 64px !important;
-  height: 4px !important;
-  background-color: var(--alert-color, #475569) !important;
-  display: block !important;
+  display: none !important;
 }
 
+/* Specificity override for .prose */
 .prose .markdown-alert .markdown-alert-header {
   display: flex !important;
   align-items: center !important;
   gap: 0.5rem !important;
-  margin: 0 0 0.5rem 0 !important;
+  margin-bottom: 0.75rem !important;
+  color: var(--alert-header-color) !important;
 }
 
 .prose .markdown-alert .markdown-alert-icon {
   font-family: 'Material Symbols Outlined' !important;
-  font-size: 18px !important;
+  font-size: 20px !important;
   line-height: 1 !important;
-  color: var(--alert-color, #475569) !important;
+  color: inherit !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -277,70 +260,97 @@ p { font-family: var(--font-serif); line-height: 1.75; }
 }
 
 .prose .markdown-alert .markdown-alert-title {
-  font-family: var(--font-mono) !important;
+  font-family: var(--font-display) !important;
   font-size: 10px !important;
   font-weight: 800 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.1em !important;
-  color: var(--alert-color, #475569) !important;
+  letter-spacing: 0.2em !important;
+  color: var(--alert-color) !important;
   line-height: 1 !important;
   font-style: normal !important;
 }
 
 .prose .markdown-alert .markdown-alert-content p {
   margin: 0 !important;
-  font-family: "Source Serif 4", Georgia, serif !important;
+  font-family: "Lora", Georgia, serif !important;
   font-style: italic !important;
   font-size: 1.15rem !important;
   line-height: 1.65 !important;
   @apply text-slate-700 dark:text-slate-300;
 }
 
-/* Cleanup */
+/* Aggressive cleanup for Typography plugin blockquote markers */
 .prose .markdown-alert blockquote::before, 
 .prose .markdown-alert blockquote::after,
 .prose .markdown-alert p::before,
 .prose .markdown-alert p::after { content: none !important; }
 
-/* Color Palette Mappings - High Specificity to avoid inheritance issues */
-.prose .markdown-alert.markdown-alert-note, 
-.prose .markdown-alert.markdown-alert-quote, 
-.prose .markdown-alert.markdown-alert-cite, 
-.prose .markdown-alert.markdown-alert-draft, 
-.prose .markdown-alert.markdown-alert-wip { --alert-color: #475569; }
+/* Color Palette Mappings - High Specificity */
+.prose .markdown-alert.markdown-alert-note,
+.prose .markdown-alert.markdown-alert-quote,
+.prose .markdown-alert.markdown-alert-draft {
+  --alert-color: #64748b; /* slate-500 */
+  --alert-header-color: #475569; /* slate-600 */
+  --alert-bg: rgba(100, 116, 139, 0.05);
+}
 
-.prose .markdown-alert.markdown-alert-abstract, 
-.prose .markdown-alert.markdown-alert-summary, 
-.prose .markdown-alert.markdown-alert-tldr,
 .prose .markdown-alert.markdown-alert-tip,
-.prose .markdown-alert.markdown-alert-idea { --alert-color: #2d5a27; }
+.prose .markdown-alert.markdown-alert-idea {
+  --alert-color: #f59e0b; /* amber-500 */
+  --alert-header-color: #d97706; /* amber-600 */
+  --alert-bg: rgba(245, 158, 11, 0.05);
+}
 
-.prose .markdown-alert.markdown-alert-info, 
-.prose .markdown-alert.markdown-alert-todo { --alert-color: #1e3a8a; }
+.prose .markdown-alert.markdown-alert-abstract,
+.prose .markdown-alert.markdown-alert-success,
+.prose .markdown-alert.markdown-alert-check {
+  --alert-color: #22c55e; /* green-500 */
+  --alert-header-color: #16a34a; /* green-600 */
+  --alert-bg: rgba(34, 197, 94, 0.05);
+}
 
-.prose .markdown-alert.markdown-alert-important, 
-.prose .markdown-alert.markdown-alert-attention { --alert-color: #be123c; }
+.prose .markdown-alert.markdown-alert-info,
+.prose .markdown-alert.markdown-alert-todo {
+  --alert-color: #3b82f6; /* blue-500 */
+  --alert-header-color: #2563eb; /* blue-600 */
+  --alert-bg: rgba(59, 130, 246, 0.05);
+}
 
-.prose .markdown-alert.markdown-alert-warning, 
-.prose .markdown-alert.markdown-alert-caution { --alert-color: #b45309; }
+.prose .markdown-alert.markdown-alert-important,
+.prose .markdown-alert.markdown-alert-warning,
+.prose .markdown-alert.markdown-alert-attention {
+  --alert-color: #f59e0b; /* amber-500 */
+  --alert-header-color: #d97706; /* amber-600 */
+  --alert-bg: rgba(245, 158, 11, 0.05);
+}
 
-.prose .markdown-alert.markdown-alert-failure, 
-.prose .markdown-alert.markdown-alert-error, 
-.prose .markdown-alert.markdown-alert-bug, 
-.prose .markdown-alert.markdown-alert-danger { --alert-color: #ef4444; }
+.prose .markdown-alert.markdown-alert-error,
+.prose .markdown-alert.markdown-alert-bug,
+.prose .markdown-alert.markdown-alert-danger,
+.prose .markdown-alert.markdown-alert-failure {
+  --alert-color: #ef4444; /* red-500 */
+  --alert-header-color: #dc2626; /* red-600 */
+  --alert-bg: rgba(239, 68, 68, 0.05);
+}
 
-.prose .markdown-alert.markdown-alert-example, 
-.prose .markdown-alert.markdown-alert-question { --alert-color: #7e22ce; }
+.prose .markdown-alert.markdown-alert-example,
+.prose .markdown-alert.markdown-alert-question {
+  --alert-color: #a855f7; /* purple-500 */
+  --alert-header-color: #9333ea; /* purple-600 */
+  --alert-bg: rgba(168, 85, 247, 0.05);
+}
 
-/* Dark Mode Color Overrides */
-.dark .prose .markdown-alert.markdown-alert-note { --alert-color: #94a3b8; }
-.dark .prose .markdown-alert.markdown-alert-abstract, 
-.dark .prose .markdown-alert.markdown-alert-tip,
-.dark .prose .markdown-alert.markdown-alert-idea { --alert-color: #4ade80; }
-.dark .prose .markdown-alert.markdown-alert-info { --alert-color: #60a5fa; }
-.dark .prose .markdown-alert.markdown-alert-important { --alert-color: #fb7185; }
-.dark .prose .markdown-alert.markdown-alert-warning { --alert-color: #facc15; }
-.dark .prose .markdown-alert.markdown-alert-example { --alert-color: #c084fc; }
+/* Dark Mode Overrides */
+.dark .prose .markdown-alert {
+  --alert-bg: rgba(255, 255, 255, 0.03) !important;
+}
+.dark .prose .markdown-alert.markdown-alert-note { --alert-header-color: #94a3b8; }
+.dark .prose .markdown-alert.markdown-alert-tip { --alert-header-color: #fbbf24; }
+.dark .prose .markdown-alert.markdown-alert-abstract { --alert-header-color: #4ade80; }
+.dark .prose .markdown-alert.markdown-alert-info { --alert-header-color: #60a5fa; }
+.dark .prose .markdown-alert.markdown-alert-important { --alert-header-color: #fbbf24; }
+.dark .prose .markdown-alert.markdown-alert-error { --alert-header-color: #f87171; }
+.dark .prose .markdown-alert.markdown-alert-example { --alert-header-color: #c084fc; }
 
 /* --- Filter Buttons --- */
 .filter-btn {
