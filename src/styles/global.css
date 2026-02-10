@@ -247,7 +247,32 @@ p {
    CALLOUTS
    ======================================== */
 
-/* Callout content paragraph reset */
+/* Base callout block - styles are inline but defined here for reference */
+.callout-block {
+  /* Inline styles: background, border, margin, padding, font-family, font-style, font-size, line-height */
+}
+
+/* Callout header - flex container for icon and title */
+.callout-header {
+  /* Inline styles: display, align-items, gap, margin-bottom, font-family, font-style */
+}
+
+/* Callout icon - Material Symbol */
+.callout-icon {
+  /* Inline styles: font-size, color, font-variation-settings */
+}
+
+/* Callout title - uppercase label */
+.callout-title {
+  /* Inline styles: font-size, font-weight, text-transform, letter-spacing, color */
+}
+
+/* Callout content - contains the body text */
+.callout-content {
+  /* Body text uses Lora font from parent */
+}
+
+/* Reset paragraph margins inside callouts */
 .callout-content p {
   margin: 0;
 }
