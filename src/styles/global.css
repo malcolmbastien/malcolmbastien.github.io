@@ -4,6 +4,11 @@
 @theme {
   --color-primary: #2563eb;
   
+  /* Stage Colors for Internal Links */
+  --stage-seed-underline: #f97316;
+  --stage-sprout-underline: #ca8a04;
+  --stage-evergreen-underline: #16a34a;
+  
   /* Typographic Ledger - Paper Tones */
   --color-background-light: #fdfdfd;
   --color-background-dark: #0f172a;
