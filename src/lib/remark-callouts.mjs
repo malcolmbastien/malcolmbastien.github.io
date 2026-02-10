@@ -34,6 +34,45 @@ const iconMap = {
   faq: 'help'
 };
 
+const colorMap = {
+  note: 'slate',
+  quote: 'slate',
+  draft: 'slate',
+  wip: 'slate',
+  'work-in-progress': 'slate',
+  
+  tip: 'amber',
+  idea: 'amber',
+  warning: 'amber',
+  caution: 'amber',
+  attention: 'amber',
+  important: 'amber',
+  
+  abstract: 'green',
+  success: 'green',
+  check: 'green',
+  done: 'green',
+  
+  info: 'blue',
+  todo: 'blue',
+  
+  error: 'red',
+  bug: 'red',
+  danger: 'red',
+  failure: 'red',
+  fail: 'red',
+  missing: 'red',
+  
+  example: 'purple',
+  question: 'purple',
+  help: 'purple',
+  faq: 'purple',
+  
+  summary: 'green',
+  tldr: 'green',
+  hint: 'amber'
+};
+
 export function remarkCallouts() {
   return (tree) => {
     visit(tree, 'blockquote', (node) => {
@@ -48,60 +87,40 @@ export function remarkCallouts() {
 
       const rawType = match[1];
       const type = rawType.toLowerCase().trim().replace(/\s+/g, '-');
-      const icon = iconMap[type] || 'info';
+      const iconName = iconMap[type] || 'info';
+      const colorTheme = colorMap[type] || 'blue';
       
-      // Transform blockquote to a div container
-      node.data = node.data || {};
-      node.data.hName = 'div';
-      node.data.hProperties = { 
-        className: ['markdown-alert', `markdown-alert-${type}`] 
-      };
-
-      // Strip the marker
+      // Remove the [!TYPE] marker
       firstText.value = firstText.value.replace(/^\[!([\w\s-]+)\]/i, '').trim();
 
-      let titleText = rawType.trim().toUpperCase();
+      let titleText = rawType.trim();
+      titleText = titleText.charAt(0).toUpperCase() + titleText.slice(1).toLowerCase();
       if (type === 'wip' || type === 'work-in-progress') titleText = 'WIP';
       if (type === 'tldr') titleText = 'TL;DR';
       
-      // Construct Header
-      const headerNode = {
-        type: 'div',
-        data: {
-          hName: 'div',
-          hProperties: { className: ['markdown-alert-header'] }
-        },
-        children: [
-          {
-            type: 'span',
-            data: {
-              hName: 'span',
-              hProperties: { className: ['material-symbols-outlined', 'markdown-alert-icon'] }
-            },
-            children: [{ type: 'text', value: icon }]
-          },
-          {
-            type: 'span',
-            data: {
-              hName: 'span',
-              hProperties: { className: ['markdown-alert-title'] }
-            },
-            children: [{ type: 'text', value: titleText }]
+      // Create inline HTML for the callout with Material Symbols
+      const contentHtml = node.children
+        .map(child => {
+          if (child.type === 'paragraph') {
+            return `<p>${child.children.map(c => c.value || '').join('')}</p>`;
           }
-        ]
-      };
+          return '';
+        })
+        .join('');
 
-      // Construct Content
-      const contentNode = {
-        type: 'div',
-        data: {
-          hName: 'div',
-          hProperties: { className: ['markdown-alert-content'] }
-        },
-        children: [...node.children]
-      };
-
-      node.children = [headerNode, contentNode];
+      // Replace the entire blockquote with a div containing the callout
+      node.type = 'html';
+      node.value = `
+        <div class="callout-block callout-${colorTheme} my-6 mx-4 sm:mx-6 p-4 sm:p-5 border-l-2">
+          <div class="callout-header flex items-center gap-2 mb-2">
+            <span class="material-symbols-outlined callout-icon">${iconName}</span>
+            <span class="callout-title">${titleText}</span>
+          </div>
+          <div class="callout-content">
+            ${contentHtml}
+          </div>
+        </div>
+      `;
     });
   };
 }
