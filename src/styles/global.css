@@ -252,9 +252,15 @@ p {
    CALLOUTS
    ======================================== */
 
-/* Base callout block - styles are inline but defined here for reference */
+/* Base callout block - Let inline styles handle everything */
 .callout-block {
-  /* Inline styles: background, border, margin, padding, font-family, font-style, font-size, line-height */
+  /* All styles are inline: background, border-left, margin, padding, border-radius */
+}
+
+/* Callout body text */
+.callout-body p {
+  margin: 0 !important;
+  line-height: 1.6 !important;
 }
 
 /* Callout header - flex container for icon and title */

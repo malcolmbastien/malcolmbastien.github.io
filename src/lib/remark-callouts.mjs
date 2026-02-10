@@ -34,40 +34,6 @@ const iconMap = {
   faq: 'help'
 };
 
-// Color definitions for each type
-const colorSchemes = {
-  slate: {
-    bg: 'rgba(100, 116, 139, 0.05)',
-    border: '#64748b',
-    header: '#475569'
-  },
-  amber: {
-    bg: 'rgba(245, 158, 11, 0.05)',
-    border: '#f59e0b',
-    header: '#d97706'
-  },
-  green: {
-    bg: 'rgba(34, 197, 94, 0.05)',
-    border: '#22c55e',
-    header: '#16a34a'
-  },
-  blue: {
-    bg: 'rgba(59, 130, 246, 0.05)',
-    border: '#3b82f6',
-    header: '#2563eb'
-  },
-  red: {
-    bg: 'rgba(239, 68, 68, 0.05)',
-    border: '#ef4444',
-    header: '#dc2626'
-  },
-  purple: {
-    bg: 'rgba(168, 85, 247, 0.05)',
-    border: '#a855f7',
-    header: '#9333ea'
-  }
-};
-
 const colorMap = {
   note: 'slate',
   quote: 'slate',
@@ -101,50 +67,102 @@ const colorMap = {
   hint: 'amber'
 };
 
+const colorStyles = {
+  slate: { bg: '#f8fafc', border: '#64748b', text: '#475569' },
+  amber: { bg: '#fffbeb', border: '#f59e0b', text: '#d97706' },
+  green: { bg: '#f0fdf4', border: '#22c55e', text: '#16a34a' },
+  blue: { bg: '#eff6ff', border: '#3b82f6', text: '#2563eb' },
+  red: { bg: '#fef2f2', border: '#ef4444', text: '#dc2626' },
+  purple: { bg: '#faf5ff', border: '#a855f7', text: '#9333ea' }
+};
+
 export function remarkCallouts() {
-  return (tree) => {
-    let calloutCount = 0;
+  return (tree, file) => {
+    console.log(`[remark-callouts] ==================== STARTING ${file.basename || 'unknown'} ====================`);
+    console.log(`[remark-callouts] Tree type: ${tree.type}`);
+    console.log(`[remark-callouts] Tree children count: ${tree.children?.length || 0}`);
     
-    visit(tree, 'blockquote', (node) => {
-      const firstChild = node.children[0];
-      if (!firstChild || firstChild.type !== 'paragraph') return;
-
-      const firstText = firstChild.children[0];
-      if (!firstText || firstText.type !== 'text') return;
-
-      const match = firstText.value.match(/^\[!([\w\s-]+)\]/i);
-      if (!match) return;
-
-      calloutCount++;
-      const rawType = match[1];
-      const type = rawType.toLowerCase().trim().replace(/\s+/g, '-');
-      const iconName = iconMap[type] || 'info';
-      const colorTheme = colorMap[type] || 'blue';
-      const colors = colorSchemes[colorTheme];
+    let calloutCount = 0;
+    let blockquoteCount = 0;
+    
+    // Log all blockquotes found
+    visit(tree, 'blockquote', (node, index) => {
+      blockquoteCount++;
+      console.log(`[remark-callouts] Found blockquote #${blockquoteCount} at index ${index}`);
+      console.log(`[remark-callouts] Blockquote children: ${node.children?.length || 0}`);
       
-      // Remove the [!TYPE] marker
-      firstText.value = firstText.value.replace(/^\[!([\w\s-]+)\]/i, '').trim();
-
-      let titleText = rawType.trim();
-      titleText = titleText.charAt(0).toUpperCase() + titleText.slice(1).toLowerCase();
-      if (type === 'wip' || type === 'work-in-progress') titleText = 'WIP';
-      if (type === 'tldr') titleText = 'TL;DR';
-      
-      // Create inline HTML for the callout with inline styles
-      const contentHtml = node.children
-        .map(child => {
-          if (child.type === 'paragraph') {
-            return `<p>${child.children.map(c => c.value || '').join('')}</p>`;
-          }
-          return '';
-        })
-        .join('');
-
-      // Replace the entire blockquote with a div containing the callout
-      node.type = 'html';
-      node.value = `<div class="callout-block" style="background-color: ${colors.bg}; border-left: 2px solid ${colors.border}; margin: 1.5rem 1rem; padding: 1rem 1.25rem; font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 1.1rem; line-height: 1.6;"><div class="callout-header" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; font-family: 'Inter', system-ui, sans-serif; font-style: normal;"><span class="material-symbols-outlined callout-icon" style="font-size: 20px; color: ${colors.header}; font-variation-settings: 'FILL' 1, 'wght' 400;">${iconName}</span><span class="callout-title" style="font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: ${colors.header};">${titleText}</span></div><div class="callout-content">${contentHtml}</div></div>`;
+      if (node.children && node.children[0]) {
+        console.log(`[remark-callouts] First child type: ${node.children[0].type}`);
+        if (node.children[0].children && node.children[0].children[0]) {
+          console.log(`[remark-callouts] First text type: ${node.children[0].children[0].type}`);
+          const text = node.children[0].children[0].value || '';
+          console.log(`[remark-callouts] Text preview: "${text.substring(0, 30)}..."`);
+        }
+      }
     });
     
-    console.log(`[remark-callouts] Transformed ${calloutCount} callouts`);
+    console.log(`[remark-callouts] Total blockquotes found: ${blockquoteCount}`);
+    
+    // Now process them
+    visit(tree, 'blockquote', (node) => {
+      try {
+        const firstChild = node.children[0];
+        if (!firstChild || firstChild.type !== 'paragraph') return;
+
+        const firstText = firstChild.children[0];
+        if (!firstText || firstText.type !== 'text') return;
+
+        const textValue = firstText.value || '';
+        const match = textValue.match(/^\[!([\w\s-]+)\]/i);
+        if (!match) return;
+
+        calloutCount++;
+        const rawType = match[1];
+        const type = rawType.toLowerCase().trim().replace(/\s+/g, '-');
+        const iconName = iconMap[type] || 'info';
+        const colorTheme = colorMap[type] || 'blue';
+        const colors = colorStyles[colorTheme];
+        
+        // Remove the [!TYPE] marker
+        firstText.value = textValue.replace(/^\[!([\w\s-]+)\]/i, '').trim();
+
+        let titleText = rawType.trim();
+        titleText = titleText.charAt(0).toUpperCase() + titleText.slice(1).toLowerCase();
+        if (type === 'wip' || type === 'work-in-progress') titleText = 'WIP';
+        if (type === 'tldr') titleText = 'TL;DR';
+        
+        // Collect content
+        const contentParts = [];
+        for (const child of node.children) {
+          if (child.type === 'paragraph') {
+            const text = child.children.map(c => c.value || '').join('');
+            if (text) {
+              contentParts.push(`<p style="margin: 0; color: #334155; line-height: 1.6;">${text}</p>`);
+            }
+          }
+        }
+        
+        const calloutHtml = `<div class="callout-block" data-callout-type="${type}" style="background-color: ${colors.bg}; border-left: 3px solid ${colors.border}; margin: 1.5rem 0; padding: 1rem 1.25rem; border-radius: 0 0.5rem 0.5rem 0;">
+  <div class="callout-header" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+    <span class="material-symbols-outlined" style="font-size: 20px; color: ${colors.text}; font-variation-settings: 'FILL' 1;">${iconName}</span>
+    <span class="callout-title" style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: ${colors.text};">${titleText}</span>
+  </div>
+  <div class="callout-body">
+    ${contentParts.join('\n')}
+  </div>
+</div>`;
+
+        node.type = 'html';
+        node.value = calloutHtml;
+        node.children = undefined;
+        
+        console.log(`[remark-callouts] ✓ Transformed: ${type}`);
+        
+      } catch (error) {
+        console.error(`[remark-callouts] Error:`, error.message);
+      }
+    });
+    
+    console.log(`[remark-callouts] ==================== FINISHED: ${calloutCount} callouts ====================`);
   };
 }
