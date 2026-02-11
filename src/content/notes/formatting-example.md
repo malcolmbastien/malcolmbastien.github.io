@@ -178,7 +178,3 @@ A list:
 
 > [!DRAFT]
 > This is a shorter, callout-style draft for specific notes.
-
-### Inline Drafts
-
-You can even use :draft[inline draft text] for quick notes within a sentence.

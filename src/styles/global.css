@@ -21,7 +21,7 @@
 
   /* Typography System */
   --font-display: "Inter", system-ui, sans-serif;
-  --font-serif: "Inter", system-ui, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
   --font-mono: "JetBrains Mono", "Roboto Mono", monospace;
   
   --ledger-baseline: 1.75rem;
@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p { 
-  font-family: var(--font-serif); 
+  font-family: var(--font-display); 
   line-height: 1.75; 
 }
 
@@ -271,6 +271,7 @@ p {
 .callout-body p {
   margin: 0 !important;
   line-height: 1.6 !important;
+  font-family: var(--font-serif);
 }
 
 /* ========================================
