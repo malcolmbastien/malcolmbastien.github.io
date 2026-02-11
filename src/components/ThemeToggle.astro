@@ -36,9 +36,11 @@
     // Force a reflow to ensure the class is applied before transitions are re-enabled
     window.getComputedStyle(root).opacity;
     
-    requestAnimationFrame(() => {
+    // Use a small timeout to ensure the browser has a chance to apply the theme change
+    // without triggering any transitions.
+    setTimeout(() => {
       root.classList.remove("no-transitions");
-    });
+    }, 0);
   }
 
   // Set up the event listener

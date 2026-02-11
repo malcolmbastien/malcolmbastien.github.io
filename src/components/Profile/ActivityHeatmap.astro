@@ -100,7 +100,7 @@ const svgHeight = 7 * (SQUARE_SIZE + SQUARE_GAP) - SQUARE_GAP + 10;
                                         width={SQUARE_SIZE}
                                         height={SQUARE_SIZE}
                                         rx="1"
-                                        class={`${getColor(dayData.count)} activity-day transition-all duration-300 hover:stroke-primary hover:stroke-2 ${dayData.count > 0 ? "cursor-pointer" : ""}`}
+                                        class={`${getColor(dayData.count)} activity-day hover:stroke-primary hover:stroke-2 ${dayData.count > 0 ? "cursor-pointer" : ""}`}
                                         data-date={dayData.date}
                                         data-count={dayData.count}
                                         onclick={
@@ -237,7 +237,7 @@ const svgHeight = 7 * (SQUARE_SIZE + SQUARE_GAP) - SQUARE_GAP + 10;
 
                     rect.setAttribute(
                         "class",
-                        `activity-day ${getColor(dayData.count)} transition-all duration-300 ${dayData.count > 0 ? "cursor-pointer" : ""}`,
+                        `activity-day ${getColor(dayData.count)} ${dayData.count > 0 ? "cursor-pointer" : ""}`,
                     );
 
                     if (dayData.count > 0) {

@@ -141,6 +141,15 @@
 }
 
 /* --- Base Styles --- */
+.no-transitions,
+.no-transitions *,
+.no-transitions *::before,
+.no-transitions *::after {
+  transition: none !important;
+  transition-duration: 0s !important;
+  animation: none !important;
+}
+
 html {
   overflow-y: scroll;
   font-family: "Inter", system-ui, sans-serif;
