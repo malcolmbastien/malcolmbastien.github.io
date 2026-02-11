@@ -88,6 +88,16 @@ const getStageBadgeClass = (stage: string) => {
                 class={`lg:col-span-9 max-w-3xl ${isNoteDraft ? "note-is-draft relative" : ""}`}
                 data-pagefind-body
             >
+                <!-- Draft Banner -->
+                {isNoteDraft && (
+                    <div class="draft-banner mb-6 px-4 py-3 border-l-4 border-dashed border-slate-400 dark:border-slate-500 bg-slate-50 dark:bg-slate-800/50 rounded-r">
+                        <div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                            <span class="material-symbols-outlined text-sm">edit_note</span>
+                            <span class="text-sm font-medium">Draft Post — This content is a work in progress</span>
+                        </div>
+                    </div>
+                )}
+
                 <!-- Article Header -->
                 <header class="mb-12 pb-8 border-b border-slate-100 dark:border-slate-800">
                     <!-- Metadata line -->
@@ -192,7 +202,7 @@ const getStageBadgeClass = (stage: string) => {
             font-style: italic;
             font-family: var(--font-serif);
         }
-        
+
         /* Callout base styles - production-safe with !important */
         .prose .callout-block {
             margin: 1.5rem 0 !important;
@@ -201,7 +211,7 @@ const getStageBadgeClass = (stage: string) => {
             border-left-width: 3px !important;
             border-left-style: solid !important;
         }
-        
+
         .prose .callout-block[data-callout-type="note"] { background-color: #f8fafc !important; border-left-color: #64748b !important; }
         .prose .callout-block[data-callout-type="tip"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
         .prose .callout-block[data-callout-type="important"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
@@ -218,9 +228,9 @@ const getStageBadgeClass = (stage: string) => {
         .prose .callout-block[data-callout-type="failure"] { background-color: #fef2f2 !important; border-left-color: #ef4444 !important; }
         .prose .callout-block[data-callout-type="bug"] { background-color: #fef2f2 !important; border-left-color: #ef4444 !important; }
         .prose .callout-block[data-callout-type="idea"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
-        .prose .callout-block[data-callout-type="draft"] { background-color: #f8fafc !important; border-left-color: #64748b !important; }
-        .prose .callout-block[data-callout-type="wip"] { background-color: #f8fafc !important; border-left-color: #64748b !important; }
-        
+        .prose .callout-block[data-callout-type="draft"] { background-color: #f8fafc !important; border-left-color: #64748b !important; border-left-style: dashed !important; }
+        .prose .callout-block[data-callout-type="wip"] { background-color: #f8fafc !important; border-left-color: #64748b !important; border-left-style: dashed !important; }
+
         /* Dark mode callout overrides */
         .dark .prose .callout-block[data-callout-type="note"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; }
         .dark .prose .callout-block[data-callout-type="tip"] { background-color: #451a03 !important; border-left-color: #f59e0b !important; }
@@ -238,14 +248,14 @@ const getStageBadgeClass = (stage: string) => {
         .dark .prose .callout-block[data-callout-type="failure"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; }
         .dark .prose .callout-block[data-callout-type="bug"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; }
         .dark .prose .callout-block[data-callout-type="idea"] { background-color: #451a03 !important; border-left-color: #f59e0b !important; }
-        .dark .prose .callout-block[data-callout-type="draft"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; }
-        .dark .prose .callout-block[data-callout-type="wip"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="draft"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; border-left-style: dashed !important; }
+        .dark .prose .callout-block[data-callout-type="wip"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; border-left-style: dashed !important; }
 
         /* Dark mode internal text colors */
         .dark .prose .callout-block .callout-body p {
             color: #d1d5db !important;
         }
-        
+
         .dark .prose .callout-block[data-callout-type="note"] .callout-header span,
         .dark .prose .callout-block[data-callout-type="draft"] .callout-header span,
         .dark .prose .callout-block[data-callout-type="wip"] .callout-header span { color: #94a3b8 !important; }
@@ -264,20 +274,14 @@ const getStageBadgeClass = (stage: string) => {
         .dark .prose .callout-block[data-callout-type="example"] .callout-header span,
         .dark .prose .callout-block[data-callout-type="question"] .callout-header span { color: #c084fc !important; }
         .dark .prose .callout-block[data-callout-type="quote"] .callout-header span { color: #94a3b8 !important; }
-        
+
         .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
             font-family: "Inter", system-ui, sans-serif;
             @apply text-slate-900 dark:text-slate-100 font-bold tracking-tight scroll-mt-24;
         }
-        
+
         .prose h2 { @apply text-2xl mt-12 mb-6; }
         .prose h3 { @apply text-xl mt-8 mb-4; }
-
-        /* Note Styles */
-        .note-is-draft::after {
-            content: "DRAFT_NODE";
-            @apply absolute top-4 right-4 bg-primary text-white text-xs font-mono font-bold px-3 py-1 z-50;
-        }
 
         /* Internal Links */
         .prose a.internal-link {
@@ -341,6 +345,48 @@ const getStageBadgeClass = (stage: string) => {
         .prose a.inline-tag {
             @apply text-xs font-medium text-slate-400 hover:text-primary transition-colors;
             text-decoration: none !important;
+        }
+
+        /* Draft Container - :::draft directive */
+        .prose .draft-container {
+            margin: 1.5rem 0 !important;
+            padding: 1rem 1.25rem !important;
+            border-radius: 0 0.5rem 0.5rem 0 !important;
+            border-left: 3px dashed #94a3b8 !important;
+            background-color: #f8fafc !important;
+            position: relative !important;
+        }
+
+        .prose .draft-container::before {
+            content: "DRAFT" !important;
+            position: absolute !important;
+            top: -0.75rem !important;
+            right: 1rem !important;
+            font-size: 10px !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.1em !important;
+            color: #64748b !important;
+            background-color: #f8fafc !important;
+            padding: 0 0.5rem !important;
+        }
+
+        .dark .prose .draft-container {
+            background-color: #1e293b !important;
+            border-left-color: #64748b !important;
+        }
+
+        .dark .prose .draft-container::before {
+            color: #94a3b8 !important;
+            background-color: #1e293b !important;
+        }
+
+        .prose .draft-container * {
+            opacity: 0.85 !important;
+        }
+
+        .prose .draft-container p:last-child {
+            margin-bottom: 0 !important;
         }
     </style>
 </Layout>
