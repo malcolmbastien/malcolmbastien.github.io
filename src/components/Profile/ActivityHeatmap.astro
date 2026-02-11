@@ -49,9 +49,9 @@ const SQUARE_GAP = 3;
 
 function getColor(count: number) {
     if (count === 0) return "fill-stone-200 dark:fill-slate-800";
-    if (count === 1) return "fill-stone-300 dark:fill-slate-700";
-    if (count === 2) return "fill-[#93c5fd] dark:fill-slate-600";
-    if (count >= 3) return "fill-[#2563eb] dark:fill-[#2563eb]";
+    if (count === 1) return "fill-blue-300 dark:fill-blue-900";
+    if (count === 2) return "fill-blue-500 dark:fill-blue-700";
+    if (count >= 3) return "fill-blue-600 dark:fill-blue-600";
     return "fill-stone-200 dark:fill-slate-800";
 }
 
@@ -74,8 +74,8 @@ const svgHeight = 7 * (SQUARE_SIZE + SQUARE_GAP) - SQUARE_GAP + 10;
     <div class="flex justify-end items-center gap-2 mb-3">
         <div class="flex items-center gap-1">
             <div class="w-2.5 h-2.5 rounded-sm bg-stone-200 dark:bg-slate-800"></div>
-            <div class="w-2.5 h-2.5 rounded-sm bg-stone-300 dark:bg-slate-700"></div>
-            <div class="w-2.5 h-2.5 rounded-sm bg-[#93c5fd] dark:bg-slate-600"></div>
+            <div class="w-2.5 h-2.5 rounded-sm bg-blue-300 dark:bg-blue-900"></div>
+            <div class="w-2.5 h-2.5 rounded-sm bg-blue-500 dark:bg-blue-700"></div>
             <div class="w-2.5 h-2.5 rounded-sm bg-primary dark:bg-primary"></div>
         </div>
     </div>
@@ -133,11 +133,11 @@ const svgHeight = 7 * (SQUARE_SIZE + SQUARE_GAP) - SQUARE_GAP + 10;
 
         // Function to get Tailwind classes for colors
         function getColor(count) {
-            if (count === 0) return "fill-stone-200 dark:fill-slate-800";
-            if (count === 1) return "fill-stone-300 dark:fill-slate-700";
-            if (count === 2) return "fill-[#93c5fd] dark:fill-slate-600";
-            if (count >= 3) return "fill-[#2563eb] dark:fill-[#2563eb]";
-            return "fill-stone-200 dark:fill-slate-800";
+          if (count === 0) return "fill-stone-200 dark:fill-slate-800";
+          if (count === 1) return "fill-blue-300 dark:fill-blue-900";
+          if (count === 2) return "fill-blue-500 dark:fill-blue-700";
+          if (count >= 3) return "fill-blue-600 dark:fill-blue-600";
+          return "fill-stone-200 dark:fill-slate-800";
         }
 
         // Function to update heatmap for a specific year
