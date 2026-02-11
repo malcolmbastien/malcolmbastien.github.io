@@ -203,14 +203,66 @@ const getStageBadgeClass = (stage: string) => {
         
         .prose .callout-block[data-callout-type="note"] { background-color: #f8fafc !important; border-left-color: #64748b !important; }
         .prose .callout-block[data-callout-type="tip"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
+        .prose .callout-block[data-callout-type="important"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
         .prose .callout-block[data-callout-type="warning"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
         .prose .callout-block[data-callout-type="error"] { background-color: #fef2f2 !important; border-left-color: #ef4444 !important; }
         .prose .callout-block[data-callout-type="danger"] { background-color: #fef2f2 !important; border-left-color: #ef4444 !important; }
         .prose .callout-block[data-callout-type="info"] { background-color: #eff6ff !important; border-left-color: #3b82f6 !important; }
+        .prose .callout-block[data-callout-type="todo"] { background-color: #eff6ff !important; border-left-color: #3b82f6 !important; }
         .prose .callout-block[data-callout-type="success"] { background-color: #f0fdf4 !important; border-left-color: #22c55e !important; }
         .prose .callout-block[data-callout-type="abstract"] { background-color: #f0fdf4 !important; border-left-color: #22c55e !important; }
         .prose .callout-block[data-callout-type="example"] { background-color: #faf5ff !important; border-left-color: #a855f7 !important; }
         .prose .callout-block[data-callout-type="quote"] { background-color: #f8fafc !important; border-left-color: #64748b !important; }
+        .prose .callout-block[data-callout-type="question"] { background-color: #faf5ff !important; border-left-color: #a855f7 !important; }
+        .prose .callout-block[data-callout-type="failure"] { background-color: #fef2f2 !important; border-left-color: #ef4444 !important; }
+        .prose .callout-block[data-callout-type="bug"] { background-color: #fef2f2 !important; border-left-color: #ef4444 !important; }
+        .prose .callout-block[data-callout-type="idea"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
+        .prose .callout-block[data-callout-type="draft"] { background-color: #f8fafc !important; border-left-color: #64748b !important; }
+        .prose .callout-block[data-callout-type="wip"] { background-color: #f8fafc !important; border-left-color: #64748b !important; }
+        
+        /* Dark mode callout overrides */
+        .dark .prose .callout-block[data-callout-type="note"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="tip"] { background-color: #451a03 !important; border-left-color: #f59e0b !important; }
+        .dark .prose .callout-block[data-callout-type="important"] { background-color: #451a03 !important; border-left-color: #f59e0b !important; }
+        .dark .prose .callout-block[data-callout-type="warning"] { background-color: #451a03 !important; border-left-color: #f59e0b !important; }
+        .dark .prose .callout-block[data-callout-type="error"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; }
+        .dark .prose .callout-block[data-callout-type="danger"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; }
+        .dark .prose .callout-block[data-callout-type="info"] { background-color: #172554 !important; border-left-color: #3b82f6 !important; }
+        .dark .prose .callout-block[data-callout-type="todo"] { background-color: #172554 !important; border-left-color: #3b82f6 !important; }
+        .dark .prose .callout-block[data-callout-type="success"] { background-color: #052e16 !important; border-left-color: #22c55e !important; }
+        .dark .prose .callout-block[data-callout-type="abstract"] { background-color: #052e16 !important; border-left-color: #22c55e !important; }
+        .dark .prose .callout-block[data-callout-type="example"] { background-color: #3b0764 !important; border-left-color: #a855f7 !important; }
+        .dark .prose .callout-block[data-callout-type="quote"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="question"] { background-color: #3b0764 !important; border-left-color: #a855f7 !important; }
+        .dark .prose .callout-block[data-callout-type="failure"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; }
+        .dark .prose .callout-block[data-callout-type="bug"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; }
+        .dark .prose .callout-block[data-callout-type="idea"] { background-color: #451a03 !important; border-left-color: #f59e0b !important; }
+        .dark .prose .callout-block[data-callout-type="draft"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="wip"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; }
+
+        /* Dark mode internal text colors */
+        .dark .prose .callout-block .callout-body p {
+            color: #d1d5db !important;
+        }
+        
+        .dark .prose .callout-block[data-callout-type="note"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="draft"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="wip"] .callout-header span { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="tip"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="important"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="idea"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="warning"] .callout-header span { color: #fbbf24 !important; }
+        .dark .prose .callout-block[data-callout-type="error"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="failure"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="bug"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="danger"] .callout-header span { color: #f87171 !important; }
+        .dark .prose .callout-block[data-callout-type="info"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="todo"] .callout-header span { color: #60a5fa !important; }
+        .dark .prose .callout-block[data-callout-type="success"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="abstract"] .callout-header span { color: #4ade80 !important; }
+        .dark .prose .callout-block[data-callout-type="example"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="question"] .callout-header span { color: #c084fc !important; }
+        .dark .prose .callout-block[data-callout-type="quote"] .callout-header span { color: #94a3b8 !important; }
         
         .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
             font-family: "Inter", system-ui, sans-serif;
