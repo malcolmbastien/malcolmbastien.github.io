@@ -52,6 +52,8 @@ Use different header levels to organize your content:
 
 [Link to external site](https://example.com)
 
+Inline topic links: #blogging
+
 #### Code Blocks
 
 ```javascript

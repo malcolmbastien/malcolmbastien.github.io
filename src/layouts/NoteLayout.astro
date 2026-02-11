@@ -343,8 +343,12 @@ const getStageBadgeClass = (stage: string) => {
 
         /* Inline Topic Links */
         .prose a.inline-tag {
-            @apply text-xs font-medium text-slate-400 hover:text-primary transition-colors;
+            @apply inline-block text-sm font-semibold text-slate-600 hover:text-primary bg-slate-100 hover:bg-slate-200 rounded px-2 py-0.5 mx-0.5 transition-colors;
             text-decoration: none !important;
+        }
+
+        .dark .prose a.inline-tag {
+            @apply text-slate-300 bg-slate-800 hover:bg-slate-700;
         }
 
         /* Draft Container - :::draft directive */
