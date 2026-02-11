@@ -123,12 +123,14 @@ const getStageBadgeClass = (stage: string) => {
 
                                             {/* Optional cover image */}
                                             {event.note.data.cover && (
-                                                <div class="mb-6 max-w-xl">
-                                                    <Image
-                                                        src={event.note.data.cover}
-                                                        alt={event.note.data.coverImageAlt || event.title}
-                                                        class="w-full h-auto rounded-lg"
-                                                    />
+                                                <div class="mb-6 max-w-2xl mx-auto">
+                                                    <div class="bg-stone-200 dark:bg-slate-700/50 p-4 rounded-xl">
+                                                        <Image
+                                                            src={event.note.data.cover}
+                                                            alt={event.note.data.coverImageAlt || event.title}
+                                                            class="w-full h-auto rounded-lg"
+                                                        />
+                                                    </div>
                                                 </div>
                                             )}
 
