@@ -2,6 +2,28 @@ import { simpleGit } from 'simple-git';
 
 const git = simpleGit();
 
+// Flag to track if we've already tried to unshallow the repo
+let hasUnshallowed = false;
+
+async function ensureHistory() {
+	if (hasUnshallowed) return;
+	
+	try {
+		const isShallow = await git.revparse(['--is-shallow-repository']);
+		if (isShallow === 'true') {
+			console.log('Shallow repository detected. Attempting to fetch history...');
+			try {
+				await git.fetch(['--unshallow']);
+			} catch (e) {
+				await git.fetch(['--depth=100']);
+			}
+		}
+	} catch (e) {
+		console.warn('Could not check/unshallow repository:', e);
+	}
+	hasUnshallowed = true;
+}
+
 export interface CommitInfo {
 	date: string;
 	message: string;
@@ -19,11 +41,15 @@ export async function getFileHistory(filePath: string): Promise<CommitInfo[]> {
 		return historyCache.get(filePath)!;
 	}
 
+	await ensureHistory();
+
 	try {
 		// Optimization: Use a single git log command with stats to avoid multiple git show calls
 		// This significantly improves performance for files with many commits
+		// Added --follow to track history through renames
 		const rawLog = await git.raw([
 			'log',
+			'--follow',
 			'--pretty=format:%H|%ad|%s',
 			'--date=iso',
 			'--stat',
@@ -115,6 +141,8 @@ let batchDatesCache: Map<string, FileDates> | null = null;
 
 export async function getBatchFileDates(): Promise<Map<string, FileDates>> {
 	if (batchDatesCache) return batchDatesCache;
+
+	await ensureHistory();
 
 	try {
 		// Get all commits and files in src/content/notes
