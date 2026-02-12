@@ -1,6 +1,43 @@
 import { simpleGit } from 'simple-git';
+import { readFileSync, existsSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 const git = simpleGit();
+
+// Cache file path (relative to project root)
+const CACHE_FILE_PATH = join(process.cwd(), '.astro', 'changelog-cache.json');
+
+interface CacheEntry {
+	date: string;
+	message: string;
+	insertions: number;
+	deletions: number;
+	hash: string;
+}
+
+interface ChangelogCache {
+	generatedAt: string;
+	entries: Record<string, CacheEntry[]>;
+}
+
+let fileCache: ChangelogCache | null = null;
+
+function loadCache(): ChangelogCache | null {
+	if (fileCache) return fileCache;
+	
+	try {
+		if (existsSync(CACHE_FILE_PATH)) {
+			const content = readFileSync(CACHE_FILE_PATH, 'utf-8');
+			fileCache = JSON.parse(content) as ChangelogCache;
+			console.log(`[git-history] Loaded changelog cache from ${CACHE_FILE_PATH}`);
+			return fileCache;
+		}
+	} catch (e) {
+		console.warn('[git-history] Could not load cache file:', e);
+	}
+	return null;
+}
 
 // Flag to track if we've already tried to unshallow the repo
 let hasUnshallowed = false;
@@ -58,6 +95,14 @@ export async function getFileHistory(filePath: string): Promise<CommitInfo[]> {
 		]);
 
 		if (!rawLog) {
+			// Try to load from cache if git returns empty (e.g., on Vercel with shallow clone)
+			const cache = loadCache();
+			if (cache?.entries[filePath]) {
+				console.log(`[git-history] Using cached history for ${filePath}`);
+				const cachedCommits = cache.entries[filePath];
+				historyCache.set(filePath, cachedCommits);
+				return cachedCommits;
+			}
 			return [];
 		}
 
@@ -155,6 +200,29 @@ export async function getBatchFileDates(): Promise<Map<string, FileDates>> {
 			'--',
 			'src/content/notes'
 		]);
+
+		// If git returns empty, try to build from cache
+		if (!raw || raw.trim().length === 0) {
+			const cache = loadCache();
+			if (cache) {
+				console.log('[git-history] Using cached data for batch dates');
+				const results = new Map<string, FileDates>();
+				
+				for (const [filePath, commits] of Object.entries(cache.entries)) {
+					if (commits.length > 0) {
+						const dates = commits.map(c => new Date(c.date));
+						const created = new Date(Math.min(...dates.map(d => d.getTime())));
+						const updated = new Date(Math.max(...dates.map(d => d.getTime())));
+						const allDates = new Set(dates.map(d => d.toISOString().split('T')[0]));
+						
+						results.set(filePath, { created, updated, allDates });
+					}
+				}
+				
+				batchDatesCache = results;
+				return results;
+			}
+		}
 
 		const results = new Map<string, FileDates>();
 		const lines = raw.split('\n');

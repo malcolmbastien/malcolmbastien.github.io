@@ -6,7 +6,7 @@ tags:
   - Agile
   - Collaboration
   - Dependencies
-  - Team Topologies
+  - Team-Topologies
 ---
 In the wake of Agile's success and the benefits it offers organizations to help them achieve faster delivery, happier customers, and more engaged teams, "Collaboration" has become a buzzword. However, the way I see most teams practice collaboration is not in the sense of collaborating with customers; their focus is on the internal collaboration necessary to get work out the door. Because it helps speed up delivery, teams get the idea that collaboration is a universal positive, and they promote it so much that they forget to ask why they need so much collaboration to get anything done in the first place.
 

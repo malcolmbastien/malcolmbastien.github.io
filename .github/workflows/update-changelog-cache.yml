@@ -1,0 +1,54 @@
+name: Update Changelog Cache
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/content/notes/**'
+
+concurrency:
+  group: changelog-cache
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  update-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate changelog cache
+        run: npm run generate-changelog
+
+      - name: Check for changes
+        id: check
+        run: |
+          if git diff --quiet .astro/changelog-cache.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push cache
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .astro/changelog-cache.json
+          git commit -m "chore: update changelog cache [skip ci]"
+          git push

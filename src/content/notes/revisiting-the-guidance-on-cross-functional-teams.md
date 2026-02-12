@@ -5,7 +5,7 @@ publishedDate: 2023-05-16
 tags:
   - Agile
   - EventStorming
-  - Team Topologies
+  - Team-Topologies
 ---
 Like most things with Agile, the idea that teams should be "cross-functional" gets shared almost like an eternal truth, but it's an old idea that deserves a deeper look. I will explore different perspectives on cross-functional teams and the Three Amigos model, what benefits they're supposed to provide, and their gaps. I will also review how streamed-aligned teams might address some of the challenges that organizations with cross-functional teams still struggle with.
 
