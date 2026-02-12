@@ -1,7 +1,6 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
 import NoteLayout from '../../layouts/NoteLayout.astro';
-import { getFileDates } from '../../lib/git-history';
 
 export async function getStaticPaths() {
 	const notes = await getCollection('notes');
@@ -27,10 +26,8 @@ interface Props {
 
 const { entry, backlinkedNotes } = Astro.props;
 const { Content, headings } = await entry.render();
-const filePath = `src/content/notes/${entry.id}`;
-const { created, updated } = await getFileDates(filePath);
 ---
 
-<NoteLayout frontmatter={entry.data} filePath={filePath} gitCreated={created} gitUpdated={updated} backlinkedNotes={backlinkedNotes} noteBody={entry.body} headings={headings}>
+<NoteLayout frontmatter={entry.data} backlinkedNotes={backlinkedNotes} noteBody={entry.body} headings={headings}>
 	<Content />
 </NoteLayout>

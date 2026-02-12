@@ -1,6 +1,5 @@
 ---
 import Layout from "./Layout.astro";
-import NoteHistory from "../components/History/NoteHistory.astro";
 import TableOfContents from "../components/Navigation/TableOfContents.astro";
 import AboutAuthor from "../components/AboutAuthor.astro";
 import Backlinks from "../components/Backlinks.astro";
@@ -23,23 +22,18 @@ interface Props {
         featured?: boolean;
         cover?: any;
     };
-    filePath: string;
-    gitCreated?: Date | null;
-    gitUpdated?: Date | null;
     backlinkedNotes: any[];
     noteBody?: string;
     headings?: any[];
 }
 
-const { frontmatter, filePath, gitCreated, gitUpdated, backlinkedNotes, noteBody, headings } =
+const { frontmatter, backlinkedNotes, noteBody, headings } =
     Astro.props;
 
 const readingTime = noteBody ? getReadingTime(noteBody) : "";
 const stageData = getStageData(frontmatter.stage);
 
-const createdDate = frontmatter.publishedDate || gitCreated || new Date();
-const hasBeenUpdated =
-    gitUpdated && gitUpdated.getTime() > createdDate.getTime() + 1000 * 60 * 60;
+const createdDate = frontmatter.publishedDate || new Date();
 
 const isNoteDraft = frontmatter.draft === true;
 
@@ -64,7 +58,6 @@ const getStageBadgeClass = (stage: string) => {
     image={frontmatter.featuredImage?.src || frontmatter.cover?.src}
     type="article"
     publishedTime={createdDate.toISOString()}
-    modifiedTime={hasBeenUpdated ? gitUpdated!.toISOString() : undefined}
     tags={frontmatter.tags}
 >
     <main class="max-w-7xl mx-auto px-6 py-12">
@@ -108,11 +101,7 @@ const getStageBadgeClass = (stage: string) => {
                         <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                             {formatDate(createdDate)}
                         </span>
-                        {hasBeenUpdated && (
-                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                                Updated {formatDate(gitUpdated!)}
-                            </span>
-                        )}
+
                         {readingTime && (
                             <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                                 {readingTime}
@@ -158,13 +147,7 @@ const getStageBadgeClass = (stage: string) => {
                     )}
                 </div>
 
-                <!-- Article Footer - Changelog -->
-                <footer class="mt-16 pt-8 border-t border-slate-100 dark:border-slate-800">
-                    <div class="small-caps text-[11px] font-bold tracking-widest text-slate-500 mb-6">
-                        Changelog
-                    </div>
-                    <NoteHistory filePath={filePath} />
-                </footer>
+
             </article>
         </div>
     </main>

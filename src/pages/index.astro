@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import ActivityHeatmap from "../components/Profile/ActivityHeatmap.astro";
 import HeroBanner from "../components/HeroBanner.astro";
 import YearNavigation from "../components/YearNavigation.astro";
 import NoteTimeline from "../components/NoteTimeline.astro";
@@ -9,54 +8,28 @@ import SiteFooter from "../components/SiteFooter.astro";
 import GardenStats from "../components/Profile/GardenStats.astro";
 import TopicFocus from "../components/Profile/TopicFocus.astro";
 
-import { getBatchFileDates, type FileDates } from "../lib/git-history";
 import { getStageData } from "../lib/theme";
 
 const allNotes = await getCollection("notes");
-const batchDates = (await getBatchFileDates()) as Map<string, FileDates>;
 
-// Fetch git dates for all notes to create timeline events
-const notesWithDates = allNotes.map((note) => {
-    const id = note.id;
-    const dates = batchDates.get(`src/content/notes/${id}`) ||
-                  batchDates.get(`src/content/notes/${id}.md`) ||
-                  batchDates.get(`src/content/notes/${id}.mdx`);
-
-    const created = dates?.created;
-    const allGitDates = dates?.allDates || new Set<string>();
-
-    const displayDate = note.data.publishedDate || created;
-
-    return {
+// Use publishedDate from frontmatter for timeline events
+const notesWithDates = allNotes
+    .filter((note) => !!note.data.publishedDate)
+    .map((note) => ({
         ...note,
-        displayDate,
-        allGitDates,
-    };
-}).filter((note): note is typeof note & { displayDate: Date } => !!note.displayDate);
+        displayDate: note.data.publishedDate!,
+    }));
 
 // Create timeline events
 const events: any[] = [];
 notesWithDates.forEach((note) => {
     const displayDate = note.displayDate as Date;
-    const displayDateStr = displayDate.toISOString().split("T")[0];
 
     events.push({
         type: "created",
         note,
         date: displayDate,
         title: note.data.title,
-    });
-
-    note.allGitDates.forEach((dateStr: string) => {
-        if (dateStr !== displayDateStr) {
-            const updateDate = new Date(dateStr + "T12:00:00");
-            events.push({
-                type: "updated",
-                note,
-                date: updateDate,
-                title: note.data.title,
-            });
-        }
     });
 });
 
@@ -230,6 +203,11 @@ const getStageKeylineClass = (stage: string) => {
     }
 };
 
+const getStageBackgroundClass = (stage: string) => {
+    const stageData = getStageData(stage);
+    return stageData.colors.bgAccent;
+};
+
 const getStageCardClass = (stage: string) => {
     // All pinned notes use the same subtle styling regardless of stage
     return 'bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700';
@@ -287,16 +265,7 @@ const getStageCardClass = (stage: string) => {
 
             <!-- Main Content -->
             <div class="lg:col-span-8">
-                {/* Activity Heatmap */}
-                <section class="mb-16">
-                    <div class="flex items-center justify-between mb-6">
-                        <span id="heatmap-year-label" class="text-base font-semibold">Activity in {currentYearValue}</span>
-                    </div>
-                    <ActivityHeatmap
-                        year={currentYearValue}
-                        events={sortedEvents as any}
-                    />
-                </section>
+
 
                 {/* Pinned Notes Section */}
                 {
@@ -308,7 +277,7 @@ const getStageCardClass = (stage: string) => {
                             </div>
                             <div>
                                 {pinnedNotes.map((note, index) => (
-                                    <a href={`/notes/${note.id.replace('.md', '')}`} class={`group block relative my-4 py-2 px-5 border-l-4 ${getStageKeylineClass(note.data.stage)} hover:bg-stone-100 dark:hover:bg-slate-800 transition-colors cursor-pointer`}>
+                                    <a href={`/notes/${note.id.replace('.md', '')}`} class={`group block relative my-4 py-5 px-5 border-l-4 ${getStageKeylineClass(note.data.stage)} hover:bg-stone-100 dark:hover:bg-slate-800 transition-colors cursor-pointer rounded-r`}>
                                         <div class="flex items-center justify-between mb-4">
                                             <div class="flex items-center gap-3">
                                                 <span class={`text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider ${getStageBadgeClass(note.data.stage)}`}>

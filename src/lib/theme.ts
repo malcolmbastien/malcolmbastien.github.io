@@ -16,9 +16,9 @@ export const stages = {
       border: "border-orange-600",
       underline: "#f97316", // orange-500
       accent: "text-orange-600 dark:text-orange-400",
-      bgAccent: "bg-orange-500/10",
-      dotShadow: "bg-orange-500 shadow-orange-500/20"
-    }
+      bgAccent: "bg-orange-500/5",
+      dotShadow: "bg-orange-500 shadow-orange-500/20",
+    },
   },
   sprout: {
     label: "Sprout",
@@ -30,9 +30,9 @@ export const stages = {
       border: "border-yellow-600",
       underline: "#ca8a04", // yellow-600
       accent: "text-yellow-600 dark:text-yellow-400",
-      bgAccent: "bg-yellow-500/10",
-      dotShadow: "bg-yellow-500 shadow-yellow-500/20"
-    }
+      bgAccent: "bg-yellow-500/5",
+      dotShadow: "bg-yellow-500 shadow-yellow-500/20",
+    },
   },
   evergreen: {
     label: "Evergreen",
@@ -44,10 +44,10 @@ export const stages = {
       border: "border-green-600",
       underline: "#16a34a", // green-600
       accent: "text-green-600 dark:text-green-400",
-      bgAccent: "bg-green-600/10",
-      dotShadow: "bg-green-500 shadow-green-500/20"
-    }
-  }
+      bgAccent: "bg-green-600/5",
+      dotShadow: "bg-green-500 shadow-green-500/20",
+    },
+  },
 };
 
 export type StageKey = keyof typeof stages;
