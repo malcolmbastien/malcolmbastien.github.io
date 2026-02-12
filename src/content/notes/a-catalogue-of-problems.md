@@ -1,6 +1,7 @@
 ---
 title: A Catalogue of Problems
 stage: seed        # seed | sprout | evergreen
+publishedDate: 2026-01-23
 tags:
   - Teams
 summary: Looking at the different kinds of problems teams face.

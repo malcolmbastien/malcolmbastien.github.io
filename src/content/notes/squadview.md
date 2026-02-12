@@ -1,6 +1,7 @@
 ---
 title: SquadView
 stage: sprout        # seed | sprout | evergreen
+publishedDate: 2026-02-11
 tags:
   - Tools
   - Agile

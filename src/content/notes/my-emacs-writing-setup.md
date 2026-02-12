@@ -1,6 +1,7 @@
 ---
 title: My Emacs Writing Setup
 stage: seed        # seed | sprout | evergreen
+publishedDate: 2026-01-16
 tags:
   - Emacs
   - Writing

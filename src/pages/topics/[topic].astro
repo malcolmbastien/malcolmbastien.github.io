@@ -28,7 +28,7 @@ const sortedNotes = filteredNotes.sort(
 );
 
 const latestDate = sortedNotes.length > 0
-    ? sortedNotes[0].data.publishedDate?.toLocaleDateString("en-US", { month: 'short', year: 'numeric' })
+    ? sortedNotes[0].data.publishedDate?.toLocaleDateString("en-US", { month: 'short', year: 'numeric', timeZone: 'UTC' })
     : "N/A";
 
 // Group notes by stage
@@ -109,7 +109,7 @@ const stages = ['evergreen', 'sprout', 'seed'].map(id => {
                                                         {note.data.stage}
                                                     </span>
                                                     <time class="text-slate-400 text-xs font-mono">
-                                                        {note.data.publishedDate?.toLocaleDateString("en-US", { month: 'short', year: 'numeric' })}
+                                                        {note.data.publishedDate?.toLocaleDateString("en-US", { month: 'short', year: 'numeric', timeZone: 'UTC' })}
                                                     </time>
                                                 </div>
 

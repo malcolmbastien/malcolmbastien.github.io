@@ -1,6 +1,7 @@
 ---
 title: Burnup Forecaster
 stage: seed # seed | sprout | evergreen
+publishedDate: 2026-01-26
 tags:
 - Tools
 - Agile
