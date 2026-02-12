@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { statSync } from "node:fs";
 import Layout from "../layouts/Layout.astro";
 import HeroBanner from "../components/HeroBanner.astro";
 import YearNavigation from "../components/YearNavigation.astro";
@@ -12,13 +13,23 @@ import { getStageData } from "../lib/theme";
 
 const allNotes = await getCollection("notes");
 
-// Use publishedDate from frontmatter for timeline events
+// Use publishedDate from frontmatter, or fall back to file creation date
 const notesWithDates = allNotes
-    .filter((note) => !!note.data.publishedDate)
-    .map((note) => ({
-        ...note,
-        displayDate: note.data.publishedDate!,
-    }));
+    .filter((note) => !note.data.draft)
+    .map((note) => {
+        let displayDate: Date;
+        if (note.data.publishedDate) {
+            displayDate = note.data.publishedDate;
+        } else {
+            // Fall back to file birthtime (creation date)
+            const stats = statSync(note.filePath || `src/content/notes/${note.id}`);
+            displayDate = stats.birthtime;
+        }
+        return {
+            ...note,
+            displayDate,
+        };
+    });
 
 // Create timeline events
 const events: any[] = [];
