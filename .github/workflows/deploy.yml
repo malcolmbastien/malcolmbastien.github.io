@@ -37,15 +37,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Generate changelog cache (if missing)
-        run: |
-          if [ ! -f ".astro/changelog-cache.json" ]; then
-            echo "Cache not found, generating..."
-            npm run generate-changelog
-          else
-            echo "Cache found, skipping generation"
-          fi
-
       - name: Build
         run: npm run build
 

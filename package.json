@@ -8,8 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "postbuild": "pagefind --site dist",
-    "astro": "astro",
-    "generate-changelog": "node scripts/generate-changelog-cache.mjs"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.6.1",
@@ -25,7 +24,6 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
-    "glob": "^13.0.2",
     "pagefind": "^1.4.0",
     "typescript": "^5.9.3"
   }
