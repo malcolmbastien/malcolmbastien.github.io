@@ -105,34 +105,40 @@ const getStageBadgeClass = (stage: string) => {
                                                  </div>
                                              </div>
 
-                                             {/* Title */}
-                                              <h3 class="text-3xl font-bold text-stone-900 dark:text-white mb-4 leading-tight group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
-                                                    {event.title}
-                                            </h3>
+                                             {/* Content wrapper - flex layout when featured with image */}
+                                             <div class={`${event.note.data.cover ? 'flex flex-col md:flex-row md:gap-8' : ''}`}>
+                                                 {/* Text content */}
+                                                 <div class={`${event.note.data.cover ? 'flex-1' : ''}`}>
+                                                     {/* Title */}
+                                                     <h3 class="text-3xl font-bold text-stone-900 dark:text-white mb-4 leading-tight group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
+                                                         {event.title}
+                                                     </h3>
 
-                                            {/* Summary */}
-                                            {event.note.data.summary && (
-                                                <p class="text-stone-600 dark:text-stone-400 leading-relaxed max-w-2xl mb-6">
-                                                    {event.note.data.summary}
-                                                </p>
-                                            )}
+                                                     {/* Summary */}
+                                                     {event.note.data.summary && (
+                                                         <p class="text-stone-600 dark:text-stone-400 leading-relaxed max-w-2xl mb-6">
+                                                             {event.note.data.summary}
+                                                         </p>
+                                                     )}
+                                                 </div>
 
-                                            {/* Optional cover image */}
-                                            {event.note.data.cover && (
-                                                <div class="mb-6 max-w-2xl mx-auto">
-                                                    <div class="bg-stone-200 dark:bg-slate-700/50 p-4 rounded-xl">
-                                                        <Image
-                                                            src={event.note.data.cover}
-                                                            alt={event.note.data.coverImageAlt || event.title}
-                                                            class="w-full h-auto rounded-lg"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            )}
+                                                 {/* Optional cover image - right side */}
+                                                 {event.note.data.cover && (
+                                                     <div class="md:w-64 lg:w-80 flex-shrink-0 mb-6 md:mb-0">
+                                                         <Image
+                                                             src={event.note.data.cover}
+                                                             alt={event.note.data.coverImageAlt || event.title}
+                                                             class="w-full h-auto rounded-xl"
+                                                             width={320}
+                                                             height={240}
+                                                         />
+                                                     </div>
+                                                 )}
+                                             </div>
 
                                             {/* Tags */}
                                             {event.note.data.tags.length > 0 && (
-                                                <div class="flex gap-4">
+                                                <div class="flex gap-4 mt-6">
                                                     {event.note.data.tags.slice(0, 4).map((tag: string) => (
                                                         <span class="text-xs font-medium text-stone-400">#{tag}</span>
                                                     ))}
