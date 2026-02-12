@@ -64,38 +64,6 @@ const sortedEvents = aggregatedEvents.sort(
     (a, b) => b.date.valueOf() - a.date.valueOf(),
 );
 
-// Identify which events to collapse
-const creationsInMonth = new Set<string>();
-sortedEvents.forEach((e) => {
-    if (e.type === "created") {
-        const monthKey = e.date.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-        });
-        creationsInMonth.add(`${e.note.slug}-${monthKey}`);
-    }
-});
-
-const seenUpdateInMonth = new Set<string>();
-sortedEvents.forEach((event) => {
-    const monthKey = event.date.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-    });
-    const noteKey = `${event.note.slug}-${monthKey}`;
-
-    if (event.type === "created") {
-        event.isCollapsed = false;
-    } else {
-        if (creationsInMonth.has(noteKey) || seenUpdateInMonth.has(noteKey)) {
-            event.isCollapsed = true;
-        } else {
-            event.isCollapsed = false;
-            seenUpdateInMonth.add(noteKey);
-        }
-    }
-});
-
 // Generate all months
 const earliestDate =
     sortedEvents.length > 0
@@ -384,7 +352,6 @@ const getStageCardClass = (stage: string) => {
 
     let currentFilter = "all";
     let currentTopic = "";
-    let currentEventType = "all";
     let currentYear = document.documentElement.getAttribute('data-selected-year') || new Date().getFullYear().toString();
     let currentDateFilter: string | null = null;
     let itemsToShow = 10;
@@ -401,18 +368,14 @@ const getStageCardClass = (stage: string) => {
             const htmlEvent = event as HTMLElement;
             const stage = htmlEvent.dataset.stage;
             const eventYear = htmlEvent.dataset.eventYear || "";
-            const eventType = htmlEvent.dataset.eventType;
 
             const matchesFilter = currentFilter === "all" || stage === currentFilter;
             const matchesTopic = currentTopic === "" || (htmlEvent.dataset.topics || "").includes(currentTopic);
-            const matchesEventType = currentEventType === "all" || eventType === currentEventType;
             const matchesYear = currentYear === "all" || eventYear === currentYear;
-            const isCollapsed = htmlEvent.dataset.isCollapsed === "true";
             const eventDate = htmlEvent.dataset.created || "";
             const matchesDate = currentDateFilter === null || eventDate === currentDateFilter;
-            const visibilityByCollapse = currentDateFilter !== null ? matchesDate : !isCollapsed;
 
-            if (matchesFilter && matchesTopic && matchesEventType && matchesYear && visibilityByCollapse) {
+            if (matchesFilter && matchesTopic && matchesYear && matchesDate) {
                 totalMatchingCount++;
                 if (visibleCount < itemsToShow) {
                     htmlEvent.classList.remove("hidden-by-filter");

@@ -1,0 +1,23 @@
+---
+interface Props {
+    topic: string;
+    count?: number;
+    size?: 'sm' | 'md';
+}
+
+const { topic, count, size = 'md' } = Astro.props;
+
+const sizeClasses = size === 'sm' 
+    ? 'text-xs px-2 py-0.5' 
+    : 'text-sm px-3 py-1.5';
+---
+
+<a
+    href={`/topics/${topic}`}
+    class={`inline-flex items-center gap-1.5 ${sizeClasses} bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded font-medium text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary dark:hover:text-blue-400 transition-colors`}
+>
+    <span class="text-slate-400">#</span>{topic}
+    {count !== undefined && (
+        <span class="text-xs text-slate-400">{count}</span>
+    )}
+</a>
