@@ -1,10 +1,11 @@
 ---
 title: Janky but Effective
 stage: seed        # seed | sprout | evergreen
+publishedDate: 2026-01-16
 tags:
   - Agile
 summary: Too many organizations strive for high efficiency and order, but often it just worsens outcomes
-draft: true              # Optional, adds WIP banner
+draft: true
 ---
 
 Too many organizations put their focus on strong processes and controls, but the results end up lacking and also damaging people.
