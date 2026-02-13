@@ -58,7 +58,7 @@ const getStageBadgeClass = (stage: string) => {
                         </h2>
                         <div class="h-px bg-stone-100 dark:bg-slate-800 grow"></div>
                         <span class="text-xs font-medium text-stone-400">
-                            {monthEvents?.length || 0} entries
+                            {monthEvents?.length || 0} {monthEvents?.length === 1 ? 'entry' : 'entries'}
                         </span>
                     </div>
 

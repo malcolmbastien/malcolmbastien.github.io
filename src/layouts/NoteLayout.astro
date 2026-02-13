@@ -63,9 +63,9 @@ const getStageBadgeClass = (stage: string) => {
     tags={frontmatter.tags}
 >
     <main class="max-w-7xl mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12">
             <!-- Left Sidebar - Context/Navigation -->
-            <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit pr-4 border-r border-slate-100 dark:border-slate-800 min-w-0">
+            <aside class="hidden lg:block sticky top-24 h-fit pr-4 border-r border-slate-100 dark:border-slate-800 min-w-0 w-full overflow-hidden">
                 <div class="space-y-8">
                     <TableOfContents
                         content={noteBody || ""}
@@ -80,7 +80,7 @@ const getStageBadgeClass = (stage: string) => {
 
             <!-- Main Content -->
             <article
-                class={`lg:col-span-9 max-w-3xl ${isNoteDraft ? "note-is-draft relative" : ""}`}
+                class={`max-w-3xl ${isNoteDraft ? "note-is-draft relative" : ""}`}
                 data-pagefind-body
             >
                 <!-- Draft Banner -->
