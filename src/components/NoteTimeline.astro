@@ -94,12 +94,12 @@ const getStageBadgeClass = (stage: string) => {
                                                  {event.title}
                                              </h3>
 
-                                             {/* Meta row - Stage and Date as contextual */}
-                                             <div class="flex items-center gap-2 mb-5 text-sm">
-                                                 <span class={`font-medium ${event.note.data.stage === 'seed' ? 'text-orange-600 dark:text-orange-400' : event.note.data.stage === 'sprout' ? 'text-yellow-600 dark:text-yellow-400' : 'text-green-600 dark:text-green-400'}`}>
-                                                     {event.note.data.stage.charAt(0).toUpperCase() + event.note.data.stage.slice(1)}
-                                                 </span>
-                                                 <span class="text-stone-300 dark:text-stone-600">·</span>
+                                              {/* Meta row - Stage and Date as contextual */}
+                                              <div class="flex items-center gap-2 mb-5 text-sm">
+                                                  <span class={`text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider ${getStageBadgeClass(event.note.data.stage)}`}>
+                                                      {event.note.data.stage}
+                                                  </span>
+                                                  <span class="text-stone-300 dark:text-stone-600">·</span>
                                                  <span class="text-stone-500 dark:text-stone-400">
                                                      {event.date.toLocaleDateString("en-US", {
                                                          month: 'short',
