@@ -251,7 +251,7 @@ const getStageCardClass = (stage: string) => {
                     pinnedNotes.length > 0 && (
                         <section class="mb-8">
                             <div class="flex items-center justify-between mb-8">
-                                <h2 class="text-lg font-bold text-stone-800">Pinned Notes</h2>
+                                <div class="text-xs font-bold text-stone-400 uppercase tracking-widest">Pinned Notes</div>
                                 <div class="h-px bg-stone-100 dark:bg-slate-800 grow ml-6"></div>
                             </div>
                             <div>
@@ -283,8 +283,8 @@ const getStageCardClass = (stage: string) => {
                 {/* Current Stream */}
                 <section>
                     <div class="flex items-center justify-between mb-8">
-                        <h2 class="text-lg font-bold text-stone-800">Recent Notes</h2>
-                        <div class="h-px bg-stone-100 dark:bg-stone-800 grow ml-6"></div>
+                        <div class="text-xs font-bold text-stone-400 uppercase tracking-widest">Recent Notes</div>
+                        <div class="h-px bg-stone-100 dark:bg-slate-800 grow ml-6"></div>
                     </div>
 
                     <NoteTimeline
