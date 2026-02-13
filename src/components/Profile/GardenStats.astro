@@ -12,6 +12,11 @@ interface Props {
 
 const { counts } = Astro.props;
 
+// Extract dot colors from stages
+const seedColor = stages.seed.colors.dot;
+const sproutColor = stages.sprout.colors.dot;
+const evergreenColor = stages.evergreen.colors.dot;
+
 // Calculate percentages based on total
 const seedPercent = counts.all > 0 ? (counts.seed / counts.all) * 100 : 0;
 const sproutPercent = counts.all > 0 ? (counts.sprout / counts.all) * 100 : 0;
@@ -28,7 +33,7 @@ const evergreenPercent = counts.all > 0 ? (counts.evergreen / counts.all) * 100 
                 <span class="text-xs font-mono text-slate-500">{counts.seed.toString().padStart(3, '0')}</span>
             </div>
             <div class="h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                <div class="h-full bg-orange-400 rounded-full transition-all duration-500" style={`width: ${seedPercent}%`}></div>
+                <div class={`h-full ${seedColor} rounded-full transition-all duration-500`} style={`width: ${seedPercent}%`}></div>
             </div>
             <p class="text-xs text-slate-500 mt-2 leading-relaxed">Rough ideas and early drafts</p>
         </div>
@@ -39,7 +44,7 @@ const evergreenPercent = counts.all > 0 ? (counts.evergreen / counts.all) * 100 
                 <span class="text-xs font-mono text-slate-500">{counts.sprout.toString().padStart(3, '0')}</span>
             </div>
             <div class="h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                <div class="h-full bg-yellow-400 rounded-full transition-all duration-500" style={`width: ${sproutPercent}%`}></div>
+                <div class={`h-full ${sproutColor} rounded-full transition-all duration-500`} style={`width: ${sproutPercent}%`}></div>
             </div>
             <p class="text-xs text-slate-500 mt-2 leading-relaxed">Developing concepts</p>
         </div>
@@ -50,7 +55,7 @@ const evergreenPercent = counts.all > 0 ? (counts.evergreen / counts.all) * 100 
                 <span class="text-xs font-mono text-slate-500">{counts.evergreen.toString().padStart(3, '0')}</span>
             </div>
             <div class="h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                <div class="h-full bg-green-500 rounded-full transition-all duration-500" style={`width: ${evergreenPercent}%`}></div>
+                <div class={`h-full ${evergreenColor} rounded-full transition-all duration-500`} style={`width: ${evergreenPercent}%`}></div>
             </div>
             <p class="text-xs text-slate-500 mt-2 leading-relaxed">Polished, reliable notes</p>
         </div>

@@ -256,14 +256,14 @@ const getStageCardClass = (stage: string) => {
                             </div>
                             <div>
                                 {pinnedNotes.map((note, index) => (
-                                    <a href={`/notes/${note.id.replace('.md', '')}`} class={`group block relative my-4 py-5 px-5 border-l-4 ${getStageKeylineClass(note.data.stage)} hover:bg-stone-100 dark:hover:bg-slate-800 transition-colors cursor-pointer rounded-r`}>
-                                        <div class="flex items-center justify-between mb-4">
+                                    <a href={`/notes/${note.id.replace('.md', '')}`} class={`group block relative my-4 py-5 px-5 border-l-[6px] ${getStageKeylineClass(note.data.stage)} bg-stone-50/50 dark:bg-slate-800/30 hover:bg-stone-100 dark:hover:bg-slate-800 transition-colors cursor-pointer rounded-r`}>
+                                        <div class="flex items-center justify-between mb-3">
                                             <div class="flex items-center gap-3">
-                                                <span class={`text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider ${getStageBadgeClass(note.data.stage)}`}>
-                                                    {note.data.stage}
+                                                <span class="text-[10px] font-bold tracking-widest text-stone-400 dark:text-stone-500 uppercase">
+                                                    Reference
                                                 </span>
-                                                <span class="material-symbols-outlined text-stone-300 dark:text-stone-600 text-lg">push_pin</span>
                                             </div>
+                                            <span class="material-symbols-outlined text-stone-400 dark:text-stone-600 text-base">push_pin</span>
                                         </div>
                                         <h3 class="text-2xl font-bold text-stone-900 dark:text-white mb-3 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
                                             {note.data.title}
