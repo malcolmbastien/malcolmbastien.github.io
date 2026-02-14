@@ -23,41 +23,41 @@ const sproutPercent = counts.all > 0 ? (counts.sprout / counts.all) * 100 : 0;
 const evergreenPercent = counts.all > 0 ? (counts.evergreen / counts.all) * 100 : 0;
 ---
 
-<div class="bg-slate-50 dark:bg-slate-900/50 p-6 rounded-2xl border border-slate-100 dark:border-slate-800">
-    <h4 class="text-base font-semibold text-slate-700 mb-6">Note Types</h4>
+<div class="bg-slate-100 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+    <h4 class="text-base font-semibold text-slate-800 dark:text-slate-200 mb-6">Note Types</h4>
     
     <div class="space-y-6">
         <div>
             <div class="flex items-center justify-between mb-2">
-                <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Seed</span>
-                <span class="text-xs font-mono text-slate-500">{counts.seed.toString().padStart(3, '0')}</span>
+                <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Seed</span>
+                <span class="text-xs font-mono text-slate-600 dark:text-slate-400">{counts.seed.toString().padStart(3, '0')}</span>
             </div>
-            <div class="h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+            <div class="h-1 bg-slate-300 dark:bg-slate-600 rounded-full overflow-hidden">
                 <div class={`h-full ${seedColor} rounded-full transition-all duration-500`} style={`width: ${seedPercent}%`}></div>
             </div>
-            <p class="text-xs text-slate-500 mt-2 leading-relaxed">Rough ideas and early drafts</p>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Rough ideas and early drafts</p>
         </div>
         
         <div>
             <div class="flex items-center justify-between mb-2">
-                <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Sprout</span>
-                <span class="text-xs font-mono text-slate-500">{counts.sprout.toString().padStart(3, '0')}</span>
+                <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Sprout</span>
+                <span class="text-xs font-mono text-slate-600 dark:text-slate-400">{counts.sprout.toString().padStart(3, '0')}</span>
             </div>
-            <div class="h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+            <div class="h-1 bg-slate-300 dark:bg-slate-600 rounded-full overflow-hidden">
                 <div class={`h-full ${sproutColor} rounded-full transition-all duration-500`} style={`width: ${sproutPercent}%`}></div>
             </div>
-            <p class="text-xs text-slate-500 mt-2 leading-relaxed">Developing concepts</p>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Developing concepts</p>
         </div>
         
         <div>
             <div class="flex items-center justify-between mb-2">
-                <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Evergreen</span>
-                <span class="text-xs font-mono text-slate-500">{counts.evergreen.toString().padStart(3, '0')}</span>
+                <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Evergreen</span>
+                <span class="text-xs font-mono text-slate-600 dark:text-slate-400">{counts.evergreen.toString().padStart(3, '0')}</span>
             </div>
-            <div class="h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+            <div class="h-1 bg-slate-300 dark:bg-slate-600 rounded-full overflow-hidden">
                 <div class={`h-full ${evergreenColor} rounded-full transition-all duration-500`} style={`width: ${evergreenPercent}%`}></div>
             </div>
-            <p class="text-xs text-slate-500 mt-2 leading-relaxed">Polished, reliable notes</p>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Polished, reliable notes</p>
         </div>
     </div>
 </div>
