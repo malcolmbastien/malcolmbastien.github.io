@@ -250,20 +250,16 @@ const getStageCardClass = (stage: string) => {
                 {
                     pinnedNotes.length > 0 && (
                         <section class="mb-8">
-                            <div class="flex items-center justify-between mb-8">
-                                <div class="text-xs font-bold text-stone-400 dark:text-slate-400 uppercase tracking-widest">Pinned Notes</div>
-                                <div class="h-px bg-stone-100 dark:bg-slate-800 grow ml-6"></div>
-                            </div>
                             <div>
                                 {pinnedNotes.map((note, index) => (
-                                    <a href={`/notes/${note.id.replace('.md', '')}`} class={`group block relative my-4 py-5 px-5 border-l-[6px] ${getStageKeylineClass(note.data.stage)} bg-stone-50/50 dark:bg-slate-800/30 hover:bg-stone-100 dark:hover:bg-slate-800 transition-colors cursor-pointer rounded-r`}>
+                                    <a href={`/notes/${note.id.replace('.md', '')}`} class={`group block relative mb-4 pb-5 px-5 border-l-[6px] ${getStageKeylineClass(note.data.stage)} bg-stone-100/50 dark:bg-slate-700/30 hover:bg-stone-200/50 dark:hover:bg-slate-800 transition-colors cursor-pointer rounded-r`}>
                                         <div class="flex items-center justify-between mb-3">
                                             <div class="flex items-center gap-3">
                                                 <span class="text-[10px] font-bold tracking-widest text-stone-400 dark:text-slate-500 uppercase">
                                                     Pinned
                                                 </span>
                                             </div>
-                                            <span class="material-symbols-outlined text-stone-400 dark:text-slate-600 text-base">push_pin</span>
+                                            <span class="material-symbols-outlined text-stone-400 dark:text-slate-600 text-base mt-3">push_pin</span>
                                         </div>
                                         <h3 class="text-2xl font-bold text-stone-900 dark:text-white mb-3 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
                                             {note.data.title}
@@ -282,10 +278,6 @@ const getStageCardClass = (stage: string) => {
 
                 {/* Current Stream */}
                 <section>
-                    <div class="flex items-center justify-between mb-8">
-                                <div class="text-xs font-bold text-stone-400 dark:text-slate-400 uppercase tracking-widest">Recent Notes</div>
-                        <div class="h-px bg-stone-100 dark:bg-slate-800 grow ml-6"></div>
-                    </div>
 
                     <NoteTimeline
                         sortedEvents={sortedEvents}
