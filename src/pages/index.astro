@@ -251,7 +251,7 @@ const getStageCardClass = (stage: string) => {
                     pinnedNotes.length > 0 && (
                         <section class="mb-8">
                             <div class="flex items-center justify-between mb-8">
-                                <div class="text-xs font-bold text-stone-400 uppercase tracking-widest">Pinned Notes</div>
+                                <div class="text-xs font-bold text-stone-400 dark:text-slate-400 uppercase tracking-widest">Pinned Notes</div>
                                 <div class="h-px bg-stone-100 dark:bg-slate-800 grow ml-6"></div>
                             </div>
                             <div>
@@ -259,17 +259,17 @@ const getStageCardClass = (stage: string) => {
                                     <a href={`/notes/${note.id.replace('.md', '')}`} class={`group block relative my-4 py-5 px-5 border-l-[6px] ${getStageKeylineClass(note.data.stage)} bg-stone-50/50 dark:bg-slate-800/30 hover:bg-stone-100 dark:hover:bg-slate-800 transition-colors cursor-pointer rounded-r`}>
                                         <div class="flex items-center justify-between mb-3">
                                             <div class="flex items-center gap-3">
-                                                <span class="text-[10px] font-bold tracking-widest text-stone-400 dark:text-stone-500 uppercase">
+                                                <span class="text-[10px] font-bold tracking-widest text-stone-400 dark:text-slate-500 uppercase">
                                                     Pinned
                                                 </span>
                                             </div>
-                                            <span class="material-symbols-outlined text-stone-400 dark:text-stone-600 text-base">push_pin</span>
+                                            <span class="material-symbols-outlined text-stone-400 dark:text-slate-600 text-base">push_pin</span>
                                         </div>
                                         <h3 class="text-2xl font-bold text-stone-900 dark:text-white mb-3 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
                                             {note.data.title}
                                         </h3>
                                         {note.data.summary && (
-                                            <p class="text-stone-600 dark:text-stone-400 text-base leading-relaxed mb-4">
+                                            <p class="text-stone-600 dark:text-slate-400 text-base leading-relaxed mb-4">
                                                 {note.data.summary}
                                             </p>
                                         )}
@@ -283,7 +283,7 @@ const getStageCardClass = (stage: string) => {
                 {/* Current Stream */}
                 <section>
                     <div class="flex items-center justify-between mb-8">
-                        <div class="text-xs font-bold text-stone-400 uppercase tracking-widest">Recent Notes</div>
+                                <div class="text-xs font-bold text-stone-400 dark:text-slate-400 uppercase tracking-widest">Recent Notes</div>
                         <div class="h-px bg-stone-100 dark:bg-slate-800 grow ml-6"></div>
                     </div>
 
@@ -320,7 +320,7 @@ const getStageCardClass = (stage: string) => {
                     <div class="space-y-2">
                         {latestCreations.map((note) => (
                             <div class="group">
-                                <span class="text-xs font-medium text-stone-400 block mb-1">
+                                <span class="text-xs font-medium text-stone-400 dark:text-slate-400 block mb-1">
                                     {note.displayDate!.toLocaleDateString("en-US", {
                                         month: 'short',
                                         day: 'numeric',
