@@ -15,7 +15,7 @@ summary: Tracking what I've done in 2026
 
 Sprout is the cleaned version of the [Astro](https://astro.build/) app that runs this site.
 
-My initial goal was to have some way of sharing blog posts, without having to always go through the entire process of brainstorming, drafting and editting.
+My initial goal was to have some way of sharing blog posts, without having to always go through the entire process of brainstormin.g, drafting and editing.
 
 I took inspiration from the Digital Gardens others had created, piecing together parts that I liked and used AI to make something custom that fit what I wanted.
 
@@ -31,8 +31,15 @@ I used AI to export all my blog posts into markdown files, which lets me do all 
 
 I made a lot of this possible for me without having to learn multiple different systems. As a result, I spent a lot of time iterating the design. There were lots of little things the AI missed that I I needed to guide it to fix, but I also spent lots of time making little changes to parts I wasn't quite happy with.
 
-
-
 ## SquadView
 
 Built [[SquadView]]
+
+
+## Video Games
+
+### Games Played
+
+- Cairn
+- The Riftbreaker
+- Shape of Dreams

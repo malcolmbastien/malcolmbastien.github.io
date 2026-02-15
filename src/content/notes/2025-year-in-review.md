@@ -95,12 +95,16 @@ To help me create this ranking of how much I liked all of the games I played thi
 
 1. Clair Obscure (100%)
 2. Mars First Logistics (100%)
-   - I really enjoyed the freedom and creativity this game provided. This game was the best implementation i've played of clean, cel-shaded, Moebius-like art. Even better than what Sable was able to do. 
-3. Core Keeper (100%)
+   - I really enjoyed the freedom and creativity this game provided. This game was the best implementation I've played of clean, cel-shaded, Moebius-like art. Even better than what Sable was able to do. 
+1. Core Keeper (100%)
    - This game was such a cute adventure, with fun progression, and lots of fun discoveries and secrets to find. This would have been really nice to play in a co-op world with someone, but as a solo player it was fun too.
 4. Monster Hunter Wilds
    - I was really looking forward to this game after waiting for years, and put a lot of hours into it when it launched. Unfortunately the game's poor performance and end-game activities drove me away for good and I've had very little reason to ever pick it up again.
-5. Marvel Rivals (100%)
+   - The game is just filled with bad design decisions that makes it really difficult to want to play it again:
+	   - Its end-game gear mechanic is RNG-based, which involves lots of grinding for materials for a chance at gear with the desired attributes.
+	   - I'm not a fan of the post-launch content being added to the game. They added Akuma from Street Fighter, but he doesn't play like a character with fist weapons. Instead, you have to activate actions in your item bar to use his skills.
+	   - They also added a Great Sword weapon that is shattered into peaces, yet somehow keeps its shape? It doesn't make any sense.
+1. Marvel Rivals (100%)
    - A great game and very fun, but like all service games, I eventually had to force myself to stop playing because it's too easy for me to get sucked into trying to unlock all the content, completing every battlepass and special event. While I could have kept playing this game for hundreds of more hours, but playing Rivals meant I wouldn't likely get to any of the other games in my library.
 6. Everspace 2 (100%)
 7. My Time at Portia
@@ -118,8 +122,10 @@ To help me create this ranking of how much I liked all of the games I played thi
 14. Backpack Hero (100%)
 15. Mega Bonk
 16. Legend of Grindea
+	- A fun homage to gaming. The games a bit of a running joke, but packs a lot into it with interesting dungeons, character build choices, and skill progression.
 17. Blue Prince
-    - Cool game, I liked the world we became a part of, but I'd lie if I said it wasn't incredibly frustrating and repetitive.
+    - Blue Price was unique and one of a kind. I liked the world we became a part of with its unique visual style and music, but I'd lie if I said it wasn't incredibly frustrating and repetitive.
+    - Many of the game's puzzles can only be solved if users take copious notes, or in my case hundreds of screenshots, when they find any clues.
 18. Balatro
 19. Slime Rancher
 20. I am Future (100%)
