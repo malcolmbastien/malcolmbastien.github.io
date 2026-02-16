@@ -146,12 +146,6 @@ const sortedYears = yearsArray.map(([year, data]) => ({
 // Identify pinned notes
 const pinnedNotes = allNotes.filter((note) => (note.data as any).pinned === true);
 
-// Get latest 3 created notes
-const latestCreations = notesWithDates
-    .filter(p => !!p.displayDate && !pinnedNotes.some(pinned => pinned.id === p.id))
-    .sort((a, b) => b.displayDate!.valueOf() - a.displayDate!.valueOf())
-    .slice(0, 3);
-
 // Compute note counts
 const publishedNotes = allNotes.filter((note) => note.data);
 const counts = {
@@ -306,26 +300,24 @@ const getStageCardClass = (stage: string) => {
                 {/* Key Focus Areas */}
                 <TopicFocus />
 
-                {/* Latest Creations */}
-                <div>
-                    <h4 class="text-base font-semibold text-stone-700 mb-6">Latest Notes</h4>
-                    <div class="space-y-2">
-                        {latestCreations.map((note) => (
-                            <div class="group">
-                                <span class="text-xs font-medium text-stone-400 dark:text-slate-400 block mb-1">
-                                    {note.displayDate!.toLocaleDateString("en-US", {
-                                        month: 'short',
-                                        day: 'numeric',
-                                        year: 'numeric',
-                                        timeZone: 'UTC'
-                                    })}
-                                </span>
-                                <a href={`/notes/${note.id.replace('.md', '')}`} class="text-sm font-semibold text-stone-900 dark:text-white hover:underline decoration-primary/50 underline-offset-2 transition-colors">
-                                    {note.data.title}
-                                </a>
-                            </div>
-                        ))}
+                {/* Join the Conversation */}
+                <div class="bg-linear-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="material-symbols-outlined text-blue-600 dark:text-blue-400">forum</span>
+                        <h4 class="text-sm font-bold text-blue-900 dark:text-blue-200 uppercase tracking-wider">Join the Conversation</h4>
                     </div>
+                    <p class="text-sm text-blue-800 dark:text-blue-300 mb-4 leading-relaxed">
+                        Connect with fellow flow-seekers, share insights, and discuss ideas in our Matrix community.
+                    </p>
+                    <a
+                        href="https://matrix.to/#/#flowfocused:matrix.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white text-sm font-semibold rounded-md transition-colors"
+                    >
+                        <span>Join Matrix Space</span>
+                        <span class="material-symbols-outlined text-base">arrow_forward</span>
+                    </a>
                 </div>
             </aside>
         </div>

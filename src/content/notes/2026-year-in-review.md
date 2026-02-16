@@ -1,4 +1,3 @@
-
 ---
 title: 2026 Year In Review
 stage: seed        # seed | sprout | evergreen
@@ -15,7 +14,7 @@ summary: Tracking what I've done in 2026
 
 Sprout is the cleaned version of the [Astro](https://astro.build/) app that runs this site.
 
-My initial goal was to have some way of sharing blog posts, without having to always go through the entire process of brainstormin.g, drafting and editing.
+My initial goal was to have some way of sharing blog posts, without having to always go through the entire process of brainstorming, drafting and editing.
 
 I took inspiration from the Digital Gardens others had created, piecing together parts that I liked and used AI to make something custom that fit what I wanted.
 
