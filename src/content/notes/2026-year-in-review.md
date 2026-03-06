@@ -44,7 +44,7 @@ Since then, I have implemented several custom skills:
 
 ### Jellyfin Media Organizer
 
-![[../../assets/2026/20260306135014.png]]
+![](../../assets/2026/20260306135014.png)
 
 I’ve started leveraging AI to tackle tasks I previously put off, such as configuring self-hosted services like [Jellyfin](https://jellyfin.org/) and [Home Assistant](https://www.home-assistant.io/).
 
