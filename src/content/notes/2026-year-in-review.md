@@ -50,11 +50,15 @@ I’ve started leveraging AI to tackle tasks I previously put off, such as confi
 
 Using Docker, I expose only my "Videos" directory to OpenClaw. When I download movies or TV shows, I send OpenClaw an instruction to "clean up" the folder. The agent scans the directory, strips unnecessary metadata from titles, and renames every file according to a standardized naming convention.
 
+![](../../assets/20260308194545.png)
+
 ### Job Application Autofill
 
 The goal of this skill was to automate the tedious process of navigating multi-page job forms that all requested the same general information in slightly various ways. The AI uses a browser to navigate the job form, enters information based on my professional profile which is stored as a JSON file, and captures a screenshot of every page prior to submission for my records.
 
 This skill utilizes OpenClaw’s [Browser tool](https://docs.openclaw.ai/tools/browser) and is quite effective for the pages it had access to. The only issue was that many companies require accounts to access their job portal, which could be solved by connecting a password manager like 1Password to OpenClaw, but that's outside my comfort zone.
+
+![](../../assets/20260308194503.png)
 
 ### CRM-Copilot
 
@@ -67,6 +71,8 @@ For years, I’ve used apps like OmniFocus, Logseq, and Obsidian to track "Agend
 I've used Obsidian for over five years to store personal notes, quotes, and research. I consider this vault a "digital twin" of my brain. By exposing this vault to the AI (via a read-only Docker bind), I created a system to identify what I _don't_ know.
 
 When I provide a topic—such as Product Management—the skill generates a comprehensive topic map. It then cross-references my Obsidian vault against that map, highlighting where my notes are robust, where they are merely "stubs," and where knowledge gaps exist. This provides a clear roadmap for my research and studies.
+
+![](../../assets/20260308194425.png)
 
 ### Personal Shopping Strategist
 
