@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import TopicBadge from "./TopicBadge.astro";
 
 interface Props {
     sortedEvents: Array<{
@@ -20,7 +21,6 @@ import { getStageData } from "../lib/theme";
 
 const { sortedEvents, allMonths, eventsByMonthKey } = Astro.props;
 
-// Pre-calculate which events are in the initial batch (first 10) for each year
 const yearCounters = new Map<number, number>();
 const eventBatchStatus = new Map<any, boolean>();
 
@@ -31,7 +31,6 @@ sortedEvents.forEach((event) => {
     yearCounters.set(year, count + 1);
 });
 
-// Helper to get stage badge styling
 const getStageBadgeClass = (stage: string) => {
     const stageData = getStageData(stage);
     return stageData.colors.badge;
@@ -51,28 +50,16 @@ const getStageBadgeClass = (stage: string) => {
                     data-month={monthKey}
                     data-year={monthYear}
                 >
-                    {/* Month header with line */}
-                    <div class="flex items-center gap-4 mb-8">
-                        <h2 class="text-sm font-semibold text-stone-600">
-                            {monthKey}
-                        </h2>
-                        <div class="h-px bg-stone-100 dark:bg-slate-800 grow"></div>
-                        <span class="text-xs font-medium text-stone-400 dark:text-slate-400">
-                            {monthEvents?.length || 0} {monthEvents?.length === 1 ? 'entry' : 'entries'}
-                        </span>
-                    </div>
-
                     {monthEvents && monthEvents.length > 0 ? (
-                        /* Events for this month */
-                        <div>
+                        <div class="space-y-8">
                              {monthEvents.map((event: any) => {
-                                 const eventYear = event.date.getFullYear().toString();
-                                 const isInitialBatch = eventBatchStatus.get(event);
+                                  const eventYear = event.date.getFullYear().toString();
+                                  const isInitialBatch = eventBatchStatus.get(event);
 
                                     return (
                                          <a href={`/notes/${event.note.id.replace('.md', '')}`}
-                                            class="timeline-event block py-6 px-6 border-b border-stone-100 dark:border-slate-800 hover:bg-stone-100 dark:hover:bg-slate-800 transition-colors group cursor-pointer"
-                                            data-stage={event.note.data.stage}
+                                              class="timeline-event group cursor-pointer block -mx-6 px-6 py-4 transition-all duration-200 ease-in-out hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:-translate-y-0.5 hover:shadow-lg"
+                                             data-stage={event.note.data.stage}
                                             data-title={event.title.toLowerCase()}
                                             data-summary={
                                                 event.note.data.summary?.toLowerCase() ||
@@ -89,69 +76,41 @@ const getStageBadgeClass = (stage: string) => {
                                             data-event-year={eventYear}
                                             data-is-initial-batch={isInitialBatch ? "true" : "false"}
                                          >
-                                             {/* Title - Primary */}
-                                             <h3 class="text-3xl font-bold text-stone-900 dark:text-white mb-3 leading-tight group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
-                                                 {event.title}
-                                             </h3>
-
-                                              {/* Meta row - Stage and Date as contextual */}
-                                              <div class="flex items-center gap-2 mb-5 text-sm">
-                                                  <span class={`text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider ${getStageBadgeClass(event.note.data.stage)}`}>
-                                                      {event.note.data.stage}
-                                                  </span>
-                                                  <span class="text-stone-300 dark:text-stone-600">·</span>
-                                                  <span class="text-stone-500 dark:text-slate-400">
-                                                     {event.date.toLocaleDateString("en-US", {
-                                                         month: 'short',
-                                                         day: 'numeric',
-                                                         year: 'numeric',
-                                                         timeZone: 'UTC'
-                                                     })}
-                                                 </span>
-                                             </div>
-
-                                             {/* Content wrapper - flex layout when featured with image */}
-                                             <div class={`${event.note.data.cover ? 'flex flex-col md:flex-row md:gap-8' : ''}`}>
-                                                 {/* Text content */}
-                                                 <div class={`${event.note.data.cover ? 'flex-1' : ''}`}>
-
-                                                     {/* Summary */}
+                                             <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+                                                 <div class="flex-1 space-y-4">
+                                                     <time class="text-[0.7rem] uppercase tracking-[0.2em] font-bold text-slate-500 dark:text-slate-400">
+                                                         {event.date.toLocaleDateString("en-US", {
+                                                             month: 'short',
+                                                             day: 'numeric',
+                                                             year: 'numeric',
+                                                             timeZone: 'UTC'
+                                                         })}
+                                                     </time>
+                                                      <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 ease-in-out leading-tight">
+                                                         {event.title}
+                                                     </h2>
                                                      {event.note.data.summary && (
-                                                          <p class="text-stone-600 dark:text-slate-400 leading-relaxed max-w-2xl mb-6">
+                                                         <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-xl">
                                                              {event.note.data.summary}
                                                          </p>
                                                      )}
                                                  </div>
-
-                                                 {/* Optional cover image - right side */}
                                                  {event.note.data.cover && (
-                                                     <div class="md:w-64 lg:w-80 shrink-0 mb-6 md:mb-0">
-                                                         <Image
-                                                             src={event.note.data.cover}
-                                                             alt={event.note.data.coverImageAlt || event.title}
-                                                             class="w-full h-auto rounded-xl"
-                                                             width={320}
-                                                             height={240}
-                                                         />
-                                                     </div>
+                                                      <div class="w-full md:w-56 aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                                                          <Image
+                                                              src={event.note.data.cover}
+                                                              alt={event.note.data.coverImageAlt || event.title}
+                                                              class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-500"
+                                                          />
+                                                      </div>
                                                  )}
                                              </div>
-
-                                            {/* Tags */}
-                                            {event.note.data.tags.length > 0 && (
-                                                <div class="flex gap-4 mt-6">
-                                                    {event.note.data.tags.slice(0, 4).map((tag: string) => (
-                                                         <span class="text-xs font-medium text-stone-400 dark:text-slate-400">#{tag}</span>
-                                                    ))}
-                                                </div>
-                                            )}
-                                        </a>
+                                         </a>
                                     );
-                               })}
+                                })}
                         </div>
                       ) : (
-                        /* No activity message */
-                        <div class="py-12 text-center border-b border-stone-100 dark:border-slate-800">
+                        <div class="py-12 text-center">
                             <p class="text-xs font-medium text-stone-400 dark:text-slate-400">
                                 No notes this month
                             </p>
@@ -162,7 +121,6 @@ const getStageBadgeClass = (stage: string) => {
         })
     }
 
-    {/* No results message */}
     <div id="no-results" class="hidden text-center py-16">
         <p class="text-stone-600 dark:text-slate-400 text-lg">
             No matching notes found

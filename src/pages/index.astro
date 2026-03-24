@@ -185,6 +185,26 @@ const getStageCardClass = (stage: string) => {
     // All pinned notes use the same subtle styling regardless of stage
     return 'bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700';
 };
+
+// Get popular topics for the sidebar
+const topicCounts: Record<string, number> = {};
+allNotes.forEach((note) => {
+    note.data.tags.forEach((tag: string) => {
+        topicCounts[tag] = (topicCounts[tag] || 0) + 1;
+    });
+});
+
+const popularTopics = Object.entries(topicCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 8);
+
+const coreTopics = [
+    { name: "#SystemsDesign", href: "/topics/systems-design" },
+    { name: "#BusinessAgility", href: "/topics/business-agility" },
+    { name: "#Cybernetics", href: "/topics/cybernetics" },
+    { name: "#Leadership", href: "/topics/leadership" },
+    { name: "#ProductFlow", href: "/topics/product-flow" },
+];
 ---
 
 <Layout
@@ -206,10 +226,10 @@ const getStageCardClass = (stage: string) => {
         html[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] {
             color: rgb(37, 99, 235) !important;
             font-weight: 700;
+            position: relative;
+            border-left-color: rgb(37, 99, 235) !important;
         }
-        html.dark[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] {
-            color: rgb(37, 99, 235) !important;
-        }
+
         html[data-selected-year="${y.year}"] .year-item:has(.year-btn[data-year="${y.year}"]) .month-submenu {
             display: flex !important;
         }
@@ -223,56 +243,63 @@ const getStageCardClass = (stage: string) => {
         })();
     </script>
 
-    <main class="max-w-7xl mx-auto px-6 py-12" data-pagefind-ignore>
-        <HeroBanner />
+    <HeroBanner />
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <main class="max-w-7xl mx-auto px-6 py-16" data-pagefind-ignore>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <!-- Year Navigation -->
-            <aside class="hidden lg:block lg:col-span-1 border-r border-slate-100 dark:border-slate-800 pr-4">
-                <nav class="sticky top-24 space-y-6">
-                    <div>
-                        <YearNavigation sortedYears={sortedYears as any} />
+            <nav class="hidden lg:block lg:col-span-1">
+                <div class="sticky top-32 space-y-6">
+                    <h4 class="text-[0.65rem] uppercase tracking-widest text-slate-900 dark:text-white font-extrabold">Archives</h4>
+                    <div class="flex flex-col gap-4">
+                        {sortedYears.map((year) => (
+                            <button
+                                class="year-btn text-sm font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white pl-4 border-l-2 border-transparent hover:border-slate-300 dark:hover:border-slate-600 transition-colors text-left"
+                                data-year={year.year.toString()}
+                            >
+                                {year.year}
+                            </button>
+                        ))}
                     </div>
-                </nav>
-            </aside>
+                </div>
+            </nav>
 
             <!-- Main Content -->
-            <div class="lg:col-span-8">
-
+            <div class="lg:col-span-7 space-y-8">
 
                 {/* Pinned Notes Section */}
                 {
                     pinnedNotes.length > 0 && (
-                        <section class="mb-8">
-                            <div>
-                                {pinnedNotes.map((note, index) => (
-                                    <a href={`/notes/${note.id.replace('.md', '')}`} class={`group block relative mb-4 pb-5 px-5 border-l-[6px] ${getStageKeylineClass(note.data.stage)} bg-stone-100/50 dark:bg-slate-700/30 hover:bg-stone-200/50 dark:hover:bg-slate-800 transition-colors cursor-pointer rounded-r`}>
-                                        <div class="flex items-center justify-between mb-3">
+                        <article class="group cursor-pointer">
+                            {pinnedNotes.map((note, index) => (
+                                <a href={`/notes/${note.id.replace('.md', '')}`} class="block -mx-6 px-6 py-6 transition-all duration-200 ease-in-out hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:-translate-y-0.5 hover:shadow-lg">
+                                    <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-4 pb-4 border-b border-slate-200/50 dark:border-slate-800/50 last:border-b-0">
+                                        <div class="flex-1 space-y-4">
                                             <div class="flex items-center gap-3">
-                                                <span class="text-[10px] font-bold tracking-widest text-stone-400 dark:text-slate-500 uppercase">
-                                                    Pinned
-                                                </span>
+                                                <span class="text-[0.7rem] uppercase tracking-[0.2em] font-extrabold text-amber-700 dark:text-amber-500">Pinned</span>
+                                                <span class="w-1.5 h-1.5 bg-amber-600 dark:bg-amber-500 rounded-full"></span>
+                                                <time class="text-[0.7rem] uppercase tracking-[0.2em] font-bold text-slate-500 dark:text-slate-400">
+                                                    {note.data.publishedDate ? note.data.publishedDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'Draft'}
+                                                </time>
                                             </div>
-                                            <span class="material-symbols-outlined text-stone-400 dark:text-slate-600 text-base mt-3">push_pin</span>
+                                            <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 ease-in-out">
+                                                {note.data.title}
+                                            </h2>
+                                            {note.data.summary && (
+                                                <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-xl">
+                                                    {note.data.summary}
+                                                </p>
+                                            )}
                                         </div>
-                                        <h3 class="text-2xl font-bold text-stone-900 dark:text-white mb-3 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
-                                            {note.data.title}
-                                        </h3>
-                                        {note.data.summary && (
-                                            <p class="text-stone-600 dark:text-slate-400 text-base leading-relaxed mb-4">
-                                                {note.data.summary}
-                                            </p>
-                                        )}
-                                    </a>
-                                ))}
-                            </div>
-                        </section>
+                                    </div>
+                                </a>
+                            ))}
+                        </article>
                     )
                 }
 
                 {/* Current Stream */}
                 <section>
-
                     <NoteTimeline
                         sortedEvents={sortedEvents}
                         allMonths={allMonths}
@@ -294,31 +321,28 @@ const getStageCardClass = (stage: string) => {
 
             <!-- Sidebar -->
             <aside class="lg:col-span-3 space-y-12">
-                {/* Taxonomy Guide */}
-                <GardenStats counts={counts} />
-
-                {/* Key Focus Areas */}
-                <TopicFocus />
+                {/* Popular Topics */}
+                <div class="space-y-6">
+                    <h4 class="text-[0.65rem] uppercase tracking-widest text-slate-900 dark:text-white font-extrabold">Popular Topics</h4>
+                    <div class="flex flex-col gap-2">
+                        {popularTopics.map(([topic, count]) => (
+                            <a class="flex items-center justify-between px-4 py-2 bg-white dark:bg-slate-800 text-sm font-medium text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 transition-all border border-slate-200 dark:border-slate-700" href={`/topics/${topic.replace(/\s+/g, '-')}`}>
+                                <span class="text-slate-500 dark:text-slate-400">#</span>
+                                <span class="flex-1">{topic}</span>
+                                <span class="text-xs text-slate-400 font-mono">{count} {count === 1 ? 'post' : 'posts'}</span>
+                            </a>
+                        ))}
+                    </div>
+                </div>
 
                 {/* Join the Conversation */}
-                <div class="bg-linear-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="material-symbols-outlined text-blue-600 dark:text-blue-400">forum</span>
-                        <h4 class="text-sm font-bold text-blue-900 dark:text-blue-200 uppercase tracking-wider">Join the Conversation</h4>
-                    </div>
-                    <p class="text-sm text-blue-800 dark:text-blue-300 mb-4 leading-relaxed">
-                        Connect with fellow flow-seekers, share insights, and discuss ideas in our Matrix community.
-                    </p>
-                    <a
-                        href="https://matrix.to/#/#flowfocused:matrix.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white text-sm font-semibold rounded-md transition-colors"
-                    >
-                        <span>Join Matrix Space</span>
-                        <span class="material-symbols-outlined text-base">arrow_forward</span>
+                <section class="p-8 bg-blue-600 text-white space-y-6">
+                    <h3 class="text-xl font-extrabold" style="color: white !important;">Join the Conversation</h3>
+                    <p class="text-sm text-white/90 leading-relaxed font-medium">Connect with fellow flow-seekers and share insights in our Matrix community.</p>
+                    <a href="https://matrix.to/#/#flowfocused:matrix.org" target="_blank" rel="noopener noreferrer" class="block w-full bg-white text-blue-600 font-extrabold py-3 hover:bg-white/90 transition-all uppercase tracking-widest text-xs text-center">
+                        Join Matrix Space
                     </a>
-                </div>
+                </section>
             </aside>
         </div>
     </main>
@@ -399,7 +423,7 @@ const getStageCardClass = (stage: string) => {
         if (showMoreButton) {
             if (totalMatchingCount > itemsToShow) {
                 showMoreButton.classList.remove("hidden");
-                showMoreButton.textContent = `Load More Insights (${totalMatchingCount - itemsToShow} remaining)`;
+                showMoreButton.textContent = `Load More (${totalMatchingCount - itemsToShow} remaining)`;
             } else {
                 showMoreButton.classList.add("hidden");
             }

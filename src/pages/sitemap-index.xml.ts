@@ -10,7 +10,7 @@ export async function GET() {
 
   const pages = [
     '',
-    ...publishedNotes.map(note => `notes/${note.slug}`)
+    ...publishedNotes.map(note => `notes/${note.id}`)
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -18,7 +18,7 @@ export async function GET() {
 ${pages.map(page => {
   const url = page ? `${baseUrl}/${page}` : baseUrl;
   const isNote = page.startsWith('notes/');
-  const note = isNote ? publishedNotes.find(n => `notes/${n.slug}` === page) : null;
+  const note = isNote ? publishedNotes.find(n => `notes/${n.id}` === page) : null;
   const lastmod = note ? (note.data.publishedDate || new Date()).toISOString().split('T')[0] : new Date().toISOString().split('T')[0];
   const priority = isNote ? '0.8' : '1.0';
   const changefreq = isNote ? 'monthly' : 'weekly';

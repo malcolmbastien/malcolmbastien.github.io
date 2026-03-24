@@ -1,196 +1,203 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import BackToGarden from "../components/Navigation/BackToGarden.astro";
-import TableOfContents from "../components/Navigation/TableOfContents.astro";
 import SiteFooter from "../components/SiteFooter.astro";
-
-const tocSections = [
-    { id: "intro", text: "Intro" },
-    { id: "development", text: "Development" },
-    { id: "writing", text: "Writing" },
-    { id: "hosting", text: "Hosting" },
-    { id: "typography", text: "Typography" },
-    { id: "techstack", text: "Tech Stack" }
-];
 
 const packages = [
     {
         name: "Astro",
-        description: "The web framework for content-driven websites.",
+        description: "The web framework for content-driven websites. Ship less JS, more performance.",
         link: "https://astro.build",
     },
     {
         name: "Tailwind CSS",
-        description: "A utility-first CSS framework for rapid UI development.",
+        description: "Utility-first CSS framework for rapid UI development without leaving the HTML.",
         link: "https://tailwindcss.com",
     },
     {
         name: "Pagefind",
-        description: "A fully static search library that works without a server.",
+        description: "Zero-config static search library that works entirely on the client side.",
         link: "https://pagefind.app",
     },
     {
         name: "@astrojs/sitemap",
-        description: "Automatically generates a sitemap for better SEO.",
+        description: "Automated SEO infrastructure for discoverability across the open web.",
         link: "https://docs.astro.build/en/guides/integrations-guide/sitemap/",
     },
     {
         name: "Remark & Unist",
-        description: "Powerful tools for processing Markdown and building custom content features.",
+        description: "The pipeline that transforms Markdown into structured, accessible HTML.",
         link: "https://remark.js.org/",
+    }
+];
+
+const developmentTools = [
+    {
+        name: "Zed",
+        description: "A high-performance code editor written in Rust, chosen for its near-zero latency and collaborative environment. It serves as the primary forge for our codebase.",
+        link: "https://zed.dev",
+    },
+    {
+        name: "Open Code AI",
+        description: "An interactive coding tool that assists in architectural decisions and boilerplate reduction, ensuring the logic remains consistent with the \"Blueprint\" philosophy.",
+        link: "https://opencode.ai",
+    },
+    {
+        name: "Google Stitch",
+        description: "The primary design tool used for creating and maintaining the visual language and component systems of Flow Focused.",
+        link: "https://stitch.withgoogle.com",
+    }
+];
+
+const workflowTools = [
+    {
+        name: "Obsidian",
+        description: "The \"Second Brain\" where all Markdown writing happens. Its graph-based structure allows for emergent ideas to connect before they ever reach a draft state.",
+        link: "https://obsidian.md",
+    },
+    {
+        name: "Obsidian Git",
+        description: "Seamless publishing through automated commits. This bridge ensures that the distance between a \"Note\" and a \"Published Post\" is just a single shortcut away.",
+        link: "https://github.com/denolehov/obsidian-git",
+    }
+];
+
+const deploymentTools = [
+    {
+        name: "Vercel",
+        description: "Static site generation paired with edge deployment provides sub-100ms load times globally. We leverage Vercel's global infrastructure for its unparalleled DX and speed.",
+        link: "https://vercel.com",
+    }
+];
+
+const typographyFonts = [
+    {
+        name: "Plus Jakarta Sans",
+        category: "UI & Body",
+        description: "Weights 300-800. The primary typeface for headings, navigation, and all interface elements. Neutral and highly legible at any size.",
+        link: "https://fonts.google.com/specimen/Plus+Jakarta+Sans",
+    },
+    {
+        name: "Source Serif 4",
+        category: "Article Body",
+        description: "Weights 400-600 with italic. Provides editorial warmth and readability for long-form article content and blockquotes.",
+        link: "https://fonts.google.com/specimen/Source+Serif",
+    },
+    {
+        name: "JetBrains Mono",
+        category: "Code Blocks",
+        description: "Weights 400-500. Designed for code clarity with ligatures and distinctive letterforms for syntax distinction.",
+        link: "https://www.jetbrains.com/lp/mono/",
+    },
+    {
+        name: "Material Symbols",
+        category: "Icons",
+        description: "Variable weight (100-700). Outlined icon set for consistent, modern UI iconography throughout the interface.",
+        link: "https://fonts.google.com/specimen/Material+Symbols+Outlined",
     }
 ];
 ---
 
 <Layout
-    title="Colophon | Digital Garden"
-    description="Information about how this website was built and the tools used in its creation."
+    title="Colophon | Flow Focused"
+    description="Design is not just what it looks like and feels like. Design is how it works. This page details the invisible machinery behind Flow Focused."
     type="website"
 >
-    <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12" data-pagefind-ignore>
-        <!-- Left Sidebar: Navigation -->
-        <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit">
-            <TableOfContents sectionIds={tocSections} title="On this page" />
-            <div class="mt-8">
-                <BackToGarden />
-            </div>
-        </aside>
+    <main class="max-w-7xl mx-auto px-6 lg:px-8 pt-24 pb-32" data-pagefind-ignore>
+        <header class="mb-16">
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tighter text-slate-900 dark:text-white mb-6">Colophon</h1>
+        </header>
 
-        <!-- Main Content -->
-        <div class="lg:col-span-9" data-pagefind-body>
-            <header class="mb-16 scroll-mt-24" id="intro">
-                <h1 class="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">Colophon</h1>
-                <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl italic">
-                    This website is a digital garden — a collection of thoughts, notes, and experiments. It is designed to be fast, accessible, and easy to maintain.
-                </p>
-            </header>
+            <!-- Development Section -->
+            <section class="mb-20" id="development">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="material-symbols-outlined text-blue-600 p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg">terminal</span>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Development &amp; Tools</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {developmentTools.map((tool) => (
+                        <a href={tool.link} target="_blank" rel="noopener noreferrer" class="block p-6 border-l-2 border-blue-600 bg-slate-50 dark:bg-slate-800/30 rounded-r-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors">
+                            <h3 class="text-lg font-bold mb-2 text-blue-600 hover:text-blue-700 dark:hover:text-blue-400">{tool.name}</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {tool.description}
+                            </p>
+                        </a>
+                    ))}
+                </div>
+            </section>
 
-            <div class="space-y-20">
-                <!-- Development & Tools -->
-                <section class="scroll-mt-24" id="development">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                        <h2 class="text-sm font-bold text-slate-600 flex items-center gap-2 whitespace-nowrap">
-                            <span class="material-symbols-outlined text-base">code</span>
-                            Development & Tools
-                        </h2>
-                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                    </div>
-                    <div class="space-y-6">
-                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
-                                <a href="https://zed.dev/" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Zed</a>
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">The primary code editor used for building this site. Zed's high-performance and collaborative features make it an ideal choice for modern web development.</p>
-                        </div>
-                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
-                                <a href="https://opencode.ai/" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Open Code AI</a>
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Much of the implementation and technical structure was developed with the assistance of Open Code AI, an interactive coding tool that helps translate ideas into functional code.</p>
-                        </div>
-                    </div>
-                </section>
+            <!-- Workflow Section -->
+            <section class="mb-20" id="workflow">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="material-symbols-outlined text-blue-600 p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg">history_edu</span>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Writing Workflow</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {workflowTools.map((tool) => (
+                        <a href={tool.link} target="_blank" rel="noopener noreferrer" class="block p-6 border-l-2 border-blue-600 bg-slate-50 dark:bg-slate-800/30 rounded-r-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors">
+                            <h3 class="text-lg font-bold mb-2 text-blue-600 hover:text-blue-700 dark:hover:text-blue-400">{tool.name}</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {tool.description}
+                            </p>
+                        </a>
+                    ))}
+                </div>
+            </section>
 
-                <!-- Writing Workflow -->
-                <section class="scroll-mt-24" id="writing">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                        <h2 class="text-sm font-bold text-slate-600 flex items-center gap-2 whitespace-nowrap">
-                            <span class="material-symbols-outlined text-base">edit_note</span>
-                            Writing Workflow
-                        </h2>
-                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                    </div>
-                    <div class="space-y-6">
-                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
-                                <a href="https://obsidian.md/" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Obsidian</a>
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">All blog posts and notes are written in Markdown using Obsidian. This allows for a seamless connection between personal notes and publicly shared content.</p>
-                        </div>
-                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
-                                <a href="https://github.com/denolehov/obsidian-git" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Obsidian Git Plugin</a>
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">The site's content is pushed directly from Obsidian to GitHub using the Obsidian Git plugin, enabling a "write and publish" workflow without leaving the writing environment.</p>
-                        </div>
-                    </div>
-                </section>
+            <!-- Deployment Section -->
+            <section class="mb-20" id="deployment">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="material-symbols-outlined text-blue-600 p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg">cloud_done</span>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Hosting &amp; Deployment</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {deploymentTools.map((tool) => (
+                        <a href={tool.link} target="_blank" rel="noopener noreferrer" class="block p-6 border-l-2 border-blue-600 bg-slate-50 dark:bg-slate-800/30 rounded-r-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors md:col-span-2">
+                            <h3 class="text-lg font-bold mb-2 text-blue-600 hover:text-blue-700 dark:hover:text-blue-400">{tool.name}</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {tool.description}
+                            </p>
+                        </a>
+                    ))}
+                </div>
+            </section>
 
-                <!-- Hosting & Deployment -->
-                <section class="scroll-mt-24" id="hosting">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                        <h2 class="text-sm font-bold text-slate-600 flex items-center gap-2 whitespace-nowrap">
-                            <span class="material-symbols-outlined text-base">rocket_launch</span>
-                            Hosting & Deployment
-                        </h2>
-                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                    </div>
-                    <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
-                        <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
-                            <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Vercel</a>
-                        </h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">The site is hosted on Vercel. Every time content is pushed to the main branch, Vercel automatically triggers a build process that generates the static site and deploys it to their global edge network.</p>
-                    </div>
-                </section>
-
-                <!-- Typography -->
-                <section class="scroll-mt-24" id="typography">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                        <h2 class="text-sm font-bold text-slate-600 flex items-center gap-2 whitespace-nowrap">
-                            <span class="material-symbols-outlined text-base">text_fields</span>
-                            Typography
-                        </h2>
-                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                    </div>
-                    <div class="space-y-6">
-                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
-                                <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Inter</a>
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Used for page titles, headers, UI elements, and body text. A modern geometric sans-serif with excellent weight range (300-900) that provides crisp readability at all sizes.</p>
-                        </div>
-                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
-                                <a href="https://fonts.google.com/specimen/Source+Serif+4" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">Source Serif 4</a>
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Used for block quotes and callout text to provide visual distinction and elegant emphasis. A refined serif that brings a touch of traditional typography to highlighted content.</p>
-                        </div>
-                        <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
-                            <h3 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">
-                                <a href="https://fonts.google.com/specimen/JetBrains+Mono" target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">JetBrains Mono</a>
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Used for code blocks and technical metadata. A highly legible monospaced font specifically designed for developers.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Tech Stack -->
-                <section class="scroll-mt-24" id="techstack">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                        <h2 class="text-sm font-bold text-slate-600 flex items-center gap-2 whitespace-nowrap">
-                            <span class="material-symbols-outlined text-base">package_2</span>
-                            Technology Stack
-                        </h2>
-                        <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                    </div>
-                    <div class="space-y-6">
-                        {packages.map((pkg) => (
-                            <div class="pb-6 border-b border-slate-100 dark:border-slate-800">
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">
-                                    <a href={pkg.link} target="_blank" rel="noopener noreferrer" class="hover:text-primary dark:hover:text-blue-400 transition-colors">{pkg.name}</a>
-                                </h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{pkg.description}</p>
-                            </div>
+            <!-- Typography Section -->
+            <section class="mb-20" id="typography">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="material-symbols-outlined text-blue-600 p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg">format_size</span>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Typography</h2>
+                </div>
+                <div class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {typographyFonts.map((font) => (
+                            <a href={font.link} target="_blank" rel="noopener noreferrer" class="block p-6 bg-white dark:bg-slate-900 border border-slate-200/30 dark:border-slate-800/30 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                <p class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-4">{font.category}</p>
+                                <p class="text-3xl font-bold mb-2 text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">{font.name}</p>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 font-medium leading-relaxed">{font.description}</p>
+                            </a>
                         ))}
                     </div>
-                </section>
-            </div>
-        </div>
+                </div>
+            </section>
+
+            <!-- Stack Section -->
+            <section class="mb-20" id="stack">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="material-symbols-outlined text-blue-600 p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg">schema</span>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Technology Stack</h2>
+                </div>
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200/20 dark:bg-slate-800/20 border border-slate-200/20 dark:border-slate-800/20 rounded-2xl overflow-hidden">
+                    {packages.map((pkg) => (
+                        <a href={pkg.link} target="_blank" rel="noopener noreferrer" class="p-8 bg-white dark:bg-slate-900 flex flex-col justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                            <div>
+                                <h4 class="font-bold text-blue-600 mb-2 hover:text-blue-700 dark:hover:text-blue-400">{pkg.name}</h4>
+                                <p class="text-sm text-slate-600 dark:text-slate-400">{pkg.description}</p>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </section>
+        </main>
+        <SiteFooter />
     </main>
-    <SiteFooter />
 </Layout>

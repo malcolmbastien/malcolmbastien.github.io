@@ -28,14 +28,12 @@ interface Props {
     headings?: any[];
 }
 
-const { frontmatter, backlinkedNotes, noteBody, headings } =
-    Astro.props;
+const { frontmatter, backlinkedNotes, noteBody, headings } = Astro.props;
 
 const readingTime = noteBody ? getReadingTime(noteBody) : "";
 const stageData = getStageData(frontmatter.stage);
 
 const createdDate = frontmatter.publishedDate || new Date();
-
 const isNoteDraft = frontmatter.draft === true;
 
 const formatDate = (date: Date) => {
@@ -47,7 +45,6 @@ const formatDate = (date: Date) => {
     });
 };
 
-// Helper for stage badge styling
 const getStageBadgeClass = (stage: string) => {
     const stageData = getStageData(stage);
     return stageData.colors.badge;
@@ -62,92 +59,137 @@ const getStageBadgeClass = (stage: string) => {
     publishedTime={createdDate.toISOString()}
     tags={frontmatter.tags}
 >
-    <main class="max-w-7xl mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12">
-            <!-- Left Sidebar - Context/Navigation -->
-            <aside class="hidden lg:block sticky top-24 h-fit pr-4 border-r border-slate-100 dark:border-slate-800 min-w-0 w-full overflow-hidden">
-                <div class="space-y-8">
-                    <TableOfContents
-                        content={noteBody || ""}
-                        title={frontmatter.title}
-                        headings={headings}
-                        minHeadings={2}
-                    />
-                    <AboutAuthor />
-                    <BackToGarden class="mt-8" />
-                </div>
-            </aside>
-
-            <!-- Main Content -->
-            <article
-                class={`max-w-3xl ${isNoteDraft ? "note-is-draft relative" : ""}`}
-                data-pagefind-body
-            >
-                <!-- Draft Banner -->
-                {isNoteDraft && (
-                    <div class="draft-banner mb-6 px-4 py-3 border-l-4 border-dashed border-slate-400 dark:border-slate-500 bg-slate-50 dark:bg-slate-800/50 rounded-r">
-                        <div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
-                            <span class="material-symbols-outlined text-sm">edit_note</span>
-                            <span class="text-sm font-medium">Draft Post — This post is a draft and is unlisted.</span>
-                        </div>
-                    </div>
-                )}
-
-                <!-- Article Header -->
-                <header class="mb-12 pb-8 border-b border-slate-100 dark:border-slate-800">
-                    <!-- Metadata line -->
-                    <div class="flex flex-wrap items-center gap-3 mb-6" data-pagefind-filter="stage" data-pagefind-meta={`stage:${frontmatter.stage}`}>
-                        <span class={`text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider ${getStageBadgeClass(frontmatter.stage)}`}>
-                            {frontmatter.stage}
-                        </span>
-                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                            {formatDate(createdDate)}
-                        </span>
-
-                        {readingTime && (
-                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                                {readingTime}
-                            </span>
+    <main class="pt-24 lg:pt-32">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row gap-20">
+                <!-- Left Sidebar - TOC -->
+                <aside class="w-full md:w-64 shrink-0">
+                    <div class="sticky top-32 space-y-12">
+                        {headings && headings.length > 0 && (
+                            <div>
+                                <h3 class="text-[0.75rem] font-bold tracking-widest uppercase text-slate-400 mb-6">Contents</h3>
+                                <nav class="flex flex-col gap-4 border-l border-slate-200 dark:border-slate-700/30">
+                                    {headings.filter(h => h.depth <= 3).map((heading) => (
+                                        <a
+                                            href={`#${heading.slug}`}
+                                            class="toc-link pl-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors border-l-2 border-transparent hover:border-blue-600 -ml-px"
+                                            data-target={heading.slug}
+                                        >
+                                            {heading.text}
+                                        </a>
+                                    ))}
+                                </nav>
+                            </div>
                         )}
                     </div>
+                </aside>
 
-                    <!-- Title -->
-                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white leading-tight mb-6">
-                        {frontmatter.title}
-                    </h1>
-
-                    <!-- Summary -->
-                    {frontmatter.summary && (
-                        <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed italic">
-                            {frontmatter.summary}
-                        </p>
-                    )}
-
-                    <!-- Tags -->
-                    {frontmatter.tags.length > 0 && (
-                        <div class="flex flex-wrap gap-2 mt-6">
-                            {frontmatter.tags.map(tag => (
-                                <TopicBadge topic={tag} size="sm" />
-                            ))}
+                <!-- Main Content -->
+                <div class="grow">
+                    <!-- Draft Banner -->
+                    {isNoteDraft && (
+                        <div class="draft-banner mb-6 px-4 py-3 border-l-4 border-dashed border-slate-400 dark:border-slate-500 bg-slate-50 dark:bg-slate-800/50 rounded-r">
+                            <div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                                <span class="material-symbols-outlined text-sm">edit_note</span>
+                                <span class="text-sm font-medium">Draft Post — This post is a draft and is unlisted.</span>
+                            </div>
                         </div>
                     )}
-                </header>
 
-                <!-- Article Body -->
-                <div class="prose prose-slate dark:prose-invert prose-lg max-w-none font-sans leading-relaxed">
-                    <slot />
-
-                    {backlinkedNotes.length > 0 && (
-                        <div class="backlinks mt-16 pt-8 border-t border-slate-100 dark:border-slate-800">
-                            <Backlinks backlinkedNotes={backlinkedNotes} />
+                    <!-- Article Header -->
+                    <header class="mb-16">
+                        <div class="max-w-180">
+                            <div class="flex items-center gap-3 mb-6">
+                                {readingTime && (
+                                    <>
+                                        <span class="text-slate-500 dark:text-slate-400 text-[0.75rem] font-medium tracking-wide">{readingTime}</span>
+                                        <span class="text-slate-300 dark:text-slate-600 text-[0.75rem]">•</span>
+                                    </>
+                                )}
+                                <span class="text-slate-500 dark:text-slate-400 text-[0.75rem] font-medium tracking-wide italic">{formatDate(createdDate)}</span>
+                            </div>
+                            <h1 class="text-slate-900 dark:text-white text-5xl md:text-6xl font-extrabold tracking-tighter leading-tight mb-8">
+                                {frontmatter.title}
+                            </h1>
+                            {frontmatter.summary && (
+                                <p class="text-slate-600 dark:text-slate-400 text-xl font-light leading-relaxed border-l-4 border-blue-600 dark:border-blue-500 pl-6">
+                                    {frontmatter.summary}
+                                </p>
+                            )}
+                            {frontmatter.tags.length > 0 && (
+                                <div class="flex flex-wrap gap-2 mt-8">
+                                    {frontmatter.tags.map(tag => (
+                                        <TopicBadge topic={tag} size="sm" />
+                                    ))}
+                                </div>
+                            )}
                         </div>
-                    )}
+                    </header>
+
+                    <!-- Article Body -->
+                    <article class="prose prose-slate dark:prose-invert prose-lg max-w-180">
+                        <slot />
+
+                        {backlinkedNotes.length > 0 && (
+                            <div class="backlinks mt-16 pt-8 border-t border-slate-100 dark:border-slate-800">
+                                <Backlinks backlinkedNotes={backlinkedNotes} />
+                            </div>
+                        )}
+                    </article>
+
+                    <!-- Author Profile at Bottom -->
+                    <div class="mt-20 pt-16 border-t border-slate-200 dark:border-slate-800">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-12 max-w-180">
+                            <!-- Author Meta -->
+                            <div class="flex items-center gap-6">
+                                <div class="w-16 h-16 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden shrink-0">
+                                    <img
+                                        src="/malcolm_headshot.png"
+                                        alt="Malcolm Bastien"
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div>
+                                    <p class="text-base font-bold text-slate-900 dark:text-white">Malcolm Bastien</p>
+                                    <p class="text-xs text-slate-400 uppercase tracking-widest mb-2">Agile Delivery & Organizational Change</p>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400 max-w-md leading-relaxed">
+                                        Unlocking flow through the alignment of socio-technical systems, AI, and product thinking.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
-            </article>
+            </div>
         </div>
     </main>
+
+    <script>
+        const tocLinks = document.querySelectorAll('.toc-link');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+
+                    tocLinks.forEach(link => {
+                        const linkTarget = link.getAttribute('data-target');
+                        if (linkTarget === id) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-20% 0px -60% 0px' });
+
+        document.querySelectorAll('h2[id], h3[id]').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+    <div class="pb-16"></div>
 
     <SiteFooter />
 
@@ -155,6 +197,17 @@ const getStageBadgeClass = (stage: string) => {
 
     <style is:global>
         @reference "../styles/global.css";
+
+        /* TOC Active Link */
+        .toc-link.active {
+            color: #003fe5 !important;
+            border-left-color: #003fe5 !important;
+        }
+
+        .dark .toc-link.active {
+            color: #60a5fa !important;
+            border-left-color: #60a5fa !important;
+        }
 
         /* Backlinks section */
         .prose .backlinks a {
@@ -179,159 +232,135 @@ const getStageBadgeClass = (stage: string) => {
 
         .prose blockquote {
             border-left-color: var(--color-primary);
-            font-style: italic;
-            font-family: var(--font-serif);
         }
 
-        /* Callout base styles - production-safe with !important */
+        /* Callout base styles - full width with right rounded corners */
         .prose .callout-block {
-            margin: 1.5rem 0 !important;
-            padding: 1rem 1.25rem !important;
+            margin: 1rem 0 !important;
+            padding: 1rem !important;
             border-radius: 0 0.5rem 0.5rem 0 !important;
-            border-left-width: 3px !important;
+            border-left-width: 4px !important;
             border-left-style: solid !important;
+            border-top: none !important;
+            border-right: none !important;
+            border-bottom: none !important;
+            width: 100% !important;
         }
 
-        .prose .callout-block[data-callout-type="note"] { background-color: #f8fafc !important; border-left-color: #64748b !important; }
-        .prose .callout-block[data-callout-type="tip"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
-        .prose .callout-block[data-callout-type="important"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
-        .prose .callout-block[data-callout-type="warning"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
-        .prose .callout-block[data-callout-type="error"] { background-color: #fef2f2 !important; border-left-color: #ef4444 !important; }
-        .prose .callout-block[data-callout-type="danger"] { background-color: #fef2f2 !important; border-left-color: #ef4444 !important; }
+        /* Light mode callout styles */
+        .prose .callout-block[data-callout-type="note"] { background-color: #eeeff3 !important; border-left-color: #993fe5 !important; }
+        .prose .callout-block[data-callout-type="abstract"] { background-color: #ecfeff !important; border-left-color: #0891b2 !important; }
         .prose .callout-block[data-callout-type="info"] { background-color: #eff6ff !important; border-left-color: #3b82f6 !important; }
-        .prose .callout-block[data-callout-type="todo"] { background-color: #eff6ff !important; border-left-color: #3b82f6 !important; }
+        .prose .callout-block[data-callout-type="example"] { background-color: #eef2ff !important; border-left-color: #6366f1 !important; }
+        .prose .callout-block[data-callout-type="tip"] { background-color: #ecfdf5 !important; border-left-color: #10b981 !important; }
+        .prose .callout-block[data-callout-type="important"] { background-color: #fff1f2 !important; border-left-color: #e11d48 !important; }
+        .prose .callout-block[data-callout-type="todo"] { background-color: #dde1ff !important; border-left-color: #335cff !important; }
         .prose .callout-block[data-callout-type="success"] { background-color: #f0fdf4 !important; border-left-color: #22c55e !important; }
-        .prose .callout-block[data-callout-type="abstract"] { background-color: #f0fdf4 !important; border-left-color: #22c55e !important; }
-        .prose .callout-block[data-callout-type="example"] { background-color: #faf5ff !important; border-left-color: #a855f7 !important; }
-        .prose .callout-block[data-callout-type="quote"] { background-color: #f8fafc !important; border-left-color: #64748b !important; }
-        .prose .callout-block[data-callout-type="question"] { background-color: #faf5ff !important; border-left-color: #a855f7 !important; }
-        .prose .callout-block[data-callout-type="failure"] { background-color: #fef2f2 !important; border-left-color: #ef4444 !important; }
-        .prose .callout-block[data-callout-type="bug"] { background-color: #fef2f2 !important; border-left-color: #ef4444 !important; }
-        .prose .callout-block[data-callout-type="idea"] { background-color: #fffbeb !important; border-left-color: #f59e0b !important; }
-        .prose .callout-block[data-callout-type="draft"] { background-color: #f8fafc !important; border-left-color: #64748b !important; border-left-style: dashed !important; }
-        .prose .callout-block[data-callout-type="wip"] { background-color: #f8fafc !important; border-left-color: #64748b !important; border-left-style: dashed !important; }
+        .prose .callout-block[data-callout-type="question"] { background-color: #eef2ff !important; border-left-color: #6366f1 !important; }
+        .prose .callout-block[data-callout-type="warning"] { background-color: #fffafb !important; border-left-color: #f59e0b !important; }
+        .prose .callout-block[data-callout-type="failure"] { background-color: #ffdada !important; border-left-color: #ba1a1a !important; }
+        .prose .callout-block[data-callout-type="error"] { background-color: #ffdada !important; border-left-color: #ba1a1a !important; }
+        .prose .callout-block[data-callout-type="danger"] { background-color: #ffdada !important; border-left-color: #ba1a1a !important; }
+        .prose .callout-block[data-callout-type="bug"] { background-color: #f1f5f9 !important; border-left-color: #475569 !important; }
+        .prose .callout-block[data-callout-type="idea"] { background-color: #fefce8 !important; border-left-color: #eab308 !important; }
+        .prose .callout-block[data-callout-type="quote"] { background-color: #f9f9fc !important; border-left-color: #c4c5d9 !important; }
+        .prose .callout-block[data-callout-type="draft"] { background-color: #f5f3ff !important; border-left-color: #8b5cf6 !important; border-left-style: dashed !important; }
+        .prose .callout-block[data-callout-type="wip"] { background-color: #f5f3ff !important; border-left-color: #8b5cf6 !important; border-left-style: dashed !important; }
 
         /* Dark mode callout overrides */
-        .dark .prose .callout-block[data-callout-type="note"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; }
-        .dark .prose .callout-block[data-callout-type="tip"] { background-color: #451a03 !important; border-left-color: #f59e0b !important; }
-        .dark .prose .callout-block[data-callout-type="important"] { background-color: #451a03 !important; border-left-color: #f59e0b !important; }
-        .dark .prose .callout-block[data-callout-type="warning"] { background-color: #451a03 !important; border-left-color: #f59e0b !important; }
-        .dark .prose .callout-block[data-callout-type="error"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; }
-        .dark .prose .callout-block[data-callout-type="danger"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; }
-        .dark .prose .callout-block[data-callout-type="info"] { background-color: #172554 !important; border-left-color: #3b82f6 !important; }
-        .dark .prose .callout-block[data-callout-type="todo"] { background-color: #172554 !important; border-left-color: #3b82f6 !important; }
-        .dark .prose .callout-block[data-callout-type="success"] { background-color: #052e16 !important; border-left-color: #22c55e !important; }
-        .dark .prose .callout-block[data-callout-type="abstract"] { background-color: #052e16 !important; border-left-color: #22c55e !important; }
-        .dark .prose .callout-block[data-callout-type="example"] { background-color: #3b0764 !important; border-left-color: #a855f7 !important; }
-        .dark .prose .callout-block[data-callout-type="quote"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; }
-        .dark .prose .callout-block[data-callout-type="question"] { background-color: #3b0764 !important; border-left-color: #a855f7 !important; }
-        .dark .prose .callout-block[data-callout-type="failure"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; }
-        .dark .prose .callout-block[data-callout-type="bug"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; }
-        .dark .prose .callout-block[data-callout-type="idea"] { background-color: #451a03 !important; border-left-color: #f59e0b !important; }
-        .dark .prose .callout-block[data-callout-type="draft"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; border-left-style: dashed !important; }
-        .dark .prose .callout-block[data-callout-type="wip"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; border-left-style: dashed !important; }
+        .dark .prose .callout-block[data-callout-type="note"] { background-color: #2b244d !important; border-left-color: #c4b5fd !important; }
+        .dark .prose .callout-block[data-callout-type="abstract"] { background-color: #083344 !important; border-left-color: #22d3ee !important; }
+        .dark .prose .callout-block[data-callout-type="info"] { background-color: #1e3a5f !important; border-left-color: #60a5fa !important; }
+        .dark .prose .callout-block[data-callout-type="example"] { background-color: #1e1b4b !important; border-left-color: #a5b4fc !important; }
+        .dark .prose .callout-block[data-callout-type="tip"] { background-color: #064e3b !important; border-left-color: #34d399 !important; }
+        .dark .prose .callout-block[data-callout-type="important"] { background-color: #4c0519 !important; border-left-color: #fb7185 !important; }
+        .dark .prose .callout-block[data-callout-type="todo"] { background-color: #1e1b4b !important; border-left-color: #a5b4fc !important; }
+        .dark .prose .callout-block[data-callout-type="success"] { background-color: #14532d !important; border-left-color: #4ade80 !important; }
+        .dark .prose .callout-block[data-callout-type="question"] { background-color: #1e1b4b !important; border-left-color: #a5b4fc !important; }
+        .dark .prose .callout-block[data-callout-type="warning"] { background-color: #451a03 !important; border-left-color: #fbbf24 !important; }
+        .dark .prose .callout-block[data-callout-type="failure"] { background-color: #450a0a !important; border-left-color: #fca5a5 !important; }
+        .dark .prose .callout-block[data-callout-type="error"] { background-color: #450a0a !important; border-left-color: #fca5a5 !important; }
+        .dark .prose .callout-block[data-callout-type="danger"] { background-color: #450a0a !important; border-left-color: #fca5a5 !important; }
+        .dark .prose .callout-block[data-callout-type="bug"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="idea"] { background-color: #422006 !important; border-left-color: #fde047 !important; }
+        .dark .prose .callout-block[data-callout-type="quote"] { background-color: #1e293b !important; border-left-color: #c4c5d9 !important; }
+        .dark .prose .callout-block[data-callout-type="draft"] { background-color: #2e1065 !important; border-left-color: #c4b5fd !important; border-left-style: dashed !important; }
+        .dark .prose .callout-block[data-callout-type="wip"] { background-color: #2e1065 !important; border-left-color: #c4b5fd !important; border-left-style: dashed !important; }
 
         /* Dark mode internal text colors */
-        .dark .prose .callout-block .callout-body p {
-            color: #d1d5db !important;
+        .dark .prose .callout-block .callout-body p,
+        .dark .prose .callout-block .callout-body li {
+            color: #f1f5f9 !important;
         }
 
-        .dark .prose .callout-block[data-callout-type="note"] .callout-header span,
-        .dark .prose .callout-block[data-callout-type="draft"] .callout-header span,
-        .dark .prose .callout-block[data-callout-type="wip"] .callout-header span { color: #94a3b8 !important; }
-        .dark .prose .callout-block[data-callout-type="tip"] .callout-header span,
-        .dark .prose .callout-block[data-callout-type="important"] .callout-header span,
-        .dark .prose .callout-block[data-callout-type="idea"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="note"] .callout-header span { color: #c4b5fd !important; }
+        .dark .prose .callout-block[data-callout-type="abstract"] .callout-header span { color: #22d3ee !important; }
+        .dark .prose .callout-block[data-callout-type="info"] .callout-header span { color: #60a5fa !important; }
+        .dark .prose .callout-block[data-callout-type="example"] .callout-header span { color: #a5b4fc !important; }
+        .dark .prose .callout-block[data-callout-type="tip"] .callout-header span { color: #34d399 !important; }
+        .dark .prose .callout-block[data-callout-type="important"] .callout-header span { color: #fb7185 !important; }
+        .dark .prose .callout-block[data-callout-type="todo"] .callout-header span { color: #a5b4fc !important; }
+        .dark .prose .callout-block[data-callout-type="success"] .callout-header span { color: #4ade80 !important; }
+        .dark .prose .callout-block[data-callout-type="question"] .callout-header span { color: #a5b4fc !important; }
         .dark .prose .callout-block[data-callout-type="warning"] .callout-header span { color: #fbbf24 !important; }
-        .dark .prose .callout-block[data-callout-type="error"] .callout-header span,
         .dark .prose .callout-block[data-callout-type="failure"] .callout-header span,
-        .dark .prose .callout-block[data-callout-type="bug"] .callout-header span,
-        .dark .prose .callout-block[data-callout-type="danger"] .callout-header span { color: #f87171 !important; }
-        .dark .prose .callout-block[data-callout-type="info"] .callout-header span,
-        .dark .prose .callout-block[data-callout-type="todo"] .callout-header span { color: #60a5fa !important; }
-        .dark .prose .callout-block[data-callout-type="success"] .callout-header span,
-        .dark .prose .callout-block[data-callout-type="abstract"] .callout-header span { color: #4ade80 !important; }
-        .dark .prose .callout-block[data-callout-type="example"] .callout-header span,
-        .dark .prose .callout-block[data-callout-type="question"] .callout-header span { color: #c084fc !important; }
-        .dark .prose .callout-block[data-callout-type="quote"] .callout-header span { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="error"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="danger"] .callout-header span { color: #fca5a5 !important; }
+        .dark .prose .callout-block[data-callout-type="bug"] .callout-header span { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="idea"] .callout-header span { color: #fde047 !important; }
+        .dark .prose .callout-block[data-callout-type="quote"] .callout-header span { color: #a5b4fc !important; }
+        .dark .prose .callout-block[data-callout-type="draft"] .callout-header span,
+        .dark .prose .callout-block[data-callout-type="wip"] .callout-header span { color: #c4b5fd !important; }
 
         .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-            font-family: "Inter", system-ui, sans-serif;
-            @apply text-slate-900 dark:text-slate-100 font-bold tracking-tight scroll-mt-24;
+            font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+            color: #0f172a;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            scroll-margin-top: 6rem;
         }
 
-        .prose h2 { @apply text-2xl mt-12 mb-6; }
-        .prose h3 { @apply text-xl mt-8 mb-4; }
-
-        /* Internal Links */
-        .prose a.internal-link {
-            display: inline !important;
-            transition: all 0.2s ease-in-out !important;
-            @apply font-medium text-slate-900 dark:text-slate-100;
-            background: transparent !important;
-            padding: 0 !important;
-            border: none !important;
-            text-decoration: none !important;
+        .dark .prose h2,
+        .dark .prose h3,
+        .dark .prose h4,
+        .dark .prose h5,
+        .dark .prose h6 {
+            color: #f1f5f9;
         }
 
-        .prose a.internal-link .link-text {
-            text-decoration: underline !important;
-            text-decoration-thickness: 3px !important;
-            text-underline-offset: 4px !important;
-            transition: all 0.2s ease-in-out !important;
-            display: inline !important;
-        }
-
-        .prose a.internal-link[data-stage="seed"] .link-text { text-decoration-color: var(--stage-seed-underline) !important; }
-        .prose a.internal-link[data-stage="sprout"] .link-text { text-decoration-color: var(--stage-sprout-underline) !important; }
-        .prose a.internal-link[data-stage="evergreen"] .link-text { text-decoration-color: var(--stage-evergreen-underline) !important; }
-
-        .prose a.internal-link:hover .link-text {
-            text-decoration-thickness: 6px !important;
-        }
-
-        /* External Links */
-        .prose a.external-link {
-            @apply font-semibold text-purple-600 hover:opacity-80 transition-opacity;
-            display: inline !important;
-            text-decoration: none !important;
-        }
-
-        .prose a.external-link .link-text {
-            text-decoration: underline !important;
-            text-decoration-color: #a855f7 !important;
-            text-decoration-thickness: 3px !important;
-            text-underline-offset: 4px !important;
-            transition: all 0.2s ease-in-out !important;
-        }
-
-        .prose a.external-link:hover .link-text {
-            text-decoration-thickness: 6px !important;
-        }
-
-        .prose a.external-link::after {
-            content: "north_east" !important;
-            font-family: 'Material Symbols Outlined' !important;
-            font-size: 16px !important;
-            line-height: 1 !important;
-            margin-left: 0.1rem !important;
-            opacity: 1 !important;
-            display: inline-block !important;
-            text-decoration: none !important;
-            vertical-align: middle !important;
-        }
+        .prose h2 { font-size: 1.875rem; margin-top: 3rem; margin-bottom: 1.5rem; }
+        .prose h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
 
         /* Inline Topic Links */
         .prose a.inline-tag {
-            @apply inline-flex items-center gap-1 text-sm font-medium text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded px-3 py-1.5 mx-0.5 transition-colors;
-            text-decoration: none !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #475569;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 9999px;
+            padding: 0.375rem 0.75rem;
+            margin: 0.125rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .dark .prose a.inline-tag {
+            color: #cbd5e1;
+            background: #1e293b;
+            border-color: #334155;
         }
 
         .prose a.inline-tag:hover {
-            @apply border-primary text-primary dark:text-blue-400;
+            border-color: #003fe5;
+            color: white;
+            background: #003fe5;
         }
 
-        /* Draft Container - :::draft directive */
+        /* Draft Container */
         .prose .draft-container {
             margin: 1.5rem 0 !important;
             padding: 1rem 1.25rem !important;
@@ -373,7 +402,7 @@ const getStageBadgeClass = (stage: string) => {
             margin-bottom: 0 !important;
         }
 
-        /* Reduce vertical spacing between list items */
+        /* List spacing */
         .prose li {
             margin-top: 0.25rem;
             margin-bottom: 0.25rem;

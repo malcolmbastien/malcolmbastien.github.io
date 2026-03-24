@@ -1,9 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import SiteFooter from "../../components/SiteFooter.astro";
-import { stages as themeStages, getStageData } from "../../lib/theme";
 
 export async function getStaticPaths() {
     const allNotes = await getCollection("notes");
@@ -19,143 +17,64 @@ export async function getStaticPaths() {
 const { topic } = Astro.params;
 
 const allNotes = await getCollection("notes");
-const filteredNotes = allNotes.filter((note) => note.data.tags.includes(topic!));
+const filteredNotes = allNotes.filter((note) =>
+    note.data.tags.some((tag) => tag.toLowerCase() === topic?.toLowerCase())
+);
 
 const sortedNotes = filteredNotes.sort(
     (a, b) =>
         (b.data.publishedDate?.getTime() || 0) -
         (a.data.publishedDate?.getTime() || 0),
 );
-
-const latestDate = sortedNotes.length > 0
-    ? sortedNotes[0].data.publishedDate?.toLocaleDateString("en-US", { month: 'short', year: 'numeric', timeZone: 'UTC' })
-    : "N/A";
-
-// Group notes by stage
-const groupedByStage = {
-    evergreen: sortedNotes.filter(n => n.data.stage === 'evergreen'),
-    sprout: sortedNotes.filter(n => n.data.stage === 'sprout'),
-    seed: sortedNotes.filter(n => n.data.stage === 'seed')
-};
-
-const stages = ['evergreen', 'sprout', 'seed'].map(id => {
-    const data = themeStages[id as keyof typeof themeStages];
-    return {
-        id,
-        label: data.label + 's', // Pluralize for this page
-        icon: data.icon,
-        color: data.colors.accent,
-        bgColor: data.colors.bgAccent,
-        dotColor: data.colors.dotShadow
-    };
-});
 ---
 
 <Layout
-    title={`Topic: ${topic} | Knowledge Path`}
+    title={`${topic} | Topic Archive`}
     description={`Explore all cultivated notes and ideas regarding ${topic}.`}
     type="website"
 >
-    <main class="w-full max-w-7xl mx-auto px-6 py-12" data-pagefind-ignore>
+    <main class="pt-32 pb-24 px-8 md:px-16 lg:px-24 max-w-5xl mx-auto" data-pagefind-body>
         <!-- Header Section -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-            <div>
-                <h1 class="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
-                    Topic: <span class="text-blue-600 dark:text-blue-400">{topic}</span>
-                </h1>
-                <div class="flex items-center gap-6 text-slate-500 dark:text-slate-400">
-                    <span class="text-sm font-mono">{sortedNotes.length.toString().padStart(3, '0')} notes</span>
-                    <span class="text-slate-300 dark:text-slate-600">|</span>
-                    <span class="text-sm font-mono">Last updated {latestDate}</span>
+        <header class="mb-20">
+            <div class="flex items-baseline gap-4 mb-6">
+                <span class="text-[0.75rem] uppercase tracking-[0.2em] font-bold text-primary">Topic Archive</span>
+                <div class="h-px grow bg-slate-200/30 dark:bg-slate-700/30"></div>
+            </div>
+            <h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter text-slate-900 dark:text-white mb-6">
+                {topic}
+            </h1>
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl font-bold text-primary">{sortedNotes.length}</span>
+                    <span class="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Notes</span>
                 </div>
             </div>
-        </div>
+        </header>
 
-        <!-- Knowledge Path -->
-        <div class="relative">
-            <div class="space-y-8">
-                {stages.map((stage) => {
-                    const notes = groupedByStage[stage.id as keyof typeof groupedByStage];
-                    if (notes.length === 0) return null;
-
-                    return (
-                        <section>
-                            <div class="flex items-center gap-4 mb-4 sticky top-20 bg-background-light dark:bg-background-dark py-4 z-20">
-                                <span class={`material-symbols-outlined ${stage.color} text-2xl`}>{stage.icon}</span>
-                                <h2 class="text-2xl font-bold text-slate-900 dark:text-white">{stage.label}</h2>
-                                <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
-                            </div>
-
-                            <div class="md:pl-16 relative">
-                                {notes.map((note) => (
-                                    <article class="group border-b border-slate-200 dark:border-slate-800 pt-8 pb-8 last:border-b-0 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-700 hover:bg-stone-100 dark:hover:bg-slate-800 -mx-4 px-4 py-4 rounded relative">
-                                        <!-- Connection Dot -->
-                                        <div class:list={["topic-dot hidden md:block shadow-[0_0_0_4px_rgba(0,0,0,0.05)]", stage.dotColor]}></div>
-
-                                        <div class="flex gap-8 flex-col md:flex-row">
-                                            {note.data.cover && (
-                                                <div class="w-full md:w-64 h-44 shrink-0 overflow-hidden">
-                                                    <Image
-                                                        src={note.data.cover}
-                                                        alt={note.data.title}
-                                                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out scale-105 group-hover:scale-100"
-                                                    />
-                                                </div>
-                                            )}
-
-                                            <div class="grow flex flex-col">
-                                                <div class="flex justify-between items-start mb-3">
-                                                    <span class:list={["text-xs font-bold uppercase tracking-widest", getStageData(note.data.stage).colors.text]}>
-                                                        {note.data.stage}
-                                                    </span>
-                                                    <time class="text-slate-400 text-xs font-mono">
-                                                        {note.data.publishedDate?.toLocaleDateString("en-US", { month: 'short', year: 'numeric', timeZone: 'UTC' })}
-                                                    </time>
-                                                </div>
-
-                                                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-slate-900 dark:text-white transition-colors leading-tight">
-                                                    <a href={`/notes/${note.id.replace('.md', '')}`}>
-                                                        {note.data.title}
-                                                    </a>
-                                                </h3>
-
-                                                {note.data.summary && (
-                                                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-6 line-clamp-3">
-                                                        {note.data.summary}
-                                                    </p>
-                                                )}
-
-                                                <div class="mt-auto flex flex-wrap gap-2">
-                                                    {note.data.tags.map(t => (
-                                                        <span class="text-[11px] font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide">
-                                                            #{t}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                ))}
-                            </div>
-                        </section>
-                    );
-                })}
-            </div>
-        </div>
+        <!-- Article List -->
+        <section class="space-y-16">
+            {sortedNotes.map((note) => (
+                <article class="group flex flex-col md:flex-row gap-8 items-start">
+                    <div class="w-32 shrink-0 pt-1">
+                        <time class="text-sm font-bold text-slate-400 dark:text-slate-500 tabular-nums uppercase tracking-wide">
+                            {note.data.publishedDate?.toLocaleDateString("en-US", { month: 'short', day: '2-digit', year: 'numeric', timeZone: 'UTC' })}
+                        </time>
+                    </div>
+                    <div class="grow">
+                        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white group-hover:text-primary dark:group-hover:text-blue-400 transition-colors duration-300 leading-tight mb-3">
+                            <a href={`/notes/${note.id.replace('.md', '')}`}>
+                                {note.data.title}
+                            </a>
+                        </h2>
+                        {note.data.summary && (
+                            <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-6 max-w-2xl">
+                                {note.data.summary}
+                            </p>
+                        )}
+                    </div>
+                </article>
+            ))}
+        </section>
     </main>
     <SiteFooter />
 </Layout>
-
-<style is:global>
-    @reference "../../styles/global.css";
-
-    .topic-dot {
-        position: absolute;
-        left: -37px;
-        top: 4.5rem;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        z-index: 10;
-    }
-</style>

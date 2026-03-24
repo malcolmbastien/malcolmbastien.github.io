@@ -42,10 +42,34 @@ const { sortedYears } = Astro.props;
 </ul>
 
 <style>
-    @reference "../styles/global.css";
-
+    .year-btn {
+        color: rgb(148, 163, 184);
+    }
+    
+    .year-btn:hover {
+        color: rgb(71, 85, 105);
+    }
+    
+    :global(.dark) .year-btn {
+        color: rgb(100, 116, 139);
+    }
+    
+    :global(.dark) .year-btn:hover {
+        color: rgb(148, 163, 184);
+    }
+    
     .year-btn.active {
-        @apply font-bold;
+        font-weight: 700;
         color: rgb(37, 99, 235);
+        position: relative;
+    }
+
+    .year-btn.active::before {
+        content: '';
+        position: absolute;
+        left: -16px;
+        top: 0;
+        height: 100%;
+        background-color: rgb(37, 99, 235);
     }
 </style>

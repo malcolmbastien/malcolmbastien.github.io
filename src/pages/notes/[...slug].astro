@@ -1,5 +1,5 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry, render } from 'astro:content';
 import NoteLayout from '../../layouts/NoteLayout.astro';
 
 export async function getStaticPaths() {
@@ -25,7 +25,7 @@ interface Props {
 }
 
 const { entry, backlinkedNotes } = Astro.props;
-const { Content, headings } = await entry.render();
+const { Content, headings } = await render(entry);
 ---
 
 <NoteLayout frontmatter={entry.data} backlinkedNotes={backlinkedNotes} noteBody={entry.body} headings={headings}>

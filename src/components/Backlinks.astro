@@ -32,40 +32,33 @@ const getStageBadgeClass = (stage: string) => {
     backlinkedNotes.length > 0 && (
         <section>
             <div class="flex items-center gap-3 mb-8">
-                <h3 class="small-caps text-xs font-bold tracking-[0.2em] text-slate-500">Connected Notes</h3>
+                <h3 class="small-caps text-xs font-bold tracking-[0.2em] text-slate-500 dark:text-slate-400">Connected Notes</h3>
                 <div class="h-px bg-slate-100 dark:bg-slate-800 grow"></div>
-                <span class="text-[10px] font-medium text-slate-400">{backlinkedNotes.length} links</span>
+                <span class="text-[10px] font-medium text-slate-400 dark:text-slate-500">{backlinkedNotes.length} links</span>
             </div>
-            
-            <div class="space-y-6">
+
+            <div>
                 {backlinkedNotes.map((note) => (
-                    <article class="group relative p-6 border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class={`text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider ${getStageBadgeClass(note.data.stage)}`}>
-                                {note.data.stage}
-                            </span>
-                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                    <a href={`/notes/${note.id.replace('.md', '')}`} class="group block cursor-pointer">
+                        <div class="flex-1">
+                            <time class="text-[0.7rem] uppercase tracking-[0.2em] font-bold text-slate-500 dark:text-slate-400 mb-2 block leading-none">
                                 {note.displayDate.toLocaleDateString("en-US", {
                                     month: 'short',
                                     day: 'numeric',
                                     year: 'numeric',
                                     timeZone: 'UTC'
                                 })}
-                            </span>
-                        </div>
-                        
-                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
-                            <a href={`/notes/${note.id.replace('.md', '')}`}>
+                            </time>
+                            <h4 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight -mt-1">
                                 {note.data.title}
-                            </a>
-                        </h4>
-                        
-                        {note.data.summary && (
-                            <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
-                                {note.data.summary}
-                            </p>
-                        )}
-                    </article>
+                            </h4>
+                            {note.data.summary && (
+                                <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-xl">
+                                    {note.data.summary}
+                                </p>
+                            )}
+                        </div>
+                    </a>
                 ))}
             </div>
         </section>

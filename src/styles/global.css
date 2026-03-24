@@ -2,28 +2,28 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-primary: #2563eb;
-  
+  --color-primary: #003fe5;
+
   /* Stage Colors for Internal Links */
   --stage-seed-underline: #f97316;
   --stage-sprout-underline: #ca8a04;
   --stage-evergreen-underline: #16a34a;
-  
+
   /* Typographic Ledger - Paper Tones */
-  --color-background-light: #fdfdfd;
-  --color-background-dark: #0f172a;
+  --color-background-light: #f9f9fc;
+  --color-background-dark: #1a1c1e;
   --color-content-light: #ffffff;
-  --color-content-dark: #1e293b;
-  --color-paper: #fdfdfd;
-  --color-paper-dark: #0f172a;
-  --color-ink: #0f172a;
+  --color-content-dark: #1a1c1e;
+  --color-paper: #ffffff;
+  --color-paper-dark: #1a1c1e;
+  --color-ink: #111827;
   --color-ink-dark: #f1f5f9;
 
   /* Typography System */
-  --font-display: "Inter", system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-serif: "Source Serif 4", Georgia, serif;
   --font-mono: "JetBrains Mono", "Roboto Mono", monospace;
-  
+
   --ledger-baseline: 1.75rem;
   --ledger-section-gap: 3rem;
   --ledger-content-width: 720px;
@@ -39,7 +39,9 @@
 @utility no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* --- Photo Gallery --- */
@@ -50,12 +52,16 @@
   margin: 3rem 0;
 }
 
-@media (min-width: 640px) { 
-  .photo-gallery { column-count: 2; } 
+@media (min-width: 640px) {
+  .photo-gallery {
+    column-count: 2;
+  }
 }
 
-@media (min-width: 1024px) { 
-  .photo-gallery { column-count: 3; } 
+@media (min-width: 1024px) {
+  .photo-gallery {
+    column-count: 3;
+  }
 }
 
 .gallery-item {
@@ -75,12 +81,12 @@
   margin: 0 !important;
 }
 
-.dark .gallery-item img { 
-  border-color: #1e293b !important; 
+.dark .gallery-item img {
+  border-color: #1e293b !important;
 }
 
-.gallery-item img:hover { 
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1) !important; 
+.gallery-item img:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1) !important;
 }
 
 .gallery-item em {
@@ -96,8 +102,8 @@
   color: #64748b !important;
 }
 
-.dark .gallery-item em { 
-  color: #94a3b8 !important; 
+.dark .gallery-item em {
+  color: #94a3b8 !important;
 }
 
 /* --- Image Styling --- */
@@ -117,12 +123,12 @@
   transition: box-shadow 0.3s !important;
 }
 
-.dark .prose p img:only-of-type { 
-  border-color: #1e293b !important; 
+.dark .prose p img:only-of-type {
+  border-color: #1e293b !important;
 }
 
-.prose p img:only-of-type:hover { 
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1) !important; 
+.prose p img:only-of-type:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1) !important;
 }
 
 .prose p:has(img:only-of-type) em {
@@ -136,8 +142,8 @@
   max-width: 80% !important;
 }
 
-.dark .prose p:has(img:only-of-type) em { 
-  color: #94a3b8 !important; 
+.dark .prose p:has(img:only-of-type) em {
+  color: #94a3b8 !important;
 }
 
 /* --- Base Styles --- */
@@ -162,7 +168,12 @@ html.dark {
   color: var(--color-ink-dark);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -170,71 +181,114 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-ink);
 }
 
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
   color: var(--color-ink-dark);
 }
 
-p { 
-  font-family: var(--font-display); 
-  line-height: 1.75; 
+p {
+  font-family: var(--font-display);
+  line-height: 1.75;
 }
 
 /* --- Links --- */
-.prose a { 
+.prose a {
   color: var(--color-blueprint-blue);
   font-weight: 700;
 }
 
-.prose a:hover { 
+.prose a:hover {
   opacity: 0.8;
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 2px;
 }
 
 .dark .prose a {
   font-weight: 800;
 }
 
-.prose a.internal-link { 
+.prose a.internal-link {
+  color: #2563eb;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
   transition: all 0.2s ease;
-  display: inline; 
 }
 
-.prose a.internal-link[data-stage="seed"],
-.prose a.internal-link[data-stage="sprout"],
-.prose a.internal-link[data-stage="evergreen"] { 
-  color: #0f172a;
+.prose a.internal-link:hover {
+  color: #1e40af;
+  border-bottom-color: #1e40af;
+  opacity: 1;
+  text-decoration: none;
 }
 
-.dark .prose a.internal-link[data-stage="seed"],
-.dark .prose a.internal-link[data-stage="sprout"],
-.dark .prose a.internal-link[data-stage="evergreen"] { 
-  color: #ffffff;
+.prose a.internal-link:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.dark .prose a.internal-link {
+  color: #60a5fa;
+}
+
+.dark .prose a.internal-link:hover {
+  color: #93c5fd;
+  border-bottom-color: #93c5fd;
+}
+
+.dark .prose a.internal-link:focus-visible {
+  outline-color: #60a5fa;
 }
 
 .prose a.external-link {
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: #a855f7;
+  color: #2563eb;
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .prose a.external-link:hover {
-  opacity: 0.8;
+  color: #1e40af;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.prose a.external-link:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
 }
 
 .prose a.external-link::after {
-  content: "north_east";
+  content: "open_in_new";
   font-family: "Material Symbols Outlined";
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
-  margin-left: 0;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 3px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.prose a.external-link:hover::after {
   opacity: 1;
+}
+
+.dark .prose a.external-link {
+  color: #60a5fa;
+}
+
+.dark .prose a.external-link:hover {
+  color: #93c5fd;
+}
+
+.dark .prose a.external-link:focus-visible {
+  outline-color: #60a5fa;
 }
 
 .prose code:not(pre code) {
@@ -252,16 +306,16 @@ p {
   color: #f8fafc;
 }
 
-.prose code:not(pre code)::before, 
-.prose code:not(pre code)::after { 
-  content: none; 
+.prose code:not(pre code)::before,
+.prose code:not(pre code)::after {
+  content: none;
 }
 
 /* ========================================
    CALLOUTS
    ======================================== */
 
-/* 
+/*
   NOTE: Callout styles are defined in NoteLayout.astro with !important
   to ensure they survive production builds and aren't overridden by
   Tailwind Typography plugin styles.
@@ -271,7 +325,13 @@ p {
 .callout-body p {
   margin: 0 !important;
   line-height: 1.6 !important;
-  font-family: var(--font-serif);
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+/* Callout title styles */
+.callout-title {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 600;
 }
 
 /* ========================================
@@ -295,16 +355,16 @@ p {
   color: #94a3b8;
 }
 
-.filter-btn:hover { 
-  color: #262626; 
+.filter-btn:hover {
+  color: #262626;
 }
 
 .dark .filter-btn:hover {
   color: #e2e8f0;
 }
 
-.filter-btn.active { 
-  color: #1a1a1a; 
+.filter-btn.active {
+  color: #1a1a1a;
   border-bottom: 1px solid #1a1a1a;
 }
 

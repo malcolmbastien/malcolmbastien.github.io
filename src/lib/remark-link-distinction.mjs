@@ -3,7 +3,6 @@ import { visit } from 'unist-util-visit';
 export function remarkLinkDistinction() {
   return (tree) => {
     visit(tree, 'link', (node) => {
-      // Determine if it's an internal link
       const isInternal = node.data?.hProperties?.className?.includes('internal-link') || 
                         (!node.url?.startsWith('http://') && !node.url?.startsWith('https://'));
       
@@ -22,27 +21,19 @@ export function remarkLinkDistinction() {
         if (!node.data.hProperties.className.includes('external-link')) {
           node.data.hProperties.className.push('external-link');
         }
-      }
+        node.data.hProperties.target = '_blank';
+        node.data.hProperties.rel = 'noopener noreferrer';
 
-      // Wrap children in a span to allow targeted underlining (excluding the ::after icon)
-      // We use 'emphasis' as a base Mdast type but override it with 'span' via hName
-      const isAlreadyWrapped = node.children.length === 1 && 
-                               (node.children[0].data?.hProperties?.className?.includes('link-text') ||
-                                node.children[0].data?.hName === 'span');
+        const hasSrOnlyText = node.children.some(child => 
+          child.type === 'html' && child.value.includes('sr-only')
+        );
 
-      if (!isAlreadyWrapped && node.children.length > 0) {
-        const originalChildren = [...node.children];
-        node.children = [{
-          type: 'emphasis',
-          data: {
-            hName: 'span',
-            hProperties: { 
-              className: ['link-text'],
-              style: 'font-style: inherit;'
-            }
-          },
-          children: originalChildren
-        }];
+        if (!hasSrOnlyText && node.children.length > 0) {
+          node.children.push({
+            type: 'html',
+            value: '<span class="sr-only">(opens in a new tab)</span>'
+          });
+        }
       }
     });
   };

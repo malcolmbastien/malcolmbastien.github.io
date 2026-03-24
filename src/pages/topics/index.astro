@@ -38,107 +38,118 @@ const POPULAR_THRESHOLD = 10;
 ---
 
 <Layout
-    title="Topic Index — Flow Focused"
+    title="Topics Index | Flow Focused"
+    description="A comprehensive index of blog post topics explored over the past 12 years, from Agile Transformation to Systems Thinking."
     type="website"
 >
-    <main class="max-w-7xl mx-auto px-6 py-12" data-pagefind-ignore>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <main class="max-w-7xl mx-auto px-6 pt-24 pb-20" data-pagefind-ignore>
+        <div class="flex">
             <!-- Left Sidebar: Alphabetical Navigation -->
-            <aside class="lg:col-span-1 hidden lg:block">
-                <div class="sticky top-24 space-y-8 alphabet-nav overflow-y-auto max-h-[80vh] pr-4 no-scrollbar border-r border-slate-200 dark:border-slate-800">
-                    <div class="flex flex-col gap-2">
-                        {alphabet.map(char => (
-                            <a
-                                href={`#${char === "#" ? "num" : char}`}
-                                class="text-sm font-semibold text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors uppercase"
-                            >
-                                {char}
-                            </a>
-                        ))}
-                    </div>
+            <aside class="hidden lg:flex flex-col py-8 h-screen sticky top-20 w-20 pr-4">
+                <div class="flex flex-col gap-y-1">
+                    {alphabet.map(char => (
+                        <a
+                            href={`#${char === "#" ? "num" : char}`}
+                            class="sidebar-link text-sm font-bold transition-colors pl-2 py-0.5 text-slate-400 hover:text-slate-900 dark:hover:text-white"
+                            data-target={char}
+                        >
+                            {char}
+                        </a>
+                    ))}
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <div class="lg:col-span-10">
-                <header class="mb-12">
-                    <h1 class="text-5xl font-bold text-slate-900 dark:text-white mb-4">Topic Index</h1>
+            <div class="flex-1 px-8 lg:px-16">
+                <header class="max-w-4xl mb-16">
+                    <h1 class="text-5xl font-extrabold tracking-tighter text-slate-900 dark:text-white mb-6">Topics Index</h1>
+                    <p class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl">
+                        A comprehensive index of blog post topics explored over the past 12 years, from Agile Transformation to Systems Thinking.
+                    </p>
                 </header>
 
-                <div class="space-y-16">
+                <div class="max-w-4xl space-y-16">
                     {alphabet.map((letter) => (
-                        <section class="scroll-mt-24" id={letter === "#" ? "num" : letter}>
-                            <h2 class="text-4xl font-black text-slate-900 dark:text-blue-400 mb-8 border-b border-slate-200 dark:border-slate-800 pb-2 uppercase">
-                                {letter}
-                            </h2>
-                            <div class="space-y-3">
+                        <section class="group" id={letter === '#' ? 'num' : letter}>
+                            <div class="flex items-baseline gap-4 mb-8 border-b border-slate-200/50 dark:border-slate-800/50 pb-2">
+                                <span class="text-4xl font-black text-slate-900 dark:text-white">{letter}</span>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
                                 {groupedTopics[letter].map(([topic, count]) => {
                                     const isPopular = count >= POPULAR_THRESHOLD;
                                     return (
-                                        <a
+                                        <a 
+                                            class="group/item flex justify-between items-center py-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" 
                                             href={`/topics/${topic}`}
-                                            class="group flex items-center justify-between py-3 border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors"
                                         >
-                                            <span class:list={[
-                                                "text-base font-medium transition-colors",
-                                                isPopular
-                                                    ? "text-primary dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300"
-                                                    : "text-slate-600 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white"
-                                            ]}>#{topic}</span>
-                                            <span class="text-xs font-mono text-slate-400">{count}</span>
+                                            <span class="text-sm font-semibold text-slate-900 dark:text-white group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400">{topic}</span>
+                                            <span class="text-xs font-bold text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-2 py-0.5 rounded-full">({count})</span>
                                         </a>
                                     );
                                 })}
                             </div>
                         </section>
                     ))}
-
-                    <p class="text-center py-12 text-slate-400 text-sm italic">
-                        End of index. Stay curious.
-                    </p>
                 </div>
             </div>
-
-
         </div>
     </main>
     <SiteFooter />
-</Layout>
 
-<style>
-    @reference "../../styles/global.css";
-
-    .alphabet-nav::-webkit-scrollbar {
-        display: none;
-    }
-</style>
-
-<script>
-    // Client-side filtering logic
-    const filterInput = document.getElementById('topic-filter') as HTMLInputElement;
-    const topicSections = document.querySelectorAll('section.scroll-mt-24');
-
-    if (filterInput) {
-        filterInput.addEventListener('input', (e) => {
-            const term = (e.target as HTMLInputElement).value.toLowerCase();
-
-            topicSections.forEach(section => {
-                let hasVisibleTopics = false;
-                const topics = section.querySelectorAll('a.group');
-
-                topics.forEach(topic => {
-                    const text = topic.textContent?.toLowerCase() || '';
-                    if (text.includes(term)) {
-                        (topic as HTMLElement).style.display = 'flex';
-                        hasVisibleTopics = true;
-                    } else {
-                        (topic as HTMLElement).style.display = 'none';
-                    }
-                });
-
-                // Hide the whole section (including letter header) if no topics match
-                (section as HTMLElement).style.display = hasVisibleTopics ? 'block' : 'none';
+    <script>
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    const targetChar = id === 'num' ? '#' : id;
+                    
+                    sidebarLinks.forEach(link => {
+                        const linkChar = link.getAttribute('data-target');
+                        if (linkChar === targetChar) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
             });
+        }, { rootMargin: '-20% 0px -60% 0px' });
+
+        document.querySelectorAll('section[id]').forEach(section => {
+            observer.observe(section);
         });
-    }
-</script>
+    </script>
+
+    <style>
+        .sidebar-link {
+            color: rgb(148, 163, 184);
+        }
+        
+        .sidebar-link:hover {
+            color: rgb(15, 23, 42);
+        }
+        
+        :global(.dark) .sidebar-link {
+            color: rgb(148, 163, 184);
+        }
+        
+        :global(.dark) .sidebar-link:hover {
+            color: rgb(248, 250, 252);
+        }
+        
+        .sidebar-link.active {
+            color: rgb(15, 23, 42);
+            border-left: 2px solid rgb(37, 99, 235);
+        }
+        
+        :global(.dark) .sidebar-link.active {
+            color: rgb(248, 250, 252);
+        }
+        
+        section[id] {
+            scroll-margin-top: 120px;
+        }
+    </style>
+</Layout>
