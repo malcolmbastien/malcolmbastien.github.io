@@ -6,14 +6,6 @@
       "command": ["npx", "-y", "task-master-ai"],
       "enabled": true,
     },
-    "stitch": {
-      "type": "remote",
-      "url": "https://stitch.googleapis.com/mcp",
-      "enabled": true,
-      "headers": {
-        "X-Goog-Api-Key": "AQ.Ab8RN6LMlS8gwlu2k2I0-p2O1e17Zsc1Xe9ai_0k76rQrD0EJw"
-      }
-    }
   },
   "permission": {
     "edit": "allow",
