@@ -1,6 +1,6 @@
 ---
 stage: seed
-title: Digital Strategy &amp; UX Strategy
+title: Digital Strategy & UX Strategy
 publishedDate: 2012-09-24
 tags:
   - Strategy

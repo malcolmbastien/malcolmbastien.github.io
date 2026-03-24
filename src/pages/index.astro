@@ -19,7 +19,7 @@ const notesWithDates = allNotes
     .map((note) => {
         let displayDate: Date;
         if (note.data.publishedDate) {
-            displayDate = note.data.publishedDate;
+            displayDate = new Date(note.data.publishedDate);
         } else {
             // Fall back to file birthtime (creation date)
             const stats = statSync(note.filePath || `src/content/notes/${note.id}`);
@@ -50,7 +50,7 @@ const eventGroups = new Map();
 
 events.forEach((event) => {
     const dateStr = (event.date as Date).toISOString().split("T")[0];
-    const key = `${event.note.slug}-${event.type}-${dateStr}`;
+    const key = `${event.note.id}-${event.type}-${dateStr}`;
     if (!eventGroups.has(key)) {
         eventGroups.set(key, []);
     }
@@ -219,10 +219,6 @@ const coreTopics = [
             display: none !important;
         }
 
-        html:not(.js-initialized)[data-selected-year="${y.year}"] .timeline-event[data-event-year="${y.year}"][data-is-initial-batch="false"] {
-            display: none !important;
-        }
-
         html[data-selected-year="${y.year}"] .year-btn[data-year="${y.year}"] {
             color: rgb(37, 99, 235) !important;
             font-weight: 700;
@@ -306,16 +302,6 @@ const coreTopics = [
                         eventsByMonthKey={eventsByMonthKey}
                         initialYear={currentYearValue.toString()}
                     />
-
-                    {/* Load More Button */}
-                    <div class="mt-12 text-center">
-                        <button
-                            id="show-more-activity"
-                            class="px-8 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold rounded-full hover:scale-105 transition-transform shadow-lg hidden"
-                        >
-                            Load More Insights
-                        </button>
-                    </div>
                 </section>
             </div>
 
@@ -374,13 +360,9 @@ const coreTopics = [
     let currentTopic = "";
     let currentYear = document.documentElement.getAttribute('data-selected-year') || new Date().getFullYear().toString();
     let currentDateFilter: string | null = null;
-    let itemsToShow = 10;
-
-    const showMoreButton = document.getElementById("show-more-activity");
 
     function updateDisplay() {
         let totalMatchingCount = 0;
-        let visibleCount = 0;
 
         const allTimelineEvents = document.querySelectorAll("#timeline .timeline-event");
 
@@ -397,12 +379,7 @@ const coreTopics = [
 
             if (matchesFilter && matchesTopic && matchesYear && matchesDate) {
                 totalMatchingCount++;
-                if (visibleCount < itemsToShow) {
-                    htmlEvent.classList.remove("hidden-by-filter");
-                    visibleCount++;
-                } else {
-                    htmlEvent.classList.add("hidden-by-filter");
-                }
+                htmlEvent.classList.remove("hidden-by-filter");
             } else {
                 htmlEvent.classList.add("hidden-by-filter");
             }
@@ -420,26 +397,10 @@ const coreTopics = [
             htmlSection.style.display = hasVisibleEvent ? "block" : "none";
         });
 
-        if (showMoreButton) {
-            if (totalMatchingCount > itemsToShow) {
-                showMoreButton.classList.remove("hidden");
-                showMoreButton.textContent = `Load More (${totalMatchingCount - itemsToShow} remaining)`;
-            } else {
-                showMoreButton.classList.add("hidden");
-            }
-        }
-
         if (noResults) {
             if (totalMatchingCount === 0) noResults.classList.remove("hidden");
             else noResults.classList.add("hidden");
         }
-    }
-
-    if (showMoreButton) {
-        showMoreButton.addEventListener("click", () => {
-            itemsToShow += 10;
-            updateDisplay();
-        });
     }
 
     const yearButtons = document.querySelectorAll(".year-btn");
@@ -449,7 +410,6 @@ const coreTopics = [
         const yearItem = button.closest(".year-item") as HTMLElement;
         const monthSubmenu = yearItem?.querySelector(".month-submenu") as HTMLElement;
 
-        itemsToShow = 10;
         document.documentElement.setAttribute('data-selected-year', year);
 
         if (currentYear === year) {
@@ -491,8 +451,6 @@ const coreTopics = [
             const monthKey = (button as HTMLElement).dataset.month || "";
             const year = (button as HTMLElement).dataset.year || "all";
 
-            itemsToShow = 500;
-
             if (currentYear !== year) {
                 localStorage.setItem('selectedYear', year);
                 const yearBtn = document.querySelector(
@@ -519,7 +477,6 @@ const coreTopics = [
 
     window.addEventListener("dateFilterChange", (e: any) => {
         currentDateFilter = e.detail.date;
-        itemsToShow = 10;
         updateDisplay();
     });
 

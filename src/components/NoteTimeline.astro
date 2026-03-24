@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import TopicBadge from "./TopicBadge.astro";
 
 interface Props {
     sortedEvents: Array<{
@@ -19,22 +18,7 @@ interface Props {
 
 import { getStageData } from "../lib/theme";
 
-const { sortedEvents, allMonths, eventsByMonthKey } = Astro.props;
-
-const yearCounters = new Map<number, number>();
-const eventBatchStatus = new Map<any, boolean>();
-
-sortedEvents.forEach((event) => {
-    const year = event.date.getFullYear();
-    const count = yearCounters.get(year) || 0;
-    eventBatchStatus.set(event, count < 10);
-    yearCounters.set(year, count + 1);
-});
-
-const getStageBadgeClass = (stage: string) => {
-    const stageData = getStageData(stage);
-    return stageData.colors.badge;
-};
+const { allMonths, eventsByMonthKey } = Astro.props;
 ---
 
 <div class="timeline" id="timeline">
@@ -54,12 +38,10 @@ const getStageBadgeClass = (stage: string) => {
                         <div class="space-y-8">
                              {monthEvents.map((event: any) => {
                                   const eventYear = event.date.getFullYear().toString();
-                                  const isInitialBatch = eventBatchStatus.get(event);
 
-                                    return (
+                                return (
                                          <a href={`/notes/${event.note.id.replace('.md', '')}`}
                                               class="timeline-event group cursor-pointer block -mx-6 px-6 py-4 transition-all duration-200 ease-in-out hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:-translate-y-0.5 hover:shadow-lg"
-                                             data-stage={event.note.data.stage}
                                             data-title={event.title.toLowerCase()}
                                             data-summary={
                                                 event.note.data.summary?.toLowerCase() ||
@@ -74,8 +56,7 @@ const getStageBadgeClass = (stage: string) => {
                                                     .split("T")[0]
                                             }
                                             data-event-year={eventYear}
-                                            data-is-initial-batch={isInitialBatch ? "true" : "false"}
-                                         >
+                                        >
                                              <div class="flex flex-col md:flex-row justify-between items-start gap-8">
                                                  <div class="flex-1 space-y-4">
                                                      <time class="text-[0.7rem] uppercase tracking-[0.2em] font-bold text-slate-500 dark:text-slate-400">

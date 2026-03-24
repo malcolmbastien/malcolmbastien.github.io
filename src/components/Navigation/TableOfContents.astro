@@ -7,9 +7,10 @@ interface Props {
     minHeadings?: number;
     headings?: Array<{ depth: number; slug: string; text: string }>;
     sectionIds?: Array<{ id: string; text: string }>;
+    variant?: "default" | "note";
 }
 
-const { content, title = "Table of Contents", minHeadings = 2, headings: astroHeadings, sectionIds } = Astro.props;
+const { content, title = "Table of Contents", minHeadings = 2, headings: astroHeadings, sectionIds, variant = "default" } = Astro.props;
 
 let headings: Array<{ level: number; id: string; text: string }> = [];
 
@@ -94,37 +95,53 @@ const tocStructure = createTOCStructure(headings);
 ---
 {
     showTOC && (
-        <aside class="w-full pb-6 border-b border-slate-100 dark:border-slate-800">
-            <h3 class="text-sm font-bold tracking-widest text-slate-500 mb-4">{title}</h3>
-            <nav class="toc-nav relative">
-                    {tocStructure.map((item) => (
-                        <div class="toc-item relative mb-2">
+        variant === "note" ? (
+                <div>
+                    <h3 class="text-[0.75rem] font-bold tracking-widest uppercase text-slate-400 mb-6">{title}</h3>
+                    <nav class="flex flex-col gap-4 border-l border-slate-200 dark:border-slate-700/30">
+                        {headings.filter(h => h.level === 1).map((heading) => (
                             <a
-                                href={`#${item.id}`}
-                                id={`toc-${item.id}`}
-                                class="toc-link block text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors break-words"
-                            >
-                                {item.text}
-                            </a>
-                            {item.children && item.children.length > 0 && (
-                                <div class="pl-3 border-l border-slate-200 dark:border-slate-800 space-y-1.5 mt-1.5 mb-3">
-                                    {item.children.map((child) => (
-                                        <div class="relative">
-                                            <a
-                                                href={`#${child.id}`}
-                                                id={`toc-${child.id}`}
-                                                class="toc-link block text-xs text-slate-500 dark:text-slate-500 hover:text-primary dark:hover:text-blue-400 transition-colors break-words"
-                                            >
-                                                {child.text}
-                                            </a>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
+                            href={`#${heading.id}`}
+                            class="toc-link pl-4 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors border-l-2 border-transparent hover:border-blue-600 -ml-px"
+                        >
+                            {heading.text}
+                        </a>
                     ))}
+                    </nav>
+                </div>
+        ) : (
+            <aside class="w-full pb-6 border-b border-slate-100 dark:border-slate-800">
+                <h3 class="text-sm font-bold tracking-widest text-slate-500 mb-4">{title}</h3>
+                <nav class="toc-nav relative">
+                        {tocStructure.map((item) => (
+                            <div class="toc-item relative mb-2">
+                                <a
+                                    href={`#${item.id}`}
+                                    id={`toc-${item.id}`}
+                                    class="toc-link block text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors wrap-break-word"
+                                >
+                                    {item.text}
+                                </a>
+                                {item.children && item.children.length > 0 && (
+                                    <div class="pl-3 border-l border-slate-200 dark:border-slate-800 space-y-1.5 mt-1.5 mb-3">
+                                        {item.children.map((child) => (
+                                            <div class="relative">
+                                                <a
+                                                    href={`#${child.id}`}
+                                                    id={`toc-${child.id}`}
+                                                    class="toc-link block text-xs text-slate-500 dark:text-slate-500 hover:text-primary dark:hover:text-blue-400 transition-colors wrap-break-word"
+                                                >
+                                                    {child.text}
+                                                </a>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        ))}
                 </nav>
-        </aside>
+            </aside>
+        )
     )
 }
 
@@ -153,13 +170,26 @@ const tocStructure = createTOCStructure(headings);
         background: rgb(71 85 105);
     }
 
-    /* Active TOC link styling */
+    /* Active TOC link styling - default */
     .toc-link.active {
-        @apply text-primary font-bold;
+        @apply text-primary font-medium;
     }
 
     .dark .toc-link.active {
-        @apply text-blue-400;
+        @apply text-blue-400 font-medium;
+    }
+
+    /* Active TOC link styling - note variant */
+    :global(.toc-note .toc-link.active) {
+        color: #003fe5 !important;
+        border-left-color: #003fe5 !important;
+        font-weight: 500;
+    }
+
+    :global(.dark .toc-note .toc-link.active) {
+        color: #60a5fa !important;
+        border-left-color: #60a5fa !important;
+        font-weight: 500;
     }
 </style>
 
@@ -177,7 +207,10 @@ const tocStructure = createTOCStructure(headings);
         }
     }
 
+    let isClickScrolling = false;
+
     const observer = new IntersectionObserver((entries) => {
+        if (isClickScrolling) return;
         entries.forEach((entry) => {
             const id = entry.target.getAttribute('id');
             if (entry.isIntersecting) {
@@ -214,11 +247,19 @@ const tocStructure = createTOCStructure(headings);
                 // Update URL without adding to history
                 history.replaceState(null, '', href);
 
+                // Prevent observer from interfering during smooth scroll
+                isClickScrolling = true;
+
+                // Set clicked link as active immediately
+                setActiveLink(link);
+
                 // Smooth scroll to target
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
+
+                setTimeout(() => { isClickScrolling = false; }, 1000);
             }
         });
     });
