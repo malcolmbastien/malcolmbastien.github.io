@@ -8,6 +8,7 @@ interface Props {
     headings?: Array<{ depth: number; slug: string; text: string }>;
     sectionIds?: Array<{ id: string; text: string }>;
     variant?: "default" | "note";
+    class?: string;
 }
 
 const { content, title = "Table of Contents", minHeadings = 2, headings: astroHeadings, sectionIds, variant = "default" } = Astro.props;
@@ -94,9 +95,9 @@ const createTOCStructure = (
 const tocStructure = createTOCStructure(headings);
 ---
 {
-    showTOC && (
+        showTOC && (
         variant === "note" ? (
-                <div>
+                <div class={Astro.props.class}>
                     <h3 class="text-[0.75rem] font-bold tracking-widest uppercase text-slate-400 mb-6">{title}</h3>
                     <nav class="flex flex-col gap-4 border-l border-slate-200 dark:border-slate-700/30">
                         {headings.filter(h => h.level === 1).map((heading) => (

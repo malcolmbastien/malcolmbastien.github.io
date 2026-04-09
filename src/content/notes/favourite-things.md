@@ -2,7 +2,6 @@
 stage: evergreen
 title: Favourite Things
 publishedDate: 2025-07-28
-pinned: true
 tags:
   - Software
   - Products

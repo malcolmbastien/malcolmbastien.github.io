@@ -93,48 +93,48 @@ Learning to type with a new keyboard layout is very disruptive to your productiv
 
 To help me create this ranking of how much I liked all of the games I played this year from most to least, I quickly created an app in Google AI Studio to take in all the games I played during the year and ask me a series of comparison questions.
 
-1. Clair Obscure (100%)
-2. Mars First Logistics (100%)
-   - I really enjoyed the freedom and creativity this game provided. This game was the best implementation I've played of clean, cel-shaded, Moebius-like art. Even better than what Sable was able to do. 
-1. Core Keeper (100%)
+1. [Clair Obscure](https://store.steampowered.com/app/1903340/Clair_Obscur_Expedition_33/) (100%)
+2. [Mars First Logistics](https://store.steampowered.com/app/1532200/Mars_First_Logistics/) (100%)
+   - I really enjoyed the freedom and creativity this game provided. This game was the best implementation I've played of clean, cel-shaded, Moebius-like art. Even better than what Sable was able to do.
+1. [Core Keeper](https://store.steampowered.com/app/1621690/Core_Keeper/) (100%)
    - This game was such a cute adventure, with fun progression, and lots of fun discoveries and secrets to find. This would have been really nice to play in a co-op world with someone, but as a solo player it was fun too.
-4. Monster Hunter Wilds
+4. [Monster Hunter Wilds](https://store.steampowered.com/app/2246340/Monster_Hunter_Wilds/)
    - I was really looking forward to this game after waiting for years, and put a lot of hours into it when it launched. Unfortunately the game's poor performance and end-game activities drove me away for good and I've had very little reason to ever pick it up again.
    - The game is just filled with bad design decisions that makes it really difficult to want to play it again:
 	   - Its end-game gear mechanic is RNG-based, which involves lots of grinding for materials for a chance at gear with the desired attributes.
 	   - I'm not a fan of the post-launch content being added to the game. They added Akuma from Street Fighter, but he doesn't play like a character with fist weapons. Instead, you have to activate actions in your item bar to use his skills.
 	   - They also added a Great Sword weapon that is shattered into peaces, yet somehow keeps its shape? It doesn't make any sense.
-1. Marvel Rivals (100%)
+1. [Marvel Rivals](https://store.steampowered.com/app/2767030/Marvel_Rivals/) (100%)
    - A great game and very fun, but like all service games, I eventually had to force myself to stop playing because it's too easy for me to get sucked into trying to unlock all the content, completing every battlepass and special event. While I could have kept playing this game for hundreds of more hours, but playing Rivals meant I wouldn't likely get to any of the other games in my library.
-6. Everspace 2 (100%)
-7. My Time at Portia
-8. Nova Lands (100%)
+6. [Everspace 2](https://store.steampowered.com/app/1128920/EVERSPACE_2/) (100%)
+7. [My Time at Portia](https://store.steampowered.com/app/666140/My_Time_At_Portia/)
+8. [Nova Lands](https://store.steampowered.com/app/1501610/Nova_Lands/) (100%)
    - I was really surprised with how much I liked this game. As a factory/automation game, Nova Lands is very approachable and has a unique charm to it.
    - The only nitpick I had with this game, without spoiling much, was a mining activity that's introduced later in the game. It was the only part of the game that was repetitive.
-9. Sable (100%)
+9. [Sable](https://store.steampowered.com/app/757310/Sable/) (100%)
    - This was a game I had wanted to play for a while. The world was beautiful, but movement was very janky and graphics performance could have been better.
-10. Jusant (100%)
-    - I wasn't too big a fan of how the narrative of this game was delivered, but it created such a cool world and had engaging controls.
-    - Because the game is so short, this is one I recommend lots of people pick up.
-11. Chants of Senaar (100%)
-12. BALL X PIT (100%)
-13. Escape from Duckov
-14. Backpack Hero (100%)
-15. Mega Bonk
-16. Legend of Grindea
+10. [Jusant](https://store.steampowered.com/app/1977170/Jusant/) (100%)
+     - I wasn't too big a fan of how the narrative of this game was delivered, but it created such a cool world and had engaging controls.
+     - Because the game is so short, this is one I recommend lots of people pick up.
+11. [Chants of Sennaar](https://store.steampowered.com/app/1931770/Chants_of_Sennaar/) (100%)
+12. [BALL x PIT](https://store.steampowered.com/app/2062430/BALL_x_PIT/) (100%)
+13. [Escape from Duckov](https://store.steampowered.com/app/3167020/Escape_from_Duckov/)
+14. [Backpack Hero](https://store.steampowered.com/app/1970580/Backpack_Hero/) (100%)
+15. [Mega Bonk](https://store.steampowered.com/app/3405340/Megabonk/)
+16. [Legend of Grindea](https://store.steampowered.com/app/269770/Secrets_of_Grindea/)
 	- A fun homage to gaming. The games a bit of a running joke, but packs a lot into it with interesting dungeons, character build choices, and skill progression.
-17. Blue Prince
-    - Blue Price was unique and one of a kind. I liked the world we became a part of with its unique visual style and music, but I'd lie if I said it wasn't incredibly frustrating and repetitive.
-    - Many of the game's puzzles can only be solved if users take copious notes, or in my case hundreds of screenshots, when they find any clues.
-18. Balatro
-19. Slime Rancher
-20. I am Future (100%)
-21. Luma Island (100%)
-22. Heroes of Hammerwatch 2
-23. Littlewood
-24. Linked: Banner of the Spark
-25. Outer Wilds
-    - I might get some flak for this, but based on how much people raved about this game, I was expecting a lot more.
-    - I was turned off by the game's main mechanic which always created a sense of pressure, forced me to rush and repeat things.
-    - While I really liked the way you uncovered new knowledge and the way you expored the world, ultimately the gameplay loop was simply "Go here, read this, go there, read that."
-    - I couldn't believe the ending sequence the game forced you through and didn't even try. I just watched a YouTube video of the ending and even then, didn't find it rewarding.
+17. [Blue Prince](https://store.steampowered.com/app/1569580/Blue_Prince/)
+     - Blue Price was unique and one of a kind. I liked the world we became a part of with its unique visual style and music, but I'd lie if I said it wasn't incredibly frustrating and repetitive.
+     - Many of the game's puzzles can only be solved if users take copious notes, or in my case hundreds of screenshots, when they find any clues.
+18. [Balatro](https://store.steampowered.com/app/2379780/Balatro/)
+19. [Slime Rancher](https://store.steampowered.com/app/433340/Slime_Rancher/)
+20. [I am Future](https://store.steampowered.com/app/1658040/I_Am_Future_Cozy_Apocalypse_Survival/) (100%)
+21. [Luma Island](https://store.steampowered.com/app/2408820/Luma_Island/) (100%)
+22. [Heroes of Hammerwatch 2](https://store.steampowered.com/app/619820/Heroes_of_Hammerwatch_II/)
+23. [Littlewood](https://store.steampowered.com/app/894940/Littlewood/)
+24. [Linked: Banner of the Spark](https://store.steampowered.com/app/3159570/Lynked_Banner_of_the_Spark/)
+25. [Outer Wilds](https://store.steampowered.com/app/753640/Outer_Wilds/)
+     - I might get some flak for this, but based on how much people raved about this game, I was expecting a lot more.
+     - I was turned off by the game's main mechanic which always created a sense of pressure, forced me to rush and repeat things.
+     - While I really liked the way you uncovered new knowledge and the way you expored the world, ultimately the gameplay loop was simply "Go here, read this, go there, read that."
+     - I couldn't believe the ending sequence the game forced you through and didn't even try. I just watched a YouTube video of the ending and even then, didn't find it rewarding.
