@@ -42,10 +42,10 @@ const POPULAR_THRESHOLD = 10;
     description="A comprehensive index of blog post topics explored over the past 12 years, from Agile Transformation to Systems Thinking."
     type="website"
 >
-    <main class="max-w-7xl mx-auto px-6 pt-24 pb-20" data-pagefind-ignore>
-        <div class="flex">
+    <main class="mx-auto px-6 lg:px-8 pt-24 pb-20 max-w-7xl" data-pagefind-ignore>
+        <div class="flex gap-12">
             <!-- Left Sidebar: Alphabetical Navigation -->
-            <aside class="hidden lg:flex flex-col py-8 h-screen sticky top-20 w-20 pr-4">
+            <aside class="hidden lg:flex flex-col h-screen sticky top-24 w-16 shrink-0">
                 <div class="flex flex-col gap-y-1">
                     {alphabet.map(char => (
                         <a
@@ -59,16 +59,16 @@ const POPULAR_THRESHOLD = 10;
                 </div>
             </aside>
 
-            <!-- Main Content Area -->
-            <div class="flex-1 px-8 lg:px-16">
-                <header class="max-w-4xl mb-16">
+            <!-- Main Content -->
+            <div class="flex-1 min-w-0">
+                <header class="mb-16">
                     <h1 class="text-5xl font-extrabold tracking-tighter text-slate-900 dark:text-white mb-6">Topics Index</h1>
                     <p class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl">
                         A comprehensive index of blog post topics explored over the past 12 years, from Agile Transformation to Systems Thinking.
                     </p>
                 </header>
 
-                <div class="max-w-4xl space-y-16">
+                <div class="space-y-16">
                     {alphabet.map((letter) => (
                         <section class="group" id={letter === '#' ? 'num' : letter}>
                             <div class="flex items-baseline gap-4 mb-8 border-b border-slate-200/50 dark:border-slate-800/50 pb-2">
