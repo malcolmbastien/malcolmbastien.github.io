@@ -1,0 +1,127 @@
+---
+import { getCollection } from "astro:content";
+import { statSync } from "node:fs";
+import Layout from "../layouts/Layout.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+const allNotes = await getCollection("notes");
+
+const notesWithDates = allNotes
+    .filter((note) => !note.data.draft)
+    .map((note) => {
+        let displayDate: Date;
+        if (note.data.publishedDate) {
+            displayDate = new Date(note.data.publishedDate);
+        } else {
+            const stats = statSync(note.filePath || `src/content/notes/${note.id}`);
+            displayDate = stats.birthtime;
+        }
+        return { ...note, displayDate };
+    });
+
+const sortedNotes = notesWithDates.sort((a, b) => {
+    const dateA = a.displayDate as Date;
+    const dateB = b.displayDate as Date;
+    return dateB.valueOf() - dateA.valueOf();
+});
+
+const pinnedNotes = allNotes.filter((note) => (note.data as any).pinned === true);
+
+const formatDate = (date: Date) => {
+    return date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        timeZone: "UTC",
+    });
+};
+
+const notesByYear = new Map<number, typeof sortedNotes>();
+for (const note of sortedNotes) {
+    const year = (note.displayDate as Date).getFullYear();
+    if (!notesByYear.has(year)) {
+        notesByYear.set(year, []);
+    }
+    notesByYear.get(year)!.push(note);
+}
+const sortedYears = Array.from(notesByYear.entries()).sort((a, b) => b[0] - a[0]);
+---
+
+<Layout
+    title="Archives | Malcolm Bastien"
+    description="Browse all articles by year."
+    type="website"
+>
+    <main>
+        <section class="py-section-gap bg-paper-white dark:bg-ink-slate">
+            <div class="max-w-4xl mx-auto px-gutter">
+                <div class="mb-16 text-center">
+                    <span class="text-mono-sm text-terracotta-accent uppercase tracking-widest mb-4 block">All Writing</span>
+                    <h1 class="font-display text-display-lg text-ink-slate dark:text-inverse-on-surface mb-6">Archives</h1>
+                    <p class="text-body-lg text-on-surface-variant dark:text-outline-variant">
+                        {allNotes.length} articles spanning {sortedYears[sortedYears.length - 1]?.[0] || ''} to {sortedYears[0]?.[0] || ''}.
+                    </p>
+                </div>
+
+                <!-- Year Filter -->
+                <div class="flex flex-wrap justify-center gap-3 mb-16" id="year-filters">
+                    <button class="year-filter-btn text-label-caps text-on-surface-variant dark:text-outline-variant px-4 py-2 border border-border-muted dark:border-on-surface-variant hover:border-terracotta-accent hover:text-terracotta-accent transition-all data-[active=true]:bg-ink-slate data-[active=true]:text-paper-white dark:data-[active=true]:bg-paper-white dark:data-[active=true]:text-ink-slate data-[active=true]:border-ink-slate dark:data-[active=true]:border-paper-white" data-year="all" data-active="true">All Years</button>
+                    {sortedYears.map(([year]) => (
+                        <button class="year-filter-btn text-label-caps text-on-surface-variant dark:text-outline-variant px-4 py-2 border border-border-muted dark:border-on-surface-variant hover:border-terracotta-accent hover:text-terracotta-accent transition-all data-[active=true]:bg-ink-slate data-[active=true]:text-paper-white dark:data-[active=true]:bg-paper-white dark:data-[active=true]:text-ink-slate data-[active=true]:border-ink-slate dark:data-[active=true]:border-paper-white" data-year={year}>{year}</button>
+                    ))}
+                </div>
+
+                <!-- Pinned -->
+                {pinnedNotes.length > 0 && (
+                    <div class="mb-16 year-section" data-year="all">
+                        <h2 class="font-display text-headline-md text-ink-slate dark:text-inverse-on-surface border-b border-border-muted dark:border-on-surface-variant pb-4 mb-8">Pinned</h2>
+                        {pinnedNotes.map((note) => (
+                            <a href={`/notes/${note.id.replace('.md', '')}`} class="flex items-center justify-between py-3 border-b border-border-muted/50 dark:border-on-surface-variant/50 group">
+                                <span class="text-body-md text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors">{note.data.title}</span>
+                                <span class="text-mono-sm text-on-surface-variant dark:text-outline-variant shrink-0 ml-4">{note.data.publishedDate ? formatDate(note.data.publishedDate) : ''}</span>
+                            </a>
+                        ))}
+                    </div>
+                )}
+
+                <!-- Year Sections -->
+                {sortedYears.map(([year, notes]) => (
+                    <div class="mb-16 year-section" data-year={year}>
+                        <h2 class="font-display text-headline-md text-ink-slate dark:text-inverse-on-surface border-b border-border-muted dark:border-on-surface-variant pb-4 mb-8">{year} <span class="text-label-caps text-on-surface-variant dark:text-outline-variant font-normal">({notes.length} articles)</span></h2>
+                        {notes.map((note) => (
+                            <a href={`/notes/${note.id.replace('.md', '')}`} class="flex items-center justify-between py-3 border-b border-border-muted/50 dark:border-on-surface-variant/50 group">
+                                <span class="text-body-md text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors">{note.data.title}</span>
+                                <span class="text-mono-sm text-on-surface-variant dark:text-outline-variant shrink-0 ml-4">{formatDate(note.displayDate as Date)}</span>
+                            </a>
+                        ))}
+                    </div>
+                ))}
+            </div>
+        </section>
+    </main>
+    <SiteFooter />
+</Layout>
+
+<script>
+    const filters = document.querySelectorAll<HTMLElement>('.year-filter-btn');
+    const sections = document.querySelectorAll<HTMLElement>('.year-section');
+
+    filters.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const year = btn.dataset.year;
+
+            filters.forEach(b => {
+                b.dataset.active = 'false';
+            });
+            btn.dataset.active = 'true';
+
+            sections.forEach(section => {
+                if (year === 'all' || section.dataset.year === 'all' || section.dataset.year === year) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>

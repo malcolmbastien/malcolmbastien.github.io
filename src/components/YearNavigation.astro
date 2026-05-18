@@ -13,7 +13,7 @@ const { sortedYears } = Astro.props;
 
 <ul class="space-y-4 text-sm font-medium" id="year-navigation">
     {
-        sortedYears.map((yearData, index) => (
+        sortedYears.map((yearData) => (
             <li class="year-item">
                 <button
                     class="year-btn text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400 transition-colors flex items-center gap-2"

@@ -1,12 +1,9 @@
 ---
 import Layout from "./Layout.astro";
-import TableOfContents from "../components/Navigation/TableOfContents.astro";
 import Backlinks from "../components/Backlinks.astro";
 import ImageLightbox from "../components/ImageLightbox.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { getReadingTime } from "../lib/reading-time";
-import { getStageData } from "../lib/theme";
-import TopicBadge from "../components/TopicBadge.astro";
 
 interface Props {
     frontmatter: {
@@ -26,10 +23,9 @@ interface Props {
     headings?: any[];
 }
 
-const { frontmatter, backlinkedNotes, noteBody, headings } = Astro.props;
+const { frontmatter, backlinkedNotes, noteBody } = Astro.props;
 
 const readingTime = noteBody ? getReadingTime(noteBody) : "";
-const stageData = getStageData(frontmatter.stage);
 
 const createdDate = frontmatter.publishedDate || new Date();
 const isNoteDraft = frontmatter.draft === true;
@@ -54,93 +50,68 @@ const formatDate = (date: Date) => {
     publishedTime={createdDate.toISOString()}
     tags={frontmatter.tags}
 >
-    <main class="pt-24 lg:pt-32">
-        <div class="mx-auto px-8 max-w-7xl">
-            <div class="flex flex-col md:flex-row gap-12">
-                <!-- Left Sidebar - TOC -->
-                <aside class="w-64 shrink-0">
-                    <div class="sticky top-32 space-y-12">
-                        <div class="shrink-0">
-                            <TableOfContents headings={headings} minHeadings={1} title="Contents" variant="note" class="toc-note" />
-                        </div>
-                    </div>
-                </aside>
-
-                <!-- Main Content -->
-                <div class="grow max-w-4xl" data-pagefind-body data-pagefind-filter="type:note">
-                    <!-- Draft Banner -->
-                    {isNoteDraft && (
-                        <div class="draft-banner mb-6 px-4 py-3 border-l-4 border-dashed border-slate-400 dark:border-slate-500 bg-slate-50 dark:bg-slate-800/50 rounded-r">
-                            <div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
-                                <span class="material-symbols-outlined text-sm">edit_note</span>
-                                <span class="text-sm font-medium">Draft Post — This post is a draft and is unlisted.</span>
-                            </div>
-                        </div>
+    <main class="w-full overflow-x-hidden">
+        <!-- Article Header Section -->
+        <header class="max-w-180 mx-auto px-gutter pt-20 pb-16 text-center">
+            <div class="mb-6 text-mono-sm text-terracotta-accent uppercase tracking-widest">
+                <div class="flex gap-3 justify-center flex-wrap">
+                    {readingTime && (
+                        <span class="px-2 py-0.5 bg-surface-container dark:bg-white/10 text-on-surface-variant dark:text-outline-variant text-[10px] uppercase tracking-wider rounded-sm">{readingTime}</span>
                     )}
-
-                    <!-- Article Header -->
-                    <header class="mb-16 mx-auto max-w-180">
-                            <div class="flex items-center gap-3 mb-6">
-                                {readingTime && (
-                                    <>
-                                        <span class="text-slate-500 dark:text-slate-400 text-[0.75rem] font-medium tracking-wide">{readingTime}</span>
-                                        <span class="text-slate-300 dark:text-slate-600 text-[0.75rem]">•</span>
-                                    </>
-                                )}
-                                <span class="text-slate-500 dark:text-slate-400 text-[0.75rem] font-medium tracking-wide italic">{formatDate(createdDate)}</span>
-                            </div>
-                            <h1 class="text-slate-900 dark:text-white text-5xl md:text-6xl font-extrabold tracking-tighter leading-tight mb-8">
-                                {frontmatter.title}
-                            </h1>
-                            {frontmatter.summary && (
-                                <p class="text-slate-600 dark:text-slate-400 text-xl font-light leading-relaxed border-l-4 border-blue-600 dark:border-blue-500 pl-6">
-                                    {frontmatter.summary}
-                                </p>
-                            )}
-                            {frontmatter.tags.length > 0 && (
-                                <div class="flex flex-wrap gap-2 mt-8">
-                                    {frontmatter.tags.map(tag => (
-                                        <TopicBadge topic={tag} size="sm" />
-                                    ))}
-                                </div>
-                            )}
-                    </header>
-
-                    <!-- Article Body -->
-                    <article class="prose prose-slate dark:prose-invert prose-lg max-w-180 mx-auto">
-                        <slot />
-
-                        {backlinkedNotes.length > 0 && (
-                            <div class="backlinks mt-16 pt-8 border-t border-slate-100 dark:border-slate-800">
-                                <Backlinks backlinkedNotes={backlinkedNotes} />
-                            </div>
-                        )}
-                    </article>
-
-                    <!-- Author Profile at Bottom -->
-                    <div class="mt-20 pt-16 border-t border-slate-200 dark:border-slate-800">
-                        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-12 max-w-180">
-                            <!-- Author Meta -->
-                            <div class="flex items-center gap-6">
-                                <div class="w-16 h-16 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden shrink-0">
-                                    <img
-                                        src="/malcolm_headshot.png"
-                                        alt="Malcolm Bastien"
-                                        class="w-full h-full object-cover"
-                                    />
-                                </div>
-                                <div>
-                                    <p class="text-base font-bold text-slate-900 dark:text-white">Malcolm Bastien</p>
-                                    <p class="text-xs text-slate-400 uppercase tracking-widest mb-2">Agile Delivery & Organizational Change</p>
-                                    <p class="text-sm text-slate-500 dark:text-slate-400 max-w-md leading-relaxed">
-                                        Unlocking flow through the alignment of socio-technical systems, AI, and product thinking.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {frontmatter.tags.slice(0, 3).map(tag => (
+                        <span class="px-2 py-0.5 bg-surface-container dark:bg-white/10 text-on-surface-variant dark:text-outline-variant text-[10px] uppercase tracking-wider rounded-sm">{tag}</span>
+                    ))}
                 </div>
             </div>
+            <h1 class="font-display text-display-lg mb-8 text-ink-slate dark:text-inverse-on-surface">
+                {frontmatter.title}
+            </h1>
+            <div class="flex items-center justify-center gap-4 text-on-surface-variant dark:text-outline-variant">
+                <span>Malcolm Bastien</span>
+                <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+                <span>{formatDate(createdDate)}</span>
+            </div>
+        </header>
+
+        <div class="max-w-180 mx-auto px-gutter" data-pagefind-body data-pagefind-filter="type:note">
+            <!-- Draft Banner -->
+            {isNoteDraft && (
+                <div class="draft-banner mb-6 px-4 py-3 border-l-4 border-dashed border-outline dark:border-outline-variant bg-surface-container-low dark:bg-ink-slate/30 rounded-r">
+                    <div class="flex items-center gap-2 text-on-surface-variant dark:text-outline-variant">
+                        <span class="material-symbols-outlined text-sm">edit_note</span>
+                        <span class="text-body-md">Draft Post — This post is a draft and is unlisted.</span>
+                    </div>
+                </div>
+            )}
+
+            <!-- Article Body -->
+            <article class="prose prose-slate dark:prose-invert prose-lg max-w-none">
+                <slot />
+
+                {backlinkedNotes.length > 0 && (
+                    <div class="backlinks mt-16 pt-8 border-t border-border-muted dark:border-on-surface-variant">
+                        <Backlinks backlinkedNotes={backlinkedNotes} />
+                    </div>
+                )}
+            </article>
+
+            <!-- Author Bio / Related Posts -->
+            <section class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 py-16 border-t border-border-muted dark:border-on-surface-variant mt-20">
+                <div class="w-24 h-24 shrink-0 overflow-hidden bg-surface-container dark:bg-ink-slate">
+                    <img
+                        src="/malcolm_headshot.png"
+                        alt="Malcolm Bastien"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+                <div class="flex flex-col text-center md:text-left">
+                    <h3 class="font-display text-headline-sm font-bold text-ink-slate dark:text-inverse-on-surface mb-1">Malcolm Bastien</h3>
+                    <p class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest mb-3">Agile Delivery &amp; Organizational Change</p>
+                    <p class="text-body-md text-on-surface-variant dark:text-outline-variant leading-relaxed">
+                        Unlocking flow through the alignment of socio-technical systems, AI, and product thinking.
+                    </p>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -153,20 +124,17 @@ const formatDate = (date: Date) => {
     <style is:global>
         @reference "../styles/global.css";
 
-        /* TOC Active Link */
         .toc-link.active {
-            color: #003fe5 !important;
-            border-left-color: #003fe5 !important;
+            color: #C2410C !important;
+            border-left-color: #C2410C !important;
             font-weight: 500;
         }
 
         .dark .toc-link.active {
-            color: #60a5fa !important;
-            border-left-color: #60a5fa !important;
-            font-weight: 500;
+            color: #C2410C !important;
+            border-left-color: #C2410C !important;
         }
 
-        /* Backlinks section */
         .prose .backlinks a {
             text-decoration: none !important;
             color: inherit !important;
@@ -181,99 +149,139 @@ const formatDate = (date: Date) => {
             color: #f1f5f9 !important;
         }
         .prose .backlinks article:hover h4 {
-            color: #1e3a8a !important;
+            color: #C2410C !important;
         }
         .dark .prose .backlinks article:hover h4 {
-            color: #60a5fa !important;
+            color: #C2410C !important;
         }
 
         .prose blockquote {
-            border-left-color: var(--color-primary);
-        }
-
-        /* Callout base styles - full width with right rounded corners */
-        .prose .callout-block {
-            margin: 1rem 0 !important;
-            padding: 1rem !important;
+            background-color: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+            border-left: 4px solid #C2410C !important;
             border-radius: 0 0.5rem 0.5rem 0 !important;
-            border-left-width: 4px !important;
-            border-left-style: solid !important;
-            border-top: none !important;
-            border-right: none !important;
-            border-bottom: none !important;
-            width: 100% !important;
+            font-family: "Newsreader", Georgia, serif !important;
+            font-style: italic !important;
+            font-size: 1.25rem !important;
+            line-height: 1.6 !important;
+            color: #191c1e !important;
+            padding: 1.5rem 1.5rem 1.5rem 2rem !important;
+            margin: 2rem 0 !important;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04) !important;
         }
 
-        /* Light mode callout styles */
-        .prose .callout-block[data-callout-type="note"] { background-color: #eeeff3 !important; border-left-color: #993fe5 !important; }
-        .prose .callout-block[data-callout-type="abstract"] { background-color: #ecfeff !important; border-left-color: #0891b2 !important; }
-        .prose .callout-block[data-callout-type="info"] { background-color: #eff6ff !important; border-left-color: #3b82f6 !important; }
-        .prose .callout-block[data-callout-type="example"] { background-color: #eef2ff !important; border-left-color: #6366f1 !important; }
-        .prose .callout-block[data-callout-type="tip"] { background-color: #ecfdf5 !important; border-left-color: #10b981 !important; }
-        .prose .callout-block[data-callout-type="important"] { background-color: #fff1f2 !important; border-left-color: #e11d48 !important; }
-        .prose .callout-block[data-callout-type="todo"] { background-color: #dde1ff !important; border-left-color: #335cff !important; }
-        .prose .callout-block[data-callout-type="success"] { background-color: #f0fdf4 !important; border-left-color: #22c55e !important; }
-        .prose .callout-block[data-callout-type="question"] { background-color: #eef2ff !important; border-left-color: #6366f1 !important; }
-        .prose .callout-block[data-callout-type="warning"] { background-color: #fffafb !important; border-left-color: #f59e0b !important; }
-        .prose .callout-block[data-callout-type="failure"] { background-color: #ffdada !important; border-left-color: #ba1a1a !important; }
-        .prose .callout-block[data-callout-type="error"] { background-color: #ffdada !important; border-left-color: #ba1a1a !important; }
-        .prose .callout-block[data-callout-type="danger"] { background-color: #ffdada !important; border-left-color: #ba1a1a !important; }
-        .prose .callout-block[data-callout-type="bug"] { background-color: #f1f5f9 !important; border-left-color: #475569 !important; }
-        .prose .callout-block[data-callout-type="idea"] { background-color: #fefce8 !important; border-left-color: #eab308 !important; }
-        .prose .callout-block[data-callout-type="quote"] { background-color: #f9f9fc !important; border-left-color: #c4c5d9 !important; }
-        .prose .callout-block[data-callout-type="draft"] { background-color: #f5f3ff !important; border-left-color: #8b5cf6 !important; border-left-style: dashed !important; }
-        .prose .callout-block[data-callout-type="wip"] { background-color: #f5f3ff !important; border-left-color: #8b5cf6 !important; border-left-style: dashed !important; }
-
-        /* Dark mode callout overrides */
-        .dark .prose .callout-block[data-callout-type="note"] { background-color: #2b244d !important; border-left-color: #c4b5fd !important; }
-        .dark .prose .callout-block[data-callout-type="abstract"] { background-color: #083344 !important; border-left-color: #22d3ee !important; }
-        .dark .prose .callout-block[data-callout-type="info"] { background-color: #1e3a5f !important; border-left-color: #60a5fa !important; }
-        .dark .prose .callout-block[data-callout-type="example"] { background-color: #1e1b4b !important; border-left-color: #a5b4fc !important; }
-        .dark .prose .callout-block[data-callout-type="tip"] { background-color: #064e3b !important; border-left-color: #34d399 !important; }
-        .dark .prose .callout-block[data-callout-type="important"] { background-color: #4c0519 !important; border-left-color: #fb7185 !important; }
-        .dark .prose .callout-block[data-callout-type="todo"] { background-color: #1e1b4b !important; border-left-color: #a5b4fc !important; }
-        .dark .prose .callout-block[data-callout-type="success"] { background-color: #14532d !important; border-left-color: #4ade80 !important; }
-        .dark .prose .callout-block[data-callout-type="question"] { background-color: #1e1b4b !important; border-left-color: #a5b4fc !important; }
-        .dark .prose .callout-block[data-callout-type="warning"] { background-color: #451a03 !important; border-left-color: #fbbf24 !important; }
-        .dark .prose .callout-block[data-callout-type="failure"] { background-color: #450a0a !important; border-left-color: #fca5a5 !important; }
-        .dark .prose .callout-block[data-callout-type="error"] { background-color: #450a0a !important; border-left-color: #fca5a5 !important; }
-        .dark .prose .callout-block[data-callout-type="danger"] { background-color: #450a0a !important; border-left-color: #fca5a5 !important; }
-        .dark .prose .callout-block[data-callout-type="bug"] { background-color: #1e293b !important; border-left-color: #94a3b8 !important; }
-        .dark .prose .callout-block[data-callout-type="idea"] { background-color: #422006 !important; border-left-color: #fde047 !important; }
-        .dark .prose .callout-block[data-callout-type="quote"] { background-color: #1e293b !important; border-left-color: #c4c5d9 !important; }
-        .dark .prose .callout-block[data-callout-type="draft"] { background-color: #2e1065 !important; border-left-color: #c4b5fd !important; border-left-style: dashed !important; }
-        .dark .prose .callout-block[data-callout-type="wip"] { background-color: #2e1065 !important; border-left-color: #c4b5fd !important; border-left-style: dashed !important; }
-
-        /* Dark mode internal text colors */
-        .dark .prose .callout-block .callout-body p,
-        .dark .prose .callout-block .callout-body li {
-            color: #f1f5f9 !important;
+        .prose blockquote::before,
+        .prose blockquote::after,
+        .prose blockquote p:first-of-type::before,
+        .prose blockquote p:last-of-type::after {
+            content: none !important;
         }
 
-        .dark .prose .callout-block[data-callout-type="note"] .callout-header span { color: #c4b5fd !important; }
-        .dark .prose .callout-block[data-callout-type="abstract"] .callout-header span { color: #22d3ee !important; }
-        .dark .prose .callout-block[data-callout-type="info"] .callout-header span { color: #60a5fa !important; }
-        .dark .prose .callout-block[data-callout-type="example"] .callout-header span { color: #a5b4fc !important; }
-        .dark .prose .callout-block[data-callout-type="tip"] .callout-header span { color: #34d399 !important; }
-        .dark .prose .callout-block[data-callout-type="important"] .callout-header span { color: #fb7185 !important; }
-        .dark .prose .callout-block[data-callout-type="todo"] .callout-header span { color: #a5b4fc !important; }
-        .dark .prose .callout-block[data-callout-type="success"] .callout-header span { color: #4ade80 !important; }
-        .dark .prose .callout-block[data-callout-type="question"] .callout-header span { color: #a5b4fc !important; }
-        .dark .prose .callout-block[data-callout-type="warning"] .callout-header span { color: #fbbf24 !important; }
-        .dark .prose .callout-block[data-callout-type="failure"] .callout-header span,
-        .dark .prose .callout-block[data-callout-type="error"] .callout-header span,
-        .dark .prose .callout-block[data-callout-type="danger"] .callout-header span { color: #fca5a5 !important; }
-        .dark .prose .callout-block[data-callout-type="bug"] .callout-header span { color: #94a3b8 !important; }
-        .dark .prose .callout-block[data-callout-type="idea"] .callout-header span { color: #fde047 !important; }
-        .dark .prose .callout-block[data-callout-type="quote"] .callout-header span { color: #a5b4fc !important; }
-        .dark .prose .callout-block[data-callout-type="draft"] .callout-header span,
-        .dark .prose .callout-block[data-callout-type="wip"] .callout-header span { color: #c4b5fd !important; }
+        .dark .prose blockquote {
+            background-color: #1a1c1e !important;
+            border-color: #2d3133 !important;
+            border-left-color: #C2410C !important;
+            color: #eff1f3 !important;
+        }
+
+        .prose blockquote p {
+            margin: 0 !important;
+        }
+
+        .prose blockquote cite {
+            display: block !important;
+            margin-top: 1rem !important;
+            font-family: "JetBrains Mono", monospace !important;
+            font-size: 0.8125rem !important;
+            font-style: normal !important;
+            color: #45464d !important;
+            letter-spacing: 0.02em !important;
+        }
+
+        .dark .prose blockquote cite {
+            color: #c6c6cd !important;
+        }
+
+        .prose .callout-block {
+            margin: 1.5rem 0 !important;
+        }
+
+        .prose .callout-body,
+        .prose .callout-body p {
+            font-family: "Newsreader", Georgia, serif !important;
+            font-size: 1.125rem !important;
+            line-height: 1.6 !important;
+            font-weight: 500 !important;
+            color: #191c1e !important;
+        }
+
+        .dark .prose .callout-body,
+        .dark .prose .callout-body p {
+            color: #eff1f3 !important;
+        }
+
+        .prose .callout-block[data-callout-type="note"]:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important; }
+
+        .dark .prose .callout-block[data-callout-type="note"] { background-color: #1e2025 !important; border-left-color: #e2e8f0 !important; color: #e2e8f0 !important; }
+        .dark .prose .callout-block[data-callout-type="note"] .callout-header { color: #e2e8f0 !important; }
+        .dark .prose .callout-block[data-callout-type="note"] .callout-title { color: #e2e8f0 !important; }
+        .dark .prose .callout-block[data-callout-type="abstract"] { background-color: #1e2025 !important; border-left-color: #64748b !important; color: #cbd5e1 !important; }
+        .dark .prose .callout-block[data-callout-type="abstract"] .callout-header { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="abstract"] .callout-title { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="info"] { background-color: #1e293b !important; border-left-color: #3b82f6 !important; color: #cbd5e1 !important; }
+        .dark .prose .callout-block[data-callout-type="info"] .callout-header { color: #60a5fa !important; }
+        .dark .prose .callout-block[data-callout-type="info"] .callout-title { color: #60a5fa !important; }
+        .dark .prose .callout-block[data-callout-type="example"] { background-color: #1e2025 !important; border-left-color: #c2410c !important; border: 1px solid #334155 !important; border-left-width: 4px !important; color: #cbd5e1 !important; }
+        .dark .prose .callout-block[data-callout-type="example"] .callout-header { color: #fb923c !important; }
+        .dark .prose .callout-block[data-callout-type="example"] .callout-title { color: #fb923c !important; }
+        .dark .prose .callout-block[data-callout-type="tip"] { background-color: #052e16 !important; border-left-color: #22c55e !important; color: #bbf7d0 !important; }
+        .dark .prose .callout-block[data-callout-type="tip"] .callout-header { color: #4ade80 !important; }
+        .dark .prose .callout-block[data-callout-type="tip"] .callout-title { color: #4ade80 !important; }
+        .dark .prose .callout-block[data-callout-type="important"] { background-color: #450a0a !important; border-left-color: #c2410c !important; color: #fecaca !important; }
+        .dark .prose .callout-block[data-callout-type="important"] .callout-header { color: #fb923c !important; }
+        .dark .prose .callout-block[data-callout-type="important"] .callout-title { color: #fb923c !important; }
+        .dark .prose .callout-block[data-callout-type="todo"] { background-color: #1e2025 !important; border-left-color: #94a3b8 !important; color: #cbd5e1 !important; }
+        .dark .prose .callout-block[data-callout-type="todo"] .callout-header { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="todo"] .callout-title { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="success"] { background-color: #052e16 !important; border-left-color: #22c55e !important; color: #bbf7d0 !important; }
+        .dark .prose .callout-block[data-callout-type="success"] .callout-header { color: #4ade80 !important; }
+        .dark .prose .callout-block[data-callout-type="success"] .callout-title { color: #4ade80 !important; }
+        .dark .prose .callout-block[data-callout-type="question"] { background-color: #1e2025 !important; border-left-color: #64748b !important; color: #cbd5e1 !important; }
+        .dark .prose .callout-block[data-callout-type="question"] .callout-header { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="question"] .callout-title { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="warning"] { background-color: #451a03 !important; border-left-color: #f59e0b !important; color: #fef3c7 !important; }
+        .dark .prose .callout-block[data-callout-type="warning"] .callout-header { color: #fbbf24 !important; }
+        .dark .prose .callout-block[data-callout-type="warning"] .callout-title { color: #fbbf24 !important; }
+        .dark .prose .callout-block[data-callout-type="failure"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; color: #fecaca !important; }
+        .dark .prose .callout-block[data-callout-type="failure"] .callout-header { color: #f87171 !important; }
+        .dark .prose .callout-block[data-callout-type="failure"] .callout-title { color: #f87171 !important; }
+        .dark .prose .callout-block[data-callout-type="error"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; color: #fecaca !important; }
+        .dark .prose .callout-block[data-callout-type="error"] .callout-header { color: #f87171 !important; }
+        .dark .prose .callout-block[data-callout-type="error"] .callout-title { color: #f87171 !important; }
+        .dark .prose .callout-block[data-callout-type="danger"] { background-color: #450a0a !important; border-left-color: #ef4444 !important; color: #fecaca !important; }
+        .dark .prose .callout-block[data-callout-type="danger"] .callout-header { color: #f87171 !important; }
+        .dark .prose .callout-block[data-callout-type="danger"] .callout-title { color: #f87171 !important; }
+        .dark .prose .callout-block[data-callout-type="bug"] { background-color: #1e2025 !important; border-left-color: #64748b !important; color: #cbd5e1 !important; }
+        .dark .prose .callout-block[data-callout-type="bug"] .callout-header { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="bug"] .callout-title { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="idea"] { background-color: #422006 !important; border-left-color: #eab308 !important; color: #fef9c3 !important; }
+        .dark .prose .callout-block[data-callout-type="idea"] .callout-header { color: #facc15 !important; }
+        .dark .prose .callout-block[data-callout-type="idea"] .callout-title { color: #facc15 !important; }
+        .dark .prose .callout-block[data-callout-type="quote"] { background-color: #1e2025 !important; border-left-color: #64748b !important; color: #cbd5e1 !important; }
+        .dark .prose .callout-block[data-callout-type="quote"] .callout-header { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="quote"] .callout-title { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="draft"] { background-color: #1e2025 !important; border-left-color: #64748b !important; border-left-style: dashed !important; color: #cbd5e1 !important; }
+        .dark .prose .callout-block[data-callout-type="draft"] .callout-header { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="draft"] .callout-title { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="wip"] { background-color: #1e2025 !important; border-left-color: #64748b !important; border-left-style: dashed !important; color: #cbd5e1 !important; }
+        .dark .prose .callout-block[data-callout-type="wip"] .callout-header { color: #94a3b8 !important; }
+        .dark .prose .callout-block[data-callout-type="wip"] .callout-title { color: #94a3b8 !important; }
 
         .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-            font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-            color: #0f172a;
-            font-weight: 700;
-            letter-spacing: -0.025em;
+            font-family: "Newsreader", Georgia, serif !important;
+            color: #0f172a !important;
+            font-weight: 600 !important;
+            letter-spacing: -0.02em !important;
             scroll-margin-top: 6rem;
         }
 
@@ -282,13 +290,64 @@ const formatDate = (date: Date) => {
         .dark .prose h4,
         .dark .prose h5,
         .dark .prose h6 {
-            color: #f1f5f9;
+            color: #f1f5f9 !important;
         }
 
-        .prose h2 { font-size: 1.875rem; margin-top: 3rem; margin-bottom: 1.5rem; }
-        .prose h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+        .prose h2 {
+            font-size: 1.875rem !important;
+            margin-top: 3rem !important;
+            margin-bottom: 1.5rem !important;
+            line-height: 1.3 !important;
+        }
+        .prose h3 {
+            font-size: 1.5rem !important;
+            margin-top: 2rem !important;
+            margin-bottom: 1rem !important;
+            line-height: 1.4 !important;
+        }
 
-        /* Inline Topic Links */
+        .prose p {
+            font-family: "Inter", system-ui, sans-serif !important;
+            color: #45464d !important;
+            line-height: 1.75 !important;
+            font-size: 1.125rem;
+        }
+
+        .dark .prose p {
+            color: #c6c6cd !important;
+        }
+
+        .prose a:not(.inline-tag) {
+            text-decoration: underline !important;
+            text-underline-offset: 3px !important;
+            text-decoration-color: rgba(0,0,0,0.2) !important;
+            border-bottom: none !important;
+        }
+
+        .prose a:not(.inline-tag):hover {
+            text-decoration-color: #C2410C !important;
+        }
+
+        .dark .prose a:not(.inline-tag) {
+            text-decoration-color: rgba(255,255,255,0.25) !important;
+        }
+
+        .prose a:not(.inline-tag) .link-icon,
+        .prose a:not(.inline-tag) .material-symbols-outlined {
+            text-decoration: none !important;
+            font-size: 14px !important;
+            vertical-align: middle !important;
+            margin-left: 0.25rem !important;
+            opacity: 0.6 !important;
+            transition: opacity 0.2s !important;
+            display: inline-block !important;
+            line-height: 1 !important;
+        }
+
+        .prose a:not(.inline-tag):hover .link-icon {
+            opacity: 1 !important;
+        }
+
         .prose a.inline-tag {
             display: inline-flex;
             align-items: center;
@@ -312,18 +371,17 @@ const formatDate = (date: Date) => {
         }
 
         .prose a.inline-tag:hover {
-            border-color: #003fe5;
+            border-color: #C2410C;
             color: white;
-            background: #003fe5;
+            background: #C2410C;
         }
 
-        /* Draft Container */
         .prose .draft-container {
             margin: 1.5rem 0 !important;
             padding: 1rem 1.25rem !important;
             border-radius: 0 0.5rem 0.5rem 0 !important;
-            border-left: 3px dashed #94a3b8 !important;
-            background-color: #f8fafc !important;
+            border-left: 3px dashed var(--color-outline) !important;
+            background-color: var(--color-surface-container-low) !important;
             position: relative !important;
         }
 
@@ -336,19 +394,19 @@ const formatDate = (date: Date) => {
             font-weight: 700 !important;
             text-transform: uppercase !important;
             letter-spacing: 0.1em !important;
-            color: #64748b !important;
-            background-color: #f8fafc !important;
+            color: var(--color-on-surface-variant) !important;
+            background-color: var(--color-surface-container-low) !important;
             padding: 0 0.5rem !important;
         }
 
         .dark .prose .draft-container {
-            background-color: #1e293b !important;
-            border-left-color: #64748b !important;
+            background-color: var(--color-ink-slate) !important;
+            border-left-color: var(--color-outline) !important;
         }
 
         .dark .prose .draft-container::before {
-            color: #94a3b8 !important;
-            background-color: #1e293b !important;
+            color: var(--color-outline-variant) !important;
+            background-color: var(--color-ink-slate) !important;
         }
 
         .prose .draft-container * {
@@ -359,7 +417,6 @@ const formatDate = (date: Date) => {
             margin-bottom: 0 !important;
         }
 
-        /* List spacing */
         .prose li {
             margin-top: 0.25rem;
             margin-bottom: 0.25rem;
@@ -368,6 +425,49 @@ const formatDate = (date: Date) => {
         .prose li > p {
             margin-top: 0.25rem;
             margin-bottom: 0.25rem;
+        }
+
+        .prose {
+            --tw-prose-body: var(--color-on-surface-variant);
+            --tw-prose-headings: var(--color-ink-slate);
+            --tw-prose-links: var(--color-ink-slate);
+            --tw-prose-bold: var(--color-ink-slate);
+            --tw-prose-counters: var(--color-on-surface-variant);
+            --tw-prose-bullets: var(--color-outline);
+            --tw-prose-hr: var(--color-border-muted);
+            --tw-prose-quotes: var(--color-ink-slate);
+            --tw-prose-quote-borders: #C2410C;
+            --tw-prose-captions: var(--color-on-surface-variant);
+            --tw-prose-code: var(--color-ink-slate);
+            --tw-prose-pre-code: var(--color-inverse-on-surface);
+            --tw-prose-pre-bg: var(--color-inverse-surface);
+            --tw-prose-th-borders: var(--color-border-muted);
+            --tw-prose-td-borders: var(--color-border-muted);
+        }
+
+        .dark .prose {
+            --tw-prose-body: var(--color-outline-variant);
+            --tw-prose-headings: var(--color-inverse-on-surface);
+            --tw-prose-links: var(--color-inverse-on-surface);
+            --tw-prose-bold: var(--color-inverse-on-surface);
+            --tw-prose-counters: var(--color-outline-variant);
+            --tw-prose-bullets: var(--color-outline);
+            --tw-prose-hr: var(--color-on-surface-variant);
+            --tw-prose-quotes: var(--color-inverse-on-surface);
+            --tw-prose-quote-borders: #C2410C;
+            --tw-prose-captions: var(--color-outline-variant);
+            --tw-prose-code: var(--color-inverse-on-surface);
+            --tw-prose-pre-code: var(--color-inverse-on-surface);
+            --tw-prose-pre-bg: #1a1c1e;
+            --tw-prose-th-borders: var(--color-on-surface-variant);
+            --tw-prose-td-borders: var(--color-on-surface-variant);
+        }
+
+        .prose .lead, .prose-lg .lead, .prose-xl .lead {
+            font-family: "Inter", system-ui, sans-serif;
+            color: var(--color-on-surface-variant);
+            font-size: 1.25rem;
+            line-height: 1.7;
         }
     </style>
 </Layout>

@@ -34,6 +34,11 @@ export function remarkLinkDistinction() {
             value: '<span class="sr-only">(opens in a new tab)</span>'
           });
         }
+
+        node.children.push({
+          type: 'html',
+          value: '<span class="link-icon material-symbols-outlined" style="font-size: 14px; vertical-align: middle; margin-left: 0.25rem; opacity: 0.6;">open_in_new</span>'
+        });
       }
     });
   };

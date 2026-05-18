@@ -13,6 +13,9 @@ yarn-error.log*
 pnpm-debug.log*
 
 
+# opencode config (contains API keys)
+opencode.jsonc
+
 # environment variables
 .env
 .env.production

@@ -2,7 +2,46 @@
 import Layout from "../layouts/Layout.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 
-const packages = [
+const developmentTools = [
+    {
+        name: "Zed",
+        description: "A high-performance code editor written in Rust, chosen for its near-zero latency and collaborative environment. It serves as the primary forge for our codebase.",
+        link: "https://zed.dev",
+    },
+    {
+        name: "Open Code AI",
+        description: "An interactive coding tool that assists in architectural decisions and boilerplate reduction, ensuring the logic remains consistent with the \"Blueprint\" philosophy.",
+        link: "https://opencode.ai",
+    },
+    {
+        name: "Google Stitch",
+        description: "The primary design tool used for creating and maintaining the visual language and component systems of Flow Focused.",
+        link: "https://stitch.withgoogle.com",
+    }
+];
+
+const workflowTools = [
+    {
+        name: "Obsidian",
+        description: "The 'Second Brain' where all Markdown writing happens. Its graph-based structure allows for emergent ideas to connect before they ever reach a draft state.",
+        link: "https://obsidian.md",
+    },
+    {
+        name: "Obsidian Git",
+        description: "Seamless publishing through automated commits. This bridge ensures that the distance between a 'Note' and a 'Published Post' is just a single shortcut away.",
+        link: "https://github.com/denolehov/obsidian-git",
+    }
+];
+
+const deploymentTools = [
+    {
+        name: "Vercel",
+        description: "Static site generation paired with edge deployment provides sub-100ms load times globally. We leverage Vercel's global infrastructure for its unparalleled DX and speed.",
+        link: "https://vercel.com",
+    }
+];
+
+const techStack = [
     {
         name: "Astro",
         description: "The web framework for content-driven websites. Ship less JS, more performance.",
@@ -29,176 +68,133 @@ const packages = [
         link: "https://remark.js.org/",
     }
 ];
-
-const developmentTools = [
-    {
-        name: "Zed",
-        description: "A high-performance code editor written in Rust, chosen for its near-zero latency and collaborative environment. It serves as the primary forge for our codebase.",
-        link: "https://zed.dev",
-    },
-    {
-        name: "Open Code AI",
-        description: "An interactive coding tool that assists in architectural decisions and boilerplate reduction, ensuring the logic remains consistent with the \"Blueprint\" philosophy.",
-        link: "https://opencode.ai",
-    },
-    {
-        name: "Google Stitch",
-        description: "The primary design tool used for creating and maintaining the visual language and component systems of Flow Focused.",
-        link: "https://stitch.withgoogle.com",
-    }
-];
-
-const workflowTools = [
-    {
-        name: "Obsidian",
-        description: "The \"Second Brain\" where all Markdown writing happens. Its graph-based structure allows for emergent ideas to connect before they ever reach a draft state.",
-        link: "https://obsidian.md",
-    },
-    {
-        name: "Obsidian Git",
-        description: "Seamless publishing through automated commits. This bridge ensures that the distance between a \"Note\" and a \"Published Post\" is just a single shortcut away.",
-        link: "https://github.com/denolehov/obsidian-git",
-    }
-];
-
-const deploymentTools = [
-    {
-        name: "Vercel",
-        description: "Static site generation paired with edge deployment provides sub-100ms load times globally. We leverage Vercel's global infrastructure for its unparalleled DX and speed.",
-        link: "https://vercel.com",
-    }
-];
-
-const typographyFonts = [
-    {
-        name: "Plus Jakarta Sans",
-        category: "UI & Body",
-        description: "Weights 300-800. The primary typeface for headings, navigation, and all interface elements. Neutral and highly legible at any size.",
-        link: "https://fonts.google.com/specimen/Plus+Jakarta+Sans",
-    },
-    {
-        name: "Source Serif 4",
-        category: "Article Body",
-        description: "Weights 400-600 with italic. Provides editorial warmth and readability for long-form article content and blockquotes.",
-        link: "https://fonts.google.com/specimen/Source+Serif",
-    },
-    {
-        name: "JetBrains Mono",
-        category: "Code Blocks",
-        description: "Weights 400-500. Designed for code clarity with ligatures and distinctive letterforms for syntax distinction.",
-        link: "https://www.jetbrains.com/lp/mono/",
-    },
-    {
-        name: "Material Symbols",
-        category: "Icons",
-        description: "Variable weight (100-700). Outlined icon set for consistent, modern UI iconography throughout the interface.",
-        link: "https://fonts.google.com/specimen/Material+Symbols+Outlined",
-    }
-];
 ---
 
 <Layout
     title="Colophon | Flow Focused"
-    description="Design is not just what it looks like and feels like. Design is how it works. This page details the invisible machinery behind Flow Focused."
+    description="A technical index of the tools, systems, and philosophies that power this digital garden."
     type="website"
 >
-    <main class="mx-auto px-6 lg:px-8 pt-24 pb-32 max-w-7xl" data-pagefind-ignore>
-        <div class="max-w-5xl mx-auto">
-            <header class="mb-16">
-                <h1 class="text-5xl md:text-6xl font-bold tracking-tighter text-slate-900 dark:text-white mb-6">Colophon</h1>
-            </header>
+    <main class="mx-auto px-gutter" data-pagefind-ignore>
+        <!-- Hero Section -->
+        <section class="bg-paper-white dark:bg-ink-slate pt-20 pb-16 px-gutter border-b border-border-muted dark:border-outline-variant">
+            <div class="max-w-180 mx-auto text-center">
+                <h1 class="font-display text-display-lg text-ink-slate dark:text-inverse-on-surface mb-6">Colophon</h1>
+                <p class="text-body-lg text-on-surface-variant dark:text-outline-variant">
+                    A technical index of the tools, systems, and philosophies that power this digital garden. Built for speed, legibility, and architectural rigor.
+                </p>
+            </div>
+        </section>
 
-            <!-- Development Section -->
-            <section class="mb-20" id="development">
-                <div class="flex items-center gap-4 mb-8">
-                    <span class="material-symbols-outlined text-blue-600 p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg">terminal</span>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Development &amp; Tools</h2>
+        <!-- Content Grid -->
+        <div class="max-w-5xl mx-auto py-section-gap grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-x-gutter">
+            <!-- Development & Tools -->
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-terracotta-accent">terminal</span>
+                    <h2 class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest">Development &amp; Tools</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex flex-col gap-8">
                     {developmentTools.map((tool) => (
-                        <a href={tool.link} target="_blank" rel="noopener noreferrer" class="block p-6 border-l-2 border-blue-600 bg-slate-50 dark:bg-slate-800/30 rounded-r-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors">
-                            <h3 class="text-lg font-bold mb-2 text-blue-600 hover:text-blue-700 dark:hover:text-blue-400">{tool.name}</h3>
-                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                                {tool.description}
-                            </p>
-                        </a>
+                        <div class="group">
+                            <h3 class="font-display text-headline-sm text-ink-slate dark:text-inverse-on-surface mb-2 group-hover:text-terracotta-accent transition-colors">
+                                <a href={tool.link} target="_blank" rel="noopener noreferrer">{tool.name}</a>
+                            </h3>
+                            <p class="text-body-md text-on-surface-variant dark:text-outline-variant">{tool.description}</p>
+                        </div>
                     ))}
                 </div>
-            </section>
+            </div>
 
-            <!-- Workflow Section -->
-            <section class="mb-20" id="workflow">
-                <div class="flex items-center gap-4 mb-8">
-                    <span class="material-symbols-outlined text-blue-600 p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg">history_edu</span>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Writing Workflow</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {workflowTools.map((tool) => (
-                        <a href={tool.link} target="_blank" rel="noopener noreferrer" class="block p-6 border-l-2 border-blue-600 bg-slate-50 dark:bg-slate-800/30 rounded-r-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors">
-                            <h3 class="text-lg font-bold mb-2 text-blue-600 hover:text-blue-700 dark:hover:text-blue-400">{tool.name}</h3>
-                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                                {tool.description}
-                            </p>
-                        </a>
-                    ))}
-                </div>
-            </section>
-
-            <!-- Deployment Section -->
-            <section class="mb-20" id="deployment">
-                <div class="flex items-center gap-4 mb-8">
-                    <span class="material-symbols-outlined text-blue-600 p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg">cloud_done</span>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Hosting &amp; Deployment</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {deploymentTools.map((tool) => (
-                        <a href={tool.link} target="_blank" rel="noopener noreferrer" class="block p-6 border-l-2 border-blue-600 bg-slate-50 dark:bg-slate-800/30 rounded-r-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors md:col-span-2">
-                            <h3 class="text-lg font-bold mb-2 text-blue-600 hover:text-blue-700 dark:hover:text-blue-400">{tool.name}</h3>
-                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                                {tool.description}
-                            </p>
-                        </a>
-                    ))}
-                </div>
-            </section>
-
-            <!-- Typography Section -->
-            <section class="mb-20" id="typography">
-                <div class="flex items-center gap-4 mb-8">
-                    <span class="material-symbols-outlined text-blue-600 p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg">format_size</span>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Typography</h2>
-                </div>
-                <div class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {typographyFonts.map((font) => (
-                            <a href={font.link} target="_blank" rel="noopener noreferrer" class="block p-6 bg-white dark:bg-slate-900 border border-slate-200/30 dark:border-slate-800/30 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                                <p class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-4">{font.category}</p>
-                                <p class="text-3xl font-bold mb-2 text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">{font.name}</p>
-                                <p class="text-sm text-slate-600 dark:text-slate-400 font-medium leading-relaxed">{font.description}</p>
-                            </a>
+            <!-- Writing Workflow & Hosting -->
+            <div class="flex flex-col gap-12">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-terracotta-accent">history_edu</span>
+                        <h2 class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest">Writing Workflow</h2>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        {workflowTools.map((tool) => (
+                            <div class="group">
+                                <h3 class="font-display text-headline-sm text-ink-slate dark:text-inverse-on-surface mb-2 group-hover:text-terracotta-accent transition-colors">
+                                    <a href={tool.link} target="_blank" rel="noopener noreferrer">{tool.name}</a>
+                                </h3>
+                                <p class="text-body-md text-on-surface-variant dark:text-outline-variant">{tool.description}</p>
+                            </div>
                         ))}
                     </div>
                 </div>
-            </section>
 
-            <!-- Stack Section -->
-            <section class="mb-20" id="stack">
-                <div class="flex items-center gap-4 mb-8">
-                    <span class="material-symbols-outlined text-blue-600 p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg">schema</span>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Technology Stack</h2>
-                </div>
-                <div class="grid grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200/20 dark:bg-slate-800/20 border border-slate-200/20 dark:border-slate-800/20 rounded-2xl overflow-hidden">
-                    {packages.map((pkg) => (
-                        <a href={pkg.link} target="_blank" rel="noopener noreferrer" class="p-8 bg-white dark:bg-slate-900 flex flex-col justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                            <div>
-                                <h4 class="font-bold text-blue-600 mb-2 hover:text-blue-700 dark:hover:text-blue-400">{pkg.name}</h4>
-                                <p class="text-sm text-slate-600 dark:text-slate-400">{pkg.description}</p>
-                            </div>
-                        </a>
+                <div class="flex flex-col gap-6 pt-8 border-t border-border-muted dark:border-outline-variant">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-terracotta-accent">cloud_done</span>
+                        <h2 class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest">Hosting &amp; Deployment</h2>
+                    </div>
+                    {deploymentTools.map((tool) => (
+                        <div class="group">
+                            <h3 class="font-display text-headline-sm text-ink-slate dark:text-inverse-on-surface mb-2 group-hover:text-terracotta-accent transition-colors">
+                                <a href={tool.link} target="_blank" rel="noopener noreferrer">{tool.name}</a>
+                            </h3>
+                            <p class="text-body-md text-on-surface-variant dark:text-outline-variant">{tool.description}</p>
+                        </div>
                     ))}
                 </div>
-            </section>
+            </div>
+
         </div>
+
+        <!-- Typography Section -->
+        <section class="bg-paper-white dark:bg-ink-slate py-20 border-y border-border-muted dark:border-outline-variant">
+            <div class="max-w-5xl mx-auto px-gutter">
+                <div class="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
+                    <div class="max-w-3xl">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="material-symbols-outlined text-terracotta-accent">format_size</span>
+                            <h2 class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest">Typography</h2>
+                        </div>
+                        <p class="text-body-lg text-on-surface-variant dark:text-outline-variant">Our typographic system is designed for high-density information without compromising the editorial warmth of a physical journal.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+                <div class="border-l-2 border-border-muted dark:border-outline-variant pl-8 py-2">
+                    <h4 class="text-label-caps text-terracotta-accent mb-4">UI &amp; Headlines</h4>
+                    <span class="block text-display-lg mb-4" style="font-family: 'Inter', sans-serif; font-weight: 700;">Inter</span>
+                    <p class="text-body-md text-on-surface-variant dark:text-outline-variant">The primary typeface for UI elements, navigation, and body copy. Neutral and highly legible at any size.</p>
+                </div>
+                <div class="border-l-2 border-terracotta-accent pl-8 py-2">
+                    <h4 class="text-label-caps text-terracotta-accent mb-4">Article Body</h4>
+                    <span class="block font-display text-display-lg mb-4">Newsreader</span>
+                    <p class="text-body-md text-on-surface-variant dark:text-outline-variant">Provides editorial warmth and readability for long-form article content and blockquotes.</p>
+                </div>
+                <div class="border-l-2 border-border-muted dark:border-outline-variant pl-8 py-2">
+                    <h4 class="text-label-caps text-terracotta-accent mb-4">Syntax &amp; Technical</h4>
+                    <span class="block font-mono text-display-lg mb-4">JetBrains Mono</span>
+                    <p class="text-body-md text-on-surface-variant dark:text-outline-variant">Designed for code clarity with ligatures and distinctive letterforms for syntax distinction.</p>
+                </div>
+                <div class="border-l-2 border-border-muted dark:border-outline-variant pl-8 py-2">
+                    <h4 class="text-label-caps text-terracotta-accent mb-4">Iconography</h4>
+                    <span class="block material-symbols-outlined mb-4" style="font-size: 48px;">palette</span>
+                    <p class="text-body-md text-on-surface-variant dark:text-outline-variant mb-6">Material Symbols Variable weight (100-700). Outlined icon set for consistent, modern UI iconography.</p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="max-w-5xl mx-auto py-section-gap">
+            <div class="flex items-center gap-3 mb-12">
+                <span class="material-symbols-outlined text-terracotta-accent">schema</span>
+                <h2 class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest">Technology Stack</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {techStack.map((pkg) => (
+                    <a href={pkg.link} target="_blank" rel="noopener noreferrer" class="p-6 bg-paper-white dark:bg-ink-slate border border-border-muted dark:border-outline-variant hover:border-terracotta-accent transition-colors group">
+                        <h4 class="font-display text-[20px] text-ink-slate dark:text-inverse-on-surface mb-3 group-hover:text-terracotta-accent transition-colors">{pkg.name}</h4>
+                        <p class="text-body-md text-on-surface-variant dark:text-outline-variant">{pkg.description}</p>
+                    </a>
+                ))}
+            </div>
+        </section>
     </main>
     <SiteFooter />
 </Layout>

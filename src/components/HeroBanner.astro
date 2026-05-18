@@ -1,25 +1,20 @@
 ---
-import { Picture } from "astro:assets";
-import malcolmHeadshot from "/src/assets/malcolm_headshot.png";
 ---
 
-<header class="pt-28 pb-16 border-b border-slate-200/50 dark:border-slate-800/50 bg-white dark:bg-slate-950">
-    <div class="mx-auto px-6 max-w-7xl">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="w-32 md:w-48 shrink-0">
-                <Picture
-                    src={malcolmHeadshot}
-                    alt="Malcolm Bastien"
-                    class="w-full h-full object-contain"
-                />
-            </div>
-            <div>
-                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter leading-[1.1] text-slate-900 dark:text-white mb-8">
-                    Navigating Business Agility & <span class="text-blue-600">Flow.</span>
-                </h1>
-                <p class="text-xl leading-relaxed text-slate-600 dark:text-slate-400 max-w-3xl font-medium">
-                    I am Malcolm Bastien, an expert in Agile Delivery and Organizational Change. I help organizations remove friction and improve flow to enable high-performance delivery at scale.
-                </p>
+<header class="bg-paper-white dark:bg-ink-slate pt-24 pb-section-gap border-b border-border-muted dark:border-on-surface-variant">
+    <div class="max-w-container-max mx-auto px-gutter">
+        <div class="max-w-180 mx-auto text-center">
+            <span class="text-mono-sm text-terracotta-accent mb-6 block">Senior Agile Coach &amp; Organisational Architect</span>
+            <h1 class="font-display text-display-lg text-ink-slate dark:text-inverse-on-surface mb-8">
+                Navigating Business Agility & <span class="text-terracotta-accent">Flow.</span>
+            </h1>
+            <p class="text-body-lg text-on-surface-variant dark:text-outline-variant mb-12 leading-relaxed">
+                I am Malcolm Bastien, an expert in Agile Delivery and Organizational Change. I help organizations remove friction and improve flow to enable high-performance delivery at scale.
+            </p>
+            <div class="flex items-center justify-center gap-8">
+                <a href="/about" class="bg-ink-slate dark:bg-paper-white text-paper-white dark:text-ink-slate px-8 py-4 text-label-caps hover:-translate-y-0.5 transition-transform duration-200 shadow-sm inline-block">
+                    About Me
+                </a>
             </div>
         </div>
     </div>

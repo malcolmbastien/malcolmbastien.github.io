@@ -16,8 +16,6 @@ interface Props {
     initialYear?: string;
 }
 
-import { getStageData } from "../lib/theme";
-
 const { allMonths, eventsByMonthKey } = Astro.props;
 ---
 
@@ -35,13 +33,13 @@ const { allMonths, eventsByMonthKey } = Astro.props;
                     data-year={monthYear}
                 >
                     {monthEvents && monthEvents.length > 0 ? (
-                        <div class="space-y-8">
+                        <div class="space-y-0">
                              {monthEvents.map((event: any) => {
                                   const eventYear = event.date.getFullYear().toString();
 
                                 return (
                                          <a href={`/notes/${event.note.id.replace('.md', '')}`}
-                                              class="timeline-event group cursor-pointer block -mx-6 px-6 py-4 transition-all duration-200 ease-in-out hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:-translate-y-0.5 hover:shadow-lg"
+                                              class="timeline-event group cursor-pointer block border-b border-border-muted dark:border-on-surface-variant py-8 transition-colors hover:bg-surface-container-low/50 dark:hover:bg-ink-slate/30 px-2"
                                             data-title={event.title.toLowerCase()}
                                             data-summary={
                                                 event.note.data.summary?.toLowerCase() ||
@@ -59,7 +57,7 @@ const { allMonths, eventsByMonthKey } = Astro.props;
                                         >
                                              <div class="flex flex-col md:flex-row justify-between items-start gap-8">
                                                  <div class="flex-1 space-y-4">
-                                                     <time class="text-[0.7rem] uppercase tracking-[0.2em] font-bold text-slate-500 dark:text-slate-400">
+                                                     <time class="text-mono-sm text-on-surface-variant dark:text-outline-variant">
                                                          {event.date.toLocaleDateString("en-US", {
                                                              month: 'short',
                                                              day: 'numeric',
@@ -67,21 +65,21 @@ const { allMonths, eventsByMonthKey } = Astro.props;
                                                              timeZone: 'UTC'
                                                          })}
                                                      </time>
-                                                      <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 ease-in-out leading-tight">
+                                                      <h2 class="font-display text-headline-sm text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent dark:group-hover:text-terracotta-accent transition-colors leading-snug">
                                                          {event.title}
                                                      </h2>
                                                      {event.note.data.summary && (
-                                                         <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-xl">
+                                                         <p class="text-body-md text-on-surface-variant dark:text-outline-variant leading-relaxed max-w-xl">
                                                              {event.note.data.summary}
                                                          </p>
                                                      )}
                                                  </div>
                                                  {event.note.data.cover && (
-                                                      <div class="w-full md:w-56 aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                                                      <div class="w-full md:w-48 shrink-0 aspect-video overflow-hidden border border-border-muted dark:border-on-surface-variant bg-paper-white dark:bg-ink-slate">
                                                           <Image
                                                               src={event.note.data.cover}
                                                               alt={event.note.data.coverImageAlt || event.title}
-                                                              class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-500"
+                                                              class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
                                                           />
                                                       </div>
                                                  )}
@@ -92,7 +90,7 @@ const { allMonths, eventsByMonthKey } = Astro.props;
                         </div>
                       ) : (
                         <div class="py-12 text-center">
-                            <p class="text-xs font-medium text-stone-400 dark:text-slate-400">
+                            <p class="text-mono-sm text-on-surface-variant dark:text-outline-variant">
                                 No notes this month
                             </p>
                         </div>
@@ -103,7 +101,7 @@ const { allMonths, eventsByMonthKey } = Astro.props;
     }
 
     <div id="no-results" class="hidden text-center py-16">
-        <p class="text-stone-600 dark:text-slate-400 text-lg">
+        <p class="text-body-md text-on-surface-variant dark:text-outline-variant">
             No matching notes found
         </p>
     </div>

@@ -14,7 +14,6 @@ allNotes.forEach((note) => {
 
 const sortedTopics = Object.entries(topicCounts).sort((a, b) => a[0].localeCompare(b[0], undefined, { sensitivity: 'base' }));
 
-// Group topics by first character
 const groupedTopics = sortedTopics.reduce((acc, [topic, count]) => {
     let firstChar = topic[0].toUpperCase();
     if (!/^[A-Z]$/.test(firstChar)) {
@@ -33,123 +32,71 @@ const alphabet = Object.keys(groupedTopics).sort((a, b) => {
     return a.localeCompare(b);
 });
 
-// Popularity threshold for visual highlighting
-const POPULAR_THRESHOLD = 10;
+const topicSlug = (topic: string) => topic.replace(/\s+/g, '-').toLowerCase();
 ---
 
 <Layout
-    title="Topics Index | Flow Focused"
+    title="Topics Index | Malcolm Bastien"
     description="A comprehensive index of blog post topics explored over the past 12 years, from Agile Transformation to Systems Thinking."
     type="website"
 >
-    <main class="mx-auto px-6 lg:px-8 pt-24 pb-20 max-w-7xl" data-pagefind-ignore>
-        <div class="flex gap-12">
-            <!-- Left Sidebar: Alphabetical Navigation -->
-            <aside class="hidden lg:flex flex-col h-screen sticky top-24 w-16 shrink-0">
-                <div class="flex flex-col gap-y-1">
-                    {alphabet.map(char => (
-                        <a
-                            href={`#${char === "#" ? "num" : char}`}
-                            class="sidebar-link text-sm font-bold transition-colors pl-2 py-0.5 text-slate-400 hover:text-slate-900 dark:hover:text-white"
-                            data-target={char}
-                        >
-                            {char}
-                        </a>
-                    ))}
-                </div>
-            </aside>
-
-            <!-- Main Content -->
-            <div class="flex-1 min-w-0">
-                <header class="mb-16">
-                    <h1 class="text-5xl font-extrabold tracking-tighter text-slate-900 dark:text-white mb-6">Topics Index</h1>
-                    <p class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl">
-                        A comprehensive index of blog post topics explored over the past 12 years, from Agile Transformation to Systems Thinking.
-                    </p>
+    <main>
+        <section class="py-section-gap bg-paper-white dark:bg-ink-slate">
+            <div class="max-w-5xl mx-auto px-gutter">
+                <!-- Hero -->
+                <header class="mb-16 border-b border-border-muted dark:border-on-surface-variant pb-12">
+                    <div class="max-w-3xl">
+                        <span class="text-mono-sm text-terracotta-accent uppercase tracking-widest mb-4 block">Archive</span>
+                        <h1 class="font-display text-display-lg text-ink-slate dark:text-inverse-on-surface mb-6">Topics Index</h1>
+                        <p class="text-body-lg text-on-surface-variant dark:text-outline-variant leading-relaxed">
+                            A comprehensive index of blog post topics explored over the past 12 years, from Agile Transformation to Systems Thinking. Browse the collection by subject to find specific insights.
+                        </p>
+                    </div>
                 </header>
 
-                <div class="space-y-16">
-                    {alphabet.map((letter) => (
-                        <section class="group" id={letter === '#' ? 'num' : letter}>
-                            <div class="flex items-baseline gap-4 mb-8 border-b border-slate-200/50 dark:border-slate-800/50 pb-2">
-                                <span class="text-4xl font-black text-slate-900 dark:text-white">{letter}</span>
+                <!-- A-Z Index Navigation -->
+                <nav class="sticky top-20 bg-paper-white/90 dark:bg-ink-slate/90 backdrop-blur-sm z-40 py-6 mb-12 border-b border-border-muted dark:border-on-surface-variant overflow-x-auto whitespace-nowrap no-scrollbar">
+                    <div class="flex gap-4 md:gap-6 items-center">
+                        <span class="text-label-caps text-on-surface-variant dark:text-outline-variant">Jump to</span>
+                        <div class="flex gap-3 md:gap-5">
+                            {alphabet.map(char => (
+                                <a class="text-label-caps hover:text-terracotta-accent transition-colors text-on-surface-variant dark:text-outline-variant" href={`#${char === "#" ? "num" : char}`}>{char}</a>
+                            ))}
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Topic Sections -->
+                <div class="space-y-section-gap">
+                    {alphabet.map((letter) => {
+                        const topics = groupedTopics[letter];
+                        return (
+                        <section class="scroll-mt-32" id={letter === '#' ? 'num' : letter}>
+                            <div class="flex items-baseline border-b border-ink-slate dark:border-inverse-on-surface pb-4 mb-8">
+                                <h2 class="font-display text-4xl text-ink-slate dark:text-inverse-on-surface mr-4">{letter}</h2>
+                                <span class="text-label-caps text-on-surface-variant dark:text-outline-variant">{letter === '#' ? 'Numbers' : 'Alphabetical Index'}</span>
                             </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-                                {groupedTopics[letter].map(([topic, count]) => {
-                                    const isPopular = count >= POPULAR_THRESHOLD;
-                                    return (
-                                        <a 
-                                            class="group/item flex justify-between items-center py-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" 
-                                            href={`/topics/${topic}`}
-                                        >
-                                            <span class="text-sm font-semibold text-slate-900 dark:text-white group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400">{topic}</span>
-                                            <span class="text-xs font-bold text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-2 py-0.5 rounded-full">({count})</span>
-                                        </a>
-                                    );
-                                })}
+
+                            <div class="columns-1 sm:columns-2 md:columns-3 gap-8 space-y-4">
+                                {topics.map(([topic, count]) => (
+                                    <a class="flex justify-between items-center group py-2 border-b border-border-muted/50 dark:border-on-surface-variant/50" href={`/topics/${topicSlug(topic)}`}>
+                                        <span class="text-body-md text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors">{topic}</span>
+                                        <span class="text-mono-sm text-xs text-on-surface-variant dark:text-outline-variant">{count}</span>
+                                    </a>
+                                ))}
                             </div>
                         </section>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <SiteFooter />
-
-    <script>
-        const sidebarLinks = document.querySelectorAll('.sidebar-link');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.id;
-                    const targetChar = id === 'num' ? '#' : id;
-                    
-                    sidebarLinks.forEach(link => {
-                        const linkChar = link.getAttribute('data-target');
-                        if (linkChar === targetChar) {
-                            link.classList.add('active');
-                        } else {
-                            link.classList.remove('active');
-                        }
-                    });
-                }
-            });
-        }, { rootMargin: '-20% 0px -60% 0px' });
-
-        document.querySelectorAll('section[id]').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
-
-    <style>
-        .sidebar-link {
-            color: rgb(148, 163, 184);
-        }
-        
-        .sidebar-link:hover {
-            color: rgb(15, 23, 42);
-        }
-        
-        :global(.dark) .sidebar-link {
-            color: rgb(148, 163, 184);
-        }
-        
-        :global(.dark) .sidebar-link:hover {
-            color: rgb(248, 250, 252);
-        }
-        
-        .sidebar-link.active {
-            color: rgb(15, 23, 42);
-            border-left: 2px solid rgb(37, 99, 235);
-        }
-        
-        :global(.dark) .sidebar-link.active {
-            color: rgb(248, 250, 252);
-        }
-        
-        section[id] {
-            scroll-margin-top: 120px;
-        }
-    </style>
 </Layout>
+
+<style>
+    section[id] {
+        scroll-margin-top: 120px;
+    }
+</style>

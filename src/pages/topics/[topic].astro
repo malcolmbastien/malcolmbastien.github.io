@@ -7,7 +7,8 @@ export async function getStaticPaths() {
     const allNotes = await getCollection("notes");
     const topics = new Set<string>();
     allNotes.forEach((note) => {
-        note.data.tags.forEach((tag) => topics.add(tag));
+        const tags = note.data.tags || [];
+        tags.forEach((tag) => topics.add(tag));
     });
     return Array.from(topics).map((topic) => ({
         params: { topic },
@@ -17,14 +18,17 @@ export async function getStaticPaths() {
 const { topic } = Astro.params;
 
 const allNotes = await getCollection("notes");
-const filteredNotes = allNotes.filter((note) =>
-    note.data.tags.some((tag) => tag.toLowerCase() === topic?.toLowerCase())
-);
+const filteredNotes = allNotes.filter((note) => {
+    const tags = note.data.tags || [];
+    return tags.some((tag) => tag.toLowerCase() === topic?.toLowerCase());
+});
 
 const sortedNotes = filteredNotes.sort(
-    (a, b) =>
-        (b.data.publishedDate?.getTime() || 0) -
-        (a.data.publishedDate?.getTime() || 0),
+    (a, b) => {
+        const dateA = a.data.publishedDate ? new Date(a.data.publishedDate).getTime() : 0;
+        const dateB = b.data.publishedDate ? new Date(b.data.publishedDate).getTime() : 0;
+        return dateB - dateA;
+    },
 );
 ---
 

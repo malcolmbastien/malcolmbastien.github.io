@@ -1,41 +1,7 @@
 import { visit } from "unist-util-visit";
 
-const iconMap = {
-  note: "sticky_note_2",
-  info: "info",
-  important: "priority_high",
-  todo: "check_circle",
-  abstract: "description",
-  summary: "description",
-  tldr: "description",
-  success: "celebration",
-  tip: "lightbulb",
-  hint: "lightbulb",
-  idea: "lightbulb",
-  done: "check_circle",
-  check: "check_circle",
-  warning: "warning",
-  caution: "warning",
-  attention: "warning",
-  failure: "cancel",
-  fail: "cancel",
-  missing: "cancel",
-  danger: "local_fire_department",
-  error: "error",
-  bug: "pest_control",
-  example: "auto_stories",
-  quote: "format_quote",
-  cite: "format_quote",
-  draft: "stylus_note",
-  wip: "construction",
-  "work-in-progress": "construction",
-  question: "help",
-  help: "help",
-  faq: "help",
-};
-
 const colorMap = {
-  note: "slate",
+  note: "note",
   quote: "quote",
   draft: "wip",
   wip: "wip",
@@ -47,6 +13,8 @@ const colorMap = {
   attention: "warning",
   important: "important",
   abstract: "abstract",
+  summary: "abstract",
+  tldr: "abstract",
   success: "success",
   check: "success",
   done: "success",
@@ -58,34 +26,33 @@ const colorMap = {
   failure: "danger",
   fail: "danger",
   missing: "danger",
-  example: "purple",
+  example: "example",
   question: "question",
   help: "question",
   faq: "question",
-  summary: "success",
-  tldr: "success",
   hint: "tip",
 };
 
 const colorStyles = {
-  slate: { bg: "#eeeff3", border: "#993fe5", text: "#993fe5" },
-  tip: { bg: "#ecfdf5", border: "#10b981", text: "#10b981" },
-  idea: { bg: "#fefce8", border: "#eab308", text: "#eab308" },
-  warning: { bg: "#fffafb", border: "#f59e0b", text: "#f59e0b" },
-  important: { bg: "#fff1f2", border: "#e11d48", text: "#e11d48" },
-  abstract: { bg: "#ecfeff", border: "#0891b4", text: "#0891b4" },
-  success: { bg: "#f0fdf4", border: "#22c55e", text: "#22c55e" },
-  info: { bg: "#eff6ff", border: "#3b82f6", text: "#3b82f6" },
-  todo: { bg: "#dde1ff", border: "#335cff", text: "#335cff" },
-  danger: { bg: "#ffdada", border: "#ba1a1a", text: "#ba1a1a" },
-  bug: { bg: "#f1f5f9", border: "#475569", text: "#475569" },
-  quote: { bg: "#f9f9fc", border: "#c4c5d9", text: "#374151" },
-  wip: { bg: "#f5f3ff", border: "#8b5cf6", text: "#7c3aed" },
-  purple: { bg: "#eef2ff", border: "#6366f1", text: "#6366f1" },
+  note: { bg: "#f8fafc", border: "#0F172A", text: "#0F172A", icon: "sticky_note_2" },
+  abstract: { bg: "#f2f4f6", border: "#76777d", text: "#45464d", icon: "description", italicBody: true },
+  info: { bg: "#eff6ff", border: "#2563eb", text: "#1d4ed8", icon: "info" },
+  example: { bg: "#ffffff", border: "#ac3400", text: "#ac3400", icon: "lightbulb", fullBorder: true },
+  tip: { bg: "#ecfdf5", border: "#047857", text: "#065f46", icon: "tips_and_updates" },
+  idea: { bg: "#fffbeb", border: "#d97706", text: "#d97706", icon: "lightbulb" },
+  important: { bg: "#fef2f2", border: "#C2410C", text: "#C2410C", icon: "priority_high", boldHeader: true },
+  todo: { bg: "#f1f5f9", border: "#0F172A", text: "#0F172A", icon: "check_box_outline_blank" },
+  success: { bg: "#f0fdf4", border: "#16a34a", text: "#15803d", icon: "check_circle" },
+  question: { bg: "#f2f4f6", border: "#76777d", text: "#64748b", icon: "help" },
+  warning: { bg: "#fff7ed", border: "#C2410C", text: "#C2410C", icon: "warning" },
+  danger: { bg: "#fef2f2", border: "#dc2626", text: "#dc2626", icon: "error" },
+  bug: { bg: "#f2f4f6", border: "#76777d", text: "#475569", icon: "pest_control" },
+  quote: { bg: "#f2f4f6", border: "#76777d", text: "#374151", icon: "format_quote", italicBody: true },
+  wip: { bg: "#f2f4f6", border: "#76777d", text: "#d97706", icon: "construction" },
 };
 
 export function remarkCallouts() {
-  return (tree, file) => {
+  return (tree) => {
     visit(tree, "blockquote", (node) => {
       try {
         const firstChild = node.children[0];
@@ -100,11 +67,12 @@ export function remarkCallouts() {
 
         const rawType = match[1];
         const type = rawType.toLowerCase().trim().replace(/\s+/g, "-");
-        const iconName = iconMap[type] || "info";
         const colorTheme = colorMap[type] || "info";
         const colors = colorStyles[colorTheme] || colorStyles.info;
 
         firstText.value = textValue.replace(/^\[!([\w\s-]+)\]/i, "").trim();
+
+        const iconName = colors.icon || "info";
 
         let titleText = rawType.trim();
         titleText =
@@ -122,12 +90,16 @@ export function remarkCallouts() {
           }
         }
 
-        const calloutHtml = `<div class="callout-block" data-callout-type="${type}" style="background-color: ${colors.bg}; border-left: 4px solid ${colors.border}; margin: 1rem 0; padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; width: 100%; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">
-  <div class="callout-header" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-    <span class="material-symbols-outlined" style="font-size: 18px; color: ${colors.text}; font-variation-settings: 'FILL' 0;">${iconName}</span>
-    <span class="callout-title" style="font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: ${colors.text};">${titleText}</span>
+        const extraBorder = colors.fullBorder ? 'border: 1px solid #e2e8f0; border-left: 4px solid ' + colors.border + ';' : '';
+        const hoverStyle = type === 'note' ? ' transition: box-shadow 0.2s;' : '';
+        const italicBody = colors.italicBody ? ' font-style: italic;' : '';
+        const headerWeight = colors.boldHeader ? ' font-weight: 700;' : '';
+        const calloutHtml = `<div class="callout-block" data-callout-type="${type}" style="background-color: ${colors.bg}; border-left: 4px solid ${colors.border}; margin: 1.5rem 0; padding: 1.5rem;${extraBorder}${hoverStyle}">
+  <div class="callout-header" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: ${colors.text};${headerWeight}">
+    <span class="material-symbols-outlined" style="font-size: 20px;">${iconName}</span>
+    <span class="callout-title">${titleText}</span>
   </div>
-  <div class="callout-body" style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">
+  <div class="callout-body" style="${italicBody}">
     ${contentParts.join("\n")}
   </div>
 </div>`;
