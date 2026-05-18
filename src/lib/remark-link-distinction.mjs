@@ -24,21 +24,36 @@ export function remarkLinkDistinction() {
         node.data.hProperties.target = '_blank';
         node.data.hProperties.rel = 'noopener noreferrer';
 
-        const hasSrOnlyText = node.children.some(child => 
-          child.type === 'html' && child.value.includes('sr-only')
-        );
-
-        if (!hasSrOnlyText && node.children.length > 0) {
-          node.children.push({
-            type: 'html',
-            value: '<span class="sr-only">(opens in a new tab)</span>'
-          });
-        }
-
-        node.children.push({
-          type: 'html',
-          value: '<span class="link-icon material-symbols-outlined" style="font-size: 14px; vertical-align: middle; margin-left: 0.25rem; opacity: 0.6;">open_in_new</span>'
+        // Get text content from all text children
+        const textParts = [];
+        node.children.forEach(child => {
+          if (child.type === 'text') {
+            textParts.push(child.value);
+          }
         });
+        
+        const textContent = textParts.join('');
+        
+        console.log('[remark-link-distinction] External link:', node.url, 'textContent:', textContent, 'children:', node.children.length);
+        
+        if (textContent) {
+          // Replace children with wrapped text + icon
+          node.children = [
+            {
+              type: 'html',
+              value: `<span class="link-text">${textContent}</span>`
+            },
+            {
+              type: 'html',
+              value: '<span class="sr-only">(opens in a new tab)</span>'
+            },
+            {
+              type: 'html',
+              value: '<span class="link-icon material-symbols-outlined" style="font-size: 14px; vertical-align: middle; margin-left: 0.25rem; opacity: 0.6; display: inline-block;">open_in_new</span>'
+            }
+          ];
+          console.log('[remark-link-distinction] Replaced children, new count:', node.children.length);
+        }
       }
     });
   };

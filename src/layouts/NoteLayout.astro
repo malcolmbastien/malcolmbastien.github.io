@@ -326,17 +326,20 @@ const formatDate = (date: Date) => {
         }
 
         .prose a:not(.inline-tag) {
-            text-decoration: underline !important;
-            text-underline-offset: 3px !important;
-            text-decoration-color: rgba(0,0,0,0.2) !important;
             border-bottom: none !important;
         }
 
-        .prose a:not(.inline-tag):hover {
+        .prose a:not(.inline-tag) .link-text {
+            text-decoration: underline !important;
+            text-underline-offset: 3px !important;
+            text-decoration-color: rgba(0,0,0,0.2) !important;
+        }
+
+        .prose a:not(.inline-tag):hover .link-text {
             text-decoration-color: #C2410C !important;
         }
 
-        .dark .prose a:not(.inline-tag) {
+        .dark .prose a:not(.inline-tag) .link-text {
             text-decoration-color: rgba(255,255,255,0.25) !important;
         }
 
