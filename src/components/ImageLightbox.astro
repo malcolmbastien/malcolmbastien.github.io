@@ -58,7 +58,18 @@
         caption: string;
     }
 
-    function initLightbox() {
+        function cleanCaptionText(element: Element | null): string {
+            if (!element) return '';
+            // Clone to avoid modifying the DOM
+            const clone = element.cloneNode(true) as Element;
+            // Remove sr-only elements
+            clone.querySelectorAll('.sr-only').forEach(el => el.remove());
+            // Remove icon elements
+            clone.querySelectorAll('.link-icon, .material-symbols-outlined').forEach(el => el.remove());
+            return (clone.textContent || '').trim();
+        }
+
+        function initLightbox() {
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
         const lightboxCaption = document.getElementById('lightbox-caption');
@@ -188,7 +199,7 @@
                 const galleryItem = imageEl.closest('.gallery-item');
                 if (galleryItem) {
                     const em = galleryItem.querySelector('em');
-                    if (em) caption = em.textContent || '';
+                    if (em) caption = cleanCaptionText(em);
                 }
 
                 // 2. Check for figcaption if wrapped in figure
@@ -196,7 +207,7 @@
                     const figure = imageEl.closest('figure');
                     if (figure) {
                         const figcaption = figure.querySelector('figcaption');
-                        if (figcaption) caption = figcaption.textContent || '';
+                        if (figcaption) caption = cleanCaptionText(figcaption);
                     }
                 }
 
@@ -205,7 +216,7 @@
                     const parentP = imageEl.closest('p');
                     if (parentP) {
                         const em = parentP.querySelector('em');
-                        if (em) caption = em.textContent || '';
+                        if (em) caption = cleanCaptionText(em);
                     }
                 }
 
@@ -244,14 +255,14 @@
                                 const figure = img.closest('figure');
                                 if (figure) {
                                     const figcaption = figure.querySelector('figcaption');
-                                    if (figcaption) caption = figcaption.textContent || '';
+                                    if (figcaption) caption = cleanCaptionText(figcaption);
                                 }
                                 // Check for em tag in the same paragraph
                                 if (!caption) {
                                     const parentP = img.closest('p');
                                     if (parentP) {
                                         const em = parentP.querySelector('em');
-                                        if (em) caption = em.textContent || '';
+                                        if (em) caption = cleanCaptionText(em);
                                     }
                                 }
                                 // Fallback to alt text

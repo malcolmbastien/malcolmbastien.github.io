@@ -53,13 +53,15 @@ const formatDate = (date: Date) => {
     <main class="w-full overflow-x-hidden">
         <!-- Article Header Section -->
         <header class="max-w-180 mx-auto px-gutter pt-20 pb-16 text-center">
-            <div class="mb-6 text-mono-sm text-terracotta-accent uppercase tracking-widest">
-                <div class="flex gap-3 justify-center flex-wrap">
+            <div class="mb-6">
+                <div class="flex gap-3 justify-center flex-wrap items-center">
                     {readingTime && (
-                        <span class="px-2 py-0.5 bg-surface-container dark:bg-white/10 text-on-surface-variant dark:text-outline-variant text-[10px] uppercase tracking-wider rounded-sm">{readingTime}</span>
+                        <span class="px-3 py-1 bg-surface-container dark:bg-white/10 text-on-surface dark:text-inverse-on-surface text-xs font-medium rounded-full">{readingTime}</span>
                     )}
                     {frontmatter.tags.slice(0, 3).map(tag => (
-                        <span class="px-2 py-0.5 bg-surface-container dark:bg-white/10 text-on-surface-variant dark:text-outline-variant text-[10px] uppercase tracking-wider rounded-sm">{tag}</span>
+                        <a href={`/topics/${tag.toLowerCase()}`} class="px-3 py-1 bg-surface-container dark:bg-white/10 text-terracotta-accent dark:text-terracotta-accent text-xs font-medium rounded-full hover:bg-terracotta-accent hover:text-white dark:hover:bg-terracotta-accent dark:hover:text-white transition-colors">
+                            {tag}
+                        </a>
                     ))}
                 </div>
             </div>
