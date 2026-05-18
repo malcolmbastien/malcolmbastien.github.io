@@ -10,6 +10,7 @@ import { remarkLinkDistinction } from './src/lib/remark-link-distinction.mjs';
 import { remarkHashtags } from './src/lib/remark-hashtags.mjs';
 import { remarkAssetShortcuts } from './src/lib/remark-asset-shortcuts.mjs';
 import { remarkGallery } from './src/lib/remark-gallery.mjs';
+import { rehypeOptimizeImages } from './src/lib/rehype-optimize-images.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,6 +24,7 @@ export default defineConfig({
 // 	remarkPlugins: [remarkDirective, remarkDraftContainer, remarkCallouts, remarkWikiLinks, remarkLinkDistinction, remarkHashtags, remarkAssetShortcuts, remarkGallery],
 	markdown: {
 		remarkPlugins: [remarkDirective, remarkDraftContainer, remarkCallouts, remarkWikiLinks, remarkLinkDistinction, remarkHashtags, remarkAssetShortcuts, remarkGallery],
+		rehypePlugins: [rehypeOptimizeImages],
 	},
 	vite: {
 		plugins: [tailwindcss()]

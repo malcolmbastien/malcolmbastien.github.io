@@ -33,7 +33,7 @@ export function remarkHashtags() {
         // Create link node for the hashtag pointing to /topics/
         const linkNode = {
           type: 'link',
-          url: `/topics/${tagName}`,
+          url: `/topics/${tagName.toLowerCase()}`,
           title: `#${tagName}`,
           data: {
             hProperties: {

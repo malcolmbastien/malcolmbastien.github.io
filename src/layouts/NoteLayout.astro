@@ -121,6 +121,14 @@ const formatDate = (date: Date) => {
 
     <ImageLightbox />
 
+    <script>
+        document.querySelectorAll('.prose img.optimized-img[loading="lazy"]').forEach(img => {
+            const image = img as HTMLImageElement;
+            image.addEventListener('load', () => image.classList.add('loaded'));
+            if (image.complete) image.classList.add('loaded');
+        });
+    </script>
+
     <style is:global>
         @reference "../styles/global.css";
 
@@ -349,31 +357,32 @@ const formatDate = (date: Date) => {
         }
 
         .prose a.inline-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
-            font-size: 0.75rem;
+            display: inline;
+            font-size: inherit !important;
             font-weight: 500;
-            color: #475569;
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 9999px;
-            padding: 0.375rem 0.75rem;
-            margin: 0.125rem;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .dark .prose a.inline-tag {
-            color: #cbd5e1;
-            background: #1e293b;
-            border-color: #334155;
+            color: var(--color-terracotta-accent) !important;
+            background: transparent !important;
+            border: none !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            text-decoration: underline !important;
+            text-decoration-color: rgba(194, 65, 12, 0.3) !important;
+            text-underline-offset: 2px !important;
+            transition: text-decoration-color 0.2s;
         }
 
         .prose a.inline-tag:hover {
-            border-color: #C2410C;
-            color: white;
-            background: #C2410C;
+            text-decoration-color: var(--color-terracotta-accent) !important;
+        }
+
+        .dark .prose a.inline-tag {
+            color: #fb923c !important;
+            text-decoration-color: rgba(251, 146, 60, 0.3) !important;
+        }
+
+        .dark .prose a.inline-tag:hover {
+            text-decoration-color: #fb923c !important;
         }
 
         .prose .draft-container {
@@ -468,6 +477,21 @@ const formatDate = (date: Date) => {
             color: var(--color-on-surface-variant);
             font-size: 1.25rem;
             line-height: 1.7;
+        }
+
+        .prose img.optimized-img {
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+            background-color: var(--color-canvas-gray);
+        }
+
+        .prose img.optimized-img.loaded,
+        .prose img.optimized-img[loading="eager"] {
+            opacity: 1;
+        }
+
+        .dark .prose img.optimized-img {
+            background-color: var(--color-ink-slate);
         }
     </style>
 </Layout>

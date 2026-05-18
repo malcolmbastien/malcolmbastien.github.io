@@ -25,11 +25,9 @@ The organization I'm currently working with uses a portfolio kanban system with 
 
 In this case, management evaluating teams on whether they're capturing value statements can create more focus on the output than on whether teams are working with desirable mindsets and goals.
 
-Are the teams thinking about the value of their work?
-
-Are they making good prioritization decisions to maximize value delivery?
-
-Are they building things that customers want?
+- Are the teams thinking about the value of their work?
+- Are they making good prioritization decisions to maximize value delivery?
+- Are they building things that customers want?
 
 ### "Do this" creates busyness and adds complexity
 

@@ -99,16 +99,10 @@ tags:
 *Uijeongbu*
 ![](../../assets/2023/04/20230408_091647544_ios-1.jpg)
 *Uijeongbu*
-![](../../assets/2023/04/20230408_090915226_ios-1.jpg)
-*Uijeongbu Music Library*
-![](../../assets/2023/04/20230408_081133183_ios-1.jpg)
-*Uijeongbu*
 ![](../../assets/2023/04/20230408_080657812_ios-1.jpg)
 *Uijeongbu*
 ![](../../assets/2023/04/20230408_061130175_ios-1.jpg)
 *Uijeongbu*
-![](../../assets/2023/04/20230408_055728550_ios-1.jpg)
-*Processed with VSCO with h3 preset*
 ![](../../assets/2023/04/20230407_072228070_ios-1.jpg)
 *Processed with VSCO with q8 preset*
 ![](../../assets/2023/04/20230407_070845561_ios-1.jpg)
@@ -123,7 +117,5 @@ tags:
 *Processed with VSCO with q8 preset*
 ![](../../assets/2023/04/20230406_233942989_ios-1.jpg)
 *Processed with VSCO with q8 preset*
-![](../../assets/2023/04/20230406_232608837_ios-1.jpg)
-*Processed with VSCO with h3 preset*
 ![](../../assets/2023/04/20230406_231219550_ios-1.jpg)
 *Processed with VSCO with q8 preset*
