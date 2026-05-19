@@ -4,7 +4,6 @@ import { statSync } from "node:fs";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import HeroBanner from "../components/HeroBanner.astro";
-import SiteFooter from "../components/SiteFooter.astro";
 
 const allNotes = await getCollection("notes");
 
@@ -151,6 +150,4 @@ const formatDate = (date: Date) => {
             </div>
         </section>
     </main>
-
-    <SiteFooter />
 </Layout>

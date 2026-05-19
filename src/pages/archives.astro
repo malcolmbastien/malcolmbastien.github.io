@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import { statSync } from "node:fs";
 import Layout from "../layouts/Layout.astro";
-import SiteFooter from "../components/SiteFooter.astro";
 
 const allNotes = await getCollection("notes");
 
@@ -99,7 +98,6 @@ const sortedYears = Array.from(notesByYear.entries()).sort((a, b) => b[0] - a[0]
             </div>
         </section>
     </main>
-    <SiteFooter />
 </Layout>
 
 <script>

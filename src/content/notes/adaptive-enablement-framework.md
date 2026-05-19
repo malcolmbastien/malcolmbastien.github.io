@@ -3,10 +3,8 @@ title: The Adaptive Enablement Framework
 stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
-  - tag2
 summary: Brief description
 draft: true
-pinned: true
 ---
 
 Most orgs that adopted Agile ended up with top-down control in cargo pants. Story points became quotas. The stand-up turned into a status update for a manager who isn't even on the team. Sprint boundaries became weapons, not containers.

@@ -8,7 +8,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/inter-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf') format('truetype');
 }
 
@@ -16,7 +16,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/inter-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf') format('truetype');
 }
 
@@ -24,7 +24,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/inter-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf') format('truetype');
 }
 
@@ -43,7 +43,7 @@
   font-family: 'Newsreader';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/newsreader-cY9kfjOCX1hbuyalUrK439vogqC9yFZCYg7oRZaLP4obnf7fTXglsMwoT-ZA.ttf') format('truetype');
 }
 
@@ -51,7 +51,7 @@
   font-family: 'Newsreader';
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/newsreader-cY9qfjOCX1hbuyalUrK49dLac06G1ZGsZBtoBCzBDXXD9JVF438weI_ADA.ttf') format('truetype');
 }
 
@@ -59,7 +59,7 @@
   font-family: 'Newsreader';
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/newsreader-cY9qfjOCX1hbuyalUrK49dLac06G1ZGsZBtoBCzBDXXD9JVF438wSo_ADA.ttf') format('truetype');
 }
 
@@ -67,7 +67,7 @@
   font-family: 'Newsreader';
   font-style: italic;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/newsreader-cY9qfjOCX1hbuyalUrK49dLac06G1ZGsZBtoBCzBDXXD9JVF438wpojADA.ttf') format('truetype');
 }
 
@@ -86,7 +86,7 @@
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/jetbrains-mono-tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPQ.ttf') format('truetype');
 }
 
@@ -94,7 +94,7 @@
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/jetbrains-mono-tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8-qxjPQ.ttf') format('truetype');
 }
 
@@ -113,7 +113,7 @@
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-weight: 100;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/material-symbols-kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHeem.ttf') format('truetype');
 }
 
@@ -121,7 +121,7 @@
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-weight: 200;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/material-symbols-kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDAvHOem.ttf') format('truetype');
 }
 
@@ -129,7 +129,7 @@
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-weight: 300;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/material-symbols-kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDDxHOem.ttf') format('truetype');
 }
 
@@ -137,7 +137,7 @@
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/material-symbols-kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOem.ttf') format('truetype');
 }
 
@@ -145,7 +145,7 @@
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/material-symbols-kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCdHOem.ttf') format('truetype');
 }
 
@@ -153,7 +153,7 @@
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/material-symbols-kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDBxG-em.ttf') format('truetype');
 }
 
@@ -161,7 +161,7 @@
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/material-symbols-kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDBIG-em.ttf') format('truetype');
 }
 

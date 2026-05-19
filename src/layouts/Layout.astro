@@ -30,6 +30,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site || url).href;
 const ogImage = image.startsWith("http") ? image : url + image;
 
 const currentPath = Astro.url.pathname;
+const currentYear = new Date().getFullYear();
 
 const navItems = [
     { href: "/", label: "Blog" },
@@ -49,6 +50,13 @@ const navItems = [
         <meta name="fediverse:creator" content="@malcolm@mastodon.social" />
 
         <!-- Fonts - Self-hosted Inter, Newsreader, JetBrains Mono, Material Symbols -->
+        <link rel="preload" href="/fonts/inter-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf" as="font" type="font/ttf" crossorigin />
+        <link rel="preload" href="/fonts/inter-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf" as="font" type="font/ttf" crossorigin />
+        <link rel="preload" href="/fonts/inter-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf" as="font" type="font/ttf" crossorigin />
+        <link rel="preload" href="/fonts/newsreader-cY9kfjOCX1hbuyalUrK439vogqC9yFZCYg7oRZaLP4obnf7fTXglsMwoT-ZA.ttf" as="font" type="font/ttf" crossorigin />
+        <link rel="preload" href="/fonts/newsreader-cY9qfjOCX1hbuyalUrK49dLac06G1ZGsZBtoBCzBDXXD9JVF438weI_ADA.ttf" as="font" type="font/ttf" crossorigin />
+        <link rel="preload" href="/fonts/newsreader-cY9qfjOCX1hbuyalUrK49dLac06G1ZGsZBtoBCzBDXXD9JVF438wSo_ADA.ttf" as="font" type="font/ttf" crossorigin />
+        <link rel="preload" href="/fonts/newsreader-cY9qfjOCX1hbuyalUrK49dLac06G1ZGsZBtoBCzBDXXD9JVF438wpojADA.ttf" as="font" type="font/ttf" crossorigin />
 
         <!-- Primary Meta Tags -->
         <title>{title}</title>
@@ -200,5 +208,41 @@ const navItems = [
             </div>
         </nav>
         <slot />
+
+        <!-- Site Footer -->
+        <footer class="site-footer">
+            <div class="site-footer-inner">
+                <div class="site-footer-text">
+                    &copy; {currentYear} Malcolm Bastien.
+                </div>
+            </div>
+        </footer>
+
+        <style is:inline>
+            .site-footer {
+                width: 100%;
+                margin-top: 80px;
+                border-top: 1px solid var(--color-border-muted);
+                background-color: var(--color-canvas-gray);
+            }
+            .dark .site-footer {
+                border-color: var(--color-on-surface-variant);
+                background-color: rgba(15, 23, 42, 0.5);
+            }
+            .site-footer-inner {
+                max-width: 1120px;
+                margin: 0 auto;
+                padding: 4rem 24px;
+                text-align: center;
+            }
+            .site-footer-text {
+                font-size: 16px;
+                line-height: 1.6;
+                color: var(--color-on-surface-variant);
+            }
+            .dark .site-footer-text {
+                color: var(--color-outline-variant);
+            }
+        </style>
     </body>
 </html>

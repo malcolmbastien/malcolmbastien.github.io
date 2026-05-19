@@ -2,7 +2,6 @@
 import Layout from "./Layout.astro";
 import Backlinks from "../components/Backlinks.astro";
 import ImageLightbox from "../components/ImageLightbox.astro";
-import SiteFooter from "../components/SiteFooter.astro";
 import { getReadingTime } from "../lib/reading-time";
 
 interface Props {
@@ -118,8 +117,6 @@ const formatDate = (date: Date) => {
     </main>
 
     <div class="pb-16"></div>
-
-    <SiteFooter />
 
     <ImageLightbox />
 

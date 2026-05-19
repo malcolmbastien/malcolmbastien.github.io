@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
-import SiteFooter from "../../components/SiteFooter.astro";
 
 export async function getStaticPaths() {
     const allNotes = await getCollection("notes");
@@ -113,5 +112,4 @@ const formatDate = (date: Date | undefined) => {
             </div>
         </section>
     </main>
-    <SiteFooter />
 </Layout>

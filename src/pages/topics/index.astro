@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import SiteFooter from "../../components/SiteFooter.astro";
 
 const allNotes = await getCollection("notes");
 
@@ -92,7 +91,6 @@ const topicSlug = (topic: string) => topic.replace(/\s+/g, '-').toLowerCase();
             </div>
         </section>
     </main>
-    <SiteFooter />
 </Layout>
 
 <style>
