@@ -44,13 +44,13 @@ Since then, I have implemented several custom skills:
 
 ### Jellyfin Media Organizer
 
-![](../../assets/2026/20260306135014.png)
+![](../../assets/2026/03/20260306135014.png)
 
 I’ve started leveraging AI to tackle tasks I previously put off, such as configuring self-hosted services like [Jellyfin](https://jellyfin.org/) and [Home Assistant](https://www.home-assistant.io/).
 
 Using Docker, I expose only my "Videos" directory to OpenClaw. When I download movies or TV shows, I send OpenClaw an instruction to "clean up" the folder. The agent scans the directory, strips unnecessary metadata from titles, and renames every file according to a standardized naming convention.
 
-![](../../assets/20260308194545.png)
+![](../../assets/2026/03/20260308194545.png)
 
 ### Job Application Autofill
 
@@ -58,7 +58,7 @@ The goal of this skill was to automate the tedious process of navigating multi-p
 
 This skill utilizes OpenClaw’s [Browser tool](https://docs.openclaw.ai/tools/browser) and is quite effective for the pages it had access to. The only issue was that many companies require accounts to access their job portal, which could be solved by connecting a password manager like 1Password to OpenClaw, but that's outside my comfort zone.
 
-![](../../assets/20260308194503.png)
+![](../../assets/2026/03/20260308194503.png)
 
 ### CRM-Copilot
 
@@ -72,7 +72,7 @@ I've used Obsidian for over five years to store personal notes, quotes, and rese
 
 When I provide a topic—such as Product Management—the skill generates a comprehensive topic map. It then cross-references my Obsidian vault against that map, highlighting where my notes are robust, where they are merely "stubs," and where knowledge gaps exist. This provides a clear roadmap for my research and studies.
 
-![](../../assets/20260308194425.png)
+![](../../assets/2026/03/20260308194425.png)
 
 ### Personal Shopping Strategist
 
@@ -91,3 +91,6 @@ While highly effective, this skill raises some ethical questions regarding web s
 - Shape of Dreams 
 - Outbound
 - Desynced
+- UnderMine
+- Vampire Crawlers
+- Halls of Torment

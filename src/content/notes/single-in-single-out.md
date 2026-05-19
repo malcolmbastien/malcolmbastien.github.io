@@ -56,7 +56,7 @@ I still have problems sometimes when trying to use Friedfeed.com for an extended
 
 There's a lot of things that could be said about Friendfeed to emphasis the benefits it brings to the consumption aspect of social networks, but being able to participate on the consumption end of social networks across a person's entire range of online activities is great.
 
-***
+---
 
 How do you expand the reach of your content online or aggregate your stream?
 

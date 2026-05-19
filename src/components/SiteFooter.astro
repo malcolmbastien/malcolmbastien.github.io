@@ -2,9 +2,36 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="w-full mt-section-gap border-t border-border-muted dark:border-on-surface-variant bg-canvas-gray dark:bg-ink-slate/50">
-    <div class="max-w-container-max mx-auto px-gutter py-16 text-center">
-        <div class="text-body-md text-on-surface-variant dark:text-outline-variant">
+<style is:inline>
+  .site-footer {
+    width: 100%;
+    margin-top: 80px;
+    border-top: 1px solid #E2E8F0;
+    background-color: #F1F5F9;
+  }
+  .dark .site-footer {
+    border-color: #45464d;
+    background-color: rgba(15, 23, 42, 0.5);
+  }
+  .site-footer-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 4rem 24px;
+    text-align: center;
+  }
+  .site-footer-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #45464d;
+  }
+  .dark .site-footer-text {
+    color: #c6c6cd;
+  }
+</style>
+
+<footer class="site-footer">
+    <div class="site-footer-inner">
+        <div class="site-footer-text">
             &copy; {currentYear} Malcolm Bastien.
         </div>
     </div>
