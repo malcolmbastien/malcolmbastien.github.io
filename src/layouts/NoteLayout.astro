@@ -170,7 +170,7 @@ const formatDate = (date: Date) => {
             border: 1px solid #e2e8f0 !important;
             border-left: 4px solid #C2410C !important;
             border-radius: 0 0.5rem 0.5rem 0 !important;
-            font-family: "Newsreader", Georgia, serif !important;
+            font-family: "Newsreader", "Newsreader Fallback", Georgia, serif !important;
             font-style: italic !important;
             font-size: 1.25rem !important;
             line-height: 1.6 !important;
@@ -201,7 +201,7 @@ const formatDate = (date: Date) => {
         .prose blockquote cite {
             display: block !important;
             margin-top: 1rem !important;
-            font-family: "JetBrains Mono", monospace !important;
+            font-family: "JetBrains Mono", "JetBrains Mono Fallback", monospace !important;
             font-size: 0.8125rem !important;
             font-style: normal !important;
             color: #45464d !important;
@@ -218,7 +218,7 @@ const formatDate = (date: Date) => {
 
         .prose .callout-body,
         .prose .callout-body p {
-            font-family: "Newsreader", Georgia, serif !important;
+            font-family: "Newsreader", "Newsreader Fallback", Georgia, serif !important;
             font-size: 1.125rem !important;
             line-height: 1.6 !important;
             font-weight: 500 !important;
@@ -288,7 +288,7 @@ const formatDate = (date: Date) => {
         .dark .prose .callout-block[data-callout-type="wip"] .callout-title { color: #94a3b8 !important; }
 
         .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-            font-family: "Newsreader", Georgia, serif !important;
+            font-family: "Newsreader", "Newsreader Fallback", Georgia, serif !important;
             color: #0f172a !important;
             font-weight: 600 !important;
             letter-spacing: -0.02em !important;
@@ -317,7 +317,7 @@ const formatDate = (date: Date) => {
         }
 
         .prose p {
-            font-family: "Inter", system-ui, sans-serif !important;
+            font-family: "Inter", "Inter Fallback", system-ui, sans-serif !important;
             color: #45464d !important;
             line-height: 1.75 !important;
             font-size: 1.125rem;
@@ -478,7 +478,7 @@ const formatDate = (date: Date) => {
         }
 
         .prose .lead, .prose-lg .lead, .prose-xl .lead {
-            font-family: "Inter", system-ui, sans-serif;
+            font-family: "Inter", "Inter Fallback", system-ui, sans-serif;
             color: var(--color-on-surface-variant);
             font-size: 1.25rem;
             line-height: 1.7;

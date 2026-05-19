@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@import "./fonts.css";
 
 @theme {
   --color-ink-slate: #0F172A;
@@ -24,10 +25,10 @@
   --color-inverse-on-surface: #eff1f3;
   --color-inverse-primary: #bec6e0;
 
-  --font-display: "Newsreader", Georgia, serif;
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-serif: "Newsreader", Georgia, serif;
-  --font-mono: "JetBrains Mono", "Roboto Mono", monospace;
+  --font-display: "Newsreader", "Newsreader Fallback", Georgia, serif;
+  --font-sans: "Inter", "Inter Fallback", system-ui, sans-serif;
+  --font-serif: "Newsreader", "Newsreader Fallback", Georgia, serif;
+  --font-mono: "JetBrains Mono", "JetBrains Mono Fallback", "Roboto Mono", monospace;
 
   --width-container-max: 1120px;
   --spacing-gutter: 24px;
@@ -75,7 +76,7 @@
 }
 
 @utility text-mono-sm {
-  font-family: "JetBrains Mono", "Roboto Mono", monospace;
+  font-family: "JetBrains Mono", "JetBrains Mono Fallback", "Roboto Mono", monospace;
   font-size: 13px;
   line-height: 1.5;
   font-weight: 400;
@@ -342,7 +343,7 @@ p {
 }
 
 .callout-title {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Inter", "Inter Fallback", system-ui, sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
