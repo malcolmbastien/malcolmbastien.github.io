@@ -7,38 +7,58 @@ summary: Brief description
 draft: true
 ---
 
-Most orgs that adopted Agile ended up with top-down control in cargo pants. Story points became quotas. The stand-up turned into a status update for a manager who isn't even on the team. Sprint boundaries became weapons, not containers.
+# The Way Companies Adopt Agile is Broken
+
+It's easy for organizations that implement Agile to end up with a system of top-down control. The problem starts with the common approach of treating agile as a project management technique method rather than thinking of agility as a property of the organizational operation system.
+
+Agile systems where there's even the possibility of status-update powered micro-management, have gone down the wrong track.
 
 I don't think this is because Agile was a bad idea. I think it's because the operating system of most companies — command and control — is stronger than any framework. The framework bends until it fits the existing power structure. Every time.
 
-The actual shift is straightforward. Stop tracking individuals. Track the team. Give the team real ownership over what they build and how they build it. And turn managers into environment designers — people whose job is removing obstacles, not monitoring progress.
+To break away from the Agile status quo, zoom out from "Agile Teams" and "Agile Delivery." To make a meaningfully agile organization, in a way that actually empowers teams and gives organizations the properties of adaptability, the system needs to be Agile.
 
-I've seen this work exactly once. It was at a company where the CTO literally stopped going to stand-ups and started spending that hour reading team retro notes instead. He said it told him more about what was broken than any burndown chart ever did. That's the whole philosophy in one anecdote.
+## The Problems We Need to Fix
 
-## What actually gets in the way
+The pattern of trying to improve performance by implementing standardized agile operating models has numerous fundamental problems:
 
-There are maybe five recurring patterns I've seen that kill team energy, and none of them are solved by "the team needs to try harder":
+- **Forced onto teams:** Processes that are mandated from the top down damage.
+- **No say in the work:** Instead of acting like autonomous work groups, teams resemble a conveyor belt or feature-factory, only concerned with pumping out features.
+- **No agency:** Because decision making happens at the top, teams doing the work need to escalate problems up the chain, making them reliant on management instead of solving problems where they happen.e
+- **Micro-management:** Management's time is spent tracking monitoring task work and progress. Data on value delivery and friction are replaced by meaningless sprint metrics.
+- **Wasted time on updates:** Rather than delivering value, teams need to spend time estimating, reporting metrics, and preparing presentations in order to give management a sense of confidence.
 
-- Someone above decides the process. The team follows it whether it fits or not.
-- The team has no say in what they build. They're a conveyor belt.
-- Problems get reported up instead of solved where they happen.
-- Management's attention goes to sprint compliance instead of system friction.
-- Teams spend hours on status decks instead of doing the work.
+## The Loop
 
-## The basic loop
+Typical Agile implementations are rolled out top-down, where management designs systems setting rules for how teams will work. The information that travels back up from teams to management informs future management decision making. This is a control systems.
 
-The org provides context and clears the path. The team works autonomously and sends back honest signals about what's blocking them. That's it.
+Instead of a control system, the goal needs to be an enablement system. 
 
-The thing that makes this concrete instead of aspirational is two agreements:
+The organization creates the environment, shares context, and secure resources to improve team capabilities.
 
-### 1. What we're responsible for, and what the limits are
+Teams work autonomously, adapt to changing conditions, and pass feeback upwards that informs what resources, systems and support they need from the organization to further improve their performance.
 
-The team and the org agree on outcomes — "maintain satisfaction above 90%," "resolve priority tickets within 24 hours" — and guardrails — budget, brand, legal. Everything inside that space is the team's to figure out. The format doesn't matter. A Google Doc works. I've seen it work as a Slack pinned post.
+The org provides context and clears the path. The team works autonomously and sends back signals about what's blocking them.
 
-### 2. A feedback channel that actually gets read
+The goal is to create a reinforcing loop.
 
-The team picks the format — a weekly thread, a retro note, whatever's natural — and reports on three things: whether work is flowing, whether the outcomes are moving, and whether the team itself is OK. That last one is the one most orgs skip, and it's the one that matters most.
+- Management focus:
+	- Securing resources
+	- Removing obstacles
+	- Sheltering the team
+	- Provide teams the autonomy to manage themselves
+- Team focus:
+	- Pursue and delivery positive outcomes
+	- Improve its efficiency and effectiveness
+	- Grow the capabilities of its members
+	- Self-regulate and shift to adapt to challenges in real-time.
 
-## What this changes
+What supports this feedback loop are
+- Criteria for performance evaluation
+- Clear outcomes
+- Timely feedback
+- Teams have the tools and resources to measure and control their own performance
 
-When you stop treating management as a monitoring function, you free up the people who actually know what's wrong to fix it. The team closest to the problem is the team best equipped to solve it. Management's real job is making sure they have what they need to do that — and getting out of the way when they don't.
+
+# Related Ideas
+
+While many models are concerned with the flow of information up or down, the Kanban Cadences is one of the few that explicitly promotes creating feedback loops within an organization. This model can be considered a more abstract version of the Kanban Candences with its 7 different meetings and reviews.

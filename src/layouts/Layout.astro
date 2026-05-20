@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import ThemeToggle from "../components/ThemeToggle.astro";
+import Analytics from "@vercel/analytics/astro";
 
 interface Props {
     title: string;
@@ -132,6 +133,8 @@ const navItems = [
         />
 
         <slot name="head" />
+
+        <Analytics />
 
         <script is:inline>
             const theme = (() => {
