@@ -18,9 +18,9 @@ To break out of this pattern, we have to change our perspective and zoom out bey
 When organizations implement agile practices to increase the command-and-control, typically through the use of top-down standardized agile models, problems emerge:
 
 - **Processed forced onto teams:** Processes are designed and mandated from the top down, stripping away team-level initiative and the ability to adapt to local conditions.
-- **A feature factory with no say in the work:** Instead of acting like autonomous work groups, teams start to resemble a conveyor belt; they become a feature-factory, expected to follow a standardized model whose only concern is the output of new features.
-- **No local decision making:** Because decision making only happens at the top, the teams doing the work need to escalate issues up the chain, making them reliant on management action or instruction.
-- **Micro-management:** Management spends more time tracking daily task work, progress and due dates. Data on value delivery and team friction are replaced by pointless sprint metrics.
+- **A feature factory with no say in the work:** Instead of acting like autonomous work groups, teams start to resemble a conveyor belt; they become a feature factory, expected to follow a standardized model whose only concern is the output of new features.
+- **No local decision-making:** Because decision-making only happens at the top, the teams doing the work need to escalate issues up the chain, making them reliant on management action or instruction.
+- **Micromanagement:** Management spends more time tracking daily task work, progress, and due dates. Data on value delivery and team friction are replaced by pointless sprint metrics.
 - **Wasted time on endless status updates:** Rather than delivering value, teams spend time estimating, calculating metrics, and preparing slide decks to give management confidence and a false sense of control.
 
 ## Shifting to the Enablement Loop
@@ -58,7 +58,7 @@ Teams operate as semi-autonomous units with end-to-end ownership:
 - Adjusting internal roles and workflows
 - Providing feedback up the system
 
-The teams act as sensors. As teams work, they generate data, and feed those health signals back up to management, focusing an areas like:
+The teams act as sensors. As teams work, they generate data, and feed those health signals back up to management, focusing on areas like:
 - Speed and flow
 - Value and Impact
 - Team Safety
@@ -96,8 +96,8 @@ What's important will be different for every organization, but taking inspiratio
 
 ## Summary
 
-The core of this idea is to find a way for organizations to achieve agility without depending on management acting as Ivory tower system designers, defining team structures and tracking task progress.
+The core of this idea is to find a way for organizations to achieve agility without depending on management acting as ivory tower system designers, defining team structures and tracking task progress.
 
 Shifting from command-and-control to enabling, and from top-down to a reinforcing loop, are changes organizations embarking on an Agile transformation need to consider.
 
-No matter which specific agile framework or practices your organization uses, if feedback loops between teams and management aren't happening, and if organization isn't changing in ways that enable your teams to have more autonomy and deliver better results, your organizational agility will always be limited.
+No matter which specific agile framework or practices your organization uses, if feedback loops between teams and management aren't happening, and if the organization isn't changing in ways that enable your teams to have more autonomy and deliver better results, your organizational agility will always be limited.
