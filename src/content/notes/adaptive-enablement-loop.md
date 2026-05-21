@@ -1,6 +1,7 @@
 ---
 title: The Adaptive Enablement Loop
 stage: seed        # seed | sprout | evergreen
+publishedDate: 2026-05-21
 tags:
   - Agile
 summary: Shifting Agile from top-down management to an organizational operating system driven by team autonomy and continuous improvement
