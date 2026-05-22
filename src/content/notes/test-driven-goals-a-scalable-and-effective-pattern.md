@@ -48,7 +48,7 @@ These two practices at different levels of scope and time follow the same patter
 - Check the work and assess your performance in closing the gap.
 - Use those results to identify the next target state.
 
-![](../../../2023/04/image-3.png)
+![](../../assets/2023/04/image-3.png)
 
 This pattern aligns with what Ron Jeffries calls "Bracketed Intervals."
 

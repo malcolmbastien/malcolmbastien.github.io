@@ -25,7 +25,7 @@ However, these approaches often focus on whatever symptom is causing the most vi
 
 One-time efforts also tend to align with people's biases or beliefs. For example, suppose an organization faces challenges related to delayed projects. In that case, without even considering the underlying causes, an Agile Coach might respond by running a workshop on the "Agile Mindset," whereas a Project Manager in the same scenario might focus on completing a RACI or better planning.
 
-![](../../../2024/08/one-time-effort-pro-and-con.png)
+![](../../assets/2024/08/one-time-effort-pro-and-con.png)
 
 ## The Alternative: The Consistent Practice of Continuous Improvement
 
@@ -43,7 +43,7 @@ If, at some point, after they've developed a continuous improvement practice, te
 
 Improvement requires constant effort. Just as you can't become physically fit from a single workout, teams can't achieve lasting improvement from a one-time effort.
 
-![](../../../2024/08/continual-vs-one-time.png)
+![](../../assets/2024/08/continual-vs-one-time.png)
 
 ## The Challenges of Continuous Improvement
 

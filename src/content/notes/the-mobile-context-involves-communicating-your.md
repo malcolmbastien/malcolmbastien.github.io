@@ -8,6 +8,6 @@ tags:
   - Images
   - Sketches
 ---
-![](../../../2012/09/tumblr_mb2iuknhee1qa77f2o1_1280.jpg)
+![](../../assets/2012/09/tumblr_mb2iuknhee1qa77f2o1_1280.jpg)
 
 The mobile context involves communicating your brand story with the possibly the broadest number of users, environments, restrictions, and the greatest need for clarity. Experiences that don’t respect the context result in negative user stories.

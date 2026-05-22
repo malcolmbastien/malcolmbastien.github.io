@@ -5,7 +5,7 @@ publishedDate: 2009-08-30
 tags:
   - Linux
 ---
-![](../../../2009/08/chrome-flash-png-scaled-1000.jpg)
+![](../../assets/2009/08/chrome-flash-png-scaled-1000.jpg)
 
 This is surprisingly easy to do. Just add "--enable-plugins" to the end 
 of your shortcut command in the Gnome menu. 

@@ -34,7 +34,7 @@ Doing all of this at once creates immense pressure and complexity. So much time 
 
 It's an expensive, high-risk way to deliver value. There's a better way to work that embraces continuous product development to deliver value faster and with less risk.
 
-![](../../../2025/08/image-9.png)
+![](../../assets/2025/08/image-9.png)
 *A typical 'Big Bang' project value chain, highlighting the many components that all have to go right to deliver a single outcome.*
 
 ## Find the Value Propositions
@@ -59,7 +59,7 @@ Shifting to thinking about value chains and value propositions allows you to:
 - **Learn from your customers earlier:** By getting new services and features out faster, you get real-world feedback that can inform your next steps.
 - **Focus on users and needs:** By thinking of your organization as a network of services, each supporting one or more value propositions, you're encouraged to consider those users and continually improve your service to meet their needs.
 
-![](../../../2025/08/image-8.png)
+![](../../assets/2025/08/image-8.png)
 *Breaking down complex projects into smaller value propositions and value chains for manageable delivery.*
 
 The shift to working on smaller, independent value chains, on iterative and incremental delivery, and to delivering smaller value propositions is the shift from projects to services using continuous product development.

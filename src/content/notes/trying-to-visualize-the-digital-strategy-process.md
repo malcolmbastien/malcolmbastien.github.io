@@ -10,6 +10,6 @@ tags:
   - Sketches
   - Strategy
 ---
-![](../../../2012/09/tumblr_mawwapyn4a1qa77f2o1_1280.jpg)
+![](../../assets/2012/09/tumblr_mawwapyn4a1qa77f2o1_1280.jpg)
 
 Trying to visualize the digital strategy process (and understand it better) through a sketch.

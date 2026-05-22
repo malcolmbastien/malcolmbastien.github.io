@@ -5,6 +5,6 @@ publishedDate: 2009-09-06
 tags:
   - General
 ---
-![](../../../2009/09/screen_shot_2009-09-06_at_2-59.png)
+![](../../assets/2009/09/screen_shot_2009-09-06_at_2-59.png)
 
 Looks to me like this would be a pretty freaking stylish blog header.

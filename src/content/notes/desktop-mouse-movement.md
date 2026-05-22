@@ -6,7 +6,7 @@ tags:
   - Images
   - Software
 ---
-![](../../../2010/03/tumblr_kytcdzkbma1qa77f2o1_1280.png)
+![](../../assets/2010/03/tumblr_kytcdzkbma1qa77f2o1_1280.png)
 
 Fun analysis which shows how adding a second monitor to my laptop almost immediately effects the way I use my computer.
 

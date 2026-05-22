@@ -24,7 +24,7 @@ This is what the backlog of the team looked like when we started:
 - Everything prioritized and funded for the next year was placed within one kanban state, with unplanned items beyond that placed in another.
 - The only information found in most cards was a brief one-liner describing the customer value of the work.
 
-![](../../../2022/09/ready-options-example-frame-1.jpg)
+![](../../assets/2022/09/ready-options-example-frame-1.jpg)
 *The team's original backlog of initiatives.*
 
 After talking about the situation we were in, we determined that:
@@ -39,7 +39,7 @@ It turned out that dependencies on other teams was the key factor in deciding wh
 
 The first step to improve the situation was making information on team dependencies explicit.
 
-![](../../../2022/09/ready-options-example-frame-2.jpg)
+![](../../assets/2022/09/ready-options-example-frame-2.jpg)
 *The team's backlog after adding indicators for team dependencies.*
 
 Visualizing dependencies on the backlog revealed that 12 of the 23 initiatives planned for the next year depended on one or more other teams.
@@ -50,7 +50,7 @@ Now that the dependencies were visible, the team's manager and I asked our two P
 
 Identifying ready options was different and new for the Product Owners. The definition of "Ready" had to be repeated a few times because the topic of value kept creeping back into the conversation. Product Owners wanted to bring in valuable, but not ready initiatives. "Forget about value." I told the POs, "Value doesn't help us if we can't even work on the thing."
 
-![](../../../2022/09/ready-options-example-frame-3.jpg)
+![](../../assets/2022/09/ready-options-example-frame-3.jpg)
 *The team's backlog after reviewing what items were "ready" for the team to pick up.*
 
 The result of that activity revealed the following:
@@ -64,7 +64,7 @@ When the team identified that it had eight options ready to be picked up, it fel
 
 After a few more questions, we added another layer of information to indicate the value of each initiative to the backlog.
 
-![](../../../2022/09/ready-options-example-frame-4.jpg)
+![](../../assets/2022/09/ready-options-example-frame-4.jpg)
 *The team's backlog after adding indicators for high and low-value items.*
 
 From this latest picture of the backlog, we discovered:

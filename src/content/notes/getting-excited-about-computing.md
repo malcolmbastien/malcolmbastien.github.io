@@ -20,7 +20,7 @@ As the biggest software trend that's already four years old, social media is sti
 
 There's still a lot of unresolved issues with software in general that the world is dealing with. Software patent litigation, government injunctions, IPOs, and more direct competition than ever between the biggest companies in the world. Maybe the most profound change is the rise of the app ecosystems, markets ruled by private corporations.
 
-![](../../../2011/09/media_httpblogsciocom_tbvbf-scaled1000.jpg)
+![](../../assets/2011/09/media_httpblogsciocom_tbvbf-scaled1000.jpg)
 
 It's a volatile time as traditional industries that have been around for centuries are being disrupted. Publishing of newspapers, magazines and books, brick and mortar stores, television, movies and music. Better experiences delivered through new hardware and software are disrupting these industries.
 

@@ -43,7 +43,7 @@ These definitions are helpful enough if you need some basic guidance on how to b
 
 When I think back to all of the cross-functional agile teams I've worked with, they've all shared the same focus on three core roles or skills: Business Analyst, Developer, and Tester. I don't know if it's because those were the roles they had before their teams became "Agile" or if they took guidance from another source, but what it reminded me of was this model called The Three Amigos described in Jeff Patton's book, User Story Mapping.
 
-![](../../../2023/05/image_1684187191362_0.png)
+![](../../assets/2023/05/image_1684187191362_0.png)
 *Deep-Dive in Story Workshops - Jeff Patton, User Story Mapping*
 
 > The group will work through the details and agree on specific acceptance-criteria for the story: It's out of this conversation that we'll have our best estimate of how long it will take to build and test the software.
@@ -114,7 +114,7 @@ The older definitions of cross-functional teams before Team Topologies focused m
 
 Rather than starting with an idea for a feature and needing a team to build it, creating a stream-aligned team begins with understanding your business's users and the services it offers. User Needs Mapping is a good technique that can help you start. User Needs Mapping is a rudimentary version of a Wardley Map without the evolution axis. 
 
-![](../../../2023/05/image-4.png)
+![](../../assets/2023/05/image-4.png)
 *[Exploring team and service boundaries with User Needs Mapping](https://teamtopologies.com/key-concepts-content/exploring-team-and-service-boundaries-with-user-needs-mapping)*
 
 The User Needs Mapping process:
@@ -139,7 +139,7 @@ Another way to look at the end-to-end value stream of how work gets designed, de
 - Identify potential candidates for platforms
 - Spot current hotspots or bottlenecks
 
-![](../../../2023/05/image-3.png)
+![](../../assets/2023/05/image-3.png)
 *[FlowStorming Miro Template](https://miro.com/miroverse/flowstorming-workshop/)*
 
 ## Conclusion

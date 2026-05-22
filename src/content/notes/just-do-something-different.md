@@ -6,7 +6,7 @@ tags:
   - Agile
   - Scrum
 ---
-![](../../../2025/06/tue-1_49-pm.png)
+![](../../assets/2025/06/tue-1_49-pm.png)
 
 When we talk about agile ways of working, we often emphasize the importance of continuous improvement. Frameworks like Scrum and lean/agile methods, such as A3 thinking and Toyota Kata, provide teams with techniques to implement evolutionary and hypothesis-driven change. While these are all valuable tools, sometimes, the focus on process and planning introduces friction and causes us to overlook where real learning occurs. It happens in the doing.
 

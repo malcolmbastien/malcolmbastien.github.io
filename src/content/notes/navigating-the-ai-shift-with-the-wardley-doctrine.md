@@ -17,7 +17,7 @@ As the bottleneck shifts from developer productivity and coding velocity to orga
 
 Throughout this post, I will reference examples of doctrine principles taken from the [Wardley Doctrine & AI Impact Explorer](https://wardley-doctrine-ai-impact-explorer-512441749265.us-west1.run.app/) app that I created. This app serves as a reference guide to the 40 doctrine principles. It features AI-generated summaries on how AI adoption impacts teams and provides actionable recommendations for managers.
 
-![](../../../2025/10/image-2.png)
+![](../../assets/2025/10/image-2.png)
 *An overview of the Wardley Doctrine and AI Impact Explorer.*
 
 ## Managers Must Constantly Attack Friction and Inertia
@@ -34,7 +34,7 @@ To get the most out of AI, you must relentlessly attack organizational friction 
 
 ### Principles Relevant to Inertia
 
-![](../../../2025/10/image-5.png)
+![](../../assets/2025/10/image-5.png)
 
 **Principle:** A bias towards action
 
@@ -76,7 +76,7 @@ Focus on creating high-speed feedback loops. Empower teams to run dozens of smal
 
 ### Principles Relevant to Velocity
 
-![](../../../2025/10/image-6.png)
+![](../../assets/2025/10/image-6.png)
 
 **Principle:** Move fast
 
@@ -116,7 +116,7 @@ AI makes small teams hyper-effective. A single context engineer, paired with a p
 
 ### Principles Relevant to Productivity
 
-![](../../../2025/10/image-7.png)
+![](../../assets/2025/10/image-7.png)
 
 **Principle:** Think aptitude and attitude
 
@@ -166,7 +166,7 @@ Shifting attention and focus to 'orientation' and 'validation' means focusing mo
 
 ### Principles Relevant to User Needs
 
-![](../../../2025/10/image-8.png)
+![](../../assets/2025/10/image-8.png)
 
 **Principle:** Know your users
 
@@ -198,7 +198,7 @@ Shifting attention and focus to 'orientation' and 'validation' means focusing mo
 
 ## The Wardley Doctrine & AI Impact Explorer
 
-![](../../../2025/10/image-3.png)
+![](../../assets/2025/10/image-3.png)
 *The Wardley Doctrine & AI Impact Explorer interface, showcasing principles for modern agile leadership in the age of AI.*
 
 The [Wardley Doctrine & AI Impact Explorer](https://wardley-doctrine-ai-impact-explorer-512441749265.us-west1.run.app/) is an experimental reference tool for agile leaders. It uses AI to generate summaries of the doctrine principles and gives an overview of how AI could impact each principle. The app also offers managers recommendations for leadership in this high-speed landscape.

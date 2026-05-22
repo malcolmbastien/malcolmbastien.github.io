@@ -7,7 +7,7 @@ tags:
   - General
   - Pomodoro
 ---
-![](../../../2009/12/tumblr_ku7ty0vdga1qa77f2o1_250-scaled500.jpg)
+![](../../assets/2009/12/tumblr_ku7ty0vdga1qa77f2o1_250-scaled500.jpg)
 
 [ Pomodoro Timer - Navel Labs](http://navel-labs.com/)
 

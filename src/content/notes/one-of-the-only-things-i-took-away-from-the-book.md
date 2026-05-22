@@ -8,7 +8,7 @@ tags:
   - Image
   - Sketches
 ---
-![](../../../2012/10/tumblr_mbdi3kurvu1qa77f2o1_1280.jpg)
+![](../../assets/2012/10/tumblr_mbdi3kurvu1qa77f2o1_1280.jpg)
 
 One of the only things I took away from the book Social Media Metrics was this simple idea that everything breaks down into increasing revenue, improving customer support, or decreasing costs.
 

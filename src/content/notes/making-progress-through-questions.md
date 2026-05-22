@@ -70,7 +70,7 @@ Watch for missing context in statements. For example, if someone says, "The valu
 
 Questions that explore the context behind what's being discussed are helpful because they create room and space for people to jump in with questions they might have but aren't comfortable asking.
 
-![](../../../2024/09/team-effectiveness-1.png)
+![](../../assets/2024/09/team-effectiveness-1.png)
 
 ## Good Practices
 

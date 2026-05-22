@@ -112,6 +112,6 @@ To avoid falling into this trap:
 
 ## Conclusion
 
-![](../../../2024/08/effective-collaboration-4.png)
+![](../../assets/2024/08/effective-collaboration-4.png)
 
 Remembering these nine golden rules can help you create an environment that supports agility and promotes continuous improvement.

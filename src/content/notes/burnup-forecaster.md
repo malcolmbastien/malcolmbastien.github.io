@@ -11,7 +11,7 @@ featured: true
 cover: ../../assets/2026/01/burnup-chart01.png
 ---
 
-![](../../../burnup-chart01.png)
+![](../../assets/2026/01/burnup-chart01.png)
 *An example burnup chart*
 
 Link: [Google Drive - burnup-forecaster.xlsx](https://docs.google.com/spreadsheets/d/1prrQNT-fYMD0GrXTSNim-3DhIoMi50wb/edit?usp=sharing&ouid=114228439340577936039&rtpof=true&sd=true)
@@ -81,13 +81,13 @@ There are two main types of data that need to be entered:
 6. It plots three versions of the resulting data at different configurable confidence levels, plotting lines from the work completed to the total scope target.
 
 ## Photos
-![](../../../burnup-chart02.png)
+![](../../assets/2026/01/burnup-chart02.png)
 *Another example burnup chart*
 
-![](../../../burnup-chart03.png)
+![](../../assets/2026/01/burnup-chart03.png)
 *Simulation results for weeks to finish remaining work*
 
-![](../../../burnup-data.png)
+![](../../assets/2026/01/burnup-data.png)
 *The main data sheet*
 
 Link: [Google Drive - burnup-forecaster.xlsx](https://docs.google.com/spreadsheets/d/1prrQNT-fYMD0GrXTSNim-3DhIoMi50wb/edit?usp=sharing&ouid=114228439340577936039&rtpof=true&sd=true)

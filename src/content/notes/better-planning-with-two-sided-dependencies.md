@@ -57,7 +57,7 @@ These questions shift the focus from an isolated team backlog to a connected del
 
 Making dependencies visible is the idea behind a [proof-of-concept tool](https://team-dependency-matrix-838267439197.us-west1.run.app/) I've been exploring based on big room planning and the [[the-team-dependency-matrix|Team Dependency Matrix]]. It focuses planning around capturing and validating dependencies.
 
-![](../../../2025/10/image-9.png)
+![](../../assets/2025/10/image-9.png)
 *Dashboard for [Agile Big Room Planning](https://team-dependency-matrix-838267439197.us-west1.run.app/) app, showcasing risk metrics, team loads, and dependencies to enhance planning and delivery.*
 
 The tool captures each team's planned scope and the dependencies they have on other teams. When Team A lists a dependency on Team B, Team B sees the new incoming work, provides an estimate, and the new work is incorporated into their capacity planning
@@ -71,13 +71,13 @@ When planning makes dependencies between teams clear, new interactions become po
 
 This approach captures simple but typically missed data that can make quarterly or annual planning events easier and more useful for teams.
 
-![](../../../2025/10/image-10.png)
+![](../../assets/2025/10/image-10.png)
 *Team management and project scope editing features.*
 
-![](../../../2025/10/image-11.png)
+![](../../assets/2025/10/image-11.png)
 *Estimating view for team initiatives and requests.*
 
-![](../../../2025/10/image-12.png)
+![](../../assets/2025/10/image-12.png)
 *Report view showing planned scope and dependencies across teams, highlighting workload and incoming demand.*
 
 ## Conclusion

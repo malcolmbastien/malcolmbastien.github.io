@@ -29,16 +29,16 @@ The outcomes of the Team Dependency Matrix exercise include:
 3. For each row, capture what dependencies that team has on others in the different columns.
 4. After filling out all your backlog items and capturing your dependencies, you now have a picture of each team's scope, dependencies, and total demand.
 
-![](../../../2023/12/team-dependency-matrix-frame-1.jpg)
+![](../../assets/2023/12/team-dependency-matrix-frame-1.jpg)
 *Add each team's planned scope in the cells where a team intersects with itself.*
 
-![](../../../2023/12/team-dependency-matrix-frame-2.jpg)
+![](../../assets/2023/12/team-dependency-matrix-frame-2.jpg)
 *For each team (rows), go column by column, identifying what dependencies you have on other teams.*  
 
-![](../../../2023/12/team-dependency-matrix-frame-3.jpg)
+![](../../assets/2023/12/team-dependency-matrix-frame-3.jpg)
 *A visual aide on how to read the table. In this example, the Backend Development team needs the Database Management team for data security and backup.*
 
-![](../../../2023/12/team-dependency-matrix-frame-4.jpg)
+![](../../assets/2023/12/team-dependency-matrix-frame-4.jpg)
 *Once completed, the table reveals a team's planned scope, dependencies, and incoming demand.*
 
 ## A Small Step

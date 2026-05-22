@@ -67,7 +67,7 @@ So, what can Agile Coaches do to provide real, lasting value? Here are some key 
 	- Find opportunities for the team to take ownership and make decisions
 	- Encourage the team to self-organize and collaborate effectively
 
-![](../../../2024/08/coaching-activities.png)
+![](../../assets/2024/08/coaching-activities.png)
 
 ## The Goal: Improving Team Maturity
 
@@ -87,7 +87,7 @@ Everything an Agile Coach does aims to improve the team's maturity via these lev
 - Continuous improvement
 - Experimentation, learning, and innovation
 
-![](../../../2024/08/team-maturity.png)
+![](../../assets/2024/08/team-maturity.png)
 
 ## Coaching Outcomes
 

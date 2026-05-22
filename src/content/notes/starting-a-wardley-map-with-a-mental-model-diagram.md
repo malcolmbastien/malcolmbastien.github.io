@@ -36,7 +36,7 @@ In our case, our users are small business owners, and we've identified six key c
 
 We'll focus on "Setup my online business" and "Grow my online business" for now.
 
-![](../../../2022/12/mental-models-diagrams-wardley-maps-user-needs.jpg)
+![](../../assets/2022/12/mental-models-diagrams-wardley-maps-user-needs.jpg)
 
 We've identified dozens of other, smaller customer jobs within each of those high-level jobs and grouped them into towers on our Mental Model Diagram, but for now, let's add the high-level ones to our map. With our user and their core jobs laid out, that completes the top part of our Wardley Map.
 
@@ -57,7 +57,7 @@ The next step to building our map is to identify what capabilities the client re
 	- Payment Processing
 	- Order Fulfillment
 
-![](../../../2022/12/mental-models-diagrams-wardley-maps-adding-capabilities.jpg)
+![](../../assets/2022/12/mental-models-diagrams-wardley-maps-adding-capabilities.jpg)
 
 At this point, the map should reflect our current business. It should show the following:
 
@@ -87,7 +87,7 @@ To help answer these questions, we can start to plot additional elements onto ou
 
 I've also highlighted how these trends connect to the capabilities we've already identified. Understanding how each of these trends affects our ability to meet customers' needs may indicate where it's important for us to invest.
 
-![](../../../2022/12/mental-models-diagrams-wardley-maps-adding-trends.jpg)
+![](../../assets/2022/12/mental-models-diagrams-wardley-maps-adding-trends.jpg)
 
 AI Personalization & Recommendations have the potential to improve many of the capabilities we offer already. Another option could be for our company to be a leader in reporting and analytics, which are vital to supporting capabilities like promotions, email marketing, and customer relationship management.
 
@@ -97,7 +97,7 @@ Investment should only happen with a plan, so before deciding what trends we wan
 
 If we want to use AI to provide better personalization & recommendations to our users, our organization will need to develop capabilities in data science. We'll also need to equip those data scientists with the right tools, which includes creating a data platform to support them.
 
-![](../../../2022/12/mental-models-diagrams-wardley-maps-areas-to-invest-.jpg)
+![](../../assets/2022/12/mental-models-diagrams-wardley-maps-areas-to-invest-.jpg)
 
 ## Conclusion
 
