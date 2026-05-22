@@ -72,7 +72,7 @@ For there to be a productive feedback loop between the two groups, we need some 
 - **Expected Outcomes:** Clear definitions of success, such as OKRs, delivery targets, and SLAs.
 - **System Guardrails:** Clear safety or performance boundaries, budgets, and legal guidelines within which the team has freedom to act.
 
-![](../../20260521075925.png)
+![](../../assets/2026/05/20260521075925.png)
 *A reinforcing loop where autonomous teams act as sensors and the management works to improve organizational factors to support them.*
 
 ## Abstracting the Kanban Cadences

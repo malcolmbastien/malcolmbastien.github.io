@@ -3,7 +3,7 @@ stage: seed
 title: Being Real About Tools and Work
 publishedDate: 2011-01-25
 tags:
-  - Field Notes
+  - Field-Notes
   - Apple
 ---
 ![](../../../2011/01/img_0457-scaled-1000.jpg)
