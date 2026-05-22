@@ -1,0 +1,12 @@
+---
+stage: seed
+title: Use Stories to Affect Stories
+publishedDate: 2012-10-08
+tags:
+  - MadeWithPaper
+  - Image
+  - Sketches
+---
+![](../../../../2012/10/tumblr_mbl2jqztsn1qa77f2o1_1280.jpg)
+
+How do you affect what stories consumers have of your brand? With another story of course.
