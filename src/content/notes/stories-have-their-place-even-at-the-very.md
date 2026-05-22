@@ -12,7 +12,7 @@ tags:
   - Images
   - Sketches
 ---
-![](../../../../2012/10/tumblr_mbdn7vcwjz1qa77f2o1_1280.jpg)
+![](../../../2012/10/tumblr_mbdn7vcwjz1qa77f2o1_1280.jpg)
 
 Stories have their place even at the very beginning of marketing strategy, and a lot of the work from research and analysis should very much be thought about and be shared with others as stories.
 

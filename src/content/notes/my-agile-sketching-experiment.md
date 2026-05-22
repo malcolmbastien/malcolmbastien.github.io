@@ -22,10 +22,10 @@ There's a well-known phrase in Agile, although I don't know who to attribute it 
 
 Understanding how work flows through multiple teams is where systems like [Flight Levels](https://www.flightlevels.io/) can help.
 
-![](../../../../2023/05/image-21.png)
+![](../../../2023/05/image-21.png)
 *The Kanban Lens is a helpful model that reinforces the value of the Kanban principles. What helped me was going from seeing knowledge work as a service in theory to in practice. Seeing it in reality, "Ah! This is a service!" opens up many new opportunities.*
 
-![](../../../../2023/05/image-5.png)
+![](../../../2023/05/image-5.png)
 *Not original, but I attempted to combine a Wardley Map/Maturity Map with the Kanban Maturity Model's dimensions for fitness for purpose.*
 
 ## Coaching and Change
@@ -44,16 +44,16 @@ Instead of those less efficient and more manipulative change techniques, these s
 - Encouraging the desire to change by helping teams be more aware of their current situation, what's important to them, and what's holding them back
 - The concept of nudging change, where you look for opportunities to [[making-change-where-change-is-possible|make change where change is possible]]
 
-![](../../../../2023/05/image-18.png)
+![](../../../2023/05/image-18.png)
 *Change has got to be chosen by people. That's one reason why when I see the signs that some managers are firmly against the work Agile coaches are doing, it's a giant red flag. There shouldn't ever be a "coach's agenda." What are the client's goals? Help them with that.*
 
-![](../../../../2023/05/image-12.png)
+![](../../../2023/05/image-12.png)
 *I'm skeptical of organization change materials that talk about beliefs and values, because when they say you need to have Agile beliefs and values, what are you supposed to do? Reprogram the people in your organization? There are better methods for effective change.*
 
-![](../../../../2023/05/image-16.png)
+![](../../../2023/05/image-16.png)
 *Change curves never did a satisfactory job of communicating the feeling of fog and confusion that comes with change. The talk that happens at the start of a change quickly feels irrelevant as the reality of change happens. Leverage sound theories of change to guide you.*
 
-![](../../../../2023/05/image-6.png)
+![](../../../2023/05/image-6.png)
 *You only manage what you can manage.*
 
 ## Flow & Lean
@@ -64,19 +64,19 @@ All of these sketches relate to work experiences I've had in the past. I've work
 
 Have I seen organizations try to deliver year-long, fixed-date, fixed-scope projects with thousands of user stories and fail? A few.
 
-![](../../../../2023/05/image-14.png)
+![](../../../2023/05/image-14.png)
 *Using Cost of Delay to prioritize work is transformational. Talking about options in terms of delay cost exposes assumptions, and it challenges the prioritization process. It also shines a light at the real cost of the delays that exist within organizations.*
 
-![](../../../../2023/05/image-15.png)
+![](../../../2023/05/image-15.png)
 *Searching for powerful, visual analogies to help explain the key Kanban concept of limiting work-in-process. A key idea here is that doing things that feel productive tend not to be.*
 
-![](../../../../2023/05/image-17.png)
+![](../../../2023/05/image-17.png)
 *Lean metrics is one of my favourite topics to coach. It's an area where people's beliefs, data, goals, and processes all come together. I've seen how teams treat their metrics act as a pretty good proxy for their overall maturity. Even just lead time reveals so much.*
 
-![](../../../../2023/05/image-11.png)
+![](../../../2023/05/image-11.png)
 *I once heard a manager say, "At some point, we just need them to type code faster." They attributed the lack of results to their team members instead of the systems in place that were actively holding people back.*
 
-![](../../../../2023/05/image-10.png)
+![](../../../2023/05/image-10.png)
 *I heard this line somewhere a long time ago, but this is batch size reduction in practice. Big projects increase overhead, reduce sequencing options, reduce feedback, stress bottlenecks and lengthen cycle times. So avoid doing them.*
 
 ## Agile
@@ -85,13 +85,13 @@ Continuous improvement includes many more activities than just improving. The go
 
 I'm a big proponent of focusing on getting just a little bit better but keeping the iterations fast. What can you do today and see the results of tomorrow? Aim to be 1% better than today.
 
-![](../../../../2023/05/image-9.png)
+![](../../../2023/05/image-9.png)
 *Continuous improvement is a noble idea, but it's essential to recognize how the process works. It's not a process that delivers improvements 100% of the time, and it's not a process that happens on its own. It needs the right conditions in place and constant work.*
 
-![](../../../../2023/05/image-19.png)
+![](../../../2023/05/image-19.png)
 *My favourite part of any Agile training I do is when people share their past work experiences. I also like including someone that has already started working differently. It's an effective way to discuss examples of theories in practice, and both types of participants benefit.*
 
-![](../../../../2023/05/image-13.png)
+![](../../../2023/05/image-13.png)
 *Is there a way to talk about maturity without making it a hierarchy? I took a model of interconnected variables and applied it to the elements we commonly see in organizational maturity models. In this model, one change has many impacts, which you can't know in advance.*
 
 ## Teams
@@ -104,10 +104,10 @@ The key theme across both of the Teams sketches that continues to influence my w
 
 What J. Richard Hackman called "conditions" connects to the material about managing complex systems. In the literature on managing complex systems, they're called "Enabling Constraints" or "Constructors." These constructors provide coaches with a broader set of tools to effectively promote positive change.
 
-![](../../../../2023/05/image-7.png)
+![](../../../2023/05/image-7.png)
 *Even highly motivated people cannot succeed in dysfunctional organizations. A very, very short list of examples.*
 
-![](../../../../2023/05/image-8.png)
+![](../../../2023/05/image-8.png)
 *Hackman's model for effective teams taught me how important it is to have the conditions in place if you want teams to be effective.*
 
 # Conclusion

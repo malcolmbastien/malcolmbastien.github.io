@@ -55,7 +55,7 @@ Two of my main reasons for learning Emacs was using Org Mode as a GTD app, and b
 
 I cover how I setup and use Emacs for writing in [[my-emacs-writing-setup|My Emacs Writing Setup]].
 
-![](../../../01/20260115195423.png)
+![](../../../20260115195423.png)
 *My Obsidian graph as of December 2025*
 
 ## Started Learning Piano
@@ -72,7 +72,7 @@ In the quest for better comfort and ergonomics, I've learned a few different key
 
 This year I decided to take the leap again and switch from using Engram, which I picked up in 2021, and start using [Graphite](https://github.com/rdavison/graphite-layout).
 
-![](../../../01/20260115190843.png)
+![](../../../20260115190843.png)
 *Colors indicates expected fingering*
 
 Overall my keyboard layout journey has looked like:
@@ -86,7 +86,7 @@ Learning to type with a new keyboard layout is very disruptive to your productiv
 
 ### Steam Replay 2025
 
-![](../../../01/20260115195730.png)
+![](../../../20260115195730.png)
 *[Steam Replay 2025](https://s.team/y25/ftqnvcg?l=english)*
 
 ### Games Played

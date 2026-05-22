@@ -5,7 +5,7 @@ publishedDate: 2025-08-30
 tags:
   - Agile
 ---
-![](../../../../2025/08/image-14.png)
+![](../../../2025/08/image-14.png)
 
 ## Why Splitting People Across Projects Kills Productivity
 
@@ -46,7 +46,7 @@ But in software development, things never go as planned. Work is always more com
 
 To make matters even worse, bottleneck resources are usually specialists responsible for additional tasks, such as supporting legacy systems, and may be needed to provide support during incidents. They're also relied on by managers and often pulled in to handle ad-hoc tasks. Additionally, who knows what work they are also doing "off the books" as a favour. Their "50/50" time easily becomes 50/50 plus another 20% or 30%, creating an unsustainable workload for your most critical people, slowing down any work that's not deemed urgent or priority.
 
-![](../../../../2025/08/untitled-2025-05-09-2252.png)
+![](../../../2025/08/untitled-2025-05-09-2252.png)
 *The effects of split-allocations on productivity and team dynamics.*
 
 ## A Better Path: Cultivating Focus

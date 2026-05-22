@@ -53,7 +53,7 @@ There are several reasons I like this approach of using Scrum as a way to teach 
 
 The workshop becomes more participant-driven rather than facilitator-led.
 
-![](../../../../2023/05/learning-the-scrum-framework-learning-the-scrum-framework-answer.jpg)
+![](../../../2023/05/learning-the-scrum-framework-learning-the-scrum-framework-answer.jpg)
 *A completed Scrum framework exercise with annotations added using orange sticky notes.*
 
 ## Running This Exercise
@@ -68,7 +68,7 @@ If you want to run this exercise yourself, here are the steps I follow:
 6. I then ask them questions about the purpose and goals of the different Scrum practices. I annotate the answer sheet as they share their responses.
 7. Once we finish, I'll create a copy of all the sticky notes and move them into another area of the board, further emphasizing them.
 
-![](../../../../2023/05/image-25.png)
+![](../../../2023/05/image-25.png)
 *Key takeaways from a past workshop* 
 
 ## Conclusion

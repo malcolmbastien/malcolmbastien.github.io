@@ -7,7 +7,7 @@ tags:
   - Images
   - Sketches
 ---
-![](../../../../2012/10/tumblr_mbqdi7htib1qa77f2o1_1280.jpg)
+![](../../../2012/10/tumblr_mbqdi7htib1qa77f2o1_1280.jpg)
 
 It’s impossible for a brand to affect its social story, it can only impact consumers. It’s consumers who contribute to the social story through the experiences they have with a brand, and with 3rd party interactions like the things they see in the news, or the things they hear from friends.
 

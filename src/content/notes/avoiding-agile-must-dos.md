@@ -38,7 +38,7 @@ Instead of viewing Agile as a set of practices designed to make your projects mo
 
 ## From Operational to Outcome Focus
 
-![](../../../../2024/09/outcome-focused-agile.png)
+![](../../../2024/09/outcome-focused-agile.png)
 *Outcome-Focused Agile*
 
 Agility doesn't come from focusing on operational practices and producing outputs. Real agility happens when teams and organizations prioritize adaptability, learning and outcomes.

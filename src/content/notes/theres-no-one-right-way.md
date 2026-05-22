@@ -52,14 +52,14 @@ Because we can only poorly predict the impact of decisions, a practical approach
 
 ## The Agile Team Profiler
 
-![](../../../../2025/11/image-1.png)
+![](../../../2025/11/image-1.png)
 *The Agile Team Profiler turns your daily practices into a clear, visual 'character sheet,' instantly highlighting your collective strengths and hidden weaknesses.*
 
 The [Agile Team Profiler](https://agile-team-profiler-539581219123.us-west1.run.app/) is an interactive coaching tool I built for Agile Coaches, Scrum Masters, and Managers. Its purpose is simple: to help teams gain a clearer understanding of the hidden trade-offs in their practices.
 
 Users describe their team's ways of working—from daily meetings to technical habits. The application's AI coach analyzes each practice, scoring its impact against key agile attributes. As more practices are added, the app builds a cumulative "Team Profile" that acts as a character sheet, clearly illustrating the team's collective strengths and weaknesses.
 
-![](../../../../2025/11/image-2.png)
+![](../../../2025/11/image-2.png)
 *Get a detailed breakdown for every practice, explaining the 'why' with a clear summary and key pros and cons.*
 
 ### Features
@@ -70,7 +70,7 @@ The application is built around a simple workflow:
 - **Aggregated Team Profile:** All individual practice scores are aggregated into a single, dynamic visualization. This "character sheet" provides a holistic view of the team's strengths and weaknesses, making it easy to spot patterns and imbalances across different areas.
 - **AI-Generated Action Plan:** After adding practices, users can click a button to receive a custom, AI-generated action plan. This plan provides 3-4 concrete, actionable recommendations to help the team address its weaknesses.
 
-![](../../../../2025/11/image-4.png)
+![](../../../2025/11/image-4.png)
 *Just describe a team practice, and the AI coach instantly analyzes, categorizes, and grades its impact across key agile areas.*
 
 ### Attributes and Groupings
@@ -110,7 +110,7 @@ The core of the analysis on trade-offs is based on a set of attributes that repr
   - Systemic Impediment Removal
   - Aligned Goals & Incentives
 
-![](../../../../2025/11/image-3.png)
+![](../../../2025/11/image-3.png)
 *After building your profile, get a custom, AI-generated action plan with concrete steps to amplify your strengths and address your team's biggest challenges.*
 
 ## Conclusion

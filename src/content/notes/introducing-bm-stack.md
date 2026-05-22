@@ -5,7 +5,7 @@ publishedDate: 2010-12-02
 tags:
   - Software
 ---
-![](../../../../2010/12/screen_shot_2010-12-01_at_6-13.png)
+![](../../../2010/12/screen_shot_2010-12-01_at_6-13.png)
 
 On July 1st I came up with the idea of building a web app to let some entrepreneurial minded friends and me quickly draft up business models ideas, and let us discuss those ideas, and then improve them.
 

@@ -8,8 +8,8 @@ tags:
   - Posterous
   - Tumblr
 ---
-![](../../../../2010/08/imgres-1-jpeg-scaled500.jpg)
-![](../../../../2010/08/tumblr-logo-jpeg-scaled500.jpg)
+![](../../../2010/08/imgres-1-jpeg-scaled500.jpg)
+![](../../../2010/08/tumblr-logo-jpeg-scaled500.jpg)
 
 Sometimes Tumblr blogs can be really annoying (hold on)!. Many times I’ll find myself on a blog after clicking a reblogged post in my Tumblr dashboard, and for just some reason, the blog won’t have any information at all as to who’s site it is.
 

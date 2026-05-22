@@ -5,6 +5,6 @@ publishedDate: 2009-11-19
 tags:
   - General
 ---
-[http://www.smashingmagazine.com/2009/11/19/the-death-of-the-boring-blog-post/](http://www.smashingmagazine.com/2009/11/19/the-death-of-the-boring-blog-post/) [sausageoutthebombbaydoor](http://sausageoutthebombbaydoor.tumblr.com/post/249967214/the-death-of-the-boring-blog-post):![](../../../../2009/11/media_httpimpconstantcontactcomimpcmpjspimpccimpdimpbprsmashrssohttpimgconstantcontactcomlpimagesstandardspacergif_mqfyroajuabtojt-jsp-scaled500.jpg)
+[http://www.smashingmagazine.com/2009/11/19/the-death-of-the-boring-blog-post/](http://www.smashingmagazine.com/2009/11/19/the-death-of-the-boring-blog-post/) [sausageoutthebombbaydoor](http://sausageoutthebombbaydoor.tumblr.com/post/249967214/the-death-of-the-boring-blog-post):![](../../../2009/11/media_httpimpconstantcontactcomimpcmpjspimpccimpdimpbprsmashrssohttpimgconstantcontactcomlpimagesstandardspacergif_mqfyroajuabtojt-jsp-scaled500.jpg)
 
 Let’s face it: **the classic blog post is boring**. Barring the text and images, each one generally has the exact same layout. We see little originality from one…

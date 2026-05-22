@@ -50,7 +50,7 @@ Based on this incomplete list of capabilities, even the simplest teams requires 
 
 ### Excessive Team Size
 
-![](../../../../2023/07/image.png)
+![](../../../2023/07/image.png)
 
 As you add more people, the number of potential communication pathways grows exponentially, making communication more difficult. Information takes longer to spread and doesn't get spread evenly.
 

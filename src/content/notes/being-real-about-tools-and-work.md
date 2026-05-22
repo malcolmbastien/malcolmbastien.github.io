@@ -6,7 +6,7 @@ tags:
   - Field Notes
   - Apple
 ---
-![](../../../../2011/01/img_0457-scaled-1000.jpg)
+![](../../../2011/01/img_0457-scaled-1000.jpg)
 
 This photo was me at Dark Horse Espresso Monday morning two weeks ago taking a shot with some sly product placement while I waited for my morning meeting to arrive. For 40 minutes I sat at the cafe watching the people come in for their morning coffee, and just taking notes in my notebook. I didn't pull out my phone out of my pocket or check Twitter. 
 

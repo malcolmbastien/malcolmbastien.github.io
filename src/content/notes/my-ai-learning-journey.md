@@ -38,7 +38,7 @@ Here are the specific channels and playlists I learned from.
 
 After watching all these videos and reading numerous other articles online, I transcribed my notes into Obsidian. It now has a new sizable section dedicated to the different Deep Learning concepts I learned:
 
-![](../../../../2025/07/image-36.png)
+![](../../../2025/07/image-36.png)
 *My Obsidian graph illustrates the relationship between various deep learning concepts in my notes.*
 
 ## Vibe Coding
@@ -47,22 +47,22 @@ Here are some personal projects I created when I first started experimenting wit
 
 [**DelayCost Visualizer**](https://studio--delaycost-visualizer.us-central1.hosted.app/): Utility to visualize how the start order of work impacts the cost of delay.
 
-![](../../../../2025/07/image-31.png)
+![](../../../2025/07/image-31.png)
 *DelayCost Visualizer is a utility to visualize how the start order of work affects the cost of delay.*
 
 [**OutlineFlow**](https://studio--outlineflow.us-central1.hosted.app/): Blogging tool
 
-![](../../../../2025/07/image-35.png)
+![](../../../2025/07/image-35.png)
 *OutlineFlow is a blogging tool which includes a section for ideas and a blog editor. Each blog post has an outline and a notes section to save attachments, links and ideas.*
 
 [**Hillflow**](https://studio--hillflow.us-central1.hosted.app/): A project management tool inspired by 37Signals' [Hill Charts](https://basecamp.com/hill-charts).
 
-![](../../../../2025/07/image-34.png)
+![](../../../2025/07/image-34.png)
 *A project's hill chart, showcasing key initiative statuses and recent activity updates.*
 
 [**Ganttify**](https://studio--ganttify-6q9ac.us-central1.hosted.app/): GUI to edit Mermaid Gantt charts
 
-![](../../../../2025/07/image-33.png)
+![](../../../2025/07/image-33.png)
 *Ganttify lets users use a friendly GUI to create new or import and edit existing Mermaid Gantt charts.* 
 
 There are many services offering solutions to help you create apps from a prompt, including [v0](https://v0.dev/), [Lovable](https://lovable.dev/), and most recently, [GitHub Spark](https://github.com/features/spark). However, when I started, I decided to try [Google Firebase Studio](https://firebase.studio/) first.
@@ -102,7 +102,7 @@ While experimenting with AI agents, I needed a place to push my code, so I creat
 
 It was pretty exciting to see ideas flow from my head and get deployed directly to my repository. Once I played around with things for a bit and got used to what was going on, I had the LLM model the process as a flow diagram:
 
-![](../../../../2025/07/image-30.png)
+![](../../../2025/07/image-30.png)
 *Flow diagram illustrating the development workflow, showcasing interactions between the user, code, and various tools including the Zed Editor, Task Master, opencode and Gemini.*
 
 ## Setting Up a Local LLM

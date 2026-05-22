@@ -50,7 +50,7 @@ To understand this impact, [I prototyped a tool that visualizes a team's weekly 
 
 As these factors shift, the tool would dynamically show how overall productive working time changes. It reveals how a forty-hour work week is a finite resource, meetings and other factors interact to reduce the time people have to work and collaborate productively.
 
-![](../../../../2025/09/image-2.png)
+![](../../../2025/09/image-2.png)
 *An interactive Meeting Leakage Calculator to visualize the true cost of meetings and over-collaboration.*
 
 ### Towards More Intentional Collaboration

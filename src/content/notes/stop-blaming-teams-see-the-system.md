@@ -55,7 +55,7 @@ Seeing the system starts by asking better questions:
 - What does the structure *encourage* them to do?
 - How do people's behaviours make sense from different perspectives*?
 
-![](../../../../2025/11/untitled-2025-11-11-1134.png)
+![](../../../2025/11/untitled-2025-11-11-1134.png)
 *A flowchart illustrating the challenges of project management, highlighting the pitfalls of blaming teams and the importance of understanding organizational systems.*
 
 When you start to see the organization as a system, you uncover the real sources of friction affecting teams. You find the root causes of burnout, bottlenecks, and poor quality.

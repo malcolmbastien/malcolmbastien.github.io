@@ -31,7 +31,7 @@ Implementing overly complicated kanban systems or imposing pre-made boards on te
 - Teams abandon the kanban systems.
 - The systems become a tool for micro-management or command and control.
 
-![](../../../../2023/12/ineffective-kanban-systems.png)
+![](../../../2023/12/ineffective-kanban-systems.png)
 
 ## Start With What You Do Now
 
@@ -85,7 +85,7 @@ Kanban systems are powerful tools to visualize and manage work, but it's misguid
 
 Better kanban systems don't guarantee better outcomes. They are only as good as the people who use them and the actions they take. Kanban systems help you understand how work happens so you can identify and solve your real problems and take the appropriate actions. "Better" is a quality of people's decisions and actions, not a board's design.
 
-![](../../../../2023/12/build-effective-kanban-systems.png)
+![](../../../2023/12/build-effective-kanban-systems.png)
 
 Kanban systems help teams by supporting the conditions needed for their desired outcomes. They can promote better transparency, collaboration, experimentation and improvement, but they can also do the opposite if implemented inappropriately or imposed onto teams.
 

@@ -10,7 +10,7 @@ featured: true
 cover: "../../assets/2026/02/20260211181853.png"
 ---
 
-![](../../../02/20260211181853.png)
+![](../../../20260211181853.png)
 *An organizational map in  [SquadView](https://squadview.vercel.app/)*
 
 I built a new tool to try to better map how work happens in organizations. It's working title is [SquadView](https://squadview.vercel.app/).
@@ -52,13 +52,13 @@ But some elements were always missing from the picture:
 
 ## Gallery
 
-![](../../../02/20260211182114.png)
+![](../../../20260211182114.png)
 *A sleek interface for managing different groups in your organization*
 
-![](../../../02/20260211182250.png)
+![](../../../20260211182250.png)
 *Add various meetings, teams, roles, work types to your organization's different groups*
 
-![](../../../02/20260211182848.png)
+![](../../../20260211182848.png)
 *Zoom in on just one team or department in your organization*
 
 Check out [SquadView](https://squadview.vercel.app/)

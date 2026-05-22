@@ -7,7 +7,7 @@ tags:
   - Surface
 summary: "A short critique of the Microsoft Surface website."
 ---
-![](../../../../2012/10/tumblr_mbzzumsr2f1qa77f2o1_r2_1280.png)
+![](../../../2012/10/tumblr_mbzzumsr2f1qa77f2o1_r2_1280.png)
 
 A couple problems I have with Microsoft’s website for Surface.
 

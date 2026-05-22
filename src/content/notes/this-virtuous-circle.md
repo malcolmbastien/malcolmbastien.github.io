@@ -18,4 +18,4 @@ When you see a PC vs Mac argument now, what's different is the environment these
 
 My question is: How do you compete against this?
 
-[](../../../../2010/10/virtuous_circle.jpg)
+[](../../../2010/10/virtuous_circle.jpg)

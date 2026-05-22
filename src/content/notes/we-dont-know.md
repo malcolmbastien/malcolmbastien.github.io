@@ -87,7 +87,7 @@ If you accept the truth of "We don't know " and realize that anything else is im
 
 Each of these practices aims to better enable us to react to change in the face of uncertainty. We don't take direction from a plan. We set our direction from what the real world tells us. We organize ourselves so that our systems, culture, and teams align with that goal.
 
-![](../../../../2025/05/image.png)
+![](../../../2025/05/image.png)
 
 ## Conclusion: Thriving in the World of "We Don't Know"
 

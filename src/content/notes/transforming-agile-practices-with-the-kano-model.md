@@ -70,16 +70,16 @@ After completing the survey, the app generates a Kano Model graph, a profile of 
 
 The prototype uses AI to generate a profile and recommendations, but the idea is that after the data is collected from a team, the reflective part of the exercise and coming up with recommendations could be done as part of a workshop activity.
 
-![](../../../../2025/08/image-12.png)
+![](../../../2025/08/image-12.png)
 *The Agile Profiler prototype app allows users to select various Agile practices and ceremonies for evaluation.*
 
-![](../../../../2025/08/image-10.png)
+![](../../../2025/08/image-10.png)
 *Visual representation of Agile practice evaluation using the Kano Model, highlighting satisfaction and functionality of five elements of a practice.*
 
-![](../../../../2025/08/image-11.png)
+![](../../../2025/08/image-11.png)
 *Insights into an Agile practice analysis on user stories with recommendations for improvement.*
 
-![](../../../../2025/08/image-13.png)
+![](../../../2025/08/image-13.png)
 *The overview of a Kano analysis displaying responses and the resulting classifications for an Agile practice.*
 
 ## Conclusion: Focus on Practices that Add Value
