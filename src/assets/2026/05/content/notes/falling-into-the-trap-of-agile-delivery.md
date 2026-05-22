@@ -24,7 +24,7 @@ The two goals are mutually exclusive:
 - **Optimizing for Throughput:** Focuses on improving how work moves through teams.
 - **Optimizing for Agility:** Focuses on improving the system's to adapt. It prioritizes environment design, psychological safety, and autonomous work groups over standardized practices 
 
-Just like with Product Owners and Scrum Masters, the role of an Agile Delivery Lead harms teams when it is implemented as an individual job description rather than a shared group responsibility. Roles like the Product Owner, Scrum Master work best when they act as enablers, helping teams make better product decisions, understranding customers, and improving their collaboration practices.
+Just like with Product Owners and Scrum Masters, the role of an Agile Delivery Lead harms teams when it is implemented as an individual job description rather than a shared group responsibility. Roles like the Product Owner, Scrum Master work best when they act as enablers, helping teams make better product decisions, understanding customers, and improving their collaboration practices.
 
 Assigning an individual to a role—product, code quality, design, architecture—is a common pattern organizations rely on whenever a priority becomes important. True cross-functionality requires creating teams composed of multi-skilled, multi-disciplinary individuals.
 
@@ -49,10 +49,8 @@ But over-optimizing for delivery makes the organization fragile and vulnerable t
 - **Dependency Over Autonomy:** Having senior management makes product decisions creates clear direction for teams. But relying exclusively on management to make product decisions ensures that teams remain slow, dependent, and incapable of developing their own decision-making capabilities.
 - **Process Lock-In:** A culture built around delivery makes it easier to implement structured, delivery-focused routines. However, those practices become harder to abandon when they stop being appropriate.
 
-
 > [!NOTE]
 > Organizations that optimize for efficiency lose the capacity to change.
-
 
 ## The Trade-Off Between Delivery and Flexibility
 
