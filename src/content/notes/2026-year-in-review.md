@@ -86,11 +86,18 @@ While highly effective, this skill raises some ethical questions regarding web s
 
 ### Games Played
 
-- Cairn
-- The Riftbreaker
-- Shape of Dreams 
-- Outbound
-- Desynced
-- UnderMine
-- Vampire Crawlers
-- Halls of Torment
+- [Cairn](https://store.steampowered.com/app/1588550/Cairn/)
+- [The Riftbreaker](https://store.steampowered.com/app/780310/The_Riftbreaker/)
+- [Shape of Dreams](https://store.steampowered.com/app/2444750/Shape_of_Dreams/)
+- [Flotsam](https://store.steampowered.com/app/821250/Flotsam/)
+- [Minishoot' Adventures](https://store.steampowered.com/app/1634860/Minishoot_Adventures/)
+- [Children of Morta](https://store.steampowered.com/app/330020/Children_of_Morta/)
+- [Desynced](https://store.steampowered.com/app/1450900/Desynced/)
+- [UnderMine](https://store.steampowered.com/app/656350/UnderMine/)
+- [Vampire Crawlers](https://store.steampowered.com/app/3265700/Vampire_Crawlers_The_Turbo_Wildcard_from_Vampire_Survivors/)
+- [RACCOIN: Coin Pusher Roguelike](https://store.steampowered.com/app/3784030/RACCOIN_Coin_Pusher_Roguelike/)
+- [Scritchy Scratchy](https://store.steampowered.com/app/3948120/Scritchy_Scratchy/)
+- [Outpath](https://store.steampowered.com/app/2237970/Outpath/)
+- [Forager](https://store.steampowered.com/app/751780/Forager/)
+- [Eastward](https://store.steampowered.com/app/977880/Eastward/)
+- [Superliminal](https://store.steampowered.com/app/1049410/Superliminal/)
