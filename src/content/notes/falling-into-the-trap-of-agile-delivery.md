@@ -58,10 +58,8 @@ The value proposition of delivery optimization is clear, immediate, and far less
 
 While this is a legitimate business choice, it shouldn't be confused with agility. A delivery focus prioritizes output, and makes trade-offs with the principles that support flexibility—such as team autonomy, team purpose, optimizing cognitive load, and feedback loops.
 
-
-
 ## Building the Capacity to Evolve
 
-The ultimate risk of "Agile delivery" is calcification. By building top-down management structures designed to improve delivery, organizations over-optimize for a single way of working, actively destroying their own ability to pivot.
+The ultimate risk of "Agile delivery" is calcification. By building top-down management structures designed to improve delivery, organizations over-optimize for a single way of working, destroying their own ability to pivot.
 
-Organizational resilience cannot be found in a product backlog, nor can it be engineered through standardized models. It must be cultivated by reducing individual cognitive load, fostering multi-disciplinary capabilities, and giving teams the safety to pull new ways of working.
+Organizational agility isn't found in a product backlog, and it can't be installed through standardized models. It emerges from the adaptive capacity of multi-disciplinary teams and a supportive organizational design. Cultivating this capability requires creating a supportive environment, reducing cognitive load, promoting shared team responsibilities, and giving teams safety, autonomy and the right coaching.
