@@ -62,4 +62,4 @@ While this is a legitimate business choice, it shouldn't be confused with agilit
 
 The ultimate risk of "Agile delivery" is calcification. By building top-down management structures designed to improve delivery, organizations over-optimize for a single way of working, destroying their own ability to pivot.
 
-Organizational agility isn't found in a product backlog, and it can't be installed through standardized models. It emerges from the adaptive capacity of multi-disciplinary teams and a supportive organizational design. Cultivating this capability requires creating a supportive environment, reducing cognitive load, promoting shared team responsibilities, and giving teams safety, autonomy and the right coaching.
+Organizational agility isn't found in a product backlog, and it can't be installed through standardized models. It emerges from the adaptive capacity of multi-disciplinary teams and a supportive organizational design. Cultivating this capability requires creating a supportive environment, optimizing cognitive load, promoting shared team responsibilities, and giving teams safety, autonomy and the right coaching.
