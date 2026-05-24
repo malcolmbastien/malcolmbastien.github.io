@@ -6,7 +6,7 @@ tags:
   - MadeWithPaper
   - Image
   - Sketches
-excerpt: We look and see the world, but we understand it through stories.
+summary: We look and see the world, but we understand it through stories.
 ---
 ![](../../assets/2012/09/tumblr_mb2sjuzebm1qa77f2o1_1280.jpg)
 
