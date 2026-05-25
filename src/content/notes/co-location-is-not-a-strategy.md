@@ -4,60 +4,56 @@ stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
 publishedDate: 2026-12-30
-summary: Brief description
+summary: Forcing remote teams back to the office to fix coordination issues is a treatment without a diagnosis. Fix how the work flows, not where people sit.
 draft: true
 ---
 
-When a remote or distributed team struggles to coordinate, the default recommendation is almost always to co-locate. It sounds reasonable, but as a coaching intervention, it skips the most important step of diagnosis and figuring out what the problem is.
+When a distributed team struggles to coordinate, the default recommendation is almost always to co-locate. It sounds reasonable, but as a coaching intervention, it skips the most important step of figuring out what the real problem is
 
 ### A treatment before a diagnosis
 
-Teams "struggling to coordinate" is not a diagnosis. It’s a symptom.
+"Struggling to coordinate" is not a diagnosis. It’s a symptom.
 
-When people complain about a lack of coordination, what behaviours are they seeing? What outcomes are being impacted?
+When people complain about a lack of coordination, we have to ask: What specific behaviors are they seeing? Which outcomes are being impacted?
 
-If a team is struggling to work effectively, there could be a number of root causes at play. There might be unclear ownership, a lack of shared context, conflicting priorities, or a combination of multiple issues.
+If a team is struggling to work effectively, there could be dozens of potential root causes: Unclear ownership, a lack of shared context, or conflicting priorities. Intervening without first identifying the specific problem you are trying to solve and defining the metrics you will use to evaluate success is just guessing.
 
-Any intervention is wasteful without first knowing what problems you're trying to solve and what outcomes you'll use to evaluate if the change was helpful.
+Forcing teams to co-located might temporarily mask these issues simply because it introduces a change—not because it solved the root cause.
 
+### "Sitting Together: A Guide for Leaders"
 
-### The black box of the office
+Framing a team's dysfunction as a "lack of co-location" is defining a singular way of thinking about the problem. What is expected to happen after a team co-locates?
 
-"Lack of co-location" is not a solution. It's a tactic. What is expected to happen after a team co-locates?
+Even when leaders believe co-location will help, the actual _mechanism_ is rarely explained. The office is treated as a magical black box: the team goes in, and then somehow they are able coordinate themselves to better outcomes.
 
-Even if we believe that co-location will help a team, the actual _mechanism_ of how co-location helps will is skipped. The office is treated as a magical black box where the team goes in, and then somehow they are able coordinate themselves to better outcomes.
+But how? What impact is physical proximity having? What's the mechanism? Does it speed up feedback? Does it increase organic information sharing? Does it just make blockers harder to ignore? Without identifying these mechanisms, we cannot connect co-location to actual solutions. 
 
-But how? What impact is co-location having, and how? What's the mechanism?
+If the real issues are structural or process related—like poor team structures or organizational red tape—moving everyone into the same room won't solve them.
 
-Without understanding the mechanisms, how can we connect co-location to solutions? If the real issue is team structure—like bloated work items that create massive coordination overhead—moving everyone into the same room won't reduce that complexity. It just forces people to deal with the friction in real-time.
+### Team-space Topologies
 
-Addressing coordination problems by forcing co-location might temporarily mask the issues simply because it introduces a change—not because it solved anything.
+Organizations frequently mandate a return to the office under the banner of strenghening collaboration and culture, while ignoring that corporate offices are rarely designed around the team dynamics that support flow.
 
-### The reality of "co-located friction"
+Companies may invest heavily in modern open plans, but these spaces are seldom designed with specific team interactions in mind. To actually support a team, a physical environment requires:
 
-Organizations frequently mandate a return to the office under the banner of improving team collaboration and developing their culture while ignoring that offices are never designed around the dynamics teams need to improve performance.
+- Dedicated spaces where teams can sit together
+- Rooms designed to fit the actual size of the meetings the team expects to hold
+- Close proximity to collaborators and stakeholders
+- Available spaces for team ceremonies and workshops
+- Dynamic spaces that can be easily reconfigured
+- Social spaces for teams to eat and connect informally
 
-Companies may have invested in open-office spaces, but that rarely translates well into what teams need to support their work:
-- Spaces where teams can sit together
-- Spaces that fit the number of people on a team
-- Working in close proximity to collaborators and stakeholders
-- Collaboration spaces for working with collaborators or stakeholders
-- Meeting spaces that support team and group working ceremonies and routines
+Co-location also introduces new frictions: commutes, traffic, weather, and the reality of sitting in an office just to meet with colleagues in other offices or time zones.
 
- Co-location also introduces new frictions: commutes, traffic, weather, and the reality of still needing to jump on remote meetings to talk to colleagues in other offices or time zones.
- 
- Without a thoughtful workspace design, moving teams together just introduces a whole new set of headaches.
+Without a thoughtful workspace design focused on how teams actually work, forcing people back just introduces a different set of frictions.
 
-### Fix the work, not the geography
+### Fix the real problem, no matter where
 
-Before changing anyone's geography, you need to target the actual flow of work:
+Before focusing on where people sit, focus on how the work flows. Look at your bottlenecks, dependencies, and outcomes:
 
-- **If the problem is unclear ownership:** Clarify ownership boundaries.
-- **If the problem is mismatched async norms:** Fix the norms or schedule targeted synchronous blocks.
-- **If the problem is handoffs:** Map your value streams and dependencies.
+- **If the problem is unclear ownership:** Clarify your architectural and product boundaries.
+- **If the problem is handoffs:** Map your value streams and eliminate the dependencies.
 
-None of these fixes require a commute. Physical proximity can temporarily ease the friction of bad processes, but temporary relief is not a cure.
+"Let's co-locate" carries the exact same energy as "Let's go Agile" or "Let's use AI." None of these are inherently bad ideas, but investing in them without a specific problem to solve leads to waste.
 
-"Let's co-locate" has the same empty impact as "Let's go Agile" or "Let's use AI." None of these are inherently bad ideas, but without a specific problem to solve, there's no strategy to inform their use.
-
-Lastly, teams should take an experimental and data approach to resolving coordination problems. It's okay to try things. But beware when solutions are delivered as management mandates. Responsible autonomous teams should be given the freedom to experiment and discover a solution that works for them. A forced return-to-office mandate is fixed constraint that could do more harm than good.
+In the end, teams should take an experimental, data-driven approach to coordination. It's okay to try new things, to vary how coordination happens. But beware when solutions are delivered as management mandates. Responsible autonomous teams need to be given the freedom to experiment and discover what works for them. A forced return-to-office mandate is a rigid constraint that's likely to do more harm than good.
