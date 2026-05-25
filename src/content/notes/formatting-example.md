@@ -3,7 +3,7 @@ title: "Getting Started with Your Digital Garden"
 stage: evergreen
 publishedDate: 2026-01-16
 tags:
-	- General
+  - General
 draft: true
 summary: "Learn the basics of maintaining a digital garden and how to use this template."
 ---
