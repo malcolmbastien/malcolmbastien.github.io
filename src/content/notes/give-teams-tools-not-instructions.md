@@ -59,4 +59,4 @@ Relying on giving teams instructions creates a brittle organization. Outcome own
 
 When teams own their outcomes, they can focus on navigating real external constraints instead of wasting energy managing internal frictions and bureaucracy.
 
-The role of leadership becomes ensuring teams are setup for success, this includes having the right tools, structure, people, autonomy, safety, information and feedback systems to achieve their goals. Legal, financial and performance guardrails should also exist to protect the business.
+The role of leadership becomes ensuring teams are setup for success, this includes having the right tools: The Structure, people, autonomy, safety, information and feedback systems to achieve their goals. Legal, financial and performance guardrails should also exist to protect the business.
