@@ -4,10 +4,10 @@ title: Unbundle the Value
 publishedDate: 2025-08-05
 tags:
   - Agile
-  - doctrine
-  - product development
-  - value chains
-  - value propositions
+  - Doctrine
+  - Product-Development
+  - Value-Chains
+  - Value-Propositions
 ---
 What I see time and again while working on big projects in large corporations is that often, ambitious project plans are started that depend on dozens of new things all going right.
 

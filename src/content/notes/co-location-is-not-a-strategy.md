@@ -2,18 +2,17 @@
 title: Co-Location Is Not a Strategy
 stage: seed        # seed | sprout | evergreen
 tags:
-  - tag1
-  - tag2
+  - Agile
 publishedDate: 2026-12-30
 summary: Brief description
 draft: true
 ---
 
-When a remote or distributed team struggles to coordinate, the default recommendation is almost always to co-locate. It sounds reasonable, but as a coaching intervention, it skips the most important step of diagnosis and figuring out what the real problem is.
+When a remote or distributed team struggles to coordinate, the default recommendation is almost always to co-locate. It sounds reasonable, but as a coaching intervention, it skips the most important step of diagnosis and figuring out what the problem is.
 
 ### A treatment before a diagnosis
 
-"Struggling to coordinate" is not a diagnosis. It’s a symptom.
+Teams "struggling to coordinate" is not a diagnosis. It’s a symptom.
 
 When people complain about a lack of coordination, what behaviours are they seeing? What outcomes are being impacted?
 
@@ -24,13 +23,13 @@ Any intervention is wasteful without first knowing what problems you're trying t
 
 ### The black box of the office
 
-"Lack of co-location" is not a solution.
+"Lack of co-location" is not a solution. It's a tactic. What is expected to happen after a team co-locates?
 
-Even if we believe that co-location could help a team, the actual _mechanism_ of how co-location will is rarely discussed. The office is treated as a magical black box where the team goes in, and somehow they coordinate themselves to better outcomes.
+Even if we believe that co-location will help a team, the actual _mechanism_ of how co-location helps will is skipped. The office is treated as a magical black box where the team goes in, and then somehow they are able coordinate themselves to better outcomes.
 
-But how? What change is co-location expected to make? What's the mechanism?
+But how? What impact is co-location having, and how? What's the mechanism?
 
-If the real issue is structural—like bloated work items that create massive coordination overhead—moving everyone into the same room won't reduce that complexity. It just forces people to deal with the friction in real-time.
+Without understanding the mechanisms, how can we connect co-location to solutions? If the real issue is team structure—like bloated work items that create massive coordination overhead—moving everyone into the same room won't reduce that complexity. It just forces people to deal with the friction in real-time.
 
 Addressing coordination problems by forcing co-location might temporarily mask the issues simply because it introduces a change—not because it solved anything.
 

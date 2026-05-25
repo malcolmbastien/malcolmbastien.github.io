@@ -3,11 +3,11 @@ stage: seed
 title: Brands Faking Human
 publishedDate: 2012-01-12
 tags:
-  - branding
-  - buffer
+  - Branding
+  - Buffer
   - General
   - Marketing
-  - pinterest
+  - Pinterest
   - Tumblr
 ---
 [Shaun Dakin talks about an experience with the Buffer team](https://plus.google.com/u/0/106823861250641198375/posts/SMyomyLwHML):

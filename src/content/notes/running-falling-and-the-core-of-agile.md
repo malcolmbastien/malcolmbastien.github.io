@@ -5,7 +5,7 @@ publishedDate: 2023-05-24
 tags:
   - Agile
   - Kanban
-  - Pose Method
+  - Pose-Method
 ---
 How do you run?
 

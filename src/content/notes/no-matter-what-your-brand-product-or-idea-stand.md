@@ -3,14 +3,14 @@ stage: seed
 title: Story Makes it Relevant
 publishedDate: 2012-09-27
 tags:
-  - analytics
+  - Analytics
   - Content
   - MadeWithPaper
   - Mobile
   - Image
   - Sketches
-  - social
-  - story
+  - Social
+  - Story
 ---
 ![](../../assets/2012/09/tumblr_mb0u9r9ivt1qa77f2o1_1280.jpg)
 

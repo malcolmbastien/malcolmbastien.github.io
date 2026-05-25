@@ -3,14 +3,14 @@ stage: seed
 title: The Purpose of Each Platform
 publishedDate: 2012-10-09
 tags:
-  - analytics
+  - Analytics
   - Business
   - Content
   - MadeWithPaper
   - Mobile
   - Image
   - Sketches
-  - social
+  - Social
 ---
 ![](../../assets/2012/10/tumblr_mbnaboytft1qa77f2o1_1280.jpg)
 

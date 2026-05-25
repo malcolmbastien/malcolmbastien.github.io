@@ -5,7 +5,7 @@ publishedDate: 2009-02-13
 tags:
   - Barry Schwartz
   - General
-  - books
+  - Books
   - Paradox of Choice
   - Philosophy
   - Video

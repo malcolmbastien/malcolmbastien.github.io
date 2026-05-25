@@ -3,9 +3,9 @@ stage: seed
 title: Gamification Must Be Addictive
 publishedDate: 2012-01-10
 tags:
-  - gamification
+  - Gamification
   - General
-  - ui design
+  - UI-design
 ---
 [ignore the code: Learning from Games](http://ignorethecode.net/blog/2011/12/26/learning_from_games/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+IgnoreTheCode+%28ignore+the+code%29&utm_content=Google+Reader):
 

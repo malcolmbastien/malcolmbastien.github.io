@@ -5,10 +5,10 @@ publishedDate: 2012-09-25
 tags:
   - Collaboration
   - MadeWithPaper
-  - personal analytics
+  - Personal-Analytics
   - Image
   - Sketches
-  - story
+  - Story
 ---
 ![](../../assets/2012/09/tumblr_max5bwez5p1qa77f2o1_1280.jpg)
 

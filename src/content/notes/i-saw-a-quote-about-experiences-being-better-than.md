@@ -4,12 +4,12 @@ title: Story Gets Us to Emotion
 publishedDate: 2012-10-05
 tags:
   - Brand
-  - emotion
-  - experience
+  - Emotion
+  - Experience
   - MadeWithPaper
   - Image
   - Sketches
-  - story
+  - Story
 ---
 ![](../../assets/2012/10/tumblr_mbfaylralw1qa77f2o1_1280.jpg)
 

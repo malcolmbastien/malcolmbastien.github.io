@@ -3,7 +3,7 @@ stage: seed
 title: Paper by FiftyThree
 publishedDate: 2012-03-29
 tags:
-  - paper
+  - Paper
   - Video
   - Software
 ---

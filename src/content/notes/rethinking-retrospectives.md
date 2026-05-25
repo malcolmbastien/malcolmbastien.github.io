@@ -4,7 +4,7 @@ title: Rethinking Retrospectives
 publishedDate: 2023-06-02
 tags:
   - Agile
-  - kaizen
+  - Kaizen
   - Kanban
   - Retrospectives
   - TPS
