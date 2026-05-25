@@ -27,15 +27,15 @@ The reason why striving for internal order and efficiency doesn't make sense is 
 
 I like to think about the three types of networks in organizations, an idea I learned about in OpenSpace Beta:
 
-- Formal Structure: How management organizes people into teams, units and divisions to reflect different functions and areas of accountability.
-- Informal Structure: The network of trust and relationships that exists between people in an organization.
-- Value Creation Structure: How works gets done in an organization.
+- **Formal Structure:** How management organizes people into teams, units and divisions to reflect different functions and areas of accountability.
+- **Informal Structure:** The network of trust and relationships that exists between people in an organization.
+- **Value Creation Structure:** How works gets done in an organization.
 
 This is where the problem starts. In order to achieve its objectives and control costs, management organizes people into big groups, and then to increasingly smaller and smaller groups. It's a clean and ordered system, but it's not how work gets done.
 
 I saw this come up recently on Reddit after a Canadian bank laid of 15,000 employees last year.
 
-A commenter on Reddit explains:
+Someone on Reddit commented:
 
 > When I first started, there was a lot of collaboration and informal networks. You got things done by helping folks out, who would then help you out when you needed it...
 >

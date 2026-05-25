@@ -14,25 +14,25 @@ When a distributed team struggles to coordinate, the default recommendation is a
 
 "Struggling to coordinate" is not a diagnosis. It’s a symptom.
 
-When people complain about a lack of coordination, we have to ask: What specific behaviors are they seeing? Which outcomes are being impacted?
+When people complain about a lack of coordination, we have to ask: What specific behaviours are they seeing? Which outcomes are impacted?
 
 If a team is struggling to work effectively, there could be dozens of potential root causes: Unclear ownership, a lack of shared context, or conflicting priorities. Intervening without first identifying the specific problem you are trying to solve and defining the metrics you will use to evaluate success is just guessing.
 
-Forcing teams to co-located might temporarily mask these issues simply because it introduces a change—not because it solved the root cause.
+Forcing teams to co-locate might temporarily mask these issues simply because it introduces a change, not because it solves the root cause.
 
 ### "Sitting Together: A Guide for Leaders"
 
 Framing a team's dysfunction as a "lack of co-location" is defining a singular way of thinking about the problem. What is expected to happen after a team co-locates?
 
-Even when leaders believe co-location will help, the actual _mechanism_ is rarely explained. The office is treated as a magical black box: the team goes in, and then somehow they are able coordinate themselves to better outcomes.
+Even when leaders believe co-location will help, the actual _mechanism_ is rarely explained. The office is treated as a magical black box: the team goes in, and then somehow they become able to coordinate themselves to better outcomes.
 
-But how? What impact is physical proximity having? What's the mechanism? Does it speed up feedback? Does it increase organic information sharing? Does it just make blockers harder to ignore? Without identifying these mechanisms, we cannot connect co-location to actual solutions. 
+But how? What impact does physical proximity have? What's the mechanism? Does it speed up feedback? Does it increase organic information sharing? Does it just make blockers harder to ignore? Without identifying these mechanisms, we cannot connect co-location to actual solutions.
 
-If the real issues are structural or process related—like poor team structures or organizational red tape—moving everyone into the same room won't solve them.
+If the real issues are structural or process-related—like poor team structures or organizational red tape—moving everyone into the same room won't solve them.
 
 ### Team-space Topologies
 
-Organizations frequently mandate a return to the office under the banner of strenghening collaboration and culture, while ignoring that corporate offices are rarely designed around the team dynamics that support flow.
+Organizations frequently mandate a return to the office under the banner of strengthening collaboration and culture, while ignoring that corporate offices are rarely designed around the team dynamics that support flow.
 
 Companies may invest heavily in modern open plans, but these spaces are seldom designed with specific team interactions in mind. To actually support a team, a physical environment requires:
 
@@ -43,9 +43,9 @@ Companies may invest heavily in modern open plans, but these spaces are seldom d
 - Dynamic spaces that can be easily reconfigured
 - Social spaces for teams to eat and connect informally
 
-Co-location also introduces new frictions: commutes, traffic, weather, and the reality of sitting in an office just to meet with colleagues in other offices or time zones.
+Co-location also introduces new frictions: commutes, traffic, weather, and the reality of travelling to the office only to meet with colleagues in other offices or time zones virtually.
 
-Without a thoughtful workspace design focused on how teams actually work, forcing people back just introduces a different set of frictions.
+Without a thoughtful workspace design that accounts for how teams actually work, forcing people back just introduces a different set of frictions.
 
 ### Fix the real problem, no matter where
 
