@@ -15,7 +15,7 @@ Pursuing greater team throughput by installing practices rooted in command-and-c
 
 ## Project Managers in Disguise
 
-"Agile Delivery Leads" takes a project management orientation to work: The idea is to improve how work moves through teams like how physical work moves through a factory. Under this model, the Project Manager's title changes to "Agile Delivery Lead", but with "Agile" in the title, the responsibilities and management systems are still top-down.
+"Agile Delivery Leads" takes a project management orientation to work: The idea is to improve how work moves through teams like physical work moving through a factory. Under this model, the Project Manager's title changes to "Agile Delivery Lead", but with "Agile" in the title, the responsibilities and management systems are still top-down.
 
 If the goal is to maximize output by having management design, install and control a standardized operating model, your system will have to adopt values and practices that go against the values and practices that enable agility.
 
