@@ -30,37 +30,11 @@ But boxing a team in with prescriptive instructions shifts their cognitive load.
 
 When you introduce a prescriptive process to solve a problem, that process doesn’t just guide the work—it becomes a part of the system. It introduces a new, implicit set of process-related goals related to things like tasks, roles, and process policies. Over time, the system inherently redirects its energy to optimize for these internal mechanics. This causes the emergent process goals to starve, distort, and actively interfere with the system's original objectives. 
 
----
-
 ## Alignment Is Not the Same as Instruction
 
 The alternative to micromanagement isn't giving teams complete autonomy to wander aimlessly. The answer is aligned-autonomy.
 
 Leaders shouldn't dictate the path; they should define the objective and ensure the team has the tools they need to succeed. When a team deeply understands the *what* and the *why*, they are free to exercise responsible autonomy, peer self-regulation, initiative, and adaptability to solve the *how*.
-
-```mermaid
-flowchart TD
-    Start(["⚙️ Leadership Stance"]) --> PathB["🟢 Provide Tools & Goals"]
-
-    PathB --> B1["🎯 Achieve Radical Alignment<br/>(Define Destination: What & Why)"]
-    B1 --> B2["🧰 Deploy the Toolkit:<br/>Target Outcomes, Visibility, Shared Language,<br/>Authority, Safety, Guardrails & Roadblock Clearance"]
-    
-    %% Clearer Loop Structure
-    B2 --> L3_1["🚀 Teams Creatively Solve the 'How'<br/>via Local Feedback Loops"]
-    L3_1 --> L3_2["📈 Better Outcomes & Delivery Progress"]
-    L3_2 --> L3_3["🤝 Increased Trust, Psychological Safety,<br/>& Systemic Evolution"]
-    
-    %% Looping back up to reinforce autonomous problem solving
-    L3_3 -->|Reinforces Ownership| L3_1
-    
-    %% Final Outcome Connection
-    L3_2 --> OutPos["🏆 Positive Outcomes:<br/>High-Performance & Outcome Ownership Realized"]
-
-    %% Stylizing
-    style Start fill:#2c3e50,color:#fff,stroke-width:2px
-    style PathB fill:#27ae60,color:#fff
-    style OutPos fill:#2980b9,color:#fff
-```
 
 ## Tools to Give Teams
 
@@ -77,12 +51,12 @@ This means shifting from giving instructions to providing teams a toolkit that e
 - **Guardrails:** Instead of policing daily practices, specify operational boundaries—like security baselines, compliance, or architecture standards—protecting the system without controlling all of the team's work.
 - **Clear Roadblocks:** Focus leadership on clearing system dependencies, organizational friction points, and cross-team blockers that teams cannot resolve themselves.
 
-## Improving Outcome Ownership
+## Shifting to Outcome Ownership
 
-To successfully make this transition to giving teams tools instead of instructions, management needs to take a new stance.
+To shift from giving instructions to giving tools, management needs to take a new stance.
 
-When we rely on prescriptive instructions, we create an inherently unstable system. True outcome ownership is unlocked only when we redesign the work itself into cohesive, parallel value streams where the team is fully equipped to own a "whole task" from start to finish.
+Relying on giving teams instructions creates a brittle organization. Outcome ownership happens when you give teams the tools to succeed, which starts by setting up independent value streams. The goal is to set up a team structure that is equipped to own a "whole task" from start to finish.
 
-When teams are given the tools they need to become outcome owners, their challenges change. They shift from fighting internal friction to navigating legitimate external constraints, like compliance, security, and market budgets. The job of leadership is to ensure the team's internal _control capacity_ balances the external _complexity_ of their environment. Legitimate guardrails should protect the system, not serve as a lazy substitute for building genuine organizational trust.
+When teams own their outcomes, they can focus on navigating real external constraints instead of wasting energy managing internal frictions and bureaucracy.
 
-If you want your teams to act like owners, stop focusing on designing tightly micro-managed systems of compliance. De-complicate the organizational structure, define the goal, provide teams with the tools and support they need, and get out of the way.
+The role of leadership becomes ensuring teams are setup for success, this includes having the right tools, structure, people, autonomy, safety, information and feedback systems to achieve their goals. Legal, financial and performance guardrails should also exist to protect the business.
