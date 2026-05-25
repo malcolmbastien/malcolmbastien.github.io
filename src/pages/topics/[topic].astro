@@ -20,10 +20,12 @@ const { topic } = Astro.params;
 const displayTopic = topic ? topic.charAt(0).toUpperCase() + topic.slice(1) : '';
 
 const allNotes = await getCollection("notes");
-const filteredNotes = allNotes.filter((note) => {
-    const tags = note.data.tags || [];
-    return tags.some((tag) => tag.toLowerCase() === topic?.toLowerCase());
-});
+const filteredNotes = allNotes
+    .filter((note) => !note.data.draft)
+    .filter((note) => {
+        const tags = note.data.tags || [];
+        return tags.some((tag) => tag.toLowerCase() === topic?.toLowerCase());
+    });
 
 const sortedNotes = filteredNotes.sort(
     (a, b) => {
