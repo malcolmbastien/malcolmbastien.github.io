@@ -31,7 +31,7 @@ Taking an evolutionary approach reduces the heavy cognitive burden and massive d
 
 The way a team works shouldn't be installed onto them from above. Principle 11 from the Agile Manifesto says that **"self-organizing teams encourage great architectures, requirements, and designs."** The same should apply to your process.
 
-> [!NOTE] Principle
+> [!NOTE]
 > **The best architectures, requirements, and designs emerge from self-organizing teams**
 
 Your workflow must be discovered by the team through the daily work of a self-organization team and through collaboration between developers, stakeholders, and customers.
@@ -44,7 +44,7 @@ Workflow changes shouldn't be beliefs-based; they should be treated as experimen
 
 From there, form one or even a set of testable hypotheses you can test in parallel:
 
-> _"We believe adding a 15-minute sync on Tuesdays will reduce our deployment blockers. We will know we are right if our blocker count drops by 20% over the next two weeks."_
+	_"We believe adding a 15-minute sync on Tuesdays will reduce our deployment blockers. We will know we are right if our blocker count drops by 20% over the next two weeks."_
 
 ## Treat Process as a DIY Side-Project
 
@@ -54,7 +54,7 @@ A team's process should aim to act as a snapshot of people's learnings and curre
 
 Even decisions that were correct in the past might need to be re-evaluated as your situation changes. Use feedback to inform your next step. Approach new ideas with, small, low-risk experiments. If a change is small, easy to understand, and reversible, you can test it to see if it helps. If it doesn't, then just roll it back and try something else.
 
-> [!NOTE] Principle
+> [!NOTE]
 > **"Simplicity--the art of maximizing the amount of work not done--is essential."**
 
 For this DIY mindset to work, you need the right environment: one that **supports, trusts, and motivates the people involved**. Teams must have the autonomy to adjust their workflow on the fly. It is entirely counter to agile values if a team has to seek management approval every time they want to alter a meeting or test a new board layout.
