@@ -5,7 +5,7 @@ publishedDate: 2026-05-30
 tags:
   - Agile
   - AI
-summary: Brief description
+summary: AI makes everything easier, including doing things that shouldn't be done in the first place.
 draft: true
 ---
 

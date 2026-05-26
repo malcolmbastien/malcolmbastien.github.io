@@ -4,7 +4,7 @@ stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
 publishedDate: 2026-12-30
-summary: Forcing remote teams back to the office to fix coordination issues is a treatment without a diagnosis. Focus on fixing the problem, not where people sit.
+summary: Fix coordination issues by addressing the real problems, don't force people where to sit.
 draft: true
 ---
 
