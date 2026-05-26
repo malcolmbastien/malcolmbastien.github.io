@@ -1,0 +1,11 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("content/notes")
+        - draft == true
+    order:
+      - file.name
+      - title
+      - file.mtime

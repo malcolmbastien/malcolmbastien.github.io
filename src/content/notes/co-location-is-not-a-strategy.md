@@ -28,7 +28,7 @@ Even when leaders believe co-location will help, the actual _mechanism_ is rarel
 
 But how? What impact does physical proximity have? What's the mechanism? Does it speed up feedback? Does it increase organic information sharing? Does it just make blockers harder to ignore? Without identifying these mechanisms, we cannot connect co-location to actual solutions.
 
-If the real issues are structural or process-related—like poor team structures or organizational red tape—moving everyone into the same room won't solve them.
+If the real issues are structural or process-related, like poor team structures or organizational red tape, moving everyone into the same room won't solve them.
 
 ### Team-space Topologies
 

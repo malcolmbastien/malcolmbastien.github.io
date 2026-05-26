@@ -23,7 +23,7 @@ This looks like a win because it relieves the manager's immediate pain. But beca
 
 ## Lowering the Cost of Bad Ideas
 
-Large organizations naturally prefer additive solutions—adding new processes and systems to make up for the older ones that are no longer working. Because AI brings the cost of generating outputs down to virtually nothing, it's more feasible than ever to throw an AI solution at organizational annoyances whenever they surface.
+Large organizations naturally prefer additive solutions, adding new processes and systems to make up for the older ones that are no longer working. Because AI brings the cost of generating outputs down to virtually nothing, it's more feasible than ever to throw an AI solution at organizational annoyances whenever they surface.
 
 Using AI, it's trivial to create solutions that treat symptoms but leave root causes unaddressed. AI will gladly do what you tell it. It will generate entire presentation decks to tell any story stakeholders want to hear, but unless it's prompted to, it will not fix a broken process.
 
@@ -45,7 +45,7 @@ AI is effective at creating band-aids that make broken systems more tolerable. B
 
 ## Start with Outcomes
 
-When anyone can use AI to create anything, the real differentiator is what you choose to do and the decisions you make. Success will depend on situational awareness—how people see problems, identify challenges, and choose what _not_ to do.
+When anyone can use AI to create anything, the real differentiator is what you choose to do and the decisions you make. Success will depend on situational awareness, how people see problems, identify challenges, and choose what _not_ to do.
 
 People shouldn't be rewarded just for using AI. They should be rewarded for tackling the right challenges.
 
