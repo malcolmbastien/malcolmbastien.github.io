@@ -51,6 +51,44 @@ const colorStyles = {
   wip: { bg: "#f2f4f6", border: "#76777d", text: "#d97706", icon: "construction" },
 };
 
+function isExternalUrl(url) {
+  return url && (url.startsWith("http://") || url.startsWith("https://"));
+}
+
+function mdastToHtml(node) {
+  if (node.type === "text") return node.value || "";
+  if (node.type === "link") {
+    const inner = (node.children || []).map(mdastToHtml).join("");
+    const attrs = `href="${node.url}"${node.title ? ` title="${node.title}"` : ""}`;
+
+    if (isExternalUrl(node.url)) {
+      const escaped = inner.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      return `<a ${attrs} class="external-link" target="_blank" rel="noopener noreferrer" style="display: inline; word-break: break-word; overflow-wrap: break-word;"><span class="link-text">${escaped}</span><span class="sr-only">(opens in a new tab)</span><span class="link-icon material-symbols-outlined" style="font-size: 14px; vertical-align: middle; margin-left: 0.25rem; opacity: 0.6; display: inline-block;">open_in_new</span></a>`;
+    }
+
+    return `<a ${attrs}>${inner}</a>`;
+  }
+  if (node.type === "strong") {
+    return `<strong>${(node.children || []).map(mdastToHtml).join("")}</strong>`;
+  }
+  if (node.type === "emphasis") {
+    return `<em>${(node.children || []).map(mdastToHtml).join("")}</em>`;
+  }
+  if (node.type === "inlineCode") {
+    return `<code>${node.value || ""}</code>`;
+  }
+  if (node.type === "list") {
+    const tag = node.ordered ? "ol" : "ul";
+    const items = (node.children || []).map(mdastToHtml).join("");
+    return `<${tag} style="margin: 0; padding-left: 1.5rem;">${items}</${tag}>`;
+  }
+  if (node.type === "listItem") {
+    const inner = (node.children || []).map(mdastToHtml).join("");
+    return `<li>${inner}</li>`;
+  }
+  return (node.children || []).map(mdastToHtml).join("");
+}
+
 export function remarkCallouts() {
   return (tree) => {
     visit(tree, "blockquote", (node) => {
@@ -70,7 +108,7 @@ export function remarkCallouts() {
         const colorTheme = colorMap[type] || "info";
         const colors = colorStyles[colorTheme] || colorStyles.info;
 
-        firstText.value = textValue.replace(/^\[!([\w\s-]+)\]/i, "").trim();
+        firstText.value = textValue.replace(/^\[!([\w\s-]+)\]\s*/i, "");
 
         const iconName = colors.icon || "info";
 
@@ -83,9 +121,14 @@ export function remarkCallouts() {
         const contentParts = [];
         for (const child of node.children) {
           if (child.type === "paragraph") {
-            const text = child.children.map((c) => c.value || "").join("");
-            if (text) {
-              contentParts.push(`<p style="margin: 0;">${text}</p>`);
+            const html = mdastToHtml(child);
+            if (html) {
+              contentParts.push(`<p style="margin: 0;">${html}</p>`);
+            }
+          } else if (child.type === "list") {
+            const html = mdastToHtml(child);
+            if (html) {
+              contentParts.push(html);
             }
           }
         }

@@ -54,9 +54,6 @@ _"We believe adding a 15-minute sync on Tuesdays will reduce our deployment bloc
 
 Even decisions that were correct in the past might need to be re-evaluated as your situation changes. Use feedback to inform your next step. Approach new ideas with, small, low-risk experiments. If a change is small, easy to understand, and reversible, you can test it to see if it helps. If it doesn't, then just roll it back and try something else.
 
-> [!NOTE]
-> It's okay to try things.
-
 ## Treat Process as a Side-Project
 
 Teams can't deliver valuable outcomes by adopting frameworks or attaining certifications. Value can only be delivered by people. Sometimes the distinction is lost and people start to think that successful adoption of a process is the goal.
