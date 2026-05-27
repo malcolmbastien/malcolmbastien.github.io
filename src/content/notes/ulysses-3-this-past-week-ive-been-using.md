@@ -8,9 +8,9 @@ tags:
 ---
 ![](../../assets/2013/04/tumblr_ml5ss4rhnb1qa77f2o1_r2_1280.png)
 
-This past week I’ve been using Ulysses 3 (U3) as my writing studio after a long stretch of only using iA Writer and nvALT. U3 comes to the table with a system I can use for almost all of my writing needs. That’s mostly because the value proposition of U3 isn’t in just being another minimal text editor, but like its predecessor, by being a complete writing system that reduces the friction of working with text… With some added twists.
+This past week I’ve been using [Ulysses 3](https://ulysses.app/) (U3) as my writing studio after a long stretch of only using [iA Writer](https://ia.net/writer) and [nvALT](https://brettterpstra.com/projects/nvalt/). U3 comes to the table with a system I can use for almost all of my writing needs. That’s mostly because the value proposition of U3 isn’t in just being another minimal text editor, but like its predecessor, by being a complete writing system that reduces the friction of working with text… With some added twists.
 
-The most fitting illustration of what its like to use U3 and one that does a good job of explains how to decide between using U3 instead of iA Writer is from The Brooks Review and his notion of U3 as a notebook, and IA Writer as a piece of paper. You can have the most beautiful paper that’s a delight to use, but as the sheets start to pile up on one another, organizing them becomes daunting and you start yearning for a better system.
+The most fitting illustration of what its like to use U3 and one that does a good job of explains how to decide between using U3 instead of iA Writer is from [The Brooks Review](https://brooksreview.net/) and his notion of U3 as a notebook, and IA Writer as a piece of paper. You can have the most beautiful paper that’s a delight to use, but as the sheets start to pile up on one another, organizing them becomes daunting and you start yearning for a better system.
 
 IA Writer has been one of my favourite apps, but just a few minutes into using U3 and it was clear to me the problem I had with IA Writer. I was using it the same way that I’ve used every other writing application in the past 10 years.
 

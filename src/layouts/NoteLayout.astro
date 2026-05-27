@@ -51,26 +51,34 @@ const formatDate = (date: Date) => {
 >
     <main class="w-full overflow-x-hidden">
         <!-- Article Header Section -->
-        <header class="max-w-180 mx-auto px-gutter pt-20 pb-16 text-center">
-            <div class="mb-6">
+        <header class="max-w-180 mx-auto px-gutter pt-12 pb-10 text-center">
+            <div class="mb-3">
                 <div class="flex gap-3 justify-center flex-wrap items-center">
-                    {readingTime && (
-                        <span class="px-3 py-1 bg-surface-container dark:bg-white/10 text-on-surface dark:text-inverse-on-surface text-xs font-medium rounded-full">{readingTime}</span>
-                    )}
-                    {frontmatter.tags.slice(0, 3).map(tag => (
+                    {frontmatter.tags.sort().slice(0, 3).map(tag => (
                         <a href={`/topics/${tag.toLowerCase()}`} class="px-3 py-1 bg-surface-container dark:bg-white/10 text-terracotta-accent dark:text-terracotta-accent text-xs font-medium rounded-full hover:bg-terracotta-accent hover:text-white dark:hover:bg-terracotta-accent dark:hover:text-white transition-colors">
                             {tag}
                         </a>
                     ))}
                 </div>
             </div>
-            <h1 class="font-display text-display-lg mb-8 text-ink-slate dark:text-inverse-on-surface">
+            <h1 class="font-display text-display-lg mb-4 text-ink-slate dark:text-inverse-on-surface">
                 {frontmatter.title}
             </h1>
+            {frontmatter.summary && (
+                <p class="max-w-2xl mx-auto font-display italic text-body-lg text-on-surface-variant dark:text-outline-variant leading-relaxed mb-4">
+                    {frontmatter.summary}
+                </p>
+            )}
             <div class="flex items-center justify-center gap-4 text-on-surface-variant dark:text-outline-variant">
                 <span>Malcolm Bastien</span>
                 <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
                 <span>{formatDate(createdDate)}</span>
+                {readingTime && (
+                    <>
+                        <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+                        <span>{readingTime}</span>
+                    </>
+                )}
             </div>
         </header>
 
@@ -97,7 +105,7 @@ const formatDate = (date: Date) => {
             </article>
 
             <!-- Author Bio / Related Posts -->
-            <a href="/about" class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 py-16 border-t border-border-muted dark:border-on-surface-variant mt-20 hover:bg-surface-container-low dark:hover:bg-ink-slate/30 rounded-lg px-4 transition-colors">
+            <a href="/about" class="group flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 py-16 border-t border-border-muted dark:border-on-surface-variant mt-20 px-4 transition-colors">
                 <div class="w-24 h-24 shrink-0 overflow-hidden bg-surface-container dark:bg-ink-slate">
                     <img
                         src="/malcolm_headshot.png"
@@ -106,7 +114,7 @@ const formatDate = (date: Date) => {
                     />
                 </div>
                 <div class="flex flex-col text-center md:text-left">
-                    <h3 class="font-display text-headline-sm font-bold text-ink-slate dark:text-inverse-on-surface mb-1">Malcolm Bastien</h3>
+                    <h3 class="font-display text-headline-sm font-bold text-ink-slate dark:text-inverse-on-surface mb-1 decoration-2 underline-offset-4 group-hover:underline">Malcolm Bastien</h3>
                     <p class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest mb-3">Agile Delivery &amp; Organizational Change</p>
                     <p class="text-body-md text-on-surface-variant dark:text-outline-variant leading-relaxed">
                         Unlocking flow through the alignment of socio-technical systems, AI, and product thinking.

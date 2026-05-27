@@ -16,10 +16,8 @@ const backlinkedNotes = rawBacklinkedNotes
 {
     backlinkedNotes.length > 0 && (
         <section>
-            <div class="flex items-center gap-3 mb-8">
+            <div class="mb-8">
                 <h3 class="small-caps text-xs font-bold tracking-[0.2em] text-slate-500 dark:text-slate-400">Connected Notes</h3>
-                <div class="h-px bg-slate-100 dark:bg-slate-800 grow"></div>
-                <span class="text-[10px] font-medium text-slate-400 dark:text-slate-500">{backlinkedNotes.length} links</span>
             </div>
 
             <div>
@@ -34,7 +32,7 @@ const backlinkedNotes = rawBacklinkedNotes
                                     timeZone: 'UTC'
                                 })}
                             </time>
-                            <h4 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight -mt-1">
+                            <h4 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white group-hover:text-terracotta-accent dark:group-hover:text-terracotta-accent transition-colors leading-tight -mt-1 decoration-2 underline-offset-4 group-hover:underline">
                                 {note.data.title}
                             </h4>
                             {note.data.summary && (
