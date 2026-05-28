@@ -133,12 +133,10 @@ export function remarkCallouts() {
           }
         }
 
-        const extraBorder = colors.fullBorder ? 'border: 1px solid #e2e8f0; border-left: 4px solid ' + colors.border + ';' : '';
-        const hoverStyle = type === 'note' ? ' transition: box-shadow 0.2s;' : '';
         const italicBody = colors.italicBody ? ' font-style: italic;' : '';
         const headerWeight = colors.boldHeader ? ' font-weight: 700;' : '';
-        const calloutHtml = `<div class="callout-block" data-callout-type="${type}" style="background-color: ${colors.bg}; border-left: 4px solid ${colors.border}; margin: 1.5rem 0; padding: 1.5rem;${extraBorder}${hoverStyle}">
-  <div class="callout-header" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: ${colors.text};${headerWeight}">
+        const calloutHtml = `<div class="callout-block" data-callout-type="${type}" style="margin: 1.5rem 0; padding: 1.5rem;">
+  <div class="callout-header" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;${headerWeight}">
     <span class="material-symbols-outlined" style="font-size: 20px;">${iconName}</span>
     <span class="callout-title">${titleText}</span>
   </div>
