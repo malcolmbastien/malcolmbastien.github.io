@@ -6,7 +6,7 @@ tags:
   - Barry Schwartz
   - General
   - Books
-  - Paradox of Choice
+  - Paradox-of-Choice
   - Philosophy
   - Video
 ---

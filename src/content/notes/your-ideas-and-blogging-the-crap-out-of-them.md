@@ -5,7 +5,7 @@ publishedDate: 2010-08-27
 tags:
   - Blogging
   - General
-  - Merlin Mann
+  - Merlin-Mann
   - Passion
   - Writing
 ---

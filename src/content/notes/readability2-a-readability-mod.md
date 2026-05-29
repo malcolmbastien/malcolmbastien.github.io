@@ -3,12 +3,12 @@ stage: seed
 title: Readability2 – A Readability Mod
 publishedDate: 2009-11-03
 tags:
-  - bookmarklets
+  - Bookmarklets
   - Freebies
   - General
-  - minimalmac
+  - MinimalMac
   - Link
-  - readability
+  - Readability
 ---
 [minimalmac](http://minimalmac.com/post/232156824/readability2-a-readability-mod):
 

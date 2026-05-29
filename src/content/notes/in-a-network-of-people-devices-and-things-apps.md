@@ -7,7 +7,7 @@ tags:
   - Mobile
   - Image
   - Sketches
-  - story
+  - Story
 ---
 ![](../../assets/2012/09/tumblr_mayvz4cxxz1qa77f2o1_1280.jpg)
 

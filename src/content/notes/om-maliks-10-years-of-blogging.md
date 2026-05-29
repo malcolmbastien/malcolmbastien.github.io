@@ -5,7 +5,7 @@ publishedDate: 2012-01-11
 tags:
   - Blogging
   - General
-  - Om Malik
+  - Om-Malik
 ---
 [My 10 years of blogging: Reflections, Lessons & Some Stats Too — Tech News and Analysis](http://gigaom.com/2011/11/26/10-years-gigaom/):
 

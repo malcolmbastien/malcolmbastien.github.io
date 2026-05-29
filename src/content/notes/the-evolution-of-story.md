@@ -6,7 +6,7 @@ tags:
   - MadeWithPaper
   - Image
   - Sketches
-  - story
+  - Story
 ---
 ![](../../assets/2012/09/tumblr_max344vbxl1qa77f2o1_1280.jpg)
 

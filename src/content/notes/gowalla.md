@@ -5,7 +5,7 @@ publishedDate: 2010-09-14
 tags:
   - Foursquare
   - Gowalla
-  - Sociad-Media
+  - Social-Media
   - Software
 ---
 ![](../../assets/2010/09/gowalla-highlights-jpeg-scaled-1000.jpg)

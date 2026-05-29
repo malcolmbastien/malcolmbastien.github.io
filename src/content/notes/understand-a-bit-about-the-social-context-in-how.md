@@ -7,7 +7,6 @@ tags:
   - Image
   - Sketches
   - Social
-  - social
 ---
 ![](../../assets/2012/09/tumblr_mb0uylkzlk1qa77f2o1_1280.jpg)
 
