@@ -441,7 +441,7 @@ p {
 .prose .callout-body,
 .prose .callout-body p {
   font-family: "Newsreader", "Newsreader Fallback", Georgia, serif !important;
-  font-size: 1.125rem !important;
+  font-size: 1.25rem !important;
   line-height: 1.6 !important;
   font-weight: 500 !important;
   color: #191c1e !important;
