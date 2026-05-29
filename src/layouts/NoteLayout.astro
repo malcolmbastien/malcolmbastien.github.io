@@ -54,7 +54,7 @@ const formatDate = (date: Date) => {
         <header class="max-w-180 mx-auto px-gutter pt-12 pb-10 text-center">
             <div class="mb-3">
                 <div class="flex gap-3 justify-center flex-wrap items-center">
-                    {frontmatter.tags.sort().slice(0, 3).map(tag => (
+                    {frontmatter.tags.sort().map(tag => (
                         <a href={`/topics/${tag.toLowerCase()}`} class="px-3 py-1 bg-surface-container dark:bg-white/10 text-terracotta-accent dark:text-terracotta-accent text-xs font-medium rounded-full hover:bg-terracotta-accent hover:text-white dark:hover:bg-terracotta-accent dark:hover:text-white transition-colors">
                             {tag}
                         </a>
