@@ -9,3 +9,6 @@ views:
       - file.name
       - title
       - file.mtime
+    sort:
+      - property: file.mtime
+        direction: ASC

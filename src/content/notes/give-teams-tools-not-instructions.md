@@ -9,16 +9,16 @@ summary: Instead of telling teams what to do and how to do it. Give them a chall
 draft: true
 ---
 
-When trying to improve the performance of a complex system, it can be tempting to resort to micromanagement. Faced with uncertainty, dynamic conditions, and an evolving understanding of the problem, our natural instinct is to create stability and control through structures, goals, and processes.
+When trying to improve the performance of a complex system, it can be tempting to resort to instructions and micromanagement. Faced with uncertainty, dynamic conditions, and an evolving understanding of the problem, it's natural to want to create stability and control through clear goals, structures, and processes.
 
-But trying to improve performance by treating knowledge work as a predictable, mechanical process limits what a team can achieve. If you want high-performing teams, stop giving instructions and start giving your team the tools to succeed.
+But trying to improve performance by treating knowledge work like a predictable, mechanical process limits what a team can achieve. If you want high-performing teams, stop giving instructions and start giving your team the tools to succeed.
 
 ## Instructions Make the Process More Important Than the Goal
 
 > [!NOTE]
 > You can prescribe actions, but you can't prescribe how people think or behave.
 
-When organizations want to ensure quality, speed, or predictability, the common approach is to design a process with explicit goals. They roll out standardized frameworks, roles, rituals, and workflows.
+When organizations want to ensure quality, speed, or predictability, the common approach is to design processes declare explicit goals. They roll out standardized frameworks, roles, rituals, and workflows.
 
 But boxing a team in with prescriptive instructions shifts their cognitive load. Instead of solving the problem, their primary goal becomes complying with the process. This shift always introduces unintended, systemic consequences:
 

@@ -5,50 +5,36 @@ publishedDate: 2026-05-30
 tags:
   - Agile
   - AI
-summary: AI makes everything easier, including doing things that shouldn't be done in the first place.
-draft: true
+summary: AI makes generating solutions easier, but it can't create a strong continuous improvement process that focuses on solving the right problems.
 ---
 
 As large organizations roll out AI tools, the eagerness to adopt new technology needs to be balanced with the risk of using AI to do the wrong things better.
 
-Instead of improving underlying conditions, AI makes it possible and dangerously easy to focus on building solutions that treat symptoms.
+Instead of helping us understand underlying conditions, AI makes it easy to build one-off solutions that treat symptoms and ignore the feedback and learning needed for improvement.
 
 ## Easier Symptoms, Harder Causes
 
-Imagine a senior manager who's always busy in back-to-back meetings. They are constantly context-switching, preparing status reports, and putting out fires. They are a bottleneck, causing teams to wait on them for decisions.
+Imagine a senior manager who's always busy in back-to-back meetings. They are constantly context-switching, preparing status reports, and putting out fires. They are a bottleneck, causing teams to wait for their decisions.
 
-A band-aid response would be to treat this as a time-management problem: _"Let's use AI to help this manager draft emails, write reports, and build presentations faster."_
+A reasonable response might be to treat this as a time-management problem: _"Let's use AI to help this manager more quickly write emails, reports, and build presentations."_
 
-This looks like a win because it relieves the manager's immediate pain. But because AI has made dealing with the symptoms so much faster and easier, nobody thinks to stop to ask why the manager was so overloaded in the first place. By making the symptoms cheaper to manage, AI pushes the hidden, more complex root causes further out of sight.
+This looks like a win because it relieves the manager's immediate pains. But because AI has made dealing with the symptoms so much faster and easier, nobody thinks to stop to ask why the manager was so overloaded in the first place. By making the symptoms easier to manage, AI pushes the hidden, more complex root causes further out of sight. We skip problem exploration and apply a hastily generated solution to an issue we don't fully understand.
 
 ## Lowering the Cost of Bad Ideas
 
-Large organizations naturally prefer additive solutions, adding new processes and systems to make up for the older ones that are no longer working. Because AI brings the cost of generating outputs down to virtually nothing, it's more feasible than ever to throw an AI solution at organizational annoyances whenever they surface.
+I've found that organizations naturally prefer to adopt additive solutions, adding new processes and systems to layer on top of older ones that no longer work. Because AI brings the cost of generating outputs down to virtually nothing, it's more feasible than ever to throw an AI solution at surface-level problems, all while leaving the root causes unaddressed.
 
-Using AI, it's trivial to create solutions that treat symptoms but leave root causes unaddressed. AI will gladly do what you tell it. It will generate entire presentation decks to tell any story stakeholders want to hear, but unless it's prompted to, it will not fix a broken process.
+AI will gladly do what you tell it. It will generate entire presentation decks to tell any story stakeholders want to hear, but unless prompted, it will not fix a broken process. At some point, someone needs to step back and ask: _"Why do we need hundreds of slide decks in the first place?"_
 
-At some point, someone needs to step back and ask: _"Why do we need hundreds of slide decks in the first place?"_
+To ensure AI is actually helping, we have to treat it as a tool within a larger and more important continuous improvement process by asking two questions:
 
-To ensure AI is actually helping, people need to look at what's really going on and ask three questions:
+- **What's the real problem?** To create solutions with meaningful impact, you need to look beyond surface-level issues and ask why the system is behaving this way in the first place. If we can't identify the root cause, AI will help us build the wrong thing faster.
+- **How will we know if we are successful?** What do we expect to happen after we implement an AI-generated solution? Does the solution relieve a system bottleneck, or are we just optimizing non-value-adding work?
 
-**What's the real challenge?**
+## Rewarding a Strong Continuous Improvement Process
 
-To create solutions with meaningful impact, you need to look beyond surface-level issues and ask why things are working the way they are in the first place. Take the time to consider the possible root causes and bottlenecks.
+When anyone can use AI to create polished solutions for whatever challenge you give it, it's almost more important to have the ability to decide what _not_ to do.
 
-**What kind of value is this driving?**
+But if solutions are rewarded regardless of their value, that is exactly what people will deliver. In organizations that reward busyness, activity, and outputs, AI will accelerate velocity in the wrong direction. In cases like these, it becomes a tool for sustaining existing bureaucracy—layering on new solutions, meetings, and processes while ignoring the real problems.
 
-What comes from the solutions AI implements? Do they add value to the company's core product and value proposition, or do they just help people better manage non-value-adding work? Do they eliminate and prevent waste or do they optimize it?
-
-**Should AI be used for this problem at all?**
-
-AI is effective at creating band-aids that make broken systems more tolerable. But even AI solutions could be a waste if it means avoiding the real work you should be doing of fixing a broken process.
-
-## Start with Outcomes
-
-When anyone can use AI to create anything, the real differentiator is what you choose to do and the decisions you make. Success will depend on situational awareness, how people see problems, identify challenges, and choose what _not_ to do.
-
-People shouldn't be rewarded just for using AI. They should be rewarded for tackling the right challenges.
-
-Left unchecked, AI can easily supercharge existing top-down, command-and-control power structures and wasteful practices. Because creating output is virtually free, waste is cheaper and easier to manufacture than ever before.
-
-You can do almost anything thanks to AI, but should you?
+To change this, we have to stop treating solutions as the goal. New solutions are easier than ever to generate thanks to AI, but they are still just another kind of output. Instead, we need to emphasize a strong, continuous-improvement process and culture that values every step of the cycle: identifying the right problem to solve, implementing a thoughtful experiment, gathering feedback, and learning from the results.
