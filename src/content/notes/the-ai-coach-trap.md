@@ -14,6 +14,8 @@ When encountering a complex problem at work, our default instinct is to rush tow
 
 In environments where this happens, In the language of Daniel Kahneman, you have people running around building System 1 responses to systemic organizational problems.
 
+## AI makes it easy to generate polished, shallow solutions
+
 These days, the danger is that generative AI makes it incredibly easy to develop these shallow ideas. AI can turn a half-thought-out hunch into a polished, authoritative presentation.
 
 Thanks to AI, it's possible to be more productive than ever and develop of solutions that:
@@ -27,7 +29,7 @@ All you need is a rough idea for AI to instantly package your initial assumption
 
 This is why the value of an Agile Coach—or any strategic leader—isn't in preparing slide decks or providing answers. Giving teams pre-packaged solutions, as polished as they are, robs them of the opportunity to learn and grow.
 
-One problem of leveraging AI to sell people on professional-looking solutions, is that it jumps to the solution without going through the work. Real progress lies in helping teams solve their own problems using approaches rooted in agile principles:
+When you use AI to sell professional-looking solutions, you skip the actual work of understanding the problem. Real progress lies in helping teams solve their own problems using approaches rooted in agile principles:
 - Collaborative problem framing
 - Building shared understanding
 - Running small experiments
@@ -37,7 +39,7 @@ The process is the work. If you use AI to build convincing, authoritative presen
 
 Real organizational changes requires change in both the process and the people involved.
 
-# Conclusion
+# Structural Changes Have Long-term Consequences
 
 Generating code with AI is one thing—code can be tested, failed, and refactored in seconds. Using AI to change organizational structures and policies is a different story.
 

@@ -21,7 +21,7 @@ If the goal is to maximize output by having management design, install and contr
 
 The two goals are mutually exclusive:
 
-- **Optimizing for Management-driven Throughput:** Puts managers in control of how work moves through teams.
+- **Optimizing for Throughput:** Managers feeding work to teams with clear workflows and individual specialization. Removing local decisions to optimize for speed.
 - **Optimizing for Agility:** Improves the system's to adapt by prioritizing team factors like environment design, psychological safety, and autonomous work groups.
 
 Just like with Product Owners and Scrum Masters, the role of Agile Delivery Lead harms teams when it is implemented as an individual job description rather than a shared group responsibility. Roles like the Product Owner, Scrum Master work best when they act as enablers, helping teams make better product decisions, understanding customers, and improving their collaboration practices.
