@@ -4,7 +4,7 @@ stage: seed        # seed | sprout | evergreen
 publishedDate: 2026-05-25
 tags:
   - Agile
-summary: Over-optimizing for delivery hurts agility and turns teams into feature factories.
+summary: The practices that increase team velocity do not always also increase agility. Over-optimizing for delivery can destroy a team's capacity to adapt.
 ---
 
 Many organizations practicing "Agile" are actually just running a different flavor of project management. They adopt the vocabulary of Agile—relying heavily on "S" words like Scrum, squads, stories and sprints—but their goals remain fixed on managing team outputs. They create systems designed to control teams and push features rather than building the capacity to quickly adapt.
