@@ -12,7 +12,7 @@ As companies build AI-augmented development teams and roll out AI agents, the co
 
 There is always a bottleneck. And so, as AI eliminates the friction of writing code, the bottleneck doesn't go away; it simply shifts elsewhere in the value stream. The bottleneck will likely increasingly fall in slower, non-technical parts of organizations. For example, there will be increasing demand for high-velocity decisions on what to build and on understanding the impact of work delivered to customers.
 
-Instead of just focusing on optimizing team-level software delivery, Kanban has been one of the few methods focused on helping leaders manage and mature their business. Kanban's focus on customer fitness, end-to-end flow, and leadership makes it an important tool for organizations seeking to realize the full value of AI.
+Instead of just optimizing team-level software delivery, Kanban has been one of the few methods that help leaders manage and mature their business. Kanban's focus on customer fitness, end-to-end flow, and leadership makes it a useful tool for organizations seeking to realize the full value of AI.
 
 ## Deciding What to Build
 
@@ -55,7 +55,7 @@ As AI enters the workplace, there will be a strong temptation for organizations 
 
 - Using AI as an excuse to exert more control over teams.
 - Designing strict processes on how teams should build with AI, pushing teams into a new form of big batch, quality-gated waterfall.
-- Using Gen AI to create new forms of control that not possible before
+- Using Gen AI to create new forms of control that were not possible before
 
 Kanban's Principles and practices offer companies a way to develop AI-augmented ways of working that avoid micromanagement. Through a combination of Kanban's practices of visualizing work, managing flow, and making explicit policies, teams can co-create healthier, customer-driven work systems.
 
@@ -69,4 +69,4 @@ Because of the impact of AI, every part of a business, including the non-softwar
 
 > "The Kanban Method is not a software development life-cycle process. Nor is it a project management process. It's something to help you manage your business better." — David Anderson
 
-The Theory of Constraints teaches us that optimizing anything other than the bottleneck does not improve the system's performance. Companies that use AI to improve their development activities will just see the bottlenecks shift elsewhere. As new bottlenecks light up across the value stream, methods or frameworks that focus only on one part of the value stream won't suffice. We need to adopt ways of working and systems designed to manage and improve the performance of the whole business.
+The Theory of Constraints teaches us that optimizing anything other than the bottleneck does not improve the system's performance. Companies that use AI to improve their development activities will just see the bottlenecks shift elsewhere. As new bottlenecks light up across the value stream, methods or frameworks that focus on only managing development won't suffice. We need to adopt ways of working and systems designed to manage and improve the performance of the whole business.
