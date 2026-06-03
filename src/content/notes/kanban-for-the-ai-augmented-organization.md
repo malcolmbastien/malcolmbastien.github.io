@@ -4,7 +4,7 @@ stage: seed        # seed | sprout | evergreen
 tags:
   - Kanban
   - AI
-publishedDate: 2026-12-30
+publishedDate: 2026-06-03
 summary: As AI accelerates development velocity, Kanban becomes a necessary tool for organizations to manage bottlenecks in end-to-end flow.
 ---
 
