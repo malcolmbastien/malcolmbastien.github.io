@@ -8,8 +8,6 @@ publishedDate: 2026-06-03
 summary: As AI accelerates development velocity, Kanban becomes a necessary tool for organizations to manage bottlenecks in end-to-end flow.
 ---
 
-# Kanban Practices for the AI-Augmented Organization
-
 As companies build AI-augmented development teams and roll out AI agents, the core challenges of improving flow, delivering services and becoming more fit for purpose will remain important goals. Even as development velocity increases, new parts of the business will become bottlenecks, slowing the flow of value to customers.
 
 There is always a bottleneck. And so, as AI eliminates the friction of writing code, the bottleneck doesn't go away; it simply shifts elsewhere in the value stream. The bottleneck will likely increasingly fall in slower, non-technical parts of organizations. For example, there will be increasing demand for high-velocity decisions on what to build and on understanding the impact of work delivered to customers.
