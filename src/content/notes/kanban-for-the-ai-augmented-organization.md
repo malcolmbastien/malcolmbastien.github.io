@@ -57,9 +57,9 @@ As AI enters the workplace, there will be a strong temptation for organizations 
 - Designing strict processes on how teams should build with AI, pushing teams into a new form of big batch, quality-gated waterfall.
 - Using Gen AI to create new forms of control that were not possible before
 
-Kanban's Principles and practices offer companies a way to develop AI-augmented ways of working that avoid micromanagement. Through a combination of Kanban's practices of visualizing work, managing flow, and making explicit policies, teams can co-create healthier, customer-driven work systems.
+[Kanban's principles and practices](https://kanban.university/kanban-guide/#principles-practices) offer companies a way to develop AI-augmented ways of working that avoid micromanagement. Through a combination of Kanban's practices of visualizing work, managing flow, and making explicit policies, teams can co-create healthier, customer-driven work systems.
 
-Kanban's Principles are also tool- and process-agnostic; they don't promote or require a company to adopt any particular way of working. Because AI is highly volatile with models, vendors, regulations, techniques and new development practices changing monthly, the last thing you want to do is prematurely lock-in and create a highly constrained process.
+Kanban's principles are also tool- and process-agnostic; they don't promote or require a company to adopt any particular way of working. Because AI is highly volatile with models, vendors, regulations, techniques and new development practices changing monthly, the last thing you want to do is prematurely lock-in and create a highly constrained process.
 
 A better strategy is to lean into Kanban's practice of evolutionary change, letting teams develop processes through cycles of collaborative, continuous improvement.
 
