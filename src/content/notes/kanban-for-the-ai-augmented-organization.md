@@ -12,13 +12,13 @@ As companies build AI-augmented development teams and roll out AI agents, the co
 
 There is always a bottleneck. And so, as AI eliminates the friction of writing code, the bottleneck doesn't go away; it simply shifts elsewhere in the value stream. The bottleneck will likely increasingly fall in slower, non-technical parts of organizations. For example, there will be increasing demand for high-velocity decisions on what to build and on understanding the impact of work delivered to customers.
 
-For two decades, agile frameworks have focused on optimizing team-level software delivery. But Kanban has been one of the few methods focused on helping leaders manage and mature their business. Kanban's focus on customer fitness, end-to-end flow, and leadership makes it an important tool for organizations seeking to realize the full value of AI.
+Instead of just focusing on optimizing team-level software delivery, Kanban has been one of the few methods focused on helping leaders manage and mature their business. Kanban's focus on customer fitness, end-to-end flow, and leadership makes it an important tool for organizations seeking to realize the full value of AI.
 
 ## Deciding What to Build
 
 When AI lets you build in minutes instead of weeks, dramatically lowering development costs and increasing capacity, one of the most important decisions becomes choosing _what_ to build.
 
-The Scrum framework focuses heavily on moving items from a Product backlog to "Done." Kanban, on the other hand, has always focused on the end-to-end flow of work through teams and organizations. The practice of Upstream Kanban provides organizations with the tools needed to manage product discovery activities.
+While some frameworks focus on moving items from a product backlog to development done, Kanban is focused on improving the end-to-end flow of work, from idea to delivery. The practice of Upstream Kanban provides organizations with the tools needed to manage product discovery activities.
 
 Upstream Kanban, also commonly referred to as "Discovery Kanban" or "Customer Kanban," is concerned with activities including:
 
