@@ -9,15 +9,13 @@ summary: Brief description
 draft: true
 ---
 
-When product and engineering leaders at the frontier AI companies give guidance to the millions of developers building with AI on how to succeed, the lessons they share are the same ones Agile software development first promoted 25 years ago: Deliver working software frequently, get customer feedback and let real-world usage guide development, and prioritize aligned coordination, and prioritize lightweight, continuous coordination. 
+When product and engineering leaders at frontier AI companies give guidance to developers on how to succeed with AI, the lessons they share are the same ones Agile software development first promoted 25 years ago: Deliver working software frequently, let customer feedback and real-world usage guide development, and prioritize lightweight, continuous alignment and coordination. 
 
-## 1. Let Usage Guide Product Direction
+## Let Usage Guide Product Direction
 
-One product lead at a frontier AI lab notes that shifting from multi-quarter roadmaps to daily shipping means prioritizing rapid, real-world feedback over theoretical alignment. To manage this, their team ships most features as "research previews," which are early, uncommitted experiments designed to gather user data rather than represent a finished product. Similarly, an engineering lead on a prominent AI assistant tool shares that their product took months of real-world exposure before anyone truly understood its value. Their takeaway was to under-resource projects at the start, building the smallest possible footprint so actual customer usage could teach them what to build next.
+One product lead at a frontier AI lab described how shifting from multi-quarter roadmaps to daily shipping means prioritizing rapid, real-world feedback over upfront plans. Their team ships most features as "research previews," which are early experiments designed to gather data rather than finished products. Similarly, an engineering lead on a popular AI coding assistant tool shared how their product took months of real-world exposure before people understood its what it was good for. Their takeaway was to start small by building the smallest possible product so actual customer usage could teach them what to build next.
 
-Agile wasn't just a methodology for increasing velocity; it was a strategy to avoid building the wrong thing. Traditional planning treats detailed specifications as a plan, a goal, and value it as a way to eliminate uncertainty. In contrast, the Agile approach prioritizes outcomes over outputs, using early releases to capture quick feedback, and accelerate learning.
-
-By using early, incomplete feature releases as the primary means for feedback and requirements gathering, teams use software as a learning tool to guide their direction.
+These recommendations echo the goals of Agile, not just about going faster, but also a strategy to avoid building the wrong thing. Traditional planning treats detailed specifications as a way to eliminate uncertainty. In contrast, the Agile approach prioritizes using early releases to quickly capture feedback, and to learn faster.
 
 From the Manifesto for Agile Software Development:
 
@@ -31,13 +29,13 @@ From the Manifesto for Agile Software Development:
 > 
 > **Principle:** Working software is the primary measure of progress.
 
-## 2. Speed Without Alignment Generates Waste Faster
+## Speed Without Alignment Generates Waste Faster
 
 Because generating code has become incredibly cheap and fast, the speed of software development has accelerated to the point where almost every other activity acts as a bottleneck.
 
-When traditional checkpoints, like design reviews, draft pull requests, and Slack conversations, are skipped, gaps in alignment only become visible after code is completed and deployed. This "coordination debt" leads to teams shipping disconnected features, duplicating effort, and realizing they've built the wrong thing only after the code is merged. When development velocity is faster, poor aligned becomes more expensive.
+To maintain high development velocity, developers can feel the need to keep building rather than waste time on other things. But when teams stop writing requirements or PRDs, attending design reviews and planning meetings, alignment gaps only become visible after code is completed and deployed. This "coordination debt" leads to teams shipping disconnected features, duplicating effort, and realizing they've built the wrong thing only after the code is merged. Faster development makes poor aligned more expensive.
 
-The risk of developing the wrong thing quickly highlights the importance of correcting the common agile misconception: The goal of Agile is not simply to increase velocity. Unconstrained velocity accelerates waste. The Manifesto for Agile Software Development doesn't eliminate coordination; it replaces heavy, upstream review gates with lightweight, continuous alignment. In this context, practices like **User Stories** and **User Story Mapping** stand out not as artifacts, but as lightweight techniques for conversation and coordination.
+Unconstrained velocity accelerates waste. Agile can help by replacing heavy, upstream review gates with lightweight, continuous alignment. In this context, practices like **User Stories** and **User Story Mapping** stand out not as artifacts, but as lightweight and effective techniques for team conversations and coordination.
 
 From the Manifesto for Agile Software Development:
 
@@ -47,11 +45,9 @@ From the Manifesto for Agile Software Development:
 > 
 > **Principle:** At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behaviour accordingly.
 
-## 3. Remove Process. Hire for Taste & Mindset
+## Remove Process. Hire for Taste & Mindset
 
-To maintain alignment at high speeds, top AI teams rely on principles allowing developers to make decisions autonomously rather than heavy processes or approvals. These companies aggressively hire engineers with exceptional "product taste." When developers deeply understand their users, the team can eliminate approval processes and ship more quickly.
-
-These frontier AI teams also use an "evergreen launch room" where developers share a feature, and cross-functional peers (Documentation, Marketing, Developer Relations) instantly swarm to help ship it to production. Even with leading-edge AI tools, enabling teams to deliver quickly requires cross-functional teams empowered to make decisions autonomously and to eliminate approval bottlenecks.
+AI-augmented teams go fast by relying on shared-alignment on principles rather than heavy processes or approvals. They hire engineers with strong product taste. When developers understand their users' needs, teams can eliminate overhead processes and ship more quickly.
 
 From the Manifesto for Agile Software Development:
 
@@ -65,14 +61,6 @@ From the Manifesto for Agile Software Development:
 > 
 > **Principle:** Continuous attention to technical excellence and good design enhances agility.
 
-## Focus on End-to-End Velocity
-
-In organizations that equip developers with leading edge AI tools, the struggle occurs when high-speed teams collide with the slower organizations processes around them.
-
-This is the same friction that commonly affects companies undergoing Agile transformations. Agile is often implemented at the team level, where it improves software team velocity, but slower, quarterly planning cycles and monthly releases limit the benefits gained.
-
-As development velocity gets faster and faster, more and more organizational processes will start becoming constraints. But that those organization processes will be more difficult to adapt and automate than software development was.
-
 ## Mapping Frontier AI Guidance to Agile Principles
 
-Ultimately, the lessons from Product Management and Engineering leaders working at today's frontier AI labs provide further support for the original values and principles of Agile remain as relevant as ever in guiding what the future of work might look like.
+Product Management and Engineering leaders at today's frontier AI labs are rediscovering the reasons and importance of what Agile figured out 25 years ago. Agile's values and principles as relevant as ever in guiding what the future of work looks like.
