@@ -4,7 +4,7 @@ stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
 publishedDate: 2026-06-08
-summary: Agile transformations should ditch team-focused maturity models and start focusing on customer fitness.
+summary: Agile transformations should ditch team-focused maturity models and start focusing outside-in on customer fitness.
 ---
 
 When organizations launch an Agile transformation, they usually reach for a standard model that focuses on setting up new team structures and implementing a checklist of team-level practices. With the checklist approach to agile, after a team implements a practice, they simply move on to the next. Some maturity models use a graded system ("level 1" vs "level 2" stand-ups), but they're still about matching what a team does to what's written on a list.
