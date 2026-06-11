@@ -32,7 +32,6 @@ For an organization to satisfy its customers and survive changes in its environm
 
 These structures give a system its adaptive capacity—its potential and readiness to change in the face of new situations, anomalies, and surprises. Formalized roles and processes squeeze out informal collaboration and eliminate value-creation networks, restricting the use of adaptive capacity.
 
-
 It is an organization's people and their ability to self-organize, collaborate and adapt across the lines of the org chart that keep the system running. This unstructured, human "gap-bridging" is what makes organizations resilient. Yet management is not trained to recognize the Informal and Value Creation structures that underpin the org chart. These organic and  emergent systems are seen as out-of-control deviations from the intended and desired structured ways of working.
 
 ### Trust and Shared Experience Come First
@@ -46,6 +45,10 @@ No formal structure or a framework can mandate this shared way of working. It gr
 ### A Better Way to Manage: Cultivation Over Control
 
 Standardized agile operating models don't make teams more productive. They usually limit their ability to coordinate and adapt. Management's goals should shift from installing systems to enabling the organizational factors that support informal structures and practices that support value creation.
+
+
+> [!NOTE]
+> If you're efficient, you're doing it wrong.
 
 The goal is to create the right environment where desirable, value-creating behaviours can emerge. These capabilities include:
 
