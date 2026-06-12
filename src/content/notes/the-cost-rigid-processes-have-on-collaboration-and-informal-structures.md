@@ -11,10 +11,14 @@ draft: true
 Earlier this year, a comment on a Reddit thread discussing mass layoffs at a major Canadian bank caught my attention:
 
 > "When I first started, there was a lot of collaboration and informal networks. You got things done by helping folks out, who would then help you out when you needed it... Porter gets in there and calls in the McKinsey consultants, who tell him that the bank needs to kill this collaborative vibe, in favour of internal competition and a more commercial approach."
+> [@ArmedResponse - Reddit](https://www.reddit.com/r/Scotiabank/comments/1q0esqz/comment/nwxzq1t/)
 
 The comment resonated with me because I see this pattern played out at large companies as Agile continues its slow death and transformation into a process-heavy, consultant-designed, efficiency-driven way of working.
 
 Truly agile ways of working that don't fit into a corporate playbook are rejected, and instead, they get replaced with corporate agile operating models focused on explicit roles, team structures, processes, and metrics. Consultants sell the model, executive buy them, and Agile Coaches implement them. The goal underlying the whole model is removing variability and uncertainty from the system.
+
+> [!NOTE]
+> If you're efficient, you're doing it wrong.
 
 The core assumption underlying model is that _more structured, ordered systems are more effective._
 
@@ -45,10 +49,6 @@ No formal structure or a framework can mandate this shared way of working. It gr
 ### A Better Way to Manage: Cultivation Over Control
 
 Standardized agile operating models don't make teams more productive. They usually limit their ability to coordinate and adapt. Management's goals should shift from installing systems to enabling the organizational factors that support informal structures and practices that support value creation.
-
-
-> [!NOTE]
-> If you're efficient, you're doing it wrong.
 
 The goal is to create the right environment where desirable, value-creating behaviours can emerge. These capabilities include:
 
