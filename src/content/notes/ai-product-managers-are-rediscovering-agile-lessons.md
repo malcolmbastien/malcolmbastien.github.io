@@ -1,6 +1,5 @@
 ---
 title: AI Product Managers Are Rediscovering Agile Lessons
-stage: seed        # seed | sprout | evergreen
 tags:
   - AI
   - Agile

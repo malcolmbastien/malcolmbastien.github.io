@@ -1,6 +1,5 @@
 ---
 title: Falling Into the Agile Delivery Trap
-stage: seed        # seed | sprout | evergreen
 publishedDate: 2026-05-25
 tags:
   - Agile

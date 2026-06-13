@@ -8,13 +8,9 @@ interface Props {
     frontmatter: {
         title: string;
         publishedDate?: Date;
-        stage: "seed" | "sprout" | "evergreen";
         summary?: string;
         tags: string[];
         draft?: boolean;
-        featuredImage?: any;
-        featuredImageAlt?: string;
-        featured?: boolean;
         cover?: any;
     };
     backlinkedNotes: any[];
@@ -44,7 +40,7 @@ const formatDate = (date: Date) => {
 <Layout
     title={frontmatter.title}
     description={frontmatter.summary}
-    image={frontmatter.featuredImage?.src || frontmatter.cover?.src}
+    image={frontmatter.cover?.src}
     type="article"
     publishedTime={createdDate.toISOString()}
     tags={frontmatter.tags}

@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Music made using only sounds from Windows 95 and 98
 publishedDate: 2009-09-28
 tags:

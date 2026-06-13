@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: "Research & Insights Into Stories"
 publishedDate: 2012-10-04
 tags:

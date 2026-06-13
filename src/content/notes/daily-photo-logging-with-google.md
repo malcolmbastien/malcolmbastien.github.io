@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Daily Photo Logging with Google+
 publishedDate: 2012-04-17
 tags:

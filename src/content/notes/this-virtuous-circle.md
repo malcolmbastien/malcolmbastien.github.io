@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: "This Virtuous Circle"
 publishedDate: 2010-10-27
 tags:

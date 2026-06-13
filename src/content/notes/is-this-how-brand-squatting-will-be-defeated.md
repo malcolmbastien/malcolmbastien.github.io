@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Is This How Brand Squatting Will Be Defeated?
 publishedDate: 2009-03-24
 tags:

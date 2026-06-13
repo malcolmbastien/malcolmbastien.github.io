@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: The Purpose of Each Platform
 publishedDate: 2012-10-09
 tags:

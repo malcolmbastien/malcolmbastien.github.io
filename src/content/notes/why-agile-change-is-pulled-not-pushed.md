@@ -1,6 +1,5 @@
 ---
 title: Why Agile Change is Pulled, Not Pushed
-stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
 publishedDate: 2026-12-30

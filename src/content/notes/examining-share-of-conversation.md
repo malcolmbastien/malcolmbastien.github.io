@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Examining \"Share of Conversation\"
 publishedDate: 2009-06-15
 tags:

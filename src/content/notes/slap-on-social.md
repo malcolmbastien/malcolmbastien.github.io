@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Slap On Social  
 publishedDate: 2010-11-11
 tags:

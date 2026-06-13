@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: The Desktop Is Done, Think Like iOS
 publishedDate: 2012-07-30
 tags:

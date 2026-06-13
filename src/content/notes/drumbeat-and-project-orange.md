@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Drumbeat and Project Orange
 publishedDate: 2010-04-22
 tags:

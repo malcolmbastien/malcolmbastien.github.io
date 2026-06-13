@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Why I Don't Like New Charities Every Month
 publishedDate: 2009-04-25
 tags:

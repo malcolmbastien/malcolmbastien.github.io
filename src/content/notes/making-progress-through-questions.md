@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Making Progress Through Questions
 publishedDate: 2024-09-02
 tags:

@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Advice to Writers by Vonnegut
 publishedDate: 2012-01-03
 tags:

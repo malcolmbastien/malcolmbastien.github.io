@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: My One Keyboard Struggle
 publishedDate: 2009-09-15
 tags:

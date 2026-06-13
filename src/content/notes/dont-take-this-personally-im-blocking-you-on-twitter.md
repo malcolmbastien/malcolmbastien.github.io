@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: "Don't Take This Personally, I'm Blocking You On Twitter"
 publishedDate: 2008-04-30
 tags:

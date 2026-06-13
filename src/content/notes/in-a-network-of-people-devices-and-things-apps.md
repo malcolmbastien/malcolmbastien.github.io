@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: App as Digital Proxy
 publishedDate: 2012-09-26
 tags:

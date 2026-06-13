@@ -1,6 +1,5 @@
 ---
 title: Give Teams Tools Instead of Instructions
-stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
   - Teams

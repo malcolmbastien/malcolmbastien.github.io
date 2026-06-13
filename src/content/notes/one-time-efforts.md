@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: One-Time Efforts
 publishedDate: 2024-08-10
 tags:

@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Recommended Wordpress Plugins For New Bloggers
 publishedDate: 2009-02-02
 tags:

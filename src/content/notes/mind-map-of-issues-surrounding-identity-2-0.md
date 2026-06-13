@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Mind Map of Issues Surrounding Identity 2.0
 publishedDate: 2009-03-20
 tags:

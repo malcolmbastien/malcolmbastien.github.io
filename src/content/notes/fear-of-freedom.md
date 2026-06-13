@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Fear Of Freedom
 publishedDate: 2007-08-29
 tags:

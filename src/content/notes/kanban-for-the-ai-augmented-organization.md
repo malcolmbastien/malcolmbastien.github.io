@@ -1,6 +1,5 @@
 ---
 title: Kanban for the AI-Augmented Organization
-stage: seed        # seed | sprout | evergreen
 tags:
   - Kanban
   - AI

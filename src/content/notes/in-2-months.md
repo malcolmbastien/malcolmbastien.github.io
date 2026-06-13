@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: In 2 Months
 publishedDate: 2007-08-23
 tags:

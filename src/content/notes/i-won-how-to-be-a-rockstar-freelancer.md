@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: "I've Won How To Be a Rockstar Freelancer"
 publishedDate: 2007-12-23
 tags:

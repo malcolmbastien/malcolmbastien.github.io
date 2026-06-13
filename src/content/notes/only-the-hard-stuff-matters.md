@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Only The Hard Stuff Matters
 publishedDate: 2011-08-17
 tags:

@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Reblogging - Not So Much
 publishedDate: 2010-01-18
 tags:

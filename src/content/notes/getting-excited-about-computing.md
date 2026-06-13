@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Getting Excited About Computing
 publishedDate: 2011-09-15
 tags:

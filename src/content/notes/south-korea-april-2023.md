@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: South Korea, April 2023
 publishedDate: 2023-04-18
 tags:

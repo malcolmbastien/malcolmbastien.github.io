@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: The Invisible Bridge
 publishedDate: 2009-07-17
 tags:

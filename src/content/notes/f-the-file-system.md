@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: F the File System
 publishedDate: 2010-12-20
 tags:

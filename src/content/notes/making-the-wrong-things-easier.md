@@ -1,6 +1,5 @@
 ---
 title: Making the Wrong Things Easier
-stage: seed        # seed | sprout | evergreen
 publishedDate: 2026-05-30
 tags:
   - Agile

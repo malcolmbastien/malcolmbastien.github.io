@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: How Evernote Made Remembering Everything Simple
 publishedDate: 2010-12-13
 tags:

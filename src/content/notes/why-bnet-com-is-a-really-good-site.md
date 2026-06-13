@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Why BNET.com Is A Really Good Site
 publishedDate: 2007-10-14
 tags:

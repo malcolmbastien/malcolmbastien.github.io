@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Future Stories
 publishedDate: 2012-09-25
 tags:

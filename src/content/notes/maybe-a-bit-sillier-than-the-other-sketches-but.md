@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Stories and Understanding
 publishedDate: 2012-10-02
 tags:

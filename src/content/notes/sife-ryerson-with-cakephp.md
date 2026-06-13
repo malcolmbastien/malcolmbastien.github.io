@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: SIFE Ryerson With CakePHP
 publishedDate: 2007-10-05
 tags:

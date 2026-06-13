@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Back. With Style No Less.
 publishedDate: 2009-12-15
 tags:

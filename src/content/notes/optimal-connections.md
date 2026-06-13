@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Optimal Connections
 publishedDate: 2010-08-26
 tags:

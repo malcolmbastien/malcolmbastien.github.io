@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Engagement and The Long Tail of Social Media Discussions
 publishedDate: 2009-08-06
 tags:

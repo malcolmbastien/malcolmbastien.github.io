@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: GameStore
 publishedDate: 2012-01-03
 tags:

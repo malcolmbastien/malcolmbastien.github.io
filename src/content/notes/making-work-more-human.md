@@ -1,8 +1,6 @@
 ---
-stage: evergreen
 title: Making Work More Human
 publishedDate: 2025-09-06
-featured: true
 cover: "../../assets/2025/09/create-a-highly-detailed-and-high-resolution-featured-image-for-a.png"
 tags:
   - Agile

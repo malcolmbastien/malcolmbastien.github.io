@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Phones That Feel Like Magic
 publishedDate: 2010-11-16
 tags:

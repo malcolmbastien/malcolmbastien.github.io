@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: JustNotes
 publishedDate: 2009-10-24
 tags:

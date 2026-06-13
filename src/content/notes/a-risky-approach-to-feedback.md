@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: A Risky Approach to Feedback
 publishedDate: 2009-05-16
 tags:

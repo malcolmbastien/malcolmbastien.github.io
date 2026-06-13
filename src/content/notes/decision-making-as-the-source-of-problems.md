@@ -1,6 +1,5 @@
 ---
 title: Decision Making as the Source of Problems
-stage: seed        # seed | sprout | evergreen
 publishedDate: 2026-01-16
 tags:
   - Management

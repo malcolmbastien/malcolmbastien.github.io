@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Drumbeat Models for Discussion on the Open Web
 publishedDate: 2010-04-19
 tags:

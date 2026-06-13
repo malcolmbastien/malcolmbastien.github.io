@@ -1,6 +1,5 @@
 ---
 title: The Agility Fitness Model
-stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
 publishedDate: 2026-12-30

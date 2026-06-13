@@ -1,6 +1,5 @@
 ---
 title: What Agile Frameworks Actually Do to Your Organization
-stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
 publishedDate: 2026-12-30

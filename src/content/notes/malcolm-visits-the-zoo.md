@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Malcolm Visits the Zoo
 publishedDate: 2010-03-24
 tags:

@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Something Routine
 publishedDate: 2010-06-22
 tags:

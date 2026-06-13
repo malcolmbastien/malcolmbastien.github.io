@@ -1,13 +1,11 @@
 ---
 title: My Emacs Writing Setup
-stage: seed        # seed | sprout | evergreen
 publishedDate: 2026-01-16
 tags:
   - Emacs
   - Writing
   - Software
 summary: How I've configured emacs for the goal of writing
-featured: true
 cover: "../../assets/2026/01/20260115233245.png"
 ---
 

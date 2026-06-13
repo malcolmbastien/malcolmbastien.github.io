@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: GoodBye Tests And Quizes, Hello Comments
 publishedDate: 2009-02-13
 tags:

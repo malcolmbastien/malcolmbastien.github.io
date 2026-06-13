@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Thinking About Technology Innovation That Sticks
 publishedDate: 2011-01-20
 tags:

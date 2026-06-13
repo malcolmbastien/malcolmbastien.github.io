@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Basic Business Metrics
 publishedDate: 2012-10-04
 tags:

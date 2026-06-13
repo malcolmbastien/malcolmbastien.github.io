@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Uncovering the Compromises of Metro Style Apps
 publishedDate: 2012-08-06
 tags:

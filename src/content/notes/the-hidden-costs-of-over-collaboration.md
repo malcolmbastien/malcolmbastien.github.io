@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: The Hidden Costs of Over-Collaboration
 publishedDate: 2024-09-16
 tags:

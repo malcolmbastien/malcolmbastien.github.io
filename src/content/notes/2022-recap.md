@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: 2022 Recap
 publishedDate: 2023-01-03
 tags:

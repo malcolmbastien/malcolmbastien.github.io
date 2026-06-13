@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: From Searches to Apps to Siri
 publishedDate: 2012-08-09
 tags:

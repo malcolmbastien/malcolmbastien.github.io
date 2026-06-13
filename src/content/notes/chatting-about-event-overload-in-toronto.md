@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Chatting About Event Overload In Toronto
 publishedDate: 2009-09-28
 tags:

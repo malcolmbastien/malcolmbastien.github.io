@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: CrunchBang Linux, Netbooks at High Speed
 publishedDate: 2009-01-30
 tags:

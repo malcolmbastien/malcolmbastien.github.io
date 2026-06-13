@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Where I Learn I Suck at Reading, But That's OK
 publishedDate: 2010-08-06
 tags:

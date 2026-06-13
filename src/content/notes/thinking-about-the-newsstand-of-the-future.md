@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Thinking About The Newsstand of The Future
 publishedDate: 2009-02-26
 tags:

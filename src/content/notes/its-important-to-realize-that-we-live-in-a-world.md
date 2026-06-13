@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: A Network of People, Devices, and Things
 publishedDate: 2012-09-26
 tags:

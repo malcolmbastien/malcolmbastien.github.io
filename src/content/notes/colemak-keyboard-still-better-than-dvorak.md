@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Colemak Keyboard - Still Better Than Dvorak?
 publishedDate: 2009-06-02
 tags:

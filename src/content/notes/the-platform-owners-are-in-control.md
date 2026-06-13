@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: The Platform Owners Are In Control
 publishedDate: 2011-09-12
 tags:

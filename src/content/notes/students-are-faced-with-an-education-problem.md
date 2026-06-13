@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Students Are Faced With An Education Problem
 publishedDate: 2009-02-13
 tags:

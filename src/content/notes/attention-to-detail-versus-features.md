@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Attention to Detail Versus Features
 publishedDate: 2010-08-27
 tags:

@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Using Culture as a Lens to Solve Organizational Challenges
 publishedDate: 2024-01-06
 tags:

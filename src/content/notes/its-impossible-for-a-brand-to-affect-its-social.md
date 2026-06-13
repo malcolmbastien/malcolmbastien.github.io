@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: The Social Story of a Brand
 publishedDate: 2012-10-11
 tags:

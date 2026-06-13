@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: A Better Facebook Won't Help You
 publishedDate: 2012-01-12
 tags:

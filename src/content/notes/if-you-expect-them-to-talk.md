@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: If You Expect Them to Talk
 publishedDate: 2009-05-21
 tags:

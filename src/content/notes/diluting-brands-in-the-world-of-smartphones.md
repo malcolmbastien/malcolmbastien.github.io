@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Diluting Brands in the World of Smartphones
 publishedDate: 2010-11-15
 tags:

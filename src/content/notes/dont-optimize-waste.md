@@ -1,6 +1,5 @@
 ---
 title: Instead of focusing on Improving Communication, fix the System.
-stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
   - Lean

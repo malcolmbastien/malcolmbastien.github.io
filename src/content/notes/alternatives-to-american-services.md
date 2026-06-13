@@ -1,6 +1,5 @@
 ---
 title: Alternatives to American Services
-stage: seed # seed | sprout | evergreen
 publishedDate: 2026-01-25
 tags:
 - Software

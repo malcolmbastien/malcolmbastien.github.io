@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: "New Job: Social Media Analyst at Blast Radius"
 publishedDate: 2009-03-19
 tags:

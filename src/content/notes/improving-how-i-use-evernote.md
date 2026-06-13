@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Improving How I Use Evernote
 publishedDate: 2012-04-02
 tags:

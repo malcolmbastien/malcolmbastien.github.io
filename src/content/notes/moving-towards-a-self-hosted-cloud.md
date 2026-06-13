@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Moving Towards A Self-Hosted Cloud
 publishedDate: 2008-09-08
 tags:

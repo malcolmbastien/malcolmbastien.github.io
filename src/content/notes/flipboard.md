@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Flipboard
 publishedDate: 2010-08-08
 tags:

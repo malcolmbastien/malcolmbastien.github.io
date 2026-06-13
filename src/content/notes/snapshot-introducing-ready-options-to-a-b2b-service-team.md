@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: "Snapshot: Introducing Ready Options to a B2B Service Team"
 publishedDate: 2022-09-11
 tags:

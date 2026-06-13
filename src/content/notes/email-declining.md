@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Email Declining
 publishedDate: 2012-01-05
 tags:

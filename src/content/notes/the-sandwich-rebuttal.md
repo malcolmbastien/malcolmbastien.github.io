@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: The Sandwich Rebuttal
 publishedDate: 2010-01-02
 tags:

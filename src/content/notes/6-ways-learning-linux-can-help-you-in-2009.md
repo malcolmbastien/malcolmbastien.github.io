@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: 6 Ways Learning Linux Can Help You in 2009
 publishedDate: 2009-03-18
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Co-Location Is Not a Strategy
-stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
 publishedDate: 2026-12-30

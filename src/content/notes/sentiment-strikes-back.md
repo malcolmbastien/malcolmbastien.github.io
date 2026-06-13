@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Sentiment Strikes Back
 publishedDate: 2009-07-16
 tags:

@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: If I Had Asked
 publishedDate: 2009-11-04
 tags:

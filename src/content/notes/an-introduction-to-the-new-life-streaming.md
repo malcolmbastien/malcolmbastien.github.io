@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: An Introduction To The New Life-Streaming
 publishedDate: 2009-09-13
 tags:

@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Twitter Style Redesigns And What They Share
 publishedDate: 2009-04-18
 tags:

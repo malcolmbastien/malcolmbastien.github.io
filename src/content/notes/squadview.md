@@ -1,12 +1,10 @@
 ---
 title: SquadView
-stage: sprout        # seed | sprout | evergreen
 publishedDate: 2026-02-11
 tags:
   - Tools
   - Agile
 summary: A custom tool for visualizing the relationships between groups and entities in your organization.
-featured: true
 cover: "../../assets/2026/02/20260211181853.png"
 ---
 

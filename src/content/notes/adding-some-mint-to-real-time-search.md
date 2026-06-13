@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Adding Some Mint to Real-Time Search
 publishedDate: 2009-10-25
 tags:

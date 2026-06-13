@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: An Agile Alternative to “Fixing”
 publishedDate: 2023-07-22
 tags:

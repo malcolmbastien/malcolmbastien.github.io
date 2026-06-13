@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: "Test-Driven Goals: A Scalable and Effective Pattern"
 publishedDate: 2023-04-27
 tags:

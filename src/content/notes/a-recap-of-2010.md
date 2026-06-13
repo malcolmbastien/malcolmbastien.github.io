@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: A Recap of 2010
 publishedDate: 2010-12-31
 tags:

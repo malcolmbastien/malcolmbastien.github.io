@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Creating Communities Through Experience Blogs
 publishedDate: 2009-05-25
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Finding Bottlenecks in AI-Driven Workflows
-stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
   - Metrics

@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: 5 Ways to Get The Most Out of University
 publishedDate: 2007-12-18
 tags:

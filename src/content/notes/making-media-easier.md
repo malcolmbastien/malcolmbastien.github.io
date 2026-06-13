@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Making Media Easier
 publishedDate: 2012-01-07
 tags:

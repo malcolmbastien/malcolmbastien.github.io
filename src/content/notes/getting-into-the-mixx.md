@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Getting Into The Mixx
 publishedDate: 2008-09-30
 tags:

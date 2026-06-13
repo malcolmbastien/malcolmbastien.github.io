@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Social Being, Media Meaning
 publishedDate: 2009-08-05
 tags:

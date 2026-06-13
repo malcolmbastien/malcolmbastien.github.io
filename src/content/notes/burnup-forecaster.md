@@ -1,13 +1,11 @@
 ---
 title: Burnup Forecaster
-stage: seed # seed | sprout | evergreen
 publishedDate: 2026-01-26
 tags:
 - Tools
 - Agile
 - Metrics
 summary: An Excel workbook that uses historical throughput to provide probabilistic forecasts for project completion.
-featured: true
 cover: ../../assets/2026/01/burnup-chart01.png
 ---
 

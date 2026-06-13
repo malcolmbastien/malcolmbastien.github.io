@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: The Whole Thing  
 publishedDate: 2010-10-20
 tags:

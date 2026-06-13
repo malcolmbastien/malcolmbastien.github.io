@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: An Office on Every Surface
 publishedDate: 2011-09-01
 tags:

@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Revisiting the Guidance on Cross-functional Teams
 publishedDate: 2023-05-16
 tags:

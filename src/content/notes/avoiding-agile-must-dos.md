@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Avoiding Agile Must-Dos
 publishedDate: 2024-09-09
 tags:

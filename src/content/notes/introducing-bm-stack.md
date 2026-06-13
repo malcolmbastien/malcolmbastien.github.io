@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Introducing BM Stack
 publishedDate: 2010-12-02
 tags:

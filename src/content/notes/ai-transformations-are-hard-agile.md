@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: AI Transformations Are Hard-Agile
 publishedDate: 2025-10-03
 tags:

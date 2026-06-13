@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Put it Down
 publishedDate: 2011-02-08
 tags:

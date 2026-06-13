@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Re-Reading
 publishedDate: 2012-05-31
 tags:

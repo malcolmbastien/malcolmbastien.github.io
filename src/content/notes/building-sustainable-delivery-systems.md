@@ -1,6 +1,5 @@
 ---
 title: Building Sustainable Delivery Systems
-stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
 publishedDate: 2026-06-12

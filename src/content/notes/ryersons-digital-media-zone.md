@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Ryerson's Digital Media Zone
 publishedDate: 2009-12-10
 tags:

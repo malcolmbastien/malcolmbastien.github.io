@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Cross Post - Announcing Toronto Dev
 publishedDate: 2008-12-19
 tags:

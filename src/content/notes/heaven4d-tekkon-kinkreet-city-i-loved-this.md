@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Tekkonkinkreet City
 publishedDate: 2013-03-11
 tags:

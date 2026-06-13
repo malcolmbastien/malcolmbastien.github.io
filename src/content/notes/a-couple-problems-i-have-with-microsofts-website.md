@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: A Quick Look at the Surface Site
 publishedDate: 2012-10-16
 tags:

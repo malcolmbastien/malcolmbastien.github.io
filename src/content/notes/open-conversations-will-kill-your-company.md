@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Open Conversations Will Kill Your Company
 publishedDate: 2009-04-28
 tags:

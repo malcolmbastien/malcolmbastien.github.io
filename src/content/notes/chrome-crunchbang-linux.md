@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Chrome + CrunchBang Linux
 publishedDate: 2009-08-10
 tags:

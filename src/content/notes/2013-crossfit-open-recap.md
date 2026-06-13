@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: 2013 CrossFit Open Recap
 publishedDate: 2013-04-10
 tags:

@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: The New Air
 publishedDate: 2011-08-08
 tags:

@@ -1,6 +1,5 @@
 ---
 title: The Cost Rigid Processes Have on Collaboration and Informal Structures
-stage: seed        # seed | sprout | evergreen
 publishedDate: 2026-01-16
 tags:
   - Agile

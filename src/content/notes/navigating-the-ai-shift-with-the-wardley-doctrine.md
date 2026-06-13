@@ -1,8 +1,6 @@
 ---
-stage: seed
 title: Navigating the AI Shift With the Wardley Doctrine
 publishedDate: 2025-10-08
-featured: true
 cover: "../../assets/2025/10/create-a-bright-and-colouful-high-resolution-image-that-embodies-the.png"
 tags:
   - Agile

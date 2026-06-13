@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Linux + Chrome + Flash
 publishedDate: 2009-08-30
 tags:

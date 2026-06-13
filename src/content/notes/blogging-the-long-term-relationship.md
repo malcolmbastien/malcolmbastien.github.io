@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: "Blogging: The Long Term Relationship"
 publishedDate: 2009-02-12
 tags:

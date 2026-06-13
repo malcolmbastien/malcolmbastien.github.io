@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Search Ad Search Ad - Recursion Problem?
 publishedDate: 2009-10-26
 tags:

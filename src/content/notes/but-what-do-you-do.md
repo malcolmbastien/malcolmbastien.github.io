@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: But What Do You Do?
 publishedDate: 2010-03-25
 tags:

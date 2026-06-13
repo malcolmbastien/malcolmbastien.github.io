@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Plattan Plus
 publishedDate: 2011-05-14
 tags:

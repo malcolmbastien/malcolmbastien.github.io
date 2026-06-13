@@ -1,6 +1,5 @@
 ---
 title: Building Team Flow Mapping
-stage: seed        # seed | sprout | evergreen
 publishedDate: 2026-01-16
 tags:
   - AI

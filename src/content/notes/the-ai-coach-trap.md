@@ -1,6 +1,5 @@
 ---
 title: The AI coach trap
-stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
 publishedDate: 2026-12-30

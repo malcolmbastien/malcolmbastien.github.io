@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: In PostRank We Trust
 publishedDate: 2008-09-17
 tags:

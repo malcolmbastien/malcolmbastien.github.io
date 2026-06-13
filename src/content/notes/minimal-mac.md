@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Minimal Mac
 publishedDate: 2009-10-20
 tags:

@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: "9 Golden Rules for Agile Teams: Principles to Improve Collaboration"
 publishedDate: 2024-08-09
 tags:

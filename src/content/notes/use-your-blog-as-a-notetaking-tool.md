@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Use Your Blog as a Notetaking Tool
 publishedDate: 2009-02-14
 tags:

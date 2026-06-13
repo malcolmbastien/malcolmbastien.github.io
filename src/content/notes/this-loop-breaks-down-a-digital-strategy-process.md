@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: The Digital Strategy Process
 publishedDate: 2012-09-24
 tags:

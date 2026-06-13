@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Why Can The iPad Be Frustrating?
 publishedDate: 2012-01-08
 tags:

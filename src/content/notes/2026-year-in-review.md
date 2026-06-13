@@ -1,6 +1,5 @@
 ---
 title: 2026 Year In Review
-stage: seed        # seed | sprout | evergreen
 publishedDate: 2026-01-16
 tags:
   - Year-In-Review

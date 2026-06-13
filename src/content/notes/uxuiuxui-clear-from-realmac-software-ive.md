@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Clear from Realmac Software
 publishedDate: 2012-01-26
 tags:

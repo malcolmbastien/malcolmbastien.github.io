@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: When Identity and Blogs Don't Mix
 publishedDate: 2010-08-20
 tags:

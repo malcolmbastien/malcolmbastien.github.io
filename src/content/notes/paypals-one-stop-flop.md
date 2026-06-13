@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: PayPal's One-Stop Flop
 publishedDate: 2011-10-18
 tags:

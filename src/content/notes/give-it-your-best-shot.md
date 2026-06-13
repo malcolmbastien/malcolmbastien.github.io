@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Give it Your Best Shot
 publishedDate: 2011-08-18
 tags:

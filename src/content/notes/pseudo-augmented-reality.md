@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Pseudo Augmented Reality
 publishedDate: 2009-09-18
 tags:

@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: 2011 Accomplishments
 publishedDate: 2012-01-02
 tags:

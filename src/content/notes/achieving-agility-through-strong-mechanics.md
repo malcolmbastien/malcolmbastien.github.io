@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Achieving Agility Through Strong Mechanics
 publishedDate: 2024-09-23
 tags:

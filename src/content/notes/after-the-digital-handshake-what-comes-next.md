@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: After The Digital Handshake, What Comes Next?
 publishedDate: 2009-04-13
 tags:

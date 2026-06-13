@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Putting Metro on iOS
 publishedDate: 2012-08-02
 tags:

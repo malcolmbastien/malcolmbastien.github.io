@@ -1,8 +1,6 @@
 ---
-stage: seed
 title: Unmasking the Invisible Overhead of Meetings
 publishedDate: 2025-09-29
-featured: true
 cover: "../../assets/2025/09/create-a-highly-detailed-high-resolution-image-in-the-anime-style.png"
 tags:
   - Agile

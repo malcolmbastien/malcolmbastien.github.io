@@ -1,6 +1,5 @@
 ---
 title: Make Your Agile More DIY and Less SOP
-stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
 publishedDate: 2026-12-30

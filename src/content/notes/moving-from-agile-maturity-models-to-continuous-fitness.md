@@ -1,6 +1,5 @@
 ---
 title: Moving from Agile Maturity Models to Continuous Fitness
-stage: seed        # seed | sprout | evergreen
 tags:
   - Agile
 publishedDate: 2026-06-08

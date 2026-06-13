@@ -1,6 +1,5 @@
 ---
 title: 2025 Year in Review
-stage: sprout
 publishedDate: 2026-01-16
 tags:
   - Year-In-Review

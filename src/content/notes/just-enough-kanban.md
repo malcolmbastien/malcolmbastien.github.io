@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: Just Enough Kanban
 publishedDate: 2023-12-21
 tags:

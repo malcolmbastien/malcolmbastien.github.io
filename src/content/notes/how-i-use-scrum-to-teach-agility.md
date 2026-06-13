@@ -1,5 +1,4 @@
 ---
-stage: evergreen
 title: How I Use Scrum to Teach Agility
 publishedDate: 2023-05-20
 tags:

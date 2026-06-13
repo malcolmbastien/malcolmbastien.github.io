@@ -1,5 +1,4 @@
 ---
-stage: seed
 title: Speak Loudly
 publishedDate: 2009-06-29
 tags:
