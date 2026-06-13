@@ -3,7 +3,7 @@ stage: seed
 title: Social Being, Media Meaning
 publishedDate: 2009-08-05
 tags:
-  - General
+  - Social-Media
 ---
 Cheesy title I know, but I found that this idea recently taught to my by my science fiction professor a nice parallel to social media
 
@@ -12,6 +12,7 @@ Cheesy title I know, but I found that this idea recently taught to my by my scie
 **Other people think a lot, but really don't do anything.**
 
 How did I get this from science fiction? The idea I was taught was that you're only really free when you don't have complete knowledge. The two extremes were between being and meaning. If you have one you can't have the other.
+
 ## Social Beings
 
 What I see people fall into is two similar traps. On the one hand you might see people blog every day, post messages non-stop, participate and interact at a fast pace, or go to event after event. But in a way it's all just noise. At a certain point in time to achieve more activity, meaning must be removed. In this argument I take "Social Being" as meaning one who takes action, participates, and that someone who completely embodies the social being necessitates doing a lot, but who says anything useful less and less. Here are some examples of this:
@@ -23,4 +24,4 @@ What I see people fall into is two similar traps. On the one hand you might see 
 
 Thoughtful content. There's a market for it, but thoughtful content isn't powerful enough to move a pebble without some sort of action. People might very well understand and agree with the thoughts, but the lack of physical presence by the author or commitment to take action can alienate them. The great ideas shared, may well be great, but it's difficult to be socially relevant until they, or their author develop real physical presences, reputations, or reputation.
 
-**In the end, to be effective your actions need to ****mean something, and your ideas need to be executed.**
+**In the end, to be effective your actions need to mean something, and your ideas need to be executed.**

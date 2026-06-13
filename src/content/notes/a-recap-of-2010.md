@@ -15,7 +15,7 @@ summary: "A short list of my accomplishments in 2010."
 - Started [Coffee Is Beautiful](http://coffeeisbeautiful.com) and posted 221 times
 - Posted to [my Tumblr](http://malcolmbastien.tumblr.com) 515 times
 - Started learning Mandarin
-- Got a job a Microsoft
+- Got a job at Microsoft
 - Shipped [BM Stack.com](http://bmstack.com)
 - Read 25 books
 - Wrote 102 blog posts

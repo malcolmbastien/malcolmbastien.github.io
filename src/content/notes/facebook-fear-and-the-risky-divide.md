@@ -1,6 +1,6 @@
 ---
 stage: seed
-title: Facebook, Fear, and The Risky Devide
+title: Facebook, Fear, and The Risky Divide
 publishedDate: 2009-02-24
 tags:
   - Facebook

@@ -8,7 +8,7 @@ tags:
 
 ...And if you believe that, your company has probably been steadily dying over the past year.
 
-*Paranoia kills conversation. That's its point. But lac**k of **open** c**onversation kills companies.*
+*Paranoia kills conversation. That's its point. But lack of **open** conversation kills companies.*
 
 The worry that by joining in open conversations, companies would in fact to damage to their brand is still too common in big brands. Losing control frightens them. They're frightened that their actions might instigate mass volumes of negative comments, posts, and negative press... somehow.
 

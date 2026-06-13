@@ -1,12 +1,12 @@
 ---
 stage: seed
-title: Why I Don&#039;t Like New Charities Every Month
+title: Why I Don't Like New Charities Every Month
 publishedDate: 2009-04-25
 tags:
   - General
-  - technology
+  - Technology
   - Toronto
-  - transparency
+  - Transparency
 ---
 I don't like the idea because it's too faddish.
 
