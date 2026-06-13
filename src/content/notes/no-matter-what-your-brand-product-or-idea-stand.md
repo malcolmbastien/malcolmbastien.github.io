@@ -9,7 +9,7 @@ tags:
   - Image
   - Sketches
   - Social-Media
-cover: '../../assets/2012/09/tumblr_mb0u9r9ivt1qa77f2o1_1280.jpg"'
+cover: "../../assets/2012/09/tumblr_mb0u9r9ivt1qa77f2o1_1280.jpg"
 ---
 ![](../../assets/2012/09/tumblr_mb0u9r9ivt1qa77f2o1_1280.jpg)
 
