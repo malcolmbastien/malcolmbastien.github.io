@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import { unified } from '@astrojs/markdown-remark';
 import remarkDirective from 'remark-directive';
 import { remarkCallouts } from './src/lib/remark-callouts.mjs';
 import { remarkDraftContainer } from './src/lib/remark-draft.mjs';
@@ -22,8 +23,10 @@ export default defineConfig({
 		defaultStrategy: 'hover'
 	},
 	markdown: {
-		remarkPlugins: [remarkDirective, remarkDraftContainer, remarkCallouts, remarkWikiLinks, remarkLinkDistinction, remarkHashtags, remarkAssetShortcuts, remarkGallery],
-		rehypePlugins: [rehypeOptimizeImages],
+		processor: unified({
+			remarkPlugins: [remarkDirective, remarkDraftContainer, remarkCallouts, remarkWikiLinks, remarkLinkDistinction, remarkHashtags, remarkAssetShortcuts, remarkGallery],
+			rehypePlugins: [rehypeOptimizeImages],
+		}),
 	},
 	vite: {
 		plugins: [tailwindcss()]

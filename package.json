@@ -11,20 +11,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.2",
-    "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.18",
+    "@astrojs/sitemap": "^3.7.3",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.1",
     "@vercel/analytics": "^2.0.1",
     "astro": "^6.4.6",
     "remark-directive": "^4.0.0",
     "remark-parse": "^11.0.0",
-    "sharp": "^0.34.5",
-    "tailwindcss": "^4.1.18",
+    "sharp": "^0.35.1",
+    "tailwindcss": "^4.3.1",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "pagefind": "^1.4.0",
+    "pagefind": "^1.5.2",
     "typescript": "^5.9.3"
   }
 }
