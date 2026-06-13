@@ -10,6 +10,7 @@ tags:
   - Sketches
   - Social
   - Story
+cover: "../../assets/2012/10/tumblr_mbmsr8ebba1qa77f2o1_1280.jpg"
 ---
 ![](../../assets/2012/10/tumblr_mbmsr8ebba1qa77f2o1_1280.jpg)
 

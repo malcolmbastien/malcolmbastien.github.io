@@ -1,24 +1,4 @@
 import { visit } from 'unist-util-visit';
-import fs from 'fs';
-import path from 'path';
-
-const imageMetaCache = new Map();
-
-function getImageMeta(filePath) {
-  if (imageMetaCache.has(filePath)) {
-    return imageMetaCache.get(filePath);
-  }
-  
-  try {
-    const stats = fs.statSync(filePath);
-    const result = { exists: true, size: stats.size };
-    imageMetaCache.set(filePath, result);
-    return result;
-  } catch {
-    imageMetaCache.set(filePath, { exists: false });
-    return { exists: false };
-  }
-}
 
 export function rehypeOptimizeImages() {
   return (tree) => {

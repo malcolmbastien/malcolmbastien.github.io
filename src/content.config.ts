@@ -1,4 +1,5 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
 
 const notesCollection = defineCollection({
@@ -11,6 +12,7 @@ const notesCollection = defineCollection({
 		summary: z.string().optional(),
 		pinned: z.boolean().optional(),
 		cover: image().optional(),
+		coverImageAlt: z.string().optional(),
 	}),
 });
 

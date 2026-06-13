@@ -6,6 +6,7 @@ tags:
   - MadeWithPaper
   - Image
   - Sketches
+cover: "../../assets/2012/10/tumblr_mbe0cp4fp51qa77f2o1_1280.jpg"
 ---
 ![](../../assets/2012/10/tumblr_mbe0cp4fp51qa77f2o1_1280.jpg)
 

@@ -9,6 +9,7 @@ tags:
   - Sketches
   - Social-Media
   - UX
+cover: "../../assets/2012/09/tumblr_mb2li9kqvz1qa77f2o1_1280.jpg"
 ---
 ![](../../assets/2012/09/tumblr_mb2li9kqvz1qa77f2o1_1280.jpg)
 

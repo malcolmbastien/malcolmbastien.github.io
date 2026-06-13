@@ -8,6 +8,7 @@ tags:
   - Image
   - Sketches
   - Story
+cover: "../../assets/2012/09/tumblr_max5bwez5p1qa77f2o1_1280.jpg"
 ---
 ![](../../assets/2012/09/tumblr_max5bwez5p1qa77f2o1_1280.jpg)
 

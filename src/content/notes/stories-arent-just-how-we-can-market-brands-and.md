@@ -6,6 +6,7 @@ tags:
   - Image
   - Sketches
 summary: We look and see the world, but we understand it through stories.
+cover: "../../assets/2012/09/tumblr_mb2sjuzebm1qa77f2o1_1280.jpg"
 ---
 ![](../../assets/2012/09/tumblr_mb2sjuzebm1qa77f2o1_1280.jpg)
 
