@@ -2,9 +2,9 @@
 stage: seed
 title: Ryerson's Digital Media Zone
 publishedDate: 2009-12-10
-tags:F
+tags:
   - DMZ
-  - General
+  - Galleries
   - Ryerson
 ---
 ![](../../assets/2009/12/img_0001-scaled1000.jpg)
