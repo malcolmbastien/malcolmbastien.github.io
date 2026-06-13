@@ -3,8 +3,7 @@ title: Facebook Home
 publishedDate: 2013-04-15
 tags:
   - Android
-  - Facebook Home
-  - General
+  - Facebook
   - iOS
   - Mobile
 ---
