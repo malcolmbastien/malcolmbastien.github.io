@@ -4,7 +4,7 @@ title: notepad table is a table that is also a notepad. WANT
 publishedDate: 2010-11-09
 tags:
   - General
-  - Link
+  - Links
 ---
 [sausageoutthebombbaydoor](http://sausageoutthebombbaydoor.tumblr.com/post/1526411696/notepad-table-is-a-table-that-is-also-a-notepad-want):
 

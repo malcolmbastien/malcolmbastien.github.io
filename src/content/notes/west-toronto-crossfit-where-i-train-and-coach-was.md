@@ -4,7 +4,7 @@ title: West Toronto CrossFit Featured on BlogTO
 publishedDate: 2013-04-11
 tags:
   - CrossFit
-  - Gallery
+  - Galleries
 ---
 ![](../../assets/2013/04/tumblr_ml3appjrbu1qa77f2o1_1280.jpg)
 *Me doing a jerk of 135lbs.*

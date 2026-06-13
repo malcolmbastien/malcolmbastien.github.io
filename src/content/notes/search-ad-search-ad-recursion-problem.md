@@ -3,10 +3,9 @@ stage: seed
 title: Search Ad Search Ad - Recursion Problem?
 publishedDate: 2009-10-26
 tags:
-  - General
   - Google
   - Search
-  - sentiment
+  - Sentiment
   - Twitter
 ---
 I though crossed my mind that makes me question if advertising is anything close to being an appropriate element of real-time search today. The thought came to me when realizing that there’s so much sentiment data that’s been pulled together from tweets, that any query you throw at a Google real-time search engine would be easily answerable through the sentiment of posts users have made on your concern.
@@ -22,6 +21,9 @@ So I’ve made the query, and I see Brand X makes pretty bad headphones based on
 …”Does brand Y make good headphones worth buying?”
 
 And until I get a result that I’m happy with, I’ll keep using the ads as my guide for what to search next.
+
 To go really out on a limb on this specific example. If Google knew what ads to show me based on my first query, that Brand Y is related to what I searched, Brand X, what would be stoping them from doing that leg work for me?
+
 “You searched Brand X headphones and got the result that they are no good, but here’s the result of all these other headphones made by Brand Y, Brand Z, and Brand W for you to look at. Looks like Brand W got the best response. You can further investigate our results by clicking this link, or if you want to buy right away click this second link”.
+
 Who knows what real-time search will end up looking like.

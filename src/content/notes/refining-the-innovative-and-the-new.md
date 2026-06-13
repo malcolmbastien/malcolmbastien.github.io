@@ -3,7 +3,7 @@ stage: seed
 title: Refining The Innovative And The New
 publishedDate: 2011-08-15
 tags:
-  - Socia-Media
+  - Social-Media
   - Google
   - Apple
 ---

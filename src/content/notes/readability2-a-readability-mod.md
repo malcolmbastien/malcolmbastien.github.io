@@ -7,7 +7,7 @@ tags:
   - Freebies
   - General
   - MinimalMac
-  - Link
+  - Links
   - Readability
 ---
 [minimalmac](http://minimalmac.com/post/232156824/readability2-a-readability-mod):

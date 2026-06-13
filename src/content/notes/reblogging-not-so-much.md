@@ -3,8 +3,7 @@ stage: seed
 title: Reblogging - Not So Much
 publishedDate: 2010-01-18
 tags:
-  - General
-  - reblog
+  - Blogging
   - Tumblr
 ---
 Been feeling recently as I look over my Tumblr stream that reblogging is both a really good idea, and something that is a big crap-shoot to whether it improves my Tumblr experience or adds less desirable stuff to my stream.

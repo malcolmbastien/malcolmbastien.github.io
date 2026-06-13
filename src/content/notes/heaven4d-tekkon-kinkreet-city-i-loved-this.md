@@ -4,7 +4,7 @@ title: Tekkonkinkreet City
 publishedDate: 2013-03-11
 tags:
   - Anime
-  - Gallery
+  - Galleries
 ---
 ![](../../assets/2013/03/tumblr_mjf9dbvmf11rd00hmo5_1280.jpg)
 ![](../../assets/2013/03/tumblr_mjf9dbvmf11rd00hmo9_1280.jpg)

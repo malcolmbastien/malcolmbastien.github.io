@@ -1,15 +1,12 @@
 ---
 stage: seed
-title: Languages Evolve, Twitter&#039;s Should Too
+title: Languages Evolve, Twitter's Should Too
 publishedDate: 2009-02-11
 tags:
-  - Evan Prodromou
-  - General
   - Identi.ca
   - Laconica
-  - Open Source
+  - Open-Source
   - OpenID
-  - Twhirl
   - Twitter
 ---
 In case you hadn't known this before, @ reply's weren't a feature on Twitter originally.  It was something user's had started to do to help give context to their tweets.  That was a very important evolutionary step for Twitter, because Twitter as the "communications" tool wouldn't exist as it does today without the ability for people to carry out even rudimentary conversations on the service.

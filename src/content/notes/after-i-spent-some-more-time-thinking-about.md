@@ -9,6 +9,8 @@ tags:
   - Sketches
   - UX
 summary: "A sketch depicting the difference between digital strategy and UX strategy."
+featured: true
+cover: "../../assets/2012/09/tumblr_mavenv4oly1qa77f2o1_1280.jpg"
 ---
 ![](../../assets/2012/09/tumblr_mavenv4oly1qa77f2o1_1280.jpg)
 
