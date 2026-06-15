@@ -3,11 +3,13 @@ title: What Agile Frameworks Actually Do to Your Organization
 tags:
   - Agile
 publishedDate: 2026-12-30
-summary: Mapping agile constraints onto a grid of cost to change and time to change.
+summary: A mapping tool for seeing what agile frameworks do to your organization — where constraints sit on the grid, who controls them, and whether they can change.
 draft: true
 ---
 
 Agile frameworks promise flexibility. But what do they actually do to an organization's ability to change?
+
+Agile Software Development is a human system. The contexts, the people, and the work itself produce the knowledge needed to know what the standard should be. Prescriptions designed for digital systems don't transfer cleanly, and solutions only emerge through people working and collaborating. Mapping the constraints is a way to make that visible.
 
 If you've ever tried to modify a practice in a team that's "doing Scrum": moving a stand-up, changing how backlog refinement works, adjusting sprint length. And you hit resistance not from the team but from the framework itself. The framework has made that practice harder to change. Not because the practice is inherently difficult to modify. Because the framework has placed it in a position where changing it feels like breaking the rules.
 
@@ -36,19 +38,26 @@ to change │
           │  (moderate effort,  (resistant,
           │   can shift)         slow-moving)
           │
+          │                       ↑
+          │                  drift, norms,
+          │                  unwritten rules
           │
-Low cost  │  GASEOUS             LIQUID
-to change │  (shifting easily,  (flows with
-          │   easily reformed)    effort)
-          │
+Low cost  │  GASEOUS             SHIFTING
+to change │  (shifting easily,  (slow but volatile —
+          │   easily reformed)    nothing to anchor)
+          │                       →
           └──────────────────────────────────────────
           Short                            Long
                Time to change →
 ```
 
+The grid has a four-quadrant structure, but the right edge is its own thing. Practices at the extreme right are low-cost to change but change slowly — drift, cultural norms, unwritten rules. They're volatile in a way that can't be controlled, because they shift at the speed of the system around them, not at the speed of anyone's decision.
+
 The same constraint can sit in different positions depending on the organization. In one company, a stand-up format might be a "liquid" — changeable on a team's own authority. In another, it might be "bedrock" — standardized across the organization and effectively immovable without leadership approval.
 
 Mapping constraints onto this grid reveals a balance. It's not just a description of what is hard to change. It's a description of the balance between global standardization and local adaptability that an organization has struck. Sometimes that balance is explicit and deliberate. Sometimes it happened by accident.
+
+This mapping is also a useful exercise for teams to try in their own context. Working through the categories and marking where each constraint sits can surface conversations that don't usually happen.
 
 ---
 
@@ -56,83 +65,15 @@ Mapping constraints onto this grid reveals a balance. It's not just a descriptio
 
 The components that any agile framework introduces, modifies, or constrains:
 
-- **Meetings & cadences**
-  - Stand-ups
-  - Retrospectives
-  - Planning sessions
-  - Demos / reviews
-  - Refinement
-  - PI Planning (SAFe)
-  - Inspect & Adapt (SAFe)
-  - Sync meetings (SAFe)
-- **Roles**
-  - Scrum Master
-  - Product Owner
-  - Developer
-  - Release Train Engineer (SAFe)
-  - Solution Architect (SAFe)
-  - Product Management (SAFe)
-- **Responsibilities & decision rights**
-  - What each role is accountable for
-  - What each role can decide
-- **Team membership & size**
-  - Team size (Scrum: 3–9, SAFe: 5–11)
-  - Team composition (e.g. cross-functional)
-- **Team structures**
-  - Independent teams
-  - Agile Release Trains (SAFe)
-  - Solution Trains (SAFe)
-  - Portfolio structures (SAFe)
-- **Customer & stakeholder interfaces**
-  - Product Owner as customer proxy (Scrum)
-  - Service Delivery Manager (Kanban)
-  - Program-level customer feedback (SAFe)
-  - Direct customer involvement (or absence of it)
-- **Tools & artifacts**
-  - Jira configuration
-  - Boards and workflows
-  - Sprint Backlog (Scrum)
-  - Increment (Scrum)
-  - PI Objectives (SAFe)
-  - Features and Stories (SAFe)
-  - Reporting structure
-- **Work capture & planning**
-  - Backlogs
-  - Roadmaps
-  - Refinement
-  - Sprint commitment
-  - Definition of done
-  - Definition of ready
-- **Documentation**
-  - Required artifacts (or absence)
-  - Working software over comprehensive documentation
-- **Process & flow**
-  - Sprints / timeboxed iterations
-  - Continual flow / no fixed cadence
-  - WIP limits (Kanban)
-  - Pull systems
-- **Practices**
-  - Pair programming
-  - Test-driven development
-  - Continuous integration
-  - Continuous delivery
-  - Refactoring
-- **Metrics & measurement**
-  - Velocity (Scrum, informal)
-  - Service Agility Dashboard (Kanban)
-  - Program metrics (SAFe)
-  - Flow metrics
-- **Values**
-  - SAFe: alignment, built-in quality, transparency, program execution
-  - Scrum: commitment, focus, openness, respect, courage
-  - Kanban: customer focus, flow, leadership, understanding, agreement, respect
-- **Objectives & strategy**
-  - OKRs / prescribed objectives
-  - Strategic goals
-- **Risk management**
-  - Risk reviews (Kanban)
-  - Program-level risk management (SAFe)
-  - Implicit risk handling (Scrum)
+- **Meetings & cadences** — stand-ups, retrospectives, planning, demos, refinement
+- **Roles & responsibilities** — Scrum Master, Product Owner, Developer; what each role owns and decides
+- **Teams** — team size, composition, whether teams are independent (Scrum) or structured into release trains (SAFe)
+- **Customer interfaces** — how customers participate (or don't)
+- **Tools & artifacts** — Jira configuration, boards, named deliverables like Sprint Backlog or PI Objective
+- **Process & practices** — sprints vs. continual flow, WIP limits, technical practices
+- **Metrics** — velocity, Service Agility Dashboard, program metrics
+- **Values** — what the framework says matters
+- **Objectives & strategy** — OKRs, prescribed objectives, risk handling
 
 When mapping a framework's impact, you'd take each of these categories, mark where each sits on the grid *before* adoption, and then mark where it sits *after*. The difference is the framework's effect on the organization.
 
@@ -209,18 +150,6 @@ The frameworks that violate this principle (by standardizing team-internal pract
 Ownership and cost-to-change are linked but not identical. A constraint can have high cost to change *because* it's at the enterprise level — not because of any inherent complexity. Once management has standardized something, changing it requires management action. The cost is institutional, not technical.
 
 This is why framework adoption is so often a one-way ratchet. Once a standard is in place, moving it back down to team ownership requires the same kind of institutional effort that putting it there required. The grid shows the *state*. The ownership layer shows *who can change it*. Both are needed to understand what a framework has done to an organization.
-
-**Trust runs through the ownership layer.**
-
-Leaving a constraint at the team level is an act of trust in two directions. First, it requires trust among team members. They have to be able to work out their practices together, negotiate decisions, and resolve disagreements without escalation. A team that doesn't trust each other can't operate with volatile constraints. They'll either avoid the negotiation entirely (and let bad practices persist) or escalate every disagreement (which removes the time-saving benefit of local decision-making). High-trust teams can hold more fluid constraints because they're equipped to handle the friction those constraints produce.
-
-Second, it requires trust between the organization and the team. The organization has to believe that the team will make reasonable decisions, take responsibility for outcomes, and not need to be policed. A manager who doesn't trust their team will standardize things, because standards are a way of controlling behavior without having to supervise it. The "we do Scrum" framework gives the manager something to point to when asking whether the team is doing the right thing. Standards are, in part, a substitute for trust.
-
-The grid and the ownership layer are about what an organization is willing to trust the team with. An organization that puts most constraints in the high-cost zone is, implicitly, saying: *we don't trust our teams to make these decisions well*. An organization that leaves most constraints in the low-cost zone is saying: *we trust our teams, and we trust that trust will produce better outcomes than standardization would*.
-
-This is one of the deeper reasons why framework adoption is so common. Frameworks are a way for an organization to extend trust selectively, trusting the team to do the work but not trusting them to decide how. The framework fills the gap between the work itself and the way of working, which is the part the organization is unwilling to leave to local judgment.
-
-When the trust is real, when the organization genuinely believes in the team's capability and judgment, leaving constraints at the team level produces the kinds of outcomes agile was originally pointing toward: adaptability, ownership, and practices that fit the situation. When the trust is absent, when the standards exist as a control mechanism, not a coordination mechanism, the same setup produces something else: teams that are technically autonomous but practically constrained, and a layer of "we do Scrum" that papers over the lack of trust without addressing it.
 
 ---
 
@@ -325,68 +254,14 @@ This is true even for genuinely good standards. The risk is that no one can tell
 
 When a new practice or way of working is introduced as a standard — when it begins its life in the high-cost, long-time quadrant of the grid — it carries the most risk. There is no evidence that the practice works in this organization. There is no experience of what it looks like in different contexts. There is no feedback loop that would tell you, quickly, whether the practice is fit for purpose. The standard has all the weight of an institutional commitment and none of the evidence that the commitment is justified.
 
-This is exactly the opposite of how good standards tend to emerge.
+Good standards tend to emerge the other way: a new way of working starts small, gets tested by a single team, builds evidence, and only then gets promoted. The benefits of this organic promotion:
 
-A better pattern: a new way of working starts small. One team tries it. It might start in the volatile, low-cost, low-time quadrant of the grid — changeable, observable, easy to abandon. If it works, other teams adopt it. The practice builds evidence. The organization learns what it looks like at scale, what the failure modes are, and what conditions it requires to succeed. Only then, with experience and feedback, does it make sense to promote the practice to a standard — to move it from the bottom of the grid to the top.
-
-This organic promotion has several benefits:
-
-- **The standard has evidence behind it.** It wasn't chosen because a consultant recommended it or because a framework prescribes it. It was chosen because it worked in practice.
-- **The organization knows what the standard actually requires.** It has seen the practice in different contexts and has learned how to support it.
-- **The standard can be downgraded if it stops working.** Because it started small and grew, the organization has experience in *not* treating it as a standard. The downgrade path is familiar.
-- **The standard carries less risk of calcification.** It was once a team-level decision that proved its value. That history makes it easier to revisit when conditions change.
-
-A standard introduced as a standard, by contrast, has none of these benefits. It has weight but no track record. It is hard to change because changing it was never expected. And when it stops working, the organization has no practice of treating it as revisable.
-
-**The principle:**
-
-- **Let new practices start in the volatile zone.** Give teams the freedom to try things, observe what works, and build evidence.
-- **Promote to standards based on experience, not prescription.** A practice becomes a standard when the organization has seen it work and has learned what it requires.
-- **Keep a downgrade path visible.** Any standard should be revisable. If the cost of questioning a standard is too high, the standard is too rigid to be safe.
+- The standard has evidence behind it. It wasn't chosen because a consultant recommended it. It was chosen because it worked in practice.
+- The organization knows what the standard actually requires. It has seen the practice in different contexts and has learned how to support it.
+- The standard can be downgraded if it stops working. Because it started small and grew, the organization has experience in *not* treating it as a standard.
+- The standard carries less risk of calcification. It was once a team-level decision that proved its value. That history makes it easier to revisit when conditions change.
 
 The grid describes a state. The direction a constraint came from, and the direction it can still go, describes whether that state is sustainable. Constraints that moved up the grid through evidence are resilient. Constraints that were placed at the top from the start are fragile.
-
----
-
-## What Constraints Do to People
-
-There's another question the grid doesn't directly answer: what does living with a constraint do to the people who have to work under it?
-
-When a team's environment is full of standards (fixed practices, prescribed roles, rigid cadences, mandated tooling) their orientation shifts. They start to focus on the standards they are expected to follow. "Are we doing the stand-up correctly?" "Is the sprint commitment met?" "Is the burndown on track?" "Are we filling in the right fields on the board?" The standards become the work. The team is oriented toward compliance with the framework, and the framework becomes the primary thing they pay attention to.
-
-When a team's environment is more fluid, when practices are changeable, when decisions are made locally, when the way of working is something the team negotiates, something different happens. The team has to pay attention to each other and to the environment. They have to ask: *what does this situation actually require?* *How is the team feeling this week?* *What changed since last sprint?* *Is the way we're working still serving us, or do we need to adjust?* The team's orientation shifts from following standards to sensing situations.
-
-The two orientations are different in kind, not just degree.
-
-The standards-focused team is predictable. They've reduced ambiguity. They know what's expected, and they deliver against that expectation. Their output is consistent. Their coordination with other teams is straightforward. They pay a cost for this: they've outsourced the question of *how should we work* to whoever set the standards, and that question is no longer alive for them.
-
-The sensing-focused team is adaptive. They pay attention to context, to each other, to the changing demands of their work. They adjust their practices to fit the situation. Their output varies based on what the situation requires. They pay a cost for this: they have to do more thinking, more negotiation, more attention. They can't fall back on "the standard says so" when something is hard.
-
-Neither orientation is universally better. The grid influences which one a team develops.
-
-**These orientations reflect the trust the organization extends to the team, not just the constraints themselves.**
-
-The standards-focused orientation tends to emerge in low-trust environments. When an organization doesn't trust its teams to make good decisions, it standardizes those decisions and creates a framework the team can follow. The team, in turn, learns to pay attention to the framework rather than to the situation. Their attention follows the trust: the organization trusts them to follow standards, so they focus on standards.
-
-The sensing-focused orientation tends to emerge in high-trust environments. When an organization trusts its teams to make good decisions, it leaves the decisions to the team. The team, in turn, develops the muscle of paying attention to context, to each other, to what the situation actually requires. Their attention follows the trust too: the organization trusts them to sense, so they develop sensing.
-
-Trust and orientation are mutually reinforcing. A team in a high-trust environment that *also* has volatile constraints will develop sensing capability, which validates the trust, which allows more volatile constraints. A team in a low-trust environment that has high standards will develop compliance orientation, which confirms that standards are needed, which justifies more standardization. The two configurations become self-perpetuating.
-
-A team whose constraints sit mostly in the high-cost, long-time quadrant is being shaped toward the standards-focused orientation. The standards are doing the thinking for them. The team's attention goes to compliance rather than to the situation.
-
-A team whose constraints sit mostly in the low-cost, short-time quadrant is being shaped toward the sensing-focused orientation. There are fewer standards to follow, which means the team has to pay attention to what the situation actually requires. They develop the muscle of reading context, adjusting practice, and coordinating with each other based on what's happening now.
-
-This is part of what the agile values were trying to surface. The original signatories were pushing back against an environment where standards and processes had become the primary thing teams paid attention to. They wanted teams to be sensitive to their context, their customers, and each other. They saw the standards-focused orientation as a failure mode — one that produced predictability but not agility.
-
-The standards-focused orientation has its place. In regulated industries, in safety-critical systems, in large organizations where coordination is the dominant challenge, paying attention to standards is exactly the right thing to do. But in environments where the situation changes faster than the standards can keep up, the sensing-focused orientation is the one that keeps the team effective.
-
-**The principle:**
-
-- **Constraints shape attention.** A team living under many fixed constraints learns to pay attention to those constraints. A team living with more fluid constraints learns to pay attention to context.
-- **Be deliberate about which orientation you're building.** If you want sensing, you need to leave room for the team to sense. If you want compliance, you need to set the standards clearly and make the standards the work.
-- **Watch for the drift.** It's easy for an organization to start with a sensing-oriented team and slowly standardize them into a compliance-oriented one. The team looks more "aligned." They've also stopped paying attention to anything but the standards.
-
-The grid describes where constraints sit. The ownership layer describes who controls them. The direction of movement describes whether they can change. The orientation they produce describes what kind of attention the team develops under them. And the trust the organization extends shapes which configuration is even possible. All of these matter when deciding what a framework should and shouldn't standardize.
 
 ---
 
@@ -396,7 +271,7 @@ Mapping agile constraints onto a grid of cost to change and time to change gives
 
 A framework moves constraints. It changes their cost and time to change. It shifts the balance between global standardization and local adaptability. This shift has consequences, sometimes good, sometimes bad, often invisible until the organization needs to change something it can no longer change easily.
 
-The grid shows the *state* of a constraint. State alone doesn't tell the full story. Five dimensions together describe what a framework has done to an organization:
+The grid shows the *state* of a constraint. State alone doesn't tell the full story. Three dimensions together describe what a framework has done to an organization:
 
 **Where a constraint sits.** The grid. Cost to change on one axis, time to change on the other. Standards and volatile practices occupy different quadrants, and the framework determines which side most of them land on.
 
@@ -404,11 +279,7 @@ The grid shows the *state* of a constraint. State alone doesn't tell the full st
 
 **How it got there, and whether it can move.** Standards introduced as standards carry the most risk. Institutional weight without evidence, no downgrade path, no experience of treating them as revisable. Standards that emerged from team-level practice and were promoted based on experience are more resilient. A constraint's history is part of its fragility.
 
-**What it does to the people living under it.** Standards-oriented teams focus on compliance. Sensing-oriented teams focus on context. The grid shapes which orientation a team develops. An organization that wants sensing needs to leave room for sensing. An organization that standardizes everything produces teams that pay attention to the standards.
-
-**And what trust the organization extends.** High-trust environments can support volatile constraints, because the team has the trust among itself to negotiate decisions and the trust from the organization to take responsibility. Low-trust environments produce standards, because standards are a way of controlling behavior without supervision. Trust and orientation reinforce each other. The configuration an organization has today is the configuration the trust is shaping, and the configuration the trust will continue to shape, unless someone intervenes.
-
-Six things worth taking away:
+Four things worth taking away:
 
 **First, frameworks are not neutral.** They change what is hard to change. You should know what trade you're making.
 
@@ -418,8 +289,6 @@ Six things worth taking away:
 
 **Fourth, the riskiest standards are those introduced as standards.** New practices should start small, build evidence, and be promoted to standards only when the organization has seen them work. Standards placed at the top of the grid from the start have weight but no track record.
 
-**Fifth, constraints shape attention.** A team living under many fixed constraints learns to pay attention to those constraints. A team living with more fluid constraints learns to pay attention to context. Be deliberate about which orientation you're building. Watch for the drift from sensing to compliance.
+The point of mapping is to make these choices visible, so the people doing the work can have better conversations about how to work — and, when it makes sense, work without the framework at all.
 
-**Sixth, standards are a substitute for trust.** High-trust environments can support volatile constraints. Low-trust environments produce standards, because standards are a way of controlling behavior without supervision. Trust and orientation reinforce each other. The drift from sensing to compliance often follows the trust, not the other way around.
-
-The grid doesn't tell you what to do. It tells you what your framework has done. The rest is judgment.
+The grid doesn't tell you what to do. It tells you what your framework has done. The rest is judgment — but now the judgment has a map.
