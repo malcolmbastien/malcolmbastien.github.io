@@ -49,8 +49,8 @@ Standardized agile operating models don't make teams more productive. Instead, t
 
 The goal is to create the right environment where desirable, value-creating behaviours can emerge. These capabilities include:
 
-- **Responsible-Autonomy:** Instead of imposing standardized workflows and templates, let teams design and adapt their own processes within their area of control.
-- **Shared Context:** Instead of relying on written documentation and formal alignment, build trust and shared purpose by working together and tackling real challenges.
+- **Responsible-Autonomy:** Instead of imposing standardized workflows and templates, let teams design and adapt their own ways of working within their area of control.
+- **Shared Context:** Instead of relying on written rules and formal roles, build trust and shared purpose by working together and tackling real challenges.
 - **Psychological Safety:** Teams need the safety to run experiments, learn from what doesn't work, and pivot. Environments where the boss or the formal process prevents experimentation limit learning.
 
 Don't fix behaviours by designing more processes or implementing a new framework. Create an environment where teams have the freedom to get messy, do things differently, collaborate, and connect. Create an environment in which the organization's social texture supports the work.
