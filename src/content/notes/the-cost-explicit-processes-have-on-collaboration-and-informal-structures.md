@@ -19,7 +19,7 @@ In this death spiral, ways of working that don't fit into a corporate playbook a
 
 The core assumption underlying these models is that _more structured, ordered systems are more effective._
 
-But processes designed to make an organization more "efficient" with more explicit, defined procedures actually make it slower, rigid, and fragile.
+But processes designed to make an organization more "efficient" through explicit procedures strip away the informal collaboration that makes agile work.
 
 ## Informal Structures and Adaptive Capacity
 
