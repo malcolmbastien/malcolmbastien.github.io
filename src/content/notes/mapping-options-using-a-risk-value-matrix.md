@@ -4,6 +4,7 @@ publishedDate: 2023-08-26
 tags:
   - Frameworks
   - Tools
+cover: "../../assets/2023/08/image-13.png"
 ---
 When it comes to dealing with all of the things competing for your attention, one habit I've picked up from practicing [Getting Things Done](https://gettingthingsdone.com/) for over ten years is to start writing down everything that's on my mind and putting it all into an Inbox.
 

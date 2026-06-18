@@ -6,6 +6,7 @@ tags:
   - Dependencies
   - Teams
   - Tools
+cover: "../../assets/2023/12/team-dependency-matrix-frame-4.jpg"
 ---
 In the large organizations I work with, dependencies are the number one blocker preventing fast flow. In these organizations that, for budgetary reasons, do annual planning, dependencies are the most significant determining factor to the success of their plans and the biggest afterthought.
 

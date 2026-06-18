@@ -5,6 +5,7 @@ tags:
   - Mental-Model-Diagrams
   - Wardley-Maps
   - Product-Management
+cover: "../../assets/2022/12/mental-models-diagrams-wardley-maps-areas-to-invest-.jpg"
 ---
 
 [[capturing-customer-jobs-using-a-mental-model-diagram|Last time]], we discussed a team where, to secure funding, they needed to present a strategy of where and how to invest. The team began by holding a series of workshops that I facilitated. In those workshops, I introduced the concept of Mental Model Diagrams that helps to match users' needs with features that support users in meeting those needs. 

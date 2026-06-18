@@ -8,6 +8,7 @@ tags:
   - Leadership
   - Management
   - Wardley-Maps
+cover: "../../assets/2025/10/image-2.png"
 ---
 The speed at which AI coding agents help teams develop new features breaks the old models of work. If the bottleneck is no longer coding, then we need to focus our attention elsewhere. There's always a bottleneck, and it will either move upstream or downstream of the coding activity.
 

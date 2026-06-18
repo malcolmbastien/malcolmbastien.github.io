@@ -6,6 +6,7 @@ tags:
   - AI
   - Tools
   - Kano-Model
+cover: "../../assets/2025/08/image-12.png"
 ---
 Many agile transformations focus on replacing rigid, waterfall processes with a standard set of ceremonies, roles, and artifacts. Agile maturity is often measured by how many of these practices a team has adopted, or making sure they've adopted the right ones: Long-lived teams are "more agile" than project teams; frequent deployments are "more agile" than big-bang releases.
 

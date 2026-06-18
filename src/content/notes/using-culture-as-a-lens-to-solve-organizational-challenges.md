@@ -4,6 +4,7 @@ publishedDate: 2024-01-06
 tags:
   - Culture
   - Tools
+cover: "../../assets/2024/01/png-2.png"
 ---
 ![](../../assets/2024/01/image-1.png)
 *Image: [Strategyer](https://www.strategyzer.com/)*
