@@ -11,11 +11,11 @@ Agile Coaches often work with teams and organizations deeply entrenched in the f
 
 ## The Practice Trap
 
-While codified Agile practices are intended to help promote agility, they're really kind of bad at it. In my experience, they limit and constrain teams because of how they're implemented or executed, how they affect team design and how teams operate, or because it leads to management exerting control over teams by forcing teams to follow specific practices.
+While codified Agile practices are intended to help promote agility, they're really kind of bad at it. In my experience, they limit and constrain teams based on how they're implemented, how they affect teams are designed and operate, and how they lead to management exerting control over teams.
 
-The revelation I often share with Managers and Scrum Masters is that none of the practices they've been trained on or told to focus on matter. The proliferation of Agile frameworks has created such a fixation on implementing and managing practices that it's easy for teams to lose focus on why they're doing them in the first place.
+The revelation I often share with Managers and Scrum Masters is that none of the practices they've been trained on or told to focus matter as much as the function they serve. The proliferation of Agile frameworks has created such a fixation on implementing and managing practices that it's easy for teams to lose focus on why they're doing them in the first place.
 
-The presence of practices indicates some level of intent or goals, and that intent can be a good starting point for exploring what they're really trying to accomplish. That intent is the opportunity to introduce a different perspective on the Agile practices most teams have come to take for granted:
+The presence of practices indicates some level of intent or goals, and that intent can be a good starting point for exploring what goals they're really trying to accomplish. Goals and intent create the opportunity to introduce different perspectives on Agile practices most teams take for granted:
 
 - **Retrospective meetings aren't important** - but constant and continuous improvement is.
 - **Stand-up meetings aren't important** - but teams working together and collaborating is.
@@ -26,7 +26,7 @@ The presence of practices indicates some level of intent or goals, and that inte
 - **Product Owners aren't important** - but developers having contact with real users or customers is.
 - **Kanban boards aren't important** - but improving the end-to-end delivery of the value stream is.
 
-Behaviours are what's important when it comes to improving agility, not practices. Agile frameworks are all about roles, meetings, artifacts and processes. When you take away the frameworks, what you have left are ways of working based on principles.
+When it comes to improving agility, changing behaviours is what's important. Agile frameworks are all about roles, responsibilities, meetings and artifacts. When you take away the frameworks, what you have left are ways of working based on principles.
 
 It doesn't just stop at behaviours. We can go even deeper. Looking more closely at the last point: "Kanban boards aren't important - but improving the end-to-end delivery of the value stream is." Why is improving the end-to-end delivery of the value stream important? Can we validate that statement? It may sound like a good idea, but does that make it important?
 
@@ -62,7 +62,7 @@ When examining Agile practices, consider asking these questions:
 - **Self-organization and Trust**: Does this practice support self-organization, or is it a case of Agile mixed with command and control? Did the team decide on the solution, or was it pushed onto them?
 - **Value vs. Waste**: Is this truly adding value, or is it waste dressed up as a value-adding activity? What would happen if we stopped this practice? What would happen if we did more of it?
 - **Real Problem Solving**: Ask "What problem does this solve?" Are actual problems being solved, or are practices being implemented "just in case" some edge case occurs?
-- **Talk to people**: Ask some different people what they think about the practice. Ask the team and ask their managers. What do they think the purpose is? Do they find it valuable?
+- **Talk to people**: Ask people what they think about the practice. Ask the team and ask their manager. What do they think the purpose is? Do they find it valuable?
 
 ## Conclusion
 
