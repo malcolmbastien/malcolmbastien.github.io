@@ -3,12 +3,9 @@ title: Social Media Is Not For You
 publishedDate: 2009-01-12
 tags:
   - Efficiency
-  - Facebook
   - Productivity
   - Social-Media
-  - TweetDeck
   - Twitter
-  - Zenbe
 ---
 I've been getting into a lot recently of being connected to systems, while at the same time really being as disconnected as possible from them.  I starting thinking about that while reading Tim Ferriss's book, the 4 Hour Work Week.  Tim gives examples of businesses that he's set up, which require very little interaction from him anymore; check the email once a week, attend meetings rarely, etc... I think there's a lesson there that can be applied to social media which will help people change their perspectives on how involved they need to be in the different conversations happening on a personal level (as apposed to representing a business), and on traits of being an active versus a passive participator.
 
@@ -24,7 +21,7 @@ Chances are you'll never get an @reply or a DM on Twitter where if you don't rep
 
 People underestimate how much of a distraction checking different social networks and pulling up their clients is.  Enabling notifications for twitter clients I've noticed was one of the worst productivity decisions I could have made 8 months ago, and it was only two days ago that I learned the trick to increasing my focus, being more productive, and saving time.
 
-**Don't Multi-task**
+### Don't Multi-task
 
 For all the talk that's out there, not multitasking seems to be an idea that's pretty well known by now.  Wrong.  People still have the same problem of standing up from a three hour computer session, looking up, and then trying to figure out what it was they just did for the past three hours.
 
@@ -34,7 +31,7 @@ Since upfront the barrier to participate in social networks is so low, and there
 
 David Allen, Tim Ferris, and so many others have all repeated the key to being productive: Focus.  Let's create a new definition for what a distraction is, after all, distractions are the enemy of focus:
 
-**Anything that takes your eyes' attention is a distraction.**
+### Anything that takes your eyes' attention is a distraction.
 
 This definition is really dangerous in the sense that it automatically creates hundreds of distractions for us in our environment.  Not only are notifications distractions now, but our work environment is now filled and cluttered with distractions. Now, even our desktop environments and office tools are out to get us.
 
@@ -42,26 +39,26 @@ This definition is really dangerous in the sense that it automatically creates h
 
 A social media diet is not to remove social media from your lifestyle or habits, but to remove it from your hourly or to-the-minute habits.
 
-**1. Turn General Notifications Off**
+### 1. Turn General Notifications Off
 
 Turn them all off if possible.  If you find it to difficult to cut yourself off completely, only enable notifications for messages directed at you personally, @replies and direct messages.  Everything else can wait.
 
-**2. Batch It**
+### 2. Batch It
 
 If you can manage it, check and correspond on social networking sites at specific times of day: Morning, before lunch, mid-afternoon, early evening.  This rule is the hardest for me.
 
-**3. Reduce Your Inboxes**
+### 3. Reduce Your Inboxes
 
 This is the same rule that applies to emails, and tasks.  Either combine the streams, or choose to not follow some.  There are tools that make doing this much easier.  Two that I've used in the pass include the Flock Browser, Zenbe, and Digsby.
 
-**4. Focus on Sharing**
+### 4. Focus on Sharing
 
 A more productive way to participate on social networks is to give yourself a goal of sharing great quality content with your followers.  Find some great articles, and share them using the FriendFeed bookmarklet.  This gives you the opportunity to participate, and is also one of the fastest ways build credit and credibility with your followers through the network.
 
-**5. Use TweetDeck**
+### 5. Use TweetDeck
 
 TweetDeck is the "fire hose" of information streams, it's a bad idea to stick your face in front of it all day, but it's great to the big picture with only a glance. You can use whatever twitter client you prefer, but I find that to get all the information I need at the fastest speed, TweetDeck wins hands down.
 
 Here's another great post by Leo Babauta on tips to use Twitter productively: A Minimalist’s Guide to Using Twitter Simply, Productively, and Funly
 
-**How many times have you checked Twitter while reading this article?
+*How many times have you checked Twitter while reading this article?*

@@ -11,7 +11,7 @@ tags:
 ---
 Following along with some more PodCamp Toronto discussion that happened this past weekend (most of it at the party sponsored by Molson), a lot of the content at the sessions that happened tended to lean on what might make an important topic at other unconference to come.
 
-**The problem of perception.**
+## The problem of perception
 
 So much of the session topics at PodCamp Toronto were looking at issues from a certain perspective and how applying social media best practices is the natural next step in solving the problem.  One thing that maybe should have been talked about a bit more is the idea that social media really isn’t able to solve our problems if we are looking at problems from the wrong angle in the first place.
 
@@ -25,7 +25,7 @@ Reframing the problem like this might be the key to getting insights into how ne
 
 Being able to reframe these problems is going to be the key to finding creative solutions for them. Lets look at the problem from a different perspective, and even trying to solve them indirectly.  For instance...
 
-Assuming they are still around... **What will the news stand of the future look like if we all use ebooks? ***(Ah, now you see the point of the title!)*
+Assuming they are still around... **What will the news stand of the future look like if we all use ebooks?** *(Ah, now you see the point of the title!)*
 
 Or if we though of journalists as the equivalent of open source programmers... **How will journalists and news papers survive if the product is free?**
 
