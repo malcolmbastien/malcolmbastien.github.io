@@ -1,5 +1,5 @@
 ---
-title: Addressing the Root Causes of Coordination Costs
+title: Addressing the Root Cause of Coordination Costs
 tags:
   - Agile
   - Lean
