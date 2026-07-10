@@ -14,9 +14,7 @@ It's important to notice when an organization's approach to Agile no longer alig
 
 ## Build Your Process Incrementally and Iteratively
 
-Corporate agile transformations have turned into large-scale standardization projects. If your process were a software product, this would be the same as doing a high-risk, "big bang" release.
-
-Every single agile process should developed locally and incrementally. Start by identifying your immediate goals, then introduce the minimum structure and process necessary to achieve them. Resist the urge to over-specify roles, tools, and methods.
+Agile processes should be developed locally and incrementally. Start by identifying your immediate goals, then introduce the minimum structure and process necessary to achieve them. Resist the urge to over-specify roles, tools, and methods.
 
 > [!NOTE]
 > 1. Start where you are now
