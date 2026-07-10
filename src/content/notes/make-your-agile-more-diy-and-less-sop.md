@@ -65,4 +65,4 @@ For this DIY mindset to work, you need the right environment: one that supports,
 
 A team's process should be a snapshot of their current best understanding of how to deliver value. Process is not just an input, it's a product of the team's learning and experience.
 
-For Coaches, agile guidance shouldn't start with _what_ a team's process should be, it should be to build the engine: start with collaboration, start with reflection, start by taking actions to make things better.
+For Agile Coaches, guidance shouldn't start with _what_ a team's process should be, it should be to build the engine: start with collaboration, start with reflection, start by taking actions to make things better.
