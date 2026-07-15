@@ -5,7 +5,6 @@ tags:
   - Agile
 publishedDate: 2026-07-14
 summary: Modern frontier AI product leaders are finding success by embracing the original Agile principles
-draft: true
 ---
 
 When product and engineering leaders at frontier AI companies give guidance to developers on how to succeed with AI, the lessons they share are the same ones Agile software development first promoted 25 years ago: Deliver working software frequently, let customer feedback and real-world usage guide development, and prioritize lightweight, continuous alignment and coordination.
