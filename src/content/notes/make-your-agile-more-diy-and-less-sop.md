@@ -55,7 +55,7 @@ It's okay to try things.
 
 Teams don't deliver valuable by adopting frameworks or collecting certifications. Value is delivered by people. Sometimes the distinction is lost and people start to confuse agile process adoption as the goal.
 
-For this DIY mindset to work, you need the right environment: one that supports, trusts the people involved, and tolerates failures on the path to improvement.
+For this D.I.Y. mindset to work, you need the right environment: one that supports teams, trusts the people involved, and tolerates failures on the path to improvement.
 
 > [!Quote]
 > "Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done."
@@ -63,4 +63,4 @@ For this DIY mindset to work, you need the right environment: one that supports,
 
 A team's process should be a snapshot of their current best understanding of how to deliver value. Process is not just an input, it's a product of the team's learning and experience.
 
-For Agile Coaches, guidance shouldn't start with _what_ a team's process should be, it should be to build the engine: start with collaboration, start with reflection, start by taking actions to make things better.
+For Agile Coaches, guidance shouldn't start with _what_ a team's process should be, it should be to build the engine: start with improving collaboration, start with improving reflection, start by taking actions to remove friction and make things better.

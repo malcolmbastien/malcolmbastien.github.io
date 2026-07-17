@@ -29,7 +29,7 @@ From the Manifesto for Agile Software Development:
 
 Because generating code has become incredibly cheap and fast, the speed of software development has accelerated to the point where every other activity risks becoming a bottleneck.
 
-To maintain high development velocity, developers may be inclined to maximize time spent building. But when teams stop writing PRDs and requirements or attending design reviews and planning meetings, alignment gaps become visible only after code is completed and deployed. The alignment gap causes teams to ship disconnected features, duplicating effort, and realizing they've built the wrong thing only after the code is deployed. Faster development makes poor alignment more expensive.
+To maintain high development velocity, developers may be inclined to maximize time spent building. But when teams stop writing PRFDs and requirements or attending design reviews and planning meetings, alignment gaps become visible only after code is completed and deployed. The alignment gap causes teams to ship disconnected features, duplicating effort, and realizing they've built the wrong thing only after the code is deployed. Faster development makes poor alignment more expensive.
 
 Unconstrained velocity accelerates waste. Agile can help by replacing heavy, upstream review gates with lightweight, continuous alignment. Practices like user stories and user story mapping aren't just artifacts, they're lightweight and effective techniques for team conversations and coordination.
 

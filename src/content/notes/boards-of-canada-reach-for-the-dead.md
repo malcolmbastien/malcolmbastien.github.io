@@ -2,7 +2,7 @@
 title: Boards of Canada - Reach for the Dead
 publishedDate: 2013-05-23
 tags:
-  - boards of canada
+  - Boards-of-Canada
   - Music
   - Video
 ---
