@@ -39,7 +39,7 @@ Kanban's higher-level cadences offer a practical way to check whether team-level
 
 Without these higher-level feedback loops, team-level agility is just local optimization.
 
-## How to Start Solving Outcomes
+## Connect Work to Outcomes
 
 Most agile transformations start with team-level work. They consider team-level work to be the biggest risk and focus on implementing team-level ceremonies. Because team practices directly affect delivery work, they're a favourite of managers who love visible, measurable activity.
 
