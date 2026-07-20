@@ -2,7 +2,7 @@
 title: Agility Can Only Be Pulled, It Can’t Be Pushed
 tags:
   - Agile
-publishedDate: 2026-12-30
+publishedDate: 2026-07-20
 summary: While pushing change is an activity, pulling change is a capability that empowers self-organizing teams to solve their own challenges.
 ---
 
