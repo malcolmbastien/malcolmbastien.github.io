@@ -49,10 +49,12 @@ Another requirement for pull-based change is a safe-to-fail culture. If a team's
 ### Conclusion
 
 > "True agility means that teams are constantly working to evolve their processes to deal with the particular obstacles they are facing at any given time."
-> —Lean Enterprise
+> — Lean Enterprise
 
 Both approaches to change have their own challenges.
 
-**Push-based change** requires selecting the right process, designing new systems, change management, rollout planning, communication, training, and reporting.
+**Pull-based change** requires building the organizational maturity to enable pull-based change, trust, creating an continuous improvement culture and nurturing psychological safety.
 
-**Pull-based change** requires building the organizational maturity to enable pull-based change, trust, continuous improvement culture and psychological safety.
+**Push-based change** requires selecting the right process, designing new systems, new teams, doing change management, rollout planning, communication, training, and reporting. 
+
+Unfortunately, even with these challenges, push-based change this approach only works for ordered systems. Pushed-based change simply can't work as a method to design a complex system.
