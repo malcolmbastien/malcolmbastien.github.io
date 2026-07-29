@@ -33,7 +33,7 @@ Using AI to jump straight to a polished deliverable skips this entire learning l
 
 Agility isn't something you can prompt, install, or buy. Agility emerges as people, policies, systems, structures and processes adapt and evolve together. Real organizational change requires growth in both the system _and_ the people inside it.
 
-# Structural Changes Last
+## Structural Changes Last
 
 Generative AI code can be quickly tested and refactored, but using AI to redesign team structures or workflows is a completely different story.
 
