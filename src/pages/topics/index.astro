@@ -1,6 +1,11 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import {
+    FEATURED_TOPICS,
+    EXCLUDED_FROM_POPULAR,
+    POPULAR_LIMIT,
+} from "../../data/featured-topics";
 
 const allNotes = await getCollection("notes");
 
@@ -12,6 +17,28 @@ allNotes.forEach((note) => {
 });
 
 const sortedTopics = Object.entries(topicCounts).sort((a, b) => a[0].localeCompare(b[0], undefined, { sensitivity: 'base' }));
+
+const featuredSet = new Set<string>();
+const popularTopics: Array<[string, number, boolean]> = [];
+
+for (const topic of FEATURED_TOPICS) {
+    if (topicCounts[topic] && !featuredSet.has(topic)) {
+        popularTopics.push([topic, topicCounts[topic], true]);
+        featuredSet.add(topic);
+        if (popularTopics.length >= POPULAR_LIMIT) break;
+    }
+}
+
+if (popularTopics.length < POPULAR_LIMIT) {
+    const excluded = new Set(EXCLUDED_FROM_POPULAR);
+    const topByCount = Object.entries(topicCounts)
+        .filter(([topic]) => !featuredSet.has(topic) && !excluded.has(topic))
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    for (const [topic, count] of topByCount) {
+        if (popularTopics.length >= POPULAR_LIMIT) break;
+        popularTopics.push([topic, count, false]);
+    }
+}
 
 const groupedTopics = sortedTopics.reduce((acc, [topic, count]) => {
     let firstChar = topic[0].toUpperCase();
@@ -42,52 +69,85 @@ const topicSlug = (topic: string) => topic.replace(/\s+/g, '-').toLowerCase();
     <main>
         <section class="py-section-gap bg-paper-white dark:bg-ink-slate">
             <div class="max-w-5xl mx-auto px-gutter">
-                <!-- Hero -->
-                <header class="mb-16 border-b border-border-muted dark:border-on-surface-variant pb-12">
-                    <div class="max-w-3xl">
-                        <span class="text-mono-sm text-terracotta-accent uppercase tracking-widest mb-4 block">All Topics</span>
-                        <h1 class="font-display text-display-lg text-ink-slate dark:text-inverse-on-surface mb-6">Topics Index</h1>
-                        <p class="text-body-lg text-on-surface-variant dark:text-outline-variant leading-relaxed">
-                            Browse the collection by subject.
-                        </p>
-                    </div>
-                </header>
+                <!-- Popular Topics -->
+                {popularTopics.length > 0 && (
+                    <section class="mb-16">
+                        <header class="mb-8 flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
+                            <div>
+                                <span class="text-mono-sm text-terracotta-accent uppercase tracking-widest mb-3 block">Popular</span>
+                                <h2 class="font-display text-4xl text-ink-slate dark:text-inverse-on-surface">Popular Topics</h2>
+                            </div>
+                        </header>
 
-                <!-- A-Z Index Navigation -->
-                <nav class="sticky top-20 bg-paper-white/90 dark:bg-ink-slate/90 backdrop-blur-sm z-40 py-6 mb-12 border-b border-border-muted dark:border-on-surface-variant overflow-x-auto whitespace-nowrap no-scrollbar">
-                    <div class="flex gap-4 md:gap-6 items-center">
-                        <span class="text-label-caps text-on-surface-variant dark:text-outline-variant">Jump to</span>
-                        <div class="flex gap-3 md:gap-5">
-                            {alphabet.map(char => (
-                                <a class="text-label-caps hover:text-terracotta-accent transition-colors text-on-surface-variant dark:text-outline-variant" href={`#${char === "#" ? "num" : char}`}>{char}</a>
+                        <div class="flex flex-wrap gap-3">
+                            {popularTopics.map(([topic, count, isFeatured]) => (
+                                <a
+                                    class="inline-flex items-center gap-2 pl-3 pr-4 py-2 rounded-full bg-surface-container-low dark:bg-ink-slate/30 border border-border-muted dark:border-on-surface-variant hover:border-terracotta-accent hover:bg-terracotta-accent/5 dark:hover:bg-terracotta-accent/10 transition-colors group"
+                                    href={`/topics/${topicSlug(topic)}`}
+                                >
+                                    {isFeatured && (
+                                        <span
+                                            class="w-1.5 h-1.5 rounded-full bg-terracotta-accent shrink-0"
+                                            aria-label="Featured topic"
+                                        ></span>
+                                    )}
+                                    <span class="text-body-md text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors">
+                                        {topic}
+                                    </span>
+                                    <span class="text-mono-sm text-xs text-on-surface-variant dark:text-outline-variant">
+                                        {count}
+                                    </span>
+                                </a>
                             ))}
                         </div>
-                    </div>
-                </nav>
+                    </section>
+                )}
 
-                <!-- Topic Sections -->
-                <div class="space-y-section-gap">
-                    {alphabet.map((letter) => {
-                        const topics = groupedTopics[letter];
-                        return (
-                        <section class="scroll-mt-32" id={letter === '#' ? 'num' : letter}>
-                            <div class="flex items-baseline border-b border-ink-slate dark:border-inverse-on-surface pb-4 mb-8">
-                                <h2 class="font-display text-4xl text-ink-slate dark:text-inverse-on-surface mr-4">{letter}</h2>
-                                <span class="text-label-caps text-on-surface-variant dark:text-outline-variant">{letter === '#' ? 'Numbers' : 'Alphabetical Index'}</span>
-                            </div>
+                <!-- All Topics -->
+                <section>
+                    <header class="mb-8 flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
+                        <div>
+                            <span class="text-mono-sm text-terracotta-accent uppercase tracking-widest mb-3 block">All</span>
+                            <h2 class="font-display text-4xl text-ink-slate dark:text-inverse-on-surface">All Topics</h2>
+                        </div>
+                    </header>
 
-                            <div class="columns-1 sm:columns-2 md:columns-3 gap-8 space-y-4">
-                                {topics.map(([topic, count]) => (
-                                    <a class="flex justify-between items-center group py-2 border-b border-border-muted/50 dark:border-on-surface-variant/50" href={`/topics/${topicSlug(topic)}`}>
-                                        <span class="text-body-md text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors">{topic}</span>
-                                        <span class="text-mono-sm text-xs text-on-surface-variant dark:text-outline-variant">{count}</span>
-                                    </a>
+                    <!-- A-Z Index Navigation -->
+                    <nav class="sticky top-20 bg-paper-white/90 dark:bg-ink-slate/90 backdrop-blur-sm z-40 py-6 mb-12 border-b border-border-muted dark:border-on-surface-variant overflow-x-auto whitespace-nowrap no-scrollbar">
+                        <div class="flex gap-4 md:gap-6 items-center">
+                            <span class="text-label-caps text-on-surface-variant dark:text-outline-variant">Jump to</span>
+                            <div class="flex gap-3 md:gap-5">
+                                {alphabet.map(char => (
+                                    <a class="text-label-caps hover:text-terracotta-accent transition-colors text-on-surface-variant dark:text-outline-variant" href={`#${char === "#" ? "num" : char}`}>{char}</a>
                                 ))}
                             </div>
-                        </section>
-                        );
-                    })}
-                </div>
+                        </div>
+                    </nav>
+
+                    <!-- Topic Sections -->
+                    <div class="space-y-section-gap">
+                        {alphabet.map((letter) => {
+                            const topics = groupedTopics[letter];
+                            return (
+                            <section class="scroll-mt-32" id={letter === '#' ? 'num' : letter}>
+                                <div class="flex items-baseline border-b border-ink-slate dark:border-inverse-on-surface pb-4 mb-8">
+                                    <h3 class="font-display text-4xl text-ink-slate dark:text-inverse-on-surface mr-4">{letter}</h3>
+                                    <span class="text-label-caps text-on-surface-variant dark:text-outline-variant">{letter === '#' ? 'Numbers' : 'Alphabetical Index'}</span>
+                                </div>
+
+                                <div class="columns-1 sm:columns-2 md:columns-3 gap-8 space-y-4">
+                                    {topics.map(([topic, count]) => (
+                                        <a class="flex justify-between items-center group py-2 border-b border-border-muted/50 dark:border-on-surface-variant/50" href={`/topics/${topicSlug(topic)}`}>
+                                            <span class="text-body-md text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors">{topic}</span>
+                                            <span class="text-mono-sm text-xs text-on-surface-variant dark:text-outline-variant">{count}</span>
+                                        </a>
+                                    ))}
+                                </div>
+                            </section>
+                            );
+                        })}
+                    </div>
+                </section>
             </div>
         </section>
     </main>
