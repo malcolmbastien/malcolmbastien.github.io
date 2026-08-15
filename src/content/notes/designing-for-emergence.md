@@ -3,7 +3,7 @@ title: Designing for Emergence
 tags:
   - Agile
 publishedDate: 2026-12-30
-summary: Practice-level standards and interface-level standards aren't equally risky. Designing for emergence means knowing which is which — and giving practices room to evolve before they become standards.
+summary: Practice-level standards and interface-level standards aren't equally risky. Designing for emergence means knowing which is which and giving practices room to evolve before they become standards.
 draft: true
 ---
 
