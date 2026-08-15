@@ -4,7 +4,7 @@ tags:
   - Agile
   - Metrics
   - Cognitive-load
-publishedDate: 2026-12-30
+publishedDate: 2026-08-15
 summary: When AI automates routine execution, bottlenecks shift to team cognitive load, requiring organizations to rethink how they optimize for fast flow
 ---
 
