@@ -22,7 +22,7 @@ When AI automates routine tasks, that downtime disappears. Work becomes concentr
 
 AI agents can work virtually infinitely, but human cognitive capacity is finite. There is a hard ceiling on the number of complex decisions a person can make in a day before speed and quality drop. Organizations building systems for fast flow will have to prioritize optimizing team cognitive load as much as they do how work moves through a value stream.
 
-## When Work Items Write Themselves
+## When Execution Is No Longer the Constraint
 
 Agile encourages teams to develop software incrementally, making small changes to reduce complexity and increase the speed of learning. Today, a user can describe a broad product vision to an AI agent, and the agent can autonomously decompose the problem, determine the architecture, create a plan, generate tasks, distribute them to sub-agents, and write the code from a single input.
 
@@ -31,11 +31,11 @@ A CFD won't be much use if it only tracks AI throughput, because execution throu
 A modern CFD must capture where human judgment and decision-making exist in the workflow:
 - Problem framing and discovery
 - Evaluating trade-offs
-- Creating cross-team alstill ignment
+- Creating cross-team alignment
 - Validating or reworking AI-generated outputs
 - Reviewing product outcomes
 
-## Rethinking System Boundaries
+## Modeling the Real Constraints to Fast Flow
 
 For a CFD to remain useful, its scope must encompass the system's actual constraints. If the bottleneck lies outside the boundaries of your diagram, the chart stops providing insights and becomes unhelpful.
 
