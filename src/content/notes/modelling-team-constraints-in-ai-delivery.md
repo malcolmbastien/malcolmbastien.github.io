@@ -2,6 +2,7 @@
 title: Modelling Team Constraints in AI Delivery
 tags:
   - Agile
+  - AI
   - Metrics
   - Cognitive-load
 publishedDate: 2026-08-15
@@ -13,14 +14,6 @@ A Cumulative Flow Diagram (CFD) exposes bottlenecks in a system by tracking the 
 Before AI, CFDs helped highlight the queues between different activities. Today, AI agents can collapse those activities into a single, automated workflow that don't require any human input. When a single prompt can trigger the analysis, architecture, code generation, and test execution for a feature that previously took weeks, what use does a CFD still have in that case?
 
 Even when AI enables teams to produce an exploding volume of work at high speed, constraints don't disappear, they only move. With AI agents handling routine work, people are left operating in a continuous state of highly demanding high-context, non-routine cognitive work, causing a new set of bottlenecks to emerge.
-
-## The Loss of "Productive Downtime"
-
-In the pre-AI era, even simple tasks required a lot of waiting, which gave developers breathing room. Developers spent time updating Jira, sitting in meetings, responding to emails, or waiting for dependencies. The friction of everyday work created waste, but it also gave people a chance to rest between cognitively intense tasks.
-
-When AI automates routine tasks, that downtime disappears. Work becomes concentrated in high-judgment decision-making and high-context collaboration—requiring deep focus, rapid context switching, aligning with others and balancing trade-offs.
-
-AI agents can work virtually infinitely, but human cognitive capacity is finite. There is a hard ceiling on the number of complex decisions a person can make in a day before speed and quality drop. Organizations building systems for fast flow will have to prioritize optimizing team cognitive load as much as they do how work moves through a value stream.
 
 ## When Execution Is No Longer the Constraint
 
@@ -34,6 +27,14 @@ A modern CFD must capture where human judgment and decision-making exist in the 
 - Creating cross-team alignment
 - Validating or reworking AI-generated outputs
 - Reviewing product outcomes
+
+## The Loss of "Productive Downtime"
+
+In the pre-AI era, even simple tasks required a lot of waiting, which gave developers breathing room. Developers spent time updating Jira, sitting in meetings, responding to emails, or waiting for dependencies. The friction of everyday work created waste, but it also gave people a chance to rest between cognitively intense tasks.
+
+When AI automates routine tasks, that downtime disappears. Work becomes concentrated in high-judgment decision-making and high-context collaboration—requiring deep focus, rapid context switching, aligning with others and balancing trade-offs.
+
+AI agents can work virtually infinitely, but human cognitive capacity is finite. There is a hard ceiling on the number of complex decisions a person can make in a day before speed and quality drop. Organizations building systems for fast flow will have to prioritize optimizing team cognitive load as much as they do how work moves through a value stream.
 
 ## Modeling the Real Constraints to Fast Flow
 
