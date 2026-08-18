@@ -4,7 +4,6 @@ tags:
   - Agile
 publishedDate: 2026-08-18
 summary: Achieving fast flow team comes from identifying and removing sources of delay, not from return-to-office mandates.
-draft: true
 ---
 
 When a distributed team struggles to collaborate, the first response is often a push to co-locate. It sounds reasonable, but it skips the most important step of figuring out what the real problems hurting collaboration are.
