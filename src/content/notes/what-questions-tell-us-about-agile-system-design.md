@@ -64,19 +64,19 @@ When the overarching goal is standardization, what you end up with are highly co
 
 When asked operational questions, refrain from handing out a standardized set of instructions. Instead, apply the following four-step coaching approach:
 
-### 1. Analyze the root cause before prescribing solutions
+### Analyze the root cause before prescribing solutions
 
 When a team brings an operational request, avoid jumping straight to a solution. Questions usually arrive as fixed conclusions, "How do we do X?" which are often several steps removed from the real issue. Take time to explore what environmental pressures, policies, or trust gaps prompted the question in the first place, so you help people solve the actual problem rather than add another workaround or band-aid.
 
 To make the systemic context visible, sketch a problem tree or lightweight systems map together. Trace how the question connects to the workflow, handoffs, stakeholders, or other processes related to the request.
 
-### 2. Guide with principles rather than fixed recipes
+### Guide with principles rather than fixed recipes
 
 Agility relies on teams developing their own problem-solving capability. When teams ask a question, instead of offering a direct answer, try to find a relevant principle or story to help them decide for themselves. This approach helps teams build judgment and make context-appropriate choices more independently.
 
 Try helping them write down the original question or challenge, capture what they want to happen as a result, identify which Agile principles or values are relevant, and, lastly, think about what a solution that aligns with those principles might look like.
 
-### 3. Watch for recurring patterns
+### Watch for recurring patterns
 
 Pay special attention when one-off questions start becoming recurring themes. When the same question appears across multiple teams, it indicates a structural issue in how the organization has designed its teams, or broader governance, or cultural issues or trends.
 
