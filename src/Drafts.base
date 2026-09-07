@@ -15,4 +15,4 @@ views:
       - property: file.mtime
         direction: ASC
     columnSize:
-      file.name: 499
+      file.name: 361

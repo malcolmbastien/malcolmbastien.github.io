@@ -62,7 +62,7 @@ When the overarching goal is standardization, what you end up with are highly co
 - **Learning is minimized:** When people follow prescribed processes, they don't learn for themselves. Teams fail to develop the internal capability to solve their own problems in the future.
 - **Rigidity increases:** Processes become difficult to adjust once codified into official standards, sacrificing adaptability for uniformity.
 
-When asked operational questions, refrain from handing out a standardized set of instructions. Instead, apply the following four-step coaching approach:
+When asked operational questions, refrain from handing out a standardized set of instructions. Instead, consider trying one of the following three approaches:
 
 ### Analyze the root cause before prescribing solutions
 

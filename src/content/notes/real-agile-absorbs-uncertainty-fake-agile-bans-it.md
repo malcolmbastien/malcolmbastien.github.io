@@ -84,7 +84,7 @@ Fake Agile manages to defeat itself twice over: it designs away the uncertainty 
 
 ## Three Key Takeaways
 
-1. **Uncertainty is conserved:** Frameworks that claim to eliminate uncertainty simply push it into shadow processes, blinding leadership to real risk.
+1. **Uncertainty is conserved:** It's impossible to eliminate uncertainty, but efforts to eliminate uncertainty simply push it into teams that have been trained not to deal with it.
 2. **Choose where stability lives:** Placing stability in the environment makes you fragile when the market shifts. Building stability into your system's capacity to absorb change builds true resilience.
 3. **Agility is the capacity to adapt:** Standardization buys consistency, but it costs the team its ability to adapt. A team that isn't allowed to improvise is just a compliant team.
 
