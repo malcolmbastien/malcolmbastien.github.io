@@ -8,19 +8,20 @@ publishedDate: 2026-09-06
 summary: Popular Agile frameworks weaken top-down control without creating genuine self-management. Teams are left with unclear coordination, or bureaucracy is added back to manage the gap. Kanban offers practical ways to put people in control of the whole flow of work.
 ---
 
-Organizations that widely implement Scrum often create Agile teams and Product Owners without giving up top-down management. They add backlogs, sprint goals, user stories, estimations, reviews, and reporting to the existing hierarchy. The result is often the same central control, with more roles and more meetings around it.
+When an organization adopts Agile, the changes are easy to see. Scrum teams appear, Product Owners are appointed, and backlogs, sprint goals, and ceremonies fill the calendar. All of that attention lands on the team. The real challenge sits outside it: how work enters the system, how teams coordinate with one another, who resolves the dependencies no single team owns. Teams are told they are empowered, yet the conditions their work depends on are decided elsewhere. Most Agile implementations have no answer for this. The result is team-level agile: the team under a microscope, while the wider system that determines whether work can flow is left untouched.
 
-Teams are told they are empowered, yet they have little choice over what to work on, must obtain approvals, negotiate dependencies, escalate blocked work, and wait for decisions from elsewhere. Product Owners translate management priorities into backlogs, while teams remain responsible for execution, with little say in scope, demand, priorities, or the wider workflow.
-
-The Agile frameworks organizations implement promote giving teams more freedom and autonomy, at least on the surface. Zoom out to the wider organization and that idea fades. Coordination problems emerge between teams, and they are impossible to predict and plan for in sufficient detail. Organizations respond in one of two ways: ignore the coordination issues, or add "agile bureaucracy" back into the system with layers of management, ceremonies, and reviews.
+The frameworks promote giving teams more freedom and autonomy, at least on the surface. Zoom out to the wider organization and that idea fades. Coordination problems emerge between teams, and they are impossible to predict and plan for in sufficient detail. Organizations respond in one of two ways: ignore the coordination issues, or add "agile bureaucracy" back into the system with layers of management, ceremonies, and reviews.
 
 Neither response delivers the performance the organization hoped for. Work stalls in dependency queues while decisions crawl up and down the hierarchy. The most committed people quietly absorb the coordination work, becoming unofficial liaisons who hold delivery together. When commitments slip, teams get blamed for problems that live in the system around them. The transformation loses credibility, and the underlying problem survives every process change and reorganization.
 
+> [!IMPORTANT]
+> Flow is organizational, so agile delivery systems need to be too. They cannot only be team-level. In a complex environment, agile requires systems that facilitate team coordination, group prioritization, and dependency management.
+
 ## Coordination can happen above the work or within it
 
-Organizations can generally coordinate work in two ways. In the first, managers set priorities, allocate work, and resolve conflicts above the people doing the work. The people doing the work are treated as specialized parts. The system depends on formal roles and replaceable skills: when one person is unavailable, someone with a similar role can take over. It is clear who decides, but adaptation and ownership suffer.
+Organizations can generally coordinate work in two ways. In the first, managers set priorities, allocate work, and resolve conflicts at a level above the people doing the work. The people doing the work are treated as specialized parts based on their role and skillset. The system depends on formal roles and replaceable skills: when one person is unavailable, someone with a similar role can take over. It is clear who does what, but adaptability and ownership suffer.
 
-The other way gives the people doing the work responsibility for coordinating it. A group does more than choose how to implement a feature. It helps set goals, manages its workflow, measures service performance, and improves how the work gets done. People have overlapping and broader skills, so the group can adapt without waiting for a central allocator. Management still establishes direction and negotiates constraints, but does not prescribe every detail.
+The other way gives the people doing the work responsibility for coordinating it. A group does more than choose how to implement a feature. It works together to set goals, manages its workflow, measures its own performance, and improves how the work gets done. People have overlapping and broader skills, so the group can adapt without waiting for a centralized management. Management still establishes direction and negotiates constraints, but does not prescribe every detail.
 
 In practice, that means the group can work with its partners to:
 
@@ -32,6 +33,8 @@ In practice, that means the group can work with its partners to:
 - determine who owns an interface between teams.
 
 This does not mean that every group decides everything independently. It means that the people who understand the work have both the authority and the responsibility to coordinate it with the wider system. They can negotiate with management and neighbouring teams rather than waiting for a decision to travel down through the hierarchy.
+
+Coordination, in this sense, is not governance of agile teams — a phrase that usually means someone above the team checking its process, velocity, and compliance. It is the concrete activities the work itself depends on: sequencing shared work, resolving a dependency between two teams, deciding how requests enter a team, agreeing who owns an interface. Each of these crosses a team boundary, and none of them can be done well from outside the work.
 
 ## Frameworks weakened supervision without redesigning coordination
 
