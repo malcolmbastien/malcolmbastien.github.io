@@ -6,6 +6,7 @@ tags:
   - Systems Thinking
 publishedDate: 2026-09-06
 summary: Popular Agile frameworks weaken top-down control without creating genuine self-management. Teams are left with unclear coordination, or bureaucracy is added back to manage the gap. Kanban offers practical ways to put people in control of the whole flow of work.
+draft: true
 ---
 
 When an organization adopts Agile, the changes are easy to see. Scrum teams appear, Product Owners are appointed, and backlogs, sprint goals, and ceremonies fill the calendar. All of that attention lands on the team. The real challenge sits outside it: how work enters the system, how teams coordinate with one another, who resolves the dependencies no single team owns. Teams are told they are empowered, yet the conditions their work depends on are decided elsewhere. Most Agile implementations have no answer for this. The result is team-level agile: the team under a microscope, while the wider system that determines whether work can flow is left untouched.

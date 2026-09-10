@@ -29,7 +29,7 @@ The questions team members ask provide real-time clues about certain aspects of 
 
 Metrics dashboards do not capture team uncertainty, operational gaps, or cultural friction. Clues to these problems surface in retrospectives, daily team collaboration, and informal conversations. The questions teams ask during daily work provide immediate feedback regarding system design, organizational culture, and the adoption of agile principles.
 
-> [!note] Kinds of questions
+> [!NOTE]
 > There is value in noticing what kind of question is being asked. Some questions connect to concepts that are core to agility: flow, value, customers, feedback, the delivery of working software. Plenty of others are purely mechanical: how to configure a tool, which fields have to be filled in, or who owns a process. Those mechanical questions deal with process friction. They consume attention while leaving the real goal of improving value delivery untouched.
 
 ## Four Example Questions and Their Causes
