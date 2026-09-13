@@ -1,6 +1,5 @@
 ---
 title: What Questions Tell Us About Agile System Design
-stage: seed
 tags:
   - Agile
   - Kanban
