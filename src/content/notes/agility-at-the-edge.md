@@ -6,7 +6,6 @@ tags:
   - Organizational-Design
 publishedDate: 2026-09-13
 summary: Organizational agility is not achieved by frameworks or certralized control, it is maintained by giving teams at the edge the authority and guardrails to continuously adapt how they work to remain fit for purpose as customer needs and market conditions evolve.
-draft: true
 ---
 
 Organizational Agile transformations usually start with the same pattern: choose a framework, install it, train people, declare mission accomplished, and move on. The underlying assumption is that an Agile transformation is a target-state project that ends once the framework is fully implemented and all teams are aligned to it.
