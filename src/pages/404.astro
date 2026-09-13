@@ -3,21 +3,28 @@ import Layout from "../layouts/Layout.astro";
 
 const title = "404 - Page Not Found | Malcolm Bastien";
 const description = "The page you're looking for doesn't exist or may have been moved.";
+
+const destinations = [
+    { href: "/", title: "Blog", description: "Thoughts on agile delivery, organizational design, and the craft of building products." },
+    { href: "/archives", title: "Archives", description: "Browse all articles by year — a complete index of published writing." },
+    { href: "/topics", title: "Topics", description: "Explore writing organized by subject — from Agile to Systems Thinking." },
+    { href: "/about", title: "About", description: "My background, philosophy, and the tools I use daily." },
+];
 ---
 
 <Layout title={title} description={description}>
-    <main>
+    <main class="w-full">
         <!-- 404 Hero -->
-        <section class="bg-paper-white dark:bg-ink-slate border-b border-border-muted dark:border-on-surface-variant">
-            <div class="max-w-5xl mx-auto px-gutter py-24 md:py-32 flex flex-col items-center text-center">
-                <span class="text-mono-sm text-terracotta-accent mb-4 tracking-widest uppercase">Error 404</span>
-                <h1 class="font-display text-display-lg text-ink-slate dark:text-inverse-on-surface mb-8 max-w-2xl">
+        <section class="border-b border-border-delicate">
+            <div class="max-w-page mx-auto px-margin-mobile md:px-gutter py-24 md:py-32 flex flex-col items-center text-center">
+                <span class="font-code-sm text-code-sm text-accent-flow mb-4 tracking-widest uppercase">Error 404</span>
+                <h1 class="font-display text-display-mobile md:text-display text-text-primary mb-8 max-w-2xl">
                     404 — Page Not Found
                 </h1>
-                <p class="text-body-lg text-on-surface-variant dark:text-outline-variant max-w-xl mb-12">
+                <p class="font-body-lead text-body-lead text-text-secondary max-w-xl mb-12">
                     The trail seems to have gone cold. The page you are looking for may have been moved, deleted, or never existed.
                 </p>
-                <a class="group flex items-center gap-3 bg-ink-slate dark:bg-paper-white text-paper-white dark:text-ink-slate px-8 py-4 text-label-caps hover:-translate-y-0.5 transition-all duration-200 shadow-sm" href="/">
+                <a class="group flex items-center gap-3 bg-text-primary text-surface-page px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest rounded-lg hover:-translate-y-0.5 transition-all duration-200 shadow-sm" href="/">
                     Return to Homepage
                     <span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
                 </a>
@@ -25,29 +32,19 @@ const description = "The page you're looking for doesn't exist or may have been 
         </section>
 
         <!-- Navigation Grid -->
-        <section class="max-w-5xl mx-auto px-gutter py-24">
+        <section class="max-w-page mx-auto px-margin-mobile md:px-gutter py-24">
             <div class="flex flex-col items-center text-center">
                 <div class="mb-12">
-                    <span class="text-mono-sm text-terracotta-accent uppercase tracking-widest block mb-4">Navigation</span>
-                    <h2 class="font-display text-headline-md text-ink-slate dark:text-inverse-on-surface">Where to next?</h2>
+                    <span class="font-code-sm text-code-sm text-accent-flow uppercase tracking-widest block mb-4">Navigation</span>
+                    <h2 class="font-headline-md text-headline-md text-text-primary">Where to next?</h2>
                 </div>
                 <div class="grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 max-w-4xl">
-                    <a class="group block" href="/">
-                        <h3 class="font-display text-headline-sm text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors mb-2">Blog</h3>
-                        <p class="text-body-md text-on-surface-variant dark:text-outline-variant">Thoughts on agile delivery, organizational design, and the craft of building products.</p>
-                    </a>
-                    <a class="group block" href="/archives">
-                        <h3 class="font-display text-headline-sm text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors mb-2">Archives</h3>
-                        <p class="text-body-md text-on-surface-variant dark:text-outline-variant">Browse all articles by year — a complete index of published writing.</p>
-                    </a>
-                    <a class="group block" href="/topics">
-                        <h3 class="font-display text-headline-sm text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors mb-2">Topics</h3>
-                        <p class="text-body-md text-on-surface-variant dark:text-outline-variant">Explore writing organized by subject — from Agile to Systems Thinking.</p>
-                    </a>
-                    <a class="group block" href="/about">
-                        <h3 class="font-display text-headline-sm text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors mb-2">About</h3>
-                        <p class="text-body-md text-on-surface-variant dark:text-outline-variant">My background, philosophy, and the tools I use daily.</p>
-                    </a>
+                    {destinations.map((dest) => (
+                        <a class="group block" href={dest.href}>
+                            <h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-accent-flow transition-colors mb-2">{dest.title}</h3>
+                            <p class="font-body-md text-body-md text-text-secondary">{dest.description}</p>
+                        </a>
+                    ))}
                 </div>
             </div>
         </section>

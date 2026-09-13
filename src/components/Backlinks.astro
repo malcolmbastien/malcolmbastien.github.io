@@ -17,14 +17,14 @@ const backlinkedNotes = rawBacklinkedNotes
     backlinkedNotes.length > 0 && (
         <section>
             <div class="mb-8">
-                <h3 class="small-caps text-xs font-bold tracking-[0.2em] text-slate-500 dark:text-slate-400">Connected Notes</h3>
+                <h3 class="font-code-sm text-code-sm uppercase tracking-widest text-text-muted">Connected Notes</h3>
             </div>
 
             <div>
                 {backlinkedNotes.map((note) => (
                     <a href={`/notes/${note.id.replace('.md', '')}`} class="group block cursor-pointer">
                         <div class="flex-1">
-                            <time class="text-[0.7rem] uppercase tracking-[0.2em] font-bold text-slate-500 dark:text-slate-400 mb-2 block leading-none">
+                            <time class="font-code-sm text-[0.7rem] uppercase tracking-wider text-text-muted mb-2 block leading-none">
                                 {note.displayDate.toLocaleDateString("en-US", {
                                     month: 'short',
                                     day: 'numeric',
@@ -32,11 +32,11 @@ const backlinkedNotes = rawBacklinkedNotes
                                     timeZone: 'UTC'
                                 })}
                             </time>
-                            <h4 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white group-hover:text-terracotta-accent dark:group-hover:text-terracotta-accent transition-colors leading-tight -mt-1 decoration-2 underline-offset-4 group-hover:underline">
+                            <h4 class="font-display text-headline-md text-text-primary group-hover:text-accent-flow transition-colors leading-tight decoration-2 underline-offset-4 group-hover:underline">
                                 {note.data.title}
                             </h4>
                             {note.data.summary && (
-                                <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-xl">
+                                <p class="text-text-secondary text-body-md leading-relaxed max-w-xl">
                                     {note.data.summary}
                                 </p>
                             )}

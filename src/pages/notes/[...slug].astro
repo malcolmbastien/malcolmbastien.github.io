@@ -6,14 +6,27 @@ export async function getStaticPaths() {
 	const notes = await getCollection('notes');
 	const backlinksMap = await import('../../lib/backlinks.ts').then(m => m.buildBacklinksMap());
 
+	const published = notes
+		.filter((n) => !n.data.draft)
+		.sort((a, b) => {
+			const dateA = a.data.publishedDate ? new Date(a.data.publishedDate).getTime() : 0;
+			const dateB = b.data.publishedDate ? new Date(b.data.publishedDate).getTime() : 0;
+			return dateB - dateA;
+		});
+
 	return notes.map((entry: CollectionEntry<'notes'>) => {
          const relatedSlugs = backlinksMap[entry.id] || [];
          const relatedNotes = notes.filter(n => relatedSlugs.includes(n.id));
+         const index = published.findIndex((n) => n.id === entry.id);
+         const prevNote = index >= 0 && index < published.length - 1 ? published[index + 1] : undefined;
+         const nextNote = index > 0 ? published[index - 1] : undefined;
          return {
              params: { slug: entry.id.replace('.md', '') },
              props: {
                  entry,
-                 backlinkedNotes: relatedNotes
+                 backlinkedNotes: relatedNotes,
+                 prevNote,
+                 nextNote,
              },
          };
      });
@@ -22,12 +35,14 @@ export async function getStaticPaths() {
 interface Props {
 	entry: CollectionEntry<'notes'>;
 	backlinkedNotes: CollectionEntry<'notes'>[];
+	prevNote?: CollectionEntry<'notes'>;
+	nextNote?: CollectionEntry<'notes'>;
 }
 
-const { entry, backlinkedNotes } = Astro.props;
+const { entry, backlinkedNotes, prevNote, nextNote } = Astro.props;
 const { Content, headings } = await render(entry);
 ---
 
-<NoteLayout frontmatter={entry.data} backlinkedNotes={backlinkedNotes} noteBody={entry.body} headings={headings}>
+<NoteLayout frontmatter={entry.data} backlinkedNotes={backlinkedNotes} noteBody={entry.body} headings={headings} prevNote={prevNote} nextNote={nextNote}>
 	<Content />
 </NoteLayout>

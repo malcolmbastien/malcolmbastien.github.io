@@ -15,35 +15,26 @@ import SearchComponent from "../components/Navigation/Search.astro";
             </>
         )}
         <style is:inline>
-            .search-highlight {
-                background-color: #dcfce7;
-                padding: 0 2px;
-                border-radius: 2px;
-            }
-            .dark .search-highlight {
-                background-color: #166534;
-                color: #f0fdf4;
-            }
-            /* Pagefind uses mark tags for highlighting */
+            .search-highlight,
             mark {
-                background-color: #dcfce7;
+                background-color: #FBF1ED;
                 color: inherit;
                 padding: 0 2px;
                 border-radius: 2px;
             }
+            .dark .search-highlight,
             .dark mark {
-                background-color: #166534;
-                color: #f0fdf4;
+                background-color: #2a1c15;
+                color: #f2f1ee;
             }
         </style>
     </Fragment>
 
-    <main class="w-full max-w-7xl mx-auto px-6 py-12 min-h-screen" data-pagefind-ignore>
-        <div class="space-y-12 w-full">
-            <header>
-                <h1 class="text-4xl font-bold tracking-tight text-navy-900 dark:text-white uppercase mb-8">
-                    Search
-                </h1>
+    <main class="w-full" data-pagefind-ignore>
+        <div class="max-w-3xl mx-auto px-margin-mobile md:px-gutter py-12 md:py-16">
+            <header class="mb-10">
+                <span class="font-code-sm text-code-sm text-accent-flow uppercase tracking-widest block mb-2">Explore the Archive</span>
+                <h1 class="font-display text-display-mobile md:text-display text-text-primary tracking-tight">Search</h1>
             </header>
 
             <SearchComponent />

@@ -40,6 +40,8 @@ if (popularTopics.length < POPULAR_LIMIT) {
     }
 }
 
+const popularNames = new Set(popularTopics.map(([topic]) => topic));
+
 const groupedTopics = sortedTopics.reduce((acc, [topic, count]) => {
     let firstChar = topic[0].toUpperCase();
     if (!/^[A-Z]$/.test(firstChar)) {
@@ -66,95 +68,126 @@ const topicSlug = (topic: string) => topic.replace(/\s+/g, '-').toLowerCase();
     description="Browse the collection by subject."
     type="website"
 >
-    <main>
-        <section class="py-section-gap bg-paper-white dark:bg-ink-slate">
-            <div class="max-w-5xl mx-auto px-gutter">
-                <!-- Popular Topics -->
-                {popularTopics.length > 0 && (
-                    <section class="mb-16">
-                        <header class="mb-8 flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
-                            <div>
-                                <span class="text-mono-sm text-terracotta-accent uppercase tracking-widest mb-3 block">Popular</span>
-                                <h2 class="font-display text-4xl text-ink-slate dark:text-inverse-on-surface">Popular Topics</h2>
-                            </div>
-                        </header>
+    <main class="w-full">
+        <div class="w-full max-w-page mx-auto px-margin-mobile md:px-gutter py-12 md:py-16">
+            <!-- Masthead -->
+            <section class="flex flex-col gap-6 pb-8">
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex items-center gap-2 text-text-muted">
+                        <span class="font-code-sm text-[0.6875rem] uppercase tracking-wider text-accent-flow font-medium">Archives</span>
+                        <span class="text-text-muted font-code-sm text-[0.6875rem]">/</span>
+                        <span class="font-code-sm text-[0.6875rem] uppercase tracking-wider text-text-secondary">Explore by Theme</span>
+                    </div>
+                </div>
+                <div class="max-w-3xl flex flex-col gap-4">
+                    <h1 class="font-display text-display-mobile md:text-display text-text-primary tracking-tight">Topics</h1>
+                    <p class="font-body-lead text-body-lead text-text-secondary">
+                        Browse every thread of thinking, organised into a living taxonomy of subjects and themes.
+                    </p>
+                </div>
+            </section>
 
-                        <div class="flex flex-wrap gap-3">
-                            {popularTopics.map(([topic, count, isFeatured]) => (
-                                <a
-                                    class="inline-flex items-center gap-2 pl-3 pr-4 py-2 rounded-full bg-surface-container-low dark:bg-ink-slate/30 border border-border-muted dark:border-on-surface-variant hover:border-terracotta-accent hover:bg-terracotta-accent/5 dark:hover:bg-terracotta-accent/10 transition-colors group"
-                                    href={`/topics/${topicSlug(topic)}`}
-                                >
-                                    {isFeatured && (
-                                        <span
-                                            class="w-1.5 h-1.5 rounded-full bg-terracotta-accent shrink-0"
-                                            aria-label="Featured topic"
-                                        ></span>
-                                    )}
-                                    <span class="text-body-md text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors">
-                                        {topic}
-                                    </span>
-                                    <span class="text-mono-sm text-xs text-on-surface-variant dark:text-outline-variant">
-                                        {count}
-                                    </span>
-                                </a>
-                            ))}
-                        </div>
-                    </section>
-                )}
-
-                <!-- All Topics -->
-                <section>
-                    <header class="mb-8 flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
+            <!-- Popular Topics -->
+            {popularTopics.length > 0 && (
+                <section class="flex flex-col gap-6 py-10 border-t border-border-delicate">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
                         <div>
-                            <span class="text-mono-sm text-terracotta-accent uppercase tracking-widest mb-3 block">All</span>
-                            <h2 class="font-display text-4xl text-ink-slate dark:text-inverse-on-surface">All Topics</h2>
+                            <span class="font-code-sm text-[0.6875rem] uppercase tracking-wider text-accent-flow font-semibold">Focus Areas</span>
+                            <h2 class="font-headline-md text-headline-md text-text-primary tracking-tight">Popular Topics</h2>
                         </div>
-                    </header>
-
-                    <!-- A-Z Index Navigation -->
-                    <nav class="sticky top-20 bg-paper-white/90 dark:bg-ink-slate/90 backdrop-blur-sm z-40 py-6 mb-12 border-b border-border-muted dark:border-on-surface-variant overflow-x-auto whitespace-nowrap no-scrollbar">
-                        <div class="flex gap-4 md:gap-6 items-center">
-                            <span class="text-label-caps text-on-surface-variant dark:text-outline-variant">Jump to</span>
-                            <div class="flex gap-3 md:gap-5">
-                                {alphabet.map(char => (
-                                    <a class="text-label-caps hover:text-terracotta-accent transition-colors text-on-surface-variant dark:text-outline-variant" href={`#${char === "#" ? "num" : char}`}>{char}</a>
-                                ))}
-                            </div>
-                        </div>
-                    </nav>
-
-                    <!-- Topic Sections -->
-                    <div class="space-y-section-gap">
-                        {alphabet.map((letter) => {
-                            const topics = groupedTopics[letter];
-                            return (
-                            <section class="scroll-mt-32" id={letter === '#' ? 'num' : letter}>
-                                <div class="flex items-baseline border-b border-ink-slate dark:border-inverse-on-surface pb-4 mb-8">
-                                    <h3 class="font-display text-4xl text-ink-slate dark:text-inverse-on-surface mr-4">{letter}</h3>
-                                    <span class="text-label-caps text-on-surface-variant dark:text-outline-variant">{letter === '#' ? 'Numbers' : 'Alphabetical Index'}</span>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {popularTopics.map(([topic, count]) => (
+                            <a class="group relative p-6 rounded-xl bg-surface-card border border-border-delicate hover:border-accent-flow transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href={`/topics/${topicSlug(topic)}`}>
+                                <div class="flex flex-col gap-2.5">
+                                    <div class="flex items-center justify-between">
+                                        <h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-accent-flow transition-colors">{topic}</h3>
+                                        <span class="px-2 py-0.5 rounded-full font-code-sm text-[0.75rem] font-medium bg-accent-flow-soft text-accent-flow border border-accent-flow/20">{count}</span>
+                                    </div>
                                 </div>
-
-                                <div class="columns-1 sm:columns-2 md:columns-3 gap-8 space-y-4">
-                                    {topics.map(([topic, count]) => (
-                                        <a class="flex justify-between items-center group py-2 border-b border-border-muted/50 dark:border-on-surface-variant/50" href={`/topics/${topicSlug(topic)}`}>
-                                            <span class="text-body-md text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors">{topic}</span>
-                                            <span class="text-mono-sm text-xs text-on-surface-variant dark:text-outline-variant">{count}</span>
-                                        </a>
-                                    ))}
-                                </div>
-                            </section>
-                            );
-                        })}
+                            </a>
+                        ))}
                     </div>
                 </section>
-            </div>
-        </section>
+            )}
+
+            <!-- Alphabetical Index -->
+            <section class="flex flex-col gap-8 py-10 border-t border-border-delicate">
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                    <div>
+                        <span class="font-code-sm text-[0.6875rem] uppercase tracking-wider text-accent-flow font-semibold">Master Reference</span>
+                        <h2 class="font-headline-md text-headline-md text-text-primary tracking-tight">Complete Alphabetical Index</h2>
+                    </div>
+                </div>
+
+                <nav aria-label="Alphabetical Jump Bar" class="sticky top-20 z-20 py-2.5 px-4 rounded-xl bg-surface-page/90 backdrop-blur-md border border-border-delicate shadow-xs overflow-x-auto no-scrollbar flex items-center justify-between gap-1 text-[0.75rem] font-code-sm">
+                    {alphabet.map((char) => (
+                        <a class="px-2 py-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-accent-flow transition-colors" href={`#letter-${char === "#" ? "num" : char}`}>{char}</a>
+                    ))}
+                </nav>
+
+                <div class="flex flex-col gap-10" id="topics-grid">
+                    {alphabet.map((letter) => {
+                        const topics = groupedTopics[letter];
+                        return (
+                            <div class="topic-letter-group scroll-mt-36 p-6 rounded-xl bg-surface-card border border-border-delicate" id={`letter-${letter === "#" ? "num" : letter}`}>
+                                <div class="flex items-baseline justify-between pb-4 mb-4 border-b border-border-delicate">
+                                    <span class="font-display text-headline-lg text-accent-flow">{letter}</span>
+                                    <span class="font-code-sm text-[0.6875rem] text-text-muted uppercase tracking-wider">{letter === "#" ? "Numeric & Brands" : `${topics.length} Topics`}</span>
+                                </div>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5">
+                                    {topics.map(([topic, count]) => {
+                                        const isPopular = popularNames.has(topic);
+                                        return (
+                                            <a class:list={["topic-item flex items-center justify-between p-2 rounded-lg transition-colors group", isPopular ? "hover:bg-accent-flow-soft" : "hover:bg-surface-subtle"]} href={`/topics/${topicSlug(topic)}`}>
+                                                <span class:list={["font-body-sm text-body-sm transition-colors", isPopular ? "font-medium text-accent-flow" : "text-text-primary group-hover:text-accent-flow"]}>{topic}</span>
+                                                <span class:list={["font-code-sm text-[0.75rem]", isPopular ? "text-accent-flow font-semibold" : "text-text-muted"]}>{count}</span>
+                                            </a>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </section>
+        </div>
     </main>
 </Layout>
 
-<style>
-    section[id] {
-        scroll-margin-top: 120px;
+<script>
+    const searchInput = document.getElementById("topic-search-input") as HTMLInputElement | null;
+    const topicItems = document.querySelectorAll<HTMLElement>(".topic-item");
+    const letterGroups = document.querySelectorAll<HTMLElement>(".topic-letter-group");
+
+    if (searchInput) {
+        const filterTopics = (query: string) => {
+            const cleanQuery = query.toLowerCase().trim();
+            letterGroups.forEach((group) => {
+                let visible = 0;
+                group.querySelectorAll<HTMLElement>(".topic-item").forEach((item) => {
+                    const match = (item.textContent || "").toLowerCase().includes(cleanQuery);
+                    item.style.display = match ? "flex" : "none";
+                    if (match) visible++;
+                });
+                group.style.display = visible === 0 && cleanQuery.length > 0 ? "none" : "block";
+            });
+            topicItems.length; // keep reference
+        };
+
+        searchInput.addEventListener("input", (e) => filterTopics((e.target as HTMLInputElement).value));
+
+        window.addEventListener("keydown", (e) => {
+            if ((e.key === "/" && document.activeElement !== searchInput) || ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k")) {
+                e.preventDefault();
+                searchInput.focus();
+                searchInput.select();
+            }
+            if (e.key === "Escape" && document.activeElement === searchInput) {
+                searchInput.value = "";
+                searchInput.blur();
+                filterTopics("");
+            }
+        });
     }
-</style>
+</script>

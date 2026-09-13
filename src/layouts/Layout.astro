@@ -168,84 +168,63 @@ const navItems = [
             });
         </script>
     </head>
-    <body class="min-h-screen flex flex-col">
-        <nav class="w-full sticky top-0 z-50 bg-paper-white dark:bg-ink-slate border-b border-border-muted dark:border-on-surface-variant">
-            <div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
-                <a href="/" class="font-display text-headline-sm font-bold tracking-tight text-ink-slate dark:text-paper-white hover:text-terracotta-accent dark:hover:text-terracotta-accent transition-colors">
-                    Malcolm Bastien
+    <body class="min-h-screen flex flex-col bg-surface-page text-text-primary antialiased selection:bg-accent-flow-soft selection:text-accent-flow">
+        <header class="w-full sticky top-0 z-50 bg-surface-page/90 backdrop-blur-md border-b border-border-delicate">
+            <div class="max-w-page mx-auto px-margin-mobile md:px-gutter flex justify-between items-center h-20 gap-6">
+                <a href="/" class="group flex flex-col shrink-0">
+                    <span class="font-headline-sm text-headline-sm text-text-primary group-hover:text-accent-flow transition-colors">{author}</span>
+                    <span class="font-code-sm text-[0.6875rem] text-text-muted tracking-wider uppercase -mt-0.5">Enterprise Agile Coach</span>
                 </a>
-                <div class="hidden md:flex items-center gap-10">
-                    {navItems.map((item) => (
-                        <a
-                            href={item.href}
-                            class:list={[
-                                "text-label-caps transition-colors",
-                                currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
-                                    ? "text-terracotta-accent"
-                                    : "text-on-surface-variant dark:text-outline-variant hover:text-terracotta-accent dark:hover:text-terracotta-accent"
-                            ]}
-                        >
-                            {item.label}
-                        </a>
-                    ))}
-                </div>
-                <div class="flex items-center gap-4">
-                    <div class="relative hidden sm:block">
-                        <form action="/search" method="GET">
-                            <input
-                                type="text"
-                                name="q"
-                                id="nav-search-input"
-                                class="bg-surface-container dark:bg-ink-slate border border-border-muted dark:border-on-surface-variant rounded-lg py-1.5 pl-4 pr-10 text-sm focus:ring-1 focus:ring-terracotta-accent w-48 transition-all text-on-surface dark:text-inverse-on-surface placeholder:text-on-surface-variant dark:placeholder:text-outline-variant"
-                                placeholder="Search"
-                                autocomplete="off"
-                            />
-                            <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg pointer-events-none">search</span>
-                        </form>
-                    </div>
-                    <button class="sm:hidden text-on-surface-variant dark:text-outline-variant">
-                        <span class="material-symbols-outlined">search</span>
-                    </button>
+                <nav class="hidden md:flex items-center gap-8">
+                    {navItems.map((item) => {
+                        const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
+                        return (
+                            <a
+                                href={item.href}
+                                class:list={[
+                                    "relative py-1 font-body-sm text-body-sm transition-colors",
+                                    isActive
+                                        ? "text-accent-flow font-medium"
+                                        : "text-text-secondary hover:text-text-primary"
+                                ]}
+                            >
+                                {item.label}
+                            </a>
+                        );
+                    })}
+                </nav>
+                <div class="flex items-center gap-3">
+                    <form action="/search" method="GET" class="relative">
+                        <span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[18px] text-text-muted pointer-events-none">search</span>
+                        <input
+                            type="text"
+                            name="q"
+                            id="nav-search-input"
+                            aria-label="Search writings"
+                            class="w-36 sm:w-44 py-2 pl-9 pr-14 rounded-lg bg-surface-subtle border border-border-delicate hover:border-border-hover focus:border-accent-flow focus:ring-1 focus:ring-accent-flow/40 text-body-sm text-text-primary placeholder:text-text-muted transition-all outline-none"
+                            placeholder="Search"
+                            autocomplete="off"
+                        />
+                        <span class="hidden sm:inline-block absolute right-2 top-1/2 -translate-y-1/2 font-code-sm text-[0.6875rem] text-text-muted bg-surface-card px-1.5 py-0.5 rounded border border-border-delicate pointer-events-none">⌘K</span>
+                    </form>
                     <ThemeToggle />
                 </div>
             </div>
-        </nav>
+        </header>
+
         <slot />
 
         <!-- Site Footer -->
-        <footer class="site-footer">
-            <div class="site-footer-inner">
-                <div class="site-footer-text">
-                    &copy; {currentYear} Malcolm Bastien.
+        <footer class="w-full bg-surface-footer border-t border-border-delicate mt-auto">
+            <div class="max-w-page mx-auto px-margin-mobile md:px-gutter py-space-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <p class="font-display text-lg text-text-primary italic">Malcolm Bastien</p>
+                <div class="flex flex-wrap items-center gap-6 font-body-sm text-body-sm text-text-secondary">
+                    <a class="hover:text-accent-flow transition-colors" href="/colophon">Colophon</a>
+                    <a class="hover:text-accent-flow transition-colors" href="https://www.linkedin.com/in/malcolmbastien/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+                    <a class="hover:text-accent-flow transition-colors" href="/rss.xml">RSS Feed</a>
                 </div>
+                <div class="font-code-sm text-code-sm text-text-muted">&copy; {currentYear} Malcolm Bastien. All rights reserved.</div>
             </div>
         </footer>
-
-        <style is:inline>
-            .site-footer {
-                width: 100%;
-                margin-top: 80px;
-                border-top: 1px solid var(--color-border-muted);
-                background-color: var(--color-canvas-gray);
-            }
-            .dark .site-footer {
-                border-color: var(--color-on-surface-variant);
-                background-color: rgba(15, 23, 42, 0.5);
-            }
-            .site-footer-inner {
-                max-width: 1120px;
-                margin: 0 auto;
-                padding: 4rem 24px;
-                text-align: center;
-            }
-            .site-footer-text {
-                font-size: 16px;
-                line-height: 1.6;
-                color: var(--color-on-surface-variant);
-            }
-            .dark .site-footer-text {
-                color: var(--color-outline-variant);
-            }
-        </style>
     </body>
 </html>

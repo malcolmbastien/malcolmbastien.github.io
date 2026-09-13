@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import { statSync } from "node:fs";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import HeroBanner from "../components/HeroBanner.astro";
+import { getReadingTime } from "../lib/reading-time";
 
 const allNotes = await getCollection("notes");
 
@@ -30,6 +30,13 @@ const pinnedNotes = allNotes.filter((note) => (note.data as any).pinned === true
 
 const recentNotes = sortedNotes.slice(0, 3);
 
+const domainTags = [
+    "Agile Delivery",
+    "Flow Optimization",
+    "Systems Thinking",
+    "Team Alignment",
+];
+
 const formatDate = (date: Date) => {
     return date.toLocaleDateString("en-US", {
         year: "numeric",
@@ -45,94 +52,161 @@ const formatDate = (date: Date) => {
     description="A digital garden of thoughts and ideas. Explore seeds, sprouts, and evergreens of knowledge in this ever-growing collection of writings."
     type="website"
 >
-    <HeroBanner />
+    <!-- Editorial Hero -->
+    <section class="w-full max-w-[48rem] mx-auto px-margin-mobile md:px-0 pt-12 sm:pt-16 pb-16 sm:pb-24">
+        <!-- Domain Context Tags -->
+        <div class="flex flex-wrap items-center gap-2 mb-8 sm:mb-10">
+            {domainTags.map((tag) => (
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-body-sm text-text-secondary bg-surface-card shadow-xs">
+                    {tag}
+                </span>
+            ))}
+        </div>
 
-    <main>
-        <!-- Latest Articles / Blog Section -->
-        <section class="pt-12 pb-section-gap bg-paper-white dark:bg-ink-slate" id="articles">
-            <div class="max-w-180 mx-auto px-gutter">
-                <div class="space-y-0" data-pagefind-ignore>
-                    {pinnedNotes.map((note) => (
-                        <article class="group py-12 border-b border-border-muted dark:border-on-surface-variant last:border-0">
-                            <div class="flex flex-col gap-4">
-                                <div class="flex items-center gap-4">
-                                    <span class="text-mono-sm text-on-surface-variant dark:text-outline-variant">
-                                        {note.data.publishedDate ? formatDate(note.data.publishedDate) : 'Draft'}
-                                    </span>
-                                    <span class="w-1 h-1 rounded-full bg-outline-variant dark:bg-outline"></span>
-                                    <span class="text-mono-sm text-terracotta-accent">Pinned</span>
-                                </div>
-                                <a class="block" href={`/notes/${note.id.replace('.md', '')}`}>
-                                    <h2 class="font-display text-headline-md text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent dark:group-hover:text-terracotta-accent transition-colors duration-300">
-                                        {note.data.title}
-                                    </h2>
-                                </a>
-                                {note.data.summary && (
-                                    <p class="text-body-md text-on-surface-variant dark:text-outline-variant line-clamp-3">
-                                        {note.data.summary}
-                                    </p>
-                                )}
-                                <a class="text-label-caps flex items-center gap-2 text-ink-slate dark:text-inverse-on-surface hover:translate-x-1 transition-transform w-fit mt-2" href={`/notes/${note.id.replace('.md', '')}`}>
-                                    Read Article <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-                                </a>
-                            </div>
-                        </article>
-                    ))}
+        <!-- Editorial Lead Statement -->
+        <div class="space-y-6">
+            <h1 class="font-display text-display-mobile md:text-display text-text-primary text-balance">
+                Helping organizations navigate complexity to enable business agility &amp; <span class="italic text-accent-flow font-display">flow.</span>
+            </h1>
+            <p class="font-body-lead text-body-lead text-text-secondary max-w-[42rem] leading-relaxed">
+                Enterprise Agile Coach helping leaders in Fintech, Banking, and HealthTech build fast flow through systems thinking and aligned autonomy, empowering teams to deliver high-performance results at scale.
+            </p>
+        </div>
 
-                    {recentNotes.map((note) => {
-                        const hasCover = note.data.cover;
-                        return (
-                        <article class="group py-12 border-b border-border-muted dark:border-on-surface-variant last:border-0">
-                            <div class={`flex ${hasCover ? 'flex-col md:flex-row gap-8 items-start' : 'flex-col gap-4'}`}>
-                                {hasCover && (
-                                    <div class="w-full bg-canvas-gray dark:bg-ink-slate/50 overflow-hidden md:w-32 aspect-square shrink-0">
-                                        <Image
-                                            src={note.data.cover!}
-                                            alt={note.data.title}
-                                            width={512}
-                                            height={512}
-                                            class="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                )}
-                                <div class={`flex flex-col gap-4 ${hasCover ? 'flex-1' : ''}`}>
-                                    <div class="flex items-center gap-4">
-                                        <span class="text-mono-sm text-on-surface-variant dark:text-outline-variant">
-                                            {note.data.publishedDate ? formatDate(note.data.publishedDate) : ''}
-                                        </span>
-                                        {note.data.tags.length > 0 && (
-                                            <>
-                                                <span class="w-1 h-1 rounded-full bg-outline-variant dark:bg-outline"></span>
-                                                <span class="text-mono-sm text-terracotta-accent">#{note.data.tags[0]}</span>
-                                            </>
-                                        )}
-                                    </div>
-                                    <a class="block" href={`/notes/${note.id.replace('.md', '')}`}>
-                                        <h2 class="font-display text-headline-md text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent dark:group-hover:text-terracotta-accent transition-colors duration-300">
-                                            {note.data.title}
-                                        </h2>
-                                    </a>
-                                    {note.data.summary && (
-                                        <p class="text-body-md text-on-surface-variant dark:text-outline-variant line-clamp-3">
-                                            {note.data.summary}
-                                        </p>
-                                    )}
-                                    <a class="text-label-caps flex items-center gap-2 text-ink-slate dark:text-inverse-on-surface hover:translate-x-1 transition-transform w-fit mt-2" href={`/notes/${note.id.replace('.md', '')}`}>
-                                        Read Article <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                        );
-                    })}
-                </div>
+        <!-- Integrated Action Group -->
+        <div class="flex items-center gap-4 mt-10 pt-2">
+            <a class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-text-primary text-surface-page font-label-md text-label-md hover:bg-primary-container shadow-sm transition-all hover:-translate-y-0.5" href="/about">
+                <span>About Me</span>
+                <span class="material-symbols-outlined text-[17px] -mr-0.5">north_east</span>
+            </a>
+            <a aria-label="Malcolm Bastien on LinkedIn" class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-surface-card text-text-secondary hover:text-accent-flow shadow-xs hover:-translate-y-0.5 transition-all" href="https://linkedin.com/in/malcolmbastien" rel="noopener noreferrer" target="_blank">
+                <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.67 1.67 0 1 0 0-3.34 1.67 1.67 0 0 0 0 3.34m1.39 9.74V9.95H5.07v8.55h2.78z"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
 
-                <div class="mt-16 text-center">
-                    <a class="inline-block border border-ink-slate dark:border-inverse-on-surface px-10 py-4 text-label-caps text-ink-slate dark:text-inverse-on-surface hover:bg-ink-slate dark:hover:bg-inverse-on-surface hover:text-paper-white dark:hover:text-ink-slate transition-all" href="/archives">
-                        Browse all articles
-                    </a>
-                </div>
+    <!-- Editorial Articles Feed -->
+    <section class="w-full max-w-[48rem] mx-auto px-margin-mobile md:px-0 pb-20">
+        <!-- Feed Header -->
+        <div class="flex items-baseline justify-between pb-4 mb-8">
+            <div class="flex items-center gap-3">
+                <h2 class="font-label-caps text-label-caps uppercase text-text-secondary tracking-wider">
+                    Recent Articles
+                </h2>
             </div>
-        </section>
-    </main>
+        </div>
+
+        <!-- Article Entries -->
+        <div class="flex flex-col gap-10" data-pagefind-ignore>
+            {pinnedNotes.map((note) => {
+                const readingTime = getReadingTime(note.body);
+                const hasCover = note.data.cover;
+                return (
+                    <article class="group relative flex flex-col items-start bg-surface-card p-7 sm:p-8 rounded-xl shadow-xs transition-all hover:shadow-md overflow-hidden">
+                        {hasCover && (
+                            <div class="w-full -mx-7 sm:-mx-8 -mt-7 sm:-mt-8 mb-6 h-52 overflow-hidden bg-canvas-gray">
+                                <Image
+                                    src={note.data.cover!}
+                                    alt={note.data.title}
+                                    width={1024}
+                                    height={512}
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                        )}
+                        <div class="flex flex-wrap items-center gap-2 font-code-sm text-code-sm text-text-muted mb-3">
+                            <time datetime={note.data.publishedDate?.toISOString()}>
+                                {note.data.publishedDate ? formatDate(note.data.publishedDate) : "Draft"}
+                            </time>
+                            <span class="text-outline-variant">•</span>
+                            <span class="text-accent-flow font-medium">Pinned</span>
+                            {readingTime && (
+                                <>
+                                    <span class="text-outline-variant">•</span>
+                                    <span>{readingTime}</span>
+                                </>
+                            )}
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-text-primary group-hover:text-accent-flow transition-colors">
+                            <a class="focus:outline-none" href={`/notes/${note.id.replace(".md", "")}`}>
+                                {note.data.title}
+                            </a>
+                        </h3>
+                        {note.data.summary && (
+                            <p class="font-body-md text-body-md text-text-secondary mt-3 leading-relaxed">
+                                {note.data.summary}
+                            </p>
+                        )}
+                        <div class="mt-6 pt-2">
+                            <a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase tracking-wider text-text-primary group-hover:text-accent-flow transition-colors" href={`/notes/${note.id.replace(".md", "")}`}>
+                                <span>Read Article</span>
+                                <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                );
+            })}
+
+            {recentNotes.map((note) => {
+                const readingTime = getReadingTime(note.body);
+                const hasCover = note.data.cover;
+                return (
+                    <article class="group relative flex flex-col items-start bg-surface-card p-7 sm:p-8 rounded-xl shadow-xs transition-all hover:shadow-md overflow-hidden">
+                        {hasCover && (
+                            <div class="w-full -mx-7 sm:-mx-8 -mt-7 sm:-mt-8 mb-6 h-52 overflow-hidden bg-canvas-gray">
+                                <Image
+                                    src={note.data.cover!}
+                                    alt={note.data.title}
+                                    width={1024}
+                                    height={512}
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                        )}
+                        <div class="flex flex-wrap items-center gap-2 font-code-sm text-code-sm text-text-muted mb-3">
+                            <time datetime={note.displayDate.toISOString()}>{formatDate(note.displayDate)}</time>
+                            {note.data.tags.length > 0 && (
+                                <>
+                                    <span class="text-outline-variant">•</span>
+                                    <span class="text-accent-flow font-medium">#{note.data.tags[0]}</span>
+                                </>
+                            )}
+                            {readingTime && (
+                                <>
+                                    <span class="text-outline-variant">•</span>
+                                    <span>{readingTime}</span>
+                                </>
+                            )}
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-text-primary group-hover:text-accent-flow transition-colors">
+                            <a class="focus:outline-none" href={`/notes/${note.id.replace(".md", "")}`}>
+                                {note.data.title}
+                            </a>
+                        </h3>
+                        {note.data.summary && (
+                            <p class="font-body-md text-body-md text-text-secondary mt-3 leading-relaxed">
+                                {note.data.summary}
+                            </p>
+                        )}
+                        <div class="mt-6 pt-2">
+                            <a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase tracking-wider text-text-primary group-hover:text-accent-flow transition-colors" href={`/notes/${note.id.replace(".md", "")}`}>
+                                <span>Read Article</span>
+                                <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                );
+            })}
+        </div>
+
+        <!-- Feed Footer Action -->
+        <div class="flex justify-center mt-12 pt-4">
+            <a class="group inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-surface-card hover:bg-surface-subtle text-text-primary font-body-sm text-body-sm shadow-xs transition-all hover:-translate-y-0.5" href="/archives">
+                <span>Browse all articles</span>
+                <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1 text-accent-flow">arrow_forward</span>
+            </a>
+        </div>
+    </section>
 </Layout>

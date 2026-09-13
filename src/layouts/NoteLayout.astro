@@ -16,9 +16,11 @@ interface Props {
     backlinkedNotes: any[];
     noteBody?: string;
     headings?: any[];
+    prevNote?: any;
+    nextNote?: any;
 }
 
-const { frontmatter, backlinkedNotes, noteBody } = Astro.props;
+const { frontmatter, backlinkedNotes, noteBody, prevNote, nextNote } = Astro.props;
 
 const readingTime = noteBody ? getReadingTime(noteBody) : "";
 
@@ -34,7 +36,7 @@ const formatDate = (date: Date) => {
     });
 };
 
-
+const topicSlug = (tag: string) => tag.replace(/\s+/g, "-").toLowerCase();
 ---
 
 <Layout
@@ -45,79 +47,150 @@ const formatDate = (date: Date) => {
     publishedTime={createdDate.toISOString()}
     tags={frontmatter.tags}
 >
+    <!-- Reading Progress Bar -->
+    <div class="fixed top-20 inset-x-0 h-1 bg-surface-subtle z-40" id="read-progress-track">
+        <div class="h-full bg-accent-flow w-0 transition-all duration-150 ease-out" id="read-progress-bar"></div>
+    </div>
+
     <main class="w-full overflow-x-hidden">
-        <!-- Article Header Section -->
-        <header class="max-w-180 mx-auto px-gutter pt-12 pb-10 text-center">
-            <div class="mb-3">
-                <div class="flex gap-3 justify-center flex-wrap items-center">
-                    {frontmatter.tags.sort().map(tag => (
-                        <a href={`/topics/${tag.toLowerCase()}`} class="px-3 py-1 bg-surface-container dark:bg-white/10 text-terracotta-accent dark:text-terracotta-accent text-xs font-medium rounded-full hover:bg-terracotta-accent hover:text-white dark:hover:bg-terracotta-accent dark:hover:text-white transition-colors">
+        <article class="w-full mx-auto max-w-[46rem] px-margin-mobile md:px-0">
+            <!-- Editorial Header -->
+            <header class="pt-8 md:pt-12 border-b border-border-delicate pb-6">
+                <div class="flex flex-wrap items-center gap-2.5 mb-8">
+                    {frontmatter.tags.sort().map((tag) => (
+                        <a class="px-2.5 py-1 rounded-full bg-surface-card hover:bg-accent-flow-soft text-text-secondary hover:text-accent-flow font-body-sm text-body-sm transition-colors border border-border-delicate" href={`/topics/${topicSlug(tag)}`}>
                             {tag}
                         </a>
                     ))}
                 </div>
-            </div>
-            <h1 class="font-display text-display-lg mb-4 text-ink-slate dark:text-inverse-on-surface">
-                {frontmatter.title}
-            </h1>
-            {frontmatter.summary && (
-                <p class="max-w-2xl mx-auto font-display italic text-body-lg text-on-surface-variant dark:text-outline-variant leading-relaxed mb-4">
-                    {frontmatter.summary}
-                </p>
-            )}
-            <div class="flex items-center justify-center gap-4 text-on-surface-variant dark:text-outline-variant">
-                <span>Malcolm Bastien</span>
-                <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
-                <span>{formatDate(createdDate)}</span>
-                {readingTime && (
-                    <>
-                        <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
-                        <span>{readingTime}</span>
-                    </>
-                )}
-            </div>
-        </header>
 
-        <div class="max-w-180 mx-auto px-gutter" data-pagefind-body data-pagefind-filter="type:note">
-            <!-- Draft Banner -->
-            {isNoteDraft && (
-                <div class="draft-banner mb-6 px-4 py-3 border-l-4 border-dashed border-outline dark:border-outline-variant bg-surface-container-low dark:bg-ink-slate/30 rounded-r">
-                    <div class="flex items-center gap-2 text-on-surface-variant dark:text-outline-variant">
-                        <span class="material-symbols-outlined text-sm">edit_note</span>
-                        <span class="text-body-md">Draft Post — This post is a draft and is unlisted.</span>
-                    </div>
-                </div>
-            )}
+                <h1 class="font-display text-display-mobile md:text-display tracking-tight text-text-primary mb-6">
+                    {frontmatter.title}
+                </h1>
 
-            <!-- Article Body -->
-            <article class="prose prose-slate dark:prose-invert prose-lg max-w-none">
-                <slot />
-
-                {backlinkedNotes.length > 0 && (
-                    <div class="backlinks mt-16 pt-8 border-t border-border-muted dark:border-on-surface-variant">
-                        <Backlinks backlinkedNotes={backlinkedNotes} />
-                    </div>
-                )}
-            </article>
-
-            <!-- Author Bio / Related Posts -->
-            <a href="/about" class="group flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 py-16 border-t border-border-muted dark:border-on-surface-variant mt-20 px-4 transition-colors">
-                <div class="w-24 h-24 shrink-0 overflow-hidden bg-surface-container dark:bg-ink-slate">
-                    <img
-                        src="/malcolm_headshot.png"
-                        alt="Malcolm Bastien"
-                        class="w-full h-full object-cover"
-                    />
-                </div>
-                <div class="flex flex-col text-center md:text-left">
-                    <h3 class="font-display text-headline-sm font-bold text-ink-slate dark:text-inverse-on-surface mb-1 decoration-2 underline-offset-4 group-hover:underline">Malcolm Bastien</h3>
-                    <p class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest mb-3">Agile Delivery &amp; Organizational Change</p>
-                    <p class="text-body-md text-on-surface-variant dark:text-outline-variant leading-relaxed">
-                        Unlocking flow through the alignment of socio-technical systems, AI, and product thinking.
+                {frontmatter.summary && (
+                    <p class="text-deck text-text-secondary font-normal mb-10 pl-4 border-l-2 border-accent-flow">
+                        {frontmatter.summary}
                     </p>
+                )}
+
+                <div class="flex flex-wrap items-center justify-between gap-6 pt-6 border-t border-border-delicate/60 text-body-sm">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full overflow-hidden bg-surface-subtle border border-border-delicate shrink-0 shadow-sm">
+                            <img
+                                src="/malcolm_headshot.png"
+                                alt="Malcolm Bastien"
+                                width={40}
+                                height={40}
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-body-md text-body-md font-medium text-text-primary">Malcolm Bastien</span>
+                            <div class="flex items-center gap-2 font-code-sm text-code-sm text-text-muted">
+                                <time datetime={createdDate.toISOString()}>{formatDate(createdDate)}</time>
+                                {readingTime && (
+                                    <>
+                                        <span>•</span>
+                                        <span>{readingTime}</span>
+                                    </>
+                                )}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </a>
-        </div>
+            </header>
+
+            <div data-pagefind-body data-pagefind-filter="type:note">
+                <!-- Draft Banner -->
+                {isNoteDraft && (
+                    <div class="draft-banner mt-6 px-4 py-3 border-l-4 border-dashed border-outline bg-surface-container-low rounded-r">
+                        <div class="flex items-center gap-2 text-text-secondary">
+                            <span class="material-symbols-outlined text-sm">edit_note</span>
+                            <span class="text-body-md">Draft Post — This post is a draft and is unlisted.</span>
+                        </div>
+                    </div>
+                )}
+
+                <!-- Article Body -->
+                <div class="pt-12">
+                    <article class="prose prose-lg max-w-none">
+                        <slot />
+
+                        {backlinkedNotes.length > 0 && (
+                            <div class="backlinks mt-16 pt-8 border-t border-border-delicate">
+                                <Backlinks backlinkedNotes={backlinkedNotes} />
+                            </div>
+                        )}
+                    </article>
+                </div>
+
+                <!-- Author Bio -->
+                <section class="mt-16 pt-12 border-t border-border-delicate">
+                    <div class="p-8 md:p-10 rounded-xl bg-surface-card border border-border-delicate shadow-xs flex flex-col md:flex-row items-start gap-6 md:gap-8">
+                        <div class="w-16 h-16 rounded-full overflow-hidden bg-surface-subtle shrink-0 shadow-sm">
+                            <img
+                                src="/malcolm_headshot.png"
+                                alt="Malcolm Bastien"
+                                width={64}
+                                height={64}
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="flex flex-col space-y-3 grow">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <div>
+                                    <h3 class="font-headline-sm text-headline-sm text-text-primary font-medium">Malcolm Bastien</h3>
+                                    <p class="font-code-sm text-code-sm text-accent-flow">Agile Delivery &amp; Organizational Change</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <a class="px-3 py-1 rounded border border-border-delicate text-text-secondary hover:text-text-primary hover:border-border-hover font-body-sm text-body-sm transition-colors" href="/about">
+                                        Full Profile
+                                    </a>
+                                    <a class="px-3 py-1 rounded bg-surface-subtle text-text-secondary hover:text-accent-flow font-body-sm text-body-sm transition-colors flex items-center gap-1" href="https://www.linkedin.com/in/malcolmbastien/" rel="noopener noreferrer" target="_blank">
+                                        <span>LinkedIn</span>
+                                        <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+                                Enterprise Agile Coach helping leaders in Fintech, Banking, and HealthTech build fast flow through systems thinking and aligned autonomy, empowering teams to deliver high-performance results at scale.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Previous / Next -->
+                {(prevNote || nextNote) && (
+                    <nav aria-label="More Articles" class="mt-10 mb-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {prevNote ? (
+                            <a class="group p-6 rounded-lg bg-surface-card border border-border-delicate hover:border-border-hover transition-all flex flex-col justify-between" href={`/notes/${prevNote.id.replace('.md', '')}`}>
+                                <div class="font-code-sm text-[0.75rem] text-text-muted uppercase tracking-wider mb-2 flex items-center gap-1 group-hover:text-accent-flow transition-colors">
+                                    <span>←</span>
+                                    <span>Previous Essay</span>
+                                </div>
+                                <span class="font-headline-sm text-headline-sm text-text-primary group-hover:text-accent-flow transition-colors font-medium">
+                                    {prevNote.data.title}
+                                </span>
+                            </a>
+                        ) : <div></div>}
+                        {nextNote ? (
+                            <a class="group p-6 rounded-lg bg-surface-card border border-border-delicate hover:border-border-hover transition-all flex flex-col justify-between text-left md:text-right" href={`/notes/${nextNote.id.replace('.md', '')}`}>
+                                <div class="font-code-sm text-[0.75rem] text-text-muted uppercase tracking-wider mb-2 flex items-center gap-1 justify-start md:justify-end group-hover:text-accent-flow transition-colors">
+                                    <span>Next Essay</span>
+                                    <span>→</span>
+                                </div>
+                                <span class="font-headline-sm text-headline-sm text-text-primary group-hover:text-accent-flow transition-colors font-medium">
+                                    {nextNote.data.title}
+                                </span>
+                            </a>
+                        ) : <div></div>}
+                    </nav>
+                )}
+            </div>
+        </article>
     </main>
 
     <div class="pb-16"></div>
@@ -130,20 +203,26 @@ const formatDate = (date: Date) => {
             image.addEventListener('load', () => image.classList.add('loaded'));
             if (image.complete) image.classList.add('loaded');
         });
+
+        (function initReadingProgress() {
+            const progressBar = document.getElementById('read-progress-bar');
+            if (!progressBar) return;
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = (scrollTop / (docHeight || 1)) * 100;
+                progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+            }, { passive: true });
+        })();
     </script>
 
     <style is:global>
         @reference "../styles/global.css";
 
         .toc-link.active {
-            color: #C2410C !important;
-            border-left-color: #C2410C !important;
+            color: #C85226 !important;
+            border-left-color: #C85226 !important;
             font-weight: 500;
-        }
-
-        .dark .toc-link.active {
-            color: #C2410C !important;
-            border-left-color: #C2410C !important;
         }
 
         .prose .backlinks a {
@@ -154,28 +233,28 @@ const formatDate = (date: Date) => {
         }
 
         .prose .backlinks h4 {
-            color: #0f172a !important;
+            color: #0B192C !important;
         }
         .dark .prose .backlinks h4 {
-            color: #f1f5f9 !important;
+            color: #f2f1ee !important;
         }
         .prose .backlinks article:hover h4 {
-            color: #C2410C !important;
+            color: #C85226 !important;
         }
         .dark .prose .backlinks article:hover h4 {
-            color: #C2410C !important;
+            color: #C85226 !important;
         }
 
         .prose blockquote {
             background-color: #ffffff !important;
-            border: 1px solid #e2e8f0 !important;
-            border-left: 4px solid #C2410C !important;
+            border: 1px solid #E5E2DC !important;
+            border-left: 4px solid #C85226 !important;
             border-radius: 0 0.5rem 0.5rem 0 !important;
             font-family: "Newsreader", "Newsreader Fallback", Georgia, serif !important;
             font-style: italic !important;
             font-size: 1.25rem !important;
             line-height: 1.6 !important;
-            color: #191c1e !important;
+            color: #1a1c1a !important;
             padding: 1.5rem 1.5rem 1.5rem 2rem !important;
             margin: 2rem 0 !important;
             box-shadow: 0 1px 3px rgba(0,0,0,0.04) !important;
@@ -190,9 +269,9 @@ const formatDate = (date: Date) => {
 
         .dark .prose blockquote {
             background-color: #1a1c1e !important;
-            border-color: #2d3133 !important;
-            border-left-color: #C2410C !important;
-            color: #eff1f3 !important;
+            border-color: #2c3037 !important;
+            border-left-color: #C85226 !important;
+            color: #f2f1ee !important;
         }
 
         .prose blockquote p {
@@ -206,17 +285,17 @@ const formatDate = (date: Date) => {
             font-family: "JetBrains Mono", "JetBrains Mono Fallback", monospace !important;
             font-size: 0.8125rem !important;
             font-style: normal !important;
-            color: #45464d !important;
+            color: #59677A !important;
             letter-spacing: 0.02em !important;
         }
 
         .dark .prose blockquote cite {
-            color: #c6c6cd !important;
+            color: #c5c6cd !important;
         }
 
         .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
             font-family: "Newsreader", "Newsreader Fallback", Georgia, serif !important;
-            color: #0f172a !important;
+            color: #0B192C !important;
             font-weight: 600 !important;
             letter-spacing: -0.02em !important;
             scroll-margin-top: 6rem;
@@ -227,7 +306,7 @@ const formatDate = (date: Date) => {
         .dark .prose h4,
         .dark .prose h5,
         .dark .prose h6 {
-            color: #f1f5f9 !important;
+            color: #f2f1ee !important;
         }
 
         .prose h2 {
@@ -245,8 +324,8 @@ const formatDate = (date: Date) => {
 
         .prose p {
             font-family: "Inter", "Inter Fallback", system-ui, sans-serif !important;
-            color: #45464d !important;
-            line-height: 1.75 !important;
+            color: #44474c !important;
+            line-height: 1.7 !important;
             font-size: 1.125rem;
         }
 
@@ -255,7 +334,7 @@ const formatDate = (date: Date) => {
         }
 
         .dark .prose p {
-            color: #c6c6cd !important;
+            color: #c5c6cd !important;
         }
 
         .prose a:not(.inline-tag) {
@@ -269,7 +348,7 @@ const formatDate = (date: Date) => {
         }
 
         .prose a:not(.inline-tag):hover .link-text {
-            text-decoration-color: #C2410C !important;
+            text-decoration-color: #C85226 !important;
         }
 
         .dark .prose a:not(.inline-tag) .link-text {
@@ -296,29 +375,29 @@ const formatDate = (date: Date) => {
             display: inline;
             font-size: inherit !important;
             font-weight: 500;
-            color: var(--color-terracotta-accent) !important;
+            color: var(--color-accent-flow) !important;
             background: transparent !important;
             border: none !important;
             border-radius: 0 !important;
             padding: 0 !important;
             margin: 0 !important;
             text-decoration: underline !important;
-            text-decoration-color: rgba(194, 65, 12, 0.3) !important;
+            text-decoration-color: rgba(200, 82, 38, 0.3) !important;
             text-underline-offset: 2px !important;
             transition: text-decoration-color 0.2s;
         }
 
         .prose a.inline-tag:hover {
-            text-decoration-color: var(--color-terracotta-accent) !important;
+            text-decoration-color: var(--color-accent-flow) !important;
         }
 
         .dark .prose a.inline-tag {
-            color: #fb923c !important;
-            text-decoration-color: rgba(251, 146, 60, 0.3) !important;
+            color: #e07a4f !important;
+            text-decoration-color: rgba(224, 122, 79, 0.3) !important;
         }
 
         .dark .prose a.inline-tag:hover {
-            text-decoration-color: #fb923c !important;
+            text-decoration-color: #e07a4f !important;
         }
 
         .prose .draft-container {
@@ -373,44 +452,26 @@ const formatDate = (date: Date) => {
         }
 
         .prose {
-            --tw-prose-body: var(--color-on-surface-variant);
-            --tw-prose-headings: var(--color-ink-slate);
-            --tw-prose-links: var(--color-ink-slate);
-            --tw-prose-bold: var(--color-ink-slate);
-            --tw-prose-counters: var(--color-on-surface-variant);
+            --tw-prose-body: var(--color-text-secondary);
+            --tw-prose-headings: var(--color-text-primary);
+            --tw-prose-links: var(--color-text-primary);
+            --tw-prose-bold: var(--color-text-primary);
+            --tw-prose-counters: var(--color-text-secondary);
             --tw-prose-bullets: var(--color-outline);
-            --tw-prose-hr: var(--color-border-muted);
-            --tw-prose-quotes: var(--color-ink-slate);
-            --tw-prose-quote-borders: #C2410C;
-            --tw-prose-captions: var(--color-on-surface-variant);
-            --tw-prose-code: var(--color-ink-slate);
+            --tw-prose-hr: var(--color-border-delicate);
+            --tw-prose-quotes: var(--color-text-primary);
+            --tw-prose-quote-borders: #C85226;
+            --tw-prose-captions: var(--color-text-secondary);
+            --tw-prose-code: var(--color-text-primary);
             --tw-prose-pre-code: var(--color-inverse-on-surface);
             --tw-prose-pre-bg: var(--color-inverse-surface);
-            --tw-prose-th-borders: var(--color-border-muted);
-            --tw-prose-td-borders: var(--color-border-muted);
-        }
-
-        .dark .prose {
-            --tw-prose-body: var(--color-outline-variant);
-            --tw-prose-headings: var(--color-inverse-on-surface);
-            --tw-prose-links: var(--color-inverse-on-surface);
-            --tw-prose-bold: var(--color-inverse-on-surface);
-            --tw-prose-counters: var(--color-outline-variant);
-            --tw-prose-bullets: var(--color-outline);
-            --tw-prose-hr: var(--color-on-surface-variant);
-            --tw-prose-quotes: var(--color-inverse-on-surface);
-            --tw-prose-quote-borders: #C2410C;
-            --tw-prose-captions: var(--color-outline-variant);
-            --tw-prose-code: var(--color-inverse-on-surface);
-            --tw-prose-pre-code: var(--color-inverse-on-surface);
-            --tw-prose-pre-bg: #1a1c1e;
-            --tw-prose-th-borders: var(--color-on-surface-variant);
-            --tw-prose-td-borders: var(--color-on-surface-variant);
+            --tw-prose-th-borders: var(--color-border-delicate);
+            --tw-prose-td-borders: var(--color-border-delicate);
         }
 
         .prose .lead, .prose-lg .lead, .prose-xl .lead {
             font-family: "Inter", "Inter Fallback", system-ui, sans-serif;
-            color: var(--color-on-surface-variant);
+            color: var(--color-text-secondary);
             font-size: 1.25rem;
             line-height: 1.7;
         }
@@ -418,7 +479,7 @@ const formatDate = (date: Date) => {
         .prose img.optimized-img {
             opacity: 0;
             transition: opacity 0.3s ease-in;
-            background-color: var(--color-canvas-gray);
+            background-color: var(--color-surface-subtle);
         }
 
         .prose img.optimized-img.loaded,
@@ -427,7 +488,7 @@ const formatDate = (date: Date) => {
         }
 
         .dark .prose img.optimized-img {
-            background-color: var(--color-ink-slate);
+            background-color: var(--color-surface-container);
         }
     </style>
 </Layout>

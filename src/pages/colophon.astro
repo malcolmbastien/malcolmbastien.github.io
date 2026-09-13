@@ -4,17 +4,23 @@ import Layout from "../layouts/Layout.astro";
 const developmentTools = [
     {
         name: "Zed",
+        domain: "zed.dev",
+        icon: "terminal",
         description: "A high-performance code editor written in Rust, chosen for its near-zero latency and collaborative environment. It serves as the primary forge for our codebase.",
         link: "https://zed.dev",
     },
     {
         name: "Open Code",
+        domain: "opencode.ai",
+        icon: "terminal",
         description: "An interactive coding tool that assists in architectural decisions and boilerplate reduction, ensuring the logic remains consistent with the \"Blueprint\" philosophy.",
         link: "https://opencode.ai",
     },
     {
         name: "Google Stitch",
-        description: "The primary design tool used for creating and maintaining the visual language and component systems of Flow Focused.",
+        domain: "stitch.withgoogle.com",
+        icon: "palette",
+        description: "The primary design tool used for creating and maintaining the visual language, design systems, and responsive component architecture of the site.",
         link: "https://stitch.withgoogle.com",
     }
 ];
@@ -35,7 +41,7 @@ const workflowTools = [
 const deploymentTools = [
     {
         name: "Vercel",
-        description: "Static site generation paired with edge deployment provides sub-100ms load times globally. We leverage Vercel's global infrastructure for its unparalleled DX and speed.",
+        description: "Static site generation paired with edge deployment provides sub-100ms load times globally.",
         link: "https://vercel.com",
     }
 ];
@@ -43,26 +49,36 @@ const deploymentTools = [
 const techStack = [
     {
         name: "Astro",
+        icon: "rocket",
+        domain: "astro.build",
         description: "The web framework for content-driven websites. Ship less JS, more performance.",
         link: "https://astro.build",
     },
     {
         name: "Tailwind CSS",
+        icon: "brush",
+        domain: "tailwindcss.com",
         description: "Utility-first CSS framework for rapid UI development without leaving the HTML.",
         link: "https://tailwindcss.com",
     },
     {
         name: "Pagefind",
+        icon: "search",
+        domain: "pagefind.app",
         description: "Zero-config static search library that works entirely on the client side.",
         link: "https://pagefind.app",
     },
     {
         name: "@astrojs/sitemap",
+        icon: "rss_feed",
+        domain: "astrojs/sitemap",
         description: "Automated SEO infrastructure for discoverability across the open web.",
         link: "https://docs.astro.build/en/guides/integrations-guide/sitemap/",
     },
     {
         name: "Remark & Unist",
+        icon: "account_tree",
+        domain: "remark.js.org",
         description: "The pipeline that transforms Markdown into structured, accessible HTML.",
         link: "https://remark.js.org/",
     }
@@ -74,130 +90,212 @@ const techStack = [
     description="How this site is built."
     type="website"
 >
-    <main class="mx-auto px-gutter" data-pagefind-ignore>
-        <!-- Hero Section -->
-        <section class="bg-paper-white dark:bg-ink-slate pt-20 pb-16 px-gutter border-b border-border-muted dark:border-outline-variant">
-            <div class="max-w-180 mx-auto text-center">
-                <h1 class="font-display text-display-lg text-ink-slate dark:text-inverse-on-surface mb-6">Colophon</h1>
-                <p class="text-body-lg text-on-surface-variant dark:text-outline-variant">
-                    How this site is built.
-                </p>
-            </div>
-        </section>
+    <main class="w-full" data-pagefind-ignore>
+        <div class="max-w-[48rem] mx-auto w-full px-margin-mobile md:px-0 py-12 md:py-16 flex flex-col gap-16">
+            <!-- Header -->
+            <header class="flex flex-col gap-4">
+                <div class="flex items-center gap-2">
+                    <span class="font-code-sm text-code-sm text-accent-flow tracking-wider uppercase">Site Specifications</span>
+                    <span class="text-text-muted">/</span>
+                    <span class="font-code-sm text-code-sm text-text-muted tracking-wider uppercase">Behind The Scenes</span>
+                </div>
+                <h1 class="font-display text-display-mobile md:text-display text-text-primary tracking-tight">Colophon</h1>
+                <p class="font-body-lead text-body-lead text-text-secondary">How this site is designed, written, engineered, and maintained.</p>
+            </header>
 
-        <!-- Content Grid -->
-        <div class="max-w-5xl mx-auto py-section-gap grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-x-gutter">
             <!-- Development & Tools -->
-            <div class="flex flex-col gap-6">
+            <section class="flex flex-col gap-6">
                 <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-terracotta-accent">terminal</span>
-                    <h2 class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest">Development &amp; Tools</h2>
+                    <div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-text-primary">
+                        <span class="material-symbols-outlined text-[18px]">terminal</span>
+                    </div>
+                    <div>
+                        <h2 class="font-headline-md text-headline-md text-text-primary">Development &amp; Authoring Environment</h2>
+                        <p class="font-body-sm text-body-sm text-text-muted">High-precision local tooling calibrated for zero latency and systematic execution.</p>
+                    </div>
                 </div>
-                <div class="flex flex-col gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {developmentTools.map((tool) => (
-                        <div class="group">
-                            <h3 class="font-display text-headline-sm text-ink-slate dark:text-inverse-on-surface mb-2 group-hover:text-terracotta-accent transition-colors">
-                                <a href={tool.link} target="_blank" rel="noopener noreferrer">{tool.name}</a>
-                            </h3>
-                            <p class="text-body-md text-on-surface-variant dark:text-outline-variant">{tool.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            <!-- Writing Workflow & Hosting -->
-            <div class="flex flex-col gap-12">
-                <div class="flex flex-col gap-6">
-                    <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-terracotta-accent">history_edu</span>
-                        <h2 class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest">Writing Workflow</h2>
-                    </div>
-                    <div class="flex flex-col gap-8">
-                        {workflowTools.map((tool) => (
-                            <div class="group">
-                                <h3 class="font-display text-headline-sm text-ink-slate dark:text-inverse-on-surface mb-2 group-hover:text-terracotta-accent transition-colors">
-                                    <a href={tool.link} target="_blank" rel="noopener noreferrer">{tool.name}</a>
-                                </h3>
-                                <p class="text-body-md text-on-surface-variant dark:text-outline-variant">{tool.description}</p>
+                        <a class="group bg-surface-card p-5 rounded-xl flex flex-col justify-between shadow-xs hover:shadow-md transition-all" href={tool.link} rel="noopener noreferrer" target="_blank">
+                            <div class="space-y-2">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-headline-sm text-headline-sm text-text-primary group-hover:text-accent-flow transition-colors">{tool.name}</span>
+                                    <span class="material-symbols-outlined text-[16px] text-text-muted group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">north_east</span>
+                                </div>
+                                <span class="inline-block font-code-sm text-[0.6875rem] px-2 py-0.5 bg-surface-container text-text-secondary rounded">{tool.domain}</span>
+                                <p class="font-body-sm text-body-sm text-text-secondary pt-1">{tool.description}</p>
                             </div>
-                        ))}
+                        </a>
+                    ))}
+                </div>
+            </section>
+
+            <!-- Writing & Thought Architecture -->
+            <section class="flex flex-col gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-text-primary">
+                        <span class="material-symbols-outlined text-[18px]">history_edu</span>
+                    </div>
+                    <div>
+                        <h2 class="font-headline-md text-headline-md text-text-primary">Writing &amp; Thought Architecture</h2>
+                        <p class="font-body-sm text-body-sm text-text-muted">From associative research graphs to versioned publication without cognitive drag.</p>
                     </div>
                 </div>
-
-                <div class="flex flex-col gap-6 pt-8 border-t border-border-muted dark:border-outline-variant">
-                    <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-terracotta-accent">cloud_done</span>
-                        <h2 class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest">Hosting &amp; Deployment</h2>
-                    </div>
-                    {deploymentTools.map((tool) => (
-                        <div class="group">
-                            <h3 class="font-display text-headline-sm text-ink-slate dark:text-inverse-on-surface mb-2 group-hover:text-terracotta-accent transition-colors">
-                                <a href={tool.link} target="_blank" rel="noopener noreferrer">{tool.name}</a>
-                            </h3>
-                            <p class="text-body-md text-on-surface-variant dark:text-outline-variant">{tool.description}</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {workflowTools.map((tool) => (
+                        <div class="bg-surface-card p-6 rounded-xl shadow-xs flex flex-col justify-between space-y-4">
+                            <div class="space-y-2">
+                                <div class="flex items-center justify-between gap-2">
+                                    <a class="font-headline-sm text-headline-sm text-text-primary hover:text-accent-flow transition-colors flex items-center gap-1" href={tool.link} rel="noopener noreferrer" target="_blank">
+                                        {tool.name} <span class="material-symbols-outlined text-[14px]">north_east</span>
+                                    </a>
+                                </div>
+                                <p class="font-body-sm text-body-sm text-text-secondary">{tool.description}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
-            </div>
+            </section>
 
-        </div>
-
-        <!-- Typography Section -->
-        <section class="bg-paper-white dark:bg-ink-slate py-20 border-y border-border-muted dark:border-outline-variant">
-            <div class="max-w-5xl mx-auto px-gutter">
-                <div class="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
-                    <div class="max-w-3xl">
-                        <div class="flex items-center gap-3 mb-6">
-                            <span class="material-symbols-outlined text-terracotta-accent">format_size</span>
-                            <h2 class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest">Typography</h2>
+            <!-- Hosting & Deployment -->
+            <section class="bg-primary text-on-primary p-8 rounded-xl flex flex-col space-y-6 shadow-md">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-surface-container-highest/20 flex items-center justify-center text-on-primary">
+                            <span class="material-symbols-outlined text-[18px]">cloud_done</span>
                         </div>
-                        <p class="text-body-lg text-on-surface-variant dark:text-outline-variant">Our typographic system is designed for high-density information without compromising the editorial warmth of a physical journal.</p>
+                        <div>
+                            <h2 class="font-headline-md text-headline-md text-on-primary">Hosting, Deployment &amp; Edge Performance</h2>
+                            <p class="font-body-sm text-body-sm text-outline-variant">Distributed worldwide compute with zero runtime dependencies.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-                <div class="border-l-2 border-terracotta-accent pl-8 py-2">
-                    <h4 class="text-label-caps text-terracotta-accent mb-4">Headlines &amp; Display</h4>
-                    <span class="block font-display text-display-lg mb-4">Newsreader</span>
-                    <p class="text-body-md text-on-surface-variant dark:text-outline-variant">Editorial serif for headlines, display text, blockquotes, and callout content. Provides warmth and distinctiveness for structural elements.</p>
-                </div>
-                <div class="border-l-2 border-border-muted dark:border-outline-variant pl-8 py-2">
-                    <h4 class="text-label-caps text-terracotta-accent mb-4">Body Copy &amp; UI</h4>
-                    <span class="block text-display-lg mb-4" style="font-family: 'Inter', 'Inter Fallback', sans-serif; font-weight: 400;">Inter</span>
-                    <p class="text-body-md text-on-surface-variant dark:text-outline-variant">Neutral sans-serif for all paragraph content, labels, navigation, and interface elements. Highly legible at any size.</p>
-                </div>
-                <div class="border-l-2 border-border-muted dark:border-outline-variant pl-8 py-2">
-                    <h4 class="text-label-caps text-terracotta-accent mb-4">Syntax &amp; Technical</h4>
-                    <span class="block font-mono text-display-lg mb-4">JetBrains Mono</span>
-                    <p class="text-body-md text-on-surface-variant dark:text-outline-variant">Designed for code clarity with distinctive letterforms for syntax distinction.</p>
-                </div>
-                <div class="border-l-2 border-border-muted dark:border-outline-variant pl-8 py-2">
-                    <h4 class="text-label-caps text-terracotta-accent mb-4">Iconography</h4>
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="material-symbols-outlined" style="font-size: 48px;">palette</span>
-                        <span class="material-symbols-outlined" style="font-size: 48px;">auto_awesome</span>
-                        <span class="material-symbols-outlined" style="font-size: 48px;">lightbulb</span>
-                        <span class="material-symbols-outlined" style="font-size: 48px;">rocket_launch</span>
-                    </div>
-                    <p class="text-body-md text-on-surface-variant dark:text-outline-variant mb-6">Material Symbols Variable weight (100-700). Outlined icon set for consistent, modern UI iconography.</p>
-                </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tech Stack Section -->
-        <section class="max-w-5xl mx-auto py-section-gap">
-            <div class="flex items-center gap-3 mb-12">
-                <span class="material-symbols-outlined text-terracotta-accent">schema</span>
-                <h2 class="text-label-caps text-on-surface-variant dark:text-outline-variant uppercase tracking-widest">Technology Stack</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {techStack.map((pkg) => (
-                    <a href={pkg.link} target="_blank" rel="noopener noreferrer" class="p-6 bg-paper-white dark:bg-ink-slate border border-border-muted dark:border-outline-variant hover:border-terracotta-accent transition-colors group">
-                        <h4 class="font-display text-[20px] text-ink-slate dark:text-inverse-on-surface mb-3 group-hover:text-terracotta-accent transition-colors">{pkg.name}</h4>
-                        <p class="text-body-md text-on-surface-variant dark:text-outline-variant">{pkg.description}</p>
+                    <a class="inline-flex items-center gap-1 px-3 py-1 bg-surface-container-highest/20 hover:bg-surface-container-highest/30 rounded text-on-primary font-code-sm text-code-sm transition-colors self-start sm:self-auto" href={deploymentTools[0].link} rel="noopener noreferrer" target="_blank">
+                        {deploymentTools[0].name.toLowerCase()}.com <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                     </a>
-                ))}
-            </div>
-        </section>
+                </div>
+                <p class="font-body-md text-body-md text-outline-variant">{deploymentTools[0].description}</p>
+            </section>
+
+            <!-- Typography -->
+            <section class="flex flex-col space-y-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-text-primary">
+                        <span class="material-symbols-outlined text-[18px]">format_size</span>
+                    </div>
+                    <div>
+                        <h2 class="font-headline-md text-headline-md text-text-primary">Typographic System &amp; Specimen</h2>
+                        <p class="font-body-sm text-body-sm text-text-muted">A balanced harmony between editorial distinction, legibility, and technical density.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Newsreader -->
+                    <div class="bg-surface-card p-6 rounded-xl shadow-xs flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-caps text-label-caps uppercase text-accent-flow">Headlines &amp; Display</span>
+                                <span class="font-code-sm text-[0.75rem] text-text-muted">Serif • Optical 6-72</span>
+                            </div>
+                            <h3 class="font-headline-lg text-headline-lg text-text-primary">Newsreader</h3>
+                            <p class="font-body-sm text-body-sm text-text-secondary">Editorial serif for headlines, article titles, display text, and pull quotes. Warm, distinctive, and grounded in traditional French/Dutch Baroque type design.</p>
+                        </div>
+                        <div class="bg-surface-subtle p-4 rounded-lg space-y-1">
+                            <div class="font-display text-[1.5rem] text-text-primary leading-tight">Agility at the Edge — Flow, Systems &amp; Autonomy</div>
+                            <div class="font-display text-[1.125rem] text-text-secondary italic">"Structure creates the space for deliberate innovation."</div>
+                        </div>
+                    </div>
+                    <!-- Inter -->
+                    <div class="bg-surface-card p-6 rounded-xl shadow-xs flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-caps text-label-caps uppercase text-accent-flow">Body &amp; Interface UI</span>
+                                <span class="font-code-sm text-[0.75rem] text-text-muted">Sans • Dynamic Tracking</span>
+                            </div>
+                            <h3 class="font-headline-lg text-headline-lg text-text-primary">Inter</h3>
+                            <p class="font-body-sm text-body-sm text-text-secondary">Highly legible neutral sans-serif designed for micro-clarity across digital screens. Used for prose, navigation, metadata, and labels.</p>
+                        </div>
+                        <div class="bg-surface-subtle p-4 rounded-lg space-y-2 font-body-md text-body-md text-text-primary">
+                            <div class="tracking-wide">Aa Bb Cc Dd Ee Ff Gg Hh 0123456789</div>
+                            <p class="text-text-secondary text-[0.875rem] leading-relaxed">Engineered letterforms optimized for reading speed on desktop and mobile viewports alike.</p>
+                        </div>
+                    </div>
+                    <!-- JetBrains Mono -->
+                    <div class="bg-surface-card p-6 rounded-xl shadow-xs flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-caps text-label-caps uppercase text-accent-flow">Code &amp; Technical Syntax</span>
+                                <span class="font-code-sm text-[0.75rem] text-text-muted">Monospace • 400/500</span>
+                            </div>
+                            <h3 class="font-headline-lg text-headline-lg text-text-primary">JetBrains Mono</h3>
+                            <p class="font-body-sm text-body-sm text-text-secondary">Monospaced typeface with heightened x-height and clear distinction between glyphs, designed for code blocks, terminal paths, and data matrices.</p>
+                        </div>
+                        <div class="bg-surface-container p-4 rounded-lg font-code-sm text-code-sm text-text-primary space-y-1">
+                            <div class="text-text-muted">// System Architecture Spec</div>
+                            <div>const pipeline = await compileAST(source);</div>
+                            <div class="text-accent-flow">return renderStaticRoute(pipeline);</div>
+                        </div>
+                    </div>
+                    <!-- Material Symbols -->
+                    <div class="bg-surface-card p-6 rounded-xl shadow-xs flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-caps text-label-caps uppercase text-accent-flow">Iconography</span>
+                                <span class="font-code-sm text-[0.75rem] text-text-muted">Variable • Outlined</span>
+                            </div>
+                            <h3 class="font-headline-lg text-headline-lg text-text-primary">Material Symbols</h3>
+                            <p class="font-body-sm text-body-sm text-text-secondary">Variable outlined icon family (weights 200–400) providing consistent visual metaphor without visual clutter.</p>
+                        </div>
+                        <div class="bg-surface-subtle p-4 rounded-lg flex items-center justify-around text-text-primary">
+                            <div class="flex flex-col items-center gap-1">
+                                <span class="material-symbols-outlined text-[24px]">palette</span>
+                                <span class="font-code-sm text-[0.6875rem] text-text-muted">palette</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-1">
+                                <span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+                                <span class="font-code-sm text-[0.6875rem] text-text-muted">awesome</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-1">
+                                <span class="material-symbols-outlined text-[24px]">lightbulb</span>
+                                <span class="font-code-sm text-[0.6875rem] text-text-muted">lightbulb</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-1">
+                                <span class="material-symbols-outlined text-[24px]">rocket_launch</span>
+                                <span class="font-code-sm text-[0.6875rem] text-text-muted">launch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technology Stack -->
+            <section class="flex flex-col space-y-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-text-primary">
+                        <span class="material-symbols-outlined text-[18px]">schema</span>
+                    </div>
+                    <div>
+                        <h2 class="font-headline-md text-headline-md text-text-primary">Technology Stack &amp; Build Pipeline</h2>
+                        <p class="font-body-sm text-body-sm text-text-muted">The minimal modern stack powering static generation and syndication.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-3">
+                    {techStack.map((pkg) => (
+                        <a class="group bg-surface-card p-5 rounded-xl shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:shadow-md transition-all" href={pkg.link} rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-surface-subtle flex items-center justify-center text-accent-flow group-hover:bg-accent-flow-soft transition-colors shrink-0">
+                                    <span class="material-symbols-outlined text-[20px]">{pkg.icon}</span>
+                                </div>
+                                <div>
+                                    <span class="font-headline-sm text-headline-sm text-text-primary group-hover:text-accent-flow transition-colors">{pkg.name}</span>
+                                    <p class="font-body-sm text-body-sm text-text-secondary mt-1">{pkg.description}</p>
+                                </div>
+                            </div>
+                            <span class="font-code-sm text-code-sm text-text-muted group-hover:text-accent-flow flex items-center gap-1 self-end sm:self-center shrink-0">
+                                {pkg.domain} <span class="material-symbols-outlined text-[14px]">north_east</span>
+                            </span>
+                        </a>
+                    ))}
+                </div>
+            </section>
+        </div>
     </main>
 </Layout>

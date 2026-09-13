@@ -30,7 +30,7 @@ const formatDate = (date: Date) => {
     return date.toLocaleDateString("en-US", {
         year: "numeric",
         month: "short",
-        day: "numeric",
+        day: "2-digit",
         timeZone: "UTC",
     });
 };
@@ -44,6 +44,8 @@ for (const note of sortedNotes) {
     notesByYear.get(year)!.push(note);
 }
 const sortedYears = Array.from(notesByYear.entries()).sort((a, b) => b[0] - a[0]);
+const firstYear = sortedYears[sortedYears.length - 1]?.[0];
+const lastYear = sortedYears[0]?.[0];
 ---
 
 <Layout
@@ -51,75 +53,167 @@ const sortedYears = Array.from(notesByYear.entries()).sort((a, b) => b[0] - a[0]
     description="Browse all articles by year."
     type="website"
 >
-    <main>
-        <section class="py-section-gap bg-paper-white dark:bg-ink-slate">
-            <div class="max-w-4xl mx-auto px-gutter">
-                <div class="mb-16 text-center">
-                    <span class="text-mono-sm text-terracotta-accent uppercase tracking-widest mb-4 block">All Writing</span>
-                    <h1 class="font-display text-display-lg text-ink-slate dark:text-inverse-on-surface mb-6">Archives</h1>
-                    <p class="text-body-lg text-on-surface-variant dark:text-outline-variant">
-                        {allNotes.length} articles spanning {sortedYears[sortedYears.length - 1]?.[0] || ''} to {sortedYears[0]?.[0] || ''}.
-                    </p>
+    <main class="w-full">
+        <div class="w-full max-w-4xl mx-auto px-margin-mobile md:px-gutter py-12 md:py-16 flex flex-col gap-12 sm:gap-16">
+            <!-- Editorial Masthead -->
+            <header class="flex flex-col gap-5 pt-2 sm:pt-6">
+                <div class="flex items-center gap-3">
+                    <span class="font-code-sm text-code-sm uppercase tracking-widest text-accent-flow font-medium">
+                        All Writing
+                    </span>
+                    <span class="hidden sm:inline-block w-8 h-[1px] bg-border-delicate"></span>
                 </div>
-
-                <!-- Year Filter -->
-                <div class="flex flex-wrap justify-center gap-3 mb-16" id="year-filters">
-                    <button class="year-filter-btn text-label-caps text-on-surface-variant dark:text-outline-variant px-4 py-2 border border-border-muted dark:border-on-surface-variant hover:border-terracotta-accent hover:text-terracotta-accent transition-all data-[active=true]:bg-ink-slate data-[active=true]:text-paper-white dark:data-[active=true]:bg-paper-white dark:data-[active=true]:text-ink-slate data-[active=true]:border-ink-slate dark:data-[active=true]:border-paper-white" data-year="all" data-active="true">All Years</button>
-                    {sortedYears.map(([year]) => (
-                        <button class="year-filter-btn text-label-caps text-on-surface-variant dark:text-outline-variant px-4 py-2 border border-border-muted dark:border-on-surface-variant hover:border-terracotta-accent hover:text-terracotta-accent transition-all data-[active=true]:bg-ink-slate data-[active=true]:text-paper-white dark:data-[active=true]:bg-paper-white dark:data-[active=true]:text-ink-slate data-[active=true]:border-ink-slate dark:data-[active=true]:border-paper-white" data-year={year}>{year}</button>
-                    ))}
+                <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-4">
+                    <h1 class="font-display text-display-mobile md:text-display text-text-primary tracking-tight">Archives</h1>
+                    <span class="font-code-sm text-code-sm text-text-muted">
+                        {allNotes.length} entries • {firstYear}–{lastYear}
+                    </span>
                 </div>
+                <p class="font-body-lead text-body-lead text-text-secondary max-w-2xl">
+                    {allNotes.length} articles spanning {firstYear} to {lastYear}.
+                </p>
 
-                <!-- Pinned -->
-                {pinnedNotes.length > 0 && (
-                    <div class="mb-16 year-section" data-year="all">
-                        <h2 class="font-display text-headline-md text-ink-slate dark:text-inverse-on-surface border-b border-border-muted dark:border-on-surface-variant pb-4 mb-8">Pinned</h2>
-                        {pinnedNotes.map((note) => (
-                            <a href={`/notes/${note.id.replace('.md', '')}`} class="flex items-center justify-between py-3 border-b border-border-muted/50 dark:border-on-surface-variant/50 group">
-                                <span class="text-body-md text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors">{note.data.title}</span>
-                                <span class="text-mono-sm text-on-surface-variant dark:text-outline-variant shrink-0 ml-4">{note.data.publishedDate ? formatDate(note.data.publishedDate) : ''}</span>
-                            </a>
+                <!-- Archival controls -->
+                <div class="flex flex-col gap-4 mt-2">
+                    <div class="relative w-full">
+                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-muted text-[18px]">search</span>
+                        <input
+                            id="archive-filter"
+                            type="text"
+                            class="w-full py-2.5 pl-10 pr-4 rounded-lg bg-surface-card border border-border-delicate focus:border-accent-flow focus:ring-1 focus:ring-accent-flow/40 text-body-sm text-text-primary placeholder:text-text-muted outline-none transition-all"
+                            placeholder="Filter the archive..."
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="flex items-center gap-1.5 overflow-x-auto pb-2 no-scrollbar text-body-sm" id="year-filters">
+                        <button class="year-filter-btn text-code-sm font-medium transition-all px-3 py-1 rounded-full whitespace-nowrap bg-accent-flow-soft text-accent-flow border border-accent-flow/30" data-year="all" data-active="true" type="button">
+                            All Years ({allNotes.length})
+                        </button>
+                        {sortedYears.map(([year]) => (
+                            <button class="year-filter-btn text-code-sm text-text-secondary hover:text-text-primary hover:bg-surface-subtle transition-all px-2.5 py-1 rounded-full whitespace-nowrap" data-year={year} data-active="false" type="button">
+                                {year}
+                            </button>
                         ))}
                     </div>
+                </div>
+            </header>
+
+            <hr class="border-t border-border-delicate my-0" />
+
+            <!-- Chronological stream -->
+            <div class="flex flex-col gap-16 sm:gap-20" id="archives-stream">
+                {pinnedNotes.length > 0 && (
+                    <section class="year-block scroll-mt-28 flex flex-col gap-6" data-year="all">
+                        <div class="flex items-baseline justify-between border-b border-border-delicate pb-3">
+                            <div class="flex items-baseline gap-3">
+                                <h2 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">Pinned</h2>
+                                <span class="font-code-sm text-code-sm text-accent-flow bg-accent-flow-soft px-2 py-0.5 rounded">{pinnedNotes.length} articles</span>
+                            </div>
+                        </div>
+                        <ul class="flex flex-col divide-y divide-border-delicate/70">
+                            {pinnedNotes.map((note) => (
+                                <li class="article-row py-3.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-6 group">
+                                    <a class="flex-1 font-body-md text-body-md text-text-primary group-hover:text-accent-flow transition-colors" href={`/notes/${note.id.replace('.md', '')}`}>
+                                        {note.data.title}
+                                    </a>
+                                    <div class="flex items-center gap-3 shrink-0">
+                                        <time class="font-code-sm text-code-sm text-text-muted w-24 text-left sm:text-right">
+                                            {note.data.publishedDate ? formatDate(note.data.publishedDate) : ""}
+                                        </time>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
                 )}
 
-                <!-- Year Sections -->
                 {sortedYears.map(([year, notes]) => (
-                    <div class="mb-16 year-section" data-year={year}>
-                        <h2 class="font-display text-headline-md text-ink-slate dark:text-inverse-on-surface border-b border-border-muted dark:border-on-surface-variant pb-4 mb-8">{year} <span class="text-label-caps text-on-surface-variant dark:text-outline-variant font-normal">({notes.length} articles)</span></h2>
-                        {notes.map((note) => (
-                            <a href={`/notes/${note.id.replace('.md', '')}`} class="flex items-center justify-between py-3 border-b border-border-muted/50 dark:border-on-surface-variant/50 group">
-                                <span class="text-body-md text-ink-slate dark:text-inverse-on-surface group-hover:text-terracotta-accent transition-colors">{note.data.title}</span>
-                                <span class="text-mono-sm text-on-surface-variant dark:text-outline-variant shrink-0 ml-4">{formatDate(note.displayDate as Date)}</span>
-                            </a>
-                        ))}
-                    </div>
+                    <section class="year-block scroll-mt-28 flex flex-col gap-6" id={`year-${year}`} data-year={year}>
+                        <div class="flex items-baseline justify-between border-b border-border-delicate pb-3">
+                            <div class="flex items-baseline gap-3">
+                                <h2 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">{year}</h2>
+                                <span class="font-code-sm text-code-sm text-accent-flow bg-accent-flow-soft px-2 py-0.5 rounded">{notes.length} articles</span>
+                            </div>
+                        </div>
+                        <ul class="flex flex-col divide-y divide-border-delicate/70">
+                            {notes.map((note) => (
+                                <li class="article-row py-3.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-6 group">
+                                    <a class="flex-1 font-body-md text-body-md text-text-primary group-hover:text-accent-flow transition-colors" href={`/notes/${note.id.replace('.md', '')}`}>
+                                        {note.data.title}
+                                    </a>
+                                    <div class="flex items-center gap-3 shrink-0">
+                                        <time class="font-code-sm text-code-sm text-text-muted w-24 text-left sm:text-right" datetime={(note.displayDate as Date).toISOString().split("T")[0]}>
+                                            {formatDate(note.displayDate as Date)}
+                                        </time>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
                 ))}
             </div>
-        </section>
+
+            <!-- Archival Signoff -->
+            <aside class="p-6 bg-surface-card rounded-lg border border-border-delicate flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="flex flex-col gap-1">
+                    <p class="font-headline-sm text-headline-sm text-text-primary">Subscribing to Malcolm's Notes</p>
+                    <p class="font-body-sm text-body-sm text-text-secondary">
+                        All essays are released via RSS in standard XML. Archival permalinks remain stable across migrations.
+                    </p>
+                </div>
+                <a class="shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded bg-surface-subtle hover:bg-surface-container border border-border-delicate text-body-sm text-text-primary font-medium hover:border-accent-flow transition-all" href="/rss.xml">
+                    <span class="material-symbols-outlined text-[18px] text-accent-flow">rss_feed</span>
+                    <span>Feed XML</span>
+                </a>
+            </aside>
+        </div>
     </main>
 </Layout>
 
 <script>
-    const filters = document.querySelectorAll<HTMLElement>('.year-filter-btn');
-    const sections = document.querySelectorAll<HTMLElement>('.year-section');
+    const filterInput = document.getElementById("archive-filter") as HTMLInputElement | null;
+    const filters = document.querySelectorAll<HTMLElement>(".year-filter-btn");
+    const sections = document.querySelectorAll<HTMLElement>(".year-block");
+    const rows = document.querySelectorAll<HTMLElement>(".article-row");
 
-    filters.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const year = btn.dataset.year;
+    let activeYear = "all";
 
-            filters.forEach(b => {
-                b.dataset.active = 'false';
-            });
-            btn.dataset.active = 'true';
+    function apply() {
+        const query = (filterInput?.value || "").toLowerCase().trim();
 
-            sections.forEach(section => {
-                if (year === 'all' || section.dataset.year === 'all' || section.dataset.year === year) {
-                    section.style.display = 'block';
-                } else {
-                    section.style.display = 'none';
-                }
-            });
+        rows.forEach((row) => {
+            const matchesQuery = !query || (row.textContent || "").toLowerCase().includes(query);
+            row.style.display = matchesQuery ? "" : "none";
         });
+
+        sections.forEach((section) => {
+            const year = section.dataset.year;
+            const matchesYear = activeYear === "all" || year === "all" || year === activeYear;
+            const visibleRows = section.querySelectorAll<HTMLElement>('.article-row:not([style*="display: none"])');
+            section.style.display = matchesYear && visibleRows.length > 0 ? "" : "none";
+        });
+    }
+
+    filters.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            activeYear = btn.dataset.year || "all";
+            filters.forEach((b) => {
+                b.dataset.active = "false";
+                b.classList.remove("bg-accent-flow-soft", "text-accent-flow", "border", "border-accent-flow/30");
+            });
+            btn.dataset.active = "true";
+            btn.classList.add("bg-accent-flow-soft", "text-accent-flow", "border", "border-accent-flow/30");
+            apply();
+        });
+    });
+
+    filterInput?.addEventListener("input", apply);
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && document.activeElement === filterInput && filterInput) {
+            filterInput.value = "";
+            apply();
+            filterInput.blur();
+        }
     });
 </script>

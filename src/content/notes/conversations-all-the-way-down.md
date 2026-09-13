@@ -27,15 +27,25 @@ When those conversations thin out, nothing stops. Work keeps moving, reports kee
 
 **Kanban boards.** A board makes the value stream visible: what is in progress, what is waiting, what is not moving. Visibility on its own does nothing for delivery. What the board buys you is a shared object the team can stand in front of and talk about: where the pile is, why that item has not moved in nine days, what to do about the thing that is stuck. Take away the conversation and you have a picture of the work that nobody acts on.
 
-**User stories.** The template earns its keep by forcing the question of who the work is for into the open. A story that gets written, estimated, and dragged across a board without anyone discussing the user has produced an artifact. Teams that get real value from stories use them to start arguments about scope, edge cases, and what the person on the other end actually does.
-
-**Sprint planning.** Story points and capacity numbers give a team somewhere to start. They do not hold the dependency on another team, the environment that is only free on Tuesdays, or the item three people privately think is twice the size. Disagreement is the useful output of planning. Points and capacity never produce it, so a plan built from those numbers alone is a record of intent.
+**Planning.** Story points and capacity numbers give a team somewhere to start. They do not hold the dependency on another team, the environment that is only free on Tuesdays, or the item three people privately think is twice the size. Disagreement is the useful output of planning. Points and capacity never produce it, so a plan built from those numbers alone is a record of intent.
 
 **Retrospectives.** The format gets the credit. The honesty does the work. A retro that produces a tidy list of action items and no uncomfortable sentence has cost the team an hour.
 
 **Swarming, pairing, demos.** Swarming is what happens when a team decides to stop starting and finish the thing that is stuck, together, today. Pairing is a conversation with a keyboard attached. A demo is where the customer talks back, usually about something nobody in the room was worried about. Each of these is a practice that makes a specific conversation routine and repeatable.
 
 A team I worked with had a board that looked healthy for months. Two columns, steady throughput, nothing aging badly. The real state of the work only came out in a hallway conversation about a test environment that three teams shared. Nobody had put it on the board because the board tracked their work, and the environment belonged to someone else.
+
+## "How Do I Write Better Stories"
+
+The question I hear most often is not about boards or planning. It comes holding a draft: how do I write better stories?
+
+A story is easy to critique. The template maybe half used, the acceptance criteria thin, the scope reading like two items stapled together. All fixable, and all beside the point. Look at how the story arrived and you find someone sitting alone, writing it on their own. No conversation happened on the way to the artifact, and none is expected.
+
+That is the actual problem, and a well-turned sentence will not solve it. People writing alone make small mistakes not because they lack the details but because they wrote without anyone next to them. A collaborator asks the question that takes three seconds, says "that's not what I'd expect", and stops a wrong assumption before it hardens into text. Alone, the same assumption ships and gets discovered downstream, where the correction costs a sprint instead of a sentence.
+
+So the feedback usually starts somewhere else than the draft. Who are you writing these with? Pair up. Walk through it together. Read the story out loud to the person who will use it and watch where their face changes. The template cannot supply what the conversation supplies, and the conversation does not need a template.
+
+The same move works everywhere. The advice requested is about an artifact, and the artifact's quality is produced by the collaboration around it. Structure can be added to any practice. It only approximates what the conversation does directly.
 
 ## Delivery Problems Surface in Conversation, Not on Dashboards
 

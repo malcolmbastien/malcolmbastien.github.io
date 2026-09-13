@@ -44,7 +44,7 @@
         const container = document.querySelector("#search-box");
         if (container) {
             container.innerHTML = `
-                <div class="text-sm text-secondary p-4 text-center border border-dashed border-slate-200 dark:border-slate-800 rounded-lg">
+                <div class="text-sm text-text-secondary p-4 text-center border border-dashed border-border-delicate rounded-lg">
                     Search available after build
                 </div>
             `;
@@ -59,20 +59,20 @@
   @reference "../../styles/global.css";
 
   :root {
-    --pagefind-ui-primary: #10b981;
-    --pagefind-ui-text: #1e293b;
+    --pagefind-ui-primary: #C85226;
+    --pagefind-ui-text: #0B192C;
     --pagefind-ui-background: #ffffff;
-    --pagefind-ui-border: #e2e8f0;
-    --pagefind-ui-tag: #f1f5f9;
+    --pagefind-ui-border: #E5E2DC;
+    --pagefind-ui-tag: #F5F3EE;
     --pagefind-ui-width: 100%;
   }
 
   .dark {
-    --pagefind-ui-primary: #10b981;
-    --pagefind-ui-text: #f8fafc;
-    --pagefind-ui-background: #0f172a;
-    --pagefind-ui-border: #1e293b;
-    --pagefind-ui-tag: #1e293b;
+    --pagefind-ui-primary: #e07a4f;
+    --pagefind-ui-text: #f2f1ee;
+    --pagefind-ui-background: #1b1e23;
+    --pagefind-ui-border: #2c3037;
+    --pagefind-ui-tag: #212429;
   }
 
   #search-box {
@@ -90,43 +90,40 @@
   }
 
   #search-box .pagefind-ui__search-input {
-    @apply border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xl focus:ring-4 focus:ring-green-500/5 focus:border-green-500 transition-all py-5 px-14;
+    @apply border-border-delicate bg-surface-card text-text-primary text-xl focus:ring-4 focus:ring-accent-flow/10 focus:border-accent-flow transition-all py-5 px-14;
     border-radius: 1rem;
   }
 
-  /* Search Icon override */
   #search-box .pagefind-ui__search-input::placeholder {
-    @apply text-slate-400;
+    @apply text-text-muted;
   }
 
   #search-box .pagefind-ui__result-link {
-    @apply text-slate-900 dark:text-white font-sans font-bold hover:text-green-500 dark:hover:text-green-600 transition-colors text-2xl tracking-tight leading-tight;
+    @apply text-text-primary font-sans font-bold hover:text-accent-flow transition-colors text-2xl tracking-tight leading-tight;
   }
 
   #search-box .pagefind-ui__result-nested .pagefind-ui__result-link {
-    @apply flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-green-500 dark:hover:text-green-600 transition-colors;
+    @apply flex items-center gap-2 text-sm font-bold text-text-secondary hover:text-accent-flow transition-colors;
   }
 
   #search-box .pagefind-ui__result-excerpt {
-    @apply text-slate-600 dark:text-slate-400 text-[17px] mt-4 leading-relaxed;
+    @apply text-text-secondary text-[17px] mt-4 leading-relaxed;
   }
 
   #search-box .pagefind-ui__result {
-    @apply flex flex-col sm:flex-row gap-8 pb-16 mb-16 border-b border-slate-200 dark:border-slate-800 last:border-0;
+    @apply flex flex-col sm:flex-row gap-8 pb-16 mb-16 border-b border-border-delicate last:border-0;
   }
 
   #search-box .pagefind-ui__result-thumb {
-    @apply shrink-0 w-32 h-32 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm m-0!;
+    @apply shrink-0 w-32 h-32 rounded-2xl overflow-hidden bg-surface-subtle shadow-sm m-0!;
   }
 
-  /* Hide placeholder images - when no image is found, pagefind adds an empty img or placeholder */
   #search-box .pagefind-ui__result-thumb:empty,
   #search-box .pagefind-ui__result-thumb img[src=""],
   #search-box .pagefind-ui__result-thumb img:not([src]) {
     display: none !important;
   }
 
-  /* Ensure images fit properly within the container */
   #search-box .pagefind-ui__result-thumb img {
     @apply w-full h-full object-cover;
   }
@@ -136,7 +133,7 @@
   }
 
   #search-box .pagefind-ui__message {
-    @apply text-sm font-medium text-slate-500 pb-6 border-b border-slate-200 dark:border-slate-800 mb-8;
+    @apply text-sm font-medium text-text-muted pb-6 border-b border-border-delicate mb-8;
   }
 
   #search-box .pagefind-ui__drawer {
@@ -144,7 +141,7 @@
   }
 
   #search-box .pagefind-ui__result-title {
-    @apply text-slate-900 dark:text-white font-sans font-bold;
+    @apply text-text-primary font-sans font-bold;
   }
 
   #search-box .pagefind-ui__result-nested {
@@ -154,14 +151,14 @@
   #search-box .pagefind-ui__result-nested .pagefind-ui__result-link::before {
     content: "subdirectory_arrow_right";
     font-family: 'Material Icons Round';
-    @apply text-base text-slate-400 font-normal;
+    @apply text-base text-text-muted font-normal;
   }
 
   #search-box .pagefind-ui__result-nested .pagefind-ui__result-excerpt {
-    @apply pl-7 text-sm text-slate-500 leading-relaxed mt-1;
+    @apply pl-7 text-sm text-text-muted leading-relaxed mt-1;
   }
 
   #search-box .pagefind-ui__button {
-    @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all py-3;
+    @apply bg-surface-card border border-border-delicate rounded-xl text-sm font-bold text-text-secondary hover:bg-surface-subtle transition-all py-3;
   }
 </style>
