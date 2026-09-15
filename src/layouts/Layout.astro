@@ -217,13 +217,16 @@ const navItems = [
         <!-- Site Footer -->
         <footer class="w-full bg-surface-footer border-t border-border-delicate mt-auto">
             <div class="max-w-page mx-auto px-margin-mobile md:px-gutter py-space-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                <p class="font-display text-lg text-text-primary italic">Malcolm Bastien</p>
+                <p class="font-display text-lg text-text-primary">Malcolm Bastien</p>
                 <div class="flex flex-wrap items-center gap-6 font-body-sm text-body-sm text-text-secondary">
                     <a class="hover:text-accent-flow transition-colors" href="/colophon">Colophon</a>
                     <a class="hover:text-accent-flow transition-colors" href="https://www.linkedin.com/in/malcolmbastien/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
                     <a class="hover:text-accent-flow transition-colors" href="/rss.xml">RSS Feed</a>
                 </div>
-                <div class="font-code-sm text-code-sm text-text-muted">&copy; {currentYear} Malcolm Bastien. All rights reserved.</div>
+                <div class="font-code-sm text-code-sm text-text-muted flex items-center gap-2">
+                    <span>&copy; {currentYear} Malcolm Bastien.</span>
+                    <span role="img" aria-label="Canada" title="Canada">🍁</span>
+                </div>
             </div>
         </footer>
     </body>

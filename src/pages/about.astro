@@ -541,9 +541,11 @@ const socialLinks = [
                 <div class="flex flex-col lg:flex-row gap-12 items-start">
                     <div class="max-w-[48rem] grow">
                         <div class="flex items-center gap-3 mb-6">
-                            <span class="font-code-sm text-code-sm uppercase tracking-widest text-accent-flow font-medium">Profile / About</span>
-                            <span class="text-text-muted text-xs">•</span>
-                            <span class="font-code-sm text-[0.75rem] text-text-muted tracking-wider uppercase">Toronto, Canada</span>
+                            <span class="font-code-sm text-code-sm uppercase tracking-widest text-accent-flow font-medium">Profile</span>
+                            <span class="text-text-muted text-xs">/</span>
+                            <span class="font-code-sm text-code-sm uppercase tracking-widest text-text-muted">About</span>
+                            <span class="text-text-muted text-xs">/</span>
+                            <span class="font-code-sm text-code-sm uppercase tracking-widest text-text-muted flex items-center gap-1.5">Toronto, Canada <span role="img" aria-label="Canada" title="Canada">🍁</span></span>
                         </div>
                         <h1 class="font-display text-display-mobile md:text-display text-text-primary tracking-tight mb-4">
                             Malcolm Bastien
@@ -626,7 +628,7 @@ const socialLinks = [
                                     <span class="material-symbols-outlined text-[22px]">{sector.icon}</span>
                                     <span class="font-code-sm text-[0.75rem] uppercase tracking-wider font-semibold">{sector.label}</span>
                                 </div>
-                                <h4 class:list={["text-text-primary mb-2", sector.wide || sector.emphasis ? "font-headline-md text-headline-md" : "font-headline-sm text-headline-sm"]}>{sector.title}</h4>
+                                <h4 class="font-headline-md text-headline-md text-text-primary mb-2">{sector.title}</h4>
                                 <p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">{sector.description}</p>
                             </div>
                         </div>
