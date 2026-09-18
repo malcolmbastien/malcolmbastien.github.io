@@ -15,7 +15,7 @@ import { rehypeOptimizeImages } from './src/lib/rehype-optimize-images.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://malcolmbastien.github.io',
+	site: 'https://malcolmbastien.com',
 	base: '/',
 	integrations: [sitemap()],
 	prefetch: {

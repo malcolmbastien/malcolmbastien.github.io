@@ -17,7 +17,7 @@ interface Props {
 
 const {
     title,
-    description = "A digital garden of thoughts and ideas",
+    description = "Enterprise Agile Coach helping leaders in Fintech, Banking, and HealthTech build fast flow through systems thinking, aligned autonomy, and sociotechnical design.",
     image = "/og-default.png",
     url = Astro.site?.origin || new URL(Astro.request.url).origin,
     type = "website",
@@ -34,10 +34,9 @@ const currentPath = Astro.url.pathname;
 const currentYear = new Date().getFullYear();
 
 const navItems = [
-    { href: "/archives", label: "Archives" },
-    { href: "/topics", label: "Topics" },
-    { href: "/colophon", label: "Colophon" },
     { href: "/about", label: "About" },
+    { href: "/archives", label: "Writing" },
+    { href: "/topics", label: "Topics" },
 ];
 ---
 
@@ -72,7 +71,7 @@ const navItems = [
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
-        <meta property="og:site_name" content="Flow Focused" />
+        <meta property="og:site_name" content="Malcolm Bastien" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
@@ -119,7 +118,7 @@ const navItems = [
                 },
                 publisher: {
                     "@type": "Organization",
-                    name: "Flow Focused",
+                    name: "Malcolm Bastien",
                     url: url,
                 },
                 ...(type === "article" &&

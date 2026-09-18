@@ -6,7 +6,7 @@ const description = "The page you're looking for doesn't exist or may have been 
 
 const destinations = [
     { href: "/", title: "Blog", description: "Thoughts on agile delivery, organizational design, and the craft of building products." },
-    { href: "/archives", title: "Archives", description: "Browse all articles by year — a complete index of published writing." },
+    { href: "/archives", title: "Writing", description: "Browse all articles by year — a complete index of published writing." },
     { href: "/topics", title: "Topics", description: "Explore writing organized by subject — from Agile to Systems Thinking." },
     { href: "/about", title: "About", description: "My background, philosophy, and the tools I use daily." },
 ];
@@ -36,12 +36,12 @@ const destinations = [
             <div class="flex flex-col items-center text-center">
                 <div class="mb-12">
                     <span class="font-code-sm text-code-sm text-accent-flow uppercase tracking-widest block mb-4">Navigation</span>
-                    <h2 class="font-headline-md text-headline-md text-text-primary">Where to next?</h2>
+                    <h2 class="font-headline-lg text-headline-lg text-text-primary">Where to next?</h2>
                 </div>
                 <div class="grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 max-w-4xl">
                     {destinations.map((dest) => (
                         <a class="group block" href={dest.href}>
-                            <h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-accent-flow transition-colors mb-2">{dest.title}</h3>
+                            <h3 class="font-headline-md text-headline-md text-text-primary group-hover:text-accent-flow transition-colors mb-2">{dest.title}</h3>
                             <p class="font-body-md text-body-md text-text-secondary">{dest.description}</p>
                         </a>
                     ))}

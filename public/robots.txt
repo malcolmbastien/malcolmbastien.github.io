@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://malcolmbastien.github.io/sitemap-index.xml
+Sitemap: https://malcolmbastien.com/sitemap-index.xml
 
 # Performance: prevent crawling of heavy assets and internal files
 Disallow: /_astro/

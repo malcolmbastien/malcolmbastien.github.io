@@ -70,6 +70,7 @@ const topicSlug = (t: string) => t.replace(/\s+/g, '-').toLowerCase();
 
             <!-- Editorial Timeline List -->
             <section class="w-full flex flex-col divide-y divide-border-delicate" id="articles-container">
+                <h2 class="sr-only">Notes</h2>
                 {sortedNotes.map((note) => {
                     const hasCover = note.data.cover;
                     const readingTime = getReadingTime(note.body);
@@ -93,12 +94,12 @@ const topicSlug = (t: string) => t.replace(/\s+/g, '-').toLowerCase();
                                         </a>
                                     )}
                                     <div class="flex flex-col gap-3">
-                                        <h2 class="font-headline-md text-headline-md text-text-primary group-hover:text-accent-flow transition-colors leading-snug">
+                                        <h3 class="font-headline-md text-headline-md text-text-primary group-hover:text-accent-flow transition-colors leading-snug">
                                             <a class="inline-flex items-center gap-2" href={`/notes/${note.id.replace('.md', '')}`}>
                                                 <span>{note.data.title}</span>
                                                 <span class="material-symbols-outlined text-[18px] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-accent-flow">arrow_forward</span>
                                             </a>
-                                        </h2>
+                                        </h3>
                                         {note.data.summary && (
                                             <p class="font-body-md text-body-md text-text-secondary leading-relaxed">{note.data.summary}</p>
                                         )}

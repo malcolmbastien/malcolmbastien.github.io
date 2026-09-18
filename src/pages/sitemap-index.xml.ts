@@ -6,7 +6,7 @@ export async function GET() {
   // Filter out draft notes from sitemap
   const publishedNotes = notes.filter(note => !note.data.draft);
 
-  const baseUrl = 'https://malcolmbastien.github.io';
+  const baseUrl = 'https://malcolmbastien.com';
 
   const pages = [
     '',

@@ -12,9 +12,9 @@
   --color-border-hover: #d3cec4;
   --color-text-primary: #0b192c;
   --color-text-secondary: #59677a;
-  --color-text-muted: #8a95a5;
-  --color-accent-flow: #c85226;
-  --color-accent-flow-hover: #ac431c;
+  --color-text-muted: #626d7e;
+  --color-accent-flow: #b3441c;
+  --color-accent-flow-hover: #8f3416;
   --color-accent-flow-soft: #fbf1ed;
 
   /* Legacy aliases (retuned to the warm palette) */
@@ -22,7 +22,7 @@
   --color-paper-white: #faf9f6;
   --color-canvas-gray: #f5f3ee;
   --color-border-muted: #e5e2dc;
-  --color-terracotta-accent: #c85226;
+  --color-terracotta-accent: #b3441c;
 
   /* Material-style surfaces */
   --color-surface: #faf9f6;
@@ -269,6 +269,35 @@
     letter-spacing: -0.02em;
     line-height: 1.2;
     color: var(--color-ink-slate);
+  }
+
+  /* Canonical heading scale: one size per level, site-wide. */
+  h2 {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+
+  h3 {
+    font-size: 1.625rem;
+    line-height: 1.3;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  h5 {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    font-weight: 500;
+    letter-spacing: 0.01em;
   }
 
   .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {

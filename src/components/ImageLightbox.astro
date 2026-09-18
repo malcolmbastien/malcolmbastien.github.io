@@ -4,12 +4,11 @@
 <div
     id="lightbox"
     class="fixed inset-0 z-100 flex items-center justify-center bg-black/90 opacity-0 pointer-events-none transition-opacity duration-300 cursor-zoom-out"
-    aria-hidden="true"
+    inert
 >
     <div class="relative w-full h-full flex items-center justify-center p-4 md:p-8">
         <img
             id="lightbox-img"
-            src=""
             alt=""
             class="max-w-full max-h-[85vh] object-contain shadow-2xl scale-95 cursor-zoom-out"
         />
@@ -68,6 +67,8 @@
             clone.querySelectorAll('.link-icon, .material-symbols-outlined').forEach(el => el.remove());
             return (clone.textContent || '').trim();
         }
+
+        let keydownHandler: ((e: KeyboardEvent) => void) | null = null;
 
         function initLightbox() {
         const lightbox = document.getElementById('lightbox');
@@ -136,7 +137,7 @@
             lightboxImg?.classList.remove('scale-95');
             lightboxImg?.classList.add('scale-100');
             document.body.style.overflow = 'hidden';
-            lightbox?.setAttribute('aria-hidden', 'false');
+            if (lightbox) lightbox.inert = false;
 
             if (allImages.length > 1) {
                 prevBtn?.classList.remove('opacity-0', 'pointer-events-none');
@@ -159,11 +160,11 @@
             nextBtn?.classList.add('opacity-0', 'pointer-events-none');
 
             document.body.style.overflow = '';
-            lightbox?.setAttribute('aria-hidden', 'true');
+            if (lightbox) lightbox.inert = true;
 
             setTimeout(() => {
                 if (lightbox?.classList.contains('opacity-0')) {
-                    lightboxImg.src = '';
+                    lightboxImg.removeAttribute('src');
                     if (lightboxCaption) lightboxCaption.textContent = '';
                 }
             }, 300);
@@ -298,13 +299,15 @@
         lightboxCaption?.addEventListener('click', (e) => e.stopPropagation());
 
         // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
+        if (keydownHandler) document.removeEventListener('keydown', keydownHandler);
+        keydownHandler = (e) => {
             if (lightbox.classList.contains('opacity-0')) return;
 
             if (e.key === 'Escape') closeLightbox();
             if (e.key === 'ArrowRight') showNext();
             if (e.key === 'ArrowLeft') showPrev();
-        });
+        };
+        document.addEventListener('keydown', keydownHandler);
     }
 
     // Initialize on load

@@ -18,7 +18,7 @@ export const GET: APIRoute = async ({ site }) => {
             return dateB - dateA;
         });
 
-    const origin = site?.origin ?? "https://malcolmbastien.github.io";
+    const origin = site?.origin ?? "https://malcolmbastien.com";
 
     const items = notes
         .map((note) => {

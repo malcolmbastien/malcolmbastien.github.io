@@ -17,7 +17,7 @@ const backlinkedNotes = rawBacklinkedNotes
     backlinkedNotes.length > 0 && (
         <section>
             <div class="mb-8">
-                <h3 class="font-code-sm text-code-sm uppercase tracking-widest text-text-muted">Connected Notes</h3>
+                <h3 class="font-headline-md text-headline-md text-text-primary">Connected Notes</h3>
             </div>
 
             <div>
@@ -32,7 +32,7 @@ const backlinkedNotes = rawBacklinkedNotes
                                     timeZone: 'UTC'
                                 })}
                             </time>
-                            <h4 class="font-display text-headline-md text-text-primary group-hover:text-accent-flow transition-colors leading-tight decoration-2 underline-offset-4 group-hover:underline">
+                            <h4 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-accent-flow transition-colors leading-tight decoration-2 underline-offset-4 group-hover:underline">
                                 {note.data.title}
                             </h4>
                             {note.data.summary && (

@@ -142,8 +142,8 @@ const topicSlug = (tag: string) => tag.replace(/\s+/g, "-").toLowerCase();
                         <div class="flex flex-col space-y-3 grow">
                             <div class="flex flex-wrap items-center justify-between gap-2">
                                 <div>
-                                    <h3 class="font-headline-sm text-headline-sm text-text-primary font-medium">Malcolm Bastien</h3>
-                                    <p class="font-code-sm text-code-sm text-accent-flow">Agile Delivery &amp; Organizational Change</p>
+                                    <h3 class="font-headline-md text-headline-md text-text-primary font-medium">Malcolm Bastien</h3>
+                                    <p class="font-code-sm text-code-sm text-accent-flow">Enterprise Agile Coach</p>
                                 </div>
                                 <div class="flex items-center gap-3">
                                     <a class="px-3 py-1 rounded border border-border-delicate text-text-secondary hover:text-text-primary hover:border-border-hover font-body-sm text-body-sm transition-colors" href="/about">
@@ -169,7 +169,7 @@ const topicSlug = (tag: string) => tag.replace(/\s+/g, "-").toLowerCase();
                             <a class="group p-6 rounded-lg bg-surface-card border border-border-delicate hover:border-border-hover transition-all flex flex-col justify-between" href={`/notes/${prevNote.id.replace('.md', '')}`}>
                                 <div class="font-code-sm text-[0.75rem] text-text-muted uppercase tracking-wider mb-2 flex items-center gap-1 group-hover:text-accent-flow transition-colors">
                                     <span>←</span>
-                                    <span>Previous Essay</span>
+                                    <span>Previous</span>
                                 </div>
                                 <span class="font-headline-sm text-headline-sm text-text-primary group-hover:text-accent-flow transition-colors font-medium">
                                     {prevNote.data.title}
@@ -179,7 +179,7 @@ const topicSlug = (tag: string) => tag.replace(/\s+/g, "-").toLowerCase();
                         {nextNote ? (
                             <a class="group p-6 rounded-lg bg-surface-card border border-border-delicate hover:border-border-hover transition-all flex flex-col justify-between text-left md:text-right" href={`/notes/${nextNote.id.replace('.md', '')}`}>
                                 <div class="font-code-sm text-[0.75rem] text-text-muted uppercase tracking-wider mb-2 flex items-center gap-1 justify-start md:justify-end group-hover:text-accent-flow transition-colors">
-                                    <span>Next Essay</span>
+                                    <span>Next</span>
                                     <span>→</span>
                                 </div>
                                 <span class="font-headline-sm text-headline-sm text-text-primary group-hover:text-accent-flow transition-colors font-medium">
@@ -220,8 +220,8 @@ const topicSlug = (tag: string) => tag.replace(/\s+/g, "-").toLowerCase();
         @reference "../styles/global.css";
 
         .toc-link.active {
-            color: #C85226 !important;
-            border-left-color: #C85226 !important;
+            color: var(--color-accent-flow) !important;
+            border-left-color: var(--color-accent-flow) !important;
             font-weight: 500;
         }
 
@@ -239,16 +239,16 @@ const topicSlug = (tag: string) => tag.replace(/\s+/g, "-").toLowerCase();
             color: #f2f1ee !important;
         }
         .prose .backlinks article:hover h4 {
-            color: #C85226 !important;
+            color: var(--color-accent-flow) !important;
         }
         .dark .prose .backlinks article:hover h4 {
-            color: #C85226 !important;
+            color: var(--color-accent-flow) !important;
         }
 
         .prose blockquote {
             background-color: #ffffff !important;
             border: 1px solid #E5E2DC !important;
-            border-left: 4px solid #C85226 !important;
+            border-left: 4px solid var(--color-accent-flow) !important;
             border-radius: 0 0.5rem 0.5rem 0 !important;
             font-family: "Newsreader", "Newsreader Fallback", Georgia, serif !important;
             font-style: italic !important;
@@ -270,7 +270,7 @@ const topicSlug = (tag: string) => tag.replace(/\s+/g, "-").toLowerCase();
         .dark .prose blockquote {
             background-color: #1a1c1e !important;
             border-color: #2c3037 !important;
-            border-left-color: #C85226 !important;
+            border-left-color: var(--color-accent-flow) !important;
             color: #f2f1ee !important;
         }
 
@@ -348,7 +348,7 @@ const topicSlug = (tag: string) => tag.replace(/\s+/g, "-").toLowerCase();
         }
 
         .prose a:not(.inline-tag):hover .link-text {
-            text-decoration-color: #C85226 !important;
+            text-decoration-color: var(--color-accent-flow) !important;
         }
 
         .dark .prose a:not(.inline-tag) .link-text {
@@ -465,7 +465,7 @@ const topicSlug = (tag: string) => tag.replace(/\s+/g, "-").toLowerCase();
             --tw-prose-bullets: var(--color-outline);
             --tw-prose-hr: var(--color-border-delicate);
             --tw-prose-quotes: var(--color-text-primary);
-            --tw-prose-quote-borders: #C85226;
+            --tw-prose-quote-borders: var(--color-accent-flow);
             --tw-prose-captions: var(--color-text-secondary);
             --tw-prose-code: var(--color-text-primary);
             --tw-prose-pre-code: var(--color-inverse-on-surface);

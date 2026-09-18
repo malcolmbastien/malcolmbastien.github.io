@@ -4,6 +4,7 @@ import { statSync } from "node:fs";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import { getReadingTime } from "../lib/reading-time";
+import headshot from "../assets/2026/01/malcolm_headshot.png";
 
 const allNotes = await getCollection("notes");
 
@@ -48,8 +49,8 @@ const formatDate = (date: Date) => {
 ---
 
 <Layout
-    title="Malcolm Bastien - Flow Focused"
-    description="A digital garden of thoughts and ideas. Explore seeds, sprouts, and evergreens of knowledge in this ever-growing collection of writings."
+    title="Malcolm Bastien - Enterprise Agile Coach"
+    description="Enterprise Agile Coach helping leaders in Fintech, Banking, and HealthTech build fast flow through systems thinking, aligned autonomy, and sociotechnical design."
     type="website"
 >
     <!-- Editorial Hero -->
@@ -57,7 +58,7 @@ const formatDate = (date: Date) => {
         <!-- Domain Context Tags -->
         <div class="flex flex-wrap items-center gap-2 mb-8 sm:mb-10">
             {domainTags.map((tag) => (
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-body-sm text-text-secondary bg-surface-card shadow-xs">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-body-sm text-text-secondary bg-surface-subtle border border-border-hover shadow-xs">
                     {tag}
                 </span>
             ))}
@@ -66,18 +67,28 @@ const formatDate = (date: Date) => {
         <!-- Editorial Lead Statement -->
         <div class="space-y-6">
             <h1 class="font-display text-display-mobile md:text-display text-text-primary text-balance">
-                Helping organizations navigate complexity to enable business agility &amp; <span class="italic text-accent-flow font-display">flow.</span>
+                Helping organizations navigate complexity to enable business agility &amp; <span class="italic text-accent-flow font-display underline decoration-accent-flow decoration-[0.06em] underline-offset-[0.15em]">flow.</span>
             </h1>
-            <p class="font-body-lead text-body-lead text-text-secondary max-w-[42rem] leading-relaxed">
-                Enterprise Agile Coach helping leaders in Fintech, Banking, and HealthTech build fast flow through systems thinking and aligned autonomy, empowering teams to deliver high-performance results at scale.
-            </p>
+            <div class="flex items-center gap-5 max-w-[42rem]">
+                <Image
+                    src={headshot}
+                    alt="Malcolm Bastien"
+                    width={160}
+                    height={160}
+                    loading="eager"
+                    class="w-20 h-20 rounded-full object-cover ring-1 ring-border-delicate shadow-xs shrink-0"
+                />
+                <p class="font-body-lead text-body-lead text-text-secondary leading-relaxed text-pretty">
+                    Enterprise Agile Coach helping leaders in Fintech, Banking, and HealthTech build fast flow through systems thinking and aligned autonomy, empowering teams to deliver high-performance results at scale.
+                </p>
+            </div>
         </div>
 
         <!-- Integrated Action Group -->
         <div class="flex items-center gap-4 mt-10 pt-2">
             <a class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-text-primary text-surface-page font-label-md text-label-md hover:bg-primary-container shadow-sm transition-all hover:-translate-y-0.5" href="/about">
                 <span>About Me</span>
-                <span class="material-symbols-outlined text-[17px] -mr-0.5">north_east</span>
+                <span class="material-symbols-outlined text-[17px] -mr-0.5">arrow_forward</span>
             </a>
             <a aria-label="Malcolm Bastien on LinkedIn" class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-surface-card text-text-secondary hover:text-accent-flow shadow-xs hover:-translate-y-0.5 transition-all" href="https://linkedin.com/in/malcolmbastien" rel="noopener noreferrer" target="_blank">
                 <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -92,7 +103,7 @@ const formatDate = (date: Date) => {
         <!-- Feed Header -->
         <div class="flex items-baseline justify-between pb-4 mb-8">
             <div class="flex items-center gap-3">
-                <h2 class="font-label-caps text-label-caps uppercase text-text-secondary tracking-wider">
+                <h2 class="font-headline-lg text-headline-lg text-text-primary">
                     Recent Articles
                 </h2>
             </div>

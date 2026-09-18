@@ -522,15 +522,13 @@ const socialLinks = [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/malcolmbastien/", icon: "link" },
     { label: "GitHub", href: "https://github.com/malcolmbastien", icon: "terminal" },
     { label: "Mastodon", href: "https://mastodon.social/@malcolm", icon: "alternate_email" },
-    { label: "Matrix", href: "https://matrix.to/#/@malcolmbastien:matrix.org", icon: "forum" },
-    { label: "Threads", href: "https://www.threads.com/@malcolmbastien", icon: "tag" },
     { label: "Instagram", href: "https://www.instagram.com/malcolmbastien/", icon: "photo_camera" },
 ];
 ---
 
 <Layout
-    title="About | Malcolm Bastien - The Editorial Architect"
-    description="Lean-Agile Delivery and Agile Transformation Coach specializing in Agile transformation, sociotechnical design and program delivery for high-stakes, $10M+ initiatives."
+    title="About | Malcolm Bastien - Enterprise Agile Coach"
+    description="Lean-Agile Delivery and Agile Transformation Coach specializing in sociotechnical design, flow engineering, and program delivery for high-stakes, $10M+ initiatives."
     type="website"
 >
     <main class="w-full" data-pagefind-ignore>
@@ -595,7 +593,7 @@ const socialLinks = [
                                 <div class="w-12 h-12 rounded-lg bg-surface-subtle flex items-center justify-center mb-5 text-accent-flow">
                                     <span class="material-symbols-outlined text-[26px]">{pillar.icon}</span>
                                 </div>
-                                <h3 class="font-headline-sm text-headline-sm text-text-primary mb-3">{pillar.title}</h3>
+                                <h3 class="font-headline-md text-headline-md text-text-primary mb-3">{pillar.title}</h3>
                                 <p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">{pillar.description}</p>
                             </div>
                             <div class="mt-6 pt-4 flex flex-wrap items-center gap-2 font-code-sm text-[0.75rem] text-text-muted uppercase tracking-wider">
@@ -628,8 +626,34 @@ const socialLinks = [
                                     <span class="material-symbols-outlined text-[22px]">{sector.icon}</span>
                                     <span class="font-code-sm text-[0.75rem] uppercase tracking-wider font-semibold">{sector.label}</span>
                                 </div>
-                                <h4 class="font-headline-md text-headline-md text-text-primary mb-2">{sector.title}</h4>
+                                <h3 class="font-headline-md text-headline-md text-text-primary mb-2">{sector.title}</h3>
                                 <p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">{sector.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="w-full py-12 md:py-16" id="testimonials">
+                <div class="max-w-[46rem] mb-10">
+                    <span class="font-code-sm text-code-sm text-accent-flow uppercase tracking-wider block mb-1">Colleague &amp; Client Perspectives</span>
+                    <h2 class="font-headline-lg text-headline-lg text-text-primary mb-3">Testimonials</h2>
+                    <p class="font-body-md text-body-md text-text-secondary">
+                        Direct reflections from engineers, product directors, and consulting peers.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {testimonials.map((item) => (
+                        <div class="bg-surface-card p-6 md:p-8 rounded-xl shadow-xs flex flex-col justify-between">
+                            <blockquote class="font-headline-sm text-headline-sm text-text-primary italic leading-relaxed mb-6">
+                                “{item.quote}”
+                            </blockquote>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-surface-subtle flex items-center justify-center font-code-sm text-code-sm text-accent-flow font-medium">
+                                    {item.attribution.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase()}
+                                </div>
+                                <div class="font-code-sm text-code-sm uppercase tracking-wider text-text-muted">{item.attribution}</div>
                             </div>
                         </div>
                     ))}
@@ -682,7 +706,7 @@ const socialLinks = [
                                 <div class="bg-surface-card p-5 rounded-lg shadow-xs">
                                     <div class="flex items-center gap-2 mb-3 text-text-primary">
                                         <span class="material-symbols-outlined text-[20px] text-accent-flow">{cluster.icon}</span>
-                                        <h4 class="font-label-md text-label-md font-semibold">{cluster.title}</h4>
+                                        <h4 class="font-headline-sm text-headline-sm font-semibold">{cluster.title}</h4>
                                     </div>
                                     <ul class="font-body-sm text-body-sm text-text-secondary space-y-2">
                                         {cluster.items.map((item) => (
@@ -708,10 +732,10 @@ const socialLinks = [
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {agileCoachClusters.map((cluster) => (
                                 <div class="bg-surface-subtle p-4 rounded-lg">
-                                    <h5 class="font-label-md text-label-md font-semibold text-text-primary mb-2 flex items-center gap-2">
+                                    <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-2 flex items-center gap-2">
                                         <span class="material-symbols-outlined text-[18px] text-accent-flow">{cluster.icon}</span>
                                         {cluster.title}
-                                    </h5>
+                                    </h4>
                                     <ul class="font-body-sm text-body-sm text-text-secondary space-y-2">
                                         {cluster.items.map((item) => (
                                             <li class="flex items-start gap-2"><span class="text-accent-flow">•</span> {item}</li>
@@ -736,10 +760,10 @@ const socialLinks = [
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {dataAnalystClusters.map((cluster) => (
                                 <div class="bg-surface-subtle p-4 rounded-lg">
-                                    <h5 class="font-label-md text-label-md font-semibold text-text-primary mb-2 flex items-center gap-2">
+                                    <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-2 flex items-center gap-2">
                                         <span class="material-symbols-outlined text-[18px] text-accent-flow">{cluster.icon}</span>
                                         {cluster.title}
-                                    </h5>
+                                    </h4>
                                     <ul class="font-body-sm text-body-sm text-text-secondary space-y-2">
                                         {cluster.items.map((item) => (
                                             <li class="flex items-start gap-2"><span class="text-accent-flow">•</span> {item}</li>
@@ -764,10 +788,10 @@ const socialLinks = [
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {crossfitClusters.map((cluster) => (
                                 <div class="bg-surface-subtle p-4 rounded-lg">
-                                    <h5 class="font-label-md text-label-md font-semibold text-text-primary mb-2 flex items-center gap-2">
+                                    <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-2 flex items-center gap-2">
                                         <span class="material-symbols-outlined text-[18px] text-accent-flow">{cluster.icon}</span>
                                         {cluster.title}
-                                    </h5>
+                                    </h4>
                                     <ul class="font-body-sm text-body-sm text-text-secondary space-y-2">
                                         {cluster.items.map((item) => (
                                             <li class="flex items-start gap-2"><span class="text-accent-flow">•</span> {item}</li>
@@ -793,10 +817,10 @@ const socialLinks = [
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {role.clusters.map((cluster) => (
                                     <div class="bg-surface-subtle p-4 rounded-lg">
-                                        <h5 class="font-label-md text-label-md font-semibold text-text-primary mb-2 flex items-center gap-2">
+                                        <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-2 flex items-center gap-2">
                                             <span class="material-symbols-outlined text-[18px] text-accent-flow">{cluster.icon}</span>
                                             {cluster.title}
-                                        </h5>
+                                        </h4>
                                         <ul class="font-body-sm text-body-sm text-text-secondary space-y-2">
                                             {cluster.items.map((item) => (
                                                 <li class="flex items-start gap-2"><span class="text-accent-flow">•</span> {item}</li>
@@ -831,7 +855,7 @@ const socialLinks = [
                             >
                                 <div>
                                     <span class="material-symbols-outlined text-[22px] text-accent-flow mb-2">{tool.icon}</span>
-                                    <h4 class="font-label-md text-label-md font-semibold text-text-primary group-hover:text-accent-flow transition-colors mb-1">{tool.title}</h4>
+                                    <h3 class="font-headline-md text-headline-md font-semibold text-text-primary group-hover:text-accent-flow transition-colors mb-1">{tool.title}</h3>
                                     <p class="font-body-sm text-[0.8125rem] text-text-secondary leading-relaxed">{tool.description}</p>
                                 </div>
                                 {tool.linkLabel && (
@@ -860,38 +884,12 @@ const socialLinks = [
                         <div class="bg-surface-card p-6 rounded-xl shadow-xs">
                             <div class="flex items-center gap-2 mb-4 text-text-primary">
                                 <span class="material-symbols-outlined text-[22px] text-accent-flow">{cluster.icon}</span>
-                                <h4 class="font-label-md text-label-md font-semibold">{cluster.title}</h4>
+                                <h3 class="font-headline-md text-headline-md font-semibold">{cluster.title}</h3>
                             </div>
                             <div class="flex flex-wrap gap-1.5">
                                 {cluster.items.map((item) => (
                                     <span class="px-2.5 py-1 rounded-full bg-surface-subtle font-body-sm text-[0.8125rem] text-text-secondary">{item}</span>
                                 ))}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            <!-- Testimonials -->
-            <section class="w-full py-12 md:py-16" id="testimonials">
-                <div class="max-w-[46rem] mb-10">
-                    <span class="font-code-sm text-code-sm text-accent-flow uppercase tracking-wider block mb-1">Colleague &amp; Client Perspectives</span>
-                    <h2 class="font-headline-lg text-headline-lg text-text-primary mb-3">Testimonials</h2>
-                    <p class="font-body-md text-body-md text-text-secondary">
-                        Direct reflections from engineers, product directors, and consulting peers.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {testimonials.map((item) => (
-                        <div class="bg-surface-card p-6 md:p-8 rounded-xl shadow-xs flex flex-col justify-between">
-                            <blockquote class="font-headline-sm text-headline-sm text-text-primary italic leading-relaxed mb-6">
-                                “{item.quote}”
-                            </blockquote>
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-surface-subtle flex items-center justify-center font-code-sm text-code-sm text-accent-flow font-medium">
-                                    {item.attribution.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase()}
-                                </div>
-                                <div class="font-code-sm text-code-sm uppercase tracking-wider text-text-muted">{item.attribution}</div>
                             </div>
                         </div>
                     ))}
@@ -913,7 +911,7 @@ const socialLinks = [
                             <div>
                                 <div class="flex items-center gap-2 mb-4 text-accent-flow">
                                     <span class="material-symbols-outlined text-[22px]">{group.icon}</span>
-                                    <h4 class="font-label-md text-label-md font-semibold text-text-primary">{group.title}</h4>
+                                    <h3 class="font-headline-md text-headline-md font-semibold text-text-primary">{group.title}</h3>
                                 </div>
                                 <ul class="font-body-sm text-body-sm text-text-secondary space-y-2.5">
                                     {group.items.map(([name, issuer]) => (
@@ -935,7 +933,7 @@ const socialLinks = [
                             <span class="material-symbols-outlined text-[26px]">school</span>
                         </div>
                         <div>
-                            <h4 class="font-headline-sm text-headline-sm text-text-primary">Bachelor of Commerce (BComm)</h4>
+                            <h3 class="font-headline-md text-headline-md text-text-primary">Bachelor of Commerce (BComm)</h3>
                             <p class="font-body-sm text-body-sm text-text-secondary">Major in Business Technology Management • Ryerson University, Toronto</p>
                         </div>
                     </div>
