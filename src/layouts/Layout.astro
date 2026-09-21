@@ -13,18 +13,20 @@ interface Props {
     modifiedTime?: string;
     tags?: string[];
     author?: string;
+    noindex?: boolean;
 }
 
 const {
     title,
     description = "Enterprise Agile Coach helping leaders in Fintech, Banking, and HealthTech build fast flow through systems thinking, aligned autonomy, and sociotechnical design.",
-    image = "/og-default.png",
+    image = "/malcolm_headshot.png",
     url = Astro.site?.origin || new URL(Astro.request.url).origin,
     type = "website",
     publishedTime,
     modifiedTime,
     tags = [],
     author = "Malcolm Bastien",
+    noindex = false,
 } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site || url).href;
@@ -71,17 +73,20 @@ const navItems = [
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content={title} />
         <meta property="og:site_name" content="Malcolm Bastien" />
+        <meta property="og:locale" content="en_US" />
 
         <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={canonicalUrl} />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={ogImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={canonicalUrl} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content={title} />
 
         <!-- Additional SEO -->
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
         <meta name="language" content="English" />
         {tags.map((tag) => <meta property="article:tag" content={tag} />)}
 

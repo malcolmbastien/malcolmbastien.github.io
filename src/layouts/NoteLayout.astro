@@ -40,8 +40,8 @@ const topicSlug = (tag: string) => tag.replace(/\s+/g, "-").toLowerCase();
 ---
 
 <Layout
-    title={frontmatter.title}
-    description={frontmatter.summary}
+    title={`${frontmatter.title} | Malcolm Bastien`}
+    description={frontmatter.summary ?? `An article by Malcolm Bastien${frontmatter.tags?.length ? ` on ${frontmatter.tags.slice(0, 3).join(", ")}` : ""}.`}
     image={frontmatter.cover?.src}
     type="article"
     publishedTime={createdDate.toISOString()}

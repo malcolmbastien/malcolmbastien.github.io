@@ -4,12 +4,14 @@ import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import { getReadingTime } from "../../lib/reading-time";
 
+const topicSlug = (t: string) => t.replace(/\s+/g, '-').toLowerCase();
+
 export async function getStaticPaths() {
     const allNotes = await getCollection("notes");
     const topics = new Set<string>();
     allNotes.forEach((note) => {
         const tags = note.data.tags || [];
-        tags.forEach((tag) => topics.add(tag.toLowerCase()));
+        tags.forEach((tag) => topics.add(tag.replace(/\s+/g, '-').toLowerCase()));
     });
     return Array.from(topics).map((topic) => ({
         params: { topic },
@@ -18,14 +20,21 @@ export async function getStaticPaths() {
 
 const { topic } = Astro.params;
 
-const displayTopic = topic ? topic.charAt(0).toUpperCase() + topic.slice(1) : '';
-
 const allNotes = await getCollection("notes");
+
+const canonicalTag = allNotes
+    .flatMap((note) => note.data.tags || [])
+    .find((tag) => topicSlug(tag) === topic);
+
+const displayTopic = canonicalTag
+    ? canonicalTag.replace(/-/g, ' ')
+    : (topic ?? '').replace(/-/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
+
 const filteredNotes = allNotes
     .filter((note) => !note.data.draft)
     .filter((note) => {
         const tags = note.data.tags || [];
-        return tags.some((tag) => tag.toLowerCase() === topic?.toLowerCase());
+        return tags.some((tag) => topicSlug(tag) === topic?.toLowerCase());
     });
 
 const sortedNotes = filteredNotes.sort(
@@ -40,13 +49,11 @@ const formatDate = (date: Date | undefined) => {
     if (!date) return '';
     return date.toLocaleDateString("en-US", { month: 'short', day: '2-digit', year: 'numeric', timeZone: 'UTC' });
 };
-
-const topicSlug = (t: string) => t.replace(/\s+/g, '-').toLowerCase();
 ---
 
 <Layout
-    title={`${displayTopic} | Topic Archive`}
-    description={`Explore all cultivated notes and ideas regarding ${displayTopic}.`}
+    title={`${displayTopic} | Malcolm Bastien`}
+    description={`Articles tagged ${displayTopic} from the writing archive of Malcolm Bastien.`}
     type="website"
 >
     <main class="w-full bg-surface-page min-h-screen" data-pagefind-ignore>
@@ -105,7 +112,7 @@ const topicSlug = (t: string) => t.replace(/\s+/g, '-').toLowerCase();
                                         )}
                                         <div class="flex flex-wrap items-center gap-2 pt-1">
                                             {note.data.tags.map((tag) => {
-                                                const isCurrent = tag.toLowerCase() === topic?.toLowerCase();
+                                                const isCurrent = topicSlug(tag) === topic?.toLowerCase();
                                                 return (
                                                     <a class:list={["font-code-sm text-[0.6875rem] px-2 py-0.5 rounded border", isCurrent ? "text-accent-flow bg-accent-flow-soft border-accent-flow/15" : "text-text-muted bg-surface-card border-border-delicate hover:text-accent-flow"]} href={`/topics/${topicSlug(tag)}`}>
                                                         #{tag}
