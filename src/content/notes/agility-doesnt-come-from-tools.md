@@ -4,7 +4,7 @@ tags:
   - Agile
   - Business-Agility
 publishedDate: 2026-09-20
-summary: Agility doesn't come from software or tools. It's not installed or configured. Agility is built on direct conversation, small batches, fast feedback, and continuous improvement.
+summary: Agility isn't installed or configured. Agility emerges when teams have the trust and autonomy to work through direct conversations, small batches, rapid feedback, and continuous improvement.
 ---
 
 Ten years ago, the teams I supported with my clients all worked full-time in the office. Before COVID, you could always tell when an agile transformation was underway when teams put up large Kanban boards across any wall they could find. Along with walls covered in multi-coloured sticky notes and painter's tape, teams had rolling whiteboards they moved with them from room to room as they discussed and sketched their work.
