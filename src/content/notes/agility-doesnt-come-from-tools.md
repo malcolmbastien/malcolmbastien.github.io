@@ -58,9 +58,9 @@ Many teams that have only experienced this post-COVID version of agile have been
 - **An Experimental, Adaptable Attitude:** Treat your processes as work-in-progress, not fixed. Inspect how you work, experiment, and continuously adjust. The way you work should be flexible.
 
 > [!NOTE]
-> Agility isn't something you install, configure, or engineer to perfection. It emerges from how teams show up together every day to build, learn, and remove friction from their work.
+> Agility isn't something you install or configure. It emerges from how teams show up together every day to build, learn, and remove friction from their work.
 
-None of this requires Jira, new titles, or formalized meetings.
+None of this requires Jira, new tools, or complicated platforms.
 
 ## Placeholders for  Conversation
 
