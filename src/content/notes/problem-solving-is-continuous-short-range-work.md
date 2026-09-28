@@ -30,7 +30,7 @@ When someone far from the work prescribes a solution to close the gap between wh
 
 ## Teams Are Different and Have Different Needs
 
-Another pattern in corporate problem solving is overgeneralization. Someone finds an issue in one team, assumes it represents how all teams operate, and concludes the only solution is a system-level intervention. The same fix gets prescribed to every team — regardless of whether the problem exists there or the solution fits.
+Another pattern in corporate problem solving is overgeneralization. Someone finds an issue in one team, assumes it represents how all teams operate, and concludes the only solution is a system-level intervention. The same fix gets prescribed to every team regardless of whether the problem exists there or the solution fits.
  
 > [!NOTE]
 > Beware when people assume all teams are the same, that every one has the same problems, and that everyone will benefit from a solution.
