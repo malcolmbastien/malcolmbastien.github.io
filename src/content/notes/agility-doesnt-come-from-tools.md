@@ -60,7 +60,7 @@ Many teams that have only experienced this post-COVID version of agile have been
 > [!NOTE]
 > Agility isn't something you install or configure. It emerges from how teams show up together every day to build, learn, and remove friction from their work.
 
-None of this requires Jira, new tools, or complicated platforms.
+None of this requires Jira, new tools, or complicatedf platforms.
 
 ## Placeholders for  Conversation
 
