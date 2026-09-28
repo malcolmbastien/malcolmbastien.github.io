@@ -323,7 +323,7 @@
 }
 
 .dark .prose a {
-  color: var(--color-inverse-on-surface);
+  color: var(--color-text-primary);
 }
 
 .dark .prose a:hover {
@@ -345,7 +345,7 @@
 }
 
 .dark .prose a.internal-link {
-  color: var(--color-inverse-on-surface);
+  color: var(--color-text-primary);
 }
 
 .dark .prose a.internal-link:hover {
@@ -371,7 +371,7 @@
 }
 
 .dark .prose a.external-link {
-  color: var(--color-inverse-on-surface);
+  color: var(--color-text-primary);
 }
 
 .dark .prose a.external-link:hover {
