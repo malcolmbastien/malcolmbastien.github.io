@@ -49,9 +49,9 @@ The deeper issue is that this approach treats problem solving as a linear sequen
 
 ## Managers Manage Messes
 
-> Managers do not solve problems; they manage messes. A mess is a system of problems — the sum of optimal solutions to each component problem taken separately is not an optimal solution to the mess. — Russell Ackoff
-
 Messes are messes because they include multiple interacting problems, not because there are many individual, isolated problems. That means we cannot approach a mess as a task of solving the "right" problem with the "right" solution. Data, reports, and observations can give us clues that a problem exists, but because messes are systems of interacting problems, we can never fully understand or define them. 
+
+> Managers do not solve problems; they manage messes... The sum of the optimal solutions to each component problem taken separately is not an optimal solution to the mess. — Russell Ackoff
 
 Instead, we have to approach it the way you approach any complex system: form hypotheses, take small steps, monitor for side effects, use the power of networks, and treat every intervention as a way to learn more about the mess itself. This isn't a one-pass activity. It requires ongoing sensing, monitoring, nudging, and reevaluating. The kind of effort that actually improves a mess is the harder, ongoing work of staying connected to the system, noticing what changes, and adjusting course based on what you learn.
 
@@ -62,6 +62,6 @@ Because complex environments include different groups with different goals inter
 > [!NOTE]
 > Problem solving shouldn't be about making decisions about what other people should do. Problem solving has to be a collaborative activity involving the people doing the work.
 
-The people doing the work know the issues. They have an intuitive understanding of how things work. They have tacit knowledge which they express daily through adjustments and adaptations. Management's role shouldn't be to prescribe long-range fixes from a distance; it's to do the ongoing short-range work of engaging with people and exploring the problem space. That means visiting the gemba, spending time listening, collecting anecdotes, and letting the picture of what's going on start to emerge from the ground up.
+The people doing the work know the issues. They have an intuitive understanding of how things work and tacit knowledge which they express daily through adjustments and adaptations. Management's role shouldn't be to prescribe long-range fixes from a distance; it's to do the ongoing short-range work of engaging with people and exploring the problem space. That means visiting the gemba, spending time listening, collecting anecdotes, and letting the picture of what's going on start to emerge from the ground up.
 
 Stop prescribing solutions before you have validated the problem exists. And when you do find a problem, solve it _with_ the people doing the work, not _for_ them. Approach messes like any complex system: run small experiments, watch for side effects, and accept that no single "right" problem has a single "right" solution.
