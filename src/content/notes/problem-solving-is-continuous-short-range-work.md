@@ -16,7 +16,9 @@ The first trap in organizational problem solving is skipping validation that you
 
 It's okay to start with a hunch or an idea, but it's a mistake to think you can diagnose problems without first doing some fact-finding. One nice quality of many Lean and Toyota Production System practices is that they emphasize going where problems happen and seeing the facts for yourself. Before you define a problem, it's essential to "go and see."
 
-> The best practice is to go and see the location or process where the problem exists to solve that problem more quickly and efficiently. To grasp problems, confirm the facts and analyze root causes. — [Genchi Genbutsu – Toyota Production System guide](https://blog.toyota.co.uk/genchi-genbutsu)
+> The best practice is to go and see the location or process where the problem exists in order to solve that problem more quickly and efficiently. To grasp problems, confirm the facts and analyse root causes.
+> 
+> — [Genchi Genbutsu – Toyota Production System guide](https://blog.toyota.co.uk/genchi-genbutsu)
 
 In a distributed, digital world, we don't always have a factory floor to go to see the objective truth. We can use data and reporting systems, but they often only indicate the presence of a problem. Dashboards can't tell us what's really happening or why. To find out what's happening, we have to listen to the real experiences of people doing the work and collect their stories.
 
