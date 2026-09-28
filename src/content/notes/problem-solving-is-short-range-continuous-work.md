@@ -1,5 +1,5 @@
 ---
-title: Problem Solving Is Continuous, Short-Range Work
+title: Problem Solving Is Short-Range, Continuous Work
 tags:
   - Coaching
   - Gemba
