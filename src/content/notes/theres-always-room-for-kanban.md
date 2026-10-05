@@ -11,9 +11,9 @@ summary: Kanban extends Agile beyond the team, helping organizations visualize w
 
 Scrum has emerged as the most popular framework for organizing software teams. But even in organizations that mandate Scrum at the team level, Kanban still offers a way to visualize work across the wider enterprise.
 
-At the enterprise level, team-level Agile is just one small part of what happens. Kanban gives organizations a way to see how work flows across teams and value streams so they can understand and manage the whole system. It also helps organizations manage work outside the scope of Scrum that has no visibility or process: change management, event planning, and discovery for new major strategic initiatives.
+At the enterprise level, team-level Agile is just one small part of how work happens. Kanban gives organizations a way to see how work flows across teams and value streams so they can understand and manage the whole system. It also helps organizations manage work outside the scope of Scrum that has no visibility or process, including things like change management, event planning, and discovery for new major strategic initiatives.
 
-## Kanban creates a map of how work moves
+## Kanban Creates a Map of How Work Moves
 
 Kanban creates a map and helps people see what's happening in their organization, often for the very first time. It maps the work an organization is already doing: the requests, backlogs, handoffs, dependencies, and queues that make up its workflows and value streams. 
 
@@ -29,7 +29,7 @@ A lot of work also happens on the side: interviews, onboarding, training, contin
 >
 > — David Anderson, ["Adoption of Lean/Kanban Principles – Part 1"](https://www.youtube.com/watch?v=D-tTxWR26LU)
 
-## Kanban helps manage work before commitment and after delivery
+## Kanban Helps Manage Work Before Commitment and After Delivery
 
 Even for teams using Scrum, introducing Kanban can make the flows before commitment and after sprint completion visible and give the people responsible a way to manage them.
 
@@ -50,21 +50,21 @@ Later, when work is completed at the end of a sprint and the team shifts focus t
 > 
 > — Don Reinertsen, The Principles of Product Development Flow
 
-## Kanban gives visibility to work across the enterprise
+## Kanban Gives Visibility To Work Across the Enterprise
 
 Kanban coaches are trained to see work as services, a network of workflows through which an organization serves internal and external customers. Software development teams make up just a small portion of the larger network of services, and those services depend on one another.
 
 Three helpful perspectives to consider when looking at that network are width, depth and height: width along the value stream, depth through the teams and services each flow depends on, and height from team backlogs up to strategic priorities.
 
-### Width follows the value stream from concept to cash.
+### Width Follows the Value Stream From Concept to Cash
 
 The discovery flow before a team's commitment point and release flows after a team's "sprint done" are two important parts of the end-to-end value stream.
 
-### Depth follows dependencies.
+### Depth Follows Dependencies
 
 It includes the teams and shared services a delivery team relies on. Dependencies on other teams or services like enterprise architecture, platform, security, data, and environments reveal the full value chain of services and support that development teams depend on.
 
-### Height zooms out from team backlogs to coordination and strategy.
+### Height Zooms Out From Team Backlogs to Coordination and Strategy
 
 A Kanban board can coordinate the work of a single team, but it can also coordinate multiple teams in delivering products and services. Multi-team boards make dependencies and priorities visible across the value stream.
 
@@ -75,7 +75,7 @@ A cross-team Kanban view gives the people doing and coordinating the work a shar
 
 An even higher view of work can connect strategic objectives and key results to the initiatives teams are delivering in their day-to-day work. The organization can see how team-level work contributes to those priorities, while also tracking progress and measuring impact. This view focuses on strategic themes and outcomes, rather than a larger board of aggregated team-level tasks.
 
-## Start with a map of what already exists
+## Map the Work Already Happening
 
 Kanban gives organizations a map of the work they're already doing. A map changes how people understand their work: where it is, how it moves, and where it comes from. By mapping the whole system, people can talk about work in ways that weren't possible before.
 
